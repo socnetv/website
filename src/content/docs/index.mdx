@@ -1,0 +1,53 @@
+---
+title:  Social Network Visualizer 
+description: SocNetV - Social Network Analysis and Visualization Software
+template: splash
+hero:
+  tagline: Free and Open-Source Tool for Social Network Analysis
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Download
+      link: /downloads
+      icon: right-arrow
+    - text: Read the docs
+      link: /docs
+      icon: document
+      variant: secondary
+    - text: Get the code
+      link: https://github.com/socnetv/app
+      icon: external
+      variant: minimal	  
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import Mermaid from "../../components/Mermaid.astro";
+
+## Next steps
+
+<BaseLayout title="Home" description="Welcome to SocNetV">
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+
+
+<Mermaid code={`graph TD; A-->B; B-->C; C-->D;`} />
+
+
+	$$
+E = mc^2
+$$
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>
+</BaseLayout>
+
