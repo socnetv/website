@@ -2,7 +2,7 @@
 
 Our website is [![built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-Visit our website: [![Social Network Visualizer]](https://socnetv.org)
+Visit our website: [![Social Network Visualizer][🚀]](https://socnetv.org)
 
 
 ## 🚀 Project Structure
