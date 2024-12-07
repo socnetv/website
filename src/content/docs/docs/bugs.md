@@ -1,5 +1,5 @@
 ---
-title: "Credits"
+title: "Bugs"
 description: "Learn about the supported network data formats in SocNetV."
 ---
 

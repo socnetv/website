@@ -1,0 +1,129 @@
+---
+title: Network Generation
+description: A guide to introduce SocNetV
+layout: "../../../layouts/BaseLayout.astro"
+---
+
+# Network Generation
+
+
+
+
+This page provides information about the network generation routines and capabilities of SocNetV. The application can recreate famous social network analysis datasets (e.g., Knoke: Bureaucracies Network) or generate random networks using graph theory models such as the Barabási–Albert model for scale-free networks and the Watts-Strogatz model for small-world networks.
+
+SocNetV can also create "networks" of linked webpages using the built-in Web Crawler, which maps hypertext links between webpages starting from a given webpage or website.
+
+---
+
+## Datasets: Recreating Famous Datasets
+
+SocNetV can recreate several well-known social network datasets, including:
+
+- **Krackhardt**: High-tech managers (advice, friendship, and "reports-to" relationships), 24 actors.
+- **Padgett**: Florentine Families (marital and business relationships), 16 actors.
+- **Zachary**: Karate Club (simple and weighted ties), 34 actors.
+- **Bernard**: Killworth Fraternity (multirelational), 58 actors.
+- **Galaskiewicz**: CEOs and clubs (affiliation data).
+- **Freeman's EIES**: Multirelational network with 32 actors.
+- **Knoke**: Bureaucracies Network (information and money relations), 10 actors.
+- **Mexican Power Network**: Power structures in the 1940s.
+- And many more...
+
+To recreate a dataset:
+1. From the **File** menu, select "Create Known Dataset" or press `F7`.
+2. A dialog will appear where you can select a dataset from the list above.
+3. Press "OK," and the selected network will be displayed on the canvas.
+
+---
+
+## Random Network Creation
+
+SocNetV can generate random networks based on various graph theory models, including:
+
+### Scale-Free (S-F) Networks
+
+A scale-free network has a degree distribution that follows a power law. Actors with degrees much higher than average are common and are known as "hubs."
+
+The probability $P(k)$ that a node has degree $k$ is:
+
+$$
+P(k) \sim k^{-\gamma}
+$$
+
+where $\gamma$ typically satisfies $2 < \gamma < 3$.
+
+SocNetV generates scale-free networks using the Barabási–Albert (BA) model. The algorithm begins with $m_0$ connected nodes. In each step, a new node is added with $m$ edges. The probability $p_i$ that the new node connects to an existing node $i$ is:
+
+$$
+p_i = \frac{\alpha + d_i^p}{\sum_j d_j}
+$$
+
+where:
+- $\alpha$: Initial attractiveness of each node.
+- $d_i$: Degree of node $i$.
+- $\sum_j d_j$: Sum of all node degrees.
+
+If $\alpha = 0$ and $p = 1$, the preferential attachment is linear, which corresponds to the BA model.
+
+---
+
+### Small-World (SW) Networks
+
+Small-world networks are characterized by short average path lengths and high clustering. SocNetV uses the Watts-Strogatz model to generate such networks.
+
+Given $N$ nodes, mean degree $K$ (even integer), and a rewiring probability $\beta$, the model generates an undirected graph as follows:
+
+1. Create a regular ring lattice with $N$ nodes, each connected to $K/2$ neighbors on each side.
+2. For each edge $(n_i, n_j)$ with $i < j$, rewire it with probability $\beta$. Rewiring replaces $(n_i, n_j)$ with $(n_i, n_k)$, where $k$ is chosen uniformly, avoiding self-loops ($k \neq i$) and duplicate edges.
+
+To generate a small-world network, go to **Network > Create Random Network > Small World**, then specify the number of nodes ($N$), mean degree ($K$), and rewiring probability ($\beta$).
+
+---
+
+### Erdős–Rényi (ER) Networks
+
+The Erdős–Rényi model generates random networks based on either of two modes:
+
+1. $G(n, M)$: A graph with $n$ nodes and $M$ edges, where all graphs are equally likely.
+2. $G(n, p)$: A graph where each edge is present with probability $p$, independent of other edges.
+
+To create an ER network:
+1. Go to **Network > Create Random Network > Erdos-Renyi**.
+2. Specify the number of nodes ($n$) and either the edge probability ($p$) or the number of edges ($M$).
+3. Choose whether the network is directed, undirected, or allows self-loops.
+
+---
+
+### Lattice Networks
+
+SocNetV can generate regular lattice networks with arbitrary dimensions $d$, size $l$ for each dimension, and custom neighborhood size $n$, which defines the distance within which neighbors are connected.
+
+---
+
+### Ring Lattices
+
+Ring lattices are a type of network where nodes are arranged in a ring, each connected to $d/2$ neighbors on either side. For example, in a 4-lattice of 10 nodes, node 6 connects to nodes 4, 5, 7, and 8.
+
+To create a ring lattice network, go to **Network > Create Random Network > Ring Lattice**, then specify the number of nodes and degree $d$.
+
+---
+
+## Web Crawler: Networks of Webpages
+
+SocNetV includes a web crawler that creates networks of linked webpages. Starting from an initial URL, the crawler:
+- Downloads the HTML of the page.
+- Extracts all links (`href`) to other pages (internal or external).
+- Adds these links as nodes and edges in the resulting network.
+
+To use the web crawler:
+1. Go to **Network > Web Crawler** or press `Shift+C`.
+2. Enter the initial URL and configure limits, such as:
+   - Maximum URLs to crawl (total nodes in the network).
+   - Maximum links per page to consider.
+3. Specify patterns to include or exclude and the type of links to follow (internal, external, or both). Add delays between requests to prevent overloading servers.
+
+Press "OK" to begin crawling.
+
+---
+
+This MDX file is now fully compatible with `remark-math` and `rehype-katex` and should render correctly. Let me know if you need further adjustments!

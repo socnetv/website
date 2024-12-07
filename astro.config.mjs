@@ -1,6 +1,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightBlog from 'starlight-blog'
+import starlightBlog from 'starlight-blog';
+import mdx from '@astrojs/mdx'; // Import the MDX integration
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -72,5 +77,9 @@ export default defineConfig({
 				},
 			],
 		}),
+    mdx({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }),
 	],
 });
