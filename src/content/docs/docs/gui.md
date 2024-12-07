@@ -1,0 +1,162 @@
+---
+title: "User Interface Overview"
+description: "A detailed guide to the user interface of SocNetV, explaining menus, toolbar, panels, and canvas interactions."
+---
+
+SocNetV has a simple yet powerful Graphical User Interface (GUI) that is designed to be user-friendly and highly functional. The interface consists of the following components:
+
+- [The Menu](#themenu)
+- [Toolbar](#toolbar)
+- [Sidebars](#sidebars)
+- [Canvas](#canvas)
+- A status bar with helpful runtime messages.
+
+The main application window is structured to provide maximum efficiency. Side panels on the left and right host critical tools and information, while the central canvas is the primary area for network visualization and interaction.
+
+![Example of SocNetV Main Window](../../../assets/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
+
+---
+
+## The Menu
+
+At the top of the window, the menu bar provides access to all application features and functions. It includes six menus:
+
+- **Network**: Options for managing networks:
+  - Create new networks or load existing ones.
+  - Save, export, or import networks in various formats (GraphML, Pajek, GML, etc.).
+  - Generate random networks using predefined models or crawl the web for network creation.
+
+- **Edit**: Tools for modifying the network:
+  - Add or remove nodes and edges.
+  - Change node and edge properties (color, size, weight, labels, etc.).
+  - Apply filters to isolate specific parts of the network.
+
+- **Analyze**: Advanced analysis tools:
+  - Compute graph and network metrics like adjacency matrices, clustering coefficients, centrality measures, and community detection.
+  - Generate detailed HTML reports for results.
+
+- **Layout**: Visualization customization:
+  - Apply layouts based on prominence metrics (e.g., Degree Centrality).
+  - Use force-directed algorithms (e.g., Kamada-Kawai, Fruchterman-Reingold) for intuitive network visualization.
+
+- **Options**: General application settings:
+  - Toggle visibility of edges, arrows, and labels.
+  - Adjust antialiasing and other display settings.
+
+- **Help**: Access user guides, documentation, and support resources.
+
+Each menu option is complemented by keyboard shortcuts, making navigation faster for experienced users.
+
+---
+
+## Toolbar
+
+The toolbar is positioned directly beneath the menu bar and offers one-click access to frequently used commands:
+
+- **File Operations**:
+  - Create new networks.
+  - Load, save, or print the active network.
+- **Edit Tools**:
+  - Add or remove nodes and edges.
+  - Toggle node and edge modes for quick modifications.
+- **Analysis Shortcuts**:
+  - Direct access to centrality measures, clustering, and other analysis tools.
+- **Visualization Settings**:
+  - Quickly switch between layout algorithms or modify the appearance of the network.
+- **Relation Management**:
+  - Switch between relations in a multi-relational network.
+  - Add new relations or edit existing ones.
+
+The toolbar icons are intuitive and provide tooltip hints when hovered over, ensuring ease of use for beginners.
+
+---
+
+## Sidebars
+
+### Control Panel
+
+The **Control Panel**, located on the left, is designed for quick access to essential actions and commands. It is divided into three main groups:
+
+1. **Network Actions**:
+   - Create random networks (e.g., Erdős–Rényi, Watts-Strogatz).
+   - Transform networks (e.g., symmetrize edges or convert directed networks to undirected ones).
+   - Subgraph creation based on selected nodes.
+
+2. **Analysis Tools**:
+   - Compute various matrices (e.g., adjacency, Laplacian, degree).
+   - Measure network cohesion, centrality, and prominence metrics.
+   - Perform community detection (e.g., cliques, triad census).
+   - Analyze structural equivalence using hierarchical clustering.
+
+3. **Layout Models**:
+   - Apply visual layouts based on metrics like Betweenness Centrality.
+   - Use force-directed placement algorithms for realistic visualizations.
+
+Each action in the Control Panel mirrors corresponding menu options, providing a more accessible alternative for frequent operations.
+
+---
+
+### Statistics Panel
+
+The **Statistics Panel**, located on the right, provides detailed information about the network and its components:
+
+- **Network Summary**:
+  - Displays overall statistics like node count, edge count, density, and network type (directed or undirected).
+- **Node Details**:
+  - Shows information about selected nodes, such as in-degree, out-degree, and clustering coefficients.
+- **Edge Details**:
+  - Displays edge weight and other attributes for selected edges.
+
+This panel dynamically updates as you interact with the network, offering real-time insights into your data.
+
+![Example of Statistics Panel](../../../assets/screenshots/25/socnetv-25-65-actors-KW-BC-levels.png)
+
+---
+
+## Canvas
+
+The **Canvas** is the central workspace where networks are visualized and manipulated. It supports intuitive interaction methods, including:
+
+- **Node Interaction**:
+  - Left-click on a node to select it.
+  - Drag nodes to reposition them within the network.
+  - Double-click on empty canvas space to add a new node.
+  - Right-click on a node to access its context menu for editing properties like color, label, and size.
+
+- **Edge Interaction**:
+  - Middle-click on two nodes to create a directed edge between them.
+  - Right-click on an edge to modify its weight, color, or delete it.
+
+- **Zoom and Pan**:
+  - Use the mouse wheel to zoom in or out.
+  - Drag the canvas to pan across the network.
+
+The canvas background is customizable, allowing users to select colors that suit their preferences or enhance visualization clarity.
+
+---
+
+## Additional Features
+
+### Status Bar
+
+The status bar at the bottom of the window provides helpful runtime messages, such as:
+
+- Warnings about unsupported actions.
+- Notifications about completed analysis tasks.
+- Hints and instructions based on the current context.
+
+### Tooltips and Context Menus
+
+- Almost every element in SocNetV has an associated tooltip that provides quick information about its function.
+- Right-click context menus on nodes, edges, and canvas offer a faster way to access frequently used options.
+
+### Accessibility and Customization
+
+- **Keyboard Shortcuts**: Many commands can be executed using predefined shortcuts, enhancing accessibility for advanced users.
+- **Localization**: SocNetV supports multiple languages, making it accessible to users worldwide.
+
+---
+
+## Summary
+
+The SocNetV user interface combines simplicity with powerful functionality, catering to both novice users and experienced researchers. By providing an intuitive GUI with robust analysis tools, SocNetV allows users to visualize, manipulate, and analyze complex social networks with ease. Whether you're a student exploring social network theory or a professional conducting in-depth research, SocNetV's user interface ensures a seamless workflow.

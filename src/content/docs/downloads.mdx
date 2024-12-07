@@ -4,57 +4,73 @@ description: "Download the latest version of SocNetV for Windows, Mac, or Linux.
 layout: "../../layouts/BaseLayout.astro"
 ---
 
-
+import { Aside } from '@astrojs/starlight/components';
+import { LinkButton } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
 
 From this page, you can download the latest version of Social Network Visualizer. There are installation packages and binaries for the three major operating systems (Windows, Mac, and Linux), as well as links for the source code.
 
 Click one of the buttons below to download the latest version package for your operating system. If there is no package for your OS, please download and compile the source code (last icon).
 
-### Download and have fun with social network analysis!
 
-
-#### Windows
+### Select your OS
 <div class="col" style="text-align: center;">
-  <i class="fab fa-windows" style="font-size: 48px; margin-bottom: 10px;"></i><br />
+  <h3 id="windows">Windows</h3>
   <a href="https://github.com/socnetv/app/releases/download/v3.1/SocNetV-3.1-3fa9cf7f-windows-installer.exe" style="font-size: 18px;">
+  <i class="fab fa-windows" style="font-size: 48px; margin-bottom: 10px;"></i><br />
     Download Installer
   </a>
+  <small>Scanned with <a href="https://www.virustotal.com/gui/url/a62b0451ba6d33ef3bbb801cafdb0aee3d91744227e303394dc93639527979c7?nocache=1" rel="nofollow" target="blank">VirusTotal</a>. Verify file integrity with <a href="https://github.com/socnetv/app/releases/download/v3.1/SocNetV-3.1-3fa9cf7f-windows-installer.exe.sha256sum" target="_blank">SHA256 checksum</a>. Installation: Double click, accept license and follow simple prompts.</small>
 </div>
 
-#### macOS
 <div style="text-align: center;">
-  <i class="fab fa-apple" style="font-size: 48px; margin-bottom: 10px;"></i><br />
+  <h3 id="macos">macOS</h3>
   <a href="https://github.com/socnetv/app/releases/download/v3.1/SocNetV-v3.1-macos.dmg" style="font-size: 18px;">
+  <i class="fab fa-apple" style="font-size: 48px; margin-bottom: 10px;"></i><br />
     Download Image
   </a>
+  <small>Verify file integrity with <a href="https://github.com/socnetv/app/releases/download/v3.1/SocNetV-v3.1-macos.dmg.sha256sum" target="_blank">SHA256 checksum</a>. Installation: Double click the .dmg file, then right click on SocNetV app while holding Ctrl and select Open. Drag the app into your Applications.</small>
 </div>
 
-#### Linux
+
 <div style="text-align: center;">
-  <i class="fab fa-linux" style="font-size: 48px; margin-bottom: 10px;"></i><br />
+  <h3 id="linux">Linux</h3>
   <a href="https://github.com/socnetv/app/releases/download/v3.1/SocNetV-v3.1-x86_64.AppImage" style="font-size: 18px;">
+    <i class="fab fa-linux" style="font-size: 48px; margin-bottom: 10px;"></i><br />
     Download Executable
   </a>
+  <small class="small">Installation: Not needed. Just make it executable and click to run in Debian, Ubuntu, Fedora, openSUSE etc!</small>
 </div>
+
+
+Download and have fun with social network analysis!
 
 ---
 
 ### Notes
 
-#### Note for Windows users
+##### For Windows users
+:::note
 Windows Defender might alert you about a threat in the SocNetV Windows installer. This is a false positive as the installer is automatically created in [Appveyor CI](https://ci.appveyor.com/project/oxy86/app/builds/47285253) and checked with VirusTotal. Our installer is 100% safe. For your peace of mind, scan the installed files with Defender to verify them for yourself.
+:::
 
-#### Note for macOS users
+
+##### For macOS users
+:::note
 The first time you run the SocNetV app or the installer, macOS may tell you that it cannot verify the software developer/publisher. That's because we do not sign our released packages with any code signing certificates. Please press Cancel, not Move to Bin! Then, right-click again on the app (while pressing the Ctrl key) and select Open to run the application normally. To install SocNetV, just drag the app icon to your Applications folder.
+:::
 
-#### Note for Linux users
+##### For Linux users
+:::note
 SocNetV is also available in [the repositories of most Linux distributions](https://repology.org/project/socnetv/versions). However, this is not always the most recent version. We urge you to use the AppImage of the latest version available from this page. Users of openSUSE, Fedora, and Ubuntu/Debian may also add our own repositories to their systems and automatically update to the latest SocNetV version through the package manager (i.e., `apt-get install socnetv`). If you do not know how to add our repositories, please read the [Instructions](../docs/intro.html#Ubuntu) in the Manual.
-
+:::
 ---
 
 ### Source Code
 
-[Download Zipped Archive](https://github.com/socnetv/app/archive/master.zip)
+<LinkButton href="https://github.com/socnetv/app/archive/master.zip" variant="secondary">
+Download Zipped Archive
+</LinkButton>
 
 To compile the source code, please see the [Instructions](http://socnetv.org/docs/intro.html#Compile).
 
@@ -62,7 +78,9 @@ To compile the source code, please see the [Instructions](http://socnetv.org/doc
 
 ### Development Version
 
+:::caution
 Warning: The development code branch is not always stable. Use at your own risk!
+:::
 
 You can clone the development branch (called "develop") of the SocNetV code on your computer with this git command:
 
@@ -76,6 +94,7 @@ A new directory called socnetv will be created. To build the development version
 cd socnetv
 ```
 Enter the following commands to compile it:
+
 ```bash
 qmake
 make
@@ -83,8 +102,12 @@ make
 
 If you have Qt5 installed, a binary file named socnetv (or socnetv.exe) will be created. You can run it by:
 
+Linux/macOS: 
 ```bash
-    Linux/macOS: ./socnetv
-    Windows: socnetv.exe
+    ./socnetv
 ```
 
+Windows: 
+```bash
+    socnetv.exe
+```
