@@ -19,7 +19,7 @@ body {
     font-weight: bold;
     color: #007acc;
   }
-  
+
   .centered-icon {
     text-align: center;
     font-size: 48px;
@@ -45,4 +45,12 @@ body {
 
   .gap-1rem {
     gap: 1rem;
+  }
+
+  /** 
+    Fix mathjax to be inline by default
+    see https://github.com/withastro/starlight/issues/721#issuecomment-2422914105 
+  */
+  .MathJax svg {
+    display: inline !important;
   }

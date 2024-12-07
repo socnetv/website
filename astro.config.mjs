@@ -4,8 +4,7 @@ import starlightBlog from 'starlight-blog';
 import mdx from '@astrojs/mdx'; // Import the MDX integration
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-
-
+// import rehypeMathjax from 'rehype-mathjax';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,16 +16,16 @@ export default defineConfig({
 					title: {
 						en: 'News',
 						fr: 'Nouvelles',
-					  },
+					},
 					prefix: 'news',
 					authors: {
 						dimitris: {
-						  // Author configuration for the `alice` author goes here.
-						  name: 'Dimitris',
-						  title: 'developer',
-						  url: 'https://dimitris.apeiro.gr'
+							// Author configuration for the `alice` author goes here.
+							name: 'Dimitris',
+							title: 'developer',
+							url: 'https://dimitris.apeiro.gr'
 						},
-					  },
+					},
 				})
 			],
 			title: 'SocNetV',
@@ -43,7 +42,7 @@ export default defineConfig({
 				{ label: 'Home', slug: 'index' },
 				// A group labelled 'Docs' containing four links.
 				{
-					label: 'Manual', 
+					label: 'Manual',
 					items: [
 						{ label: 'Introduction', slug: 'docs/intro' },
 						{ label: 'User Interface', slug: 'docs/gui' },
@@ -54,7 +53,7 @@ export default defineConfig({
 						{ label: 'Credits', slug: 'docs/credits' },
 						{ label: 'Bugs', slug: 'docs/bugs' },
 					],
-				},				
+				},
 				{ label: 'Downloads', slug: 'downloads' },
 				{ label: 'News', slug: 'news' },
 				{ label: 'Screenshots', slug: 'screenshots' },
@@ -62,7 +61,7 @@ export default defineConfig({
 				// { label: 'Documentation', slug: 'documentation' },
 				{ label: 'Contact', slug: 'contact' },
 				{ label: 'Author', slug: 'author' },
-				
+
 				{
 					label: 'Guides',
 					items: [
@@ -70,16 +69,35 @@ export default defineConfig({
 						{ label: 'Introduction', slug: 'guides/intro' },
 					],
 				},
-				
+
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
 			],
 		}),
-    mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
-    }),
 	],
+	markdown: {
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [
+			// [
+			// 	rehypeMathjax,
+			// 	{
+			// 		tex: {
+			// 			inlineMath: [['\\(', '\\)']],
+			// 			displayMath: [['\\[', '\\]']],
+			// 		  },
+			// 		  svg: {
+			// 			fontCache: 'global'
+			// 		  }
+			// 	}
+			// ],
+			[
+				rehypeKatex,
+				{
+					// Katex plugin options
+				}
+			]
+		]
+	}
 });
