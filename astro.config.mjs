@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
-import mdx from '@astrojs/mdx'; // Import the MDX integration
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 // import rehypeMathjax from 'rehype-mathjax';
@@ -96,6 +95,10 @@ export default defineConfig({
 				rehypeKatex,
 				{
 					// Katex plugin options
+					// tex: {
+					// 	inlineMath: [['\(', '\)']],
+					// 	displayMath: [['\\[', '\\]']],
+					//   },
 				}
 			]
 		]

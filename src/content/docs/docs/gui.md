@@ -13,7 +13,7 @@ SocNetV has a simple yet powerful Graphical User Interface (GUI) that is designe
 
 The main application window is structured to provide maximum efficiency. Side panels on the left and right host critical tools and information, while the central canvas is the primary area for network visualization and interaction.
 
-![Example of SocNetV Main Window](../../../assets/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
+![Example of SocNetV Main Window](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
 
 ---
 
@@ -109,7 +109,7 @@ The **Statistics Panel**, located on the right, provides detailed information ab
 
 This panel dynamically updates as you interact with the network, offering real-time insights into your data.
 
-![Example of Statistics Panel](../../../assets/screenshots/25/socnetv-25-65-actors-KW-BC-levels.png)
+![Example of Statistics Panel](/data/uploads/screenshots/25/socnetv-25-65-actors-KW-BC-levels.png)
 
 ---
 

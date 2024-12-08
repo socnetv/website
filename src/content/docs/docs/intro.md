@@ -74,7 +74,7 @@ Social Network Visualizer (SocNetV) is an open-source project to build a flexibl
 
 ### Example Network Visualization
 
-![SocNetV loaded with a 65-actor network visualized in FDP layout. Actors' colors and sizes denote their Eigenvector centrality.](https://socnetv.org/data/uploads/screenshots/25/socnetv-25-actors-65-kamada-kawai-layout-eigenvector-centrality-size-color-distribution-chart.png)
+![SocNetV loaded with a 65-actor network visualized in FDP layout. Actors' colors and sizes denote their Eigenvector centrality.](/data/uploads/screenshots/25/socnetv-25-actors-65-kamada-kawai-layout-eigenvector-centrality-size-color-distribution-chart.png)
 
 > SocNetV loaded with a 65-actor network visualized in FDP layout. Actors' colors and sizes denote their Eigenvector centrality.
 

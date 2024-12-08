@@ -32,48 +32,12 @@ import Mermaid from "../../components/Mermaid.astro";
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
-$ax^20.1$
-$$
-p_i = \frac{\alpha + d_i^p}{\sum_j d_j}
-$$
-
-
-
-When \\(a \ne 0\\), there are two solutions to $ax^2 + bx + c = 0$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-# Stuff
-Correct inline text: $$\sum_{k=1}^2 a_k$$ other text.
-
-Should have been in display mode: 
-
-$$\sum_{k=1}^2 a_k$$
-
-other text.
-
-- \\( \Delta t \\) 
-- $\Delta t$
-- $$\Delta t$$
-- ...
-
-test $$ p_i = \frac{\alpha + d_i^p}{\sum_j d_j} $$ 
-
-
-```mathL
-  L = \frac{1}{2} \rho v^2 S C_L
-```
-
-```math
-C_L
-L = \frac{1}{2} \rho v^2 S C_L
-```
-
 
 {/* title: "Welcome to Social Network Visualizer (SocNetV)"
 description: "SocNetV is a cross-platform, user-friendly software for social network analysis and visualization. Learn about its features and how to contribute." */}
 
 ## Social Network Visualizer (SocNetV)
-![SocNetV Screenshot](../../assets/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
+![SocNetV Screenshot](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
 
 
 
@@ -113,29 +77,95 @@ The program is Free Software, licensed under the [GNU General Public License 3 (
 
 Thank you for using and contributing to SocNetV! Have fun with social network analysis.
 
+---
 
-## Next steps
+## SocNetV Features
+Explore the nice features of SocNetV to make  your social network research real fun!
+
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
 
 
-<Mermaid code={`graph TD; A-->B; B-->C; C-->D;`} />
+
+  <Card title="Easy User Interface" icon="open-book">
+    <i className="fa fa-magic" aria-hidden="true"></i>
+    <p>Navigate yourself and use the application either with the mouse or the keyboard.</p>
+  </Card>
+
+  <Card title="File Formats" icon="pencil">
+    <i className="fa fa-file-code-o" aria-hidden="true"></i>
+    <p>
+      Load and save to GraphML, but you can also import most network file formats (GML, Pajek,
+      UCINET, GraphViz, Adjacency, EdgeList, etc.).
+    </p>
+  </Card>
+
+  <Card title="Network Analysis" icon="open-book">
+    <i className="fa fa-connectdevelop" aria-hidden="true"></i>
+    <p>
+      Compute distances, eccentricity, connectedness, clique census, triad census, and Prominence
+      indices (e.g., eigenvector, betweenness, and information centrality, proximity prestige,
+      PageRank, and more).
+    </p>
+  </Card>
+
+  <Card title="Visualization" icon="open-book">
+    <i className="fa fa-desktop" aria-hidden="true"></i>
+    <p>
+      Apply intuitive visualization layouts on undirected/directed graphs, based on prominence
+      scores or force-directed models.
+      <Mermaid code={`graph TD; A-->B; B-->C; C-->D;`} />
+    </p>
+  </Card>
+
+  <Card title="Famous Networks" icon="seti:csv">
+    <i className="fa fa-heart-o" aria-hidden="true"></i>
+    <p>Automatically recreate known social network datasets such as Padgett's Families.</p>
+  </Card>
+
+  <Card title="Random Networks" icon="seti:pipeline">
+    <i className="fa fa-random" aria-hidden="true"></i>
+    <p>
+      Create random networks using one of the supported models (scale-free, Erdős–Rényi, lattice,
+      small worlds).
 
 
-	$$
-E = mc^2
-$$
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+```math
+C_L
+L = \frac{1}{2} \rho v^2 S C_L
+```
+    </p>
+  </Card>
+
+  <Card title="Web Crawler" icon="seti">
+    <i className="fa fa-map-o" aria-hidden="true"></i>
+    <p>
+      Easily visualize and analyze networks of linked web pages and sites through the built-in web
+      crawler.
+    </p>
+  </Card>
+
+  <Card title="Multi-relational" icon="add-document">
+    <i className="fa fa-plus" aria-hidden="true"></i>
+    <p>
+      Work with multiple relations concurrently. SocNetV supports loading, editing, and saving
+      multirelational social networks.
+    </p>
+  </Card>
+
+  <Card title="Documentation" icon="open-book">
+    <i className="fa fa-question-circle" aria-hidden="true"></i>
+    <p>
+      Learn to work with SocNetV and make use of Social Network Analysis methods by reading our
+      Manual.
+    </p>
+  </Card>
+
+  <Card title="Free Software" icon="linux">
+    <i className="fa fa-code" aria-hidden="true"></i>
+    <p>
+      SocNetV is Free and Open-Source Software. Use it everywhere. Have a feature request? Ask us!
+    </p>
+  </Card>
 </CardGrid>
-</BaseLayout>
 
+</BaseLayout>
