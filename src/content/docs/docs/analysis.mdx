@@ -1,6 +1,6 @@
 ---
 title: Analysis Methods
-description: A guide to introduce SocNetV
+description: This page discusses the measures for graph and social network analysis that SocNetV supports.
 layout: "../../../layouts/BaseLayout.astro"
 ---
 
@@ -62,8 +62,6 @@ This option computes the Laplacian matrix of the network. The Laplacian is an $N
 
 ---
 
-
-
 ## Cohesion Measures
 
 The next option in the Analyze menu focuses on basic network/graph measures, such as the geodesic distance between nodes, the mean distance between all nodes, the diameter of the graph, the number of geodesics between nodes, and the eccentricity of each node. Each option is explained below.
@@ -75,7 +73,9 @@ The next option in the Analyze menu focuses on basic network/graph measures, suc
 Reciprocity, $ r $, is a measure of the likelihood of vertices in a directed network to be mutually linked.
 
 SocNetV supports two different methods to index the degree of reciprocity in a social network:
+
 - **Arc reciprocity**: The fraction of reciprocated ties over all actual ties in the network.
+
 - **Dyad reciprocity**: The fraction of actor pairs that have reciprocated ties over all pairs of actors that have any connection.
 
 In a directed network, the arc reciprocity measures the proportion of directed edges that are bidirectional. If the reciprocity is 1, then the adjacency matrix is structurally symmetric.
@@ -266,24 +266,22 @@ tending to $ \frac{3}{4} $ as $ K $ grows, where $ K $ is the mean degree.
 
 This is the **MDX** conversion of the provided Doxygen content with KaTeX math delimiters. Let me know if you'd like to continue or need further adjustments!
 
-
 <em>Tip</em>: All the basic network statistics, such as nodes, edges and density
 are displayed and automatically updated in the Analysis tab of the left dock in
 SocNetV main window.
 
--------------------------
+---
 
 ## Centralities and Prestige
 
-
 The last option in the **Analysis** menu opens the "Centrality and Prestige" sub-menu.
-
 
 In social network analysis (SNA), researchers use various measures to assess the prominence or importance of each node (actor) within a network. These measures help identify influential individuals or key entities in the network. For example, in a social network, we might want measure the importance of a person based on the number of friends they have, or we could want to identify a person who is highly respected by others in the network. In another example, we might want to know how critical a power station is inside the power company grid...
 
 Although there are various metrics for calculating node importance, they are generally classified into two broad categories: **Centrality** and **Prestige**. These concepts are foundational in social network analysis, drawing on the work of Wasserman and Faust (1994), as well as Knoke and Burt (2001), who distinguish between **centrality** as a measure of connectivity and **prestige** as a measure of status or recognition within a network.
 
-#### Centrality
+### Centrality
+
 **Centrality** measures quantify the relative importance of a node based on its position within the network. Central nodes are typically well-connected, either through direct connections or by bridging gaps between other nodes. 
 
 SocNetV supports a wide variety of centrality indices, including those conceptualized by Wasserman and Faust, such as:
@@ -306,7 +304,8 @@ SocNetV supports a wide variety of centrality indices, including those conceptua
 
 These centrality measures focus on the node’s direct connections, its geodesic distances, or its ability to influence others through its position in the network. Wasserman and Faust's conceptualization of **centrality** focuses on connectivity and control, with a particular emphasis on how nodes serve as intermediaries or closers in the network.
 
-#### Prestige
+### Prestige
+
 In contrast, **Prestige** measures focus on the recognition or status of a node, often derived from the nodes that point to it ( "choices received" or nominations to it), rather than the ones it points to ("choices made" by it). Prestige is particularly useful in **directed networks**, where relationships between nodes have direction (e.g., citations or recommendations). 
 
 As Wasserman and Faust (1994) argue, **prestige** measures reflect the notion of "visibility" or "respect," as seen in networks of social influence or reputation. SocNetV supports several prestige measures, including:
@@ -365,8 +364,6 @@ GDC = \frac{\sum{(\text{maxDC'} - \text{DC'})}}{(N-1) \cdot (N-2) / (2 \cdot N -
 $$
 
 > **Note**: In valued (or weighted) graphs, GDC cannot be computed with Freeman's formula. As a measure of degree centralization, one can use DC variance or mean instead.
-
-
 
 ### Closeness Centrality (CC)
 
@@ -439,7 +436,9 @@ BC_u = \sum_{s \neq u \neq t} \frac{\sigma_{st}(u)}{\sigma_{st}}
 $$
 
 Where:
+
 - $ \sigma_{st} $ is the total number of geodesics between nodes $ s $ and $ t $.
+
 - $ \sigma_{st}(u) $ is the number of geodesics between $ s $ and $ t $ that pass through node $ u $.
 
 ---
@@ -461,12 +460,12 @@ SC_u = \sum_{s \neq u \neq t} \sigma_{st}(u)
 $$
 
 Where:
+
 - $ \sigma_{st}(u) $ is the number of geodesics between nodes $ s $ and $ t $ that pass through node $ u $.
 
 :::note
 The formula for SC is very similar to BC in that it counts how many geodesics pass through node uu, but it sums this count over all pairs of nodes in the network.
 :::
-
 
 ### Eccentricity Centrality (EC) or Harary Graph Centrality
 
@@ -487,7 +486,9 @@ EC_u = \frac{1}{\max_{v \in V} d(u,v)}
 $$
 
 Where:
+
 - $ d(u,v) $ is the geodesic distance between nodes $ u $ and $ v $.
+
 - $ \max_{v \in V} d(u,v) $ is the largest geodesic distance from node $ u $ to any other node in the network.
 
 >The formula for EC calculates the inverse of the maximum geodesic distance from a node to any other node in the network. This is a measure of how "central" the node is within the graph, with nodes having short distances to all others being more central.
@@ -512,16 +513,14 @@ PC_u = \sum_{k=1}^{\infty} k \cdot |N_k(u)|
 $$
 
 Where:
-- $ N_k(u) $ is the set of nodes that are at a distance $ k $ from node $ u $.
-- The sum is taken over all neighborhood sizes from $ k = 1 $ to the maximum neighborhood size.
 
+- $ N_k(u) $ is the set of nodes that are at a distance $ k $ from node $ u $.
+
+- The sum is taken over all neighborhood sizes from $ k = 1 $ to the maximum neighborhood size.
 
 > This approach emphasizes nodes that are connected to important neighbors, with each successive neighborhood contributing less to the centrality score.
 
-
-
 ### Information Centrality (IC)
-
 
 The **Information Centrality (IC)** is an index suggested by Stephenson and Zelen (1989) which focuses on how information might flow through many different paths. Unlike **SC** and **BC**, the **IC** metric uses all paths between actors, weighted by strength of tie and distance.
 
@@ -556,7 +555,9 @@ IC_i = \frac{IC_i - 1}{C_{ii} + \frac{T - 2 \cdot R}{N}}
 $$
 
 Where:
+
 - $ T $ is the trace of matrix $ C $ (the sum of diagonal elements).
+
 - $ R $ is the sum of the elements of any row (since all rows of $ C $ have the same sum).
   
 **IC** has a minimum value but not a maximum.
@@ -580,8 +581,11 @@ A \mathbf{v} = \lambda \mathbf{v}
 $$
 
 Where:
+
 - $ A $ is the adjacency matrix.
+
 - $ \mathbf{v} $ is the eigenvector corresponding to the largest eigenvalue $ \lambda $.
+
 - The **EVC** of node $ u $ is the value of the $ u $-th element of the eigenvector $ \mathbf{v} $.
 
 Thus
@@ -591,13 +595,14 @@ x_i = \frac{1}{\lambda} \sum_{j \in N(i)} x_j
 $$
 
 Where:
+
 - $x_i$ is the centrality score of node $i$,
+
 - $N(i)$ is the set of neighbors of node $i$,
+
 - $\lambda$ is the largest eigenvalue of the adjacency matrix $A$.
 
-
 ---
-
 
 ### Degree Prestige (DP) or InDegree Centrality
 
@@ -609,7 +614,7 @@ Actors with higher **DP** are considered more prominent among others because the
 
 This index can be calculated only for unvalued or valued digraphs. In weighted relations, **DP** is the sum of weights of all arcs/inLinks ending at node $ v $.
 
-> **Note**: In unvalued graphs, SocNetV computes **Group Degree Prestige** using Freeman's formula. 
+> **Note**: In unvalued graphs, SocNetV computes **Group Degree Prestige** using Freeman's formula.
 
 > **Note**: For valued or weighted graphs, we cannot calculate **Group Degree Centrality (DC)** using Freeman's formula. You can use **DP** variance or mean instead.
 
@@ -630,17 +635,22 @@ PR_u = \frac{1 - d}{N} + d \cdot \sum_{v \in M_u} \frac{PR_v}{DC_v}
 $$
 
 Where:
+
 - $ u $ is the node,
+
 - $ d $ is the damping factor ($ d = 0.85 $),
+
 - $ N $ is the number of vertices in the network,
+
 - $ M_u $ is the set of all nodes which link to $ u $,
+
 - $ DC_v $ is the out-degree of node $ v $.
 
 The **PR** values correspond to the principal eigenvector of the normalized link matrix.
 
 This index can be calculated in both graphs and digraphs but is usually best suited for directed graphs since it is a prestige measure.
 
-The **PageRank Prestige** index can also be calculated in weighted graphs. 
+The **PageRank Prestige** index can also be calculated in weighted graphs.
 
 > **Note**: In weighted relations, each backlink to node $ u $ from node $ v $ is considered to have weight = 1, but it is normalized by the sum of out-degree weights (outEdges) of node $ v $. Therefore, nodes with high out-link weights give a smaller percentage of their **PR** to node $ u $.
 
@@ -660,12 +670,7 @@ $$
 
 Where the sum is over every node $ v $ in $ I $.
 
-
-
-
-----------------------------
-
-
+---
 
 ## Community Detection
 
@@ -680,8 +685,6 @@ SocNetV uses the **Bron–Kerbosch algorithm** to find all **maximal cliques** i
 ![Clique census of Florentine families](/data/uploads/screenshots/22/socnetv-2.2-clique-census-florentine-families-report-1.png)
 
 **Note:** The computation of **maximal cliques** can be slow in very large or dense social networks due to the **NP-complete** nature of the clique problem.
-
-
 
 ---
 
@@ -707,28 +710,25 @@ The following list shows all the **16 triad types**:
 
 Within each row, all the triad types have the same number of arcs present:
 
-<pre>
+```code
 003
 012
-102     021D    021U    021C
+102     021D  021U  021C
 111D    111U	030T	030C
 201     120D	120U	120C
 210
 300
-</pre>
+```
 
 So, when you click on the **Triad Census** menu option, **SocNetV** calculates and displays a vector $ T $ of length 16. Each element $ T_u $ is the frequency of a specific triad type in the network, e.g., $ T_{003} = 3 $. 
 
-
-Furthermore, the order of the elements of vector T is the same as the
-aforementioned ordering of the triad types:
+Furthermore, the order of the elements of vector T is the same as the aforementioned ordering of the triad types:
 
 T = [ T003, T012, T102, T021D, T021U, T021C, T111D, T111U, T030T, T030C, T201, T120D, T120U, T120C, T210, T300 ]
 
 The sum of all these frequencies equals $ C(N,3) $, the total number of possible triads in the network.
 
-
-----
+---
 
 ## Structural Equivalence Methods
 
@@ -739,8 +739,11 @@ One way to identify these groups is by examining the relationships between actor
 There are many methods to measure the similarity or dissimilarity of actors in a network.
 
 SocNetV supports the following methods:
+
 - Similarity by measure
+
 - Pearson Correlation Coefficients
+
 - Tie profile dissimilarities
 
 By applying one of these methods, SocNetV creates a pairwise actor similarity/dissimilarity matrix.
@@ -750,10 +753,15 @@ By applying one of these methods, SocNetV creates a pairwise actor similarity/di
 This method computes a pairwise actor similarity matrix, where each element $ (i, j) $ is the ratio of tie (or distance) matches of actors $ i $ and $ j $ to all other actors.
 
 SocNetV supports the following measures:
+
 - **Simple Matching (Exact Matches)**: Proportion of tie/distance matches (present or absent) between two actors.
+
 - **Jaccard Index (Positive Matches or Co-citation)**: Percentage of same ties/distances reported by both actors to the total number of ties reported.
+
 - **Hamming Distance**: Number of ties/distances that differ between each pair of actors.
+
 - **Cosine Similarity**
+
 - **Euclidean Distance**
 
 For example, in the case of **Simple Matching**, the similarity matrix depicts the ratios of exact matches of pairs of actors to all other actors. If the element $ (i, j) = 0.5 $, it means that actors $ i $ and $ j $ have the same ties present or absent 50% of the time.
@@ -797,5 +805,3 @@ The result of **Hierarchical Cluster Analysis** is the clusters per level and a 
 ![Example dendrogram of HCA](/data/uploads/screenshots/22/socnetv-2.2-hca-results-2-dendrogram.jpg)
 
 **Note:** The complexity of agglomerative clustering is $ O(n^2 \log n) $, which makes it too slow for large data sets.
-
-

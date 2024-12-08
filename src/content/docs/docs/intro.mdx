@@ -1,7 +1,10 @@
 ---
 title: "Introduction"
-description: "A guide to introduce SocNetV"
+description: "An introduction to Social Network Analysis and SocNetV"
+layout: "../../../layouts/BaseLayout.astro"
 ---
+
+import Mermaid from "../../../components/Mermaid.astro";
 
 ## What is Social Network Analysis?
 
@@ -20,6 +23,25 @@ SNA researchers conceptualize social relationships in terms of _nodes_ and _edge
 - **Edges** visualize the relationships between those actors.
 
 The result is graph-based structures, often complex to understand and analyze. This is where applications like SocNetV are needed.
+<Mermaid code={`
+graph LR
+    A[Actor 1] --> B[Actor 2]
+    A[Actor 1] --> C[Actor 3]
+    B[Actor 2] --> D[Actor 4]
+    C[Actor 3] --> D[Actor 4]
+    C[Actor 3] --> E[Actor 5]
+    D[Actor 4] --> F[Actor 6]
+    E[Actor 5] --> F[Actor 6]
+    E[Actor 5] --> G[Actor 7]
+    F[Actor 6] --> H[Actor 8]
+    G[Actor 7] --> I[Actor 9]
+    H[Actor 8] --> I[Actor 9]
+    I[Actor 9] --> J[Actor 10]
+    G[Actor 7] --> J[Actor 10]
+    A[Actor 1] --> F[Actor 6]
+    B[Actor 2] --> G[Actor 7]
+    D[Actor 4] --> H[Actor 8]
+`} />
 
 ---
 
@@ -116,7 +138,7 @@ The development version is <em>not always stable</em>.
 :::
 
 
-----------------------
+---
 
 ## RunOptions Execution Options
 
@@ -132,6 +154,6 @@ If you run SocNetV from the command prompt, there are three (at the moment) opti
 [homepage]: http://socnetv.org "http://socnetv.org"
 
 
-------------------------
+
 
 

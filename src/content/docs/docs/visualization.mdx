@@ -1,0 +1,182 @@
+---
+title: Visualization
+description: Visualization and layout algorithms in SocNetV
+layout: "../../../layouts/BaseLayout.astro"
+---
+
+import Mermaid from "../../../components/Mermaid.astro";
+
+
+SocNetV supports two kinds of network visualizations: **Prominence-based Placement** and **Force-Directed Placement**, each offering various layout algorithms.
+
+You can select visualizations from the menu "Layout" or by clicking on the checkboxes on the left dock.
+
+## Prominence-based Placement
+
+SocNetV implements algorithms that layout the network such that each node's position reflects its **centrality** or **prestige** status within the network.
+
+These algorithms support all prominence (Centrality and Prestige) measures and a variety of layout types: **circular**, **level**, **nodal size**, and **color**. To apply, choose a prominence index and a layout type from the left dock and press the **Apply** button.
+
+Please note that these algorithms are used purely for visual representation based on node prominence; they do not optimize for edge crossings.
+
+### Circular Layout
+
+In this layout, all nodes are arranged on concentric circles with varying radii. Nodes with higher centrality or prestige are positioned closer to the center of the screen.
+
+
+**When to Use**: 
+- The circular layout is best when you want to emphasize the relative importance of nodes based on their centrality or prestige. This is especially useful for comparing nodes in terms of their prominence in the network.
+
+
+<Mermaid code={`
+graph TD
+  A<-->B
+  A<-->C
+  A<-->D
+  B<-->E
+  C<-->E
+  D<-->E
+`} />
+
+### On Levels Layout
+
+In this layout type, nodes are positioned on levels of varying height. More central nodes will appear at the top of the screen, while less central nodes are positioned lower.
+
+**When to Use**: 
+- The "on levels" layout works well when you need to emphasize the hierarchical relationship between nodes, especially when the network structure is tree-like or when you want to visually distinguish between higher and lower centrality nodes.
+
+### Nodal Size Layout
+
+In this layout, the size of each node is scaled according to its centrality or prestige score. This layout can be applied in combination with either circular or level layouts for more meaningful visualizations.
+
+**When to Use**: 
+- Nodal size is ideal when you want to show the importance of nodes not just by position, but also by their relative size. This is useful for visualizing the absolute "weight" or "influence" of nodes in the network.
+
+## Force-directed Placement
+
+### Kamada-Kawai Layout
+
+The **Kamada-Kawai** model treats the network as a dynamic system where every two actors are 'particles' connected by 'springs'. Each spring has a desirable length corresponding to their graph-theoretic distance.
+
+The optimal layout occurs when the system's imbalance is minimized. The imbalance is calculated as the total spring energy:
+
+$$
+E = \sum_{(i,j) \in E} (d_{ij} - d_{ij}^{\text{desired}})^2
+$$
+
+Where:
+- $ d_{ij} $ is the actual distance between nodes $ i $ and $ j $,
+- $ d_{ij}^{\text{desired}} $ is the ideal spring length between nodes $ i $ and $ j $.
+
+Initially, nodes are placed on the vertices of a regular n-polygon.
+
+**When to Use**: 
+Kamada-Kawai is ideal when you need to preserve the relative distances between nodes in a graph. It is well-suited for visualizing network structures where you want to maintain meaningful distances and relationships between nodes, especially in dense graphs.
+
+<Mermaid code={`
+graph LR
+  A-->B
+  B-->C
+  C-->D
+  D-->A
+`} />
+
+### Spring Embedder Layout
+
+The **Spring Embedder** model (Eades, 1984) replaces nodes with steel rings and edges with springs, forming a mechanical system. The vertices are initially placed in some layout and allowed to move to achieve a minimal energy state. As Eades described:
+
+> *"The basic idea is as follows. To embed [lay out] a graph, we replace the vertices by steel rings and replace each edge with a spring to form a mechanical system... The vertices are placed in some initial layout and let go so that the spring forces on the rings move the system to a minimal energy state."*
+
+In our implementation, each node $ u \in V $ exerts a repelling force $ F_r $ on all other nodes, while each edge $ (u,v) \in E $ acts as a spring exerting an attractive force $ F_a $ between the connected nodes.
+
+The attractive force $ F_a $ is calculated as:
+
+$$
+F_a^{u,v} = c_1 \cdot \log\left( \frac{d_{u,v}}{c_2} \right)
+$$
+
+Where:
+- $ d_{u,v} $ is the Euclidean distance between nodes $ u $ and $ v $,
+- $ c_1 $ is a constant (set to 2),
+- $ c_2 $ is the "natural length" of the spring, calculated as:
+
+$$
+c_2 = \text{vertexWidth} + \sqrt{\frac{\text{screenArea}}{|V|}}
+$$
+
+The repelling force $ F_r $ between any pair of nodes is computed using:
+
+$$
+F_r = \frac{c_3}{d_{u,v}^2}
+$$
+
+Where $ c_3 = 1 $.
+
+These forces are applied iteratively, adjusting node positions until equilibrium is reached, meaning that the node positions no longer change.
+
+*Note*: Repulsive forces are calculated between every pair of vertices, while attractive forces only act between directly connected nodes.
+
+**When to Use**:
+
+The Spring Embedder layout is suitable for graphs that are less dense, and when you want to visually separate nodes while preserving the network’s connectivity. This layout is particularly useful for illustrating connections in networks where you want to emphasize node relationships and forces between connected nodes.
+
+<Mermaid code={`
+graph TD
+  A-->B
+  B-->C
+  A-->D
+  D-->C
+  A-->E
+  B-->E
+`} />
+
+
+### Fruchterman-Reingold Layout
+
+The **Fruchterman-Reingold** model (1991) builds upon the Spring Embedder model by introducing the analogy of nodes as electrically charged or gravitational bodies. Nodes repel each other, while connected nodes attract each other.
+
+As described by Fruchterman and Reingold:
+
+> *"Consider the following analogy: the vertices behave as atomic particles or celestial bodies, exerting attractive and repulsive forces on one another; the forces induce movement. Our algorithm resembles molecular or planetary simulations, sometimes called n-body problems."*
+
+In this layout, the forces are computed as follows:
+
+- **Attractive Force**: 
+$$
+F_{\text{attract}} = \frac{(\text{dist}(v,u))^2}{\text{optimalDistance}}
+$$
+- **Repulsive Force**: 
+$$
+F_{\text{repel}} = \frac{\text{optimalDistance}^2}{\text{dist}(v,u)}
+$$
+
+Where the **optimal distance** is defined as:
+
+$$
+\text{optimalDistance} = \sqrt{\frac{\text{screenArea}}{|V|}}
+$$
+
+Repulsive forces are computed for all vertices, while attractive forces are only computed between neighboring vertices.
+
+**When to Use**: 
+
+This layout is well-suited for networks with clear clusters or community structures. It works well when you need to emphasize node-to-node interaction and provide a clear visual of these interactions, especially when the network has a mix of dense and sparse regions.
+
+<Mermaid code={`
+graph LR
+  A-->B
+  B-->C
+  C-->D
+  D-->E
+  E-->A
+  B-->E
+  A-->D
+`} />
+
+---
+
+:::caution
+Force-directed layouts, such as Fruchterman-Reingold and Spring Embedder, can be computationally expensive for large networks. These algorithms involve iterative calculations for every node and edge in the network, which may lead to longer processing times as the size of the network grows. Therefore, for large networks, consider using simpler layouts or applying them to smaller subgraphs.
+:::
+
+---

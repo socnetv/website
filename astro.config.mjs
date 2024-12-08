@@ -50,6 +50,8 @@ export default defineConfig({
 						{ label: 'Analysis', slug: 'docs/analysis' },
 						{ label: 'Visualization', slug: 'docs/visualization' },
 						{ label: 'Credits', slug: 'docs/credits' },
+						{ label: 'References', slug: 'docs/references' },
+						{ label: 'License', slug: 'docs/license' },
 						{ label: 'Bugs', slug: 'docs/bugs' },
 					],
 				},
