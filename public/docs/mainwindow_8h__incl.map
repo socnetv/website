@@ -1,0 +1,21 @@
+<map id="/home/dimitris/socnetv/app/src/mainwindow.h" name="/home/dimitris/socnetv/app/src/mainwindow.h">
+<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="367,5,521,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,112,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="367,45,126,94,125,88,366,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="137,93,207,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="380,48,221,93,220,88,378,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="231,93,339,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,48,322,90,320,85,405,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="364,93,431,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="435,47,414,83,409,80,430,44"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="455,93,527,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="458,44,479,80,474,83,453,47"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="551,93,665,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="484,43,573,85,571,90,482,48"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="690,93,849,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="522,43,709,87,708,93,521,48"/>
+<area shape="rect" id="Node000009" href="$global_8h.html" title=" " alt="" coords="873,93,940,119"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="522,34,675,57,860,91,859,96,674,62,521,40"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="862,167,951,192"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="909,119,909,153,904,153,904,119"/>
+</map>

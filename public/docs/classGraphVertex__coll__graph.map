@@ -1,0 +1,20 @@
+<map id="GraphVertex" name="GraphVertex">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,416,100,441"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="72,5,143,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,44,95,55,89,94,67,286,56,416,51,416,62,285,83,93,90,54,94,43"/>
+<area shape="rect" id="Node000003" href="$classGraph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="168,328,225,353"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="104,45,96,96,93,164,95,200,102,236,114,271,131,302,148,319,169,329,167,334,145,323,127,306,109,273,97,237,90,201,87,164,91,95,99,44"/>
+<area shape="rect" id="Node000004" href="$classParser.html" title="Defines a class for network file loading and parsing." alt="" coords="120,93,180,119"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="122,42,146,92,142,94,117,44"/>
+<area shape="rect" id="Node000005" href="$classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="205,93,298,119"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="140,35,233,91,230,95,137,40"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,363,74,418,71,413,164,358"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="146,133,139,168,135,212,139,258,152,303,162,316,175,326,172,330,158,319,148,305,133,259,130,212,134,167,141,132"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="250,133,218,305,206,329,201,327,213,303,245,132"/>
+<area shape="rect" id="Node000006" href="$classMatrix.html" title=" " alt="" coords="323,93,382,119"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="359,132,362,170,361,216,350,264,340,286,325,306,303,323,277,334,226,342,225,337,275,329,300,319,321,302,335,283,345,262,355,215,357,170,354,133"/>
+<area shape="rect" id="Node000007" href="$classMatrixRow.html" title=" " alt="" coords="310,5,395,31"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="355,45,355,93,350,93,350,45"/>
+<area shape="rect" id="Node000008" href="$classMyEdge.html" title=" " alt="" coords="407,93,477,119"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="449,132,451,171,449,217,437,265,426,287,410,306,397,315,377,322,327,333,226,341,225,336,327,327,376,317,394,310,407,302,421,284,432,263,444,216,446,171,443,133"/>
+</map>

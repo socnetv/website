@@ -33,7 +33,8 @@ INPUT                  = ../../app/src/  \
 IMAGE_PATH             = ./annotation-src
 
 # File patterns to include in documentation (Qt6 source files)
-FILE_PATTERNS          = *.cpp *.h *.qrc *.ui *.qml  # Include all relevant Qt6 source files
+FILE_PATTERNS          =                                    # Include all
+# FILE_PATTERNS          =   *.cpp *.h *.qrc *.ui *.qml  # Include all relevant Qt6 source files
 
 # HTML output generation
 GENERATE_HTML          = YES
@@ -46,7 +47,7 @@ USE_MDFILE_AS_MAINPAGE = ./annotation-src/index.md  # Make index.md the main pag
 
 # Enable detailed documentation for classes and functions
 EXTRACT_ALL            = YES                  # Extract all information for documenting
-EXTRACT_PRIVATE        = NO                   # Do not extract private members
+EXTRACT_PRIVATE        = YES                  # Do extract private members
 EXTRACT_STATIC         = YES                  # Extract static members
 EXTRACT_LOCAL_CLASSES  = YES                  # Include local classes (not in header files)
 
@@ -56,10 +57,16 @@ EXTRACT_LOCAL_CLASSES  = YES                  # Include local classes (not in he
 # UI_DIR                 = ui                    # Directory for UI files
 
 # Enable generation of class diagrams, function call graphs, and more
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+GROUP_GRAPHS           = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+DIRECTORY_GRAPH        = YES
 HAVE_DOT               = YES                  # Enable Graphviz for generating diagrams
 DOT_PATH               =                      # Path to Graphviz executable (adjust if necessary)
-CALL_GRAPH             = YES                  # Generate a call graph for functions
-CALLER_GRAPH           = YES                  # Generate a caller graph showing function calls
+CALL_GRAPH             = NO                   # NOT Generate a call graph for functions
+CALLER_GRAPH           = NO                   # NOT Generate a caller graph showing function calls
 GRAPHICAL_HIERARCHY    = YES                  # Generate a graphical class hierarchy diagram
 DOT_IMAGE_FORMAT       = png                  # Image format for diagrams (png, jpg, etc.)
 

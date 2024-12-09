@@ -1,0 +1,15 @@
+<map id="/home/dimitris/socnetv/app/src/graphicsedge.h" name="/home/dimitris/socnetv/app/src/graphicsedge.h">
+<area shape="rect" id="Node000001" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="567,5,728,45"/>
+<area shape="rect" id="Node000002" href="$graphicsedge_8cpp.html" title="Implements the GraphicsEdge class, which visualizes edges in the network graph." alt="" coords="5,93,180,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="553,42,193,96,181,98,180,93,192,91,552,37"/>
+<area shape="rect" id="Node000003" href="$graphicsedgelabel_8cpp.html" title="Implements the GraphicsEdgeLabel class for rendering edge labels in the network graph." alt="" coords="205,93,407,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="560,51,381,96,380,91,559,46"/>
+<area shape="rect" id="Node000004" href="$graphicsedgeweight_8cpp.html" title="Implements the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="431,93,645,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="614,56,564,95,561,91,611,52"/>
+<area shape="rect" id="Node000005" href="$graphicsnode_8cpp.html" title="Implements the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="669,93,844,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="684,52,734,91,731,95,681,56"/>
+<area shape="rect" id="Node000006" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="868,93,1053,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="730,46,893,91,891,96,729,52"/>
+<area shape="rect" id="Node000007" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="1078,93,1246,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="742,38,1066,91,1078,93,1077,98,1066,96,741,43"/>
+</map>
