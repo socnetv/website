@@ -12,7 +12,7 @@ export default defineConfig({
 	redirects: {
     '/docs/formats.html': '/manual/formats',
 	'/docs/intro.html': '/manual/intro',
-	'/manual/visualisation': '/manual/visualization'
+	'/manual/visualisation': '/manual/visualization',
     '/search': '/',
   },
 	integrations: [
@@ -71,13 +71,13 @@ export default defineConfig({
 				{ label: 'Contact', slug: 'contact' },
 				{ label: 'Author', slug: 'author' },
 
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Introduction', slug: 'guides/intro' },
-					],
-				},
+				// {
+				// 	label: 'Guides',
+				// 	items: [
+				// 		// Each item here is one entry in the navigation menu.
+				// 		{ label: 'Introduction', slug: 'guides/intro' },
+				// 	],
+				// },
 
 				{
 					label: 'Reference',
