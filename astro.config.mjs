@@ -23,7 +23,6 @@ export default defineConfig({
 						dimitris: {
 							// Author configuration for the `alice` author goes here.
 							name: 'Dimitris',
-							title: 'developer',
 							url: 'https://dimitris.apeiro.gr'
 						},
 					},
@@ -39,6 +38,7 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/socnetv/app',
 			},
+			disable404Route: true,
 			sidebar: [
 				{ label: 'Home', slug: 'index' },
 				// A group labelled 'Docs' containing four links.
