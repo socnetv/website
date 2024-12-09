@@ -43,21 +43,21 @@ description: "SocNetV is a cross-platform, user-friendly software for social net
 
 SocNetV is a cross-platform, user-friendly free software application for social network analysis and visualization. With SocNetV you can:
 
-- [Draw social networks](../docs/index.md#canvas) with a few clicks on a virtual canvas, load field data from a file in a [supported format](../docs/formats.md) ([GraphML](../docs/formats.md#GraphML), [GraphViz](../docs/formats.md#GraphViz), Adjacency, EdgeList, GML, Pajek, UCINET, etc.), or crawl the internet to create a social network of connected webpages.
+- [Draw social networks](../docs/index.md#canvas) with a few clicks on a virtual canvas, load field data from a file in a [supported format](../docs/formats) ([GraphML](../docs/formats/#graphml-files), [GraphViz](../docs/formats/#graphviz-dot-files), Adjacency, EdgeList, GML, Pajek, UCINET, etc.), or crawl the internet to create a social network of connected webpages.
 - Edit actors and ties through point-and-click, analyze graph and social network properties, produce beautiful HTML reports, and embed visualization layouts in the network.
 
 ### Main Features
 
-- Standard graph and network cohesion metrics, such as [density](../docs/index.md#Cohesion), [diameter](../docs/index.md#Diameter), [geodesics](../docs/index.md#GeodesicsMatrix), [distances](../docs/index.md#DistancesMatrix), [connectedness](../docs/index.md#Connectedness), [eccentricity](../docs/index.md#Eccentricity), [clustering coefficient](../docs/index.md#Coefficient), reciprocity, etc.
+- Standard graph and network cohesion metrics, such as [density](../docs/analysis/#cohesion-measures), [diameter](../docs/analysis/#diameter), [geodesics](../docs/analysis/#geodesics-matrix), [distances](../docs/index.md#DistancesMatrix), [connectedness](../docs/index.md#Connectedness), [eccentricity](../docs/analysis/#eccentricity), [clustering coefficient](../docs/analysis/#clustering-coefficient), reciprocity, etc.
 - Matrix routines: Adjacency plot, Laplacian matrix, Degree matrix, Cocitation, etc.
-- Advanced measures for social network analysis such as [centrality and prestige indices](../docs/index.md#Centralities) (e.g., [eigenvector centrality](../docs/index.md#EVC), [closeness centrality](../docs/index.md#CC), [betweenness centrality](../docs/index.md#BC), [information centrality](../docs/index.md#IC), [power centrality](../docs/index.md#PC), [proximity prestige](../docs/index.md#PP), and [pagerank prestige](../docs/index.md#PRP)).
-- Fast algorithms for [community detection](../docs/index.md#communities), such as [triad census](../docs/index.md#TriadCensus), [clique census](../docs/index.md#CliqueCensus), etc.
-- Structural equivalence analysis using [hierarchical clustering](../docs/index.md#hierarchicalclusteranalysis), actor similarities, tie profile dissimilarities, and Pearson coefficients.
-- [Layout models](../docs/index.md#visualisation) based on prominence indices (e.g., circular, level, nodal sizes by centrality score) or on force-directed placement (e.g., Kamada-Kawai, [Fruchterman-Reingold](../docs/index.md#LayoutFR)).
-- [Multirelational network loading and editing](../docs/index.md#Relations).
-- Random network creation using various models ([Barabási–Albert Scale-Free](../docs/index.md#RandomSF), [Erdős–Rényi](../docs/generate.md#RandomER), [Watts-Strogatz Small-World](../docs/index.md#RandomSW), d-regular, ring lattice, etc.).
-- [Famous social network analysis datasets](../docs/index.md#Datasets), such as Padgett's Florentine families.
-- Built-in [web crawler](../docs/index.md#WebCrawler) to automatically create "social networks" from links found in a given URL.
+- Advanced measures for social network analysis such as [centrality and prestige indices](../docs/analysis/#centralities-and-prestige) (e.g., [eigenvector centrality](../docs/analysis/#eigenvector-centrality-or-gould-index-evc), [closeness centrality](../docs/analysis/#closeness-centrality-cc), [betweenness centrality](../docs/index.md#BC), [information centrality](../docs/index.md#IC), [power centrality](../docs/index.md#PC), [proximity prestige](../docs/index.md#PP), and [pagerank prestige](../docs/index.md#PRP)).
+- Fast algorithms for [community detection](../docs/analysis/#community-detection), such as [triad census](../docs/analysis/#triad-census), [clique census](../docs/analysis/#clique-census), etc.
+- Structural equivalence analysis using [hierarchical clustering](../docs/analysis), actor similarities, tie profile dissimilarities, and Pearson coefficients.
+- [Layout models](../docs/visualisation) based on prominence indices (e.g., circular, level, nodal sizes by centrality score) or on force-directed placement (e.g., Kamada-Kawai, [Fruchterman-Reingold](../docs/index.md#LayoutFR)).
+- [Multirelational network loading and editing](../docs/intro).
+- Random network creation using various models ([Barabási–Albert Scale-Free](../docs/generate/#scale-free-s-f-networks), [Erdős–Rényi](../docs/generate/#erd%C5%91sr%C3%A9nyi-er-networks), [Watts-Strogatz Small-World](../docs/generate/#small-world-sw-networks), d-regular, ring lattice, etc.).
+- [Famous social network analysis datasets](../docs/generate/#datasets-recreating-famous-datasets), such as Padgett's Florentine families.
+- Built-in [web crawler](../docs/generate/#web-crawler-networks-of-webpages) to automatically create "social networks" from links found in a given URL.
 - Comprehensive [documentation](../documentation) available both online and inside the application.
 
 Source code, packages, and executables for Windows, Linux, and macOS are available on the [Downloads](../downloads) page.
