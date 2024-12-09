@@ -9,6 +9,9 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
 	site: 'https://socnetv.org',
 	base: '/',
+	redirects: {
+    '/docs/index.html': '/documentation'
+  },
 	integrations: [
 		starlight({
 			plugins: [
