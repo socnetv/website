@@ -1,8 +1,16 @@
 ---
-title: "SocNetV v3.0 Released"
-date: 2023-12-01
-description: "SocNetV version 3.0 brings performance improvements."
+title: "SocNetV v2.9 Released"
+date: 2021-06-15
+description: "SocNetV version 2.9 brings many improvements."
 
 ---
 
-SocNetV v3.0 is out now! It includes several performance improvements and new features to make social network analysis easier.
+![SocNetV v2.9 Screenshot](/data/uploads/screenshots/29/socnetv-v29-1.png)
+
+### Description
+
+The Social Network Visualizer project has released a new version of our favorite social network analysis and visualization software application. **SocNetV v2.9** fixes the macOS Big Sur issue and brings a few bug fixes and improvements.
+
+### Availability
+
+**SocNetV v2.9** is now available for **Windows**, **macOS**, and **Linux**. Go to the [SocNetV Downloads page](https://socnetv.org/downloads/) to get it!
