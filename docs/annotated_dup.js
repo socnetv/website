@@ -1,0 +1,28 @@
+var annotated_dup =
+[
+    [ "Actor", "structActor.html", "structActor" ],
+    [ "Chart", "classChart.html", "classChart" ],
+    [ "ClickedEdge", "structClickedEdge.html", "structClickedEdge" ],
+    [ "CompareActors", "classCompareActors.html", "classCompareActors" ],
+    [ "Graph", "classGraph.html", "classGraph" ],
+    [ "GraphDistance", "classGraphDistance.html", "classGraphDistance" ],
+    [ "GraphDistancesCompare", "classGraphDistancesCompare.html", "classGraphDistancesCompare" ],
+    [ "GraphicsEdge", "classGraphicsEdge.html", "classGraphicsEdge" ],
+    [ "GraphicsEdgeLabel", "classGraphicsEdgeLabel.html", "classGraphicsEdgeLabel" ],
+    [ "GraphicsEdgeWeight", "classGraphicsEdgeWeight.html", "classGraphicsEdgeWeight" ],
+    [ "GraphicsGuide", "classGraphicsGuide.html", "classGraphicsGuide" ],
+    [ "GraphicsNode", "classGraphicsNode.html", "classGraphicsNode" ],
+    [ "GraphicsNodeLabel", "classGraphicsNodeLabel.html", "classGraphicsNodeLabel" ],
+    [ "GraphicsNodeNumber", "classGraphicsNodeNumber.html", "classGraphicsNodeNumber" ],
+    [ "GraphicsWidget", "classGraphicsWidget.html", "classGraphicsWidget" ],
+    [ "GraphVertex", "classGraphVertex.html", "classGraphVertex" ],
+    [ "MainWindow", "classMainWindow.html", "classMainWindow" ],
+    [ "Matrix", "classMatrix.html", "classMatrix" ],
+    [ "MatrixRow", "classMatrixRow.html", "classMatrixRow" ],
+    [ "MyEdge", "classMyEdge.html", "classMyEdge" ],
+    [ "PairVF", "classPairVF.html", "classPairVF" ],
+    [ "PairVFCompare", "classPairVFCompare.html", "classPairVFCompare" ],
+    [ "Parser", "classParser.html", "classParser" ],
+    [ "TextEditor", "classTextEditor.html", "classTextEditor" ],
+    [ "WebCrawler", "classWebCrawler.html", "classWebCrawler" ]
+];

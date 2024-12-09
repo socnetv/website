@@ -1,0 +1,9 @@
+<map id="/home/dimitris/socnetv/app/src/graphicsedgeweight.h" name="/home/dimitris/socnetv/app/src/graphicsedgeweight.h">
+<area shape="rect" id="Node000001" title="Declares the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="212,5,411,45"/>
+<area shape="rect" id="Node000002" href="$graphicsedge_8cpp.html" title="Implements the GraphicsEdge class, which visualizes edges in the network graph." alt="" coords="5,93,180,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,53,142,96,140,91,250,48"/>
+<area shape="rect" id="Node000003" href="$graphicsedgeweight_8cpp.html" title="Implements the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="205,93,418,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="314,59,314,93,309,93,309,59"/>
+<area shape="rect" id="Node000004" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="443,93,628,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="374,48,487,91,485,96,372,53"/>
+</map>

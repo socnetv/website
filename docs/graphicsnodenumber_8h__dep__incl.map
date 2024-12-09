@@ -1,0 +1,9 @@
+<map id="/home/dimitris/socnetv/app/src/graphicsnodenumber.h" name="/home/dimitris/socnetv/app/src/graphicsnodenumber.h">
+<area shape="rect" id="Node000001" title="Declares the GraphicsNodeNumber class for rendering node numbers in the network graph visualization." alt="" coords="211,5,414,45"/>
+<area shape="rect" id="Node000002" href="$graphicsnode_8cpp.html" title="Implements the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="5,93,180,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,53,142,96,140,91,251,48"/>
+<area shape="rect" id="Node000003" href="$graphicsnodenumber_8cpp.html" title="Implements the GraphicsNodeNumber class for rendering node numbers in the network graph visualization..." alt="" coords="204,93,421,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="315,59,315,93,310,93,310,59"/>
+<area shape="rect" id="Node000004" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="445,93,631,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="376,48,490,91,488,96,374,53"/>
+</map>

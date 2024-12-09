@@ -1,0 +1,56 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="Node000001" title="The base window of SocNetV contains all widgets and functionality." alt="" coords="1069,303,1167,328"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="818,88,925,114"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="934,116,948,122,1002,154,1047,196,1069,224,1088,253,1113,302,1109,304,1083,256,1065,227,1043,200,999,158,945,127,932,121"/>
+<area shape="rect" id="Node000003" href="$classGraphicsWidget.html" title=" " alt="" coords="178,580,293,606"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="272,572,326,549,418,518,498,495,635,463,772,433,946,384,1044,346,1089,326,1092,331,1046,351,948,389,774,438,636,468,499,500,420,523,328,554,275,577"/>
+<area shape="rect" id="Node000005" href="$classGraphicsNode.html" title=" " alt="" coords="529,808,634,834"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="253,617,278,668,305,729,311,755,311,776,315,794,328,811,342,818,362,823,415,828,528,823,529,829,415,833,361,828,340,823,325,815,310,796,306,776,305,755,300,731,274,670,248,619"/>
+<area shape="rect" id="Node000011" href="$classGraphicsEdge.html" title=" " alt="" coords="819,623,923,648"/>
+<area shape="poly" id="edge17_Node000011_Node000003" title=" " alt="" coords="306,577,326,574,452,562,552,557,599,559,650,564,773,592,812,605,846,620,844,625,810,610,771,597,649,570,599,564,552,562,453,568,327,580,307,582"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,580,119,606"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="132,590,178,590,178,596,132,596"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="521,807,485,798,439,793,401,793,365,788,346,780,325,767,308,742,284,697,240,607,245,605,288,695,312,740,329,763,348,775,367,783,402,788,439,787,486,793,522,802"/>
+<area shape="rect" id="Node000008" href="$classGraphicsNodeLabel.html" title=" " alt="" coords="803,854,939,879"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="615,838,645,854,678,865,742,873,803,872,803,877,741,878,677,870,643,858,613,843"/>
+<area shape="rect" id="Node000010" href="$classGraphicsNodeNumber.html" title=" " alt="" coords="796,978,947,1003"/>
+<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="594,846,607,874,625,906,649,938,679,963,706,976,736,985,796,992,795,997,735,990,704,981,676,967,645,941,621,909,602,876,589,848"/>
+<area shape="poly" id="edge18_Node000011_Node000005" title=" " alt="" coords="647,814,710,801,741,789,770,773,803,744,830,708,862,647,867,650,835,711,807,747,774,778,744,794,711,806,648,819"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="200,146,271,171"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="253,182,280,236,305,301,314,342,316,374,319,406,329,445,347,488,366,521,406,576,447,630,467,663,488,705,495,730,496,751,499,770,511,790,534,806,531,810,507,793,494,772,491,752,489,731,483,707,463,666,442,633,401,579,362,524,342,490,324,447,313,407,311,375,309,343,300,303,275,238,248,184"/>
+<area shape="poly" id="edge15_Node000011_Node000006" title=" " alt="" coords="250,183,287,265,309,305,329,331,372,362,412,377,455,385,510,398,550,407,585,411,648,413,677,415,707,421,739,434,774,456,794,474,812,496,840,543,859,588,869,622,864,624,854,590,836,546,808,499,790,478,770,460,737,439,706,426,677,420,648,418,585,417,549,413,509,403,454,391,410,382,370,367,325,335,304,308,282,268,245,185"/>
+<area shape="rect" id="Node000014" href="$classGraph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="843,138,900,163"/>
+<area shape="poly" id="edge24_Node000014_Node000006" title=" " alt="" coords="267,136,312,109,371,80,438,52,509,32,586,14,650,3,680,4,710,11,741,26,774,50,786,68,787,87,788,105,798,123,819,137,843,144,842,149,817,142,794,127,783,107,782,87,781,70,770,53,738,30,708,16,679,9,650,9,587,19,510,37,440,57,373,84,315,114,269,140"/>
+<area shape="rect" id="Node000015" href="$classParser.html" title="Defines a class for network file loading and parsing." alt="" coords="551,96,611,122"/>
+<area shape="poly" id="edge26_Node000015_Node000006" title=" " alt="" coords="283,145,326,137,451,120,551,109,551,114,452,125,327,142,284,150"/>
+<area shape="rect" id="Node000016" href="$classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="535,146,628,171"/>
+<area shape="poly" id="edge28_Node000016_Node000006" title=" " alt="" coords="285,156,535,156,535,161,285,161"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="180,742,291,767"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="256,776,287,809,306,823,328,834,355,843,383,847,440,848,494,841,539,831,540,836,495,846,441,853,382,853,354,848,326,839,304,828,283,813,252,780"/>
+<area shape="poly" id="edge16_Node000011_Node000007" title=" " alt="" coords="264,731,293,713,326,698,393,678,462,662,601,642,725,634,819,632,819,637,725,639,601,648,463,668,394,683,328,703,295,718,266,736"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="789,856,772,853,634,831,635,826,772,848,790,850"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="168,926,303,951"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="316,950,411,962,526,967,588,966,650,960,712,950,771,934,796,923,820,908,856,877,859,881,823,912,799,928,773,939,713,955,651,966,588,971,526,972,410,967,316,955"/>
+<area shape="poly" id="edge12_Node000010_Node000009" title=" " alt="" coords="276,954,327,972,390,984,455,992,583,1000,701,999,796,994,796,1000,701,1005,583,1005,454,997,389,989,326,977,274,959"/>
+<area shape="rect" id="Node000012" href="$classGraphicsEdgeWeight.html" title=" " alt="" coords="509,696,653,722"/>
+<area shape="poly" id="edge20_Node000012_Node000009" title=" " alt="" coords="284,918,404,872,457,850,483,834,491,822,494,811,495,789,495,766,507,741,521,728,536,719,539,724,524,733,511,744,501,767,500,789,500,812,496,825,487,837,459,854,406,877,286,923"/>
+<area shape="rect" id="Node000013" href="$classGraphicsEdgeLabel.html" title=" " alt="" coords="514,754,649,779"/>
+<area shape="poly" id="edge22_Node000013_Node000009" title=" " alt="" coords="316,934,415,925,457,915,484,901,493,890,497,878,496,852,495,824,498,810,507,795,532,777,535,781,511,799,503,812,500,825,502,852,502,879,498,892,487,906,459,920,416,930,317,939"/>
+<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="825,974,754,941,676,898,631,866,596,836,599,832,634,861,679,893,756,936,828,970"/>
+<area shape="poly" id="edge14_Node000003_Node000011" title=" " alt="" coords="805,625,772,620,637,607,504,600,293,595,293,590,504,595,638,602,772,614,806,619"/>
+<area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="666,691,771,666,835,646,837,651,773,671,667,696"/>
+<area shape="poly" id="edge21_Node000011_Node000013" title=" " alt="" coords="647,748,718,728,771,709,818,678,855,647,858,651,822,682,773,714,720,733,649,753"/>
+<area shape="poly" id="edge23_Node000001_Node000014" title=" " alt="" coords="904,168,1099,301,1096,305,901,173"/>
+<area shape="poly" id="edge25_Node000014_Node000015" title=" " alt="" coords="626,112,772,132,843,143,842,148,772,137,625,117"/>
+<area shape="poly" id="edge27_Node000014_Node000016" title=" " alt="" coords="641,154,842,148,843,154,642,159"/>
+<area shape="rect" id="Node000017" href="$classMatrix.html" title=" " alt="" coords="552,315,611,340"/>
+<area shape="poly" id="edge29_Node000014_Node000017" title=" " alt="" coords="624,335,658,339,696,340,735,334,771,320,791,304,809,285,837,240,855,196,865,162,870,164,860,198,842,243,813,288,795,308,773,325,736,340,697,345,658,345,624,340"/>
+<area shape="rect" id="Node000018" href="$classMatrixRow.html" title=" " alt="" coords="193,315,278,340"/>
+<area shape="poly" id="edge30_Node000017_Node000018" title=" " alt="" coords="292,325,552,325,552,330,292,330"/>
+<area shape="rect" id="Node000019" href="$classMyEdge.html" title=" " alt="" coords="546,47,617,72"/>
+<area shape="poly" id="edge31_Node000014_Node000019" title=" " alt="" coords="630,61,700,73,737,84,773,100,786,111,797,123,843,141,841,146,795,127,782,115,771,104,736,89,699,78,630,66"/>
+<area shape="rect" id="Node000020" href="$classChart.html" title=" " alt="" coords="844,350,899,375"/>
+<area shape="poly" id="edge32_Node000001_Node000020" title=" " alt="" coords="912,352,1069,322,1070,327,913,357"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="535,364,628,390"/>
+<area shape="poly" id="edge33_Node000020_Node000021" title=" " alt="" coords="642,371,772,365,844,361,844,366,772,370,642,377"/>
+</map>
