@@ -24,8 +24,9 @@ var searchData=
   ['helpcheckupdatesapp_21',['helpCheckUpdatesApp',['../classMainWindow.html#a9bae913ab569ce3d959d0d3510a6259b',1,'MainWindow']]],
   ['helpmenu_22',['helpmenu',['../classTextEditor.html#a9843412e495c47d04d4e0c0c68420819',1,'TextEditor::helpMenu'],['../classMainWindow.html#a40eb18227dca52851a7fd47a2e862e6d',1,'MainWindow::helpMenu']]],
   ['helpsysteminfoact_23',['helpSystemInfoAct',['../classMainWindow.html#a31503307d1a5eec08cab83a2eeb80e48',1,'MainWindow']]],
-  ['htmlend_24',['htmlEnd',['../classGraph.html#aeeb528a384133f005d6066d29fb9cb16',1,'Graph']]],
-  ['htmlescaped_25',['htmlEscaped',['../classGraph.html#a6ca7e7bdf73bd740f28e90b7d7c21925',1,'Graph']]],
-  ['htmlhead_26',['htmlHead',['../classGraph.html#a8fec77893a012778ad433e3cc54ddbc4',1,'Graph']]],
-  ['htmlheadlight_27',['htmlHeadLight',['../classGraph.html#ae45be6aa48c6fd69e874059e71784889',1,'Graph']]]
+  ['here_24',['What You&apos;ll Find Here',['../index.html#autotoc_md4',1,'']]],
+  ['htmlend_25',['htmlEnd',['../classGraph.html#aeeb528a384133f005d6066d29fb9cb16',1,'Graph']]],
+  ['htmlescaped_26',['htmlEscaped',['../classGraph.html#a6ca7e7bdf73bd740f28e90b7d7c21925',1,'Graph']]],
+  ['htmlhead_27',['htmlHead',['../classGraph.html#a8fec77893a012778ad433e3cc54ddbc4',1,'Graph']]],
+  ['htmlheadlight_28',['htmlHeadLight',['../classGraph.html#ae45be6aa48c6fd69e874059e71784889',1,'Graph']]]
 ];

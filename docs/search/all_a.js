@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['l_5fint_0',['l_int',['../graphvertex_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd',1,'L_int:&#160;graphvertex.h'],['../graph_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd',1,'L_int:&#160;graph.h']]],
-  ['label_1',['label',['../classGraphicsNode.html#a569a9e424ed56fb1d87e5a6739706fcc',1,'GraphicsNode::label()'],['../classGraphVertex.html#a86d7323eeb57d6adcf2a16ae2b2c0fa2',1,'GraphVertex::label()'],['../classGraphicsEdge.html#a2c173fdbdf3eafdef498d7057d2feeaf',1,'GraphicsEdge::label()']]],
+  ['l_5fint_0',['l_int',['../graph_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd',1,'L_int:&#160;graph.h'],['../graphvertex_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd',1,'L_int:&#160;graphvertex.h']]],
+  ['label_1',['label',['../classGraphicsNode.html#a569a9e424ed56fb1d87e5a6739706fcc',1,'GraphicsNode::label()'],['../classGraphicsEdge.html#a2c173fdbdf3eafdef498d7057d2feeaf',1,'GraphicsEdge::label()'],['../classGraphVertex.html#a86d7323eeb57d6adcf2a16ae2b2c0fa2',1,'GraphVertex::label() const']]],
   ['labelcolor_2',['labelColor',['../classGraphVertex.html#a2f1df0616f1515d38c4b7f8477e14764',1,'GraphVertex']]],
   ['labeldistance_3',['labelDistance',['../classGraphVertex.html#a9cc6e50ba6a7ed2753c1752cc0feedd3',1,'GraphVertex']]],
   ['labels_4',['edgelist with node labels',['../classParser.html#autotoc_md2',1,'']]],
@@ -88,9 +88,10 @@ var searchData=
   ['line_5fdy_85',['line_dy',['../classGraphicsEdge.html#abcc5f523cded03bb248ec3caceec1333',1,'GraphicsEdge']]],
   ['line_5flength_86',['line_length',['../classGraphicsEdge.html#a997aac4a943c0e3e8ce106fe43f40529',1,'GraphicsEdge']]],
   ['list_87',['Bug List',['../bug.html',1,'']]],
-  ['load_88',['load',['../classParser.html#a36f91824c50dfff5fc1ef681387f189e',1,'Parser']]],
-  ['loadfile_89',['loadfile',['../classGraph.html#ab2d24597c3ea6b035dcb0a1b5262393f',1,'Graph::loadFile()'],['../classTextEditor.html#afa28a9b606437414e04f0fbbda68d936',1,'TextEditor::loadFile()']]],
-  ['localdegree_90',['localDegree',['../classGraphVertex.html#aca66a3c139297a6560968514dfd9aa3a',1,'GraphVertex']]],
-  ['lubksb_91',['lubksb',['../classMatrix.html#a50a87971f24dc5247a8711a36903b751',1,'Matrix']]],
-  ['ludcmp_92',['ludcmp',['../classMatrix.html#a6a403dce8bf4ee2cbda5cded9b1ff1ab',1,'Matrix']]]
+  ['ll_20find_20here_88',['What You&apos;ll Find Here',['../index.html#autotoc_md4',1,'']]],
+  ['load_89',['load',['../classParser.html#a36f91824c50dfff5fc1ef681387f189e',1,'Parser']]],
+  ['loadfile_90',['loadfile',['../classTextEditor.html#afa28a9b606437414e04f0fbbda68d936',1,'TextEditor::loadFile()'],['../classGraph.html#ab2d24597c3ea6b035dcb0a1b5262393f',1,'Graph::loadFile()']]],
+  ['localdegree_91',['localDegree',['../classGraphVertex.html#aca66a3c139297a6560968514dfd9aa3a',1,'GraphVertex']]],
+  ['lubksb_92',['lubksb',['../classMatrix.html#a50a87971f24dc5247a8711a36903b751',1,'Matrix']]],
+  ['ludcmp_93',['ludcmp',['../classMatrix.html#a6a403dce8bf4ee2cbda5cded9b1ff1ab',1,'Matrix']]]
 ];

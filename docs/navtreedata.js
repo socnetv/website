@@ -24,8 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "Social Network Visualizer", "index.html", [
-    [ "Welcome", "index.html", null ],
+  [ "Code Documentation", "index.html", [
+    [ "Welcome", "index.html", "index" ],
     [ "Bug List", "bug.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
