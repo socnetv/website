@@ -42,6 +42,9 @@ HTML_OUTPUT            = .                    # Folder where HTML output will be
 GENERATE_TREEVIEW      = YES                  # Generate a treeview for class and file navigation
 TREEVIEW_WIDTH         = 300                  # Set width of the treeview
 
+# Generate an index page and document all classes
+GENERATE_INDEX         = YES                  # Generate an index for classes/functions
+
 # Use markdown (or another text file) as the main page for Doxygen
 USE_MDFILE_AS_MAINPAGE = ./annotation-src/index.md  # Make index.md the main page
 
@@ -91,16 +94,13 @@ WARN_IF_UNDOCUMENTED   = YES                  # Warn if certain items are not do
 # Custom style for code formatting (optional)
 CODE_STYLE             = YES                  # Enables code formatting style (can further be customized)
 
-# Generate an index page and document all classes
-# GENERATE_INDEX         = YES                  # Generate an index for classes/functions
-
 # Set the diagram format to PNG, JPG or SVG (depends on your preference)
 DOT_IMAGE_FORMAT       = png                  # Generate images in PNG format for diagrams
 
 # Disable LaTeX output (no PDF generation)
 GENERATE_LATEX          = NO                  # Disable LaTeX (PDF) generation
 
-
+# SETTINGS FOR DOXYGEN AWESOME CSS (see: https://github.com/jothepro/doxygen-awesome-css)
 GENERATE_TREEVIEW      = YES # optional. Also works without treeview
 DISABLE_INDEX = NO
 FULL_SIDEBAR = NO
