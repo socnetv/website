@@ -1,5 +1,5 @@
 ---
-title: "SocNetV v2.5 Released"
+title: "SocNetV v2.5 released with lots of new features and new looks!"
 date: 2019-03-08
 description: "SocNetV v2.5 Released with Lots of New Features and New Looks!"
 tags: 

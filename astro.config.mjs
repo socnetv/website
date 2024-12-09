@@ -27,7 +27,7 @@ export default defineConfig({
 					prefix: 'news',
 					authors: {
 						dimitris: {
-							// Author configuration for the `alice` author goes here.
+							// Author configuration for the `dimitris` author goes here.
 							name: 'Dimitris',
 							url: 'https://dimitris.apeiro.gr'
 						},
