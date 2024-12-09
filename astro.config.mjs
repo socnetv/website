@@ -10,7 +10,7 @@ export default defineConfig({
 	site: 'https://socnetv.org',
 	base: '/',
 	redirects: {
-    '/docs/index2.html': '/documentation'
+    '/docs/formats.html': '/docs/formats'
   },
 	integrations: [
 		starlight({
