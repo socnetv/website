@@ -5,10 +5,8 @@
 # This file describes the settings to be used by the documentation system
 # doxygen (www.doxygen.org) for a project.
 #
-# All text after a double hash (##) is considered a comment and is placed in
-# front of the TAG it is preceding.
-#
 # All text after a single hash (#) is considered a comment and will be ignored.
+#
 # The format is:
 # TAG = value [value, ...]
 # For lists, items can also be appended using:
@@ -17,9 +15,9 @@
 
 
 # Project Name and Brief Description
-PROJECT_NAME           = "Social Network Visualizer"
+PROJECT_NAME           = "Code Documentation"
 PROJECT_NUMBER         = "3.1"
-PROJECT_BRIEF          = "Source code annotation"
+PROJECT_BRIEF          = "Social Network Visualizer"
 PROJECT_LOGO           = ./annotation-src/socnetv-logo-manual.png  # Path to project logo
 
 # Output directory for generated documentation

@@ -10,7 +10,7 @@ export default defineConfig({
 	site: 'https://socnetv.org',
 	base: '/',
 	redirects: {
-    '/docs/formats.html': '/docs/formats'
+    '/docs/formats.html': '/manual/formats'
   },
 	integrations: [
 		starlight({
@@ -48,16 +48,16 @@ export default defineConfig({
 				{
 					label: 'Manual',
 					items: [
-						{ label: 'Introduction', slug: 'docs/intro' },
-						{ label: 'User Interface', slug: 'docs/gui' },
-						{ label: 'Formats', slug: 'docs/formats' },
-						{ label: 'Generate', slug: 'docs/generate' },
-						{ label: 'Analysis', slug: 'docs/analysis' },
-						{ label: 'Visualization', slug: 'docs/visualization' },
-						{ label: 'Credits', slug: 'docs/credits' },
-						{ label: 'References', slug: 'docs/references' },
-						{ label: 'License', slug: 'docs/license' },
-						{ label: 'Bugs', slug: 'docs/bugs' },
+						{ label: 'Introduction', slug: 'manual/intro' },
+						{ label: 'User Interface', slug: 'manual/gui' },
+						{ label: 'Formats', slug: 'manual/formats' },
+						{ label: 'Generate', slug: 'manual/generate' },
+						{ label: 'Analysis', slug: 'manual/analysis' },
+						{ label: 'Visualization', slug: 'manual/visualization' },
+						{ label: 'Credits', slug: 'manual/credits' },
+						{ label: 'References', slug: 'manual/references' },
+						{ label: 'License', slug: 'manual/license' },
+						{ label: 'Bugs', slug: 'manual/bugs' },
 					],
 				},
 				{ label: 'Downloads', slug: 'downloads' },
