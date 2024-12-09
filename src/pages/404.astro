@@ -1,0 +1,23 @@
+---
+title: "404 - Not Found"
+layout: "../../layouts/BaseLayout.astro"
+description: "Page not found."
+---
+
+<script>
+    // Redirect to the homepage after 5 seconds
+    setTimeout(() => {
+      if (window.location.pathname === '/docs/index.html') {
+        window.location.href = '/documentation/';
+      }
+    }, 5000);
+  </script>
+
+<h1>404 - Page Not Found</h1>
+<p>Sorry, the page you're looking for doesn't exist. You can go back to the <a href="/">homepage</a> or try the following:</p>
+
+<ul>
+  <li><a href="/documentation">Documentation</a></li>
+  <li><a href="/downloads">Downloads</a></li>
+  <li><a href="/contact">Contact Us</a></li>
+</ul>
