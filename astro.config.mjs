@@ -11,7 +11,9 @@ export default defineConfig({
 	base: '/',
 	redirects: {
     '/docs/formats.html': '/manual/formats',
-		'/search': '/',
+	'/docs/intro.html': '/manual/intro',
+	'/manual/visualisation': '/manual/visualization'
+    '/search': '/',
   },
 	integrations: [
 		starlight({

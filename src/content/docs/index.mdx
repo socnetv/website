@@ -1,13 +1,13 @@
 ---
 title:  Social Network Visualizer 
-description: SocNetV - Social Network Analysis and Visualization Software
+description: Social Network Analysis - Social Network Visualizer (SocNetV) is a user-friendly and free software tool for Social Network Analysis and Visualization.
 template: splash
 banner:
   content: |
-    Welcome to our new website. We just launched it! 
-    <a href="https://github.com/socnetv/website">Check it out</a>
+    Welcome to our new website! 
+    <a href="/downloads">Download SocNetV</a>
 hero:
-  tagline: Free and Open-Source Tool for Social Network Analysis
+  tagline: SocNetV - Social Network Analysis and Visualization Software
   image:
     file: ../../assets/socnetv-logo-256-no-bg-opt.svg
   actions:
@@ -18,49 +18,57 @@ hero:
       link: /documentation
       icon: document
       variant: secondary
-    - text: Get the code
+    - text: Get the code 
       link: https://github.com/socnetv/app
       icon: external
-      variant: minimal	  
+      variant: minimal
 ---
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import Mermaid from "../../components/Mermaid.astro";
-
-
+import { LinkButton } from '@astrojs/starlight/components';
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
 
-{/* title: "Welcome to Social Network Visualizer (SocNetV)"
-description: "SocNetV is a cross-platform, user-friendly software for social network analysis and visualization. Learn about its features and how to contribute." */}
+## Free and Open-Source Tool for Social Network Analysis 🌟 
 
-## Social Network Visualizer (SocNetV)
 ![SocNetV Screenshot](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
-
-
 
 SocNetV is a cross-platform, user-friendly free software application for social network analysis and visualization. With SocNetV you can:
 
 - [Draw social networks](../manual/gui) with a few clicks on a virtual canvas, load field data from a file in a [supported format](../manual/formats) ([GraphML](../manual/formats/#graphml-files), [GraphViz](../manual/formats/#graphviz-dot-files), Adjacency, EdgeList, GML, Pajek, UCINET, etc.), or crawl the internet to create a social network of connected webpages.
+
 - Edit actors and ties through point-and-click, analyze graph and social network properties, produce beautiful HTML reports, and embed visualization layouts in the network.
 
-### Main Features 🧞
+---
+
+### Main Features 🚀
 
 - Standard graph and network cohesion metrics, such as [density](../manual/analysis/#cohesion-measures), [diameter](../manual/analysis/#diameter), [geodesics](../manual/analysis/#geodesics-matrix), [distances](../manual/analysis/#distances-matrix), [connectedness](../manual/analysis/#connectedness), [eccentricity](../manual/analysis/#eccentricity), [clustering coefficient](../manual/analysis/#clustering-coefficient), reciprocity, etc.
 - Matrix routines: Adjacency plot, Laplacian matrix, Degree matrix, Cocitation, etc.
 - Advanced measures for social network analysis such as [centrality and prestige indices](../manual/analysis/#centralities-and-prestige) (e.g., [eigenvector centrality](../manual/analysis/#eigenvector-centrality-or-gould-index-evc), [closeness centrality](../manual/analysis/#closeness-centrality-cc), [betweenness centrality](../manual/analysis/#betweenness-centrality-bc), [information centrality](../manual/analysis/#information-centrality-ic), [power centrality](../manual/analysis/#power-centrality-pc), [proximity prestige](../manual/analysis/#proximity-prestige-pp), and [pagerank prestige](../manual/analysis/#pagerank-prestige-prp)).
 - Fast algorithms for [community detection](../manual/analysis/#community-detection), such as [triad census](../manual/analysis/#triad-census), [clique census](../manual/analysis/#clique-census), etc.
 - Structural equivalence analysis using [hierarchical clustering](../manual/analysis), actor similarities, tie profile dissimilarities, and Pearson coefficients.
-- [Layout models](../manual/visualisation) based on prominence indices (e.g., circular, level, nodal sizes by centrality score) or on force-directed placement (e.g., Kamada-Kawai, [Fruchterman-Reingold](../manual/index.md#LayoutFR)).
+- [Layout models](../manual/visualization) based on prominence indices (e.g., circular, level, nodal sizes by centrality score) or on force-directed placement (e.g., [Kamada-Kawai](/manual/visualization#kamada-kawai-layout), [Fruchterman-Reingold](../manual/index.md#LayoutFR)).
 - [Multirelational network loading and editing](../manual/intro).
 - Random network creation using various models ([Barabási–Albert Scale-Free](../manual/generate/#scale-free-s-f-networks), [Erdős–Rényi](../manual/generate/#erd%C5%91sr%C3%A9nyi-er-networks), [Watts-Strogatz Small-World](../manual/generate/#small-world-sw-networks), d-regular, ring lattice, etc.).
 - [Famous social network analysis datasets](../manual/generate/#datasets-recreating-famous-datasets), such as Padgett's Florentine families.
 - Built-in [web crawler](../manual/generate/#web-crawler-networks-of-webpages) to automatically create "social networks" from links found in a given URL.
 - Comprehensive [documentation](../documentation) available both online and inside the application.
 
+---
+
+## Do you want to 📥
+
 Source code, packages, and executables for Windows, Linux, and macOS are available on the [Downloads](../downloads) page.
+
+<p><a href="https://github.com/socnetv/app/releases" target="_blank" rel="nofollow nopener"><img src="https://img.shields.io/github/release/socnetv/app.svg" /></a></p>
+
+
+
+#### License
 
 ![GPL3 License](../../assets/images/gplv3.gif)
 
@@ -68,9 +76,9 @@ The program is Free Software, licensed under the [GNU General Public License 3 (
 
 ---
 
-## Do You Want to Contribute? 👀
+## Do You Want to Contribute? 🙌 💎
 
-- If you are a C++/Qt developer, you can contribute by committing patches (new features or bug fixes) to our [source code](https://github.com/socnetv/app/tree/develop).
+- If you are a C++/Qt developer, you can contribute by committing patches (new features or bug fixes) to our [development source code](https://github.com/socnetv/app/tree/develop).
 - If you are a SocNetV user, you can:
   - Report [bugs](../bugs) or propose new features in our [Issues](https://github.com/socnetv/app/issues).
   - Donate any amount to the project via the "Donate" button in the footer. Donations will redirect to our PayPal account.
@@ -79,15 +87,14 @@ Thank you for using and contributing to SocNetV! Have fun with social network an
 
 ---
 
-## SocNetV Features 🚀
-Explore the nice features of SocNetV to make  your social network research real fun!
+## At a glance 👀 
+
+Explore the nice features of SocNetV to make your social network research real fun!
 
 <CardGrid stagger>
 
-
-
   <Card title="Easy User Interface" icon="open-book">
-    <i className="fa fa-magic" aria-hidden="true"></i>
+    <i className="icon" aria-hidden="true">🖥️</i>
     <p>Navigate yourself and use the application either with the mouse or the keyboard.</p>
   </Card>
 
@@ -99,7 +106,7 @@ Explore the nice features of SocNetV to make  your social network research real 
     </p>
   </Card>
 
-  <Card title="Network Analysis" icon="open-book">
+  <Card title="Network Analysis" icon="seti:graphql">
     <p>
       Compute distances, eccentricity, connectedness, clique census, triad census, and Prominence
       indices (e.g., eigenvector, betweenness, and information centrality, proximity prestige,
@@ -107,28 +114,25 @@ Explore the nice features of SocNetV to make  your social network research real 
     </p>
   </Card>
 
-  <Card title="Visualization" icon="open-book">
-    <i className="fa fa-desktop" aria-hidden="true"></i>
+  <Card title="Visualization" icon="seti:pipeline">
     <p>
       Apply intuitive visualization layouts on undirected/directed graphs, based on prominence
       scores or force-directed models.
     </p>
   </Card>
 
-  <Card title="Famous Networks" icon="seti:csv">
-    <i className="fa fa-heart-o" aria-hidden="true"></i>
+  <Card title="Famous Networks" icon="seti:favicon">
     <p>Automatically recreate known social network datasets such as Padgett's Families.</p>
   </Card>
 
-  <Card title="Random Networks" icon="seti:pipeline">
-    <i className="fa fa-random" aria-hidden="true"></i>
+  <Card title="Random Networks" icon="random">
     <p>
       Create random networks using one of the supported models (scale-free, Erdős–Rényi, lattice,
       small worlds).
     </p>
   </Card>
 
-  <Card title="Web Crawler" icon="seti">
+  <Card title="Web Crawler" icon="rocket">
     <i className="fa fa-map-o" aria-hidden="true"></i>
     <p>
       Easily visualize and analyze networks of linked web pages and sites through the built-in web
@@ -137,15 +141,13 @@ Explore the nice features of SocNetV to make  your social network research real 
   </Card>
 
   <Card title="Multi-relational" icon="add-document">
-    <i className="fa fa-plus" aria-hidden="true"></i>
     <p>
       Work with multiple relations concurrently. SocNetV supports loading, editing, and saving
       multirelational social networks.
     </p>
   </Card>
 
-  <Card title="Documentation" icon="open-book">
-    <i className="fa fa-question-circle" aria-hidden="true"></i>
+  <Card title="Documentation" icon="seti:info">
     <p>
       Learn to work with SocNetV and make use of Social Network Analysis methods by reading our
       Manual.
@@ -153,7 +155,6 @@ Explore the nice features of SocNetV to make  your social network research real 
   </Card>
 
   <Card title="Free Software" icon="linux">
-    <i className="fa fa-code" aria-hidden="true"></i>
     <p>
       SocNetV is Free and Open-Source Software. Use it everywhere. Have a feature request? Ask us!
     </p>
