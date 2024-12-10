@@ -18,7 +18,8 @@ export default defineConfig({
 		'/docs/visualization': '/manual/visualization',
 		'/docs/credits.html': '/manual/credits',
 		'/manual/visualisation': '/manual/visualization',
-    '/search': '/',
+		'/data/uploads/screenshots/25/socnetv-25-erdos-renyi-200actors.jpg': '/screenshots/25/socnetv-25-erdos-renyi-200actors.jpg',
+    	'/search': '/',
 		'/docs/SRS-Documentation-SocNetV.pdf': '/SRS-Documentation-SocNetV.pdf',
   },
 	integrations: [
