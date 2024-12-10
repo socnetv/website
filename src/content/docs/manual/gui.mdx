@@ -202,9 +202,9 @@ Right-clicking on a node opens a context menu to:
 - Add an edge.
 - Change node properties (e.g., color, size, label).
 
-> **Note**: All nodes are tagged with their node number by default. To display labels, enable the option in `Options -> Node -> Display Labels`.
+All nodes are tagged with their node number by default. To display labels, enable the option in `Options` -> `Node` -> `Display Labels`.
 
-> **Warning**: In large networks, finding specific nodes can be challenging. Use `CTRL+F` to search for nodes by number or label. Press `CTRL+F` again to undo the highlight.
+In large networks, finding specific nodes can be challenging. Use `CTRL+F` to search for nodes by number or label. Press `CTRL+F` again to undo the highlight.
 
 From the **Node Properties** dialog, you can:
 - Enter a node label.
@@ -218,7 +218,9 @@ To select multiple nodes:
 - All nodes inside the rectangle are selected.
 - Right-click one of the selected nodes to edit all selected nodes together in the **Node Properties** dialog.
 
-> **Warning**: In networks with thousands of edges, group selection may be slow.
+:::caution 
+In networks with thousands of edges, group selection may be slow.
+:::
 
 ---
 
@@ -231,8 +233,10 @@ By default:
 - New links have a weight of `w = 1`.
 - You can change the weight by right-clicking on the edge and selecting "Change Weight."
 
-> **Note**: Edge widths are proportional to their weight using the formula:  
+:::note
+Edge widths are proportional to their weight using the formula:  
   $ \text{width} = 1 + \log(1 + \log |weight|) $.
+:::
 
 You can also create edges using:
 - **Right-click**: Select "Create Edge" and specify the source/target node and edge weight in the dialog.
@@ -245,7 +249,9 @@ Create a directed edge from Node 1 to Node 2:
 - Middle-click on Node 2.  
   A new line appears, indicating the directed edge.
 
-> **Note**: Clicking on an edge highlights its source and target nodes. Click again to undo the highlight.
+:::note
+Clicking on an edge highlights its source and target nodes. Click again to undo the highlight.
+:::
 
 ---
 
@@ -258,9 +264,14 @@ A **relation** represents a specific type of tie between nodes.
 - Add new relations using the `+` button in the toolbar.
 - Navigate between relations using the arrow buttons in the toolbar.
 
-> **Note**: While modifying multi-relational networks, you can add nodes but cannot remove them.
+:::note
+While modifying multi-relational networks, you can add nodes but cannot remove them.
+:::
 
-> **Warning**: SocNetV saves only the active relation when saving a network. Save other relations by switching to them and saving again.
+
+:::caution
+SocNetV saves only the active relation when saving a network to a format other than GraphML. To save all relations, use GraphML.
+:::
 
 ---
 

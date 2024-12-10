@@ -683,7 +683,9 @@ SocNetV uses the **Bron–Kerbosch algorithm** to find all **maximal cliques** i
 
 ![Clique census of Florentine families](/data/uploads/screenshots/22/socnetv-2.2-clique-census-florentine-families-report-1.png)
 
-**Note:** The computation of **maximal cliques** can be slow in very large or dense social networks due to the **NP-complete** nature of the clique problem.
+:::caution
+The computation of **maximal cliques** can be slow in very large or dense social networks due to the **NP-complete** nature of the clique problem.
+:::
 
 ---
 
@@ -767,7 +769,9 @@ For example, in the case of **Simple Matching**, the similarity matrix depicts t
 
 These measures of similarity are particularly useful when ties are binary (not valued).
 
-**Note:** In very sparse networks (with low density), measures such as exact matches, correlation, and distance will show little variation among the actors, making it difficult to classify the actors into structural equivalence classes.
+:::note
+In very sparse networks (with low density), measures such as exact matches, correlation, and distance will show little variation among the actors, making it difficult to classify the actors into structural equivalence classes.
+:::
 
 ### Pearson Correlation Coefficients
 
@@ -803,4 +807,6 @@ The result of **Hierarchical Cluster Analysis** is the clusters per level and a 
 
 ![Example dendrogram of HCA](/data/uploads/screenshots/22/socnetv-2.2-hca-results-2-dendrogram.jpg)
 
-**Note:** The complexity of agglomerative clustering is $ O(n^2 \log n) $, which makes it too slow for large data sets.
+:::caution
+The complexity of agglomerative clustering is $ O(n^2 \log n) $, which makes it too slow for large data sets.
+:::
