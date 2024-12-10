@@ -11,9 +11,12 @@ export default defineConfig({
 	base: '/',
 	redirects: {
     '/docs/formats.html': '/manual/formats',
-	'/docs/intro.html': '/manual/intro',
-	'/manual/visualisation': '/manual/visualization',
+		'/docs/intro.html': '/manual/intro',
+		'/manual/visualisation': '/manual/visualization',
     '/search': '/',
+		'/docs/references': '/manual/references',
+		'/docs/SRS-Documentation-SocNetV.pdf': '/SRS-Documentation-SocNetV.pdf',
+		'/docs/credits.html': '/manual/credits'
   },
 	integrations: [
 		starlight({
