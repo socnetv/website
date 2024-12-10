@@ -1,12 +1,20 @@
 ---
-title: "User Interface Overview"
+title: "Getting Started and User Interface"
 description: "A detailed guide to the user interface of SocNetV, explaining menus, toolbar, panels, and canvas interactions."
 layout: "../../../layouts/BaseLayout.astro"
 ---
 
 import Mermaid from "../../../components/Mermaid.astro";
 
-SocNetV has a simple yet powerful Graphical User Interface (GUI) that is designed to be user-friendly and highly functional. The interface consists of the following components:
+Learn how to navigate and use SocNetV's intuitive interface to create, analyze, and visualize social networks. This page covers essential workflows, including network creation, editing, and customization, alongside a detailed overview of menus, toolbars, and panels.
+
+## User Interface overview
+
+SocNetV has a simple yet powerful Graphical User Interface (GUI) that is designed to be user-friendly and highly functional, catering to both novice users and experienced researchers. 
+
+It allows users to visualize, manipulate, and analyze complex social networks with ease. Whether you're a student exploring social network theory or a professional conducting in-depth research, SocNetV's user interface ensures a seamless workflow.
+
+The interface consists of the following components:
 
 - [The Menu](#the-menu)
 - [Toolbar](#toolbar)
@@ -14,13 +22,13 @@ SocNetV has a simple yet powerful Graphical User Interface (GUI) that is designe
 - [Canvas](#canvas)
 - A status bar with helpful runtime messages.
 
-The main application window is structured to provide maximum efficiency. Side panels on the left and right host critical tools and information, while the central canvas is the primary area for network visualization and interaction.
+> The main application window is structured to provide maximum efficiency. Side panels on the left and right host critical tools and information, while the central canvas is the primary area for network visualization and interaction.
 
 ![Example of SocNetV Main Window](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
 
 ---
 
-## The Menu
+### The Menu
 
 At the top of the window, the menu bar provides access to all application features and functions. It includes six menus:
 
@@ -52,7 +60,7 @@ Each menu option is complemented by keyboard shortcuts, making navigation faster
 
 ---
 
-## Toolbar
+### Toolbar
 
 The toolbar is positioned directly beneath the menu bar and offers one-click access to frequently used commands:
 
@@ -74,9 +82,9 @@ The toolbar icons are intuitive and provide tooltip hints when hovered over, ens
 
 ---
 
-## Sidebars
+### Sidebars
 
-### Control Panel
+#### Control Panel
 
 The **Control Panel**, located on the left, is designed for quick access to essential actions and commands. It is divided into three main groups:
 
@@ -99,7 +107,7 @@ Each action in the Control Panel mirrors corresponding menu options, providing a
 
 ---
 
-### Statistics Panel
+#### Statistics Panel
 
 The **Statistics Panel**, located on the right, provides detailed information about the network and its components:
 
@@ -116,7 +124,7 @@ This panel dynamically updates as you interact with the network, offering real-t
 
 ---
 
-## Canvas
+### Canvas
 
 The **Canvas** is the central workspace where networks are visualized and manipulated. It supports intuitive interaction methods, including:
 
@@ -138,9 +146,9 @@ The canvas background is customizable, allowing users to select colors that suit
 
 ---
 
-## Additional Features
+### Additional Features
 
-### Status Bar
+#### Status Bar
 
 The status bar at the bottom of the window provides helpful runtime messages, such as:
 
@@ -148,18 +156,185 @@ The status bar at the bottom of the window provides helpful runtime messages, su
 - Notifications about completed analysis tasks.
 - Hints and instructions based on the current context.
 
-### Tooltips and Context Menus
+#### Tooltips and Context Menus
 
 - Almost every element in SocNetV has an associated tooltip that provides quick information about its function.
 - Right-click context menus on nodes, edges, and canvas offer a faster way to access frequently used options.
 
-### Accessibility and Customization
+#### Accessibility and Customization
 
 - **Keyboard Shortcuts**: Many commands can be executed using predefined shortcuts, enhancing accessibility for advanced users.
 - **Localization**: SocNetV supports multiple languages, making it accessible to users worldwide.
 
 ---
 
-## Summary
+## Working with SocNetV
 
-The SocNetV user interface combines simplicity with powerful functionality, catering to both novice users and experienced researchers. By providing an intuitive GUI with robust analysis tools, SocNetV allows users to visualize, manipulate, and analyze complex social networks with ease. Whether you're a student exploring social network theory or a professional conducting in-depth research, SocNetV's user interface ensures a seamless workflow.
+Below, we describe how to work with SocNetV.
+
+---
+
+### Network Creation
+
+To start working with SocNetV, you need network data, i.e., a graph of nodes (vertices) and links (edges).
+You can load a network from a file or "draw" nodes and edges by pointing and clicking on the canvas.
+
+Ways to Create/Edit Nodes and Links:
+
+- From the menus.
+- Using the keyboard
+- By right/left/middle/double-clicking on the canvas.
+
+---
+
+### Creating and Handling Nodes
+
+To create a new node:
+- Double-click on the canvas.
+- Click on the "Add Node" toolbar button.
+- Press `CTRL+.`
+
+You can move a node by dragging it with the left mouse button. When dragging a node, SocNetV highlights all its adjacent edges.
+
+Right-clicking on a node opens a context menu to:
+- Delete the node.
+- Add an edge.
+- Change node properties (e.g., color, size, label).
+
+> **Note**: All nodes are tagged with their node number by default. To display labels, enable the option in `Options -> Node -> Display Labels`.
+
+> **Warning**: In large networks, finding specific nodes can be challenging. Use `CTRL+F` to search for nodes by number or label. Press `CTRL+F` again to undo the highlight.
+
+From the **Node Properties** dialog, you can:
+- Enter a node label.
+- Adjust size.
+- Select a color.
+- Change the shape (e.g., rectangle, diamond, ellipse, circle).
+
+#### Group Selection
+To select multiple nodes:
+- Hold the left mouse button and drag to create a selection rectangle.
+- All nodes inside the rectangle are selected.
+- Right-click one of the selected nodes to edit all selected nodes together in the **Node Properties** dialog.
+
+> **Warning**: In networks with thousands of edges, group selection may be slow.
+
+---
+
+### Creating and Editing Edges
+
+To create an edge:
+- Middle-click or double-click on the source node, then do the same on the target node.
+
+By default:
+- New links have a weight of `w = 1`.
+- You can change the weight by right-clicking on the edge and selecting "Change Weight."
+
+> **Note**: Edge widths are proportional to their weight using the formula:  
+  $ \text{width} = 1 + \log(1 + \log |weight|) $.
+
+You can also create edges using:
+- **Right-click**: Select "Create Edge" and specify the source/target node and edge weight in the dialog.
+- **Control Panel**: Click the "Add Edge" button and enter source/target nodes and weight.
+- **Keyboard**: Press `CTRL+/` to specify source/target nodes and weight.
+
+#### Example
+Create a directed edge from Node 1 to Node 2:
+- Middle-click on Node 1 (the mouse pointer becomes a hand).
+- Middle-click on Node 2.  
+  A new line appears, indicating the directed edge.
+
+> **Note**: Clicking on an edge highlights its source and target nodes. Click again to undo the highlight.
+
+---
+
+### Relations
+
+When you create your first edge, SocNetV asks you to name the relationship (e.g., "friendship").  
+A **relation** represents a specific type of tie between nodes.
+
+- **Multi-relational networks**: SocNetV supports networks with multiple types of ties (e.g., friendships and business relationships).
+- Add new relations using the `+` button in the toolbar.
+- Navigate between relations using the arrow buttons in the toolbar.
+
+> **Note**: While modifying multi-relational networks, you can add nodes but cannot remove them.
+
+> **Warning**: SocNetV saves only the active relation when saving a network. Save other relations by switching to them and saving again.
+
+---
+
+### Basic Functions in the Network Menu
+
+#### Loading a Network
+
+To load network data in a supported format (e.g., GraphML, GML, Pajek):
+1. Select `File -> Load`.
+2. Use the file dialog to navigate to your file.
+
+For unsupported formats, use `File -> Import`.
+
+##### File Previewer
+When loading a file, SocNetV shows a **File Previewer**, allowing you to:
+- Adjust the file's codepage (e.g., UTF-8, Windows-1253).
+- Ensure proper display of non-Latin characters.
+
+![File Previewer](http://socnetv.org/data/uploads/screenshots/25/socnetv-25-file-preview.jpg)  
+*In the File Previewer, select a codepage for the opened file.*
+
+> **Note**:  
+> - The default codepage is UTF-8.  
+> - Use other codepages (e.g., KOI8-R for Russian) only if necessary.
+
+---
+
+#### Saving a Network
+
+To save the active network:
+- Press `CTRL+S` or select `File -> Save`.
+
+Default format: **GraphML**.  
+Export to other formats via `Network -> Export To`.
+
+:::note
+UTF-8 is the default codec for saving files.
+:::
+
+---
+
+#### Viewing or Plotting the Adjacency Matrix
+
+- Press `F6` to view the adjacency matrix.  
+  Each element $ a(i, j) $ represents the weight of the edge from node $ i $ to node $ j $. $ a(i, j) = 0 $ if there is no edge.
+- Press `Shift+F6` to plot the adjacency matrix.
+
+---
+
+#### Using Known Datasets
+
+SocNetV can recreate well-known datasets. See [Recreating Famous Datasets](./generate##recreating-famous-datasets).
+
+---
+
+#### Random Network Creation
+
+SocNetV can generate random networks based on various models. See [Network Generation](./generate#random-network-creation).
+
+---
+
+#### Web Crawler
+
+SocNetV includes a web crawler to analyze networks of web pages. See [Web Crawler Documentation](./generate#web-crawler-networks-of-webpages).
+
+---
+
+#### Printing and Exporting
+
+To print:
+- Press `CTRL+P`.
+
+SocNetV follows a **WYSIWYG** approach: what you see on the canvas is what you print.  
+For high-quality output, export to vector-based PDF.
+
+---
+
+
