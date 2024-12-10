@@ -2,6 +2,25 @@
 title:  Social Network Visualizer 
 description: Social Network Analysis - Social Network Visualizer (SocNetV) is a user-friendly and free software tool for Social Network Analysis and Visualization.
 template: splash
+head:
+  - tag: title
+    content: 'SocNetV - Social Network Analysis and Visualization Software'
+  - tag: meta
+      property: 'og:title'
+      content: 'Free and Open-Source Tool for Social Network Analysis'    
+  - tag: meta
+    attrs: { 
+      property: 'og:image',
+      content: https://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-ir-closeness-radial-pagerank-nodal.png
+    }
+  - tag: meta
+      property: 'og:site_name'
+      content: 'Social Network Visualizer'
+  - tag: meta
+    attrs: { 
+      property: 'keywords',
+      content: 'social network analysis software, Social Network Visualizer, social network analysis, SocNetV, SNA, social networks, graphs, social network visualization, network layout, social network analysis tool, Dimitris Kalamaras,GPL, Windows, Linux, Mac, social network analysis datasets, centrality, graph theory'
+    }
 banner:
   content: |
     Welcome to our new website! 
@@ -52,7 +71,7 @@ SocNetV is a cross-platform, user-friendly free software application for social 
 - Fast algorithms for [community detection](../manual/analysis/#community-detection), such as [triad census](../manual/analysis/#triad-census), [clique census](../manual/analysis/#clique-census), etc.
 - Structural equivalence analysis using [hierarchical clustering](../manual/analysis), actor similarities, tie profile dissimilarities, and Pearson coefficients.
 - [Layout models](../manual/visualization) based on prominence indices (e.g., circular, level, nodal sizes by centrality score) or on force-directed placement (e.g., [Kamada-Kawai](/manual/visualization#kamada-kawai-layout), [Fruchterman-Reingold](/manual/visualization#fruchterman-reingold-layout)).
-- [Multirelational network loading and editing](../manual/intro).
+- [Multirelational network loading and editing](../manual/gui#relations).
 - Random network creation using various models ([Barabási–Albert Scale-Free](../manual/generate/#scale-free-s-f-networks), [Erdős–Rényi](../manual/generate/#erd%C5%91sr%C3%A9nyi-er-networks), [Watts-Strogatz Small-World](../manual/generate/#small-world-sw-networks), d-regular, ring lattice, etc.).
 - [Famous social network analysis datasets](../manual/generate/#datasets-recreating-famous-datasets), such as Padgett's Florentine families.
 - Built-in [web crawler](../manual/generate/#web-crawler-networks-of-webpages) to automatically create "social networks" from links found in a given URL.
