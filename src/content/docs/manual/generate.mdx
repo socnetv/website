@@ -4,6 +4,7 @@ description: This page provides information about the network generation routine
 layout: "../../../layouts/BaseLayout.astro"
 ---
 
+import { Steps } from '@astrojs/starlight/components';
 import Mermaid from "../../../components/Mermaid.astro";
 
 
@@ -12,20 +13,6 @@ import Mermaid from "../../../components/Mermaid.astro";
 SocNetV can also create "networks" of linked webpages using the built-in Web Crawler, which maps hypertext links between webpages starting from a given webpage or website.
 
 ---
-
-## Datasets: Recreating Famous Datasets
-
-SocNetV can recreate several well-known social network datasets, including:
-
-- **Krackhardt**: High-tech managers (advice, friendship, and "reports-to" relationships), 24 actors.
-- **Padgett**: Florentine Families (marital and business relationships), 16 actors.
-- **Zachary**: Karate Club (simple and weighted ties), 34 actors.
-- **Bernard**: Killworth Fraternity (multirelational), 58 actors.
-- **Galaskiewicz**: CEOs and clubs (affiliation data).
-- **Freeman's EIES**: Multirelational network with 32 actors.
-- **Knoke**: Bureaucracies Network (information and money relations), 10 actors.
-- **Mexican Power Network**: Power structures in the 1940s.
-- And many more...
 
 ## Datasets: Recreating Famous Social Network Datasets
 
@@ -70,11 +57,19 @@ SocNetV allows you to recreate a variety of well-known social network datasets. 
   SocNetV continues to expand its library of predefined datasets to support a variety of network analysis needs. Stay tuned for the coming releases to uncover more networks and experiment with their unique structures and properties.
 
 
-
 To recreate a dataset:
+
+
+<Steps>
+
 1. From the **File** menu, select "Create Known Dataset" or press `F7`.
+
 2. A dialog will appear where you can select a dataset from the list above.
+
 3. Press "OK," and the selected network will be displayed on the canvas.
+
+</Steps>
+
 
 ---
 
