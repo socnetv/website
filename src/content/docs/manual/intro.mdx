@@ -4,6 +4,7 @@ description: "An introduction to Social Network Analysis and SocNetV"
 layout: "../../../layouts/BaseLayout.astro"
 ---
 
+import { LinkButton } from '@astrojs/starlight/components';
 import Mermaid from "../../../components/Mermaid.astro";
 
 ## What is Social Network Analysis?
@@ -181,19 +182,35 @@ However, that is not always the most recent version. We urge you to use the AppI
 
 ### Development Version
 
-To test the latest development version, clone the repository:
+To test the latest development version of SocNetV, download the CI/CD binaries from the `continuous` tag in our GH releases:
+
+<LinkButton href="https://github.com/socnetv/app/releases/tag/continuous" variant="secondary">
+Get the development binaries
+</LinkButton>
+
+
+:::caution
+Warning: The development code branch is not always stable. Use at your own risk!
+:::
+
+Alternatively, you can clone the development branch (called "develop") of the SocNetV code on your computer with this git command:
 
 ```bash
 git clone -b develop --single-branch https://github.com/socnetv/app.git socnetv
+```
+
+A new directory called socnetv will be created. To build the development version, install the Qt5 libraries, and then change directory into socnetv:
+
+```bash
 cd socnetv
+```
+
+Enter the following commands to compile it:
+
+```bash
 qmake
 make
 ```
-
-:::caution
-The development version is <em>not always stable</em>.
-:::
-
 
 ---
 
