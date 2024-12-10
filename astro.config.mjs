@@ -12,11 +12,14 @@ export default defineConfig({
 	redirects: {
     '/docs/formats.html': '/manual/formats',
 		'/docs/intro.html': '/manual/intro',
+		'/docs/references': '/manual/references',
+		'/docs/generate': '/manual/generate',
+		'/docs/analysis': '/manual/analysis',
+		'/docs/visualization': '/manual/visualization',
+		'/docs/credits.html': '/manual/credits',
 		'/manual/visualisation': '/manual/visualization',
     '/search': '/',
-		'/docs/references': '/manual/references',
 		'/docs/SRS-Documentation-SocNetV.pdf': '/SRS-Documentation-SocNetV.pdf',
-		'/docs/credits.html': '/manual/credits'
   },
 	integrations: [
 		starlight({
