@@ -1,8 +1,8 @@
 # Welcome
 
-Welcome to the **Social Network Visualizer** code documentation. This documentation provides detailed annotations of the **SocNetV** source code, generated using **Doxygen**. It serves as a reference for developers working with or contributing to the project.
+Welcome to the **[Social Network Visualizer (SocNetV)](https://socnetv.org)** code documentation. This documentation provides detailed annotations of the **SocNetV** source code, generated using **Doxygen**. It serves as a reference for developers working with or contributing to the project.
 
-> For the **user manual** and details on how to use SocNetV, please visit the official [SocNetV manual](https://socnetv.org).
+> For guides and details on how to use SocNetV for social network analysis, please visit the official [SocNetV manual](https://socnetv.org/manual).
 
 ## What You'll Find Here
 
