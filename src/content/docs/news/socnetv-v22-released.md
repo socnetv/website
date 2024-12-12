@@ -2,11 +2,11 @@
 title: "SocNetV v2.2 Released with Cluster Analysis, Eigenvector Centrality, and More!"
 date: 2017-01-21
 description: "SocNetV v2.2 introduces hierarchical clustering, eigenvector centrality, advanced analysis tools, and numerous bug fixes. Download it today for enhanced social network analysis!"
-image: "http://socnetv.org/data/uploads/screenshots/22/socnetv-2.2.jpg"
+image: "https://socnetv.org/data/uploads/screenshots/22/socnetv-2.2.jpg"
 tags: ["release", "Hierarchical Clustering Analysis", "Actor Similarity"]
 ---
 
-We are pleased to announce that a new version of your favorite social network analysis and visualization software application has been released. **SocNetV version 2.2**, codenamed **"beyond"**, brings many new features and is now available for **Windows**, **Mac OS X**, and **Linux**. Visit the [Downloads](http://socnetv.org/downloads/) page to get it!
+We are pleased to announce that a new version of your favorite social network analysis and visualization software application has been released. **SocNetV version 2.2**, codenamed **"beyond"**, brings many new features and is now available for **Windows**, **Mac OS X**, and **Linux**. Visit the [Downloads](https://socnetv.org/downloads/) page to get it!
 
 ---
 
@@ -22,13 +22,13 @@ SocNetV now performs hierarchical agglomerative cluster analysis on social netwo
 
 You can compute the **Structural Equivalence matrix** using adjacency or geodesic distance matrices with user-selected metrics such as **Euclidean**, **Manhattan**, and **Jaccard** distances.
 
-![HCA Dialog](http://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-hierarchical-cluster-analysis-dialog.jpg)
+![HCA Dialog](https://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-hierarchical-cluster-analysis-dialog.jpg)
 
 Results include:
 - A **list of clusters per level**.
 - A **dendrogram** of the cluster hierarchy in SVG format.
 
-![HCA Results](http://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-hca-results-2-dendrogram.jpg)
+![HCA Results](https://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-hca-results-2-dendrogram.jpg)
 
 ---
 
@@ -36,11 +36,11 @@ Results include:
 
 Version 2.2 introduces **Eigenvector Centrality**, which measures the influence of a node in a network based on the leading eigenvector of the adjacency matrix.
 
-![Eigenvector Centrality](http://socnetv.org/data/uploads/screenshots/22/socnetv-report-eigenvector-sorted.png)
+![Eigenvector Centrality](https://socnetv.org/data/uploads/screenshots/22/socnetv-report-eigenvector-sorted.png)
 
 Use this metric for network analysis or embedding radial/level layouts.
 
-![Eigenvector Layout](http://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-layout-eigenvector-radial-indegree-nodal.png)
+![Eigenvector Layout](https://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-layout-eigenvector-radial-indegree-nodal.png)
 
 ---
 
@@ -48,7 +48,7 @@ Use this metric for network analysis or embedding radial/level layouts.
 
 SocNetV now computes **Pearson Correlation Coefficients** to correlate actor profiles (ties or distances). Results are displayed as a correlation matrix.
 
-![Pearson Coefficients Dialog](http://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-pearson-coefficients-dialog.png)
+![Pearson Coefficients Dialog](https://socnetv.org/data/uploads/screenshots/22/socnetv-2.2-pearson-coefficients-dialog.png)
 
 ---
 
@@ -105,7 +105,7 @@ Support for **GML** formatted data and **multi-relational Pajek files**.
 - Transformed **Krackhardt's High-tech Managers** and **Zachary Karate Club** into multirelational datasets.
 
 > **Important Notices**:  
-> - Project's new domain: [http://socnetv.org](http://socnetv.org)  
+> - Project's new domain: [https://socnetv.org](https://socnetv.org)  
 > - Code and files are now hosted on GitHub.
 
 ---
