@@ -51,13 +51,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import Mermaid from "../../components/Mermaid.astro";
 import { LinkButton } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+import myImage from '../../assets/images/socnetv-32-lattice-961n-1860e-layout-bc.png'; 
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
 
 ## Free and Open-Source Tool for Social Network Analysis 🌟 
 
-![SocNetV Screenshot](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
+<Image loading src={myImage} alt="SocNetV automatically created a lattice network of 961 actors and 1860 edges - we have applied the betweenness-centrality radial layout." />
+
+{/* ![SocNetV Screenshot](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png) */}
 
 SocNetV is a cross-platform, user-friendly free software application for social network analysis and visualization. With SocNetV you can:
 
@@ -77,7 +82,7 @@ SocNetV is a cross-platform, user-friendly free software application for social 
 - [Layout models](/manual/visualization) based on prominence indices (e.g., circular, level, nodal sizes by centrality score) or on force-directed placement (e.g., [Kamada-Kawai](/manual/visualization#kamada-kawai-layout), [Fruchterman-Reingold](/manual/visualization#fruchterman-reingold-layout)).
 - [Multirelational network loading and editing](/manual/gui#relations).
 - Random network creation using various models ([Barabási–Albert Scale-Free](/manual/generate/#scale-free-s-f-networks), [Erdős–Rényi](/manual/generate/#erd%C5%91sr%C3%A9nyi-er-networks), [Watts-Strogatz Small-World](/manual/generate/#small-world-sw-networks), d-regular, ring lattice, etc.).
-- [Famous social network analysis datasets](/manual/generate/#datasets-recreating-famous-datasets), such as Padgett's Florentine families.
+- [Famous social network analysis datasets](/manual/generate/#recreating-famous-datasets), such as Padgett's Florentine families.
 - Built-in [web crawler](/manual/generate/#web-crawler-networks-of-webpages) to automatically create "social networks" from links found in a given URL.
 - Comprehensive [documentation](/documentation) available both online and inside the application.
 
@@ -85,7 +90,7 @@ SocNetV is a cross-platform, user-friendly free software application for social 
 
 ## Latest version 📥
 
-<p><a href="https://github.com/socnetv/app/releases" target="_blank" rel="nofollow nopener"><img src="https://img.shields.io/github/release/socnetv/app.svg" /></a></p>
+<p><a href="https://github.com/socnetv/app/releases" target="_blank" rel="nofollow nopener"><img alt="SocNetV latest version" src="https://img.shields.io/github/release/socnetv/app.svg" /></a></p>
 
 Installers, packages and executables for Windows, macOS and Linux are available on the [Downloads](../downloads) page. 
 

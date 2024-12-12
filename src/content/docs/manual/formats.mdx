@@ -49,7 +49,7 @@ GraphML is a highly versatile and widely adopted XML-based format designed for g
 
 #### Example 1: A simple GraphML File
 
-Below is an example of a simple directed graph with two nodes and one edge:
+Below is an example of a simple social network in GraphML, an undirected graph with two 11 nodes and 12 edges:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -112,6 +112,10 @@ graph TD
     n8 --> n9
     n8 --> n10
 `} />
+
+And here's the visualization of the above example using **SocNetV** where we have applied an FDP layout (*Kamada-Kawai*) for the node location and a prominence-based model (*Betweenness Centrality*) for the node sizes/colors:
+
+![SocNetV visualizing a simple undirected graph with two 11 nodes and 12 edges from a GraphML file](/data/uploads/screenshots/32/socnetv-32-example-graphml.png)
 
 ### How to Use GraphML Files in SocNetV
 
@@ -206,7 +210,10 @@ graph [
 - **Edges**: The edges connect nodes using the `source` and `target` attributes. For example, an edge from node `1` (Alice) to node `2` (Bob) has a weight of `1.0`. Similarly, other edges are defined with weights that indicate the strength of the connection.
 - **Graph Properties**: The `directed 1` property at the beginning of the graph indicates that the graph is directed. If this value were set to `0`, the graph would be undirected.
 
-#### Mermaid Visualization
+#### Visualization
+
+This Mermaid diagram visualizes the directed graph described in the GML example. It captures the relationships between "Alice", "Bob", and "Charlie", along with the weights assigned to the edges.
+
 
 <Mermaid code={`
 graph TD
@@ -215,7 +222,11 @@ graph TD
     Charlie -->|2.0| Alice
 `} />
 
-This Mermaid diagram visualizes the directed graph described in the GML example. It captures the relationships between "Alice", "Bob", and "Charlie", along with the weights assigned to the edges.
+And here's the visualization in SocNetV:
+
+
+![SocNetV visualizing a network from an example GML file](/data/uploads/screenshots/32/socnetv-32-example-gml.png)
+
 
 ### How to Use GML in SocNetV
 
@@ -279,7 +290,9 @@ digraph mydot {
 - **Edges**: Directed edges are defined using `->`, such as `a -> b`. Attributes like `weight` and `color` can also be applied to edges.
 - **Clusters and Groups**: Nodes are grouped by attribute definitions, making visualization more intuitive.
 
-##### Mermaid Visualization:
+##### Visualization:
+
+This Mermaid diagram replicates the structure of the example GraphViz file, illustrating the directed relationships between nodes.
 
 <Mermaid code={`
 graph TD
@@ -287,7 +300,11 @@ graph TD
   d --> e --> a --> f --> j --> k --> l --> o
 `} />
 
-This diagram replicates the structure of the example GraphViz file, illustrating the directed relationships between nodes.
+
+In SocNetV, the same network can be visualized in many ways. For instance, in the screenshot below, we have applied a prominence-based layout (Eccentricity):
+
+![SocNetV visualizing a network from an example GraphViz file](/data/uploads/screenshots/32/socnetv-32-example-dot.png)
+
 
 ### How to Use GraphViz Files in SocNetV
 
@@ -409,7 +426,9 @@ Note that this matrix is not symmetric.
 - **Weighted**: In this example, the matrix is **weighted**, with values like 1 and 2 indicating the strength of the connections. Unweighted matrices would use binary values (0 and 1).
 - **Symmetry**: The adjacency matrix is symmetric for undirected graphs, meaning `A[i][j] = A[j][i]`.
 
-#### Mermaid Visualization:
+#### Visualization:
+
+This Mermaid diagram visualizes the graph represented by the adjacency matrix. The nodes 1, 2, 3, and 4 are connected with weighted edges, as indicated by the matrix.
 
 <Mermaid code={`
 graph TD
@@ -418,8 +437,6 @@ graph TD
     1 -->|2| 4
     3 -->|1| 4
 `} />
-
-This Mermaid diagram visualizes the graph represented by the adjacency matrix. The nodes 1, 2, 3, and 4 are connected with weighted edges, as indicated by the matrix.
 
 
 
@@ -509,7 +526,10 @@ SocNetV supports importing Pajek project files, which usually have a `.net` or `
 - **Arcs**: The `*Arcs` section defines directed edges between nodes. Each line specifies a source node, target node, weight (e.g., `1`, `-1`), and an optional color.
 - **Edges**: The `*Edges` section defines undirected edges, similar to `*Arcs`, with the same format.
 
-#### Mermaid Visualization:
+#### Visualization:
+
+This Mermaid diagram visualizes the graph described in the Pajek file, showing the directed and undirected relationships between nodes.
+
 
 <Mermaid code={`
 graph TD
@@ -522,7 +542,6 @@ graph TD
   pe5 -->|1| pe3
 `} />
 
-This Mermaid diagram visualizes the graph described in the Pajek file, showing the directed and undirected relationships between nodes.
 
 ### Handling Multiple Matrices in Pajek Files
 
@@ -637,7 +656,10 @@ DATA:
 - **Labels**: The `LABELS` section lists the names of the nodes (e.g., Alice, Bob, Charlie, David).
 - **Data**: The `DATA` section provides the adjacency matrix for the network. For instance, the value `1` at position `(1, 2)` indicates a connection between Alice and Bob, with a weight of `1`.
 
-#### Mermaid Visualization:
+#### Visualization:
+
+This diagram visualizes the relationships described in the full matrix format, showing both the weights and the direction of edges.
+
 
 <Mermaid code={`
 graph TD
@@ -649,7 +671,6 @@ graph TD
   Charlie -->|1| David
 `} />
 
-This diagram visualizes the relationships described in the full matrix format, showing both the weights and the direction of edges.
 
 ---
 
@@ -679,7 +700,7 @@ DATA:
 - **Labels**: The `LABELS` section lists node names, just like in the full matrix example.
 - **Data**: The `DATA` section lists edges in the form `source target weight`. For instance, `1 2 1` means Alice (node 1) is connected to Bob (node 2) with a weight of 1.
 
-#### Mermaid Visualization:
+#### Visualization:
 
 <Mermaid code={`
 graph TD
@@ -756,7 +777,7 @@ The edge list format is one of the simplest and most commonly used formats for r
 - **Nodes**: Each pair of numbers in the edge list represents an edge between two nodes. For instance, `1 2` indicates an edge from node `1` to node `2`.
 - **Unvalued**: This example is **unvalued**, meaning the edges have no weight associated with them. A `1` is implicitly understood as the connection between the nodes.
 
-#### Mermaid Visualization:
+#### Visualization:
 
 <Mermaid code={`
 graph TD
@@ -782,7 +803,7 @@ This Mermaid diagram visualizes the unvalued edge list. It shows a simple direct
 - **Nodes and Weights**: Each line in the edge list represents a connection between two nodes, with the third column representing the weight of the edge. For example, `1 2 0.5` means there is an edge from node `1` to node `2` with a weight of `0.5`.
 - **Valued Edges**: This example is **valued**, meaning the edges are weighted with numerical values.
 
-#### Mermaid Visualization:
+####  Visualization:
 
 <Mermaid code={`
 graph TD
