@@ -44,7 +44,7 @@ export default defineConfig({
 			description: 'Social Network Analysis: Social Network Visualizer (SocNetV) is a user-friendly and free software tool for Social Network Analysis and Visualization.',
 			logo: {
 				alt: 'SocNetV',
-				src: './src/assets/socnetv-logo-256-no-bg-opt.svg',
+				src: './src/assets/images/socnetv-logo-40.svg',
 				// replacesTitle: true, 
 			},
 			social: {
