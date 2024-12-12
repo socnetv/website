@@ -2,7 +2,7 @@
 title: "SocNetV v2.9 Released"
 date: 2021-06-15
 description: "SocNetV version 2.9 brings many improvements."
-
+tags: ["release", "bugfixes"]
 ---
 
 ![SocNetV v2.9 Screenshot](/data/uploads/screenshots/29/socnetv-v29-1.png)

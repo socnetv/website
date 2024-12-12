@@ -3,13 +3,14 @@ title: "SocNetV v2.5 released with lots of new features and new looks!"
 date: 2019-03-08
 description: "SocNetV v2.5 Released with Lots of New Features and New Looks!"
 tags: 
+    - release
     - social network analysis software
     - node icons
     - prominence score
     - prominence distribution
     - distribution charts
     - QtCharts
-    - lattice network-
+    - lattice network
     - edge dichotomization
     - network export
     - PDF export

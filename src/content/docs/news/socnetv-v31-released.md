@@ -2,6 +2,7 @@
 title: "SocNetV v3.1 Released"
 date: 2023-06-12
 description: "SocNetV version 3.1 brings performance improvements."
+tags: ["release", "performance", "bugfixes", "web crawler"]
 ---
 
 ![SocNetV v3.1 Screenshot](/data/uploads/screenshots/31/socnetv-v3.1.png)

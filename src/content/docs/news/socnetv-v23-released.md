@@ -2,9 +2,10 @@
 title: "SocNetV 2.3 Released"
 description: "SocNetV version 2.3 has been released."
 date: 2017-07-05
+tags: ["release", "Reciprocity"]
 ---
 
-The Social Network Visualizer project is happy to announce that a brand new version of our favorite [social network analysis and visualization software application](http://socnetv.org) has been released. SocNetV version 2.3, released on Jul 5, has the eloquent codename "fixer" and it is now available for Windows, Mac OS X, and Linux from the [Downloads](http://socnetv.org/downloads/) page.
+The Social Network Visualizer project is happy to announce that a brand new version of our favorite [social network analysis and visualization software application](https://socnetv.org) has been released. SocNetV version 2.3, released on Jul 5, has the eloquent codename "fixer" and it is now available for Windows, Mac OS X, and Linux from the [Downloads](https://socnetv.org/downloads/) page.
 
 ## What the new version brings to the users?
 
