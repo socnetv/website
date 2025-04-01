@@ -171,7 +171,11 @@ port install socnetv
 To run the latest and greatest version of SocNetV in Linux, download the latest Linux AppImage from
 the [Downloads](/downloads) page.
 
-Then, make the .appimage file executable and double-click on it to run SocNetV. That's it. :)
+Then, make the .appimage file executable and double-click on it to run SocNetV. That's it. :) Note that [AppImages require libfuse2](https://github.com/socnetv/app/issues/166) to work. On latest Ubuntu LTS releases, you need to install it beforehand: 
+
+```bash
+sudo apt install libfuse2t64
+```
 
 :::note
 Please note that SocNetV is also available in the [repositories of most Linux distributions](https://repology.org/project/socnetv/versions). 
