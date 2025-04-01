@@ -34,7 +34,7 @@ From UI tweaks to core algorithm improvements, v3.2 resolves numerous bugs repor
 
 We’d like to thank our contributors and users for reporting issues, suggesting features, and helping us improve SocNetV with every release. 🙏
 
-Download SocNetV v3.2 from our [Download page](https://socnetv.org/download/) and let us know what you think!
+Download SocNetV v3.2 from our [Download page](https://socnetv.org/downloads/) and let us know what you think!
 
 Happy analyzing!  
 — The SocNetV Team
