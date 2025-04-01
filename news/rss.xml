@@ -15,7 +15,7 @@ The &lt;strong&gt;Filter Edges by Weight&lt;/strong&gt; functionality has been r
 From UI tweaks to core algorithm improvements, v3.2 resolves numerous bugs reported by our users. You can explore the full list of closed issues in the &lt;a href=&quot;https://github.com/socnetv/app/issues?q=is%3Aissue+state%3Aclosed+milestone%3A3.2&quot;&gt;GitHub milestone&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;We’d like to thank our contributors and users for reporting issues, suggesting features, and helping us improve SocNetV with every release. 🙏&lt;/p&gt;
-&lt;p&gt;Download SocNetV v3.2 from our &lt;a href=&quot;https://socnetv.org/download/&quot;&gt;Download page&lt;/a&gt; and let us know what you think!&lt;/p&gt;
+&lt;p&gt;Download SocNetV v3.2 from our &lt;a href=&quot;https://socnetv.org/downloads/&quot;&gt;Download page&lt;/a&gt; and let us know what you think!&lt;/p&gt;
 &lt;p&gt;Happy analyzing!&lt;br&gt;
 — The SocNetV Team&lt;/p&gt;</content:encoded><category>release</category><category>metadata</category><category>adjacency matrix</category><category>cmake</category><category>bugfixes</category><category>qt</category></item><item><title>SocNetV v3.1 Released</title><link>https://socnetv.org/news/socnetv-v31-released/</link><guid isPermaLink="true">https://socnetv.org/news/socnetv-v31-released/</guid><pubDate>Mon, 12 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://socnetv.org/data/uploads/screenshots/31/socnetv-v3.1.png&quot; alt=&quot;SocNetV v3.1 Screenshot&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
