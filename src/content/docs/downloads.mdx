@@ -42,7 +42,7 @@ Click one of the buttons below to download the latest version of SocNetV for you
   <i class="fab fa-apple" style="font-size: 48px; margin-bottom: 10px;"></i><br />
     Download Image
   </a>
-  <small>For macOS 10.15 and later.</small>
+  <small>For Mac computers with Apple silicon and macOS 10.15+. </small>
   <small>Installation: Double click the .dmg file, then right click on SocNetV app while holding Ctrl and select Open. Drag the app into your Applications.</small>
 </div>
 
@@ -66,12 +66,13 @@ Download and have fun with social network analysis!
 ##### For Windows users
 :::note
 Windows Defender might alert you about a threat in the SocNetV Windows installer. This is a false positive as the installer is automatically created by [Github Actions Workflow](https://github.com/socnetv/app/actions/runs/14204618825) and checked with VirusTotal. Our installer is 100% safe. For your peace of mind, scan the installed files with Defender to verify them for yourself.
+Also, the OS/browser might tell you that it cannot verify the software developer/publisher and suggest you move the installer to Trash! That's because we do not sign our released packages with MS developer signing certificates...
 :::
 
 
 ##### For macOS users
 :::note
-The first time you run the SocNetV app or the installer, macOS may tell you that it cannot verify the software developer/publisher. That's because we do not always sign our released packages with apple developer signing certificates. Please press Cancel, not Move to Bin! Then, right-click again on the app (while pressing the Ctrl key) and select Open to run the application normally. To install SocNetV, just drag the app icon to your Applications folder.
+There is a SocNetV port in MacPorts (thanks to Szabolcs Horvát!). It can be installed with the command `port install socnetv`
 :::
 
 ##### For Linux users
