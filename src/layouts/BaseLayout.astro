@@ -1,5 +1,6 @@
 ---
 const { title, description } = Astro.props;
+import '../styles/global.css'; // Include a global css file
 ---
 
 <!doctype html>
@@ -19,8 +20,7 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <!-- Include a global css file -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    
     <!-- Include font-awesome -->
     <link
       rel="stylesheet"
