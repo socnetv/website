@@ -40,10 +40,21 @@ Click one of the buttons below to download the latest version of SocNetV for you
   <h3 id="macos">macOS</h3>
   <a href="https://github.com/socnetv/app/releases/download/v3.2/SocNetV-3.2.dmg" style="font-size: 18px;">
   <i class="fab fa-apple" style="font-size: 48px; margin-bottom: 10px;"></i><br />
-    Download Image
+    Download SocNetV 3.2 (Apple silicon, macOS 14+)
   </a>
-  <small>For Mac computers with Apple silicon and macOS 10.15+. </small>
-  <small>Installation: Double click the .dmg file, then right click on SocNetV app while holding Ctrl and select Open. Drag the app into your Applications.</small>
+  <small>For Mac computers with Apple silicon and <strong>macOS 14 Sonoma or later</strong>. </small> <br />
+  <small>SocNetV can be also installed via  <a href="https://www.macports.org/install.php" rel="nofollow noopener noreferrer">MacPorts</a> (thanks to Szabolcs Horvát!). After installing MacPorts, run in Terminal:  <br /> </small>
+  <code>sudo port install socnetv</code>
+  
+</div>
+
+<div style="text-align: center;">
+  <a href="https://github.com/socnetv/app/releases/download/v3.0/SocNetV-v3.0-macos.zip" style="font-size: 14px;">
+    <i class="fab fa-apple" style="font-size: 24px; margin-bottom: 10px;"></i><br />
+    Download SocNetV 3.0 (Intel, macOS 10.15–12)
+  </a>
+  <small>For Intel Macs running macOS Catalina (10.15), Big Sur (11), or Monterey (12). </small> 
+   <small>Installation: This version is <strong>not code-signed</strong>. To open it the first time, hold the Command key and right-click the app icon, choose <em>Open</em>, and confirm.</small>
 </div>
 
 
@@ -72,7 +83,13 @@ Also, the OS/browser might tell you that it cannot verify the software developer
 
 ##### For macOS users
 :::note
-There is a SocNetV port in MacPorts (thanks to Szabolcs Horvát!). It can be installed with the command `port install socnetv`
+- If you have a modern Apple silicon Mac with macOS 14 or later, use the latest version.
+- If you have an older Intel Mac (up to macOS 12 Monterey), use the legacy DMG (v3.0) and bypass Gatekeeper with the “right-click → Open” method.  
+- Alternatively, SocNetV can be installed via [MacPorts](https://www.macports.org/install.php). After installing MacPorts, run in Terminal:  
+  ```bash
+  sudo port selfupdate
+  sudo port install socnetv
+  ```
 :::
 
 ##### For Linux users
