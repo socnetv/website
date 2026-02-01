@@ -1,56 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  a {
-    color: #007acc;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .active a {
-    font-weight: bold;
-    color: #007acc;
-  }
+ body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   margin: 0;
+   padding: 0;
+   background-color: var(--sl-color-bg);
+   color: var(--sl-color-text);
+ }
 
-  .centered-icon {
-    text-align: center;
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
+ a {
+   color: #007acc;
+   text-decoration: none;
+ }
 
-  .row {
-    display: flex;
-    flex-direction: row;
-  }
-  .col {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .align-items-center {
-    align-items: center;
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
+ a:hover {
+   text-decoration: underline;
+ }
 
-  .gap-1rem {
-    gap: 1rem;
-  }
+ .active a {
+   font-weight: bold;
+   color: #007acc;
+ }
 
-  /** 
+ .centered-icon {
+   text-align: center;
+   font-size: 48px;
+   margin-bottom: 10px;
+ }
+
+ .row {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .col {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .align-items-center {
+   align-items: center;
+ }
+
+ .justify-center {
+   justify-content: center;
+ }
+
+ .gap-1rem {
+   gap: 1rem;
+ }
+
+ /** 
     Fix mathjax to be inline by default
     see https://github.com/withastro/starlight/issues/721#issuecomment-2422914105 
   */
-  .MathJax svg {
-    display: inline !important;
-  }
+ .MathJax svg {
+   display: inline !important;
+ }
