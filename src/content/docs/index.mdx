@@ -13,7 +13,7 @@ head:
   - tag: meta
     attrs: { 
       property: 'og:image',
-      content: 'https://socnetv.org/data/uploads/screenshots/32/socnetv-32-lattice-961n-1860e-layout-bc.png'
+      content: 'https://socnetv.org/data/uploads/screenshots/33/socnetv-33-lattice-900n-2700e-bc-layout.webp'
     }
   - tag: meta
     attrs: { 
@@ -27,7 +27,7 @@ head:
     }
 banner:
   content: |
-    SocNetV v3.2 has been released! 
+    SocNetV v3.3 has been released! 
     <a href="/downloads">Download it!</a>
 hero:
   tagline: SocNetV - Social Network Analysis and Visualization Software
@@ -53,14 +53,14 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import { LinkButton } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-import myImage from '../../assets/images/socnetv-32-lattice-961n-1860e-layout-bc.png'; 
+import myImage from '../../assets/images/socnetv-33-screenshot.webp'; 
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
 
 ## Free and Open-Source Tool for Social Network Analysis 🌟 
 
-<Image loading src={myImage} alt="SocNetV automatically created a lattice network of 961 actors and 1860 edges - we have applied the betweenness-centrality radial layout." />
+<Image loading src={myImage} alt="SocNetV automatically created a small world ramdom network of 900 actors and 2700 edges - we have applied the betweenness-centrality radial / size layout." />
 
 {/* ![SocNetV Screenshot](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png) */}
 
