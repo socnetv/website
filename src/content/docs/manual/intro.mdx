@@ -123,8 +123,7 @@ In fact, the project offers binaries and installers for the three major Operatin
 
 The latest release of SocNetV can be downloaded from the project's [Downloads](/downloads) page.
 
-If there is no binary package for your OS, please download and compile the source code,
-as explained below.
+If there is no binary package for your OS, please download and compile the source code as explained below.
 
 ### Install in Windows
 
@@ -132,7 +131,8 @@ To install SocNetV in Windows, download the latest SocNetV Windows installer fro
 the [Downloads](/downloads) page, and double-click on the executable to start the installation.
 
 :::note
-You might see a Windows pop up about unknown software origin/publisher. Please ignore it and proceed, as we do not sign our released packages with any code signing certificates (which are not free by the way). 
+Windows Defender might alert you about a threat in the SocNetV Windows installer. This is a false positive as the installer is automatically created by [Github Actions Workflow](https://github.com/socnetv/app/actions/runs/22411624409) and checked with VirusTotal. Our installer is 100% safe. For your peace of mind, scan the installed files with Defender to verify them for yourself.
+Also, the OS/browser might tell you that it cannot verify the software developer/publisher and suggest you move the installer to Trash! That's because we do not sign our released packages with MS developer signing certificates...
 :::
 
 Click Next and Accept the License (GPL) to install the program.
@@ -147,16 +147,8 @@ Afterwards you can run the application from your Start menu.
 To install SocNetV in macOS, download the latest SocNetV macOS package from
 the [Downloads](https://socnetv.org/downloads) page. Then right-click on it and select Open.
 
-If the package is an installer, the installation will start immediately and the application 
-will be installed automatically in your Applications.
-
-Otherwise, if the package is just an macOS image disk (a file with a `.dmg` extension), then double-click on it to open it. 
+The package is just a macOS image disk (a file with a `.dmg` extension). Double-click on it to open it. 
 You will see a new window with the SocNetV executable icon inside. Right-click on it and select Open to run the application. 
-
-:::note
-The first time you will run SocNetV, macOS may tell you that it cannot verify the software developer/publisher. That's because we do not always sign our released packages with apple developer signing certificates (which are not free by the way). 
-Please press Cancel, not Move to Bin! Then, right-click again on SocNetV app and select Open to run the application normally.  
-:::
 
 After that, in order to permanently install SocNetV in your macOS, you can simply drag the SocNetV executable icon into your Applications.
 
@@ -171,7 +163,10 @@ port install socnetv
 To run the latest and greatest version of SocNetV in Linux, download the latest Linux AppImage from
 the [Downloads](/downloads) page.
 
-Then, make the .appimage file executable and double-click on it to run SocNetV. That's it. :) Note that [AppImages require libfuse2](https://github.com/socnetv/app/issues/166) to work. On latest Ubuntu LTS releases, you need to install it beforehand: 
+Then, make the .appimage file executable and double-click on it to run SocNetV. That's it. :) 
+
+Note that [AppImages require libfuse2](https://github.com/socnetv/app/issues/166) to work. 
+On some recent Ubuntu releases this dependency is provided by the `libfuse2t64` package:
 
 ```bash
 sudo apt install libfuse2t64
@@ -203,16 +198,17 @@ Alternatively, you can clone the development branch (called "develop") of the So
 git clone -b develop --single-branch https://github.com/socnetv/app.git socnetv
 ```
 
-A new directory called socnetv will be created. To build the development version, install the Qt5 libraries, and then change directory into socnetv:
+A new directory called socnetv will be created. 
+
+Make sure you have CMake and Qt 6 development libraries installed on your system.
+
+Then, you can compile the code with the following commands:
 
 ```bash
 cd socnetv
-```
-
-Enter the following commands to compile it:
-
-```bash
-qmake
+mkdir build
+cd build
+cmake ..
 make
 ```
 
@@ -221,13 +217,21 @@ make
 ## Command line options
 
 
-If you run SocNetV from the command prompt, there are three (at the moment) options:
+If you run the SocNetV GUI application from the command prompt, the following options are available:
+
 `--version | -V`      Displays the version of the program.
 
 `--help | -H` 	      Displays a short help message.
 
 `file.net`	      The name of the file you want to open.
 
+
+## socnetv-cli (Headless Mode)
+
+SocNetV also includes a headless command-line regression tool called `socnetv-cli`.  
+It is used primarily for automated testing, deterministic metric validation, and performance benchmarking.
+
+For usage examples and kernel documentation, see the project repository.
 
 [homepage]: https://socnetv.org "https://socnetv.org"
 

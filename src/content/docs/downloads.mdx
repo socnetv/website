@@ -8,7 +8,7 @@ head:
   - tag: meta
     attrs: { 
       property: 'og:image',
-      content: 'https://socnetv.org/data/uploads/screenshots/32/socnetv-32-lattice-961n-1860e-layout-bc.png'
+      content: 'https://socnetv.org/data/uploads/screenshots/33/socnetv-33-lattice-900n-2700e-bc-layout.webp'
     }
   - tag: meta
     attrs: {
@@ -25,7 +25,7 @@ There are installation packages and binaries for the three major operating syste
 Click one of the buttons below to download the latest version of SocNetV for your operating system. If there is no installer or package for your OS, please download and compile the source code (see further below).
 
 
-### Latest release
+## 🚀 Latest release (v3.3)
 
 <div class="col" style="text-align: center;">
   <h3 id="windows">Windows</h3>
@@ -58,8 +58,9 @@ Click one of the buttons below to download the latest version of SocNetV for you
   <small class="small">Installation: Not needed. Just make it executable and click to run in Debian, Ubuntu, Fedora, openSUSE etc! You need to have `libfuse2` installed.</small>
 </div>
 
-
 Download and have fun with social network analysis!
+
+For more information, please see the [Installation Instructions](/manual/intro#installation-instructions).
 
 ---
 
@@ -71,72 +72,34 @@ Windows Defender might alert you about a threat in the SocNetV Windows installer
 Also, the OS/browser might tell you that it cannot verify the software developer/publisher and suggest you move the installer to Trash! That's because we do not sign our released packages with MS developer signing certificates...
 :::
 
-
-##### For macOS users
-:::note
-- If you have a modern Apple silicon Mac with macOS 14 or later, use the latest version.
-- If you have an older Intel Mac (up to macOS 12 Monterey), use the legacy DMG (v3.0) and bypass Gatekeeper with the “right-click → Open” method.  
-- Alternatively, SocNetV can be installed via [MacPorts](https://www.macports.org/install.php). After installing MacPorts, run in Terminal:  
-  ```bash
-  sudo port selfupdate
-  sudo port install socnetv
-  ```
-:::
-
-##### For Linux users
-:::note
-SocNetV is also available in [the repositories of most Linux distributions](https://repology.org/project/socnetv/versions). However, this is not always the most recent version. We urge you to use the AppImage of the latest version available from this page. Users of openSUSE, Fedora, and Ubuntu/Debian may also add our own repositories to their systems and automatically update to the latest SocNetV version through the package manager (i.e., `apt-get install socnetv`). If you do not know how to add our repositories, please read the [Installation Instructions](/manual/intro#installation-instructions) in the Manual.
-:::
 ---
 
-### Source Code
+## 📦 Source Code
 
-<LinkButton href="https://github.com/socnetv/app/archive/master.zip" variant="secondary">
-Download Zipped Archive
+The full source code is available on GitHub.
+
+<LinkButton href="https://github.com/socnetv/app" variant="secondary">
+View Source Code on GitHub
 </LinkButton>
 
-To compile the source code, please see the [Instructions](/manual/intro#installation-instructions).
+If you would like to compile SocNetV from source, please follow the official build instructions in the Manual:
+
+👉 [Installation Instructions](/manual/intro#installation-instructions)
 
 ---
 
-### Development Version
+## 🚧 Development Version
 
 :::caution
-Warning: The development code branch is not always stable. Use at your own risk!
+The development branch ("develop") is not always stable. Use at your own risk.
 :::
 
-If you are looking for the cutting edge, there are also binaries of the development version in GH releases ('continuous' tag).
+Pre-built development binaries are available under the **continuous** release tag on GitHub:
 
 <LinkButton href="https://github.com/socnetv/app/releases/tag/continuous" variant="secondary">
-Get the development binaries
+Get Development Builds
 </LinkButton>
 
-Alternatively, you can clone the development branch (called "develop") of the SocNetV code on your computer with this git command:
+If you prefer to build the development branch yourself, please follow the instructions in the Manual:
 
-```bash
-git clone -b develop --single-branch https://github.com/socnetv/app.git socnetv
-```
-
-A new directory called socnetv will be created. To build the development version, install the Qt5 libraries, and then change directory into socnetv:
-
-```bash
-cd socnetv
-```
-Enter the following commands to compile it:
-
-```bash
-qmake
-make
-```
-
-If you have Qt6 installed, a binary file named socnetv (or socnetv.exe) will be created. You can run it by:
-
-Linux/macOS: 
-```bash
-./socnetv
-```
-
-Windows: 
-```bash
-socnetv.exe
-```
+👉 [Build from Source](/manual/intro#installation-instructions)
