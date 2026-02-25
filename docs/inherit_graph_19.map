@@ -1,0 +1,21 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,55,115,80"/>
+<area shape="rect" id="Node000001" href="$class_graphics_edge.html" title=" " alt="" coords="165,5,268,31"/>
+<area shape="poly" id="edge25_Node000000_Node000001" title=" " alt="" coords="116,47,175,30,171,34,119,52"/>
+<area shape="rect" id="Node000005" href="$class_graphics_guide.html" title=" " alt="" coords="163,55,270,80"/>
+<area shape="poly" id="edge26_Node000000_Node000005" title=" " alt="" coords="129,65,164,66,160,69,132,70"/>
+<area shape="rect" id="Node000006" href="$class_graphics_node.html" title=" " alt="" coords="164,104,268,130"/>
+<area shape="poly" id="edge27_Node000000_Node000006" title=" " alt="" coords="117,83,175,102,171,105,118,88"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="25,153,95,179"/>
+<area shape="poly" id="edge30_Node000002_Node000001" title=" " alt="" coords="78,139,121,83,161,40,182,30,178,33,164,44,125,87,82,142"/>
+<area shape="poly" id="edge31_Node000002_Node000005" title=" " alt="" coords="87,142,161,89,185,79,181,83,164,94,91,145"/>
+<area shape="poly" id="edge32_Node000002_Node000006" title=" " alt="" coords="108,148,175,128,171,132,111,153"/>
+<area shape="rect" id="Node000003" href="$class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="188,203,244,228"/>
+<area shape="poly" id="edge28_Node000002_Node000003" title=" " alt="" coords="109,179,190,205,185,208,110,184"/>
+<area shape="rect" id="Node000004" href="$class_graph_vertex.html" title=" " alt="" coords="169,252,264,278"/>
+<area shape="poly" id="edge29_Node000002_Node000004" title=" " alt="" coords="90,186,164,239,186,251,180,252,161,243,88,191"/>
+<area shape="rect" id="Node000007" href="$class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="187,301,246,327"/>
+<area shape="poly" id="edge33_Node000002_Node000007" title=" " alt="" coords="78,190,115,239,139,265,164,288,189,304,184,304,161,292,135,269,111,243,76,195"/>
+<area shape="rect" id="Node000008" href="$class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="170,153,262,179"/>
+<area shape="poly" id="edge34_Node000002_Node000008" title=" " alt="" coords="109,164,172,165,168,168,111,169"/>
+</map>

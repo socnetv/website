@@ -1,0 +1,7 @@
+<map id="dialogwebcrawler.h" name="dialogwebcrawler.h">
+<area shape="rect" id="Node000001" title="Declares the DialogWebCrawler class for configuring and initiating web&#45;based network crawling in SocN..." alt="" coords="90,5,221,31"/>
+<area shape="rect" id="Node000002" href="$dialogwebcrawler_8cpp.html" title="Implements the DialogWebCrawler class for configuring and executing web crawling functionality in Soc..." alt="" coords="5,79,151,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,41,93,81,89,76,128,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="174,79,291,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,39,222,79,217,78,179,44"/>
+</map>

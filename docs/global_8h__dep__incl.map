@@ -1,22 +1,105 @@
-<map id="/home/dimitris/socnetv/app/src/global.h" name="/home/dimitris/socnetv/app/src/global.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="569,5,724,45"/>
-<area shape="rect" id="Node000002" href="$graph_8h.html" title="Defines the Graph class and related algorithms for social network visualization." alt="" coords="376,93,531,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="593,53,497,96,495,91,591,49"/>
-<area shape="rect" id="Node000007" href="$graphicsedge_8cpp.html" title="Implements the GraphicsEdge class, which visualizes edges in the network graph." alt="" coords="559,93,734,133"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="649,59,649,93,644,93,644,59"/>
-<area shape="rect" id="Node000008" href="$mainwindow_8h.html" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="760,93,915,133"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="702,49,797,91,794,96,700,53"/>
-<area shape="rect" id="Node000003" href="$graph_8cpp.html" title=" " alt="" coords="5,181,160,221"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,138,161,185,160,180,362,133"/>
-<area shape="rect" id="Node000004" href="$graphvertex_8cpp.html" title="Implements the GraphVertex class for representing and managing vertices in the network graph structur..." alt="" coords="185,181,351,221"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="401,142,310,184,307,179,399,137"/>
-<area shape="rect" id="Node000005" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="555,181,723,221"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="508,137,599,179,597,184,505,142"/>
-<area shape="rect" id="Node000006" href="$parser_8cpp.html" title="Implements the Parser class for reading and interpreting various network data formats,..." alt="" coords="376,181,531,221"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="456,147,456,181,451,181,451,147"/>
-<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="782,141,683,184,681,179,780,136"/>
-<area shape="rect" id="Node000009" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="747,181,933,221"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="841,147,842,181,837,181,836,147"/>
-<area shape="rect" id="Node000010" href="$main_8cpp.html" title="Entry point for the SocNetV application, initializing the application and starting the main event loo..." alt="" coords="957,181,1112,221"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="894,136,993,179,990,184,892,141"/>
+<map id="global.h" name="global.h">
+<area shape="rect" id="Node000001" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="7370,5,7436,31"/>
+<area shape="rect" id="Node000002" href="$dialogfilternodesbycentrality_8h.html" title=" " alt="" coords="3842,79,4033,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="7351,20,5820,37,4800,55,4369,67,4045,82,4033,83,4033,77,4045,76,4369,62,4800,49,5820,32,7356,20"/>
+<area shape="rect" id="Node000005" href="$dialognodeedit_8cpp.html" title="Implements the DialogNodeEdit class for editing node properties in the network graph visualization." alt="" coords="7538,79,7667,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="7451,34,7571,79,7566,78,7450,39"/>
+<area shape="rect" id="Node000006" href="$dialogsettings_8cpp.html" title="Implements the DialogSettings class for managing user preferences and application settings in SocNetV..." alt="" coords="7692,79,7818,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="7451,27,7697,79,7692,78,7451,32"/>
+<area shape="rect" id="Node000007" href="$graph_8h.html" title="Defines the Graph class and related algorithms for social network visualization." alt="" coords="4057,79,4122,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="7352,21,4122,92,4122,87,7357,20"/>
+<area shape="rect" id="Node000053" href="$graphicsedge_8cpp.html" title="Implements the GraphicsEdge class, which visualizes edges in the network graph." alt="" coords="7462,160,7586,186"/>
+<area shape="poly" id="edge48_Node000001_Node000053" title=" " alt="" coords="7434,38,7477,77,7505,121,7522,161,7517,159,7500,124,7473,81,7432,43"/>
+<area shape="rect" id="Node000054" href="$graphicswidget_8h.html" title="Declares the GraphicsWidget class for handling the main visualization widget in the network graph int..." alt="" coords="7343,79,7462,105"/>
+<area shape="poly" id="edge49_Node000001_Node000054" title=" " alt="" coords="7405,45,7405,80,7401,77,7401,48"/>
+<area shape="rect" id="Node000059" href="$mainwindow_8h.html" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="7217,79,7319,105"/>
+<area shape="poly" id="edge52_Node000001_Node000059" title=" " alt="" coords="7369,38,7292,81,7290,76,7364,39"/>
+<area shape="rect" id="Node000003" href="$dialogfilternodesbycentrality_8cpp.html" title=" " alt="" coords="5,160,211,186"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="3824,93,3138,95,2095,100,1540,107,1016,118,564,134,223,155,171,162,170,157,222,150,564,129,1016,113,1540,102,2095,95,3138,89,3829,93"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="7322,160,7438,186"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="4049,102,4374,112,4772,113,5691,105,6161,102,6604,106,6995,121,7164,134,7310,150,7345,160,7339,159,7309,155,7163,139,6995,126,6604,112,6161,108,5691,110,4772,119,4373,118,4049,107"/>
+<area shape="poly" id="edge47_Node000007_Node000004" title=" " alt="" coords="4137,91,4745,94,5741,104,6728,121,7095,134,7224,142,7310,150,7344,160,7339,159,7309,155,7224,147,7094,140,6728,127,5741,109,4745,99,4137,96"/>
+<area shape="rect" id="Node000008" href="$distance__engine_8cpp.html" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="5763,160,5904,186"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="4137,91,4443,95,4911,105,5395,123,5598,135,5751,150,5790,160,5785,159,5750,155,5598,141,5395,128,4911,111,4443,101,4137,96"/>
+<area shape="rect" id="Node000009" href="$graph_8cpp.html" title="Implements the Graph class for managing network structures, nodes, and edges in SocNetV." alt="" coords="5928,160,6006,186"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="4137,91,5061,109,5601,126,5800,137,5917,150,5942,160,5937,159,5915,155,5799,143,5601,132,5061,114,4137,96"/>
+<area shape="rect" id="Node000010" href="$graph__canvas_8cpp.html" title="Implements canvas geometry and coordinate helper methods for the Graph class (canvas size,..." alt="" coords="6030,160,6157,186"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="4137,91,4487,93,5032,101,5600,119,5838,132,6018,150,6054,160,6049,159,6017,155,5838,138,5600,124,5032,106,4487,98,4137,96"/>
+<area shape="rect" id="Node000011" href="$graph__centrality_8cpp.html" title="Implements centrality&#45;based prominence indices (e.g., degree, eigenvector, information,..." alt="" coords="6181,160,6318,186"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="4137,91,4512,92,5101,100,5717,118,5975,132,6170,150,6208,160,6203,159,6169,155,5975,137,5716,123,5101,105,4512,98,4137,96"/>
+<area shape="rect" id="Node000012" href="$graph__cliques_8cpp.html" title="Implements clique detection and cohesion&#45;related algorithms for the Graph class." alt="" coords="6342,160,6468,186"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="4137,90,4537,91,5173,97,5515,104,5839,115,6119,130,6330,150,6366,160,6361,159,6329,155,6119,135,5839,120,5515,110,5173,102,4537,96,4137,96"/>
+<area shape="rect" id="Node000013" href="$graph__clustering__coefficients_8cpp.html" title="Implements clustering coefficient calculations for the Graph class." alt="" coords="6492,160,6708,186"/>
+<area shape="poly" id="edge12_Node000007_Node000013" title=" " alt="" coords="4137,91,4560,95,5240,105,5953,123,6254,135,6480,150,6536,160,6531,159,6480,155,6254,140,5953,128,5239,110,4560,100,4137,96"/>
+<area shape="rect" id="Node000014" href="$graph__clustering__hierarchical_8cpp.html" title="Implements hierarchical clustering methods for the Graph class." alt="" coords="6732,160,6946,186"/>
+<area shape="poly" id="edge13_Node000007_Node000014" title=" " alt="" coords="4137,91,4597,94,5347,103,6137,121,6470,134,6720,150,6776,160,6770,159,6720,155,6470,139,6137,126,5347,108,4597,99,4137,96"/>
+<area shape="rect" id="Node000015" href="$graph__crawler_8cpp.html" title="Implements web crawling and network construction logic for the Graph class." alt="" coords="6970,160,7096,186"/>
+<area shape="poly" id="edge14_Node000007_Node000015" title=" " alt="" coords="4137,91,5570,107,6444,125,6767,136,6958,150,6995,160,6989,159,6957,155,6767,142,6443,130,5570,112,4137,96"/>
+<area shape="rect" id="Node000016" href="$graph__distance__cache_8cpp.html" title="Implements distance matrix creation, geodesic aggregation, SSSP helpers, and caching logic for the Gr..." alt="" coords="7121,160,7298,186"/>
+<area shape="poly" id="edge15_Node000007_Node000016" title=" " alt="" coords="4137,90,4657,90,5520,96,5988,103,6433,114,6819,129,7108,150,7156,160,7151,159,7108,155,6819,135,6433,119,5988,109,5520,102,4657,96,4137,96"/>
+<area shape="rect" id="Node000017" href="$graph__distance__facade_8cpp.html" title="Implements façade&#45;level distance and connectivity accessors of the Graph class, delegating computatio..." alt="" coords="235,160,416,186"/>
+<area shape="poly" id="edge16_Node000007_Node000017" title=" " alt="" coords="4045,104,3875,124,3685,137,3473,144,3244,149,2749,148,2226,142,1705,134,1213,130,778,135,591,143,428,155,381,162,381,157,428,150,590,138,778,130,1213,124,1705,128,2226,136,2749,143,3244,143,3473,139,3684,131,3875,119,4039,105"/>
+<area shape="rect" id="Node000018" href="$graph__distance__progress__sink_8cpp.html" title="Implements the GraphDistanceProgressSink class that receives progress updates from the DistanceEngine..." alt="" coords="440,153,606,193"/>
+<area shape="poly" id="edge17_Node000007_Node000018" title=" " alt="" coords="4045,104,3884,123,3703,135,3503,142,3286,146,2816,146,2322,139,1828,132,1362,129,950,135,773,143,619,155,607,157,606,152,618,150,772,138,950,129,1362,123,1828,127,2322,134,2816,141,3286,141,3503,137,3703,130,3884,118,4039,105"/>
+<area shape="rect" id="Node000019" href="$graph__edge__filters_8cpp.html" title="Implements edge filtering operations for the Graph class (weight threshold filters,..." alt="" coords="630,160,783,186"/>
+<area shape="poly" id="edge18_Node000007_Node000019" title=" " alt="" coords="4044,104,3892,123,3720,133,3324,144,2878,143,2409,137,1941,130,1499,127,1109,134,941,142,795,155,755,162,754,157,794,150,940,137,1109,128,1499,122,1941,124,2409,131,2878,138,3324,138,3720,128,3891,117,4039,105"/>
+<area shape="rect" id="Node000020" href="$graph__edge__style_8cpp.html" title="Implements edge appearance and label/visibility helpers for the Graph class (edge colors,..." alt="" coords="807,160,956,186"/>
+<area shape="poly" id="edge19_Node000007_Node000020" title=" " alt="" coords="4045,104,3900,122,3737,132,3362,142,2940,142,2496,136,2053,130,1635,128,1265,134,1106,143,968,155,929,162,928,157,968,150,1106,138,1265,129,1635,122,2053,124,2496,131,2940,136,3362,137,3737,127,3900,117,4039,105"/>
+<area shape="rect" id="Node000021" href="$graph__edges_8cpp.html" title="Implements edge storage and CRUD operations for the Graph class (create/add/remove,..." alt="" coords="980,160,1100,186"/>
+<area shape="poly" id="edge20_Node000007_Node000021" title=" " alt="" coords="4044,104,3906,121,3751,131,3393,139,2991,137,2567,131,2145,124,1746,123,1395,131,1243,141,1112,155,1079,162,1079,157,1112,150,1243,136,1394,126,1746,117,2145,119,2567,125,2991,132,3393,133,3750,125,3906,116,4039,105"/>
+<area shape="rect" id="Node000022" href="$graph__io_8cpp.html" title="Implements graph file load/save wrapper methods for the Graph class (load pipeline coordination,..." alt="" coords="1124,160,1220,186"/>
+<area shape="poly" id="edge21_Node000007_Node000022" title=" " alt="" coords="4045,104,3912,120,3762,129,3419,136,3033,133,2626,125,2221,118,1839,117,1664,121,1502,128,1358,139,1232,155,1204,162,1204,157,1232,150,1357,134,1502,123,1664,116,1839,112,2221,113,2626,120,3033,127,3419,130,3762,124,3911,115,4039,105"/>
+<area shape="rect" id="Node000023" href="$graph__layouts__basic_8cpp.html" title="Implements basic graph layout algorithms of the Graph class (e.g., circular, random,..." alt="" coords="1244,160,1409,186"/>
+<area shape="poly" id="edge22_Node000007_Node000023" title=" " alt="" coords="4045,104,3920,120,3781,129,3461,139,3101,140,2723,137,2345,133,1989,132,1675,139,1539,145,1422,155,1379,162,1378,157,1421,150,1539,140,1674,133,1989,127,2345,128,2723,132,3101,135,3461,134,3781,124,3920,115,4039,105"/>
+<area shape="rect" id="Node000024" href="$graph__layouts__force_8cpp.html" title="Implements force&#45;directed layout algorithms of the Graph class (e.g., spring&#45;embedder and related for..." alt="" coords="1433,160,1596,186"/>
+<area shape="poly" id="edge23_Node000007_Node000024" title=" " alt="" coords="4044,104,3929,119,3799,128,3501,137,3167,139,2816,136,2135,133,1843,139,1717,146,1608,155,1566,162,1565,157,1608,150,1717,141,1843,134,2135,128,2816,131,3167,134,3501,132,3799,123,3928,114,4039,105"/>
+<area shape="rect" id="Node000025" href="$graph__matrix__adjacency_8cpp.html" title="Implements Graph methods for building adjacency&#45;based matrices (adjacency and inverse adjacency) from..." alt="" coords="1621,160,1806,186"/>
+<area shape="poly" id="edge24_Node000007_Node000025" title=" " alt="" coords="4045,104,3938,118,3820,127,3548,136,3242,139,2922,138,2300,137,2033,142,1819,155,1771,162,1771,157,1818,150,2033,137,2300,131,2922,133,3242,134,3547,131,3820,121,3938,113,4039,105"/>
+<area shape="rect" id="Node000026" href="$graph__metadata_8cpp.html" title="Implements graph metadata and modification state methods for the Graph class (name/filename/format,..." alt="" coords="1830,160,1970,186"/>
+<area shape="poly" id="edge25_Node000007_Node000026" title=" " alt="" coords="4044,104,3879,127,3730,141,3592,148,3464,152,3229,147,3010,135,2792,123,2558,117,2430,119,2293,125,2144,137,1982,155,1945,162,1944,157,1981,150,2143,132,2292,120,2430,114,2558,112,2792,117,3011,130,3230,142,3464,146,3592,143,3729,135,3879,122,4039,105"/>
+<area shape="rect" id="Node000027" href="$graph__node__filters_8cpp.html" title="Implements vertex filtering functions for the Graph class." alt="" coords="1993,160,2146,186"/>
+<area shape="poly" id="edge26_Node000007_Node000027" title=" " alt="" coords="4045,104,3893,126,3757,138,3631,146,3514,150,3299,147,3099,138,2899,127,2685,122,2442,130,2306,140,2158,155,2118,162,2117,157,2157,150,2306,134,2442,124,2685,117,2899,122,3099,132,3299,142,3514,144,3631,141,3756,133,3893,120,4039,105"/>
+<area shape="rect" id="Node000028" href="$graph__prestige_8cpp.html" title="Implements prestige (prominence) index algorithms for the Graph class." alt="" coords="2169,160,2300,186"/>
+<area shape="poly" id="edge27_Node000007_Node000028" title=" " alt="" coords="4045,104,3906,124,3780,136,3557,146,3360,143,3176,133,2993,124,2796,120,2574,129,2450,139,2314,155,2278,162,2277,157,2313,150,2449,134,2574,123,2796,115,2993,119,3177,128,3360,137,3557,140,3780,131,3905,119,4039,105"/>
+<area shape="rect" id="Node000029" href="$graph__prominence__distribution_8cpp.html" title="Implements prominence index distribution and visualization routines (bars, spline,..." alt="" coords="2325,160,2547,186"/>
+<area shape="poly" id="edge28_Node000007_Node000029" title=" " alt="" coords="4044,105,3818,134,3626,146,3458,147,3300,143,3143,138,2974,135,2783,140,2559,155,2505,162,2504,157,2558,150,2783,134,2974,130,3143,133,3300,138,3458,142,3626,140,3817,128,4039,105"/>
+<area shape="rect" id="Node000030" href="$graph__random__networks_8cpp.html" title="Implements random network generation algorithms of the Graph class (e.g., Erdős–Rényi,..." alt="" coords="2571,160,2760,186"/>
+<area shape="poly" id="edge29_Node000007_Node000030" title=" " alt="" coords="4045,105,3850,130,3686,141,3541,142,3406,139,3272,135,3127,134,2964,139,2772,155,2725,162,2725,157,2772,150,2964,134,3127,129,3272,130,3407,134,3541,137,3686,135,3849,125,4039,105"/>
+<area shape="rect" id="Node000031" href="$graph__reachability__walks_8cpp.html" title="Implements reachability analysis and walk&#45;based algorithms for the Graph class." alt="" coords="2784,153,2910,193"/>
+<area shape="poly" id="edge30_Node000007_Node000031" title=" " alt="" coords="4044,105,3872,127,3728,135,3600,136,3481,132,3362,128,3235,128,3091,136,2923,155,2911,157,2910,152,2922,150,3091,131,3235,123,3362,123,3481,127,3600,130,3728,130,3872,122,4039,105"/>
+<area shape="rect" id="Node000032" href="$graph__relations_8cpp.html" title="Implements relation management methods for the Graph class (current relation selection,..." alt="" coords="2934,160,3068,186"/>
+<area shape="poly" id="edge31_Node000007_Node000032" title=" " alt="" coords="4045,105,3897,125,3772,133,3662,134,3560,132,3457,130,3348,131,3225,138,3080,155,3045,162,3045,157,3080,150,3224,133,3348,126,3457,125,3560,127,3662,129,3772,128,3896,120,4040,105"/>
+<area shape="rect" id="Node000033" href="$graph__reports_8cpp.html" title="Implements reporting, export, and analytical output generation for the Graph class." alt="" coords="3092,160,3217,186"/>
+<area shape="poly" id="edge32_Node000007_Node000033" title=" " alt="" coords="4044,105,3919,123,3814,130,3634,131,3455,132,3351,140,3230,155,3197,162,3196,157,3229,150,3351,134,3455,127,3634,126,3813,125,3918,118,4039,105"/>
+<area shape="rect" id="Node000034" href="$graph__reports__settings_8cpp.html" title="Implements reporting configuration setters for the Graph class (reports output directory,..." alt="" coords="3242,160,3420,186"/>
+<area shape="poly" id="edge33_Node000007_Node000034" title=" " alt="" coords="4044,105,3949,121,3870,129,3735,135,3601,139,3431,155,3389,162,3388,157,3430,150,3601,134,3735,129,3870,123,3949,115,4039,105"/>
+<area shape="rect" id="Node000035" href="$graph__selection_8cpp.html" title="Implements selection and clicked&#45;state helper methods for the Graph class (selected vertices/edges,..." alt="" coords="3443,160,3581,186"/>
+<area shape="poly" id="edge34_Node000007_Node000035" title=" " alt="" coords="4045,105,3916,125,3816,132,3717,139,3592,155,3559,162,3558,157,3592,150,3716,133,3816,127,3915,120,4040,105"/>
+<area shape="rect" id="Node000036" href="$graph__similarity__matrices_8cpp.html" title="Implements similarity and dissimilarity matrix construction methods for the Graph class (matching,..." alt="" coords="3604,160,3798,186"/>
+<area shape="poly" id="edge35_Node000007_Node000036" title=" " alt="" coords="4045,105,3770,162,3770,157,4040,105"/>
+<area shape="rect" id="Node000037" href="$graph__state__flags_8cpp.html" title="Implements graph&#45;level state flags and toggles for the Graph class (weighted/symmetric/directed/undir..." alt="" coords="3823,160,3972,186"/>
+<area shape="poly" id="edge36_Node000007_Node000037" title=" " alt="" coords="4048,111,3927,162,3926,157,4043,112"/>
+<area shape="rect" id="Node000038" href="$graph__structure__metrics_8cpp.html" title="Implements structural queries and basic metrics for the Graph class (degrees, neighborhoods,..." alt="" coords="3996,160,4182,186"/>
+<area shape="poly" id="edge37_Node000007_Node000038" title=" " alt="" coords="4091,119,4091,161,4087,158,4087,122"/>
+<area shape="rect" id="Node000039" href="$graph__triad__census_8cpp.html" title="Implements triad census analysis for the Graph class, including MAN classification and triad type lab..." alt="" coords="4207,160,4366,186"/>
+<area shape="poly" id="edge38_Node000007_Node000039" title=" " alt="" coords="4134,108,4259,160,4254,159,4133,113"/>
+<area shape="rect" id="Node000040" href="$graph__type__strings_8cpp.html" title="Implements Graph helper methods for mapping internal enum/int types to user&#45;facing strings (and back)..." alt="" coords="4390,160,4546,186"/>
+<area shape="poly" id="edge39_Node000007_Node000040" title=" " alt="" coords="4137,100,4379,150,4414,160,4409,159,4378,155,4137,106"/>
+<area shape="rect" id="Node000041" href="$graph__ui__facade_8cpp.html" title="Implements Façade wrapper methods called by the UI." alt="" coords="4571,160,4712,186"/>
+<area shape="poly" id="edge40_Node000007_Node000041" title=" " alt="" coords="4137,95,4323,115,4559,150,4595,160,4589,159,4558,155,4322,121,4137,100"/>
+<area shape="rect" id="Node000042" href="$graph__ui__prominence__distribution_8cpp.html" title=" " alt="" coords="4736,153,4880,193"/>
+<area shape="poly" id="edge41_Node000007_Node000042" title=" " alt="" coords="4137,93,4389,111,4556,127,4724,150,4738,155,4733,154,4724,155,4555,133,4388,116,4137,98"/>
+<area shape="rect" id="Node000043" href="$graph__vertex__style_8cpp.html" title="Implements vertex appearance and labeling methods for the Graph class (size, shape/icons,..." alt="" coords="4904,160,5061,186"/>
+<area shape="poly" id="edge42_Node000007_Node000043" title=" " alt="" coords="4137,92,4455,107,4672,125,4892,150,4933,160,4928,159,4892,155,4671,130,4454,113,4137,97"/>
+<area shape="rect" id="Node000044" href="$graph__vertices_8cpp.html" title="Implements vertex storage and CRUD operations for the Graph class (create/remove/find/existence,..." alt="" coords="5085,160,5216,186"/>
+<area shape="poly" id="edge43_Node000007_Node000044" title=" " alt="" coords="4137,90,4293,92,4525,100,4797,118,4937,132,5074,150,5110,160,5105,159,5073,155,4936,137,4796,123,4525,105,4293,97,4137,96"/>
+<area shape="rect" id="Node000045" href="$graphvertex_8cpp.html" title="Implements the GraphVertex class for representing and managing vertices in the network graph structur..." alt="" coords="5240,160,5354,186"/>
+<area shape="poly" id="edge44_Node000007_Node000045" title=" " alt="" coords="4137,92,4672,110,4993,127,5127,138,5228,150,5261,160,5256,159,5228,155,5127,143,4993,132,4672,115,4137,97"/>
+<area shape="rect" id="Node000046" href="$headless__graph__loader_8cpp.html" title=" " alt="" coords="5379,160,5557,186"/>
+<area shape="poly" id="edge45_Node000007_Node000046" title=" " alt="" coords="4137,90,4333,92,4636,99,4997,117,5184,131,5367,150,5414,160,5408,159,5366,155,5183,137,4997,123,4636,105,4333,97,4137,96"/>
+<area shape="rect" id="Node000047" href="$kernel__distance__v1_8cpp.html" title=" " alt="" coords="5581,160,5739,186"/>
+<area shape="poly" id="edge46_Node000007_Node000047" title=" " alt="" coords="4137,91,4828,109,5256,126,5435,137,5570,150,5612,160,5607,159,5569,155,5434,143,5255,132,4828,114,4137,97"/>
+<area shape="poly" id="edge51_Node000054_Node000004" title=" " alt="" coords="7397,118,7385,162,7382,158,7393,121"/>
+<area shape="poly" id="edge50_Node000054_Node000053" title=" " alt="" coords="7434,111,7508,160,7503,159,7433,116"/>
+<area shape="poly" id="edge53_Node000059_Node000004" title=" " alt="" coords="7298,111,7365,160,7360,159,7296,116"/>
 </map>

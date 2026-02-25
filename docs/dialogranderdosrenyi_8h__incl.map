@@ -1,0 +1,7 @@
+<map id="dialogranderdosrenyi.h" name="dialogranderdosrenyi.h">
+<area shape="rect" id="Node000001" title="Declares the DialogRandErdosRenyi class for generating Erdős–Rényi random graphs in SocNetV." alt="" coords="34,5,186,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,30,64,70,60,66,96,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,266,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,29,162,68,156,68,121,34"/>
+</map>

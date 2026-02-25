@@ -1,0 +1,7 @@
+<map id="dialogexportimage.h" name="dialogexportimage.h">
+<area shape="rect" id="Node000001" title="Declares the DialogExportImage class for exporting network visualizations as images in SocNetV." alt="" coords="91,5,228,31"/>
+<area shape="rect" id="Node000002" href="$dialogexportimage_8cpp.html" title="Implements the DialogExportImage class for exporting network visualizations as images in SocNetV." alt="" coords="5,79,157,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,41,96,81,93,76,133,42"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="180,79,296,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,39,228,79,223,78,183,44"/>
+</map>

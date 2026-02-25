@@ -1,21 +1,25 @@
-<map id="/home/dimitris/socnetv/app/src/mainwindow.h" name="/home/dimitris/socnetv/app/src/mainwindow.h">
-<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="367,5,521,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,112,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="367,45,126,94,125,88,366,40"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="137,93,207,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="380,48,221,93,220,88,378,43"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="231,93,339,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,48,322,90,320,85,405,43"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="364,93,431,119"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="435,47,414,83,409,80,430,44"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="455,93,527,119"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="458,44,479,80,474,83,453,47"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="551,93,665,119"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="484,43,573,85,571,90,482,48"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="690,93,849,119"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="522,43,709,87,708,93,521,48"/>
-<area shape="rect" id="Node000009" href="$global_8h.html" title=" " alt="" coords="873,93,940,119"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="522,34,675,57,860,91,859,96,674,62,521,40"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="862,167,951,192"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="909,119,909,153,904,153,904,119"/>
+<map id="mainwindow.h" name="mainwindow.h">
+<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="387,5,490,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,112,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="387,32,127,80,126,75,387,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,79,205,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="391,33,221,80,219,75,395,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="229,79,336,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,31,324,75,322,70,410,32"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="360,79,426,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="433,30,411,68,407,64,429,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="450,79,521,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="447,29,472,67,466,65,445,34"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="545,79,660,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="467,29,564,72,558,73,466,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="684,79,841,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="490,28,695,75,690,76,490,33"/>
+<area shape="rect" id="Node000009" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="865,79,932,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="490,22,647,42,853,78,847,79,646,48,490,28"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="775,153,830,178"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="885,104,831,146,829,141,880,106"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="854,153,943,178"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="900,103,900,139,897,135,897,107"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="967,153,1032,178"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="916,103,973,144,967,143,915,108"/>
 </map>

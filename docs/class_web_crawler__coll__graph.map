@@ -1,0 +1,5 @@
+<map id="WebCrawler" name="WebCrawler">
+<area shape="rect" id="Node000001" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="5,79,98,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="17,5,86,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,45,54,79,49,78,49,48"/>
+</map>

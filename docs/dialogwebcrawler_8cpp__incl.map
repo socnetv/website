@@ -1,0 +1,19 @@
+<map id="dialogwebcrawler.cpp" name="dialogwebcrawler.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogWebCrawler class for configuring and executing web crawling functionality in Soc..." alt="" coords="311,5,456,31"/>
+<area shape="rect" id="Node000002" href="$dialogwebcrawler_8h.html" title="Declares the DialogWebCrawler class for configuring and initiating web&#45;based network crawling in SocN..." alt="" coords="39,79,170,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,34,168,77,166,72,338,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="194,79,264,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="360,31,270,75,268,70,355,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="288,79,367,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="376,30,348,69,345,65,372,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="391,79,490,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="394,29,424,67,419,66,392,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="515,79,681,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="420,29,550,73,545,74,420,34"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="706,79,754,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="457,29,564,48,693,79,688,79,563,53,456,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,74,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,104,63,143,59,139,92,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,153,246,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="117,102,152,141,147,141,115,107"/>
+</map>

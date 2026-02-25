@@ -1,0 +1,7 @@
+<map id="dialogsimilaritymatches.h" name="dialogsimilaritymatches.h">
+<area shape="rect" id="Node000001" title="Declares the DialogSimilarityMatches class for computing node similarity based on matching coefficien..." alt="" coords="99,5,267,31"/>
+<area shape="rect" id="Node000002" href="$dialogsimilaritymatches_8cpp.html" title="Implements the DialogSimilarityMatches class for calculating similarity between nodes using matching ..." alt="" coords="5,79,188,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,40,112,81,110,76,154,42"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="212,79,328,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,39,258,79,253,78,209,44"/>
+</map>

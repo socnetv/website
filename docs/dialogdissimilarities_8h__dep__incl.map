@@ -1,0 +1,7 @@
+<map id="dialogdissimilarities.h" name="dialogdissimilarities.h">
+<area shape="rect" id="Node000001" title="Declares the DialogDissimilarities class for managing dissimilarity calculations in SocNetV." alt="" coords="92,5,238,31"/>
+<area shape="rect" id="Node000002" href="$dialogdissimilarities_8cpp.html" title="Implements the DialogDissimilarities class for managing dissimilarity calculations in SocNetV." alt="" coords="5,79,165,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,41,100,81,97,76,138,42"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="188,79,304,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,39,235,79,230,78,189,44"/>
+</map>

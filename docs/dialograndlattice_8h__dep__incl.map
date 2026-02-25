@@ -1,0 +1,7 @@
+<map id="dialograndlattice.h" name="dialograndlattice.h">
+<area shape="rect" id="Node000001" title="Declares the DialogRandLattice class for configuring random lattice generation in SocNetV." alt="" coords="88,5,215,31"/>
+<area shape="rect" id="Node000002" href="$dialograndlattice_8cpp.html" title="Implements the DialogRandLattice class for generating random lattice networks in SocNetV." alt="" coords="5,79,146,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,41,90,81,87,77,125,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="169,79,286,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,39,217,79,212,78,174,44"/>
+</map>

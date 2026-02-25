@@ -1,0 +1,7 @@
+<map id="dialograndregular.h" name="dialograndregular.h">
+<area shape="rect" id="Node000001" title="Declares the DialogRandRegular class for generating random regular graphs in SocNetV." alt="" coords="88,5,218,31"/>
+<area shape="rect" id="Node000002" href="$dialograndregular_8cpp.html" title="Implements the DialogRandRegular class for generating random regular graphs in SocNetV." alt="" coords="5,79,149,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,41,91,81,88,77,126,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="172,79,288,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,39,220,79,215,79,176,44"/>
+</map>

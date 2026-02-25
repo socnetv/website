@@ -1,0 +1,7 @@
+<map id="dialogpreviewfile.h" name="dialogpreviewfile.h">
+<area shape="rect" id="Node000001" title="Declares the DialogPreviewFile class used for displaying a preview of network files before importing ..." alt="" coords="88,5,217,31"/>
+<area shape="rect" id="Node000002" href="$dialogpreviewfile_8cpp.html" title="Implements the DialogPreviewFile class which displays file contents with encoding options for preview..." alt="" coords="5,79,148,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,41,91,81,88,77,126,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="172,79,288,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,39,220,79,214,79,176,44"/>
+</map>

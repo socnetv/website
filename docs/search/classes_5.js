@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['texteditor_0',['TextEditor',['../classTextEditor.html',1,'']]]
+  ['idistanceprogresssink_0',['IDistanceProgressSink',['../class_i_distance_progress_sink.html',1,'']]]
 ];

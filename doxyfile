@@ -16,7 +16,7 @@
 
 # Project Name and Brief Description
 PROJECT_NAME           = "Code Documentation"
-PROJECT_NUMBER         = "3.1"
+PROJECT_NUMBER         = "3.3"
 PROJECT_BRIEF          = "Social Network Visualizer"
 PROJECT_LOGO           = ./annotation-src/socnetv-logo-manual.png  # Path to project logo
 
@@ -31,7 +31,8 @@ INPUT                  = ../../app/src/  \
 IMAGE_PATH             = ./annotation-src
 
 # File patterns to include in documentation (Qt6 source files)
-FILE_PATTERNS          =                                    # Include all
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.hpp *.cpp *.cc *.cxx *.md  # Include all relevant Qt6 source files and markdown files
 # FILE_PATTERNS          =   *.cpp *.h *.qrc *.ui *.qml  # Include all relevant Qt6 source files
 
 # HTML output generation
@@ -79,8 +80,21 @@ HTML_HEADER            = ./annotation-src/header.html  # Optional custom header 
 HTML_FOOTER            = ./annotation-src/footer.html  # Optional custom footer HTML
 
 # Language options for documentation
-OPTIMIZE_OUTPUT_FOR_C  = YES                  # Since it's C++ code (Qt6), optimize for C++ code
-# CXXFLAGS               = -std=c++17           # Use C++17 for Qt6 compatibility
+OPTIMIZE_OUTPUT_FOR_C  = NO                  # Do not optimize for C, since we are using C++
+# CXXFLAGS               = -std=c++17         # Use C++17 for Qt6 compatibility
+
+EXCLUDE_PATTERNS       = */build/* */.git/* */moc_* */ui_* */qrc_*
+
+# Don’t show absolute paths anywhere in the documentation, just the file names.
+FULL_PATH_NAMES        = NO                   
+
+# Strip any remaining path prefixes from file names
+# (set these to match YOUR actual source root)
+STRIP_FROM_PATH        = ../../app/src
+STRIP_FROM_INC_PATH    = ../../app/src
+
+# Optional: if you also include other dirs later, add them too (space-separated)
+# STRIP_FROM_PATH      += ../../app
 
 # Documentation style
 ALIASES                = "todo=\ref todo "    # Alias for todo notes in the documentation
@@ -92,14 +106,10 @@ WARN_IF_UNDOCUMENTED   = YES                  # Warn if certain items are not do
 # Custom style for code formatting (optional)
 CODE_STYLE             = YES                  # Enables code formatting style (can further be customized)
 
-# Set the diagram format to PNG, JPG or SVG (depends on your preference)
-DOT_IMAGE_FORMAT       = png                  # Generate images in PNG format for diagrams
-
 # Disable LaTeX output (no PDF generation)
 GENERATE_LATEX          = NO                  # Disable LaTeX (PDF) generation
 
 # SETTINGS FOR DOXYGEN AWESOME CSS (see: https://github.com/jothepro/doxygen-awesome-css)
-GENERATE_TREEVIEW      = YES # optional. Also works without treeview
 DISABLE_INDEX = NO
 FULL_SIDEBAR = NO
 HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css annotation-src/custom.css

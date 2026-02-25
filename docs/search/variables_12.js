@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['urlpattern_0',['urlPattern',['../classWebCrawler.html#a4d0d7f5031c909ab470789b763828158',1,'WebCrawler']]],
-  ['urlqueue_1',['urlQueue',['../classGraph.html#a3f9d971222b0de605d7e9080ab0f4dba',1,'Graph']]],
-  ['user_5fmsg_5fcritical_2',['USER_MSG_CRITICAL',['../global_8h.html#ad4dc2883378897e34f83189353701756',1,'global.h']]],
-  ['user_5fmsg_5fcritical_5fno_5fedges_3',['USER_MSG_CRITICAL_NO_EDGES',['../global_8h.html#a963df215348261c4232bf1fe1d3c26ff',1,'global.h']]],
-  ['user_5fmsg_5fcritical_5fno_5fnetwork_4',['USER_MSG_CRITICAL_NO_NETWORK',['../global_8h.html#a3b0b5a506fb4ddd2514c6b1954a202d4',1,'global.h']]],
-  ['user_5fmsg_5finfo_5',['USER_MSG_INFO',['../global_8h.html#a65ee582010e1e8d768d77b0598bd7e3d',1,'global.h']]],
-  ['user_5fmsg_5fquestion_6',['USER_MSG_QUESTION',['../global_8h.html#a5fbbad68952787c1767c3ebef5d90b85',1,'global.h']]],
-  ['user_5fmsg_5fquestion_5fcustom_7',['USER_MSG_QUESTION_CUSTOM',['../global_8h.html#a9d2f313c9c34a6257739750e6dec0bee',1,'global.h']]],
-  ['userselectedcodecname_8',['userSelectedCodecName',['../classMainWindow.html#ab5657f13a6fab742213e1392ab2a0920',1,'MainWindow']]]
+  ['u_0',['u',['../struct_distance_scratch.html#adbbfaaea4e3fb5cc456fede5558bd814',1,'DistanceScratch']]],
+  ['ui_1',['ui',['../struct_distance_scratch.html#a57aecdaa4c4c0fb5ea97bf532d245c69',1,'DistanceScratch::ui'],['../class_dialog_clustering_hierarchical.html#aa0165fba1f0081139109a931cf02f06e',1,'DialogClusteringHierarchical::ui'],['../class_dialog_data_set_select.html#ac293ffa080637070b5a274397dcabc16',1,'DialogDataSetSelect::ui'],['../class_dialog_dissimilarities.html#aa5a61a8ec3366d4122e9753279d9929c',1,'DialogDissimilarities::ui'],['../class_dialog_edge_dichotomization.html#a622ee4163536f4d82437653eefb60e8a',1,'DialogEdgeDichotomization::ui'],['../class_dialog_export_image.html#a3e76396a6f8a83116c56d425ab83fe82',1,'DialogExportImage::ui'],['../class_dialog_export_p_d_f.html#a507c7d8eb9bfacbe74bb550e37a14c2f',1,'DialogExportPDF::ui'],['../class_dialog_filter_edges_by_weight.html#ac01648c379cd0fbcd3a0108e81288d6f',1,'DialogFilterEdgesByWeight::ui'],['../class_dialog_filter_nodes_by_centrality.html#a72cbdb888d0b5f16eebfceb8aee1442f',1,'DialogFilterNodesByCentrality::ui'],['../class_dialog_node_edit.html#aacd4a0b69f79646723a559a849087371',1,'DialogNodeEdit::ui'],['../class_dialog_node_find.html#af093f51aa76dd6df93daae08a4d7a7d5',1,'DialogNodeFind::ui'],['../class_dialog_rand_erdos_renyi.html#a4b533d894e7a6e40ccde0f3e8aebff23',1,'DialogRandErdosRenyi::ui'],['../class_dialog_rand_lattice.html#a5e68df78814fffabba3a12c5f212d989',1,'DialogRandLattice::ui'],['../class_dialog_rand_regular.html#aa51594f1ea6178513e472111089d04d0',1,'DialogRandRegular::ui'],['../class_dialog_rand_scale_free.html#a84260a696adb80f4b0d80c699cf46e91',1,'DialogRandScaleFree::ui'],['../class_dialog_rand_small_world.html#aafb631d73eb6de3ede6da092346a03c1',1,'DialogRandSmallWorld::ui'],['../class_dialog_settings.html#a5b53d91a27cdf68f77e4bdd10b6a9bba',1,'DialogSettings::ui'],['../class_dialog_similarity_matches.html#a7e49bdccfdb4b3bd01285cdd789e36ae',1,'DialogSimilarityMatches::ui'],['../class_dialog_similarity_pearson.html#ab4a361f1a7eec5bc5f4c9ace9a96e0af',1,'DialogSimilarityPearson::ui'],['../class_dialog_system_info.html#a5fb7481cc6d4e14dab40f13edeca2e00',1,'DialogSystemInfo::ui'],['../class_dialog_web_crawler.html#aaa37ca18736166292037cd8fba5b62c0',1,'DialogWebCrawler::ui']]],
+  ['urlpattern_2',['urlPattern',['../class_web_crawler.html#a4d0d7f5031c909ab470789b763828158',1,'WebCrawler']]],
+  ['urlpatternsexcluded_3',['urlPatternsExcluded',['../class_dialog_web_crawler.html#a9a0f558d6a4ac463b979093ed4257dff',1,'DialogWebCrawler']]],
+  ['urlpatternsincluded_4',['urlPatternsIncluded',['../class_dialog_web_crawler.html#a5adb39fae0954af74ecd01f380abdcec',1,'DialogWebCrawler']]],
+  ['urlqueue_5',['urlQueue',['../class_graph.html#a3f9d971222b0de605d7e9080ab0f4dba',1,'Graph']]],
+  ['user_5fmsg_5fcritical_6',['USER_MSG_CRITICAL',['../global_8h.html#ad4dc2883378897e34f83189353701756',1,'global.h']]],
+  ['user_5fmsg_5fcritical_5fno_5fedges_7',['USER_MSG_CRITICAL_NO_EDGES',['../global_8h.html#a963df215348261c4232bf1fe1d3c26ff',1,'global.h']]],
+  ['user_5fmsg_5fcritical_5fno_5fnetwork_8',['USER_MSG_CRITICAL_NO_NETWORK',['../global_8h.html#a3b0b5a506fb4ddd2514c6b1954a202d4',1,'global.h']]],
+  ['user_5fmsg_5finfo_9',['USER_MSG_INFO',['../global_8h.html#a65ee582010e1e8d768d77b0598bd7e3d',1,'global.h']]],
+  ['user_5fmsg_5fquestion_10',['USER_MSG_QUESTION',['../global_8h.html#a5fbbad68952787c1767c3ebef5d90b85',1,'global.h']]],
+  ['user_5fmsg_5fquestion_5fcustom_11',['USER_MSG_QUESTION_CUSTOM',['../global_8h.html#a9d2f313c9c34a6257739750e6dec0bee',1,'global.h']]],
+  ['userselectedcodecname_12',['userSelectedCodecName',['../class_main_window.html#ab5657f13a6fab742213e1392ab2a0920',1,'MainWindow']]]
 ];

@@ -1,0 +1,15 @@
+<map id="graph_distance_progress_sink.h" name="graph_distance_progress_sink.h">
+<area shape="rect" id="Node000001" title="Declares the GraphDistanceProgressSink class that implements IDistanceProgressSink to receive progres..." alt="" coords="224,5,391,46"/>
+<area shape="rect" id="Node000002" href="$distance__engine_8cpp.html" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="5,183,146,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,55,185,96,129,143,88,184,85,180,126,139,182,92,254,52"/>
+<area shape="rect" id="Node000003" href="$distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="195,102,321,127"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,58,267,103,263,99,287,61"/>
+<area shape="rect" id="Node000004" href="$graph_8cpp.html" title="Implements the Graph class for managing network structures, nodes, and edges in SocNetV." alt="" coords="371,183,449,208"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="329,57,405,182,400,182,326,61"/>
+<area shape="rect" id="Node000006" href="$graph__distance__progress__sink_8cpp.html" title="Implements the GraphDistanceProgressSink class that receives progress updates from the DistanceEngine..." alt="" coords="395,94,561,135"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="360,51,442,93,437,94,359,56"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="218,136,104,185,102,180,214,132"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="295,132,390,182,384,182,294,137"/>
+<area shape="rect" id="Node000005" href="$graph__distance__cache_8cpp.html" title="Implements distance matrix creation, geodesic aggregation, SSSP helpers, and caching logic for the Gr..." alt="" coords="170,183,346,208"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="260,141,260,184,256,181,256,145"/>
+</map>

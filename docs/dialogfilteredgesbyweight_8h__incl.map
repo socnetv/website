@@ -1,0 +1,7 @@
+<map id="dialogfilteredgesbyweight.h" name="dialogfilteredgesbyweight.h">
+<area shape="rect" id="Node000001" title="Defines the DialogFilterEdgesByWeight class for filtering edges based on weight in the social network..." alt="" coords="28,5,206,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,31,65,70,62,66,101,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,293,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,29,174,68,168,69,129,34"/>
+</map>

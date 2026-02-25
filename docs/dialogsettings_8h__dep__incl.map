@@ -1,0 +1,7 @@
+<map id="dialogsettings.h" name="dialogsettings.h">
+<area shape="rect" id="Node000001" title="Declares the DialogSettings class for managing application&#45;wide user preferences in SocNetV." alt="" coords="84,5,197,31"/>
+<area shape="rect" id="Node000002" href="$dialogsettings_8cpp.html" title="Implements the DialogSettings class for managing user preferences and application settings in SocNetV..." alt="" coords="5,79,132,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,41,82,81,79,76,115,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="156,79,272,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,39,204,79,199,78,163,44"/>
+</map>

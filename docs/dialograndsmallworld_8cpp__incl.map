@@ -1,0 +1,23 @@
+<map id="dialograndsmallworld.cpp" name="dialograndsmallworld.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogRandSmallWorld class for generating small&#45;world networks using the Watts&#45;Strogat..." alt="" coords="363,5,530,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,75,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="360,33,238,54,91,81,89,76,238,49,365,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,179,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="393,34,195,80,193,75,396,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,79,306,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="417,31,302,76,301,71,412,32"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="330,79,430,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="438,30,403,70,400,65,433,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="454,79,575,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="459,29,496,68,490,67,457,34"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="600,79,766,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="487,29,631,74,625,74,486,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="790,79,855,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="523,29,778,78,773,79,522,34"/>
+<area shape="rect" id="Node000009" href="$dialograndsmallworld_8h.html" title="Declares the DialogRandSmallWorld class for generating small&#45;world networks based on the Watts&#45;Stroga..." alt="" coords="879,79,1033,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="531,29,867,77,862,79,531,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="850,153,918,178"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="947,104,908,144,906,139,942,106"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="943,153,1113,178"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="969,102,1007,142,1002,141,967,107"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="dialogsimilaritymatches.h" name="dialogsimilaritymatches.h">
+<area shape="rect" id="Node000001" title="Declares the DialogSimilarityMatches class for computing node similarity based on matching coefficien..." alt="" coords="30,5,198,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,31,65,70,61,66,99,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,283,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,29,169,68,164,69,126,34"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="dialogexportpdf.h" name="dialogexportpdf.h">
+<area shape="rect" id="Node000001" title="Declares the DialogExportPDF class for exporting network visualizations as PDF files in SocNetV." alt="" coords="87,5,207,31"/>
+<area shape="rect" id="Node000002" href="$dialogexportpdf_8cpp.html" title="Implements the DialogExportPDF class for exporting network visualizations as PDF files in SocNetV." alt="" coords="5,79,140,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,41,87,81,83,77,121,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="164,79,280,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,39,212,79,207,79,170,44"/>
+</map>

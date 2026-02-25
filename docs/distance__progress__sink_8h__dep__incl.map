@@ -1,0 +1,19 @@
+<map id="distance_progress_sink.h" name="distance_progress_sink.h">
+<area shape="rect" id="Node000001" title="Declares the IDistanceProgressSink interface for receiving progress updates during distance and centr..." alt="" coords="315,5,484,31"/>
+<area shape="rect" id="Node000002" href="$graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class that implements IDistanceProgressSink to receive progres..." alt="" coords="224,79,391,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,40,332,81,329,77,372,43"/>
+<area shape="rect" id="Node000008" href="$null__distance__progress__sink_8h.html" title="Declares the NullDistanceProgressSink class that implements IDistanceProgressSink with empty methods,..." alt="" coords="414,79,569,120"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="426,39,471,79,466,79,425,44"/>
+<area shape="rect" id="Node000003" href="$distance__engine_8cpp.html" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="5,256,146,282"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,128,185,170,129,217,88,258,85,254,126,213,182,165,254,125"/>
+<area shape="rect" id="Node000004" href="$distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="195,175,321,201"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="291,132,267,177,263,173,287,135"/>
+<area shape="rect" id="Node000005" href="$graph_8cpp.html" title="Implements the Graph class for managing network structures, nodes, and edges in SocNetV." alt="" coords="371,256,449,282"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="329,130,405,256,400,256,326,135"/>
+<area shape="rect" id="Node000007" href="$graph__distance__progress__sink_8cpp.html" title="Implements the GraphDistanceProgressSink class that receives progress updates from the DistanceEngine..." alt="" coords="395,168,561,208"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="360,124,442,167,437,167,359,130"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="218,209,104,258,102,253,214,205"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="295,206,390,256,384,256,294,211"/>
+<area shape="rect" id="Node000006" href="$graph__distance__cache_8cpp.html" title="Implements distance matrix creation, geodesic aggregation, SSSP helpers, and caching logic for the Gr..." alt="" coords="170,256,346,282"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="260,215,260,257,256,254,256,218"/>
+</map>

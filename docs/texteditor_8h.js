@@ -1,4 +1,4 @@
 var texteditor_8h =
 [
-    [ "TextEditor", "classTextEditor.html", "classTextEditor" ]
+    [ "TextEditor", "class_text_editor.html", "class_text_editor" ]
 ];
