@@ -1,0 +1,13 @@
+<map id="dialogsimilaritypearson.cpp" name="dialogsimilaritypearson.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogSimilarityPearson class for computing Pearson correlation similarity between nod..." alt="" coords="166,5,345,31"/>
+<area shape="rect" id="Node000002" href="$dialogsimilaritypearson_8h.html" title="Declares the DialogSimilarityPearson class for calculating Pearson similarity between nodes in SocNet..." alt="" coords="32,79,196,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,33,153,74,151,69,234,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="221,79,290,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="257,29,258,64,253,62,254,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="314,79,413,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="274,29,335,70,330,70,273,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,74,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,104,65,144,61,140,99,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="98,153,280,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="128,103,168,142,163,142,126,108"/>
+</map>

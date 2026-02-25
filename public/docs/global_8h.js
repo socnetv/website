@@ -1,14 +1,11 @@
 var global_8h =
 [
-    [ "ClickedEdge", "structClickedEdge.html", "structClickedEdge" ],
-    [ "MyEdge", "classMyEdge.html", "classMyEdge" ],
-    [ "GraphDistance", "classGraphDistance.html", "classGraphDistance" ],
-    [ "GraphDistancesCompare", "classGraphDistancesCompare.html", "classGraphDistancesCompare" ],
-    [ "PairVF", "classPairVF.html", "classPairVF" ],
-    [ "PairVFCompare", "classPairVFCompare.html", "classPairVFCompare" ],
-    [ "M_PI", "global_8h.html#ae71449b1cc6e6250b91f539153a7a0d3", null ],
-    [ "M_PI_3", "global_8h.html#a091f7cfff0ed8c0bde362d5e0cd51d4a", null ],
-    [ "M_PI_X_2", "global_8h.html#a3c0e0167f2377dbfface950e3a060b9d", null ],
+    [ "ClickedEdge", "struct_clicked_edge.html", "struct_clicked_edge" ],
+    [ "MyEdge", "class_my_edge.html", "class_my_edge" ],
+    [ "GraphDistance", "class_graph_distance.html", "class_graph_distance" ],
+    [ "GraphDistancesCompare", "class_graph_distances_compare.html", "class_graph_distances_compare" ],
+    [ "PairVF", "class_pair_v_f.html", "class_pair_v_f" ],
+    [ "PairVFCompare", "class_pair_v_f_compare.html", "class_pair_v_f_compare" ],
     [ "SOCNETV_BEGIN_NAMESPACE", "global_8h.html#ab89d8fa3e62f2380625adc256320c921", null ],
     [ "SOCNETV_END_NAMESPACE", "global_8h.html#a85f2288cb4aa26182a457b9d580bd60a", null ],
     [ "SOCNETV_NAMESPACE", "global_8h.html#a824d2e224ea38d1b4a3dd02d35fac406", null ],
@@ -71,6 +68,9 @@ var global_8h =
       [ "Dice", "global_8h.html#a37e50858781617a826d3709db82aba70a20f62020542b70600c24162d29c872e8", null ],
       [ "Custom", "global_8h.html#a37e50858781617a826d3709db82aba70a26b367bcdd210f7345b551b921c5551f", null ]
     ] ],
+    [ "M_PI", "global_8h.html#a7dd8de910244c0c514f90d00e2854724", null ],
+    [ "M_PI_3", "global_8h.html#a7fef15cb175acb759e40f1b1de06ad5c", null ],
+    [ "M_PI_X_2", "global_8h.html#a3268ff321549e250990bbb9490fae129", null ],
     [ "MATRIX_ADJACENCY", "global_8h.html#a3c89dd7593bb2e8fb5c53bc043870e4d", null ],
     [ "MATRIX_ADJACENCY_INVERSE", "global_8h.html#ac8471c13fec21de0626abe78a6f11142", null ],
     [ "MATRIX_ADJACENCY_TRANSPOSE", "global_8h.html#ab8e8734446f11bf43607f96a2920c3f3", null ],
@@ -95,5 +95,5 @@ var global_8h =
     [ "USER_MSG_INFO", "global_8h.html#a65ee582010e1e8d768d77b0598bd7e3d", null ],
     [ "USER_MSG_QUESTION", "global_8h.html#a5fbbad68952787c1767c3ebef5d90b85", null ],
     [ "USER_MSG_QUESTION_CUSTOM", "global_8h.html#a9d2f313c9c34a6257739750e6dec0bee", null ],
-    [ "VERSION", "global_8h.html#a0ba34e0ad78dc5f50ee7dd6a51dc30fc", null ]
+    [ "VERSION", "global_8h.html#a0bb1acd26e99b7fc2dfd883596a4a7f5", null ]
 ];

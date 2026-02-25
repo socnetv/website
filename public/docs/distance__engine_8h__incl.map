@@ -1,0 +1,9 @@
+<map id="distance_engine.h" name="distance_engine.h">
+<area shape="rect" id="Node000001" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="27,5,153,31"/>
+<area shape="rect" id="Node000002" href="$graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class that implements IDistanceProgressSink to receive progres..." alt="" coords="14,79,166,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,29,93,64,87,63,89,34"/>
+<area shape="rect" id="Node000003" href="$distance__progress__sink_8h.html" title="Declares the IDistanceProgressSink interface for receiving progress updates during distance and centr..." alt="" coords="5,168,175,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,118,93,153,87,151,89,123"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="57,241,123,267"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="92,192,93,226,87,225,88,196"/>
+</map>

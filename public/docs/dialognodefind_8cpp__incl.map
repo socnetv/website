@@ -1,0 +1,15 @@
+<map id="dialognodefind.cpp" name="dialognodefind.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogNodeFind class for searching and selecting nodes within the network graph in Soc..." alt="" coords="272,5,401,31"/>
+<area shape="rect" id="Node000002" href="$dialognodefind_8h.html" title="Declares the DialogNodeFind class used for locating and highlighting nodes by name or ID in the SocNe..." alt="" coords="5,79,121,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,34,125,77,123,72,291,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="145,79,277,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,30,247,73,244,69,313,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="302,79,371,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="338,29,339,65,334,62,335,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="395,79,494,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="355,29,416,70,410,70,354,34"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="518,79,685,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="382,29,545,74,539,75,381,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="29,153,97,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="65,103,66,138,60,136,61,107"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="dialognodefind.h" name="dialognodefind.h">
+<area shape="rect" id="Node000001" title="Declares the DialogNodeFind class used for locating and highlighting nodes by name or ID in the SocNe..." alt="" coords="86,5,201,31"/>
+<area shape="rect" id="Node000002" href="$dialognodefind_8cpp.html" title="Implements the DialogNodeFind class for searching and selecting nodes within the network graph in Soc..." alt="" coords="5,79,135,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,41,84,81,81,76,118,43"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="158,79,275,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,39,207,79,202,78,165,44"/>
+</map>

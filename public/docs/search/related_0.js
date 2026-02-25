@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../classMatrix.html#a0679b655926c60b09c665c5654374c11',1,'Matrix']]]
+  ['distanceengine_0',['DistanceEngine',['../class_graph.html#a0c4405878caec87f0f6c93337d16af1c',1,'Graph']]]
 ];

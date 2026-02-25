@@ -1,8 +1,7 @@
 var graphvertex_8h =
 [
-    [ "GraphVertex", "classGraphVertex.html", "classGraphVertex" ],
+    [ "GraphVertex", "class_graph_vertex.html", "class_graph_vertex" ],
     [ "H_distance", "graphvertex_8h.html#a5ffaacfc185220ddeb7654b003345526", null ],
-    [ "H_edges", "graphvertex_8h.html#a99c268592c133df5794ef277a31981de", null ],
     [ "H_IntToStr", "graphvertex_8h.html#a287f89e80480c88690b7ba00c70f1a6f", null ],
     [ "H_shortestPaths", "graphvertex_8h.html#a52e9eb78cc92d34c42250b5b8ed242d6", null ],
     [ "H_StrToInt", "graphvertex_8h.html#ae6b82a89aff3c4931fd12cb81f545ca9", null ],

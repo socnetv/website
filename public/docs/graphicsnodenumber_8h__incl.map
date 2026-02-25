@@ -1,5 +1,5 @@
-<map id="/home/dimitris/socnetv/app/src/graphicsnodenumber.h" name="/home/dimitris/socnetv/app/src/graphicsnodenumber.h">
-<area shape="rect" id="Node000001" title="Declares the GraphicsNodeNumber class for rendering node numbers in the network graph visualization." alt="" coords="5,5,208,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="39,93,174,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,46,109,79,104,79,104,46"/>
+<map id="graphicsnodenumber.h" name="graphicsnodenumber.h">
+<area shape="rect" id="Node000001" title="Declares the GraphicsNodeNumber class for rendering node numbers in the network graph visualization." alt="" coords="5,5,157,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="14,79,148,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,29,84,64,78,62,79,33"/>
 </map>

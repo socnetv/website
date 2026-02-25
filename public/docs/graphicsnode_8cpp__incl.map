@@ -1,42 +1,50 @@
-<map id="/home/dimitris/socnetv/app/src/graphicsnode.cpp" name="/home/dimitris/socnetv/app/src/graphicsnode.cpp">
-<area shape="rect" id="Node000001" title="Implements the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="761,5,935,45"/>
-<area shape="rect" id="Node000002" href="$graphicsnode_8h.html" title="Declares the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="187,93,298,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="761,39,560,63,312,96,311,90,559,57,760,34"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="322,93,443,119"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="761,44,457,95,456,90,760,39"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="468,93,663,119"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="781,48,620,92,619,87,780,43"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="687,93,787,119"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="823,48,766,87,763,83,820,43"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="811,93,885,119"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="851,46,851,79,845,79,845,46"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="909,93,982,119"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="873,43,922,82,919,87,870,48"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="1006,93,1077,119"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="895,43,1001,86,999,91,893,48"/>
-<area shape="rect" id="Node000012" href="$graphicswidget_8h.html" title="Declares the GraphicsWidget class for handling the main visualization widget in the network graph int..." alt="" coords="1101,93,1221,119"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="924,43,1103,87,1102,93,922,48"/>
-<area shape="rect" id="Node000015" href="$graphicsedge_8h.html" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="53,93,163,119"/>
-<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="761,36,503,59,178,96,177,90,503,54,760,31"/>
-<area shape="rect" id="Node000017" href="$graphicsnodelabel_8h.html" title="Declares the GraphicsNodeLabel class for rendering labels associated with nodes in the network graph ..." alt="" coords="1422,93,1559,119"/>
-<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="936,34,1408,91,1408,96,935,39"/>
-<area shape="rect" id="Node000019" href="$graphicsnodenumber_8h.html" title="Declares the GraphicsNodeNumber class for rendering node numbers in the network graph visualization." alt="" coords="1245,93,1397,119"/>
-<area shape="poly" id="edge20_Node000001_Node000019" title=" " alt="" coords="936,38,1240,89,1239,94,935,44"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="178,167,289,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,119,239,154,234,153,238,119"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="83,167,154,192"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="224,121,152,162,149,157,221,116"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="313,167,391,192"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="262,116,324,157,321,161,259,121"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="1153,167,1266,192"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="1171,118,1196,154,1192,157,1167,121"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="1066,167,1129,192"/>
-<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="1153,121,1119,158,1115,155,1149,117"/>
-<area shape="poly" id="edge15_Node000015_Node000003" title=" " alt="" coords="129,116,202,157,200,162,127,121"/>
-<area shape="poly" id="edge16_Node000015_Node000004" title=" " alt="" coords="112,119,118,153,112,154,107,119"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="5,167,59,192"/>
-<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="98,121,56,159,53,155,94,117"/>
-<area shape="rect" id="Node000018" title=" " alt="" coords="1338,167,1473,192"/>
-<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="1479,121,1431,160,1428,156,1475,117"/>
-<area shape="poly" id="edge21_Node000019_Node000018" title=" " alt="" coords="1337,117,1383,155,1379,160,1333,121"/>
+<map id="graphicsnode.cpp" name="graphicsnode.cpp">
+<area shape="rect" id="Node000001" title="Implements the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="798,5,921,31"/>
+<area shape="rect" id="Node000002" href="$graphicsnode_8h.html" title="Declares the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="205,79,314,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="795,26,594,49,330,81,329,76,593,43,800,24"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="338,79,458,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="795,30,474,81,473,76,800,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="483,79,676,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="809,32,642,77,641,72,815,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="700,79,800,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="843,31,782,73,780,68,838,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="823,79,896,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="861,29,862,65,857,62,858,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="919,79,992,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="876,29,930,70,925,69,875,34"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1016,79,1085,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="892,29,1006,73,1001,73,892,34"/>
+<area shape="rect" id="Node000012" href="$graphicswidget_8h.html" title="Declares the GraphicsWidget class for handling the main visualization widget in the network graph int..." alt="" coords="1109,79,1228,105"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="912,29,1104,75,1099,75,912,34"/>
+<area shape="rect" id="Node000019" href="$graphicsedge_8h.html" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="72,79,181,105"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="795,24,540,45,371,61,197,81,196,76,370,56,539,40,800,22"/>
+<area shape="rect" id="Node000021" href="$graphicsnodelabel_8h.html" title="Declares the GraphicsNodeLabel class for rendering labels associated with nodes in the network graph ..." alt="" coords="1429,79,1565,105"/>
+<area shape="poly" id="edge22_Node000001_Node000021" title=" " alt="" coords="921,23,1135,44,1416,78,1411,79,1134,50,921,28"/>
+<area shape="rect" id="Node000023" href="$graphicsnodenumber_8h.html" title="Declares the GraphicsNodeNumber class for rendering node numbers in the network graph visualization." alt="" coords="1253,79,1404,105"/>
+<area shape="poly" id="edge24_Node000001_Node000023" title=" " alt="" coords="922,26,1240,76,1235,77,922,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="82,153,192,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,107,172,147,169,142,241,104"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="216,153,285,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="260,103,256,139,251,136,256,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="308,153,387,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="275,103,324,143,318,143,274,108"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1001,153,1113,178"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="1152,104,1090,146,1088,142,1147,106"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1138,153,1200,178"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="1171,103,1171,139,1167,135,1167,107"/>
+<area shape="rect" id="Node000015" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="1224,153,1290,178"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="1185,103,1233,143,1228,142,1183,108"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1134,226,1188,252"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="1243,178,1190,220,1188,215,1238,180"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1213,226,1301,252"/>
+<area shape="poly" id="edge16_Node000015_Node000017" title=" " alt="" coords="1259,177,1259,212,1255,209,1255,180"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1326,226,1391,252"/>
+<area shape="poly" id="edge17_Node000015_Node000018" title=" " alt="" coords="1275,176,1331,218,1326,216,1273,181"/>
+<area shape="poly" id="edge19_Node000019_Node000003" title=" " alt="" coords="129,102,135,138,130,137,127,107"/>
+<area shape="poly" id="edge20_Node000019_Node000004" title=" " alt="" coords="148,103,219,144,214,146,147,108"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="5,153,58,178"/>
+<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="109,108,61,145,58,141,111,103"/>
+<area shape="rect" id="Node000022" title=" " alt="" coords="1371,153,1505,178"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="1490,104,1459,143,1456,138,1485,106"/>
+<area shape="poly" id="edge25_Node000023_Node000022" title=" " alt="" coords="1348,103,1410,145,1405,143,1347,108"/>
 </map>

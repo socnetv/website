@@ -1,0 +1,25 @@
+<map id="graph" name="graph">
+<area shape="rect" id="node2" href="dir_02403f584f959d1d8f54bbda49334d3d.html" title="centrality" alt="" coords="104,27,178,52"/>
+<area shape="rect" id="node3" href="dir_654fc8fd07cef0b092c83c352564496d.html" title="clustering" alt="" coords="203,27,280,52"/>
+<area shape="rect" id="node4" href="dir_6ecacca6c47b560441841ab1b3e44499.html" title="cohesion" alt="" coords="305,27,378,52"/>
+<area shape="rect" id="node5" href="dir_0c675f129a9039a5a45fcfb8044193ff.html" title="core" alt="" coords="402,27,448,52"/>
+<area shape="rect" id="node6" href="dir_f6b234a724fe84155c75ed5286d04f0b.html" title="crawler" alt="" coords="472,27,536,52"/>
+<area shape="rect" id="node7" href="dir_9ec1d9f4996cc7bf065ff3075899de63.html" title="distances" alt="" coords="560,27,637,52"/>
+<area shape="rect" id="node21" href="dir_310e10472a6a15018cd15afbddcaa7ec.html" title="engine" alt="" coords="569,100,628,126"/>
+<area shape="poly" id="edge1" href="dir_000008_000009.html" alt="" coords="601,51,601,86,597,83,597,54"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000008_000009.html" title="1" alt="" coords="604,74,611,89"/>
+<area shape="rect" id="node8" href="dir_1534f50813292db3382bd5c513435823.html" title="filters" alt="" coords="661,27,715,52"/>
+<area shape="rect" id="node9" href="dir_6980a473894fa91b87b5fb0010b2fa55.html" title="generators" alt="" coords="739,27,821,52"/>
+<area shape="rect" id="node10" href="dir_f01cbebf0d720a83330b07e4c5e1e164.html" title="io" alt="" coords="845,27,883,52"/>
+<area shape="rect" id="node11" href="dir_a176f4ca0f969735b323031a56ea0e4e.html" title="layouts" alt="" coords="907,27,970,52"/>
+<area shape="rect" id="node12" href="dir_796c5b0900e712fb4126f3f09d0265f1.html" title="matrices" alt="" coords="995,27,1066,52"/>
+<area shape="rect" id="node13" href="dir_ef8da184086c55c712159e95734417c4.html" title="prominence" alt="" coords="1090,27,1179,52"/>
+<area shape="rect" id="node14" href="dir_9c0fc1f329b9479c49001f50454658e7.html" title="reachability" alt="" coords="1203,27,1290,52"/>
+<area shape="rect" id="node15" href="dir_3fd1583bae0b2160e8988cc5e5a3e326.html" title="relations" alt="" coords="1314,27,1384,52"/>
+<area shape="rect" id="node16" href="dir_bea85cd0fa59cd88ccb06d63912d0891.html" title="reporting" alt="" coords="1408,27,1480,52"/>
+<area shape="rect" id="node17" href="dir_d98766906077640425283c630beece14.html" title="similarity" alt="" coords="1503,27,1577,52"/>
+<area shape="rect" id="node18" href="dir_31e3ba83481c7c8b2ebeb5a5a54abdee.html" title="storage" alt="" coords="1601,27,1666,52"/>
+<area shape="rect" id="node19" href="dir_8411b603ee50ba94bd1f179714105c81.html" title="ui" alt="" coords="1690,27,1729,52"/>
+<area shape="rect" id="node20" href="dir_ac21aea7a9e81c8fee050dcd6503a6ae.html" title="util" alt="" coords="1753,27,1791,52"/>
+<area shape="rect" id="clust1" href="dir_613771f21be7203136085b33d045d8ce.html" alt="" coords="16,16,1801,63"/>
+</map>

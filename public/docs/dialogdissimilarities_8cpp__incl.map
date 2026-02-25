@@ -1,0 +1,13 @@
+<map id="dialogdissimilarities.cpp" name="dialogdissimilarities.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogDissimilarities class for managing dissimilarity calculations in SocNetV." alt="" coords="161,5,320,31"/>
+<area shape="rect" id="Node000002" href="$dialogdissimilarities_8h.html" title="Declares the DialogDissimilarities class for managing dissimilarity calculations in SocNetV." alt="" coords="36,79,182,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,33,146,74,143,69,221,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="206,79,276,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="242,29,243,64,238,62,239,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="299,79,398,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="260,29,320,70,315,70,259,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,74,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,104,64,143,60,140,95,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="98,153,261,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="122,102,160,141,154,142,119,107"/>
+</map>

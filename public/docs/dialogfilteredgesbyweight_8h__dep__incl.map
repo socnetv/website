@@ -1,0 +1,7 @@
+<map id="dialogfilteredgesbyweight.h" name="dialogfilteredgesbyweight.h">
+<area shape="rect" id="Node000001" title="Defines the DialogFilterEdgesByWeight class for filtering edges based on weight in the social network..." alt="" coords="102,5,280,31"/>
+<area shape="rect" id="Node000002" href="$dialogfilteredgesbyweight_8cpp.html" title="Implements the DialogFilterEdgesByWeight class for filtering edges based on weight in the social netw..." alt="" coords="5,79,198,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,40,118,81,115,76,162,41"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="222,79,338,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,38,268,79,263,78,217,43"/>
+</map>

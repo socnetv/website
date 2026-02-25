@@ -1,0 +1,7 @@
+<map id="dialogsimilaritypearson.h" name="dialogsimilaritypearson.h">
+<area shape="rect" id="Node000001" title="Declares the DialogSimilarityPearson class for calculating Pearson similarity between nodes in SocNet..." alt="" coords="98,5,262,31"/>
+<area shape="rect" id="Node000002" href="$dialogsimilaritypearson_8cpp.html" title="Implements the DialogSimilarityPearson class for computing Pearson correlation similarity between nod..." alt="" coords="5,79,184,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,40,110,81,107,76,151,42"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="208,79,325,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,39,255,79,249,78,205,44"/>
+</map>

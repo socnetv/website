@@ -1,0 +1,7 @@
+<map id="dialograndsmallworld.h" name="dialograndsmallworld.h">
+<area shape="rect" id="Node000001" title="Declares the DialogRandSmallWorld class for generating small&#45;world networks based on the Watts&#45;Stroga..." alt="" coords="95,5,248,31"/>
+<area shape="rect" id="Node000002" href="$dialograndsmallworld_8cpp.html" title="Implements the DialogRandSmallWorld class for generating small&#45;world networks using the Watts&#45;Strogat..." alt="" coords="5,79,173,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,41,104,81,101,76,143,42"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="196,79,312,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,39,243,79,238,78,196,44"/>
+</map>

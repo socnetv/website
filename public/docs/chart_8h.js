@@ -1,4 +1,4 @@
 var chart_8h =
 [
-    [ "Chart", "classChart.html", "classChart" ]
+    [ "Chart", "class_chart.html", "class_chart" ]
 ];

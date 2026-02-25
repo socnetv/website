@@ -1,0 +1,7 @@
+<map id="headless_graph_loader.h" name="headless_graph_loader.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,170,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="8,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,30,59,68,55,64,78,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,170,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="96,29,121,66,115,66,94,34"/>
+</map>

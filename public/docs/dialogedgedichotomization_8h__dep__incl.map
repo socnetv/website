@@ -1,0 +1,7 @@
+<map id="dialogedgedichotomization.h" name="dialogedgedichotomization.h">
+<area shape="rect" id="Node000001" title="Declares the DialogEdgeDichotomization class for managing edge dichotomization in SocNetV." alt="" coords="103,5,288,31"/>
+<area shape="rect" id="Node000002" href="$dialogedgedichotomization_8cpp.html" title="Implements the DialogEdgeDichotomization class for managing edge dichotomization in SocNetV." alt="" coords="5,79,205,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,40,122,81,119,76,166,41"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="228,79,344,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,38,274,79,269,78,222,43"/>
+</map>

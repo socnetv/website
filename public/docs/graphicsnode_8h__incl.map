@@ -1,9 +1,9 @@
-<map id="/home/dimitris/socnetv/app/src/graphicsnode.h" name="/home/dimitris/socnetv/app/src/graphicsnode.h">
-<area shape="rect" id="Node000001" title="Declares the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="95,5,256,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,116,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,48,90,88,87,83,146,43"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="140,93,211,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,46,178,79,173,79,173,46"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="235,93,313,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,43,250,82,247,87,198,48"/>
+<map id="graphicsnode.h" name="graphicsnode.h">
+<area shape="rect" id="Node000001" title="Declares the GraphicsNode class for rendering nodes in the network graph visualization." alt="" coords="119,5,228,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,115,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,31,94,73,91,68,151,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="139,79,208,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,29,176,64,171,62,172,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="232,79,310,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,29,245,70,240,70,189,34"/>
 </map>

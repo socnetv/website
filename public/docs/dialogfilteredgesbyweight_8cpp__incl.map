@@ -1,0 +1,13 @@
+<map id="dialogfilteredgesbyweight.cpp" name="dialogfilteredgesbyweight.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogFilterEdgesByWeight class for filtering edges based on weight in the social netw..." alt="" coords="183,5,376,31"/>
+<area shape="rect" id="Node000002" href="$dialogfilteredgesbyweight_8h.html" title="Defines the DialogFilterEdgesByWeight class for filtering edges based on weight in the social network..." alt="" coords="28,79,206,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,33,160,75,157,70,254,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="230,79,329,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="281,29,282,64,277,62,278,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="353,79,422,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="298,29,359,70,354,70,297,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,74,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,104,65,144,62,140,101,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="98,153,293,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="131,103,174,142,168,142,129,108"/>
+</map>

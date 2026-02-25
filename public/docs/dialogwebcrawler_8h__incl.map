@@ -1,0 +1,7 @@
+<map id="dialogwebcrawler.h" name="dialogwebcrawler.h">
+<area shape="rect" id="Node000001" title="Declares the DialogWebCrawler class for configuring and initiating web&#45;based network crawling in SocN..." alt="" coords="39,5,170,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,30,63,69,59,66,92,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,79,246,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,29,152,67,147,68,115,34"/>
+</map>

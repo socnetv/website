@@ -1,5 +1,5 @@
-<map id="/home/dimitris/socnetv/app/src/graphicsedgelabel.h" name="/home/dimitris/socnetv/app/src/graphicsedgelabel.h">
-<area shape="rect" id="Node000001" title="Declares the GraphicsEdgeLabel class for managing and rendering edge labels in the network graph." alt="" coords="5,5,193,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="32,93,167,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,46,102,79,97,79,97,46"/>
+<map id="graphicsedgelabel.h" name="graphicsedgelabel.h">
+<area shape="rect" id="Node000001" title="Declares the GraphicsEdgeLabel class for managing and rendering edge labels in the network graph." alt="" coords="5,5,142,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="6,79,141,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,29,76,64,71,62,72,33"/>
 </map>

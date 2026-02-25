@@ -1,0 +1,7 @@
+<map id="dialogclusteringhierarchical.h" name="dialogclusteringhierarchical.h">
+<area shape="rect" id="Node000001" title="Defines the DialogClusteringHierarchical class for hierarchical clustering settings in the social net..." alt="" coords="104,5,293,31"/>
+<area shape="rect" id="Node000002" href="$dialogclusteringhierarchical_8cpp.html" title="Implements hierarchical clustering dialog for social network visualization and analysis." alt="" coords="5,79,208,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,40,123,81,120,76,168,41"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="232,79,349,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,38,278,79,272,78,225,43"/>
+</map>

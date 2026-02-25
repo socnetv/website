@@ -1,0 +1,45 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,499,74,524"/>
+<area shape="rect" id="Node000001" href="$class_dialog_clustering_hierarchical.html" title=" " alt="" coords="127,5,314,31"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="39,483,45,385,58,252,68,186,82,125,99,75,120,40,136,29,134,34,124,44,103,77,87,126,73,187,63,253,50,385,44,483"/>
+<area shape="rect" id="Node000002" href="$class_dialog_data_set_select.html" title=" " alt="" coords="149,55,292,80"/>
+<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="40,483,47,394,61,276,85,164,101,120,120,90,150,72,147,77,124,93,105,122,90,165,66,277,52,394,45,483"/>
+<area shape="rect" id="Node000003" href="$class_dialog_dissimilarities.html" title=" " alt="" coords="150,104,290,130"/>
+<area shape="poly" id="edge6_Node000000_Node000003" title=" " alt="" coords="41,483,49,403,64,301,88,203,102,165,120,139,133,128,152,121,148,126,136,133,124,143,107,168,93,205,70,302,54,404,46,483"/>
+<area shape="rect" id="Node000004" href="$class_dialog_edge_dichotomization.html" title=" " alt="" coords="129,153,312,179"/>
+<area shape="poly" id="edge7_Node000000_Node000004" title=" " alt="" coords="42,483,52,413,68,325,91,243,104,210,120,188,137,177,134,182,124,192,109,213,96,244,73,326,57,414,47,483"/>
+<area shape="rect" id="Node000005" href="$class_dialog_export_image.html" title=" " alt="" coords="154,203,286,228"/>
+<area shape="poly" id="edge8_Node000000_Node000005" title=" " alt="" coords="38,483,41,431,53,365,63,330,78,297,96,265,120,238,135,226,156,220,152,224,138,231,123,241,100,268,82,299,68,332,58,366,47,432,43,484"/>
+<area shape="rect" id="Node000006" href="$class_dialog_export_p_d_f.html" title=" " alt="" coords="159,252,282,278"/>
+<area shape="poly" id="edge9_Node000000_Node000006" title=" " alt="" coords="40,483,47,439,60,386,84,333,100,308,120,287,138,275,160,268,157,272,140,280,123,291,104,312,88,335,65,388,52,440,45,483"/>
+<area shape="rect" id="Node000007" href="$class_dialog_filter_edges_by_weight.html" title=" " alt="" coords="130,301,310,327"/>
+<area shape="poly" id="edge10_Node000000_Node000007" title=" " alt="" coords="43,483,53,449,68,409,90,370,120,336,140,325,137,330,123,340,94,373,72,411,58,450,49,484"/>
+<area shape="rect" id="Node000008" href="$class_dialog_filter_nodes_by_centrality.html" title=" " alt="" coords="122,351,319,376"/>
+<area shape="poly" id="edge11_Node000000_Node000008" title=" " alt="" coords="49,483,76,433,96,407,120,385,143,375,140,379,123,390,100,411,81,436,54,485"/>
+<area shape="rect" id="Node000009" href="$class_dialog_node_edit.html" title=" " alt="" coords="164,400,276,426"/>
+<area shape="poly" id="edge12_Node000000_Node000009" title=" " alt="" coords="59,486,86,459,120,434,165,419,162,423,123,439,90,463,63,488"/>
+<area shape="rect" id="Node000010" href="$class_dialog_node_find.html" title=" " alt="" coords="163,449,278,475"/>
+<area shape="poly" id="edge13_Node000000_Node000010" title=" " alt="" coords="87,494,121,484,165,473,161,477,122,489,90,498"/>
+<area shape="rect" id="Node000011" href="$class_dialog_preview_file.html" title=" " alt="" coords="157,499,284,524"/>
+<area shape="poly" id="edge14_Node000000_Node000011" title=" " alt="" coords="88,509,158,510,155,513,90,514"/>
+<area shape="rect" id="Node000012" href="$class_dialog_rand_erdos_renyi.html" title=" " alt="" coords="142,548,299,574"/>
+<area shape="poly" id="edge15_Node000000_Node000012" title=" " alt="" coords="87,525,122,534,164,546,159,549,121,539,90,529"/>
+<area shape="rect" id="Node000013" href="$class_dialog_rand_lattice.html" title=" " alt="" coords="156,597,284,623"/>
+<area shape="poly" id="edge16_Node000000_Node000013" title=" " alt="" coords="60,533,90,560,123,584,158,598,154,601,120,589,86,564,62,538"/>
+<area shape="rect" id="Node000014" href="$class_dialog_rand_regular.html" title=" " alt="" coords="153,647,288,672"/>
+<area shape="poly" id="edge17_Node000000_Node000014" title=" " alt="" coords="51,536,81,587,100,612,123,633,155,649,150,651,120,638,96,616,76,590,52,541"/>
+<area shape="rect" id="Node000015" href="$class_dialog_rand_scale_free.html" title=" " alt="" coords="146,696,294,722"/>
+<area shape="poly" id="edge18_Node000000_Node000015" title=" " alt="" coords="46,537,58,573,72,612,94,650,123,683,148,698,143,700,120,687,90,653,68,614,53,574,46,542"/>
+<area shape="rect" id="Node000016" href="$class_dialog_rand_small_world.html" title=" " alt="" coords="143,745,298,771"/>
+<area shape="poly" id="edge19_Node000000_Node000016" title=" " alt="" coords="43,537,52,583,65,635,88,688,104,711,123,732,145,746,140,748,120,736,100,715,84,690,60,637,47,584,43,543"/>
+<area shape="rect" id="Node000017" href="$class_dialog_settings.html" title=" " alt="" coords="167,795,274,820"/>
+<area shape="poly" id="edge20_Node000000_Node000017" title=" " alt="" coords="41,537,47,591,58,657,68,691,82,724,100,755,123,781,144,795,169,804,164,806,141,800,120,786,96,758,78,726,63,693,53,658,41,592,41,542"/>
+<area shape="rect" id="Node000018" href="$class_dialog_similarity_matches.html" title=" " alt="" coords="139,844,302,870"/>
+<area shape="poly" id="edge21_Node000000_Node000018" title=" " alt="" coords="44,537,57,609,73,697,96,779,109,810,124,831,141,844,136,846,120,835,104,813,91,780,68,698,52,610,44,543"/>
+<area shape="rect" id="Node000019" href="$class_dialog_similarity_pearson.html" title=" " alt="" coords="140,893,300,919"/>
+<area shape="poly" id="edge22_Node000000_Node000019" title=" " alt="" coords="43,537,54,619,70,721,93,818,107,855,124,880,142,895,137,896,120,884,102,858,88,820,64,722,49,620,43,542"/>
+<area shape="rect" id="Node000020" href="$class_dialog_system_info.html" title=" " alt="" coords="158,943,283,968"/>
+<area shape="poly" id="edge23_Node000000_Node000020" title=" " alt="" coords="43,537,52,629,66,746,90,858,105,901,124,930,139,941,160,951,155,952,137,946,120,933,101,903,85,859,61,747,47,629,42,543"/>
+<area shape="rect" id="Node000021" href="$class_dialog_web_crawler.html" title=" " alt="" coords="156,992,285,1018"/>
+<area shape="poly" id="edge24_Node000000_Node000021" title=" " alt="" coords="42,537,50,638,63,770,73,836,87,897,103,946,124,979,138,990,158,1000,153,1000,136,995,120,983,99,948,82,898,68,837,58,771,45,638,42,542"/>
+</map>
