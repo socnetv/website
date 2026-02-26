@@ -16,7 +16,7 @@
 
 # Project Name and Brief Description
 PROJECT_NAME           = "Code Documentation"
-PROJECT_NUMBER         = "3.3"
+PROJECT_NUMBER         = "3.3.1"
 PROJECT_BRIEF          = "Social Network Visualizer"
 PROJECT_LOGO           = ./annotation-src/socnetv-logo-manual.png  # Path to project logo
 
