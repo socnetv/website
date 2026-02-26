@@ -172,6 +172,20 @@ On some recent Ubuntu releases this dependency is provided by the `libfuse2t64` 
 sudo apt install libfuse2t64
 ```
 
+#### Ubuntu (PPA)
+
+In Ubuntu, you can add our own PPA and install SocNetV from there, using the commands:
+
+```bash
+sudo apt remove socnetv
+sudo add-apt-repository ppa:dimitris-kalamaras/ppa
+sudo apt update
+sudo apt install socnetv
+```
+
+* PPA builds currently target Ubuntu 22.04 LTS (Jammy) and 24.04 LTS (Noble).
+
+
 :::note
 Please note that SocNetV is also available in the [repositories of most Linux distributions](https://repology.org/project/socnetv/versions). 
 However, that is not always the most recent version. We urge you to use the AppImage of the latest version available from our website instead.
