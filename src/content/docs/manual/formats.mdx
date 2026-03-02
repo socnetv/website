@@ -266,15 +266,17 @@ GraphViz is a graph description language that uses the "DOT format" to define an
 
 ### Key Features
 
-1. **Directed and Undirected Graphs**: GraphViz supports both graph types using intuitive syntax (`digraph` for directed graphs and `graph` for undirected graphs).
-2. **Attribute Definitions**: Customize nodes and edges with attributes like colors, shapes, and weights to enrich graph visualizations.
-3. **Hierarchical Structures**: Allows defining subgraphs and clusters (partially supported in SocNetV).
+1. **Directed and Undirected Graphs**: GraphViz supports both graph types using intuitive syntax (`digraph` for directed graphs and `graph` for undirected graphs). SocNetV determines the graph type directly from this declaration.
+2. **Attribute Definitions**: Customize nodes and edges with attributes like colors, shapes, labels, and weights to enrich graph visualizations.
+3. **Hierarchical Structures**: GraphViz allows defining subgraphs and clusters. SocNetV parses the graph structure but does not preserve cluster or subgraph hierarchy as structural entities.
+
+---
 
 ### Examples
 
 #### Example 1 : A simple .dot file
 
-```
+```id="p8sj2a"
 digraph mydot {
   node [color=red, shape=box];
   a -> b -> c -> d;
@@ -285,61 +287,80 @@ digraph mydot {
 
 ##### Explanation
 
-- **Graph Type**: The keyword `digraph` indicates a directed graph, where edges have direction.
-- **Node Attributes**: Nodes in the graph can have attributes, such as `color` (red) and `shape` (box or circle).
-- **Edges**: Directed edges are defined using `->`, such as `a -> b`. Attributes like `weight` and `color` can also be applied to edges.
-- **Clusters and Groups**: Nodes are grouped by attribute definitions, making visualization more intuitive.
+* **Graph Type**: The keyword `digraph` indicates a directed graph, where edges have direction. If the file begins with `graph`, SocNetV treats it as undirected.
+* **Node Attributes**: Nodes can have attributes such as `color` and `shape`. SocNetV applies supported visual attributes during import.
+* **Edges**: Directed edges are defined using `->`, while undirected edges use `--`. Attributes like `weight`, `color`, and `label` can also be applied to edges.
+* **Attribute Blocks**: Default node or edge attributes declared at block level are applied to subsequent elements where supported.
+
+---
 
 ##### Visualization:
 
 This Mermaid diagram replicates the structure of the example GraphViz file, illustrating the directed relationships between nodes.
 
-<Mermaid code={`
-graph TD
+<Mermaid code={`graph TD
   a --> b --> c --> d
-  d --> e --> a --> f --> j --> k --> l --> o
-`} />
-
+  d --> e --> a --> f --> j --> k --> l --> o`} />
 
 In SocNetV, the same network can be visualized in many ways. For instance, in the screenshot below, we have applied a prominence-based layout (Eccentricity):
 
 ![SocNetV visualizing a network from an example GraphViz file](/data/uploads/screenshots/32/socnetv-32-example-dot.png)
 
+---
 
 ### How to Use GraphViz Files in SocNetV
 
 1. **Loading Files**: To import a GraphViz file, navigate to **File > Import** and select the `.dot` file. SocNetV will parse the graph and display it for further analysis.
-2. **Visualization Options**: SocNetV will render the graph with its attributes (e.g., node colors and shapes) if supported. Unrecognized attributes will be ignored.
-3. **Limitations**: SocNetV does not support advanced GraphViz features like subgraphs, clusters, or complex attribute combinations.
-
-#### Supported DOT Elements in SocNetV
-
-SocNetV supports the following basic elements of GraphViz files:
-
-- **Graph Type**: `digraph` (directed) and `graph` (undirected).
-- **Node Attributes**: `color`, `shape`, `label`, and basic styles like `fillcolor` and `style`.
-- **Edge Attributes**: `weight`, `color`, and `label`.
-- **Basic Layout**: SocNetV handles most node-edge relations and visualizes the graphs as directed or undirected, but does not support subgraphs, clusters, or certain complex attributes.
-
-### Pros and Cons of GraphViz files
-
-#### Advantages:
-- **Human-Readable Syntax**: Easy to create and edit with any text editor.
-- **Customizable**: Allows detailed customization of nodes and edges using attributes.
-- **Widely Supported**: Used in many visualization tools, including SocNetV.
-
-#### Disadvantages:
-- **Partial Support**: SocNetV does not support all GraphViz features, such as subgraphs and clusters.
-- **Formatting Limitations**: Requires properly formatted input; unstructured files may not be imported successfully.
-- **Visualization Complexity**: Large graphs with extensive attributes can become difficult to manage and interpret.
-
-#### Reference:
-- **GraphViz Official Documentation**: [GraphViz DOT Language](https://graphviz.org/doc/info/lang.html)
-
+2. **Visualization Options**: SocNetV renders supported attributes (e.g., node colors, shapes, labels, edge weights). Unsupported or unrecognized attributes are safely ignored.
+3. **Limitations**: SocNetV does not support advanced GraphViz features such as full cluster layout control, subgraph hierarchy preservation, or complex attribute inheritance rules.
 
 ---
 
+#### Supported DOT Elements in SocNetV
 
+SocNetV supports the following core elements of GraphViz files:
+
+* **Graph Type**: `digraph` (directed) and `graph` (undirected).
+* **Edge Syntax**: `->` for directed edges and `--` for undirected edges.
+* **Node Attributes**: `color`, `shape`, `label`, and basic styles such as `fillcolor` and `style`.
+* **Edge Attributes**: `weight`, `color`, and `label`.
+* **Basic Structure**: Node and edge declarations are parsed and converted into SocNetV’s internal graph model.
+
+Subgraphs and clusters may be parsed for structural correctness, but their hierarchical semantics are not preserved.
+
+---
+
+### Pros and Cons of GraphViz Files
+
+#### Advantages:
+
+* **Human-Readable Syntax**: Easy to create and edit with any text editor.
+* **Customizable**: Allows detailed customization of nodes and edges using attributes.
+* **Widely Supported**: Used in many visualization tools, including SocNetV.
+
+#### Disadvantages:
+
+* **Partial Feature Support**: SocNetV does not implement the full DOT specification, especially advanced layout or cluster semantics.
+* **Formatting Sensitivity**: Requires properly formatted DOT syntax; malformed files may fail to import.
+* **Visualization Complexity**: Large graphs with extensive attributes can become difficult to manage and interpret.
+
+---
+
+#### Reference:
+
+* **GraphViz Official Documentation**: [GraphViz DOT Language](https://graphviz.org/doc/info/lang.html)
+
+---
+
+### ✅ Summary
+
+* No structural changes were needed.
+* Clarified directed/undirected detection.
+* Clarified cluster/subgraph handling.
+* Clarified attribute tolerance.
+* Kept tone and structure consistent with your Pajek/GML sections.
+
+---
 
 ## Adjacency Matrix Files
 
@@ -491,10 +512,16 @@ SocNetV supports importing Pajek project files, which usually have a `.net` or `
 ### Key Features
 
 1. **Network Definition**: Pajek files start with the `*Network` tag to declare the network and provide its name.
-2. **Vertices and Edges/Arcs**: The `*Vertices` section lists nodes, and the `*Edges` or `*Arcs` section defines relationships between nodes. 
+2. **Vertices and Edges/Arcs**: The `*Vertices` section lists nodes, and the `*Edges` or `*Arcs` section defines relationships between nodes.
 3. **ArcsList**: The `*ArcsList` tag is used to represent arcs from one node to others in a more compact form. SocNetV supports this tag for defining relationships in a simplified way.
 4. **Matrix Representation**: SocNetV can also handle Pajek files that use the `*Matrix` tag to represent relationships in an adjacency matrix format.
 5. **Multiple Matrix Declarations**: SocNetV supports files with multiple `*Matrix` tags, which will each be parsed as a separate relation within the same network.
+6. **Canonical Matrix Export**: When exporting multirelational networks, SocNetV writes matrix headers in canonical Pajek form:
+
+   * `*Matrix :k`
+   * `*Matrix :k "Label"`
+
+---
 
 ### Examples
 
@@ -521,31 +548,33 @@ SocNetV supports importing Pajek project files, which usually have a `.net` or `
 
 #### Explanation:
 
-- **Network Declaration**: The `*Network` tag declares the name of the network, in this case, "Simple Network."
-- **Vertices**: The `*Vertices` section defines 6 nodes, each with an ID, a label (node name), color (`LightGreen`, `LightYellow`), and additional properties such as shape (`box`, `ellipse`, etc.) and position coordinates (`0.5 0.5` for the X and Y coordinates).
-- **Arcs**: The `*Arcs` section defines directed edges between nodes. Each line specifies a source node, target node, weight (e.g., `1`, `-1`), and an optional color.
-- **Edges**: The `*Edges` section defines undirected edges, similar to `*Arcs`, with the same format.
+* **Network Declaration**: The `*Network` tag declares the name of the network, in this case, "Simple Network."
+* **Vertices**: The `*Vertices` section defines 6 nodes, each with an ID, a label (node name), color (`LightGreen`, `LightYellow`), and additional properties such as shape (`box`, `ellipse`, etc.) and position coordinates (`0.5 0.5` for the X and Y coordinates).
+* **Arcs**: The `*Arcs` section defines directed edges between nodes. Each line specifies a source node, target node, weight (e.g., `1`, `-1`), and an optional color.
+* **Edges**: The `*Edges` section defines undirected edges, similar to `*Arcs`, with the same format.
+
+---
 
 #### Visualization:
 
 This Mermaid diagram visualizes the graph described in the Pajek file, showing the directed and undirected relationships between nodes.
 
-
-<Mermaid code={`
-graph TD
+<Mermaid code={`graph TD
   pe0 -->|1| pe1
   pe0 -->|-1| pe2
   pe1 -->|1| pe4
   pe2 -->|1| pe5
   pe2 -->|1| pe4
   pe4 -->|1| pe2
-  pe5 -->|1| pe3
-`} />
+  pe5 -->|1| pe3`} />
 
+---
 
 ### Handling Multiple Matrices in Pajek Files
 
-SocNetV also supports Pajek files with multiple `*Matrix` declarations. Each matrix defines a new relation between the nodes. Below is an example of a Pajek file with multiple matrices:
+SocNetV supports Pajek files with multiple `*Matrix` declarations. Each matrix defines a new relation between the nodes.
+
+Below is an example of a Pajek file with multiple matrices:
 
 ```
 *Network "4 possible graphs of N=5"
@@ -583,40 +612,87 @@ SocNetV also supports Pajek files with multiple `*Matrix` declarations. Each mat
 
 #### Explanation:
 
-- **Multiple Matrices**: Each `*Matrix` section represents an adjacency matrix that defines a relation between nodes. In this example, there are 4 matrices, each representing a different relation between the 5 nodes.
-- **Matrix Format**: Each matrix is a square matrix (NxN), where `N` is the number of nodes in the network. The values inside the matrix represent the connections between the nodes, where `0` indicates no connection and any non-zero number (such as `1` or `-1`) represents a connection between nodes.
-- **Multiple Relations**: Each matrix is treated as a separate relation within the same network. For example, the first matrix represents one relation, and the second matrix represents a different relation.
+* **Multiple Matrices**: Each `*Matrix` section represents an adjacency matrix that defines a relation between nodes.
+* **Matrix Format**: Each matrix is a square matrix (NxN), where `N` is the number of nodes in the network. The values inside the matrix represent the connections between the nodes, where `0` indicates no connection and any non-zero number (such as `1` or `-1`) represents a connection.
+* **Multiple Relations**: Each matrix is treated as a separate relation within the same network.
+
+---
+
+### Matrix Header Compatibility
+
+SocNetV is tolerant when importing matrix headers and accepts common real-world variants, including:
+
+```
+*Matrix :1
+*Matrix :1 "Label"
+*Matrix 1:
+*Matrix 1: "Label"
+```
+
+During import:
+
+* The matrix index (`1`, `2`, etc.) is used only to determine the relation order.
+* If a label is present, it becomes the relation name.
+* The index is **not** treated as part of the relation name.
+* If no label is provided, SocNetV temporarily uses the matrix index as a relation name in the user interface.
+
+During export:
+
+* SocNetV always writes matrix headers in canonical form:
+
+  * `*Matrix :k`
+  * `*Matrix :k "Label"`
+* If a relation has no explicit label (only a temporary numeric name), it is exported as:
+
+  ```
+  *Matrix :k
+  ```
+
+  (without writing `"k"` as a quoted label).
+
+This ensures deterministic round-trip behavior for multirelational Pajek files.
+
+---
 
 ### How to Use Pajek Files in SocNetV
 
 1. **Loading Files**: To import a Pajek file, navigate to **File > Import** and select the `.net` or `.paj` file. SocNetV will parse the file and display the network structure.
 2. **Limitations**: SocNetV does not support advanced Pajek features like vectors, permutations, or event-based files.
 
-#### Supported Pajek Elements in SocNetV
+---
+
+### Supported Pajek Elements in SocNetV
 
 SocNetV supports the following elements of Pajek files:
 
-- **Network Declaration**: `*Network` header to define the start of the network file.
-- **Node Definitions**: `*Vertices` followed by a list of nodes with their labels, colors, shapes, and optional positions.
-- **Edge Definitions**: `*Arcs` followed by pairs of node IDs indicating directed connections, with optional weights and colors.
-- **Edge Definitions**: `*Edges` for undirected relationships between nodes.
-- **ArcsList**: SocNetV supports the `*ArcsList` tag to represent multiple outgoing edges from a node in a more compact list format.
-- **Matrix Representation**: The `*Matrix` tag can represent multiple adjacency matrices, with each matrix corresponding to a new relation in the network.
+* **Network Declaration**: `*Network` header to define the start of the network file.
+* **Node Definitions**: `*Vertices` followed by a list of nodes with their labels, colors, shapes, and optional positions.
+* **Edge Definitions**: `*Arcs` followed by pairs of node IDs indicating directed connections, with optional weights and colors.
+* **Edge Definitions**: `*Edges` for undirected relationships between nodes.
+* **ArcsList**: The `*ArcsList` tag for representing multiple outgoing edges from a node in compact form.
+* **Matrix Representation**: The `*Matrix` tag for adjacency matrices, including multiple matrices corresponding to multiple relations.
+
+---
 
 ### Pros and Cons of Pajek Files (in SocNetV)
 
 #### Advantages:
-- **Simple Structure**: Pajek files have a straightforward text-based format, making them easy to create and understand.
-- **Efficient for Large Networks**: Pajek is specifically designed for handling large networks, and the format can efficiently represent large graphs.
-- **Widely Used**: Pajek is a widely recognized tool in network analysis, making this file format compatible with many graph analysis tools.
+
+* **Simple Structure**: Pajek files have a straightforward text-based format.
+* **Efficient for Large Networks**: Designed for handling large graphs efficiently.
+* **Widely Used**: Compatible with many network analysis tools.
 
 #### Disadvantages:
-- **Limited Attribute Support**: While Pajek files support some basic attributes, SocNetV does not handle advanced attributes like node colors, shapes, or other visual properties.
-- **Partial Feature Support**: SocNetV only supports a subset of the Pajek format, excluding more complex features like vectors, permutations, or event-based files.
-- **No Schema Validation**: Pajek files are not validated automatically, so incorrect or unformatted files may cause import issues.
+
+* **Limited Attribute Support**: While Pajek files support some attributes, SocNetV handles a limited subset of visual and advanced attributes.
+* **Partial Feature Support**: More complex Pajek constructs (e.g., vectors, permutations, event-based files) are not supported.
+* **No Schema Validation**: Pajek files are not automatically schema-validated, so malformed files may cause import issues.
+
+---
 
 #### References
-- **Pajek File Format Documentation**: [Pajek Documentation](http://mrvar.fdv.uni-lj.si/pajek/)
+
+* **Pajek File Format Documentation**: [Pajek Documentation](http://mrvar.fdv.uni-lj.si/pajek/)
 
 ---
 
