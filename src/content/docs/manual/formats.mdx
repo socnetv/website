@@ -505,6 +505,195 @@ The Adjacency Matrix Format is widely used in research and applications where th
 ---
 
 
+
+## Two-Mode Sociomatrix Files
+
+A two-mode sociomatrix represents **bipartite networks** — networks where two fundamentally different types of actors exist, and connections only occur *between* types, never *within* them. Classic examples include people and the organisations they belong to, authors and the papers they co-authored, or directors and the company boards they sit on.
+
+SocNetV supports two-mode sociomatrix files with extensions `.2sm` and `.aff`.
+
+### Understanding Two-Mode Data
+
+In a regular (one-mode) network, you have one type of actor. The adjacency matrix is square: rows and columns are the same set of nodes, and cell `A[i][j] = 1` means node `i` is directly connected to node `j`.
+
+A two-mode network has **two distinct sets of actors** — traditionally called **Mode 1** (e.g. persons, CEOs, authors) and **Mode 2** (e.g. events, clubs, papers). The raw data is a **rectangular NR × NC matrix** — NR rows for Mode 1 actors, NC columns for Mode 2 actors. A cell value of `1` (or any non-zero weight) means person `i` is affiliated with event `j`. Crucially, there are **no direct person-to-person or event-to-event connections** in the raw data — only person-to-event affiliations.
+
+This rectangular matrix is richer than it looks. From it, three distinct graphs can be derived:
+
+| Import mode | What you get | Nodes | Edges |
+|---|---|---|---|
+| **Bipartite graph** *(default)* | The raw affiliation graph | NR + NC | One per non-zero cell |
+| **Person network** | Who shares a group with whom | NR | Person i — person k if they share ≥1 event |
+| **Event network** | Which groups share members | NC | Event j — event l if they share ≥1 person |
+
+SocNetV will ask you which of these three graphs to construct when you load a `.2sm` file.
+
+### Key Features
+
+- The matrix is **rectangular** (NR × NC), not square. Rows = Mode 1 actors, columns = Mode 2 actors.
+- Cell values can be binary (`0` / `1`) or weighted (any non-zero numeric value representing affiliation strength).
+- Rows are separated by newlines. Values within a row are separated by spaces or commas.
+- Comment lines beginning with `#` are ignored.
+- In **bipartite mode**, Mode 1 nodes are labelled `p1`…`pNR` and Mode 2 nodes are labelled `e1`…`eNC`. Mode 2 nodes are visually distinct (blue diamond shape) so the two sets are immediately recognisable on the canvas.
+
+### Examples
+
+#### Example 1: A Simple Bipartite Network
+
+Four persons (rows) and three events (columns):
+
+```
+1 1 0
+1 0 1
+0 1 1
+0 1 0
+```
+
+##### Explanation:
+- **Person 1** attended events 1 and 2.
+- **Person 2** attended events 1 and 3.
+- **Person 3** attended events 2 and 3.
+- **Person 4** attended event 2 only.
+
+**Bipartite graph** (default import): SocNetV creates 4 + 3 = **7 nodes** and **7 edges** (one per `1` in the matrix). Nodes `p1`–`p4` represent persons; nodes `e1`–`e3` represent events.
+
+<Mermaid code={`
+graph LR
+    p1 --- e1
+    p1 --- e2
+    p2 --- e1
+    p2 --- e3
+    p3 --- e2
+    p3 --- e3
+    p4 --- e2
+`} />
+
+**Person network** (import mode 2): SocNetV creates **4 nodes** and connects persons who share at least one event:
+- p1–p2 share event 1
+- p1–p3 share event 2
+- p1–p4 share event 2
+- p2–p3 share event 3
+- p3–p4 share event 2
+
+**Event network** (import mode 3): SocNetV creates **3 nodes** and connects events that share at least one person:
+- e1–e2 share person 1
+- e1–e3 share person 2
+- e2–e3 share person 3
+
+---
+
+#### Example 2: A Weighted Two-Mode Sociomatrix
+
+Affiliation strength can be expressed with non-zero weights:
+
+```
+3 0 1
+0 2 2
+1 1 0
+```
+
+##### Explanation:
+- **Person 1** has a strong affiliation (weight 3) with event 1, and a weak affiliation (weight 1) with event 3.
+- **Person 2** has affiliation weight 2 with both events 2 and 3.
+- **Person 3** has affiliation weight 1 with events 1 and 2.
+
+In **bipartite mode**, edge weights from the matrix are preserved. In **person** and **event** projection modes, edges are unweighted (presence/absence of co-membership only).
+
+---
+
+#### Example 3: The Galaskiewicz CEOs and Clubs Dataset
+
+The shipped dataset `Galaskiewicz_CEOs_and_clubs_affiliation_network_data.2sm` is a real-world example — 26 CEOs (rows) × 15 clubs (columns):
+
+```
+0 0 1 1 0 0 0 0 1 0 0 0 0 0 0
+0 0 1 0 1 0 1 0 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 0 0 0 0 1 0 0 0
+0 1 1 0 0 0 0 0 0 0 0 0 0 0 1
+0 0 1 0 0 0 0 0 0 0 0 0 1 1 0
+0 1 1 0 0 0 0 0 0 0 0 0 0 1 0
+0 0 1 1 0 0 0 0 0 1 1 0 0 0 0
+0 0 0 1 0 0 1 0 0 1 0 0 0 0 0
+1 0 0 1 0 0 0 1 0 1 0 0 0 0 0
+0 0 1 0 0 0 0 0 1 0 0 0 0 0 0
+0 1 1 0 0 0 0 0 1 0 0 0 0 0 0
+0 0 0 1 0 0 1 0 0 0 0 0 0 0 0
+0 0 1 1 1 0 0 0 1 0 0 0 0 0 0
+0 1 1 1 0 0 0 0 0 0 1 1 1 0 1
+0 1 1 0 0 1 0 0 0 0 0 0 1 0 1
+0 1 1 0 0 1 0 1 0 0 0 0 0 1 0
+0 1 1 0 1 0 0 0 0 0 1 1 0 0 1
+0 0 0 1 0 0 0 0 1 0 0 1 1 0 1
+1 0 1 1 0 0 1 0 1 0 0 0 0 0 0
+0 1 1 1 0 0 0 0 0 0 1 0 0 0 1
+0 0 1 1 0 0 0 1 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 1 0 0 0 0 0 0 1
+0 1 1 0 0 1 0 0 0 0 0 0 0 0 1
+1 0 1 1 0 1 0 0 0 0 0 0 0 0 1
+0 1 1 0 0 0 0 0 0 0 0 0 1 0 0
+0 1 1 0 0 0 0 0 0 0 0 1 0 0 0
+```
+
+Importing as a **bipartite graph** produces **41 nodes** (26 CEOs + 15 clubs) and one edge per club membership. Importing as a **person network** reveals which CEOs move in the same social circles. Importing as an **event network** reveals which clubs attract overlapping memberships.
+
+---
+
+### How to Use Two-Mode Sociomatrix Files in SocNetV
+
+1. **Loading files**: Select **File > Import > Two-Mode Sociomatrix** and choose your `.2sm` or `.aff` file. SocNetV will display a dialog asking which graph to construct.
+
+2. **Choosing the import mode**:
+   - **Bipartite graph** — recommended as the starting point. Preserves all information from the file. Both sets of actors appear as nodes; Mode 2 nodes are shown in blue diamond shape.
+   - **Person network** — use when you want to analyse relationships *among* the Mode 1 actors (e.g. which CEOs are socially proximate).
+   - **Event network** — use when you want to analyse relationships *among* the Mode 2 actors (e.g. which clubs attract overlapping memberships).
+
+3. **Delimiter**: values within each row may be separated by spaces or commas — SocNetV detects both automatically.
+
+:::note
+- The matrix must be rectangular and consistent: every row must have the same number of values.
+- Comment lines (starting with `#`) are skipped.
+- The bipartite graph is the only import mode that preserves weighted affiliations. Projection modes (person and event networks) produce unweighted edges.
+:::
+
+---
+
+### Supported Elements in SocNetV
+
+| Element | Supported |
+|---|---|
+| Rectangular NR × NC matrix | ✅ |
+| Binary (0/1) affiliations | ✅ |
+| Weighted affiliations | ✅ (bipartite mode) |
+| Space-delimited rows | ✅ |
+| Comma-delimited rows | ✅ |
+| Comment lines (`#`) | ✅ |
+| Bipartite graph import | ✅ |
+| Person projection import | ✅ |
+| Event projection import | ✅ |
+| Node labels in file | ❌ (not yet supported) |
+| Export back to `.2sm` | ❌ (not yet supported) |
+
+---
+
+### Pros and Cons of Two-Mode Sociomatrix Files
+
+#### Advantages
+- **Information-rich**: a single file encodes three different graphs simultaneously, depending on how you choose to import it.
+- **Compact**: for sparse affiliation data, a rectangular binary matrix is much smaller than an equivalent adjacency matrix covering all actors.
+- **Standard format**: widely used in social network analysis research, with many published datasets available in this format (Davis Southern Women, Galaskiewicz CEOs and Clubs, etc.).
+
+#### Disadvantages
+- **No node attributes**: the format carries no metadata beyond the affiliation values themselves.
+- **Projection information loss**: the person and event projection modes discard affiliation weights and merge co-memberships into a simple binary edge — some analytical nuance is lost.
+- **Export not yet supported**: SocNetV can import `.2sm` files but cannot currently export a network back to this format.
+
+#### References
+- Wasserman, S. & Faust, K. (1994). *Social Network Analysis: Methods and Applications*. Cambridge University Press. — the standard reference for two-mode network analysis.
+- [Bipartite graph — Wikipedia](https://en.wikipedia.org/wiki/Bipartite_graph)
+- Davis, A., Gardner, B. B., & Gardner, M. R. (1941). *Deep South*. University of Chicago Press. — source of the classic Southern Women two-mode dataset.
+- Galaskiewicz, J. (1985). *Social Organization of an Urban Grants Economy*. Academic Press. — source of the CEOs and Clubs dataset shipped with SocNetV.
+
+
 ## Pajek Files
 
 SocNetV supports importing Pajek project files, which usually have a `.net` or `.paj` extension. It is important to note that SocNetV supports a **limited subset** of the features of this format.
@@ -919,3 +1108,18 @@ SocNetV supports the following elements of edge list files:
 
 #### Reference:
 - **Edge List Format Documentation**: [Wikipedia on Edge List](https://en.wikipedia.org/wiki/Edge_list)
+
+
+
+Two-Mode Data — Crash Course
+A regular (1-mode) network has one type of actor. The adjacency matrix is square: rows and columns are the same actors, and a cell A[i][j]=1 means actor i is directly connected to actor j.
+A two-mode (bipartite) network has two distinct types of actors — traditionally called Mode 1 (e.g., people) and Mode 2 (e.g., events, clubs, organizations). The raw data matrix is rectangular: rows = Mode 1 actors, columns = Mode 2 actors. A cell B[i][j]=1 means person i attended event j. There are no direct person→person or event→event edges in the raw data — only person→event edges.
+The Davis Southern Women dataset (used in the issue) is the classic example:
+
+18 women × 14 social events
+B[i][j]=1 if woman i attended event j
+
+From this rectangular matrix you can derive two things:
+
+The bipartite graph itself — 18+14=32 nodes, two visually distinct types, edges only crossing between types. This is the true import of a .2sm file.
+A projected 1-mode network (the "acquaintance network") — computed as A = B × Bᵀ (or Bᵀ × B). This is what SocNetV currently does instead of (1), which is the bug.
