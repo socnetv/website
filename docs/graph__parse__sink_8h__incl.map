@@ -1,0 +1,9 @@
+<map id="graph_parse_sink.h" name="graph_parse_sink.h">
+<area shape="rect" id="Node000001" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="57,5,205,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,71,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,33,66,72,62,68,115,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,79,168,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,31,134,65,129,65,129,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="192,79,263,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,29,202,68,199,72,145,33"/>
+</map>
