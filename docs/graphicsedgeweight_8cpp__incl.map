@@ -1,19 +1,19 @@
 <map id="graphicsedgeweight.cpp" name="graphicsedgeweight.cpp">
-<area shape="rect" id="Node000001" title="Implements the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="280,5,441,31"/>
-<area shape="rect" id="Node000002" href="$graphicsedgeweight_8h.html" title="Declares the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="52,79,200,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,33,181,77,179,72,323,30"/>
-<area shape="rect" id="Node000004" href="$graphicsedge_8h.html" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="250,79,359,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,30,325,69,322,65,349,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="383,79,452,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="371,29,401,67,396,66,369,34"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="477,79,534,105"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="386,29,470,72,465,72,385,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,140,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,104,93,142,89,138,115,106"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="163,153,272,178"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="292,104,245,145,243,140,287,106"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="296,153,366,178"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="310,103,324,139,319,137,307,107"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="390,153,443,178"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="324,103,387,144,382,144,323,108"/>
+<area shape="rect" id="Node000001" title="Implements the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="299,5,479,31"/>
+<area shape="rect" id="Node000002" href="$graphicsedgeweight_8h.html" title="Declares the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="51,79,216,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="349,33,188,78,187,72,347,28"/>
+<area shape="rect" id="Node000004" href="$graphicsedge_8h.html" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="267,79,389,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="381,33,349,70,345,66,377,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="413,79,488,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="401,29,434,66,430,70,397,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="513,79,573,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="415,28,506,70,504,75,413,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,152,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,106,98,143,94,140,122,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="177,152,295,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="315,106,263,146,260,141,312,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="319,152,393,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="335,103,349,138,344,140,330,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="418,152,478,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="349,102,418,142,415,147,346,106"/>
 </map>

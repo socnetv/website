@@ -1,9 +1,9 @@
 <map id="mainwindow.h" name="mainwindow.h">
-<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="149,5,251,31"/>
-<area shape="rect" id="Node000002" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="5,79,139,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,39,95,81,93,76,162,39"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the SocNetV application, initializing the application and starting the main event loo..." alt="" coords="163,79,237,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,45,202,80,198,77,198,48"/>
-<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="262,79,378,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,37,302,78,297,78,233,42"/>
+<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="161,5,277,31"/>
+<area shape="rect" id="Node000002" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="5,79,153,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,39,103,81,101,76,183,34"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Entry point for the SocNetV application, initializing the application and starting the main event loo..." alt="" coords="178,79,261,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,44,222,79,217,79,217,44"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="285,79,415,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,35,330,76,327,81,251,40"/>
 </map>

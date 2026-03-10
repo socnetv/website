@@ -1,16 +1,16 @@
 var global_8h =
 [
-    [ "ClickedEdge", "struct_clicked_edge.html", "struct_clicked_edge" ],
-    [ "MyEdge", "class_my_edge.html", "class_my_edge" ],
-    [ "GraphDistance", "class_graph_distance.html", "class_graph_distance" ],
-    [ "GraphDistancesCompare", "class_graph_distances_compare.html", "class_graph_distances_compare" ],
-    [ "PairVF", "class_pair_v_f.html", "class_pair_v_f" ],
-    [ "PairVFCompare", "class_pair_v_f_compare.html", "class_pair_v_f_compare" ],
+    [ "ClickedEdge", "structClickedEdge.html", "structClickedEdge" ],
+    [ "MyEdge", "classMyEdge.html", "classMyEdge" ],
+    [ "GraphDistance", "classGraphDistance.html", "classGraphDistance" ],
+    [ "GraphDistancesCompare", "classGraphDistancesCompare.html", "classGraphDistancesCompare" ],
+    [ "PairVF", "classPairVF.html", "classPairVF" ],
+    [ "PairVFCompare", "classPairVFCompare.html", "classPairVFCompare" ],
     [ "SOCNETV_BEGIN_NAMESPACE", "global_8h.html#ab89d8fa3e62f2380625adc256320c921", null ],
     [ "SOCNETV_END_NAMESPACE", "global_8h.html#a85f2288cb4aa26182a457b9d580bd60a", null ],
     [ "SOCNETV_NAMESPACE", "global_8h.html#a824d2e224ea38d1b4a3dd02d35fac406", null ],
     [ "SOCNETV_USE_NAMESPACE", "global_8h.html#af349c46923c52ae0103ed6ce9357ef25", null ],
-    [ "SelectedEdge", "global_8h.html#a8b13926d7ec34c00f1539a41c0749201", null ],
+    [ "SelectedEdge", "global_8h.html#a99a47c80f0deda883f0383e2cbbec281", null ],
     [ "ChartType", "global_8h.html#a61170955507786cf39f238b8927530b4", [
       [ "None", "global_8h.html#a61170955507786cf39f238b8927530b4ac9d3e887722f2bc482bcca9d41c512af", null ],
       [ "Spline", "global_8h.html#a61170955507786cf39f238b8927530b4a73a1396ca8adb89d7ff481ff55974c1e", null ],

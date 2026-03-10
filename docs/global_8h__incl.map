@@ -1,9 +1,9 @@
 <map id="global.h" name="global.h">
-<area shape="rect" id="Node000001" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="95,5,162,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,60,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,32,62,72,59,68,110,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="84,79,173,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,29,131,64,126,62,127,33"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="197,79,262,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,29,203,69,197,70,145,34"/>
+<area shape="rect" id="Node000001" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="96,5,171,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,61,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,62,73,59,68,116,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="86,79,181,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,31,136,65,131,65,131,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="205,79,275,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,28,213,69,210,73,149,33"/>
 </map>

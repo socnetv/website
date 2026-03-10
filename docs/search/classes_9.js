@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['texteditor_0',['TextEditor',['../class_text_editor.html',1,'']]]
+  ['texteditor_0',['TextEditor',['../classTextEditor.html',1,'']]]
 ];

@@ -1,9 +1,9 @@
 <map id="graphicsedgeweight.h" name="graphicsedgeweight.h">
-<area shape="rect" id="Node000001" title="Declares the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="160,5,307,31"/>
-<area shape="rect" id="Node000002" href="$graphicsedge_8cpp.html" title="Implements the GraphicsEdge class, which visualizes edges in the network graph." alt="" coords="5,79,129,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,39,96,81,94,76,190,36"/>
-<area shape="rect" id="Node000003" href="$graphicsedgeweight_8cpp.html" title="Implements the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="153,79,314,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,45,236,80,231,77,232,48"/>
-<area shape="rect" id="Node000004" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="339,79,472,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="277,35,379,78,374,79,276,40"/>
+<area shape="rect" id="Node000001" title="Declares the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="173,5,339,31"/>
+<area shape="rect" id="Node000002" href="$graphicsedge_8cpp.html" title="Implements the GraphicsEdge class, which visualizes edges in the network graph." alt="" coords="5,79,141,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,38,104,81,102,76,213,33"/>
+<area shape="rect" id="Node000003" href="$graphicsedgeweight_8cpp.html" title="Implements the GraphicsEdgeWeight class for managing and rendering edge weights in the network graph." alt="" coords="166,79,346,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,44,259,79,253,79,253,44"/>
+<area shape="rect" id="Node000004" href="$graphicswidget_8cpp.html" title="Implements the GraphicsWidget class for handling the main visualization widget in the network graph i..." alt="" coords="370,79,518,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="300,33,414,76,412,81,298,38"/>
 </map>

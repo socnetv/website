@@ -1,6 +1,6 @@
 var graph_8h =
 [
-    [ "Graph", "class_graph.html", "class_graph" ],
+    [ "Graph", "classGraph.html", "classGraph" ],
     [ "H_edges", "graph_8h.html#aca1a23cc1f6ca42c626d8e729116449b", null ],
     [ "H_f_i", "graph_8h.html#aba2261e9d24bfad84a0f365d17b8ba60", null ],
     [ "H_Int", "graph_8h.html#a0b781f63d8e246d09099f470879b4d98", null ],

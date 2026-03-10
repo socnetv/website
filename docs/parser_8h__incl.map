@@ -1,17 +1,25 @@
 <map id="parser.h" name="parser.h">
-<area shape="rect" id="Node000001" title="Declares the Parser class for reading and interpreting various network data formats,..." alt="" coords="298,5,365,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,77,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="298,30,92,81,91,76,297,25"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="100,79,163,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,31,178,77,177,72,295,32"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="187,79,274,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,31,261,72,259,67,312,32"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="297,79,366,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="334,29,334,65,330,62,330,33"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="390,79,460,105"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="348,29,400,70,395,69,347,34"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="484,79,568,105"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="365,29,481,73,476,73,364,34"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="593,79,662,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="366,25,581,78,575,79,366,30"/>
+<area shape="rect" id="Node000001" title="Declares the Parser class for reading and interpreting various network data formats,..." alt="" coords="459,5,533,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,86,83,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,26,302,45,202,61,102,81,90,85,88,79,101,76,201,55,302,39,458,20"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="159,167,225,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="458,23,380,26,286,35,200,52,168,65,147,80,141,98,145,118,157,137,172,155,167,159,152,141,140,120,135,98,143,77,166,60,199,47,285,30,380,21,458,17"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="157,86,251,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="459,31,263,81,252,85,251,79,262,76,458,26"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="633,167,706,192"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="534,17,615,20,715,28,806,46,841,60,865,77,875,97,871,115,857,130,836,142,779,161,720,174,719,168,778,156,833,138,854,126,867,112,870,98,861,80,839,64,805,51,714,34,615,25,534,22"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="459,86,533,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="499,31,499,72,493,72,493,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="557,86,651,111"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="513,29,578,76,575,80,510,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="675,86,749,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="530,28,664,76,670,79,668,84,662,81,528,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="773,86,851,111"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="534,24,638,45,762,76,771,79,769,84,761,81,636,50,533,29"/>
+<area shape="rect" id="Node000010" href="$graph__parse__sink_8h.html" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="275,79,434,119"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="476,33,402,74,399,70,474,29"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="317,121,229,163,227,158,315,116"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="431,116,620,163,618,168,429,121"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="319,167,390,192"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="357,119,357,153,352,153,352,119"/>
 </map>

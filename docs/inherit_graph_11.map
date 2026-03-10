@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_i_distance_progress_sink.html" title=" " alt="" coords="5,31,161,56"/>
-<area shape="rect" id="Node000001" href="$class_graph_distance_progress_sink.html" title=" " alt="" coords="209,5,395,31"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="176,30,211,28,205,30,177,35"/>
-<area shape="rect" id="Node000002" href="$class_null_distance_progress_sink.html" title=" " alt="" coords="215,55,389,80"/>
-<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="176,51,217,58,212,58,176,56"/>
+<area shape="rect" id="Node000000" href="$classIDistanceProgressSink.html" title=" " alt="" coords="5,31,172,56"/>
+<area shape="rect" id="Node000001" href="$classGraphDistanceProgressSink.html" title=" " alt="" coords="220,5,423,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="186,30,219,26,220,32,186,35"/>
+<area shape="rect" id="Node000002" href="$classNullDistanceProgressSink.html" title=" " alt="" coords="227,55,416,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="186,51,227,55,226,60,185,56"/>
 </map>
