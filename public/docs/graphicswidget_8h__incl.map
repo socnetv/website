@@ -1,15 +1,15 @@
 <map id="graphicswidget.h" name="graphicswidget.h">
-<area shape="rect" id="Node000001" title="Declares the GraphicsWidget class for handling the main visualization widget in the network graph int..." alt="" coords="114,5,233,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,118,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,34,95,72,92,68,156,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="142,79,205,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,29,176,64,171,62,172,33"/>
-<area shape="rect" id="Node000004" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="228,79,295,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,29,238,69,232,69,188,34"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="138,153,193,178"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="248,104,195,146,192,141,243,106"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="217,153,306,178"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="263,103,264,138,259,135,260,107"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="330,153,396,178"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="280,103,336,143,330,143,278,108"/>
+<area shape="rect" id="Node000001" title="Declares the GraphicsWidget class for handling the main visualization widget in the network graph int..." alt="" coords="117,5,250,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,127,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,33,98,74,96,69,163,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="151,79,216,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,31,186,65,181,65,181,31"/>
+<area shape="rect" id="Node000004" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="241,79,315,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,29,253,68,250,72,197,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="150,152,206,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="263,106,207,146,204,142,260,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="231,152,325,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="281,104,281,138,275,138,275,104"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="349,152,420,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="297,102,357,142,354,147,294,106"/>
 </map>

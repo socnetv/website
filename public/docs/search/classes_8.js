@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['pairvf_0',['PairVF',['../class_pair_v_f.html',1,'']]],
-  ['pairvfcompare_1',['PairVFCompare',['../class_pair_v_f_compare.html',1,'']]],
-  ['parser_2',['Parser',['../class_parser.html',1,'']]]
+  ['pairvf_0',['PairVF',['../classPairVF.html',1,'']]],
+  ['pairvfcompare_1',['PairVFCompare',['../classPairVFCompare.html',1,'']]],
+  ['parseconfig_2',['ParseConfig',['../structParser_1_1ParseConfig.html',1,'Parser']]],
+  ['parser_3',['Parser',['../classParser.html',1,'']]]
 ];

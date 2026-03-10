@@ -1,6 +1,6 @@
 var namespacecli =
 [
-    [ "CliConfig", "structcli_1_1_cli_config.html", "structcli_1_1_cli_config" ],
+    [ "CliConfig", "structcli_1_1CliConfig.html", "structcli_1_1CliConfig" ],
     [ "almostEqual", "namespacecli.html#a4171d8ad1dbd1027575766cabaa79c54", null ],
     [ "buildGoldenJsonV1", "namespacecli.html#a959ff1e2b548e0b073ccb7cd1675726f", null ],
     [ "buildGoldenJsonV2Reachability", "namespacecli.html#a40a9d55759cf8517cc1cb862e4fe7d25", null ],
@@ -27,6 +27,7 @@ var namespacecli =
     [ "printKV", "namespacecli.html#a4a95f1a954b1d2cb92dbf82fa45b572f", null ],
     [ "readJsonFile", "namespacecli.html#a74fe0370810e9add6776dca31d762c4f", null ],
     [ "runKernelDistanceV1", "namespacecli.html#af391af5a27faf6fc4b7805c088b9b103", null ],
+    [ "runKernelIoRoundtripV5", "namespacecli.html#ae8f6c2d2d6dedc5554661c98f0cd20f9", null ],
     [ "runKernelProminenceV4", "namespacecli.html#a359cdb41bc8847bfbfbc1ee3a3c0e6b6", null ],
     [ "runKernelReachabilityV2", "namespacecli.html#a4105298a702548f19670ddba9eba34e1", null ],
     [ "runKernelWalksV3", "namespacecli.html#af431f0d18d6956e231a06888271253ae", null ],

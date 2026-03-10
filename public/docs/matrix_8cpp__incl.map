@@ -1,21 +1,21 @@
 <map id="matrix.cpp" name="matrix.cpp">
-<area shape="rect" id="Node000001" title="Implements the Matrix class for handling adjacency and sociomatrix data structures in network analysi..." alt="" coords="311,5,393,31"/>
-<area shape="rect" id="Node000002" href="$matrix_8h.html" title="Declares the Matrix class for handling adjacency and sociomatrix data structures in network analysis." alt="" coords="142,79,210,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,33,221,75,219,70,325,30"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="234,79,294,105"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="340,30,292,71,289,67,335,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="318,79,387,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="354,29,354,65,350,62,351,33"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="411,79,475,105"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="368,29,419,70,413,69,367,34"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="499,79,597,105"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="386,29,503,73,498,74,385,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,78,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="155,107,79,147,76,143,151,103"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="102,153,168,178"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="172,104,151,141,147,137,167,106"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="191,153,244,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="184,103,206,140,200,139,182,107"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="268,153,325,178"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="197,103,265,144,260,145,196,108"/>
+<area shape="rect" id="Node000001" title="Implements the Matrix class for handling adjacency and sociomatrix data structures in network analysi..." alt="" coords="332,5,424,31"/>
+<area shape="rect" id="Node000002" href="$matrix_8h.html" title="Declares the Matrix class for handling adjacency and sociomatrix data structures in network analysis." alt="" coords="149,79,226,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,33,232,76,230,71,346,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="251,79,316,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="364,33,311,72,308,68,361,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="341,79,415,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="381,31,381,65,375,65,375,31"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="440,79,511,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="395,29,450,68,447,72,392,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="535,79,642,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="413,28,543,72,541,77,411,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,84,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,106,81,148,79,143,163,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="108,152,179,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="182,106,160,142,155,139,178,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,152,263,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="197,103,220,139,216,142,193,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="287,152,349,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="210,102,286,143,284,148,207,106"/>
 </map>

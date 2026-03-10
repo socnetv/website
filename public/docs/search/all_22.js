@@ -1,6 +1,30 @@
 var searchData=
 [
-  ['—_20commit_0',['Step 3 — Commit',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md26',1,'']]],
-  ['—_20generate_20json_1',['Step 1 — Generate JSON',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md18',1,'']]],
-  ['—_20review_2',['Step 2 — Review',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md24',1,'']]]
+  ['_7echart_0',['~Chart',['../classChart.html#a8a593f9f79c94057718d1c4942e77f86',1,'Chart']]],
+  ['_7edialogclusteringhierarchical_1',['~DialogClusteringHierarchical',['../classDialogClusteringHierarchical.html#a0637c8f61a56fc04c17a5ed07b09bcf4',1,'DialogClusteringHierarchical']]],
+  ['_7edialogdatasetselect_2',['~DialogDataSetSelect',['../classDialogDataSetSelect.html#ac370b37a74a92d84b40dd447a45de844',1,'DialogDataSetSelect']]],
+  ['_7edialogdissimilarities_3',['~DialogDissimilarities',['../classDialogDissimilarities.html#a3514a9ccd1103fe623ecb4b18763d980',1,'DialogDissimilarities']]],
+  ['_7edialogexportimage_4',['~DialogExportImage',['../classDialogExportImage.html#a06913bcb4f82017d585d51543262e223',1,'DialogExportImage']]],
+  ['_7edialogexportpdf_5',['~DialogExportPDF',['../classDialogExportPDF.html#a2218e92abf0f414eb5c2dc10fcc71503',1,'DialogExportPDF']]],
+  ['_7edialognodeedit_6',['~DialogNodeEdit',['../classDialogNodeEdit.html#a72592ac345482198dae6bded1007889f',1,'DialogNodeEdit']]],
+  ['_7edialognodefind_7',['~DialogNodeFind',['../classDialogNodeFind.html#a2a8f85c61e7812fe0dfb18023f3f256d',1,'DialogNodeFind']]],
+  ['_7edialogsettings_8',['~DialogSettings',['../classDialogSettings.html#a10e028cc22f2ab2367f582242fd8115e',1,'DialogSettings']]],
+  ['_7edialogsimilaritymatches_9',['~DialogSimilarityMatches',['../classDialogSimilarityMatches.html#ae5f3e3614509970402ffec0c98ad534b',1,'DialogSimilarityMatches']]],
+  ['_7edialogsimilaritypearson_10',['~DialogSimilarityPearson',['../classDialogSimilarityPearson.html#a926e7a8d14302bbcebdf25a6f95ea868',1,'DialogSimilarityPearson']]],
+  ['_7egraph_11',['~Graph',['../classGraph.html#a902c5b3eacb66d60752525ab23297a95',1,'Graph']]],
+  ['_7egraphicsedge_12',['~GraphicsEdge',['../classGraphicsEdge.html#ade83810a8aa6f3ddda6415319ec1fca4',1,'GraphicsEdge']]],
+  ['_7egraphicsedgelabel_13',['~GraphicsEdgeLabel',['../classGraphicsEdgeLabel.html#a7bd45d03e5eb453e9a10d4c74073c0dc',1,'GraphicsEdgeLabel']]],
+  ['_7egraphicsedgeweight_14',['~GraphicsEdgeWeight',['../classGraphicsEdgeWeight.html#a610ec376603a7243f2dbedeb146946d0',1,'GraphicsEdgeWeight']]],
+  ['_7egraphicsnode_15',['~GraphicsNode',['../classGraphicsNode.html#a2a44e013cd088c990da2de525f6e38d3',1,'GraphicsNode']]],
+  ['_7egraphicsnodelabel_16',['~GraphicsNodeLabel',['../classGraphicsNodeLabel.html#a9d46bdee69a7eef86febca5fcc0ba4f0',1,'GraphicsNodeLabel']]],
+  ['_7egraphicsnodenumber_17',['~GraphicsNodeNumber',['../classGraphicsNodeNumber.html#a55470987ae7658d6a9e9d4cb2c09a9ba',1,'GraphicsNodeNumber']]],
+  ['_7egraphicswidget_18',['~GraphicsWidget',['../classGraphicsWidget.html#a1ab088c9377f8e5a17e20153d2eaf366',1,'GraphicsWidget']]],
+  ['_7egraphvertex_19',['~GraphVertex',['../classGraphVertex.html#ab21c6e70263205acf42360500b88b26a',1,'GraphVertex']]],
+  ['_7eidistanceprogresssink_20',['~IDistanceProgressSink',['../classIDistanceProgressSink.html#a8abe752708880060a2c4f7f0d84a0032',1,'IDistanceProgressSink']]],
+  ['_7eigraphparsesink_21',['~IGraphParseSink',['../classSocNetV_1_1IO_1_1IGraphParseSink.html#a6d1637289a23ef9718f9e6a1d8a3ca15',1,'SocNetV::IO::IGraphParseSink']]],
+  ['_7emainwindow_22',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
+  ['_7ematrix_23',['~Matrix',['../classMatrix.html#a9b1c3627f573d78a2f08623fdfef990f',1,'Matrix']]],
+  ['_7ematrixrow_24',['~MatrixRow',['../classMatrixRow.html#a8e9d1e2ef5f0ca9de9d4a77c239c0d5c',1,'MatrixRow']]],
+  ['_7eparser_25',['~Parser',['../classParser.html#a3e658b5917a93a3ef648050d060e3a93',1,'Parser']]],
+  ['_7ewebcrawler_26',['~WebCrawler',['../classWebCrawler.html#a2d2859f1a4bd2de7d75f32b9f760ebc1',1,'WebCrawler']]]
 ];

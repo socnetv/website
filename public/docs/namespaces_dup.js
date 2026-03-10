@@ -1,5 +1,6 @@
 var namespaces_dup =
 [
     [ "cli", "namespacecli.html", "namespacecli" ],
-    [ "Ui", "namespace_ui.html", null ]
+    [ "SocNetV", "namespaceSocNetV.html", "namespaceSocNetV" ],
+    [ "Ui", "namespaceUi.html", null ]
 ];

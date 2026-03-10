@@ -1,25 +1,25 @@
 <map id="dialogsysteminfo.cpp" name="dialogsysteminfo.cpp">
-<area shape="rect" id="Node000001" title="Implements the DialogSystemInfo class for displaying runtime system and environment details in SocNet..." alt="" coords="478,5,622,31"/>
-<area shape="rect" id="Node000002" href="$dialogsysteminfo_8h.html" title="Declares the DialogSystemInfo class for displaying system and environment information in SocNetV." alt="" coords="40,79,170,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,34,186,80,185,75,478,28"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="194,79,264,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="490,33,279,81,278,76,495,30"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="288,79,367,105"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="515,31,380,76,379,71,510,32"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="391,79,490,105"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="534,31,473,73,471,68,529,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="514,79,586,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="552,29,552,65,548,62,548,33"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="611,79,687,105"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="568,29,623,70,617,69,566,34"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="711,79,802,105"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="586,29,710,73,705,74,585,34"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="826,79,906,105"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="604,29,814,78,809,78,604,34"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="930,79,1066,105"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="623,28,917,77,912,78,622,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,74,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,104,63,143,59,139,92,106"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="98,153,245,178"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="117,102,152,141,147,141,115,107"/>
+<area shape="rect" id="Node000001" title="Implements the DialogSystemInfo class for displaying runtime system and environment details in SocNet..." alt="" coords="508,5,671,31"/>
+<area shape="rect" id="Node000002" href="$dialogsysteminfo_8h.html" title="Declares the DialogSystemInfo class for displaying system and environment information in SocNetV." alt="" coords="41,79,188,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="513,33,202,80,201,74,513,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="212,79,287,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="533,33,301,81,300,81,299,76,299,76,532,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="311,79,395,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="552,33,405,77,404,72,551,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="420,79,527,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="572,33,505,74,503,69,569,28"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="551,79,627,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="592,31,592,65,587,65,587,31"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="652,79,732,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="607,28,665,68,662,73,604,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="757,79,851,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="625,28,757,72,755,77,623,33"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="876,79,959,104"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="643,28,863,76,862,81,641,33"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="983,79,1129,104"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="665,28,970,74,969,80,664,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,106,66,144,62,140,101,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,152,271,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="129,102,168,140,164,144,125,106"/>
 </map>
