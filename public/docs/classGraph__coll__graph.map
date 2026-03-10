@@ -1,0 +1,19 @@
+<map id="Graph" name="Graph">
+<area shape="rect" id="Node000001" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="187,328,249,353"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="30,5,105,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,41,119,92,152,160,181,228,217,327,212,329,176,230,148,162,114,95,82,44"/>
+<area shape="rect" id="Node000003" href="$classParser.html" title="Defines a class for network file loading and parsing." alt="" coords="195,93,257,119"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="119,30,173,52,198,72,218,91,214,95,195,76,170,57,117,34"/>
+<area shape="rect" id="Node000005" href="$classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="5,93,105,119"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="66,44,60,93,54,92,61,44"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,133,222,143,218,250,220,328,215,328,213,250,217,142,218,132"/>
+<area shape="rect" id="Node000004" href="$classSocNetV_1_1IO_1_1IGraphParseSink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="128,5,340,31"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="234,45,230,93,224,93,229,44"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="48,132,38,169,31,215,34,261,41,283,53,302,75,315,110,324,187,335,187,340,109,330,72,320,49,306,37,285,29,262,26,214,33,168,43,131"/>
+<area shape="rect" id="Node000006" href="$classMatrix.html" title=" " alt="" coords="290,93,354,119"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="328,132,330,169,327,214,317,262,308,285,295,306,274,324,250,335,248,330,271,319,291,302,303,282,312,260,322,214,324,169,323,132"/>
+<area shape="rect" id="Node000007" href="$classMatrixRow.html" title=" " alt="" coords="364,5,456,31"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="390,42,336,95,332,91,387,38"/>
+<area shape="rect" id="Node000008" href="$classMyEdge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="378,93,453,119"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="421,132,422,170,418,217,404,264,393,286,377,306,355,318,321,328,249,339,248,334,320,323,353,313,374,302,388,284,399,262,412,216,417,170,415,132"/>
+</map>

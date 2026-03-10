@@ -1,0 +1,9 @@
+<map id="graph_parse_sink_graph.h" name="graph_parse_sink_graph.h">
+<area shape="rect" id="Node000001" title="Graph&#45;backed implementation of IGraphParseSink (Parser &#45;&gt; Graph bridge)." alt="" coords="142,5,334,31"/>
+<area shape="rect" id="Node000002" href="$graph__io_8cpp.html" title="Implements graph file load/save wrapper methods for the Graph class (load pipeline coordination,..." alt="" coords="5,79,111,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,38,88,81,86,76,196,33"/>
+<area shape="rect" id="Node000003" href="$graph__parse__sink__graph_8cpp.html" title="Graph&#45;backed implementation of IGraphParseSink (Parser &#45;&gt; Graph bridge)." alt="" coords="135,79,341,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,44,241,79,235,79,235,44"/>
+<area shape="rect" id="Node000004" href="$headless__graph__loader_8cpp.html" title=" " alt="" coords="365,79,564,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,32,429,76,427,81,287,37"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="graph_parse_sink_graph.h" name="graph_parse_sink_graph.h">
+<area shape="rect" id="Node000001" title="Graph&#45;backed implementation of IGraphParseSink (Parser &#45;&gt; Graph bridge)." alt="" coords="35,5,227,31"/>
+<area shape="rect" id="Node000002" href="$graph__parse__sink_8h.html" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="57,79,205,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,31,134,65,129,65,129,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,71,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,106,66,146,62,141,115,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="95,152,168,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="134,104,134,138,129,138,129,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="192,152,263,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="148,102,202,141,199,146,145,106"/>
+</map>

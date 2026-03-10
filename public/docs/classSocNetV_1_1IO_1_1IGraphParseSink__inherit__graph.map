@@ -1,0 +1,5 @@
+<map id="SocNetV::IO::IGraphParseSink" name="SocNetV::IO::IGraphParseSink">
+<area shape="rect" id="Node000001" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="5,5,217,31"/>
+<area shape="rect" id="Node000002" href="$classSocNetV_1_1IO_1_1GraphParseSinkGraph.html" title="Forwards parse mutations directly into an existing Graph instance." alt="" coords="7,79,215,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,44,114,79,109,79,109,44"/>
+</map>
