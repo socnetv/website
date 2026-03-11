@@ -116,6 +116,7 @@ svg:where(.astro-c6vsoqas){color:var(--sl-icon-color);font-size:var(--sl-icon-si
 <li><strong>Custom Attributes</strong>: Allows defining custom attributes for nodes and edges, such as labels, weights, or types.</li>
 <li><strong>Directed and Undirected Graphs</strong>: Supports both directed and undirected graph structures.</li>
 <li><strong>Hierarchical Graphs</strong>: Facilitates multi-level graph representations.</li>
+<li><strong>Multirelational Networks</strong>: SocNetV supports storing multiple relations between the same set of nodes by using edge attributes (for example a <code dir="auto">relation</code> attribute identifying the type of tie).</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <h4 id="example-1-a-simple-graphml-file">Example 1: A simple GraphML File</h4>
@@ -125,18 +126,17 @@ svg:where(.astro-c6vsoqas){color:var(--sl-icon-color);font-size:var(--sl-icon-si
 <p>All GraphML files consist of a graphml element and a variety of sub-elements: graph, node, edge, keys. SocNetV understands all of them:</p>
 <ul>
 <li>
-<p>Nodes: Each <node></node> element has an id attribute, which uniquely identifies the node. In this case, the nodes are labeled n0 through n10.</p>
+<p>Nodes: Each <code dir="auto">&#x3C;node /></code> element has an id attribute, which uniquely identifies the node. In this case, the nodes are labeled n0 through n10.</p>
 </li>
 <li>
-<p>Edges: Each <edge></edge> element defines a relationship between two nodes, indicated by source and target. For example, <edge source="n0" target="n2"></edge> indicates an edge from node n0 to node n2.</p>
+<p>Edges: Each <code dir="auto">&#x3C;edge /></code> element defines a relationship between two nodes, indicated by source and target. For example, <code dir="auto">&#x3C;edge source="n0" target="n2"/></code> indicates an edge from node n0 to node n2.</p>
 </li>
 <li>
-<p>Graph Structure: The graph is undirected as indicated by the edgedefault=“undirected” attribute in the <graph></graph> element.</p>
+<p>Graph Structure: The graph is undirected as indicated by the <code dir="auto">edgedefault="undirected"</code> attribute in the <code dir="auto">&#x3C;graph /></code> element.</p>
 </li>
 </ul>
 <p>Here is the visualization of the above example using <strong>Mermaid</strong>, which demonstrates the directed graph structure:</p>
-<div class="mermaid"> 
-graph TD
+<div class="mermaid"> graph TD
   n0 --&gt; n2
   n1 --&gt; n2
   n2 --&gt; n3
@@ -148,10 +148,39 @@ graph TD
   n6 --&gt; n8
   n8 --&gt; n7
   n8 --&gt; n9
-  n8 --&gt; n10
- </div>
+  n8 --&gt; n10 </div>
 <p>And here’s the visualization of the above example using <strong>SocNetV</strong> where we have applied an FDP layout (<em>Kamada-Kawai</em>) for the node location and a prominence-based model (<em>Betweenness Centrality</em>) for the node sizes/colors:</p>
 <p><img src="/data/uploads/screenshots/32/socnetv-32-example-graphml.png" alt="SocNetV visualizing a simple undirected graph with two 11 nodes and 12 edges from a GraphML file"></p>
+<hr>
+<h4 id="example-2-a-multirelational-graphml-network">Example 2: A multirelational GraphML network</h4>
+<p>GraphML can also represent <strong>multirelational networks</strong>, where multiple types of ties exist between the same actors.</p>
+<p>In <strong>SocNetV</strong>, multirelational networks are stored by using <strong>multiple <code dir="auto">&#x3C;graph></code> elements inside the same GraphML document</strong>, where <strong>each <code dir="auto">&#x3C;graph></code> represents one relation (layer) of the network</strong>.</p>
+<p>Example: a small network with <strong>two relations</strong> between the same actors.</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="xml"><code><div class="ec-line"><div class="code"><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;?</span><span style="--0:#CAECE6">xml</span></span><span style="--0:#C5E478;--1:#3C63B3"> version</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">1.0</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#C5E478;--1:#3C63B3"> encoding</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">UTF-8</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">?></span></div></div><div class="ec-line"><div class="code"><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">graphml</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">xmlns</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">http://graphml.graphdrawing.org/xmlns</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">></span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#809191;--1:#616671">&#x3C;!-- Relation 1 --></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">graph</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">relation_1</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4"> </span><span style="--0:#C5E478;--1:#3C63B3">edgedefault</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">directed</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">node</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">1</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">node</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">2</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">node</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">3</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">edge</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">source</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">1</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4"> </span><span style="--0:#C5E478;--1:#3C63B3">target</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">2</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">edge</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">source</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">2</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4"> </span><span style="--0:#C5E478;--1:#3C63B3">target</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">3</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;/</span><span style="--0:#CAECE6">graph</span><span style="--0:#7FDBCA">></span></span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#809191;--1:#616671">&#x3C;!-- Relation 2 --></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">graph</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">relation_2</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4"> </span><span style="--0:#C5E478;--1:#3C63B3">edgedefault</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">directed</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">node</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">1</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">node</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">2</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">node</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">id</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">3</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">edge</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">source</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">1</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4"> </span><span style="--0:#C5E478;--1:#3C63B3">target</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">2</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;</span><span style="--0:#CAECE6">edge</span><span style="--0:#7FDBCA"> </span></span><span style="--0:#C5E478;--1:#3C63B3">source</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">3</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4"> </span><span style="--0:#C5E478;--1:#3C63B3">target</span><span style="--0:#7FDBCA;--1:#8D46B4">=</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#ECC48D;--1:#9B504E">1</span><span style="--0:#D9F5DD;--1:#111111">"</span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;/</span><span style="--0:#CAECE6">graph</span><span style="--0:#7FDBCA">></span></span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--1:#8D46B4"><span style="--0:#7FDBCA">&#x3C;/</span><span style="--0:#CAECE6">graphml</span><span style="--0:#7FDBCA">></span></span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="<?xml version=&#x22;1.0&#x22; encoding=&#x22;UTF-8&#x22;?><graphml xmlns=&#x22;http://graphml.graphdrawing.org/xmlns&#x22;>  <!-- Relation 1 -->  <graph id=&#x22;relation_1&#x22; edgedefault=&#x22;directed&#x22;>    <node id=&#x22;1&#x22;/>    <node id=&#x22;2&#x22;/>    <node id=&#x22;3&#x22;/>    <edge source=&#x22;1&#x22; target=&#x22;2&#x22;/>    <edge source=&#x22;2&#x22; target=&#x22;3&#x22;/>  </graph>  <!-- Relation 2 -->  <graph id=&#x22;relation_2&#x22; edgedefault=&#x22;directed&#x22;>    <node id=&#x22;1&#x22;/>    <node id=&#x22;2&#x22;/>    <node id=&#x22;3&#x22;/>    <edge source=&#x22;1&#x22; target=&#x22;2&#x22;/>    <edge source=&#x22;3&#x22; target=&#x22;1&#x22;/>  </graph></graphml>"><div></div></button></div></figure></div>
+<p><strong>Explanation</strong></p>
+<ul>
+<li>Each <code dir="auto">&#x3C;graph></code> element represents <strong>one relation</strong> in the multirelational network.</li>
+<li>The <strong>same set of nodes may appear in multiple relations</strong>.</li>
+<li>The edges inside each <code dir="auto">&#x3C;graph></code> belong <strong>only to that specific relation</strong>.</li>
+<li>When loaded in SocNetV, each <code dir="auto">&#x3C;graph></code> becomes a <strong>separate relation layer</strong> that can be selected, edited, or analyzed independently.</li>
+</ul>
+<p>Visualization of the two relations:</p>
+<p>Relation 1:</p>
+<div class="mermaid"> graph TD
+  1 --&gt; 2
+  2 --&gt; 3
+ </div>
+<p>Relation 2:</p>
+<div class="mermaid"> graph TD
+  1 --&gt; 2
+  3 --&gt; 1
+ </div>
+<hr>
 <h3 id="how-to-use-graphml-files-in-socnetv">How to Use GraphML Files in SocNetV</h3>
 <h4 id="loading-graphml-files">Loading GraphML Files</h4>
 <p>To load a GraphML file in SocNetV:</p>
@@ -167,13 +196,14 @@ graph TD
 <li>Choose the <strong>GraphML</strong> format from the list.</li>
 <li>Specify the filename and save.</li>
 </ol>
-<aside aria-label="Did you know?" class="starlight-aside starlight-aside--tip"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.43909 8.85483L1.44039 8.85354L4.96668 5.33815C5.30653 4.99386 5.7685 4.79662 6.2524 4.78972L6.26553 4.78963L12.9014 4.78962L13.8479 3.84308C16.9187 0.772319 20.0546 0.770617 21.4678 0.975145C21.8617 1.02914 22.2271 1.21053 22.5083 1.4917C22.7894 1.77284 22.9708 2.13821 23.0248 2.53199C23.2294 3.94517 23.2278 7.08119 20.1569 10.1521L19.2107 11.0983V17.7338L19.2106 17.7469C19.2037 18.2308 19.0067 18.6933 18.6624 19.0331L15.1456 22.5608C14.9095 22.7966 14.6137 22.964 14.29 23.0449C13.9663 23.1259 13.6267 23.1174 13.3074 23.0204C12.9881 22.9235 12.7011 22.7417 12.4771 22.4944C12.2533 22.2473 12.1006 21.9441 12.0355 21.6171L11.1783 17.3417L6.65869 12.822L4.34847 12.3589L2.38351 11.965C2.05664 11.8998 1.75272 11.747 1.50564 11.5232C1.25835 11.2992 1.07653 11.0122 0.979561 10.6929C0.882595 10.3736 0.874125 10.034 0.955057 9.7103C1.03599 9.38659 1.20328 9.09092 1.43909 8.85483ZM6.8186 10.8724L2.94619 10.096L6.32006 6.73268H10.9583L6.8186 10.8724ZM15.2219 5.21703C17.681 2.75787 20.0783 2.75376 21.1124 2.8876C21.2462 3.92172 21.2421 6.31895 18.783 8.77812L12.0728 15.4883L8.51172 11.9272L15.2219 5.21703ZM13.9042 21.0538L13.1279 17.1811L17.2676 13.0414V17.68L13.9042 21.0538Z"></path><path d="M9.31827 18.3446C9.45046 17.8529 9.17864 17.3369 8.68945 17.1724C8.56178 17.1294 8.43145 17.1145 8.30512 17.1243C8.10513 17.1398 7.91519 17.2172 7.76181 17.3434C7.62613 17.455 7.51905 17.6048 7.45893 17.7835C6.97634 19.2186 5.77062 19.9878 4.52406 20.4029C4.08525 20.549 3.6605 20.644 3.29471 20.7053C3.35607 20.3395 3.45098 19.9148 3.59711 19.476C4.01221 18.2294 4.78141 17.0237 6.21648 16.5411C6.39528 16.481 6.54504 16.3739 6.65665 16.2382C6.85126 16.0016 6.92988 15.678 6.84417 15.3647C6.83922 15.3466 6.83373 15.3286 6.82767 15.3106C6.74106 15.053 6.55701 14.8557 6.33037 14.7459C6.10949 14.6389 5.84816 14.615 5.59715 14.6994C5.47743 14.7397 5.36103 14.7831 5.24786 14.8294C3.22626 15.6569 2.2347 17.4173 1.75357 18.8621C1.49662 19.6337 1.36993 20.3554 1.30679 20.8818C1.27505 21.1464 1.25893 21.3654 1.25072 21.5213C1.24662 21.5993 1.24448 21.6618 1.24337 21.7066L1.243 21.7226L1.24235 21.7605L1.2422 21.7771L1.24217 21.7827L1.24217 21.7856C1.24217 22.3221 1.67703 22.7579 2.2137 22.7579L2.2155 22.7579L2.22337 22.7578L2.23956 22.7577C2.25293 22.7575 2.27096 22.7572 2.29338 22.7567C2.33821 22.7555 2.40073 22.7534 2.47876 22.7493C2.63466 22.7411 2.85361 22.725 3.11822 22.6932C3.64462 22.6301 4.36636 22.5034 5.13797 22.2464C6.58274 21.7653 8.3431 20.7738 9.17063 18.7522C9.21696 18.639 9.26037 18.5226 9.30064 18.4029C9.30716 18.3835 9.31304 18.364 9.31827 18.3446Z"></path></svg>Did you know?</p><div class="starlight-aside__content"><p>If you create a new network and press <code dir="auto">Ctrl+S</code> to save it, SocNetV will try to save it in GraphML format by default.</p></div></aside>
+<hr>
 <h3 id="pros-and-cons-of-graphml">Pros and Cons of GraphML</h3>
 <h4 id="advantages">Advantages:</h4>
 <ul>
 <li><strong>Standardized Format</strong>: As an XML-based format, GraphML is standardized and widely supported by many graph-analysis tools (such as SocNetV, Cytoscape, yEd, etc) making it easy to exchange graph data.</li>
 <li><strong>Extensible and Flexible</strong>: With support for custom attributes, GraphML is highly flexible and can describe complex networks with rich metadata.</li>
 <li><strong>Schema Validation</strong>: GraphML supports schema validation, allowing users to ensure that graph data adheres to a predefined structure, which is useful for maintaining data integrity.</li>
+<li><strong>Supports Multirelational Networks</strong>: By using edge attributes, GraphML can represent multiple types of relations between actors.</li>
 </ul>
 <h4 id="disadvantages">Disadvantages:</h4>
 <ul>
@@ -657,11 +687,11 @@ graph LR
 <div class="mermaid"> graph TD
 pe0 --&gt;|1| pe1
 pe0 --&gt;|-1| pe2
-pe1 --&gt;|1| pe4
-pe2 --&gt;|1| pe5
+pe1 --&gt;|1| pe3
 pe2 --&gt;|1| pe4
-pe4 --&gt;|1| pe2
-pe5 --&gt;|1| pe3 </div>
+pe5 ---|1| pe3
+pe4 ---|1| pe5
+ </div>
 <hr>
 <h3 id="handling-multiple-matrices-in-pajek-files">Handling Multiple Matrices in Pajek Files</h3>
 <p>SocNetV supports Pajek files with multiple <code dir="auto">*Matrix</code> declarations. Each matrix defines a new relation between the nodes.</p>
@@ -738,15 +768,16 @@ pe5 --&gt;|1| pe3 </div>
 </ul>
 <hr>
 <h2 id="ucinet-dl-files">UCINET DL Files</h2>
-<p>UCINET’s DL (Data Language) format is widely used for representing social networks and other types of relational data. It is a simple and flexible format, primarily designed for use with the UCINET software. SocNetV supports importing DL files in specific formats, including <strong>full matrices</strong> and <strong>edge lists</strong>.</p>
+<p>UCINET’s DL (Data Language) format is widely used for representing social networks and other types of relational data. It is a simple and flexible format, primarily designed for use with the UCINET software.
+SocNetV supports importing DL files in several formats, including full matrices and edge lists, including <strong>full matrices</strong> and <strong>edge lists</strong>.</p>
 <h3 id="key-features-4">Key Features</h3>
 <ol>
 <li><strong>File Header</strong>: DL files start with the <code dir="auto">DL</code> header, followed by metadata describing the number of nodes, whether diagonals are included, and the data format.</li>
-<li><strong>Matrix or Edge List Representation</strong>: SocNetV supports DL files in both adjacency matrix and edge list formats, making it versatile for different types of network data.</li>
+<li><strong>Matrix or Edge List Representation</strong>: SocNetV supports DL files in adjacency matrix formats (FULLMATRIX) and edge list formats (EDGELIST1), making it versatile for different types of network data.</li>
 <li><strong>Node Labels</strong>: DL files can include labels for nodes, making it easier to identify nodes in the graph.</li>
 </ol>
 <h3 id="examples-6">Examples</h3>
-<h4 id="example-1-full-matrix-format">Example 1: Full Matrix Format</h4>
+<h4 id="example-1a-full-matrix-format">Example 1a: Full Matrix Format</h4>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">DL</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">N=4</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FORMAT=FULLMATRIX DIAGONAL PRESENT</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">LABELS:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Alice</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Bob</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Charlie</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">David</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">DATA:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 1 1 2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 0 2 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 0 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 0 0 0</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="DLN=4FORMAT=FULLMATRIX DIAGONAL PRESENTLABELS:AliceBobCharlieDavidDATA:0 1 1 21 0 2 10 0 0 11 0 0 0"><div></div></button></div></figure></div>
 <h5 id="explanation-8">Explanation:</h5>
 <ul>
@@ -754,7 +785,7 @@ pe5 --&gt;|1| pe3 </div>
 <li><strong>Labels</strong>: The <code dir="auto">LABELS</code> section lists the names of the nodes (e.g., Alice, Bob, Charlie, David).</li>
 <li><strong>Data</strong>: The <code dir="auto">DATA</code> section provides the adjacency matrix for the network. For instance, the value <code dir="auto">1</code> at position <code dir="auto">(1, 2)</code> indicates a connection between Alice and Bob, with a weight of <code dir="auto">1</code>.</li>
 </ul>
-<h4 id="visualization-4">Visualization:</h4>
+<h5 id="visualization-4">Visualization:</h5>
 <p>This diagram visualizes the relationships described in the full matrix format, showing both the weights and the direction of edges.</p>
 <div class="mermaid"> 
 graph TD
@@ -766,15 +797,41 @@ Bob --&gt;|1| David
 Charlie --&gt;|1| David
  </div>
 <hr>
+<h4 id="example-1b-multirelational-full-matrix-multiple-matrices">Example 1b: Multirelational Full Matrix (Multiple Matrices)</h4>
+<p>UCINET DL files can also represent <strong>multirelational networks</strong> by including <strong>multiple matrices</strong> in the same file.
+In this case, the header uses the parameter <code dir="auto">NM</code> (Number of Matrices).</p>
+<p>Each matrix represents a <strong>separate relation between the same set of nodes</strong>.</p>
+<p>Example:</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">DL</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">N=3 NM=2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FORMAT=FULLMATRIX DIAGONAL PRESENT</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">LABELS:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Alice</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Bob</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Charlie</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">LEVEL LABELS:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">"Friendship"</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">"Collaboration"</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">DATA:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 1 0</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 0 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 0</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 0</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 1 0</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="DLN=3 NM=2FORMAT=FULLMATRIX DIAGONAL PRESENTLABELS:AliceBobCharlieLEVEL LABELS:&#x22;Friendship&#x22;&#x22;Collaboration&#x22;DATA:0 1 01 0 10 0 00 0 10 0 01 1 0"><div></div></button></div></figure></div>
+<h5 id="explanation-9">Explanation</h5>
+<ul>
+<li><strong>N=3</strong> indicates the number of nodes.</li>
+<li><strong>NM=2</strong> indicates that the file contains <strong>two matrices</strong>, corresponding to two relations.</li>
+<li><strong>LABELS</strong> defines the node names.</li>
+<li><strong>LEVEL LABELS</strong> optionally provides names for each relation.</li>
+<li>The <strong>DATA section</strong> contains the matrices sequentially, one N×N matrix for each relation.</li>
+</ul>
+<p>Matrix 1 (<code dir="auto">Friendship</code>):</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 1 0</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 0 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 0</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="0 1 01 0 10 0 0"><div></div></button></div></figure></div>
+<p>Matrix 2 (<code dir="auto">Collaboration</code>):</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">0 0 0</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 1 0</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="0 0 10 0 01 1 0"><div></div></button></div></figure></div>
+<p>When imported into <strong>SocNetV</strong>, each matrix is interpreted as a <strong>separate relation layer</strong> within the same network.</p>
+<h6 id="visualization-5">Visualization</h6>
+<p>Relation 1 – Friendship:</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="mdx"><code><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#8D46B4">&#x3C;</span><span style="--0:#C5E478;--1:#3C63B3">Mermaid</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3C63B3">code</span><span style="--0:#C792EA;--1:#8D46B4">=</span><span style="--0:#DD6B68;--1:#B73936">{</span><span style="--0:#D6DEEB;--1:#403F53">`</span><span style="--0:#ECC48D;--1:#3C63B3">graph TD</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#ECC48D;--1:#3C63B3">  </span></span><span style="--0:#ECC48D;--1:#3C63B3">Alice --> Bob</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#ECC48D;--1:#3C63B3">  </span></span><span style="--0:#ECC48D;--1:#3C63B3">Bob --> Charlie</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">`</span><span style="--0:#DD6B68;--1:#B73936">}</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="<Mermaid code={&#x60;graph TD  Alice --> Bob  Bob --> Charlie&#x60;} />"><div></div></button></div></figure></div>
+<p>Relation 2 – Collaboration:</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="mdx"><code><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#8D46B4">&#x3C;</span><span style="--0:#C5E478;--1:#3C63B3">Mermaid</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3C63B3">code</span><span style="--0:#C792EA;--1:#8D46B4">=</span><span style="--0:#DD6B68;--1:#B73936">{</span><span style="--0:#D6DEEB;--1:#403F53">`</span><span style="--0:#ECC48D;--1:#3C63B3">graph TD</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#ECC48D;--1:#3C63B3">  </span></span><span style="--0:#ECC48D;--1:#3C63B3">Alice --> Charlie</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#ECC48D;--1:#3C63B3">  </span></span><span style="--0:#ECC48D;--1:#3C63B3">Charlie --> Alice</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#ECC48D;--1:#3C63B3">  </span></span><span style="--0:#ECC48D;--1:#3C63B3">Charlie --> Bob</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">`</span><span style="--0:#DD6B68;--1:#B73936">}</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#8D46B4">/></span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="<Mermaid code={&#x60;graph TD  Alice --> Charlie  Charlie --> Alice  Charlie --> Bob&#x60;} />"><div></div></button></div></figure></div>
+<hr>
 <h4 id="example-2-edge-list-format">Example 2: Edge List Format</h4>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">DL</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">N=4</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">FORMAT=EDGELIST1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">LABELS:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Alice</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Bob</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">Charlie</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">David</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">DATA:</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 2 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 3 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 4 2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">2 3 2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">2 4 1</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">3 4 1</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="DLN=4FORMAT=EDGELIST1LABELS:AliceBobCharlieDavidDATA:1 2 11 3 11 4 22 3 22 4 13 4 1"><div></div></button></div></figure></div>
-<h5 id="explanation-9">Explanation:</h5>
+<h5 id="explanation-10">Explanation:</h5>
 <ul>
 <li><strong>Header</strong>: Similar to the full matrix format, the file begins with <code dir="auto">DL</code>, followed by metadata. The format here is <code dir="auto">EDGELIST1</code>, which indicates an edge list.</li>
 <li><strong>Labels</strong>: The <code dir="auto">LABELS</code> section lists node names, just like in the full matrix example.</li>
 <li><strong>Data</strong>: The <code dir="auto">DATA</code> section lists edges in the form <code dir="auto">source target weight</code>. For instance, <code dir="auto">1 2 1</code> means Alice (node 1) is connected to Bob (node 2) with a weight of 1.</li>
 </ul>
-<h4 id="visualization-5">Visualization:</h4>
+<h4 id="visualization-6">Visualization:</h4>
 <div class="mermaid"> 
 graph TD
 Alice --&gt;|1| Bob
@@ -799,6 +856,7 @@ Charlie --&gt;|1| David
 <li><strong>Edge List Format</strong>: <code dir="auto">EDGELIST1</code> for defining edges between nodes.</li>
 <li><strong>Node Labels</strong>: SocNetV recognizes the <code dir="auto">LABELS</code> section and assigns these labels to the corresponding nodes in the graph.</li>
 <li><strong>Weighted Edges</strong>: SocNetV supports weights for both edge list and matrix formats.</li>
+<li><strong>Multiple Matrices (NM)</strong>: DL files with multiple matrices are supported. Each matrix is imported as a separate relation in the network.</li>
 </ul>
 <hr>
 <h3 id="pros-and-cons-of-ucinet-dl-files-in-socnetv">Pros and Cons of UCINET DL Files (in SocNetV)</h3>
@@ -830,12 +888,12 @@ Charlie --&gt;|1| David
 <h3 id="examples-7">Examples</h3>
 <h4 id="example-1-unvalued-edge-list">Example 1: Unvalued Edge List</h4>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 3</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">2 4</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">3 4</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="1 21 32 43 4"><div></div></button></div></figure></div>
-<h5 id="explanation-10">Explanation:</h5>
+<h5 id="explanation-11">Explanation:</h5>
 <ul>
 <li><strong>Nodes</strong>: Each pair of numbers in the edge list represents an edge between two nodes. For instance, <code dir="auto">1 2</code> indicates an edge from node <code dir="auto">1</code> to node <code dir="auto">2</code>.</li>
 <li><strong>Unvalued</strong>: This example is <strong>unvalued</strong>, meaning the edges have no weight associated with them. A <code dir="auto">1</code> is implicitly understood as the connection between the nodes.</li>
 </ul>
-<h4 id="visualization-6">Visualization:</h4>
+<h4 id="visualization-7">Visualization:</h4>
 <div class="mermaid"> 
 graph TD
 1 --&gt; 2
@@ -846,12 +904,12 @@ graph TD
 <p>This Mermaid diagram visualizes the unvalued edge list. It shows a simple directed graph where each edge connects two nodes.</p>
 <h4 id="example-2-valued-edge-list">Example 2: Valued Edge List</h4>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 2 0.5</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">1 3 1.2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">2 4 0.8</span></div></div><div class="ec-line"><div class="code"><span style="--0:#d6deeb;--1:#403f53">3 4 1.0</span></div></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="1 2 0.51 3 1.22 4 0.83 4 1.0"><div></div></button></div></figure></div>
-<h5 id="explanation-11">Explanation:</h5>
+<h5 id="explanation-12">Explanation:</h5>
 <ul>
 <li><strong>Nodes and Weights</strong>: Each line in the edge list represents a connection between two nodes, with the third column representing the weight of the edge. For example, <code dir="auto">1 2 0.5</code> means there is an edge from node <code dir="auto">1</code> to node <code dir="auto">2</code> with a weight of <code dir="auto">0.5</code>.</li>
 <li><strong>Valued Edges</strong>: This example is <strong>valued</strong>, meaning the edges are weighted with numerical values.</li>
 </ul>
-<h4 id="visualization-7">Visualization:</h4>
+<h4 id="visualization-8">Visualization:</h4>
 <div class="mermaid"> 
 graph TD
 1 --&gt;|0.5| 2
