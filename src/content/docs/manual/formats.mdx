@@ -1255,18 +1255,3 @@ SocNetV supports the following elements of edge list files:
 
 #### Reference:
 - **Edge List Format Documentation**: [Wikipedia on Edge List](https://en.wikipedia.org/wiki/Edge_list)
-
-
-
-Two-Mode Data — Crash Course
-A regular (1-mode) network has one type of actor. The adjacency matrix is square: rows and columns are the same actors, and a cell A[i][j]=1 means actor i is directly connected to actor j.
-A two-mode (bipartite) network has two distinct types of actors — traditionally called Mode 1 (e.g., people) and Mode 2 (e.g., events, clubs, organizations). The raw data matrix is rectangular: rows = Mode 1 actors, columns = Mode 2 actors. A cell B[i][j]=1 means person i attended event j. There are no direct person→person or event→event edges in the raw data — only person→event edges.
-The Davis Southern Women dataset (used in the issue) is the classic example:
-
-18 women × 14 social events
-B[i][j]=1 if woman i attended event j
-
-From this rectangular matrix you can derive two things:
-
-The bipartite graph itself — 18+14=32 nodes, two visually distinct types, edges only crossing between types. This is the true import of a .2sm file.
-A projected 1-mode network (the "acquaintance network") — computed as A = B × Bᵀ (or Bᵀ × B). This is what SocNetV currently does instead of (1), which is the bug.
