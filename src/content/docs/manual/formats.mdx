@@ -41,10 +41,12 @@ GML, Pajek, GraphViz and UCINET support is not complete. Read below for more det
 GraphML is a highly versatile and widely adopted XML-based format designed for graph data representation. SocNetV supports both reading and saving networks in GraphML format, making it an excellent choice for interoperability with other network analysis tools.
 
 ### Features of GraphML
-- **XML-Based**: Uses XML structure to represent nodes, edges, and their attributes.
-- **Custom Attributes**: Allows defining custom attributes for nodes and edges, such as labels, weights, or types.
-- **Directed and Undirected Graphs**: Supports both directed and undirected graph structures.
-- **Hierarchical Graphs**: Facilitates multi-level graph representations.
+
+* **XML-Based**: Uses XML structure to represent nodes, edges, and their attributes.
+* **Custom Attributes**: Allows defining custom attributes for nodes and edges, such as labels, weights, or types.
+* **Directed and Undirected Graphs**: Supports both directed and undirected graph structures.
+* **Hierarchical Graphs**: Facilitates multi-level graph representations.
+* **Multirelational Networks**: SocNetV supports storing multiple relations between the same set of nodes by using edge attributes (for example a `relation` attribute identifying the type of tie).
 
 ### Examples
 
@@ -90,16 +92,15 @@ Below is an example of a simple social network in GraphML, an undirected graph w
 
 All GraphML files consist of a graphml element and a variety of sub-elements: graph, node, edge, keys. SocNetV understands all of them:
 
-- Nodes: Each <node /> element has an id attribute, which uniquely identifies the node. In this case, the nodes are labeled n0 through n10.
+* Nodes: Each `<node />` element has an id attribute, which uniquely identifies the node. In this case, the nodes are labeled n0 through n10.
 
-- Edges: Each <edge /> element defines a relationship between two nodes, indicated by source and target. For example, <edge source="n0" target="n2"/> indicates an edge from node n0 to node n2.
+* Edges: Each `<edge />` element defines a relationship between two nodes, indicated by source and target. For example, `<edge source="n0" target="n2"/>` indicates an edge from node n0 to node n2.
 
-- Graph Structure: The graph is undirected as indicated by the edgedefault="undirected" attribute in the <graph /> element.
-
+* Graph Structure: The graph is undirected as indicated by the `edgedefault="undirected"` attribute in the `<graph />` element.
 
 Here is the visualization of the above example using **Mermaid**, which demonstrates the directed graph structure:
-<Mermaid code={`
-graph TD
+
+<Mermaid code={`graph TD
     n0 --> n2
     n1 --> n2
     n2 --> n3
@@ -111,18 +112,81 @@ graph TD
     n6 --> n8
     n8 --> n7
     n8 --> n9
-    n8 --> n10
-`} />
+    n8 --> n10`} />
 
 And here's the visualization of the above example using **SocNetV** where we have applied an FDP layout (*Kamada-Kawai*) for the node location and a prominence-based model (*Betweenness Centrality*) for the node sizes/colors:
 
 ![SocNetV visualizing a simple undirected graph with two 11 nodes and 12 edges from a GraphML file](/data/uploads/screenshots/32/socnetv-32-example-graphml.png)
+
+---
+
+#### Example 2: A multirelational GraphML network
+
+GraphML can also represent **multirelational networks**, where multiple types of ties exist between the same actors.
+
+In **SocNetV**, multirelational networks are stored by using **multiple `<graph>` elements inside the same GraphML document**, where **each `<graph>` represents one relation (layer) of the network**.
+
+Example: a small network with **two relations** between the same actors.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+
+  <!-- Relation 1 -->
+  <graph id="relation_1" edgedefault="directed">
+    <node id="1"/>
+    <node id="2"/>
+    <node id="3"/>
+
+    <edge source="1" target="2"/>
+    <edge source="2" target="3"/>
+  </graph>
+
+  <!-- Relation 2 -->
+  <graph id="relation_2" edgedefault="directed">
+    <node id="1"/>
+    <node id="2"/>
+    <node id="3"/>
+
+    <edge source="1" target="2"/>
+    <edge source="3" target="1"/>
+  </graph>
+
+</graphml>
+```
+
+**Explanation**
+
+* Each `<graph>` element represents **one relation** in the multirelational network.
+* The **same set of nodes may appear in multiple relations**.
+* The edges inside each `<graph>` belong **only to that specific relation**.
+* When loaded in SocNetV, each `<graph>` becomes a **separate relation layer** that can be selected, edited, or analyzed independently.
+
+Visualization of the two relations:
+
+Relation 1:
+
+<Mermaid code={`graph TD
+    1 --> 2
+    2 --> 3
+`} />
+
+Relation 2:
+
+<Mermaid code={`graph TD
+    1 --> 2
+    3 --> 1
+`} />
+
+---
+
 
 ### How to Use GraphML Files in SocNetV
 
 #### Loading GraphML Files
 
 To load a GraphML file in SocNetV:
+
 1. Go to **File > Load**.
 2. Select the desired `.graphml` file.
 3. The network will be rendered on the canvas with all its nodes, edges, and attributes.
@@ -130,30 +194,31 @@ To load a GraphML file in SocNetV:
 #### Saving to GraphML files
 
 To save a network as a GraphML file:
+
 1. Go to **File > Save As**.
 2. Choose the **GraphML** format from the list.
 3. Specify the filename and save.
 
-:::tip[Did you know?]
-If you create a new network and press `Ctrl+S` to save it, SocNetV will try to save it in GraphML format by default. 
-:::
-
+---
 
 ### Pros and Cons of GraphML
 
 #### Advantages:
-- **Standardized Format**: As an XML-based format, GraphML is standardized and widely supported by many graph-analysis tools (such as SocNetV, Cytoscape, yEd, etc) making it easy to exchange graph data.
-- **Extensible and Flexible**: With support for custom attributes, GraphML is highly flexible and can describe complex networks with rich metadata.
-- **Schema Validation**: GraphML supports schema validation, allowing users to ensure that graph data adheres to a predefined structure, which is useful for maintaining data integrity.
+
+* **Standardized Format**: As an XML-based format, GraphML is standardized and widely supported by many graph-analysis tools (such as SocNetV, Cytoscape, yEd, etc) making it easy to exchange graph data.
+* **Extensible and Flexible**: With support for custom attributes, GraphML is highly flexible and can describe complex networks with rich metadata.
+* **Schema Validation**: GraphML supports schema validation, allowing users to ensure that graph data adheres to a predefined structure, which is useful for maintaining data integrity.
+* **Supports Multirelational Networks**: By using edge attributes, GraphML can represent multiple types of relations between actors.
 
 #### Disadvantages:
-- **File Size**: Since GraphML is an XML-based format, it can be larger in size compared to binary formats, especially for large graphs. This can make file handling and transfer slower.
-- **Complexity for Simple Graphs**: For simpler, smaller networks, GraphML may be overkill compared to simpler formats like GML or CSV, which may be easier to use for basic graph tasks.
-- **Parsing Overhead**: Parsing XML can be more computationally expensive than parsing other formats, especially when working with large graphs, potentially affecting performance.
+
+* **File Size**: Since GraphML is an XML-based format, it can be larger in size compared to binary formats, especially for large graphs. This can make file handling and transfer slower.
+* **Complexity for Simple Graphs**: For simpler, smaller networks, GraphML may be overkill compared to simpler formats like GML or CSV, which may be easier to use for basic graph tasks.
+* **Parsing Overhead**: Parsing XML can be more computationally expensive than parsing other formats, especially when working with large graphs, potentially affecting performance.
 
 #### Reference
-- **GraphML Official Specification**: [GraphML Specification](https://graphml.graphdrawing.org/)
 
+* **GraphML Official Specification**: [GraphML Specification](https://graphml.graphdrawing.org/)
 
 
 ---
@@ -752,11 +817,11 @@ This Mermaid diagram visualizes the graph described in the Pajek file, showing t
 <Mermaid code={`graph TD
   pe0 -->|1| pe1
   pe0 -->|-1| pe2
-  pe1 -->|1| pe4
-  pe2 -->|1| pe5
+  pe1 -->|1| pe3
   pe2 -->|1| pe4
-  pe4 -->|1| pe2
-  pe5 -->|1| pe3`} />
+  pe5 ---|1| pe3
+  pe4 ---|1| pe5
+`} />
 
 ---
 
@@ -888,17 +953,18 @@ SocNetV supports the following elements of Pajek files:
 
 ## UCINET DL Files
 
-UCINET's DL (Data Language) format is widely used for representing social networks and other types of relational data. It is a simple and flexible format, primarily designed for use with the UCINET software. SocNetV supports importing DL files in specific formats, including **full matrices** and **edge lists**.
+UCINET's DL (Data Language) format is widely used for representing social networks and other types of relational data. It is a simple and flexible format, primarily designed for use with the UCINET software. 
+SocNetV supports importing DL files in several formats, including full matrices and edge lists, including **full matrices** and **edge lists**.
 
 ### Key Features
 
 1. **File Header**: DL files start with the `DL` header, followed by metadata describing the number of nodes, whether diagonals are included, and the data format.
-2. **Matrix or Edge List Representation**: SocNetV supports DL files in both adjacency matrix and edge list formats, making it versatile for different types of network data.
+2. **Matrix or Edge List Representation**: SocNetV supports DL files in adjacency matrix formats (FULLMATRIX) and edge list formats (EDGELIST1), making it versatile for different types of network data.
 3. **Node Labels**: DL files can include labels for nodes, making it easier to identify nodes in the graph.
 
 ### Examples
 
-#### Example 1: Full Matrix Format
+#### Example 1a: Full Matrix Format
 
 ```
 DL
@@ -922,7 +988,7 @@ DATA:
 - **Labels**: The `LABELS` section lists the names of the nodes (e.g., Alice, Bob, Charlie, David).
 - **Data**: The `DATA` section provides the adjacency matrix for the network. For instance, the value `1` at position `(1, 2)` indicates a connection between Alice and Bob, with a weight of `1`.
 
-#### Visualization:
+##### Visualization:
 
 This diagram visualizes the relationships described in the full matrix format, showing both the weights and the direction of edges.
 
@@ -937,6 +1003,85 @@ graph TD
   Charlie -->|1| David
 `} />
 
+
+---
+
+#### Example 1b: Multirelational Full Matrix (Multiple Matrices)
+
+UCINET DL files can also represent **multirelational networks** by including **multiple matrices** in the same file.
+In this case, the header uses the parameter `NM` (Number of Matrices).
+
+Each matrix represents a **separate relation between the same set of nodes**.
+
+Example:
+
+```
+DL
+N=3 NM=2
+FORMAT=FULLMATRIX DIAGONAL PRESENT
+LABELS:
+Alice
+Bob
+Charlie
+LEVEL LABELS:
+"Friendship"
+"Collaboration"
+DATA:
+0 1 0
+1 0 1
+0 0 0
+
+0 0 1
+0 0 0
+1 1 0
+```
+
+##### Explanation
+
+* **N=3** indicates the number of nodes.
+* **NM=2** indicates that the file contains **two matrices**, corresponding to two relations.
+* **LABELS** defines the node names.
+* **LEVEL LABELS** optionally provides names for each relation.
+* The **DATA section** contains the matrices sequentially, one N×N matrix for each relation.
+
+Matrix 1 (`Friendship`):
+
+```
+0 1 0
+1 0 1
+0 0 0
+```
+
+Matrix 2 (`Collaboration`):
+
+```
+0 0 1
+0 0 0
+1 1 0
+```
+
+When imported into **SocNetV**, each matrix is interpreted as a **separate relation layer** within the same network.
+
+###### Visualization
+
+Relation 1 – Friendship:
+
+```mdx
+<Mermaid code={`graph TD
+  Alice --> Bob
+  Bob --> Charlie
+`} />
+```
+
+Relation 2 – Collaboration:
+
+```mdx
+<Mermaid code={`graph TD
+  Alice --> Charlie
+  Charlie --> Alice
+  Charlie --> Bob
+`} />
+```
 
 ---
 
@@ -996,6 +1141,7 @@ SocNetV supports the following key features of UCINET DL files:
 - **Edge List Format**: `EDGELIST1` for defining edges between nodes.
 - **Node Labels**: SocNetV recognizes the `LABELS` section and assigns these labels to the corresponding nodes in the graph.
 - **Weighted Edges**: SocNetV supports weights for both edge list and matrix formats.
+- **Multiple Matrices (NM)**: DL files with multiple matrices are supported. Each matrix is imported as a separate relation in the network.
 
 ---
 
