@@ -741,7 +741,7 @@ pe4 ---|1| pe5
 <p>SocNetV supports the following elements of Pajek files:</p>
 <ul>
 <li><strong>Network Declaration</strong>: <code dir="auto">*Network</code> header to define the start of the network file.</li>
-<li><strong>Node Definitions</strong>: <code dir="auto">*Vertices</code> followed by a list of nodes with their labels, colors, shapes, and optional positions.</li>
+<li><strong>Node Definitions</strong>: <code dir="auto">*Vertices</code> followed by a list of nodes with their labels, colors, shapes, and optional positions. Node labels must be enclosed in double quotes (e.g. 1 “Alice Smith”); unquoted multi-word labels are ambiguous and will be parsed incorrectly.</li>
 <li><strong>Edge Definitions</strong>: <code dir="auto">*Arcs</code> followed by pairs of node IDs indicating directed connections, with optional weights and colors.</li>
 <li><strong>Edge Definitions</strong>: <code dir="auto">*Edges</code> for undirected relationships between nodes.</li>
 <li><strong>ArcsList</strong>: The <code dir="auto">*ArcsList</code> tag for representing multiple outgoing edges from a node in compact form.</li>
