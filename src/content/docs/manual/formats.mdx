@@ -921,7 +921,7 @@ This ensures deterministic round-trip behavior for multirelational Pajek files.
 SocNetV supports the following elements of Pajek files:
 
 * **Network Declaration**: `*Network` header to define the start of the network file.
-* **Node Definitions**: `*Vertices` followed by a list of nodes with their labels, colors, shapes, and optional positions.
+* **Node Definitions**: `*Vertices` followed by a list of nodes with their labels, colors, shapes, and optional positions. Node labels must be enclosed in double quotes (e.g. 1 "Alice Smith"); unquoted multi-word labels are ambiguous and will be parsed incorrectly.
 * **Edge Definitions**: `*Arcs` followed by pairs of node IDs indicating directed connections, with optional weights and colors.
 * **Edge Definitions**: `*Edges` for undirected relationships between nodes.
 * **ArcsList**: The `*ArcsList` tag for representing multiple outgoing edges from a node in compact form.
