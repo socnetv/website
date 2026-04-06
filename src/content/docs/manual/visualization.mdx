@@ -7,7 +7,7 @@ layout: "../../../layouts/BaseLayout.astro"
 import Mermaid from "../../../components/Mermaid.astro";
 
 
-SocNetV supports two kinds of network visualizations: **Prominence-based Placement** and **Force-Directed Placement**, each offering various layout algorithms.
+SocNetV supports three kinds of network visualizations: **Prominence-based Placement**, **Force-Directed Placement**, and **Ego-Centered Radial Layout**, each offering various layout algorithms.
 
 You can select visualizations from the menu "Layout" or by clicking on the checkboxes on the left dock.
 
@@ -176,7 +176,47 @@ graph LR
 ---
 
 :::caution
-Force-directed layouts, such as Fruchterman-Reingold and Spring Embedder, can be computationally expensive for large networks. These algorithms involve iterative calculations for every node and edge in the network, which may lead to longer processing times as the size of the network grows. Therefore, for large networks, consider using simpler layouts or applying them to smaller subgraphs.
+Force-directed layouts, such as Fruchterman-Reingold and Spring Embedder, can be computationally expensive for large networks. 
+These algorithms involve iterative calculations for every node and edge in the network, which may lead to longer processing times as the size of the network grows. 
+For large networks, consider using the **Ego Radial Layout** to focus on a neighborhood of interest, or apply force-directed layouts to smaller filtered subgraphs.
+:::
+
+---
+
+
+## Ego-Centered Radial Layout
+
+The **Ego Radial Layout** is designed for focused exploration of large networks. It places a single selected node (the *ego*) at the canvas center and arranges all other nodes in two concentric rings based on their relationship to the ego.
+
+### Ring Structure
+
+| Ring | Contents | Radius |
+|------|----------|--------|
+| Inner | Ego's 1-hop out-neighbors | 35% of max canvas radius |
+| Outer | All remaining enabled nodes | 75% of max canvas radius |
+
+Guide circles are drawn on the canvas to mark each ring boundary.
+
+### Directed vs. Undirected Networks
+
+In **directed** networks, only nodes reachable via the ego's **out-edges** appear on the inner ring. Nodes that point *to* the ego but are not pointed to by it appear on the outer ring.
+
+In **undirected** networks, all adjacent nodes appear on the inner ring.
+
+### How to Apply
+
+- Select one node on the canvas, then choose `Layout` → `Ego Radial Layout`, or press `Ctrl+Alt+E`.
+- Right-click any node and select `Ego Radial Layout` from the context menu (no prior selection needed).
+
+**When to Use**:
+
+The Ego Radial Layout is ideal when you want to:
+- Inspect the immediate neighborhood of a specific node in a large network.
+- Visually separate a node's direct connections from the rest of the graph.
+- Combine with the **Ego Network filter** (`Edit` → `Filter Nodes` → `Ego Network`) to hide all non-neighborhood nodes entirely.
+
+:::note
+The Ego Radial Layout only repositions nodes — it does not change the graph structure or hide any nodes. To hide non-neighborhood nodes, use the Ego Network filter separately.
 :::
 
 ---

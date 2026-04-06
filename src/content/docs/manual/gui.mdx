@@ -50,6 +50,7 @@ At the top of the window, the menu bar provides access to all application featur
 - **Layout**: Visualization customization:
   - Apply layouts based on prominence metrics (e.g., Degree Centrality).
   - Use force-directed algorithms (e.g., Kamada-Kawai, Fruchterman-Reingold) for intuitive network visualization.
+  - Apply an ego-centered radial layout to focus on a selected node and its neighborhood.
 
 - **Options**: General application settings:
   - Toggle visibility of edges, arrows, and labels.
@@ -198,9 +199,11 @@ To create a new node:
 You can move a node by dragging it with the left mouse button. When dragging a node, SocNetV highlights all its adjacent edges.
 
 Right-clicking on a node opens a context menu to:
+- Change node properties (e.g., color, size, label).
 - Delete the node.
 - Add an edge.
-- Change node properties (e.g., color, size, label).
+- Focus the layout on that node.
+- Apply an **Ego Radial Layout** centered on that node (`Layout` menu or `Ctrl+Alt+E`).
 
 All nodes are tagged with their node number by default. To display labels, enable the option in `Options` -> `Node` -> `Display Labels`.
 
@@ -350,3 +353,36 @@ For high-quality output, export to vector-based PDF.
 ---
 
 
+---
+
+## Exploring Large Networks
+
+SocNetV includes several tools designed to help you explore and make sense of large, dense networks.
+
+### Ego Radial Layout
+
+The **Ego Radial Layout** focuses the visualization on a single node and its immediate neighborhood.
+
+To apply it:
+- **Select** one node on the canvas, then go to `Layout` → `Ego Radial Layout`, or press `Ctrl+Alt+E`.
+- **Right-click** any node and select `Ego Radial Layout` from the context menu.
+
+The selected node is placed at the **canvas center**. Its 1-hop out-neighbors are arranged on an **inner ring**, and all remaining nodes are placed on an **outer ring**. Guide circles are drawn to mark each ring.
+
+:::note
+In directed networks, only **out-edges** of the ego node determine the inner ring. Nodes that only point *to* the ego (in-neighbors) appear on the outer ring unless they are also out-neighbors.
+:::
+
+This layout pairs well with the **Ego Network filter** (`Edit` → `Filter Nodes` → `Ego Network`), which hides all nodes outside the ego's neighborhood entirely.
+
+---
+
+### Force-Directed Layouts for Large Graphs
+
+SocNetV's force-directed layout algorithms have been optimized for large networks:
+
+- **Fruchterman-Reingold**: Uses O(1) adjacency lookup per iteration and exits early when the layout converges, significantly reducing computation time for dense graphs.
+- **Kamada-Kawai**: Improved boundary handling prevents nodes from being teleported to random positions when they move outside the canvas area.
+- **Eades Spring Embedder**: Faithful implementation of the 1984 model with linear cooling and convergence detection.
+
+To apply a force-directed layout, use the **Control Panel** → `By Force-Directed Model`, or go to `Layout` → `Force-Directed`.
