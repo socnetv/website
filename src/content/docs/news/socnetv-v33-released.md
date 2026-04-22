@@ -24,7 +24,7 @@ We extracted and stabilized **DistanceEngine**, and added:
 - deterministic “golden” regression outputs
 - **performance benchmark guardrails** to help keep refactors honest over time
 
-**🧪 New headless regression harness: `socnetv-cli`**
+**🧪 New headless regression harness: `SocNetV`**
 v3.3 introduces **`socnetv-cli`**, a modular regression harness designed to protect algorithmic correctness during refactors.
 It supports schema-versioned JSON outputs and committed baselines, with kernels for:
 - distance (v1)
