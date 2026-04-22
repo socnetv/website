@@ -80,7 +80,7 @@ We extracted and stabilized &lt;strong&gt;DistanceEngine&lt;/strong&gt;, and add
 &lt;li&gt;deterministic “golden” regression outputs&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;performance benchmark guardrails&lt;/strong&gt; to help keep refactors honest over time&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;🧪 New headless regression harness: &lt;code dir=&quot;auto&quot;&gt;socnetv-cli&lt;/code&gt;&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;🧪 New headless regression harness: &lt;code dir=&quot;auto&quot;&gt;SocNetV&lt;/code&gt;&lt;/strong&gt;
 v3.3 introduces &lt;strong&gt;&lt;code dir=&quot;auto&quot;&gt;socnetv-cli&lt;/code&gt;&lt;/strong&gt;, a modular regression harness designed to protect algorithmic correctness during refactors.
 It supports schema-versioned JSON outputs and committed baselines, with kernels for:&lt;/p&gt;
 &lt;ul&gt;
