@@ -66,6 +66,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Introduction', slug: 'manual/intro' },
 						{ label: 'User Interface', slug: 'manual/gui' },
+						{ label: 'Data Management', slug: 'manual/data' },
 						{ label: 'Formats', slug: 'manual/formats' },
 						{ label: 'Generate', slug: 'manual/generate' },
 						{ label: 'Analysis', slug: 'manual/analysis' },

@@ -40,8 +40,9 @@ At the top of the window, the menu bar provides access to all application featur
 
 - **Edit**: Tools for modifying the network:
   - Add or remove nodes and edges.
-  - Change node and edge properties (color, size, weight, labels, etc.).
-  - Apply filters to isolate specific parts of the network.
+  - Change node and edge properties (color, size, weight, labels, custom attributes, etc.).
+  - **Filter** submenu: non-destructive exploration filters (ego network, focus on selection, attribute-based, centrality, edge weight) and restore actions.
+  - Toggle the **Data Table dock** (`Ctrl+T`) for tabular node/edge editing, export, and import.
 
 - **Analyze**: Advanced analysis tools:
   - Compute graph and network metrics like adjacency matrices, clustering coefficients, centrality measures, and community detection.
@@ -199,11 +200,13 @@ To create a new node:
 You can move a node by dragging it with the left mouse button. When dragging a node, SocNetV highlights all its adjacent edges.
 
 Right-clicking on a node opens a context menu to:
-- Change node properties (e.g., color, size, label).
+- Change node properties (e.g., color, size, label, custom attributes).
 - Delete the node.
 - Add an edge.
-- Focus the layout on that node.
-- Apply an **Ego Radial Layout** centered on that node (`Layout` menu or `Ctrl+Alt+E`).
+- Apply an **Ego Radial Layout** centered on that node (`Ctrl+Alt+E`).
+- **Focus on Ego Network**: hide all nodes except the selected node and its direct neighbors (`Ctrl+X, Ctrl+F`).
+- **Focus on Selection**: hide all nodes not in the current selection (`Ctrl+X, Ctrl+S`).
+- **Restore All Nodes**: reveal all nodes hidden by any active filter (`Ctrl+X, Ctrl+R`).
 
 All nodes are tagged with their node number by default. To display labels, enable the option in `Options` -> `Node` -> `Display Labels`.
 
@@ -386,3 +389,136 @@ SocNetV's force-directed layout algorithms have been optimized for large network
 - **Eades Spring Embedder**: Faithful implementation of the 1984 model with linear cooling and convergence detection.
 
 To apply a force-directed layout, use the **Control Panel** → `By Force-Directed Model`, or go to `Layout` → `Force-Directed`.
+
+---
+
+## Filtering and Graph Exploration
+
+SocNetV v3.5 introduces a comprehensive **non-destructive filtering system** that lets you temporarily hide nodes and edges to focus on the parts of a network that matter — without deleting anything. All filters are reversible and stackable.
+
+### How Filters Work
+
+Every filter operation pushes an entry onto an internal **snapshot/restore stack**. The graph structure is never modified — only the *visibility* of nodes and edges changes. You can apply multiple filters in sequence. Restoring reverses the last applied filter, or you can clear all filters at once.
+
+:::note
+Filters persist across layout changes and analysis operations. Centrality scores and other metrics are computed on the **visible** subgraph when filters are active.
+:::
+
+---
+
+### Where to Find Filter Actions
+
+All filter actions are available from multiple entry points:
+
+| Entry point | How to access |
+|---|---|
+| Menu | **Edit → Filter Nodes / Filter Edges** |
+| Toolbar | Dedicated filter group (distinct icon per action) |
+| Control Panel | **Filter** combo in the *Network* group |
+| Right-click menu | Right-click any node on the canvas |
+| Keyboard | See shortcuts below |
+
+---
+
+### Ego Network Filter
+
+**Focus on Ego Network** shows only a selected node (the *ego*) and its immediate out-neighbors; all other nodes and all non-incident edges are hidden.
+
+- **Shortcut**: `Ctrl+X, Ctrl+F`
+- **Right-click menu**: *Focus on Ego Network*
+- **Menu**: Edit → Filter Nodes → Ego Network
+
+A single click on the canvas or the Restore action brings everything back.
+
+:::tip
+Pair this filter with the **Ego Radial Layout** (`Ctrl+Alt+E`) to both hide non-neighborhood nodes *and* rearrange the visible ones into a clear radial view.
+:::
+
+---
+
+### Focus on Selection
+
+**Focus on Selection** hides all nodes not currently selected, and all edges whose source and target are not both in the selection. Use group selection (drag a rectangle) or `Ctrl+click` to build the selection first.
+
+- **Shortcut**: `Ctrl+X, Ctrl+S`
+- **Right-click menu**: *Focus on Selection*
+- **Menu**: Edit → Filter Nodes → Selection
+
+**Edge cases**:
+- No selection → no action.
+- Single node selected → that node stays visible with no edges.
+
+---
+
+### Filter by Attribute
+
+**Filter by Attribute** opens a dialog where you define a condition to hide nodes or edges that do not match.
+
+- **Shortcut**: `Ctrl+X, Ctrl+A`
+- **Menu**: Edit → Filter Nodes/Edges → By Attribute
+
+In the dialog:
+
+| Field | Options |
+|---|---|
+| **Scope** | Nodes / Edges / Both |
+| **Key** | Select from existing attribute keys in the graph |
+| **Operator** | `=` `≠` `>` `<` `≥` `≤` `contains` |
+| **Value** | Free text (numeric-aware: compared as numbers when both sides parse as `double`; otherwise lexicographic; `contains` is case-insensitive substring) |
+
+Click **Apply** to activate the filter.
+
+See [Data Management](/manual/data) for how to add custom attributes to nodes and edges.
+
+---
+
+### Filter Edges by Weight
+
+**Filter Edges by Weight** hides edges whose weight falls below (or above) a threshold you set in the dialog.
+
+- **Menu**: Edit → Filter Edges → By Weight
+
+To re-enable all hidden edges, use **Restore All Edges** (`Ctrl+E, Ctrl+R`).
+
+---
+
+### Filter Nodes by Centrality
+
+The existing **Filter Nodes by Centrality** action now integrates into the unified snapshot/restore stack: **Restore All Nodes** also reverses centrality-based filters.
+
+---
+
+### Restore All Nodes and Restore All Edges
+
+| Action | Shortcut | What it does |
+|---|---|---|
+| **Restore All Nodes** | `Ctrl+X, Ctrl+R` | Pops the entire node-filter history stack, making all hidden nodes visible again. Works for ego, selection, attribute, and centrality filters. |
+| **Restore All Edges** | `Ctrl+E, Ctrl+R` | Re-enables all edges hidden by the weight filter. |
+
+Both are available in the **Edit → Filter** menu and the node right-click context menu.
+
+---
+
+### Filter Bar
+
+When any filter is active, a **Filter Bar** appears automatically as a thin strip between the toolbar and the canvas. It disappears automatically when no filters are active.
+
+Each active filter condition is shown as a **chip**, for example:
+
+```
+[ Nodes: ego network × ]  [ Nodes: type = investor × ]  [Clear all]
+```
+
+- The **×** on the most recently applied chip removes that filter and pops one entry from the stack.
+- Chips for earlier filters show a disabled × with a tooltip explaining the order constraint — filters must be removed in reverse order of application.
+- **Clear all** removes every active filter in a single click.
+
+---
+
+### Combining Filters
+
+Filters compose by stacking — each application narrows down the visible set further, producing an AND effect. Example workflows:
+
+- Select a cluster of nodes → **Focus on Selection** → apply **Ego Radial Layout** to visualize the subgraph cleanly.
+- **Filter by Attribute** (`type = investor`) → then **Filter by Centrality** (top 20%) to find the most connected investors.
+- **Ego Network** filter → export the visible nodes as CSV from the [Data Table](/manual/data) for further analysis.

@@ -1,0 +1,229 @@
+---
+title: "Data Management"
+description: "Managing node and edge attributes, the data table dock, and structured CSV/JSON export and import in SocNetV."
+layout: "../../../layouts/BaseLayout.astro"
+---
+
+SocNetV v3.5 introduces a complete **data management layer**: attach arbitrary key/value attributes to nodes and edges, inspect and edit them in a live table dock, export to CSV or JSON, and re-import from any spreadsheet tool — all without leaving SocNetV.
+
+---
+
+## Node and Edge Custom Attributes
+
+Beyond the built-in properties (label, size, color, shape for nodes; weight, label, color for edges), you can attach **arbitrary custom key/value pairs** to any node or edge. Custom attributes travel with the graph and are preserved when saving to **GraphML** format.
+
+### Node Custom Attributes
+
+Open the **Node Properties** dialog (double-click a node, or right-click → *Edit Node*) to:
+- View existing custom attributes in the attributes table.
+- Add a new key/value pair.
+- Edit or delete existing pairs.
+
+Keys must be unique per node. Values are always stored as strings; numeric comparisons in the [filter dialog](/manual/gui#filter-by-attribute) convert them on the fly.
+
+### Edge Properties Dialog and Edge Custom Attributes
+
+Right-click any edge on the canvas, or select an edge and click the **Edge Properties** toolbar button, to open the **Edge Properties dialog**. From there you can:
+
+- Edit the edge **label**, **weight**, and **color**.
+- Add, edit, or remove **custom key/value attribute pairs** for that edge.
+
+:::note
+**GraphML only.** Custom attributes (node and edge) are saved and restored fully in GraphML format via unique `d2000+` key definitions. When saving to other formats (Pajek, GML, UCINET, etc.), custom attributes are not exported.
+:::
+
+---
+
+## Data Table Dock
+
+The **Data Table dock** is a dockable panel that shows all nodes and edges of the current graph in a tabular view with inline editing, live search, and structured export/import.
+
+**Toggle**: press `Ctrl+T`, or use **Edit → Show Data Table** / **Options → Show Data Table**.
+
+The panel docks at the bottom of the main window and auto-refreshes whenever a file is loaded or the graph is reset (while the panel is open).
+
+---
+
+### Nodes Tab
+
+| Column | Editable | Notes |
+|---|---|---|
+| **#** | No (shaded) | Node number |
+| **Label** | Yes | Double-click to edit inline |
+| **Visible** | No (shaded) | Reflects current filter state |
+| **Shape** | No (shaded) | |
+| **Size** | Yes | |
+| **Color** | Yes | Hex color string, e.g. `#ff0000` |
+| *custom attribute keys* | Yes | One dynamic column per key present in the graph |
+
+All edits write back to the graph immediately.
+
+---
+
+### Edges Tab
+
+| Column | Editable | Notes |
+|---|---|---|
+| **Source** | No (shaded) | Source node number |
+| **Target** | No (shaded) | Target node number |
+| **Relation** | No (shaded) | Active relation name |
+| **Weight** | Yes | |
+| **Label** | Yes | |
+| **Color** | Yes | Hex color string |
+| *custom attribute keys* | Yes | One dynamic column per key present in the graph |
+
+---
+
+### Search, Sort, and Refresh
+
+- **Live search bar**: type to filter all columns simultaneously (case-insensitive). Non-matching rows are hidden instantly; the graph itself is not affected.
+- **Column headers**: click to sort ascending or descending.
+- **Refresh button**: reload all data from the current graph state (useful after external changes).
+
+---
+
+## Exporting Node/Edge Data as CSV or JSON
+
+### From the Data Table dock
+
+Each tab has **Export CSV** and **Export JSON** buttons. They export the **currently visible rows** — rows hidden by the search filter are excluded. What you see is what you get.
+
+### From the Network menu
+
+**Network → Export to other…** provides four actions that always export **all rows**, ignoring any active search filter:
+
+- **Nodes as CSV** / **Edges as CSV**
+- **Nodes as JSON** / **Edges as JSON**
+
+The status bar shows the export file path on success.
+
+### File formats
+
+**CSV** — RFC 4180 with a header row. Example:
+
+```
+#,Label,Size,Color,type,department
+1,Alice,8,#ff0000,investor,finance
+2,Bob,5,#0000ff,manager,operations
+```
+
+**JSON** — an array of objects, one object per node/edge:
+
+```json
+[
+  { "#": 1, "Label": "Alice", "Size": 8, "Color": "#ff0000", "type": "investor" },
+  { "#": 2, "Label": "Bob",   "Size": 5, "Color": "#0000ff", "type": "manager"  }
+]
+```
+
+---
+
+## Importing Attributes from CSV or JSON
+
+Each tab in the Data Table dock has **Import CSV** and **Import JSON** buttons.
+
+### Step-by-step
+
+1. Click **Import CSV** (or **Import JSON**) in the Nodes or Edges tab.
+2. Browse to your file. A preview of the first 8 rows appears so you can verify the content.
+3. Map columns:
+   - **Nodes scope**: choose the **ID column** (the column holding node numbers or labels) and set **Match by** to *Node number* or *Node label*.
+   - **Edges scope**: choose the **Source** and **Target** columns. Common names (`source`, `src`, `target`, `tgt`, `dest`) are auto-detected and pre-selected.
+4. Click **Import**.
+
+The table auto-refreshes and the status bar reports how many rows were matched.
+
+### Column routing rules
+
+| Column name | Effect on import |
+|---|---|
+| `Label` (nodes) | Updates node label |
+| `Size` (nodes) | Updates node size |
+| `Color` (nodes or edges) | Updates color |
+| `Weight` (edges) | Updates edge weight |
+| `Label` (edges) | Updates edge label |
+| `Visible`, `Shape` (nodes) | **Read-only — silently skipped** |
+| `Relation` (edges) | **Read-only — silently skipped** |
+| Any other column | Added or updated as a **custom attribute** |
+
+Columns absent from the import file leave existing values unchanged — the import is purely additive/overwriting for the columns it touches.
+
+---
+
+## Spreadsheet-based Bulk Attribute Editing
+
+Combining export and import enables a powerful **external bulk-editing workflow** using any spreadsheet application (Excel, LibreOffice Calc, Google Sheets, etc.).
+
+### Workflow
+
+```
+1.  Open the Data Table dock  (Ctrl+T)
+2.  Switch to the Nodes or Edges tab
+3.  Click  Export CSV  (or Export JSON)
+4.  Open the file in your spreadsheet editor
+5.  Edit values freely — each row can have different values
+6.  Save the file (keep the same format)
+7.  Click  Import CSV  (or Import JSON)  in the same tab
+8.  The table refreshes; the status bar reports matched rows
+9.  Save the graph as GraphML  (Ctrl+S)  to persist the changes
+```
+
+### What can be edited
+
+**Nodes**
+
+| Column | Effect |
+|---|---|
+| `Label` | Updates node label |
+| `Size` | Updates node size |
+| `Color` | Updates color (hex) |
+| `Visible`, `Shape` | Skipped silently |
+| Any other column | Added/updated as a custom attribute |
+
+**Edges**
+
+| Column | Effect |
+|---|---|
+| `Weight` | Updates edge weight |
+| `Label` | Updates edge label |
+| `Color` | Updates color (hex) |
+| `Relation` | Skipped silently |
+| Any other column | Added/updated as a custom attribute |
+
+### Key properties
+
+- **Heterogeneous**: each node/edge can have a different value — unlike in-app operations that assign one value to many targets at once.
+- **Non-destructive by default**: only columns present in the file are touched; omitted columns are left unchanged.
+- **Full lossless roundtrip**: exporting then re-importing without edits is a no-op — no duplicate columns, no data loss.
+- **External-tool-friendly**: any tool that reads/writes CSV or JSON works; no plugin required.
+
+### Example: annotating nodes from an external analysis tool
+
+You have a Python script that computes a custom `community` label for each node and writes the results to `communities.csv`:
+
+```
+#,community
+1,A
+2,A
+3,B
+4,C
+```
+
+Import this file in the Nodes tab (ID column = `#`, match by node number). The `community` column becomes a custom attribute on each node. You can then use [Filter by Attribute](/manual/gui#filter-by-attribute) (`community = A`) to isolate that community in the visualization.
+
+:::tip
+Save as **GraphML** after importing to persist your custom attributes. They will be available on the next file load and will appear as column headers in the Data Table dock.
+:::
+
+---
+
+## Combining Data Management with Filtering
+
+Custom attributes unlock attribute-based filtering. The typical workflow:
+
+1. Import or manually enter attributes (e.g. `type`, `country`, `score`).
+2. Use **Edit → Filter → By Attribute** (`Ctrl+X, Ctrl+A`) to show only nodes/edges matching a condition (e.g. `type = investor`, `score > 0.8`).
+3. Export the *visible* rows from the Data Table dock to extract the filtered subset.
+4. Or apply the **Ego Network** filter on a selected node, then export its neighborhood's data.
+
+See [Filtering and Graph Exploration](/manual/gui#filtering-and-graph-exploration) for the full filter reference.

@@ -27,6 +27,8 @@ If you create a new network and press `Ctrl+S` to save it, SocNetV will try to s
 GML, Pajek, GraphViz and UCINET support is not complete. Read below for more details.
 :::
 
+In addition to the above graph topology formats, SocNetV v3.5 also supports **structured CSV and JSON** for exporting and importing node/edge attribute data via the [Data Table dock](/manual/data). These are not graph formats — they carry attribute columns, not topology. See the [Structured CSV and JSON](#structured-csv-and-json-data-exportimport) section at the end of this page.
+
 
 ## Loading and Importing Files
 
@@ -43,7 +45,7 @@ GraphML is a highly versatile and widely adopted XML-based format designed for g
 ### Features of GraphML
 
 * **XML-Based**: Uses XML structure to represent nodes, edges, and their attributes.
-* **Custom Attributes**: Allows defining custom attributes for nodes and edges, such as labels, weights, or types.
+* **Custom Attributes**: Allows defining custom attributes for nodes and edges, such as labels, weights, or types. SocNetV v3.5 supports a full **node and edge custom attribute roundtrip**: arbitrary key/value pairs added in the Node Properties dialog or the Edge Properties dialog are saved and restored without loss. Node custom attribute keys use the `d1000+` numbering range; edge custom attribute keys use the `d2000+` range (see [Example 3](#example-3-node-and-edge-custom-attributes) below).
 * **Directed and Undirected Graphs**: Supports both directed and undirected graph structures.
 * **Hierarchical Graphs**: Facilitates multi-level graph representations.
 * **Multirelational Networks**: SocNetV supports storing multiple relations between the same set of nodes by using edge attributes (for example a `relation` attribute identifying the type of tie).
@@ -180,6 +182,75 @@ Relation 2:
 
 ---
 
+
+#### Example 3: Node and Edge Custom Attributes
+
+SocNetV v3.5 persists arbitrary custom attributes on both nodes and edges using GraphML `<key>` / `<data>` pairs. Node custom attribute keys are assigned IDs in the `d1000+` range; edge custom attribute keys use the `d2000+` range. This guarantees they never collide with SocNetV's own built-in keys.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- Built-in node attributes (SocNetV internal range) -->
+  <key id="d0" for="node" attr.name="label"  attr.type="string"/>
+  <key id="d1" for="node" attr.name="size"   attr.type="double"/>
+  <key id="d2" for="node" attr.name="color"  attr.type="string"/>
+
+  <!-- Custom node attribute (d1000+ range) -->
+  <key id="d1000" for="node" attr.name="type"       attr.type="string"/>
+  <key id="d1001" for="node" attr.name="department"  attr.type="string"/>
+
+  <!-- Built-in edge attributes (SocNetV internal range) -->
+  <key id="d100" for="edge" attr.name="weight" attr.type="double"/>
+  <key id="d101" for="edge" attr.name="label"  attr.type="string"/>
+
+  <!-- Custom edge attributes (d2000+ range) -->
+  <key id="d2000" for="edge" attr.name="category" attr.type="string"/>
+  <key id="d2001" for="edge" attr.name="since"    attr.type="string"/>
+
+  <graph id="G" edgedefault="directed">
+
+    <node id="n1">
+      <data key="d0">Alice</data>
+      <data key="d1">10</data>
+      <data key="d2">#ff0000</data>
+      <data key="d1000">investor</data>
+      <data key="d1001">finance</data>
+    </node>
+
+    <node id="n2">
+      <data key="d0">Bob</data>
+      <data key="d1">7</data>
+      <data key="d2">#0000ff</data>
+      <data key="d1000">manager</data>
+      <data key="d1001">operations</data>
+    </node>
+
+    <edge source="n1" target="n2">
+      <data key="d100">2.5</data>
+      <data key="d101">funds</data>
+      <data key="d2000">partnership</data>
+      <data key="d2001">2022</data>
+    </edge>
+
+  </graph>
+</graphml>
+```
+
+**Key points:**
+- `d1000` / `d1001` are custom node attribute keys — added via the Node Properties dialog in SocNetV, or imported from CSV/JSON via the [Data Table dock](/manual/data).
+- `d2000` / `d2001` are custom edge attribute keys — added via the Edge Properties dialog.
+- On file load, SocNetV reads back all `d1000+` and `d2000+` keys and populates the node/edge attribute tables without any data loss.
+- Keys in the built-in range (`d0`–`d999`) are mapped to SocNetV's internal properties (label, size, color, weight, etc.).
+
+:::note
+Only **GraphML** preserves custom attributes in a full roundtrip. Other supported formats (Pajek, GML, UCINET DL, DOT, edge lists) do not carry custom attribute data.
+:::
+
+---
 
 ### How to Use GraphML Files in SocNetV
 
@@ -1255,3 +1326,87 @@ SocNetV supports the following elements of edge list files:
 
 #### Reference:
 - **Edge List Format Documentation**: [Wikipedia on Edge List](https://en.wikipedia.org/wiki/Edge_list)
+
+---
+
+## Structured CSV and JSON (Data Export/Import)
+
+:::note
+**These are not graph topology formats.** CSV and JSON in this context describe *attribute data* for existing nodes or edges — they do not encode the graph structure (no source/target topology, no edge list). Use them alongside a structural format such as GraphML.
+:::
+
+SocNetV v3.5 adds structured CSV and JSON support for exporting and re-importing node and edge attribute data. This is a separate capability from the [Adjacency Matrix CSV](#adjacency-matrix-files) format, which encodes the graph structure itself.
+
+The feature is accessed through:
+- The **Data Table dock** (`Ctrl+T`): **Export CSV** / **Export JSON** / **Import CSV** / **Import JSON** buttons in each tab.
+- **Network → Export to other…**: four menu actions — *Nodes as CSV*, *Edges as CSV*, *Nodes as JSON*, *Edges as JSON*.
+
+See [Data Management](/manual/data) for the full workflow.
+
+---
+
+### CSV Format
+
+SocNetV exports and imports RFC 4180 CSV files: a header row followed by one data row per node or edge.
+
+**Node CSV example:**
+
+```csv
+#,Label,Size,Color,type,department
+1,Alice,10,#ff0000,investor,finance
+2,Bob,7,#0000ff,manager,operations
+3,Carol,5,#00ff00,analyst,research
+```
+
+**Edge CSV example:**
+
+```csv
+Source,Target,Relation,Weight,Label,Color,category,since
+1,2,friendship,2.5,funds,#333333,partnership,2022
+2,3,friendship,1.0,,#333333,,
+```
+
+**Column rules on import:**
+
+| Column | Behaviour |
+|---|---|
+| `#` (nodes) / `Source` + `Target` (edges) | Used only for row matching; not stored as an attribute |
+| `Label`, `Size`, `Color` (nodes) | Routed to the proper built-in setters |
+| `Weight`, `Label`, `Color` (edges) | Routed to the proper built-in setters |
+| `Visible`, `Shape` (nodes) | Read-only — silently skipped |
+| `Relation` (edges) | Read-only — silently skipped |
+| Any other column | Stored as a **custom attribute** |
+
+---
+
+### JSON Format
+
+SocNetV exports and imports JSON as a **flat array of objects**, one object per node or edge. All attribute names become JSON keys.
+
+**Node JSON example:**
+
+```json
+[
+  { "#": 1, "Label": "Alice", "Size": 10, "Color": "#ff0000", "type": "investor", "department": "finance" },
+  { "#": 2, "Label": "Bob",   "Size": 7,  "Color": "#0000ff", "type": "manager",  "department": "operations" }
+]
+```
+
+**Edge JSON example:**
+
+```json
+[
+  { "Source": 1, "Target": 2, "Relation": "friendship", "Weight": 2.5, "Label": "funds", "Color": "#333333", "category": "partnership", "since": "2022" },
+  { "Source": 2, "Target": 3, "Relation": "friendship", "Weight": 1.0, "Label": "",      "Color": "#333333" }
+]
+```
+
+The same column routing rules as CSV apply on import.
+
+---
+
+### Roundtrip Guarantee
+
+Exporting a graph's node or edge data to CSV or JSON and then re-importing it is a **lossless, no-op roundtrip**: no duplicate columns are created, no data is lost, and native built-in columns are never accidentally stored as custom attributes.
+
+To persist custom attributes added via import, save the graph in **GraphML** format (`Ctrl+S`). See [Example 3](#example-3-node-and-edge-custom-attributes) in the GraphML section for how those attributes appear in the saved file.
