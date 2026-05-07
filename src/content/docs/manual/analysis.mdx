@@ -6,6 +6,9 @@ layout: "../../../layouts/BaseLayout.astro"
 
 Once you load or create a network in SocNetV, you may use the options in the Analyze menu to compute graph and social network analysis measures.
 
+:::tip
+**Analysis on filtered subgraphs**: When [graph exploration filters](/manual/gui#filtering-and-graph-exploration) are active (ego network, focus on selection, filter by attribute, filter by centrality, or edge weight filter), all computations — matrices, cohesion measures, centrality, community detection — operate only on the currently **visible** nodes and edges. Hidden nodes are excluded from calculations. This lets you analyze a specific subgraph without modifying the underlying data.
+:::
 
 ---
 
@@ -349,6 +352,21 @@ This distinction between **centrality** and **prestige** measures, following the
 Centrality measures are calculated for each node (node Centrality) and for the whole network (group Centrality). Thus, when you click on a centrality option, SocNetV will calculate the corresponding index of every node and the whole network, and it will display the report in a new browser window (using the system's default web browser). 
 By default, analysis files are saved in the **socnetv-data/** subfolder.
 :::
+
+### Filter Nodes by Centrality
+
+After running any centrality or prestige computation, you can use **Filter Nodes by Centrality** to hide all nodes whose score falls below a threshold you set. This lets you visually isolate the most prominent nodes without deleting anything from the graph.
+
+- **Menu**: Edit → Filter Nodes → By Centrality Score
+- Set the threshold in the dialog; nodes that do not meet the condition are hidden non-destructively.
+- This filter integrates with the **unified snapshot/restore stack**: **Restore All Nodes** (`Ctrl+X, Ctrl+R`) reveals all hidden nodes, including those hidden by centrality, ego network, selection, or attribute filters.
+- A chip appears in the [Filter Bar](/manual/gui#filter-bar) while this filter is active.
+
+:::tip
+Combine Filter by Centrality with the [Ego-centered Radial Layout](/manual/visualization#ego-centered-radial-layout): filter to top-N nodes by betweenness centrality, select the highest-scoring node, and apply the layout to inspect its neighborhood in a decluttered view.
+:::
+
+---
 
 ### Degree Centrality (DC)
 
