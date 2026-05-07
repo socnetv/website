@@ -21,6 +21,7 @@ The interface consists of the following components:
 - [Toolbar](#toolbar)
 - [Sidebars](#sidebars)
 - [Canvas](#canvas)
+- A **Filter Bar** that appears automatically between the toolbar and the canvas when any [graph filter is active](#filtering-and-graph-exploration).
 - A status bar with helpful runtime messages.
 
 > The main application window is structured to provide maximum efficiency. Side panels on the left and right host critical tools and information, while the central canvas is the primary area for network visualization and interaction.
@@ -151,12 +152,18 @@ The canvas background is customizable, allowing users to select colors that suit
 
 ### Additional Features
 
+#### Filter Bar
+
+The **Filter Bar** is a thin strip that appears automatically between the toolbar and the canvas whenever a graph filter is active. It disappears when no filters are active. Each active filter condition is shown as a labelled chip (e.g. `Nodes: ego network`, `Nodes: type = investor`). Click the **×** on the most recent chip to remove that filter, or click **Clear all** to remove all filters at once.
+
+See [Filtering and Graph Exploration](#filtering-and-graph-exploration) for the full reference.
+
 #### Status Bar
 
 The status bar at the bottom of the window provides helpful runtime messages, such as:
 
 - Warnings about unsupported actions.
-- Notifications about completed analysis tasks.
+- Notifications about completed analysis tasks, export file paths, and import results.
 - Hints and instructions based on the current context.
 
 #### Tooltips and Context Menus
