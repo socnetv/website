@@ -59,6 +59,7 @@ var classParser =
     [ "edge_target", "classParser.html#aff51075b98daa8581378e682137bd275", null ],
     [ "edge_weight", "classParser.html#a3a2beb69c242123a4ee2ba9700267526", null ],
     [ "edgeColor", "classParser.html#aa05c39dce1fee686ebd2bc71b0f5509f", null ],
+    [ "edgeCustomAttributes", "classParser.html#ab96ef770d19c1b9d33c410b403b22e37", null ],
     [ "edgeDirType", "classParser.html#a6cbfaa5a565f6b1485366313ccc3e3cf", null ],
     [ "edgeLabel", "classParser.html#a8a1237a2883bb149238b20cd9fdf8528", null ],
     [ "edgeMissingNodesList", "classParser.html#ab20383037b84ba8f1e227ecd1c1067f9", null ],

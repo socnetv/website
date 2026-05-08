@@ -46,7 +46,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.4</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.5</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -175,8 +175,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a072c6b2dfe270c7e03c9bd0a7ddf4971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a812470e2b10f89272c616d6e5929d566" id="r_a812470e2b10f89272c616d6e5929d566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a812470e2b10f89272c616d6e5929d566">createNodeAtPosRandomWithLabel</a> (const int &amp;num, const QString &amp;label, const bool &amp;signalMW=false) override</td></tr>
 <tr class="separator:a812470e2b10f89272c616d6e5929d566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad446ac8fa8da27297fe2014bf714c37d" id="r_ad446ac8fa8da27297fe2014bf714c37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#ad446ac8fa8da27297fe2014bf714c37d">createEdge</a> (const int &amp;source, const int &amp;target, const qreal &amp;weight, const QString &amp;color, const int &amp;edgeDirType, const bool &amp;arrows, const bool &amp;bezier, const QString &amp;edgeLabel=QString(), const bool &amp;signalMW=false) override</td></tr>
-<tr class="separator:ad446ac8fa8da27297fe2014bf714c37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5666abf4b45d849f9bfcbc9d29bf6a02" id="r_a5666abf4b45d849f9bfcbc9d29bf6a02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a5666abf4b45d849f9bfcbc9d29bf6a02">createEdge</a> (const int &amp;source, const int &amp;target, const qreal &amp;weight, const QString &amp;color, const int &amp;edgeDirType, const bool &amp;arrows, const bool &amp;bezier, const QString &amp;edgeLabel=QString(), const bool &amp;signalMW=false, const QHash&lt; QString, QString &gt; &amp;edgeCustomAttributes=QHash&lt; QString, QString &gt;()) override</td></tr>
+<tr class="separator:a5666abf4b45d849f9bfcbc9d29bf6a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37e04c8ce5b12e4dc1f486892eb8dda" id="r_aa37e04c8ce5b12e4dc1f486892eb8dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#aa37e04c8ce5b12e4dc1f486892eb8dda">removeDummyNode</a> (int num) override</td></tr>
 <tr class="separator:aa37e04c8ce5b12e4dc1f486892eb8dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae90c5c71658590b0a079b8ef849f584b" id="r_ae90c5c71658590b0a079b8ef849f584b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#ae90c5c71658590b0a079b8ef849f584b">fileLoaded</a> (const int &amp;fileType, const QString &amp;fileName, const QString &amp;netName, const int &amp;totalNodes, const int &amp;totalLinks, const int &amp;edgeDirType, const qint64 &amp;elapsedTime, const QString &amp;message=QString()) override</td></tr>
@@ -259,8 +259,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad446ac8fa8da27297fe2014bf714c37d" name="ad446ac8fa8da27297fe2014bf714c37d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad446ac8fa8da27297fe2014bf714c37d">&#9670;&#160;</a></span>createEdge()</h2>
+<a id="a5666abf4b45d849f9bfcbc9d29bf6a02" name="a5666abf4b45d849f9bfcbc9d29bf6a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5666abf4b45d849f9bfcbc9d29bf6a02">&#9670;&#160;</a></span>createEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,7 +320,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool &amp;&#160;</td>
-          <td class="paramname"><em>signalMW</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>signalMW</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QHash&lt; QString, QString &gt; &amp;&#160;</td>
+          <td class="paramname"><em>edgeCustomAttributes</em> = <code>QHash&lt;QString,QString&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -335,7 +341,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classSocNetV_1_1IO_1_1IGraphParseSink.html#a67f68efad48e52537d53679c77b549f2">SocNetV::IO::IGraphParseSink</a>.</p>
+<p>Implements <a class="el" href="classSocNetV_1_1IO_1_1IGraphParseSink.html#a2837b5754a84cc34545b3c72cfd88f17">SocNetV::IO::IGraphParseSink</a>.</p>
 
 </div>
 </div>

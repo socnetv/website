@@ -1,0 +1,5 @@
+<map id="EdgeTableModel" name="EdgeTableModel">
+<area shape="rect" id="Node000001" title="Table model that caches edge data for the current relation from Graph and writes back via the Graph A..." alt="" coords="21,79,149,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,44,88,79,83,79,83,44"/>
+</map>

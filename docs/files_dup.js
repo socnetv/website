@@ -6,6 +6,7 @@ var files_dup =
     [ "parser", "dir_d3c25f536a07b5057c457c5d93309dc5.html", "dir_d3c25f536a07b5057c457c5d93309dc5" ],
     [ "tools", "dir_59c959e1577b487eeed24059576a0389.html", "dir_59c959e1577b487eeed24059576a0389" ],
     [ "website", "dir_4fdf20d635b99bb54f698874f5ca05ac.html", "dir_4fdf20d635b99bb54f698874f5ca05ac" ],
+    [ "widgets", "dir_cddb240a0b776a33e084902e40deb938.html", "dir_cddb240a0b776a33e084902e40deb938" ],
     [ "chart.cpp", "chart_8cpp.html", null ],
     [ "chart.h", "chart_8h.html", "chart_8h" ],
     [ "global.h", "global_8h.html", "global_8h" ],

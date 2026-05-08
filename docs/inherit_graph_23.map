@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,121,56"/>
-<area shape="rect" id="Node000001" href="$classMainWindow.html" title="The base window of SocNetV contains all widgets and functionality." alt="" coords="169,5,276,31"/>
-<area shape="poly" id="edge40_Node000000_Node000001" title=" " alt="" coords="135,29,169,24,170,29,135,35"/>
-<area shape="rect" id="Node000002" href="$classTextEditor.html" title=" " alt="" coords="179,55,266,80"/>
-<area shape="poly" id="edge41_Node000000_Node000002" title=" " alt="" coords="136,52,179,58,178,63,135,57"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,165,56"/>
+<area shape="rect" id="Node000001" href="$classEdgeTableModel.html" title="Table model that caches edge data for the current relation from Graph and writes back via the Graph A..." alt="" coords="215,5,343,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="179,28,214,24,215,29,180,34"/>
+<area shape="rect" id="Node000002" href="$classNodeTableModel.html" title="Table model that caches node data from Graph and writes back via the Graph API." alt="" coords="213,55,344,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="180,52,213,57,213,62,179,58"/>
 </map>

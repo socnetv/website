@@ -2,7 +2,7 @@ var classSocNetV_1_1IO_1_1GraphParseSinkGraph =
 [
     [ "GraphParseSinkGraph", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a7bd08738efa1655125163cfc46985a0a", null ],
     [ "addNewRelation", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a0a0f27b0ce4f0c0bfca64b79f5ffd64a", null ],
-    [ "createEdge", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#ad446ac8fa8da27297fe2014bf714c37d", null ],
+    [ "createEdge", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a5666abf4b45d849f9bfcbc9d29bf6a02", null ],
     [ "createNode", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#ab78939bf6499cbf70cafd6c0403ae62b", null ],
     [ "createNodeAtPosRandom", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a072c6b2dfe270c7e03c9bd0a7ddf4971", null ],
     [ "createNodeAtPosRandomWithLabel", "classSocNetV_1_1IO_1_1GraphParseSinkGraph.html#a812470e2b10f89272c616d6e5929d566", null ],

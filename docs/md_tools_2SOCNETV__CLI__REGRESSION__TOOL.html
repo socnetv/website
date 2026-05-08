@@ -46,7 +46,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.4</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.5</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -150,6 +150,7 @@ Architecture</h1>
 <li><code><a class="el" href="kernel__walks__v3_8cpp.html">cli/kernels/kernel_walks_v3.cpp</a></code></li>
 <li><code><a class="el" href="kernel__prominence__v4_8cpp.html">cli/kernels/kernel_prominence_v4.cpp</a></code></li>
 <li><code><a class="el" href="kernel__io__roundtrip__v5_8cpp.html">cli/kernels/kernel_io_roundtrip_v5.cpp</a></code></li>
+<li><code><a class="el" href="kernel__clustering__v6_8cpp.html">cli/kernels/kernel_clustering_v6.cpp</a></code></li>
 </ul>
 <p>Each kernel owns:</p>
 <ul>
@@ -316,14 +317,47 @@ IO Roundtrip Kernel</h2>
 </li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md79"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
+Clustering Kernel</h2>
+<ul>
+<li>Kernel: <code>clustering</code></li>
+<li>JSON schema: <code>schema_version = 6</code></li>
+</ul>
+<p>Protects:</p>
+<ul>
+<li>local clustering coefficient (CLC) per node</li>
+<li>network average clustering coefficient</li>
+<li>triad census (16 MAN classes)</li>
+<li>maximal clique counts by size</li>
+</ul>
+<p>Characteristics:</p>
+<ul>
+<li>deterministic vertex ordering</li>
+<li>deterministic float serialization</li>
+<li>strict per-field comparison</li>
+<li>no UI involvement</li>
+</ul>
+<p>This kernel combines:</p>
+<ul>
+<li><code>Graph::clusteringCoefficient(false)</code></li>
+<li><code><a class="el" href="classGraph.html#adbece77618fe4f08476fc2baea399fc6" title="Conducts a triad census and updates QList::triadTypeFreqs, which is the list carrying all triad type ...">Graph::graphTriadCensus()</a></code></li>
+<li><code><a class="el" href="classGraph.html#a3829717ffe9cc8191af82749490550de" title="Finds all maximal cliques in an undirected (?) graph. Implements the Bron–Kerbosch algorithm,...">Graph::graphCliques</a>(QSet&lt;int&gt;(), QSet&lt;int&gt;(), QSet&lt;int&gt;())</code></li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li><code>-c</code> is not applicable</li>
+<li><code>--bench</code> not supported</li>
+<li><code>-w/-x</code> are still encoded in baselines for consistency, even if the current clustering/clique routines are not weight-driven in the same way as distance-based kernels</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md81"></a>
 Basic Usage</h1>
-<h2><a class="anchor" id="autotoc_md80"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 Available Parameters</h2>
 <p><code>socnetv-cli</code> is intentionally small: a <b>single façade</b> parses a shared set of options, then dispatches into a selected <code>--kernel</code> implementation.</p>
-<h3><a class="anchor" id="autotoc_md81"></a>
+<h3><a class="anchor" id="autotoc_md83"></a>
 Input selection</h3>
-<h4><a class="anchor" id="autotoc_md82"></a>
+<h4><a class="anchor" id="autotoc_md84"></a>
 &lt;tt&gt;-i &lt;path&gt;&lt;/tt&gt; / &lt;tt&gt;--input &lt;path&gt;&lt;/tt&gt;</h4>
 <p>Path to the dataset file to load.</p>
 <ul>
@@ -333,7 +367,7 @@ Input selection</h3>
 <p>Examples:</p>
 <div class="fragment"><div class="line">-i src/data/SmallWorld_N10_E12.graphml</div>
 <div class="line">-i ./mygraph.paj</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md83"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md85"></a>
 &lt;tt&gt;-f &lt;id&gt;&lt;/tt&gt; / &lt;tt&gt;--format &lt;id&gt;&lt;/tt&gt;</h4>
 <p>Input file type <b>ID</b> (must match SocNetV’s internal file-type enum).</p>
 <p>Common file types (from <code><a class="el" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV.">global.h</a></code> as referenced in this doc):</p>
@@ -354,9 +388,9 @@ Input selection</h3>
 <li>For IO regression work, treat <code>-f</code> as part of the baseline identity.</li>
 </ul>
 <hr  />
-<h3><a class="anchor" id="autotoc_md85"></a>
+<h3><a class="anchor" id="autotoc_md87"></a>
 Kernel selection</h3>
-<h4><a class="anchor" id="autotoc_md86"></a>
+<h4><a class="anchor" id="autotoc_md88"></a>
 &lt;tt&gt;--kernel &lt;name&gt;&lt;/tt&gt;</h4>
 <p>Selects which analysis kernel to run.</p>
 <p>Supported kernels:</p>
@@ -366,6 +400,7 @@ Kernel selection</h3>
 <li><code>walks_matrix</code> — schema v3</li>
 <li><code>prominence</code> — schema v4</li>
 <li><code>io_roundtrip</code> — schema v5</li>
+<li><code>clustering</code> — schema v6</li>
 </ul>
 <p>Examples:</p>
 <div class="fragment"><div class="line">--kernel distance</div>
@@ -373,6 +408,7 @@ Kernel selection</h3>
 <div class="line">--kernel walks_matrix</div>
 <div class="line">--kernel prominence</div>
 <div class="line">--kernel io_roundtrip</div>
+<div class="line">--kernel clustering</div>
 </div><!-- fragment --><p>If omitted:</p>
 <ul>
 <li><code>--kernel distance</code> is assumed.</li>
@@ -382,10 +418,10 @@ Kernel selection</h3>
 <div class="line">  -i src/data/SmallWorld_N10_E12.graphml \</div>
 <div class="line">  -f 1</div>
 </div><!-- fragment --> <hr  />
-<h3><a class="anchor" id="autotoc_md88"></a>
+<h3><a class="anchor" id="autotoc_md90"></a>
 Run flags (shared semantics)</h3>
 <p>These flags control <em>how the graph is interpreted</em> and/or <em>what extra results are computed</em>.</p>
-<h4><a class="anchor" id="autotoc_md89"></a>
+<h4><a class="anchor" id="autotoc_md91"></a>
 &lt;tt&gt;-c &lt;0|1&gt;&lt;/tt&gt; / &lt;tt&gt;--centralities &lt;0|1&gt;&lt;/tt&gt;</h4>
 <p>Controls whether the <b>distance kernel</b> computes geodesic-based centralities.</p>
 <ul>
@@ -397,7 +433,7 @@ Run flags (shared semantics)</h3>
 <li>Only meaningful for <code>--kernel distance</code>.</li>
 <li>For other kernels, see per-kernel constraints below.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md90"></a>
+<h4><a class="anchor" id="autotoc_md92"></a>
 &lt;tt&gt;-w &lt;0|1&gt;&lt;/tt&gt; / &lt;tt&gt;--weights &lt;0|1&gt;&lt;/tt&gt;</h4>
 <p>Controls whether edge weights are considered (when weights exist).</p>
 <ul>
@@ -408,7 +444,7 @@ Run flags (shared semantics)</h3>
 <ul>
 <li>If the dataset format has no weights (or all weights are default), <code>-w 1</code> may behave the same as <code>-w 0</code>, but <b>still keep it explicit in baselines</b>.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md91"></a>
+<h4><a class="anchor" id="autotoc_md93"></a>
 &lt;tt&gt;-x &lt;0|1&gt;&lt;/tt&gt; / &lt;tt&gt;--inverse-weights &lt;0|1&gt;&lt;/tt&gt;</h4>
 <p>Controls how weights are interpreted when <code>-w 1</code> is enabled.</p>
 <ul>
@@ -419,7 +455,7 @@ Run flags (shared semantics)</h3>
 <ul>
 <li>If <code>-w 0</code>, this flag should not change results, but we still keep it explicit for stable baseline naming.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md92"></a>
+<h4><a class="anchor" id="autotoc_md94"></a>
 &lt;tt&gt;-k &lt;0|1&gt;&lt;/tt&gt; / &lt;tt&gt;--drop-isolates &lt;0|1&gt;&lt;/tt&gt;</h4>
 <p>Controls whether isolate vertices are removed before computation.</p>
 <ul>
@@ -431,9 +467,9 @@ Run flags (shared semantics)</h3>
 <li>This affects N, connectivity bookkeeping, averages, and many per-node vectors. Always encode it in baseline names.</li>
 </ul>
 <hr  />
-<h3><a class="anchor" id="autotoc_md94"></a>
+<h3><a class="anchor" id="autotoc_md96"></a>
 Walks kernel specific</h3>
-<h4><a class="anchor" id="autotoc_md95"></a>
+<h4><a class="anchor" id="autotoc_md97"></a>
 &lt;tt&gt;--walks-length &lt;K&gt;&lt;/tt&gt;</h4>
 <p>Required only for <code>--kernel walks_matrix</code>.</p>
 <p>Meaning:</p>
@@ -452,7 +488,7 @@ Walks kernel specific</h3>
 <p>Example:</p>
 <div class="fragment"><div class="line">--kernel walks_matrix --walks-length 6</div>
 </div><!-- fragment --><hr  />
-<h3><a class="anchor" id="autotoc_md97"></a>
+<h3><a class="anchor" id="autotoc_md99"></a>
 Output modes</h3>
 <p><code>socnetv-cli</code> runs in <b>one</b> of the following “modes”:</p>
 <ol type="1">
@@ -461,7 +497,7 @@ Output modes</h3>
 <li>strict compare against a golden JSON baseline (<code>--compare-json</code>)</li>
 <li>benchmarking (<code>--bench</code>, distance kernel only)</li>
 </ol>
-<h4><a class="anchor" id="autotoc_md98"></a>
+<h4><a class="anchor" id="autotoc_md100"></a>
 &lt;tt&gt;--dump-json &lt;path&gt;&lt;/tt&gt;</h4>
 <p>Writes the kernel’s deterministic JSON output to <code>&lt;path&gt;</code>.</p>
 <ul>
@@ -475,7 +511,7 @@ Output modes</h3>
 </ul>
 <p>Example:</p>
 <div class="fragment"><div class="line">--dump-json src/tools/baselines/ErdosRenyi_N10_E10__C1_W0_IW1_DI0.json</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md99"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md101"></a>
 &lt;tt&gt;--compare-json &lt;baseline.json&gt;&lt;/tt&gt;</h4>
 <p>Runs the selected kernel and strictly compares output to an existing JSON baseline.</p>
 <p>Behavior:</p>
@@ -491,9 +527,9 @@ Output modes</h3>
 <p>Example:</p>
 <div class="fragment"><div class="line">--compare-json src/tools/baselines/prominence/Krackhardt_Kite_N10__PROM__V4__FT2__W0_IW1_DI0.json</div>
 </div><!-- fragment --><hr  />
-<h3><a class="anchor" id="autotoc_md101"></a>
+<h3><a class="anchor" id="autotoc_md103"></a>
 Benchmarking (distance kernel only)</h3>
-<h4><a class="anchor" id="autotoc_md102"></a>
+<h4><a class="anchor" id="autotoc_md104"></a>
 &lt;tt&gt;--bench &lt;runs&gt;&lt;/tt&gt;</h4>
 <p>Runs the compute step multiple times and prints timing stats:</p>
 <ul>
@@ -512,10 +548,10 @@ Benchmarking (distance kernel only)</h3>
 <p>Example:</p>
 <div class="fragment"><div class="line">--kernel distance -c 1 -w 1 -x 1 -k 0 --bench 20</div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="autotoc_md104"></a>
+<h2><a class="anchor" id="autotoc_md106"></a>
 Per-kernel constraints summary</h2>
 <p>To avoid accidentally producing meaningless baselines:</p>
-<h3><a class="anchor" id="autotoc_md105"></a>
+<h3><a class="anchor" id="autotoc_md107"></a>
 &lt;tt&gt;--kernel distance&lt;/tt&gt; (schema v1)</h3>
 <p>Allowed:</p>
 <ul>
@@ -526,7 +562,7 @@ Per-kernel constraints summary</h2>
 <ul>
 <li><code>--bench</code> only here.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md106"></a>
+<h3><a class="anchor" id="autotoc_md108"></a>
 &lt;tt&gt;--kernel reachability&lt;/tt&gt; (schema v2)</h3>
 <p>Allowed:</p>
 <ul>
@@ -538,7 +574,7 @@ Per-kernel constraints summary</h2>
 <li><code>-c</code> must be <code>0</code> (centralities not used here)</li>
 <li><code>--bench</code> not supported</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md107"></a>
+<h3><a class="anchor" id="autotoc_md109"></a>
 &lt;tt&gt;--kernel walks_matrix&lt;/tt&gt; (schema v3)</h3>
 <p>Required:</p>
 <ul>
@@ -553,7 +589,7 @@ Per-kernel constraints summary</h2>
 <ul>
 <li><code>--bench</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md108"></a>
+<h3><a class="anchor" id="autotoc_md110"></a>
 &lt;tt&gt;--kernel prominence&lt;/tt&gt; (schema v4)</h3>
 <p>Allowed:</p>
 <ul>
@@ -564,7 +600,7 @@ Per-kernel constraints summary</h2>
 <ul>
 <li>Prominence kernel covers <em>many</em> indices; <code>-w/-x</code> materially changes several results.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md109"></a>
+<h3><a class="anchor" id="autotoc_md111"></a>
 &lt;tt&gt;--kernel io_roundtrip&lt;/tt&gt; (schema v5)</h3>
 <p>Allowed:</p>
 <ul>
@@ -576,7 +612,23 @@ Per-kernel constraints summary</h2>
 <li>Some formats will “skip export” deterministically; that is expected and baseline-stable.</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md111"></a>
+<h3><a class="anchor" id="autotoc_md113"></a>
+&lt;tt&gt;--kernel clustering&lt;/tt&gt; (schema v6)</h3>
+<p>Allowed:</p>
+<ul>
+<li><code>-w</code>, <code>-x</code>, <code>-k</code></li>
+<li><code>--dump-json</code>, <code>--compare-json</code></li>
+</ul>
+<p>Not applicable / required:</p>
+<ul>
+<li><code>-c</code> not used</li>
+<li><code>--bench</code> not supported</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>v6 verifies clustering coefficient outputs, triad census, and maximal clique counts by size.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md114"></a>
 Baseline naming convention (recommended)</h2>
 <p>When you dump JSON, bake the run flags into the filename (as already used in this repo):</p>
 <ul>
@@ -586,9 +638,9 @@ Baseline naming convention (recommended)</h2>
 </ul>
 <p>This keeps baselines self-describing and prevents “wrong flags, right file” mistakes.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md113"></a>
+<h1><a class="anchor" id="autotoc_md116"></a>
 Golden Output Dump</h1>
-<h2><a class="anchor" id="autotoc_md114"></a>
+<h2><a class="anchor" id="autotoc_md117"></a>
 Distance (schema v1)</h2>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
 <div class="line">  -i src/data/SmallWorld_N10_E12.graphml \</div>
@@ -600,7 +652,7 @@ Distance (schema v1)</h2>
 <div class="line">IW1 = inverseWeights=1</div>
 <div class="line">DI0 = dropIsolates=0</div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="autotoc_md116"></a>
+<h2><a class="anchor" id="autotoc_md119"></a>
 Reachability (schema v2)</h2>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
 <div class="line">  --kernel reachability \</div>
@@ -608,7 +660,7 @@ Reachability (schema v2)</h2>
 <div class="line">  -f 5 -c 0 -w 1 -x 1 -k 0 \</div>
 <div class="line">  --dump-json src/tools/baselines/reachability/StokmanZiegler_Netherlands__REACH__V2.json</div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="autotoc_md118"></a>
+<h2><a class="anchor" id="autotoc_md121"></a>
 Walks Matrix (schema v3)</h2>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
 <div class="line">  --kernel walks_matrix \</div>
@@ -617,7 +669,7 @@ Walks Matrix (schema v3)</h2>
 <div class="line">  -f 2 -c 0 -w 1 -x 1 -k 0 \</div>
 <div class="line">  --dump-json src/tools/baselines/walks/DunbarGelada_H22a__WALKS_K6__V3.json</div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="autotoc_md120"></a>
+<h2><a class="anchor" id="autotoc_md123"></a>
 Prominence (schema v4)</h2>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
 <div class="line">  --kernel prominence \</div>
@@ -630,7 +682,7 @@ Prominence (schema v4)</h2>
 <div class="line">IW1 = inverseWeights=1</div>
 <div class="line">DI0 = dropIsolates=0</div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="autotoc_md122"></a>
+<h2><a class="anchor" id="autotoc_md125"></a>
 IO Roundtrip (schema v5)</h2>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
 <div class="line">  --kernel io_roundtrip \</div>
@@ -651,7 +703,22 @@ IO Roundtrip (schema v5)</h2>
 <li><code>src/tools/baselines/io_roundtrip/</code></li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md124"></a>
+<h2><a class="anchor" id="autotoc_md127"></a>
+Clustering (schema v6)</h2>
+<div class="fragment"><div class="line">./socnetv-cli \</div>
+<div class="line">  --kernel clustering \</div>
+<div class="line">  -i src/data/Krackhardt_Kite_N10.paj \</div>
+<div class="line">  -f 2 -w 0 -x 1 -k 0 \</div>
+<div class="line">  --dump-json src/tools/baselines/clustering/Krackhardt_Kite_N10__CLUST__V6__FT2__W0_IW1_DI0.json</div>
+</div><!-- fragment --><p>Flag encoding:</p>
+<div class="fragment"><div class="line">W0  = considerWeights=0</div>
+<div class="line">FT2 = file type =2</div>
+<div class="line">IW1 = inverseWeights=1</div>
+<div class="line">DI0 = dropIsolates=0</div>
+</div><!-- fragment --><p>Baseline directory:</p>
+<p>src/tools/baselines/clustering/</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md129"></a>
 Golden Output Compare</h1>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
 <div class="line">  -i src/data/data_file.graphml \</div>
@@ -665,9 +732,9 @@ Golden Output Compare</h1>
 </ul>
 <p>Schemas are strictly compared per version.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md126"></a>
+<h1><a class="anchor" id="autotoc_md131"></a>
 What Is Verified</h1>
-<h2><a class="anchor" id="autotoc_md127"></a>
+<h2><a class="anchor" id="autotoc_md132"></a>
 Distance Kernel (v1)</h2>
 <p>Graph-level:</p>
 <ul>
@@ -691,7 +758,7 @@ Distance Kernel (v1)</h2>
 <li>eccentricity</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md129"></a>
+<h2><a class="anchor" id="autotoc_md134"></a>
 Reachability Kernel (v2)</h2>
 <ul>
 <li>nodes</li>
@@ -700,7 +767,7 @@ Reachability Kernel (v2)</h2>
 <li>reachable_density</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md131"></a>
+<h2><a class="anchor" id="autotoc_md136"></a>
 Walks Kernel (v3)</h2>
 <ul>
 <li>nodes</li>
@@ -709,7 +776,7 @@ Walks Kernel (v3)</h2>
 <li>walks.total_walks</li>
 </ul>
 <hr  />
-<h2><a class="anchor" id="autotoc_md133"></a>
+<h2><a class="anchor" id="autotoc_md138"></a>
 Prominence Kernel (v4)</h2>
 <p>Graph-level:</p>
 <ul>
@@ -739,7 +806,7 @@ Prominence Kernel (v4)</h2>
 </ul>
 <p>Floating-point values are serialized as strings.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md135"></a>
+<h2><a class="anchor" id="autotoc_md140"></a>
 IO Roundtrip Kernel (v5)</h2>
 <p>Graph-level:</p><ul>
 <li>nodes</li>
@@ -754,7 +821,52 @@ IO Roundtrip Kernel (v5)</h2>
 <li>per-relation signature bundle comparison for multi-relational datasets (expected relations + signatures from original load vs what reload produced)</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md137"></a>
+<h2><a class="anchor" id="autotoc_md142"></a>
+Clustering Kernel (v6)</h2>
+<p>Graph-level:</p>
+<ul>
+<li>nodes</li>
+<li>links_sna</li>
+<li>ties_graph</li>
+<li>directed / weighted</li>
+</ul>
+<p>Metrics:</p>
+<ul>
+<li>averageCLC</li>
+<li>nodesWithCLC</li>
+</ul>
+<p>Per-node:</p>
+<ul>
+<li>CLC</li>
+<li>hasCLC</li>
+</ul>
+<p>Triad census:</p>
+<ul>
+<li>003</li>
+<li>012</li>
+<li>102</li>
+<li>021D</li>
+<li>021U</li>
+<li>021C</li>
+<li>111D</li>
+<li>111U</li>
+<li>030T</li>
+<li>030C</li>
+<li>201</li>
+<li>120D</li>
+<li>120U</li>
+<li>120C</li>
+<li>210</li>
+<li>300</li>
+</ul>
+<p>Cliques:</p>
+<ul>
+<li>maximal clique counts by size</li>
+<li>max_clique_size</li>
+<li>total_cliques</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md144"></a>
 Micro-Benchmarking Mode (Distance Kernel Only)</h1>
 <p>The CLI provides benchmarking for <a class="el" href="classDistanceEngine.html">DistanceEngine</a>.</p>
 <div class="fragment"><div class="line">./socnetv-cli \</div>
@@ -775,9 +887,9 @@ Micro-Benchmarking Mode (Distance Kernel Only)</h1>
 <li>Only supported with <code>--kernel distance</code></li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md139"></a>
+<h1><a class="anchor" id="autotoc_md146"></a>
 Automated Regression Scripts</h1>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md147"></a>
 Golden Comparisons</h2>
 <div class="fragment"><div class="line">scripts/run_golden_compares.sh</div>
 </div><!-- fragment --><p>Validates:</p>
@@ -786,16 +898,17 @@ Golden Comparisons</h2>
 <li>Reachability (v2)</li>
 <li>Walks (v3)</li>
 <li>Prominence (v4)</li>
+<li>Clustering (v6)</li>
 </ul>
 <p>Fails on any mismatch.</p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md149"></a>
 Performance Benchmarks</h2>
 <div class="fragment"><div class="line">scripts/run_benchmarks.sh</div>
 </div><!-- fragment --><p>Validates median compute times for the distance kernel only.</p>
 <p>Machine-aware baseline sets supported.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md144"></a>
+<h1><a class="anchor" id="autotoc_md151"></a>
 Baselines</h1>
 <p>Distance baselines:</p>
 <div class="fragment"><div class="line">src/tools/baselines/</div>
@@ -807,10 +920,12 @@ Baselines</h1>
 <div class="fragment"><div class="line">src/tools/baselines/prominence/</div>
 </div><!-- fragment --><p>IO baselines:</p>
 <div class="fragment"><div class="line">src/tools/baselines/io_roundtrip/</div>
+</div><!-- fragment --><p>Clustering baselines:</p>
+<div class="fragment"><div class="line">src/tools/baselines/clustering/</div>
 </div><!-- fragment --><p>See:</p>
 <p><a class="el" href="md_tools_2baselines_2BASELINES____README.html">BASELINES__README.md</a></p>
 <div class="fragment"></div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md146"></a>
+<h1><a class="anchor" id="autotoc_md153"></a>
 Regression Discipline</h1>
 <p>Rules:</p>
 <ul>

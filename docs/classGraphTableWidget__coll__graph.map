@@ -1,0 +1,32 @@
+<map id="GraphTableWidget" name="GraphTableWidget">
+<area shape="rect" id="Node000001" title="A QWidget containing a QTabWidget with two tabs — Nodes and Edges — each backed by a sortable,..." alt="" coords="110,504,251,529"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,416,84,441"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,447,115,478,159,502,156,506,113,482,68,452"/>
+<area shape="rect" id="Node000003" href="$classGraph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="198,328,259,353"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,363,169,386,147,417,143,440,149,463,160,485,173,502,168,505,156,488,144,465,138,440,142,415,165,383,194,359"/>
+<area shape="rect" id="Node000011" href="$classNodeTableModel.html" title="Table model that caches node data from Graph and writes back via the Graph API." alt="" coords="370,416,501,441"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="270,356,408,413,406,418,268,361"/>
+<area shape="rect" id="Node000013" href="$classEdgeTableModel.html" title="Table model that caches edge data for the current relation from Graph and writes back via the Graph A..." alt="" coords="218,416,346,441"/>
+<area shape="poly" id="edge17_Node000013_Node000003" title=" " alt="" coords="228,367,232,391,243,404,257,414,254,418,239,408,228,393,222,368"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="41,5,115,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,41,130,92,163,160,192,228,227,327,222,329,187,230,158,162,125,95,93,44"/>
+<area shape="rect" id="Node000005" href="$classParser.html" title="Defines a class for network file loading and parsing." alt="" coords="205,93,268,119"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="130,30,183,52,209,72,229,91,225,95,205,76,181,57,128,34"/>
+<area shape="rect" id="Node000007" href="$classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="16,93,116,119"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="77,44,70,93,65,92,72,44"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="234,133,233,143,229,250,231,328,225,328,223,250,227,142,229,132"/>
+<area shape="rect" id="Node000006" href="$classSocNetV_1_1IO_1_1IGraphParseSink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="139,5,351,31"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="245,45,240,93,235,93,240,44"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="59,132,48,169,42,215,45,261,52,283,64,302,85,315,120,324,198,335,197,340,119,330,83,320,60,306,47,285,40,262,36,214,43,168,54,131"/>
+<area shape="rect" id="Node000008" href="$classMatrix.html" title=" " alt="" coords="301,93,365,119"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="339,132,340,169,338,214,328,262,318,285,305,306,285,324,261,335,259,330,282,319,301,302,313,282,323,260,333,214,335,169,333,132"/>
+<area shape="rect" id="Node000009" href="$classMatrixRow.html" title=" " alt="" coords="375,5,467,31"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="401,42,347,95,343,91,397,38"/>
+<area shape="rect" id="Node000010" href="$classMyEdge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="389,93,463,119"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="431,132,433,170,428,217,415,264,403,286,388,306,366,318,332,328,260,339,259,334,331,323,364,313,384,302,399,284,410,262,423,216,427,170,426,132"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="406,451,340,483,251,507,249,501,338,477,404,446"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="338,328,498,353"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="426,366,436,415,430,416,420,367"/>
+<area shape="poly" id="edge16_Node000013_Node000012" title=" " alt="" coords="408,367,385,394,361,408,336,418,334,413,359,404,382,390,404,364"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="259,452,196,505,193,501,256,448"/>
+</map>

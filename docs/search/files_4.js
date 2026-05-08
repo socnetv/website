@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['headless_5fgraph_5floader_2ecpp_0',['headless_graph_loader.cpp',['../headless__graph__loader_8cpp.html',1,'']]],
-  ['headless_5fgraph_5floader_2eh_1',['headless_graph_loader.h',['../headless__graph__loader_8h.html',1,'']]]
+  ['filter_5fcondition_2eh_0',['filter_condition.h',['../filter__condition_8h.html',1,'']]],
+  ['filterbarwidget_2ecpp_1',['filterbarwidget.cpp',['../filterbarwidget_8cpp.html',1,'']]],
+  ['filterbarwidget_2eh_2',['filterbarwidget.h',['../filterbarwidget_8h.html',1,'']]]
 ];
