@@ -2,7 +2,7 @@ var searchData=
 [
   ['v1_0',['v1',['../structClickedEdge.html#ad639818b197dfb4a2d57aaf4f7fa1377',1,'ClickedEdge']]],
   ['v2_1',['v2',['../structClickedEdge.html#acc7618afd91c8c3b5565c8700bade1d6',1,'ClickedEdge']]],
-  ['value_2',['value',['../classPairVF.html#aa5791d9bab6f690df6507aa35f166cb5',1,'PairVF::value'],['../structActor.html#a8df2091bdf14edccdda648165c94f69d',1,'Actor::value']]],
+  ['value_2',['value',['../classPairVF.html#aa5791d9bab6f690df6507aa35f166cb5',1,'PairVF::value'],['../structFilterCondition.html#a3dcb58779b6fb0cc4c37d1c56f934461',1,'FilterCondition::value'],['../structActor.html#a8df2091bdf14edccdda648165c94f69d',1,'Actor::value']]],
   ['variableslocationlist_3',['variableslocationlist',['../classDialogClusteringHierarchical.html#a5856c34704d94f91aeae0acb11f4a805',1,'DialogClusteringHierarchical::variablesLocationList'],['../classDialogDissimilarities.html#a1ccb4ac680acf1bedcdb5eca9535549e',1,'DialogDissimilarities::variablesLocationList'],['../classDialogSimilarityMatches.html#a36e245b4720b67a287977f997663d696',1,'DialogSimilarityMatches::variablesLocationList'],['../classDialogSimilarityPearson.html#ae873a9ea1b0a036fbf532e342b2ec1a2',1,'DialogSimilarityPearson::variablesLocationList']]],
   ['varianceclc_4',['varianceCLC',['../classGraph.html#afe2a40ddcae6958332e9ff7fbaebe800',1,'Graph']]],
   ['varianceec_5',['varianceEC',['../classGraph.html#a8c6350ebbf31845a80096421cb95faf7',1,'Graph']]],
@@ -19,6 +19,8 @@ var searchData=
   ['variancessc_16',['varianceSSC',['../classGraph.html#adf5908e0d5bd9f4184afa2433cb3ee71',1,'Graph']]],
   ['verbose_17',['verbose',['../structcli_1_1CliConfig.html#a8f511e6d3694cb8e027307d8ebecc862',1,'cli::CliConfig']]],
   ['version_18',['VERSION',['../global_8h.html#a0bb1acd26e99b7fc2dfd883596a4a7f5',1,'global.h']]],
-  ['viewoptionsmenu_19',['viewOptionsMenu',['../classMainWindow.html#a946d7a7ec27b130f25833b12947ed85c',1,'MainWindow']]],
-  ['vpos_20',['vpos',['../classGraph.html#aa7843b7958fadd9229b859fdfb06ed76',1,'Graph']]]
+  ['viewdatatableact_19',['viewDataTableAct',['../classMainWindow.html#aaf9b3ca608ff5f4498b3190ec90fe463',1,'MainWindow']]],
+  ['viewoptionsmenu_20',['viewOptionsMenu',['../classMainWindow.html#a946d7a7ec27b130f25833b12947ed85c',1,'MainWindow']]],
+  ['visible_21',['visible',['../structNodeTableModel_1_1NodeRow.html#aa9e6692c28d8287f008999f8035e4282',1,'NodeTableModel::NodeRow']]],
+  ['vpos_22',['vpos',['../classGraph.html#aa7843b7958fadd9229b859fdfb06ed76',1,'Graph']]]
 ];

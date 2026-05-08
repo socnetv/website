@@ -46,7 +46,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.4</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.5</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -315,6 +315,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25016b489283029beab0db9ea27429d0" id="r_a25016b489283029beab0db9ea27429d0"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a25016b489283029beab0db9ea27429d0">outEdgeLabel</a> (const int &amp;v2) const</td></tr>
 <tr class="memdesc:a25016b489283029beab0db9ea27429d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the label of the outbound edge to the given vertex.  <br /></td></tr>
 <tr class="separator:a25016b489283029beab0db9ea27429d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe83a1d21a82c07704463f71bf30ea2a" id="r_abe83a1d21a82c07704463f71bf30ea2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#abe83a1d21a82c07704463f71bf30ea2a">setOutEdgeCustomAttributes</a> (const int &amp;v2, const QHash&lt; QString, QString &gt; &amp;attrs)</td></tr>
+<tr class="memdesc:abe83a1d21a82c07704463f71bf30ea2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all custom attributes on the outbound edge to vertex <code>v2</code>, replacing any previously stored attributes for that edge.  <br /></td></tr>
+<tr class="separator:abe83a1d21a82c07704463f71bf30ea2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90daad1bbfc5484461311763c72d5a39" id="r_a90daad1bbfc5484461311763c72d5a39"><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a90daad1bbfc5484461311763c72d5a39">outEdgeCustomAttributes</a> (const int &amp;v2) const</td></tr>
+<tr class="memdesc:a90daad1bbfc5484461311763c72d5a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the custom attributes stored on the outbound edge to vertex <code>v2</code>. Returns an empty hash if no attributes have been set for that edge.  <br /></td></tr>
+<tr class="separator:a90daad1bbfc5484461311763c72d5a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b5ce5fb7c6452d7401ecbba3134534" id="r_ab3b5ce5fb7c6452d7401ecbba3134534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#ab3b5ce5fb7c6452d7401ecbba3134534">addInEdge</a> (const int &amp;v1, const qreal &amp;weight)</td></tr>
 <tr class="memdesc:ab3b5ce5fb7c6452d7401ecbba3134534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an inbound edge from vertex v1.  <br /></td></tr>
 <tr class="separator:ab3b5ce5fb7c6452d7401ecbba3134534"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -370,9 +376,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a421d900d4df5d1c65580e1fc16820acf" id="r_a421d900d4df5d1c65580e1fc16820acf"><td class="memItemLeft" align="right" valign="top">QHash&lt; int, qreal &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a421d900d4df5d1c65580e1fc16820acf">reciprocalEdgesHash</a> ()</td></tr>
 <tr class="memdesc:a421d900d4df5d1c65580e1fc16820acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a qhash of all reciprocal edges to neighbors in the active relation.  <br /></td></tr>
 <tr class="separator:a421d900d4df5d1c65580e1fc16820acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52483a7fd4015bcdf39ef5196572f08e" id="r_a52483a7fd4015bcdf39ef5196572f08e"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a52483a7fd4015bcdf39ef5196572f08e">neighborhoodList</a> ()</td></tr>
-<tr class="memdesc:a52483a7fd4015bcdf39ef5196572f08e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all neighbors mutually connected to this vertex in the active relation.  <br /></td></tr>
-<tr class="separator:a52483a7fd4015bcdf39ef5196572f08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1edae303ad9dc8a7dac75e07ab09ed" id="r_a5b1edae303ad9dc8a7dac75e07ab09ed"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a5b1edae303ad9dc8a7dac75e07ab09ed">reciprocalNeighborhoodList</a> ()</td></tr>
+<tr class="memdesc:a5b1edae303ad9dc8a7dac75e07ab09ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all vertices reciprocally connected to this vertex in the active relation.  <br /></td></tr>
+<tr class="separator:a5b1edae303ad9dc8a7dac75e07ab09ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac938b0166a7742e07f2696872161c072" id="r_ac938b0166a7742e07f2696872161c072"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#ac938b0166a7742e07f2696872161c072">degreeOut</a> ()</td></tr>
 <tr class="memdesc:ac938b0166a7742e07f2696872161c072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outDegree (the sum of all enabled outEdges weights) of this vertex.  <br /></td></tr>
 <tr class="separator:ac938b0166a7742e07f2696872161c072"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -701,12 +707,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1733f8d80dc8dac5c1f713ad3b7dda38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a498012056cf6004c63b24f4c3ad985fc" id="r_a498012056cf6004c63b24f4c3ad985fc"><td class="memItemLeft" align="right" valign="top">QMultiHash&lt; int, <a class="el" href="graphvertex_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd">L_int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a498012056cf6004c63b24f4c3ad985fc">m_cliques</a></td></tr>
 <tr class="separator:a498012056cf6004c63b24f4c3ad985fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a382665fa9ffa5d27809c4290bef85b72" id="r_a382665fa9ffa5d27809c4290bef85b72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="graphvertex_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd">L_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a382665fa9ffa5d27809c4290bef85b72">m_neighborhoodList</a></td></tr>
-<tr class="separator:a382665fa9ffa5d27809c4290bef85b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38557e1024e263877dc640e6f1548e56" id="r_a38557e1024e263877dc640e6f1548e56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="graphvertex_8h.html#a287f89e80480c88690b7ba00c70f1a6f">H_IntToStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a38557e1024e263877dc640e6f1548e56">m_outLinkColors</a></td></tr>
 <tr class="separator:a38557e1024e263877dc640e6f1548e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86799225eacaaee5d8bc80cecd9e2556" id="r_a86799225eacaaee5d8bc80cecd9e2556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="graphvertex_8h.html#a287f89e80480c88690b7ba00c70f1a6f">H_IntToStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#a86799225eacaaee5d8bc80cecd9e2556">m_outEdgeLabels</a></td></tr>
 <tr class="separator:a86799225eacaaee5d8bc80cecd9e2556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab980da04c9c461c2a833aa11a4de7bb0" id="r_ab980da04c9c461c2a833aa11a4de7bb0"><td class="memItemLeft" align="right" valign="top">QHash&lt; int, QHash&lt; QString, QString &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphVertex.html#ab980da04c9c461c2a833aa11a4de7bb0">m_outEdgeCustomAttributes</a></td></tr>
+<tr class="separator:ab980da04c9c461c2a833aa11a4de7bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a20c44cca0faeeaae8e0114fe90a65627" name="a20c44cca0faeeaae8e0114fe90a65627"></a>
@@ -1957,27 +1963,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a52483a7fd4015bcdf39ef5196572f08e" name="a52483a7fd4015bcdf39ef5196572f08e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52483a7fd4015bcdf39ef5196572f08e">&#9670;&#160;</a></span>neighborhoodList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QList&lt; int &gt; GraphVertex::neighborhoodList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a list of all neighbors mutually connected to this vertex in the active relation. </p>
-<p>The returned list does not include the vertex itself, even if it self-connected. Same as calling <a class="el" href="classGraphVertex.html#a421d900d4df5d1c65580e1fc16820acf" title="Returns a qhash of all reciprocal edges to neighbors in the active relation.">GraphVertex::reciprocalEdgesHash()</a>.keys() which returns a QList of int keys, where each key is a vertex reciprocally connected to this one.</p>
-<dl class="section return"><dt>Returns</dt><dd>QList&lt;int&gt; </dd></dl>
-
-</div>
-</div>
 <a id="accaacda39e3ebce0050ac24d2b5df2f9" name="accaacda39e3ebce0050ac24d2b5df2f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#accaacda39e3ebce0050ac24d2b5df2f9">&#9670;&#160;</a></span>number()</h2>
 
@@ -2075,6 +2060,32 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the outDegree. Avoid using it alone. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a90daad1bbfc5484461311763c72d5a39" name="a90daad1bbfc5484461311763c72d5a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90daad1bbfc5484461311763c72d5a39">&#9670;&#160;</a></span>outEdgeCustomAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHash&lt; QString, QString &gt; GraphVertex::outEdgeCustomAttributes </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v2</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the custom attributes stored on the outbound edge to vertex <code>v2</code>. Returns an empty hash if no attributes have been set for that edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v2</td><td>Target vertex number. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2436,6 +2447,33 @@ Private Attributes</h2></td></tr>
 
 <p>Returns a qhash of all reciprocal edges to neighbors in the active relation. </p>
 <dl class="section return"><dt>Returns</dt><dd>QHash&lt;int,qreal&gt;* </dd></dl>
+
+</div>
+</div>
+<a id="a5b1edae303ad9dc8a7dac75e07ab09ed" name="a5b1edae303ad9dc8a7dac75e07ab09ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1edae303ad9dc8a7dac75e07ab09ed">&#9670;&#160;</a></span>reciprocalNeighborhoodList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; int &gt; GraphVertex::reciprocalNeighborhoodList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of all vertices reciprocally connected to this vertex in the active relation. </p>
+<p>A vertex is included only if:</p><ul>
+<li>There is an enabled out-edge from this vertex to it in the current relation.</li>
+<li>There is a reciprocal in-edge from it back to this vertex.</li>
+<li>The reverse edge weight is non-zero (existence check, not exact equality).</li>
+<li>The vertex is not this vertex itself (no self-loops).</li>
+</ul>
+<p>Note: this function returns MUTUAL neighbors only. For general 1-hop neighbors (out-edges only, regardless of reciprocity), use a direct iteration over m_outEdges instead.</p>
+<dl class="section return"><dt>Returns</dt><dd>QList&lt;int&gt; of vertex numbers reciprocally connected to this vertex. </dd></dl>
 
 </div>
 </div>
@@ -3565,6 +3603,43 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abe83a1d21a82c07704463f71bf30ea2a" name="abe83a1d21a82c07704463f71bf30ea2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe83a1d21a82c07704463f71bf30ea2a">&#9670;&#160;</a></span>setOutEdgeCustomAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphVertex::setOutEdgeCustomAttributes </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QHash&lt; QString, QString &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets all custom attributes on the outbound edge to vertex <code>v2</code>, replacing any previously stored attributes for that edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v2</td><td>Target vertex number. </td></tr>
+    <tr><td class="paramname">attrs</td><td>Key/value map of custom attributes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5448,28 +5523,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a382665fa9ffa5d27809c4290bef85b72" name="a382665fa9ffa5d27809c4290bef85b72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a382665fa9ffa5d27809c4290bef85b72">&#9670;&#160;</a></span>m_neighborhoodList</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="graphvertex_8h.html#a39dc9a7ab4d918af4bedc2ae62989bdd">L_int</a> GraphVertex::m_neighborhoodList</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac26d25c11ec7222374f53c71a1e46a90" name="ac26d25c11ec7222374f53c71a1e46a90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac26d25c11ec7222374f53c71a1e46a90">&#9670;&#160;</a></span>m_number</h2>
 
@@ -5569,6 +5622,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int GraphVertex::m_outDegree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab980da04c9c461c2a833aa11a4de7bb0" name="ab980da04c9c461c2a833aa11a4de7bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab980da04c9c461c2a833aa11a4de7bb0">&#9670;&#160;</a></span>m_outEdgeCustomAttributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHash&lt;int, QHash&lt;QString,QString&gt; &gt; GraphVertex::m_outEdgeCustomAttributes</td>
         </tr>
       </table>
   </td>

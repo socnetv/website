@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['headlessloadresult_0',['HeadlessLoadResult',['../structHeadlessLoadResult.html',1,'']]]
+  ['filterbarwidget_0',['FilterBarWidget',['../classFilterBarWidget.html',1,'']]],
+  ['filtercondition_1',['FilterCondition',['../structFilterCondition.html',1,'']]]
 ];

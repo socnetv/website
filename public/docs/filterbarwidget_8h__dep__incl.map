@@ -1,0 +1,7 @@
+<map id="filterbarwidget.h" name="filterbarwidget.h">
+<area shape="rect" id="Node000001" title="Persistent filter bar showing active filter chips (#219)." alt="" coords="93,5,222,31"/>
+<area shape="rect" id="Node000002" href="$filterbarwidget_8cpp.html" title="Implements FilterBarWidget — the persistent filter chip bar (#219)." alt="" coords="5,79,149,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,42,92,80,89,76,133,38"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="173,79,304,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,38,227,76,224,80,179,42"/>
+</map>

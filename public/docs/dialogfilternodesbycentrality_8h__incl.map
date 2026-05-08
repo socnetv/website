@@ -1,5 +1,5 @@
 <map id="dialogfilternodesbycentrality.h" name="dialogfilternodesbycentrality.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="250,5,469,31"/>
+<area shape="rect" id="Node000001" title="Defines the DialogFilterNodesByCentrality class for filtering nodes based on some attribute." alt="" coords="250,5,469,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,244,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="322,33,176,77,175,72,321,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="269,79,343,104"/>

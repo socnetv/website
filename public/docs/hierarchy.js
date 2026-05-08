@@ -3,13 +3,17 @@ var hierarchy =
     [ "Actor", "structActor.html", null ],
     [ "CentralityScratchFinalize", "structCentralityScratchFinalize.html", null ],
     [ "CentralityScratchSSSP", "structCentralityScratchSSSP.html", null ],
+    [ "FilterBarWidget::ChipData", "structFilterBarWidget_1_1ChipData.html", null ],
     [ "ClickedEdge", "structClickedEdge.html", null ],
     [ "cli::CliConfig", "structcli_1_1CliConfig.html", null ],
     [ "CompareActors", "classCompareActors.html", null ],
     [ "DistanceEngine", "classDistanceEngine.html", null ],
     [ "DistanceScratch", "structDistanceScratch.html", null ],
+    [ "EdgeTableModel::EdgeRow", "structEdgeTableModel_1_1EdgeRow.html", null ],
+    [ "FilterCondition", "structFilterCondition.html", null ],
     [ "GraphDistance", "classGraphDistance.html", null ],
     [ "GraphDistancesCompare", "classGraphDistancesCompare.html", null ],
+    [ "Graph::GraphVisibilitySnapshot", "structGraph_1_1GraphVisibilitySnapshot.html", null ],
     [ "HeadlessLoadResult", "structHeadlessLoadResult.html", null ],
     [ "IDistanceProgressSink", "classIDistanceProgressSink.html", [
       [ "GraphDistanceProgressSink", "classGraphDistanceProgressSink.html", null ],
@@ -21,9 +25,15 @@ var hierarchy =
     [ "Matrix", "classMatrix.html", null ],
     [ "MatrixRow", "classMatrixRow.html", null ],
     [ "MyEdge", "classMyEdge.html", null ],
+    [ "NodeTableModel::NodeRow", "structNodeTableModel_1_1NodeRow.html", null ],
     [ "PairVF", "classPairVF.html", null ],
     [ "PairVFCompare", "classPairVFCompare.html", null ],
     [ "Parser::ParseConfig", "structParser_1_1ParseConfig.html", null ],
+    [ "TableImport::ParsedTable", "structTableImport_1_1ParsedTable.html", null ],
+    [ "QAbstractTableModel", null, [
+      [ "EdgeTableModel", "classEdgeTableModel.html", null ],
+      [ "NodeTableModel", "classNodeTableModel.html", null ]
+    ] ],
     [ "QChartView", null, [
       [ "Chart", "classChart.html", null ]
     ] ],
@@ -32,10 +42,13 @@ var hierarchy =
       [ "DialogDataSetSelect", "classDialogDataSetSelect.html", null ],
       [ "DialogDissimilarities", "classDialogDissimilarities.html", null ],
       [ "DialogEdgeDichotomization", "classDialogEdgeDichotomization.html", null ],
+      [ "DialogEdgeEdit", "classDialogEdgeEdit.html", null ],
       [ "DialogExportImage", "classDialogExportImage.html", null ],
       [ "DialogExportPDF", "classDialogExportPDF.html", null ],
+      [ "DialogFilterByAttribute", "classDialogFilterByAttribute.html", null ],
       [ "DialogFilterEdgesByWeight", "classDialogFilterEdgesByWeight.html", null ],
       [ "DialogFilterNodesByCentrality", "classDialogFilterNodesByCentrality.html", null ],
+      [ "DialogImportAttributes", "classDialogImportAttributes.html", null ],
       [ "DialogNodeEdit", "classDialogNodeEdit.html", null ],
       [ "DialogNodeFind", "classDialogNodeFind.html", null ],
       [ "DialogPreviewFile", "classDialogPreviewFile.html", null ],
@@ -76,5 +89,9 @@ var hierarchy =
       [ "GraphicsNode", "classGraphicsNode.html", null ],
       [ "Parser", "classParser.html", null ],
       [ "WebCrawler", "classWebCrawler.html", null ]
+    ] ],
+    [ "QWidget", null, [
+      [ "FilterBarWidget", "classFilterBarWidget.html", null ],
+      [ "GraphTableWidget", "classGraphTableWidget.html", null ]
     ] ]
 ];

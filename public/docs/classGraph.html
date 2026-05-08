@@ -46,7 +46,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.4</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.5</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -112,6 +112,7 @@ $(document).ready(function(){initNavTree('classGraph.html',''); initResizable();
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
@@ -165,6 +166,11 @@ Collaboration diagram for Graph:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ad261ae1ff287588b9d0e10adc864afa6" id="r_ad261ae1ff287588b9d0e10adc864afa6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad261ae1ff287588b9d0e10adc864afa6">ModStatus</a> { <br />
@@ -221,11 +227,11 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ab110126b7c2ac046952fe0452263de48" id="r_ab110126b7c2ac046952fe0452263de48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ab110126b7c2ac046952fe0452263de48">graphClickedEmptySpace</a> (const QPointF &amp;p)</td></tr>
 <tr class="memdesc:ab110126b7c2ac046952fe0452263de48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the clicked edge and node.  <br /></td></tr>
 <tr class="separator:ab110126b7c2ac046952fe0452263de48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9865a643f9d2ac497a0be02996f6520" id="r_af9865a643f9d2ac497a0be02996f6520"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af9865a643f9d2ac497a0be02996f6520">edgeCreate</a> (const int &amp;v1, const int &amp;v2, const qreal &amp;weight, const QString &amp;color, const int &amp;type=0, const bool &amp;drawArrows=true, const bool &amp;bezier=false, const QString &amp;label=QString(), const bool &amp;signalMW=true)</td></tr>
-<tr class="memdesc:af9865a643f9d2ac497a0be02996f6520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if edge (v1,v2) already exists, then creates it and signals the UI to draw it.  <br /></td></tr>
-<tr class="separator:af9865a643f9d2ac497a0be02996f6520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865013fc247b4cfc7dd59507358c24bd" id="r_a865013fc247b4cfc7dd59507358c24bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a865013fc247b4cfc7dd59507358c24bd">edgeCreate</a> (const int &amp;v1, const int &amp;v2, const qreal &amp;weight, const QString &amp;color, const int &amp;type=0, const bool &amp;drawArrows=true, const bool &amp;bezier=false, const QString &amp;label=QString(), const bool &amp;signalMW=true, const QHash&lt; QString, QString &gt; &amp;<a class="el" href="classGraph.html#ab33360e587c9b5c1c1eb0919066ab714">edgeCustomAttributes</a>=QHash&lt; QString, QString &gt;())</td></tr>
+<tr class="memdesc:a865013fc247b4cfc7dd59507358c24bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if edge (v1,v2) already exists, then creates it and signals the UI to draw it.  <br /></td></tr>
+<tr class="separator:a865013fc247b4cfc7dd59507358c24bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc6438ec53bb076d739a234363390320" id="r_acc6438ec53bb076d739a234363390320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#acc6438ec53bb076d739a234363390320">edgeCreateWebCrawler</a> (const int &amp;source, const int &amp;target)</td></tr>
-<tr class="memdesc:acc6438ec53bb076d739a234363390320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from <a class="el" href="classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu...">WebCrawler</a> when it finds an new link Calls <a class="el" href="classGraph.html#af9865a643f9d2ac497a0be02996f6520" title="Checks if edge (v1,v2) already exists, then creates it and signals the UI to draw it.">edgeCreate()</a> method with initEdgeColor.  <br /></td></tr>
+<tr class="memdesc:acc6438ec53bb076d739a234363390320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called from <a class="el" href="classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu...">WebCrawler</a> when it finds an new link Calls <a class="el" href="classGraph.html#a865013fc247b4cfc7dd59507358c24bd" title="Checks if edge (v1,v2) already exists, then creates it and signals the UI to draw it.">edgeCreate()</a> method with initEdgeColor.  <br /></td></tr>
 <tr class="separator:acc6438ec53bb076d739a234363390320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415c0f38704c7dbe681cc67080e125fc" id="r_a415c0f38704c7dbe681cc67080e125fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a415c0f38704c7dbe681cc67080e125fc">vertexCreateAtPos</a> (const QPointF &amp;p)</td></tr>
 <tr class="memdesc:a415c0f38704c7dbe681cc67080e125fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new vertex in the given position.  <br /></td></tr>
@@ -278,9 +284,30 @@ Public Slots</h2></td></tr>
 <tr class="memitem:aafa231a56a1b815a8e4b2793c31adbcd" id="r_aafa231a56a1b815a8e4b2793c31adbcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aafa231a56a1b815a8e4b2793c31adbcd">vertexFilterByCentrality</a> (const float threshold, const bool overThreshold, const <a class="el" href="global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839">IndexType</a> centralityIndex)</td></tr>
 <tr class="memdesc:aafa231a56a1b815a8e4b2793c31adbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters vertices by their score on the given centrality or prestige index.  <br /></td></tr>
 <tr class="separator:aafa231a56a1b815a8e4b2793c31adbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a34a552dc269f7e21350521561d2f2e" id="r_a8a34a552dc269f7e21350521561d2f2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a8a34a552dc269f7e21350521561d2f2e">vertexFilterByEgoNetwork</a> (const int v1, const int depth=1)</td></tr>
+<tr class="memdesc:a8a34a552dc269f7e21350521561d2f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves current visibility state and shows only the ego network of vertex v1 at the given depth.  <br /></td></tr>
+<tr class="separator:a8a34a552dc269f7e21350521561d2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d4d817a3a7b9ca12a31e08517f9ba87" id="r_a5d4d817a3a7b9ca12a31e08517f9ba87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a5d4d817a3a7b9ca12a31e08517f9ba87">vertexFilterBySelection</a> (const QList&lt; int &gt; &amp;selectedVertices)</td></tr>
+<tr class="memdesc:a5d4d817a3a7b9ca12a31e08517f9ba87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves current visibility state and shows only the selected vertices and the edges between them.  <br /></td></tr>
+<tr class="separator:a5d4d817a3a7b9ca12a31e08517f9ba87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbfe86b887633c174eb8d0fd7ebd493b" id="r_abbfe86b887633c174eb8d0fd7ebd493b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#abbfe86b887633c174eb8d0fd7ebd493b">vertexFilterByAttribute</a> (const <a class="el" href="structFilterCondition.html">FilterCondition</a> &amp;cond)</td></tr>
+<tr class="memdesc:abbfe86b887633c174eb8d0fd7ebd493b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows only vertices whose custom attribute satisfies <code>cond</code>; all other vertices are hidden.  <br /></td></tr>
+<tr class="separator:abbfe86b887633c174eb8d0fd7ebd493b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac223105a1719d9353fb18454b79c04e3" id="r_ac223105a1719d9353fb18454b79c04e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac223105a1719d9353fb18454b79c04e3">edgeFilterByAttribute</a> (const <a class="el" href="structFilterCondition.html">FilterCondition</a> &amp;cond)</td></tr>
+<tr class="memdesc:ac223105a1719d9353fb18454b79c04e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hides all edges whose custom attribute does not satisfy <code>cond</code>.  <br /></td></tr>
+<tr class="separator:ac223105a1719d9353fb18454b79c04e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58b5f4faad702b3326f69099e69c2c7" id="r_ae58b5f4faad702b3326f69099e69c2c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7">vertexFilterRestoreAll</a> ()</td></tr>
+<tr class="memdesc:ae58b5f4faad702b3326f69099e69c2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores vertex and edge visibility from the top snapshot on the history stack.  <br /></td></tr>
+<tr class="separator:ae58b5f4faad702b3326f69099e69c2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af095a388d4a33eb47e9a0b117619007c" id="r_af095a388d4a33eb47e9a0b117619007c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af095a388d4a33eb47e9a0b117619007c">visibilityHistoryEmpty</a> () const</td></tr>
+<tr class="memdesc:af095a388d4a33eb47e9a0b117619007c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the visibility history stack is empty.  <br /></td></tr>
+<tr class="separator:af095a388d4a33eb47e9a0b117619007c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd368d157853f0acb3d7cf4ccd32f1cd" id="r_acd368d157853f0acb3d7cf4ccd32f1cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#acd368d157853f0acb3d7cf4ccd32f1cd">edgeFilterByWeight</a> (const qreal, const bool)</td></tr>
 <tr class="memdesc:acd368d157853f0acb3d7cf4ccd32f1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters (disables) edges according the specified threshold weight.  <br /></td></tr>
 <tr class="separator:acd368d157853f0acb3d7cf4ccd32f1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad836204a6d313ea5531d5d27275f4c9b" id="r_ad836204a6d313ea5531d5d27275f4c9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad836204a6d313ea5531d5d27275f4c9b">edgeFilterReset</a> ()</td></tr>
+<tr class="memdesc:ad836204a6d313ea5531d5d27275f4c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-enables all edges in the current relation.  <br /></td></tr>
+<tr class="separator:ad836204a6d313ea5531d5d27275f4c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb003b8c34f57aa1873b8ed1c4f050c8" id="r_afb003b8c34f57aa1873b8ed1c4f050c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#afb003b8c34f57aa1873b8ed1c4f050c8">edgeFilterByRelation</a> (int relation, bool status)</td></tr>
 <tr class="memdesc:afb003b8c34f57aa1873b8ed1c4f050c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles (enables or disables) all edges of the given relation.  <br /></td></tr>
 <tr class="separator:afb003b8c34f57aa1873b8ed1c4f050c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -510,12 +537,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a59c5a0b1c147552a6cfeeac8d16dae6e" id="r_a59c5a0b1c147552a6cfeeac8d16dae6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a59c5a0b1c147552a6cfeeac8d16dae6e">vertexDegreeIn</a> (int)</td></tr>
 <tr class="memdesc:a59c5a0b1c147552a6cfeeac8d16dae6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inDegree (sum of inbound edge weights) of vertex v1.  <br /></td></tr>
 <tr class="separator:a59c5a0b1c147552a6cfeeac8d16dae6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a305345b49d7a055ac90e5aa223df5ba2" id="r_a305345b49d7a055ac90e5aa223df5ba2"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a305345b49d7a055ac90e5aa223df5ba2">vertexNeighborhoodList</a> (const int &amp;v1)</td></tr>
-<tr class="memdesc:a305345b49d7a055ac90e5aa223df5ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all vertices mutually connected to vertex v1 in the current relation.  <br /></td></tr>
-<tr class="separator:a305345b49d7a055ac90e5aa223df5ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa924d4e06bf17fc08f5cf565e4752313" id="r_aa924d4e06bf17fc08f5cf565e4752313"><td class="memItemLeft" align="right" valign="top">QSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aa924d4e06bf17fc08f5cf565e4752313">vertexNeighborhoodSet</a> (const int &amp;v1)</td></tr>
-<tr class="memdesc:aa924d4e06bf17fc08f5cf565e4752313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of all vertices mutually connected to vertex v1 in the current relation.  <br /></td></tr>
-<tr class="separator:aa924d4e06bf17fc08f5cf565e4752313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd7b62200fb953d088d3c37640a95c7" id="r_addd7b62200fb953d088d3c37640a95c7"><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#addd7b62200fb953d088d3c37640a95c7">vertexReciprocalNeighborsList</a> (const int &amp;v1)</td></tr>
+<tr class="memdesc:addd7b62200fb953d088d3c37640a95c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all vertices reciprocally connected to vertex v1 in the current relation.  <br /></td></tr>
+<tr class="separator:addd7b62200fb953d088d3c37640a95c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7f0460edf971fc19867c9e1ca7dc7c" id="r_aba7f0460edf971fc19867c9e1ca7dc7c"><td class="memItemLeft" align="right" valign="top">QSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aba7f0460edf971fc19867c9e1ca7dc7c">vertexReciprocalNeighborsSet</a> (const int &amp;v1)</td></tr>
+<tr class="memdesc:aba7f0460edf971fc19867c9e1ca7dc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of all vertices reciprocally connected to vertex v1 in the current relation.  <br /></td></tr>
+<tr class="separator:aba7f0460edf971fc19867c9e1ca7dc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57ba8ddbef715800af913c051fb2c829" id="r_a57ba8ddbef715800af913c051fb2c829"><td class="memItemLeft" align="right" valign="top">QSet&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a57ba8ddbef715800af913c051fb2c829">vertexOutNeighborsSet</a> (const int &amp;v1, const bool includeInEdges=false)</td></tr>
+<tr class="memdesc:a57ba8ddbef715800af913c051fb2c829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of all 1-hop neighbors of vertex v1 in the current relation.  <br /></td></tr>
+<tr class="separator:a57ba8ddbef715800af913c051fb2c829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c553620267a022f1b3b9f250ba1099" id="r_ae5c553620267a022f1b3b9f250ba1099"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae5c553620267a022f1b3b9f250ba1099">vertexIsolated</a> (const int &amp;v1) const</td></tr>
 <tr class="memdesc:ae5c553620267a022f1b3b9f250ba1099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if vertex is isolated.  <br /></td></tr>
 <tr class="separator:ae5c553620267a022f1b3b9f250ba1099"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -623,9 +653,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4827b60a1166abd43a405db4bc6946c" id="r_ac4827b60a1166abd43a405db4bc6946c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac4827b60a1166abd43a405db4bc6946c">vertexCustomAttributesSet</a> (const int &amp;v1, const QHash&lt; QString, QString &gt; &amp;customAttributes)</td></tr>
 <tr class="memdesc:ac4827b60a1166abd43a405db4bc6946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets custom attributes for a specified vertex.  <br /></td></tr>
 <tr class="separator:ac4827b60a1166abd43a405db4bc6946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb81df8407f1ad145afc59a8ab707610" id="r_afb81df8407f1ad145afc59a8ab707610"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#afb81df8407f1ad145afc59a8ab707610">vertexCustomAttributeSet</a> (const int &amp;v1, const QString &amp;key, const QString &amp;value)</td></tr>
+<tr class="memdesc:afb81df8407f1ad145afc59a8ab707610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single custom attribute key/value on vertex <code>v1</code>, leaving all other attributes untouched.  <br /></td></tr>
+<tr class="separator:afb81df8407f1ad145afc59a8ab707610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26b315f0889cbeff3dcd82a8925cf345" id="r_a26b315f0889cbeff3dcd82a8925cf345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a26b315f0889cbeff3dcd82a8925cf345">vertexCustomAttributeRemove</a> (const int &amp;v1, const QString &amp;key)</td></tr>
+<tr class="memdesc:a26b315f0889cbeff3dcd82a8925cf345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a single custom attribute key from vertex <code>v1</code>. Does nothing if the key does not exist.  <br /></td></tr>
+<tr class="separator:a26b315f0889cbeff3dcd82a8925cf345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ede4a7bd0ae8f9f30b341e9bd01344d" id="r_a9ede4a7bd0ae8f9f30b341e9bd01344d"><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a9ede4a7bd0ae8f9f30b341e9bd01344d">vertexCustomAttributes</a> (const int &amp;v1) const</td></tr>
-<tr class="memdesc:a9ede4a7bd0ae8f9f30b341e9bd01344d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the customAttributes method for a specific vertex in the graph.  <br /></td></tr>
+<tr class="memdesc:a9ede4a7bd0ae8f9f30b341e9bd01344d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the vertex at the position specified by the index <code>v1</code> from the <code>vpos</code> map and calls its <code>customAttributes</code> method.  <br /></td></tr>
 <tr class="separator:a9ede4a7bd0ae8f9f30b341e9bd01344d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6079b36d22a565abb11d4e4709d9c322" id="r_a6079b36d22a565abb11d4e4709d9c322"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a6079b36d22a565abb11d4e4709d9c322">vertexAttributesImport</a> (const QStringList &amp;headers, const QVector&lt; QStringList &gt; &amp;rows, int idColumn, bool matchByLabel)</td></tr>
+<tr class="memdesc:a6079b36d22a565abb11d4e4709d9c322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imports custom attributes from a parsed table into existing vertices.  <br /></td></tr>
+<tr class="separator:a6079b36d22a565abb11d4e4709d9c322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b8ce5e0bfd65de2e022be07e59fe28" id="r_a49b8ce5e0bfd65de2e022be07e59fe28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a49b8ce5e0bfd65de2e022be07e59fe28">vertexPosSet</a> (const int &amp;v, const int &amp;x, const int &amp;y)</td></tr>
 <tr class="memdesc:a49b8ce5e0bfd65de2e022be07e59fe28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the position of the given vertex.  <br /></td></tr>
 <tr class="separator:a49b8ce5e0bfd65de2e022be07e59fe28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -730,6 +769,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d6700031964378f0021889eca44412d" id="r_a2d6700031964378f0021889eca44412d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a2d6700031964378f0021889eca44412d">edgeColorAllSet</a> (const QString &amp;color, const int &amp;threshold=RAND_MAX)</td></tr>
 <tr class="memdesc:a2d6700031964378f0021889eca44412d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the color of all enabled edges.  <br /></td></tr>
 <tr class="separator:a2d6700031964378f0021889eca44412d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115f70fb37cc364269a78abe917ef45f" id="r_a115f70fb37cc364269a78abe917ef45f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a115f70fb37cc364269a78abe917ef45f">edgeCustomAttributesSet</a> (const int &amp;v1, const int &amp;v2, const QHash&lt; QString, QString &gt; &amp;attrs)</td></tr>
+<tr class="memdesc:a115f70fb37cc364269a78abe917ef45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all custom attributes on edge v1→v2, replacing any previously stored attributes for that edge.  <br /></td></tr>
+<tr class="separator:a115f70fb37cc364269a78abe917ef45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33360e587c9b5c1c1eb0919066ab714" id="r_ab33360e587c9b5c1c1eb0919066ab714"><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ab33360e587c9b5c1c1eb0919066ab714">edgeCustomAttributes</a> (const int &amp;v1, const int &amp;v2) const</td></tr>
+<tr class="memdesc:ab33360e587c9b5c1c1eb0919066ab714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the custom attributes stored on edge v1→v2. Returns an empty hash if no attributes have been set for that edge.  <br /></td></tr>
+<tr class="separator:ab33360e587c9b5c1c1eb0919066ab714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d058edaef12255342315e13504a24f1" id="r_a9d058edaef12255342315e13504a24f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a9d058edaef12255342315e13504a24f1">edgeAttributesImport</a> (const QStringList &amp;headers, const QVector&lt; QStringList &gt; &amp;rows, int srcColumn, int tgtColumn)</td></tr>
+<tr class="memdesc:a9d058edaef12255342315e13504a24f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imports custom attributes from a parsed table into existing edges.  <br /></td></tr>
+<tr class="separator:a9d058edaef12255342315e13504a24f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9daef3f04db086734e8c69153491cf5a" id="r_a9daef3f04db086734e8c69153491cf5a"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a9daef3f04db086734e8c69153491cf5a">graphHasEdgeCustomAttributes</a> () const</td></tr>
+<tr class="memdesc:a9daef3f04db086734e8c69153491cf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all unique custom attribute keys present across all enabled edges in the current graph.  <br /></td></tr>
+<tr class="separator:a9daef3f04db086734e8c69153491cf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa907d58dcf217fce7110d6a0eac8144c" id="r_aa907d58dcf217fce7110d6a0eac8144c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aa907d58dcf217fce7110d6a0eac8144c">isEmpty</a> () const</td></tr>
 <tr class="memdesc:aa907d58dcf217fce7110d6a0eac8144c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current graph has no vertices at all.  <br /></td></tr>
 <tr class="separator:aa907d58dcf217fce7110d6a0eac8144c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1082,12 +1133,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbece77618fe4f08476fc2baea399fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576041f65ea0102bdb0840613257cfd4" id="r_a576041f65ea0102bdb0840613257cfd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a576041f65ea0102bdb0840613257cfd4">triadType_examine_MAN_label</a> (int, int, int, <a class="el" href="classGraphVertex.html">GraphVertex</a> *, <a class="el" href="classGraphVertex.html">GraphVertex</a> *, <a class="el" href="classGraphVertex.html">GraphVertex</a> *)</td></tr>
 <tr class="separator:a576041f65ea0102bdb0840613257cfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b9ef776a172871dc01662f0a8bff9e" id="r_a32b9ef776a172871dc01662f0a8bff9e"><td class="memItemLeft" align="right" valign="top">const QList&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a32b9ef776a172871dc01662f0a8bff9e">graphTriadTypeFreqs</a> () const</td></tr>
+<tr class="separator:a32b9ef776a172871dc01662f0a8bff9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a53e4d6bad02cd1566870f36047c92" id="r_ae9a53e4d6bad02cd1566870f36047c92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae9a53e4d6bad02cd1566870f36047c92">hasCalculatedTriadCensus</a> () const</td></tr>
+<tr class="separator:ae9a53e4d6bad02cd1566870f36047c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad568853cd75d9f9a2c6db69c001e369b" id="r_ad568853cd75d9f9a2c6db69c001e369b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad568853cd75d9f9a2c6db69c001e369b">layoutRandom</a> ()</td></tr>
 <tr class="memdesc:ad568853cd75d9f9a2c6db69c001e369b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repositions all nodes on random positions Emits setNodePos(i, x,y) to tell GW that the node item should be moved.  <br /></td></tr>
 <tr class="separator:ad568853cd75d9f9a2c6db69c001e369b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43cf6bce293443a7a430af87a1c60461" id="r_a43cf6bce293443a7a430af87a1c60461"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a43cf6bce293443a7a430af87a1c60461">layoutRadialRandom</a> (const bool &amp;guides=true)</td></tr>
 <tr class="memdesc:a43cf6bce293443a7a430af87a1c60461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repositions all nodes on the periphery of different circles with random radius.  <br /></td></tr>
 <tr class="separator:a43cf6bce293443a7a430af87a1c60461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa141464694def2bf3b9c8e73f1324d39" id="r_aa141464694def2bf3b9c8e73f1324d39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aa141464694def2bf3b9c8e73f1324d39">layoutEgoRadial</a> (const int egoVertex)</td></tr>
+<tr class="memdesc:aa141464694def2bf3b9c8e73f1324d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ego-centered radial layout.  <br /></td></tr>
+<tr class="separator:aa141464694def2bf3b9c8e73f1324d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3660b172bfb4f5d32aedcdec828d584" id="r_af3660b172bfb4f5d32aedcdec828d584"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af3660b172bfb4f5d32aedcdec828d584">layoutCircular</a> (const double &amp;x0, const double &amp;y0, const double &amp;newRadius, const bool &amp;guides=false)</td></tr>
 <tr class="memdesc:af3660b172bfb4f5d32aedcdec828d584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repositions all nodes on the periphery of a circle with given radius.  <br /></td></tr>
 <tr class="separator:af3660b172bfb4f5d32aedcdec828d584"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1128,9 +1186,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6a4b1e4913520ae86ef2c6acc3835fd" id="r_ae6a4b1e4913520ae86ef2c6acc3835fd"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae6a4b1e4913520ae86ef2c6acc3835fd">layoutForceDirected_Eades_moveNodes</a> (const qreal &amp;c4)</td></tr>
 <tr class="memdesc:ae6a4b1e4913520ae86ef2c6acc3835fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all vertices to their new positions as computed by the Eades Spring Embedder model.  <br /></td></tr>
 <tr class="separator:ae6a4b1e4913520ae86ef2c6acc3835fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9146a3ea1a2caea138abf0aa8b7146" id="r_aaa9146a3ea1a2caea138abf0aa8b7146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aaa9146a3ea1a2caea138abf0aa8b7146">layoutForceDirected_FR_moveNodes</a> (const qreal &amp;temperature)</td></tr>
-<tr class="memdesc:aaa9146a3ea1a2caea138abf0aa8b7146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all vertices to their new positions as computed by the Fruchterman-Reingold model.  <br /></td></tr>
-<tr class="separator:aaa9146a3ea1a2caea138abf0aa8b7146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128230c0996aa49eacc05f5808c63a89" id="r_a128230c0996aa49eacc05f5808c63a89"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a128230c0996aa49eacc05f5808c63a89">layoutForceDirected_FR_moveNodes</a> (const qreal &amp;temperature)</td></tr>
+<tr class="memdesc:a128230c0996aa49eacc05f5808c63a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all vertices to their new positions as computed by the Fruchterman-Reingold model.  <br /></td></tr>
+<tr class="separator:a128230c0996aa49eacc05f5808c63a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad175043ee530a46e4bdd39fa590e2e88" id="r_ad175043ee530a46e4bdd39fa590e2e88"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad175043ee530a46e4bdd39fa590e2e88">layoutForceDirected_FR_temperature</a> (const int iteration) const</td></tr>
 <tr class="memdesc:ad175043ee530a46e4bdd39fa590e2e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces the temperature as the layout approaches a better configuration.  <br /></td></tr>
 <tr class="separator:ad175043ee530a46e4bdd39fa590e2e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1255,6 +1313,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a3fbb5439a2c6ed561d9a45e3007c3648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fca354221b96305fc48843524ba450c" id="r_a1fca354221b96305fc48843524ba450c"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="global_8h.html#a99a47c80f0deda883f0383e2cbbec281">SelectedEdge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a1fca354221b96305fc48843524ba450c">m_selectedEdges</a></td></tr>
 <tr class="separator:a1fca354221b96305fc48843524ba450c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec5b28dfec0d87332d9f21c13b25f4a" id="r_acec5b28dfec0d87332d9f21c13b25f4a"><td class="memItemLeft" align="right" valign="top">QStack&lt; <a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#acec5b28dfec0d87332d9f21c13b25f4a">m_visibilityHistory</a></td></tr>
+<tr class="separator:acec5b28dfec0d87332d9f21c13b25f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42f9df22af2183ed4823b473dae24790" id="r_a42f9df22af2183ed4823b473dae24790"><td class="memItemLeft" align="right" valign="top">QMultiHash&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a42f9df22af2183ed4823b473dae24790">influenceRanges</a></td></tr>
 <tr class="separator:a42f9df22af2183ed4823b473dae24790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7616b6fcee6454c84bb84133b48028e7" id="r_a7616b6fcee6454c84bb84133b48028e7"><td class="memItemLeft" align="right" valign="top">QMultiHash&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a7616b6fcee6454c84bb84133b48028e7">influenceDomains</a></td></tr>
@@ -2999,6 +3059,53 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d058edaef12255342315e13504a24f1" name="a9d058edaef12255342315e13504a24f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d058edaef12255342315e13504a24f1">&#9670;&#160;</a></span>edgeAttributesImport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::edgeAttributesImport </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVector&lt; QStringList &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcColumn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tgtColumn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imports custom attributes from a parsed table into existing edges. </p>
+<p>Each row is matched to an edge by looking up vertex numbers from <code>srcColumn</code> and <code>tgtColumn</code>. All other columns become custom attributes on the matched edge. Rows that do not match any existing edge are skipped.</p>
+<p>Example — CSV input with srcColumn=0, tgtColumn=1. Native editable columns (Weight, Label, Color) are routed to their setters; read-only native columns (Relation) are silently skipped: </p><div class="fragment"><div class="line">Source,Target,Weight,Label,Color,relationship,strength</div>
+<div class="line">1,2,0.8,,#666666,invested_in,strong   ← Weight/Color updated; relationship/strength → custom attrs</div>
+<div class="line">2,3,0.5,,#666666,mentors,medium</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Number of edges that received at least one attribute update. </dd></dl>
+
+</div>
+</div>
 <a id="a1937cf85da38e7e8478bf2173c72f9cb" name="a1937cf85da38e7e8478bf2173c72f9cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1937cf85da38e7e8478bf2173c72f9cb">&#9670;&#160;</a></span>edgeClicked()</h2>
 
@@ -3216,8 +3323,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af9865a643f9d2ac497a0be02996f6520" name="af9865a643f9d2ac497a0be02996f6520"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9865a643f9d2ac497a0be02996f6520">&#9670;&#160;</a></span>edgeCreate</h2>
+<a id="a865013fc247b4cfc7dd59507358c24bd" name="a865013fc247b4cfc7dd59507358c24bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865013fc247b4cfc7dd59507358c24bd">&#9670;&#160;</a></span>edgeCreate</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3277,7 +3384,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool &amp;&#160;</td>
-          <td class="paramname"><em>signalMW</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>signalMW</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QHash&lt; QString, QString &gt; &amp;&#160;</td>
+          <td class="paramname"><em>edgeCustomAttributes</em> = <code>QHash&lt;QString,QString&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3364,11 +3477,92 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Called from <a class="el" href="classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu...">WebCrawler</a> when it finds an new link Calls <a class="el" href="classGraph.html#af9865a643f9d2ac497a0be02996f6520" title="Checks if edge (v1,v2) already exists, then creates it and signals the UI to draw it.">edgeCreate()</a> method with initEdgeColor. </p>
+<p>Called from <a class="el" href="classWebCrawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu...">WebCrawler</a> when it finds an new link Calls <a class="el" href="classGraph.html#a865013fc247b4cfc7dd59507358c24bd" title="Checks if edge (v1,v2) already exists, then creates it and signals the UI to draw it.">edgeCreate()</a> method with initEdgeColor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td></td></tr>
     <tr><td class="paramname">target</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab33360e587c9b5c1c1eb0919066ab714" name="ab33360e587c9b5c1c1eb0919066ab714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33360e587c9b5c1c1eb0919066ab714">&#9670;&#160;</a></span>edgeCustomAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHash&lt; QString, QString &gt; Graph::edgeCustomAttributes </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the custom attributes stored on edge v1→v2. Returns an empty hash if no attributes have been set for that edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Source vertex number. </td></tr>
+    <tr><td class="paramname">v2</td><td>Target vertex number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a115f70fb37cc364269a78abe917ef45f" name="a115f70fb37cc364269a78abe917ef45f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115f70fb37cc364269a78abe917ef45f">&#9670;&#160;</a></span>edgeCustomAttributesSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::edgeCustomAttributesSet </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QHash&lt; QString, QString &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attrs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets all custom attributes on edge v1→v2, replacing any previously stored attributes for that edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Source vertex number. </td></tr>
+    <tr><td class="paramname">v2</td><td>Target vertex number. </td></tr>
+    <tr><td class="paramname">attrs</td><td>Key/value map of custom attributes. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3454,6 +3648,42 @@ Friends</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">v1</td><td></td></tr>
     <tr><td class="paramname">v2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac223105a1719d9353fb18454b79c04e3" name="ac223105a1719d9353fb18454b79c04e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac223105a1719d9353fb18454b79c04e3">&#9670;&#160;</a></span>edgeFilterByAttribute</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::edgeFilterByAttribute </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structFilterCondition.html">FilterCondition</a> &amp;&#160;</td>
+          <td class="paramname"><em>cond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Hides all edges whose custom attribute does not satisfy <code>cond</code>. </p>
+<p>Non-destructive: pushes a <a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a> onto m_visibilityHistory before making any changes. Call <a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> to undo.</p>
+<p>Returns early with a status message if no edge satisfies the condition.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cond</td><td>The filter condition (key, operator, value). </td></tr>
   </table>
   </dd>
 </dl>
@@ -3548,6 +3778,34 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad836204a6d313ea5531d5d27275f4c9b" name="ad836204a6d313ea5531d5d27275f4c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad836204a6d313ea5531d5d27275f4c9b">&#9670;&#160;</a></span>edgeFilterReset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::edgeFilterReset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Re-enables all edges in the current relation. </p>
+<p>Restores full edge visibility after a weight filter has been applied. Non-destructive: only visibility is changed, no data is modified. </p>
 
 </div>
 </div>
@@ -5176,6 +5434,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a9daef3f04db086734e8c69153491cf5a" name="a9daef3f04db086734e8c69153491cf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9daef3f04db086734e8c69153491cf5a">&#9670;&#160;</a></span>graphHasEdgeCustomAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList Graph::graphHasEdgeCustomAttributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of all unique custom attribute keys present across all enabled edges in the current graph. </p>
+
+</div>
+</div>
 <a id="a0539ef45fadda916368c1464ad3725a5" name="a0539ef45fadda916368c1464ad3725a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0539ef45fadda916368c1464ad3725a5">&#9670;&#160;</a></span>graphHasVertexCustomAttributes()</h2>
 
@@ -5544,6 +5821,31 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a32b9ef776a172871dc01662f0a8bff9e" name="a32b9ef776a172871dc01662f0a8bff9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b9ef776a172871dc01662f0a8bff9e">&#9670;&#160;</a></span>graphTriadTypeFreqs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QList&lt; int &gt; &amp; Graph::graphTriadTypeFreqs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5571cb2eb528b2a685e062a5f78525a5" name="a5571cb2eb528b2a685e062a5f78525a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5571cb2eb528b2a685e062a5f78525a5">&#9670;&#160;</a></span>graphWalksMatrixCreate()</h2>
 
@@ -5609,6 +5911,31 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae9a53e4d6bad02cd1566870f36047c92" name="ae9a53e4d6bad02cd1566870f36047c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a53e4d6bad02cd1566870f36047c92">&#9670;&#160;</a></span>hasCalculatedTriadCensus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::hasCalculatedTriadCensus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -6019,6 +6346,35 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="aa141464694def2bf3b9c8e73f1324d39" name="aa141464694def2bf3b9c8e73f1324d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa141464694def2bf3b9c8e73f1324d39">&#9670;&#160;</a></span>layoutEgoRadial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::layoutEgoRadial </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>egoVertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ego-centered radial layout. </p>
+<p>Places <code>egoVertex</code> at the canvas center, its 1-hop out-neighbors (in the current relation) on an inner ring, and all remaining enabled nodes on an outer ring. Only node positions are changed — graph structure is untouched.</p>
+<p>Ring radii are fixed fractions of <a class="el" href="classGraph.html#aeb3c8cc6c37a713aa1eefd9d8aed1c7b" title="Gets the max radius of the canvas.">canvasMaxRadius()</a>: ring1 = 0.35 × maxRadius (ego neighbors) ring2 = 0.75 × maxRadius (all other nodes)</p>
+<p>Edge case: if <code>egoVertex</code> does not exist, emits a status message and returns.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">egoVertex</td><td>The vertex number to place at the center. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae6a4b1e4913520ae86ef2c6acc3835fd" name="ae6a4b1e4913520ae86ef2c6acc3835fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6a4b1e4913520ae86ef2c6acc3835fd">&#9670;&#160;</a></span>layoutForceDirected_Eades_moveNodes()</h2>
 
@@ -6146,14 +6502,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aaa9146a3ea1a2caea138abf0aa8b7146" name="aaa9146a3ea1a2caea138abf0aa8b7146"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa9146a3ea1a2caea138abf0aa8b7146">&#9670;&#160;</a></span>layoutForceDirected_FR_moveNodes()</h2>
+<a id="a128230c0996aa49eacc05f5808c63a89" name="a128230c0996aa49eacc05f5808c63a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128230c0996aa49eacc05f5808c63a89">&#9670;&#160;</a></span>layoutForceDirected_FR_moveNodes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Graph::layoutForceDirected_FR_moveNodes </td>
+          <td class="memname">qreal Graph::layoutForceDirected_FR_moveNodes </td>
           <td>(</td>
           <td class="paramtype">const qreal &amp;&#160;</td>
           <td class="paramname"><em>temperature</em></td><td>)</td>
@@ -11152,6 +11508,53 @@ Notes:
 
 </div>
 </div>
+<a id="a6079b36d22a565abb11d4e4709d9c322" name="a6079b36d22a565abb11d4e4709d9c322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6079b36d22a565abb11d4e4709d9c322">&#9670;&#160;</a></span>vertexAttributesImport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graph::vertexAttributesImport </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>headers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVector&lt; QStringList &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idColumn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>matchByLabel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imports custom attributes from a parsed table into existing vertices. </p>
+<p>Each row in <code>rows</code> is matched to a vertex either by node number (matchByLabel == false) or by label (matchByLabel == true) using the value in column <code>idColumn</code>. All other columns become custom attributes on the matched vertex. Rows that do not match any vertex are silently skipped.</p>
+<p>Example — CSV input with idColumn=0, matchByLabel=false. Native columns are routed to their proper setters (Label, Size, Color, Shape); only Visible is silently skipped (it is a filter state, not a persistent attribute): </p><div class="fragment"><div class="line"><span class="preprocessor">#,Label,Size,Color,type,year_founded</span></div>
+<div class="line">1,Alice,12,#ff0000,investor,2010   ← Label/Size/Color updated; type/year_founded → custom attrs</div>
+<div class="line">2,Bob,10,#0000ff,founder,2018</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Number of vertices that received at least one attribute update. </dd></dl>
+
+</div>
+</div>
 <a id="a2093941043eb5e86b340c88453e57b7e" name="a2093941043eb5e86b340c88453e57b7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2093941043eb5e86b340c88453e57b7e">&#9670;&#160;</a></span>vertexClicked()</h2>
 
@@ -11553,6 +11956,43 @@ Notes:
 
 </div>
 </div>
+<a id="a26b315f0889cbeff3dcd82a8925cf345" name="a26b315f0889cbeff3dcd82a8925cf345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b315f0889cbeff3dcd82a8925cf345">&#9670;&#160;</a></span>vertexCustomAttributeRemove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::vertexCustomAttributeRemove </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a single custom attribute key from vertex <code>v1</code>. Does nothing if the key does not exist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Vertex number. </td></tr>
+    <tr><td class="paramname">key</td><td>Attribute key to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9ede4a7bd0ae8f9f30b341e9bd01344d" name="a9ede4a7bd0ae8f9f30b341e9bd01344d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ede4a7bd0ae8f9f30b341e9bd01344d">&#9670;&#160;</a></span>vertexCustomAttributes()</h2>
 
@@ -11569,11 +12009,54 @@ Notes:
       </table>
 </div><div class="memdoc">
 
-<p>Calls the customAttributes method for a specific vertex in the graph. </p>
-<p>This function retrieves the vertex at the position specified by the index <code>v1</code> from the <code>vpos</code> map and calls its <code>customAttributes</code> method.</p>
+<p>Retrieves the vertex at the position specified by the index <code>v1</code> from the <code>vpos</code> map and calls its <code>customAttributes</code> method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">v1</td><td>The index of the vertex whose custom attributes are to be accessed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb81df8407f1ad145afc59a8ab707610" name="afb81df8407f1ad145afc59a8ab707610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb81df8407f1ad145afc59a8ab707610">&#9670;&#160;</a></span>vertexCustomAttributeSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::vertexCustomAttributeSet </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a single custom attribute key/value on vertex <code>v1</code>, leaving all other attributes untouched. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Vertex number. </td></tr>
+    <tr><td class="paramname">key</td><td>Attribute key. </td></tr>
+    <tr><td class="paramname">value</td><td>Attribute value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11784,6 +12267,42 @@ Notes:
 
 </div>
 </div>
+<a id="abbfe86b887633c174eb8d0fd7ebd493b" name="abbfe86b887633c174eb8d0fd7ebd493b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbfe86b887633c174eb8d0fd7ebd493b">&#9670;&#160;</a></span>vertexFilterByAttribute</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::vertexFilterByAttribute </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structFilterCondition.html">FilterCondition</a> &amp;&#160;</td>
+          <td class="paramname"><em>cond</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows only vertices whose custom attribute satisfies <code>cond</code>; all other vertices are hidden. </p>
+<p>Non-destructive: pushes a <a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a> onto m_visibilityHistory before making any changes. Call <a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> to undo.</p>
+<p>Returns early with a status message if the resulting visible set is empty.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cond</td><td>The filter condition (key, operator, value). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aafa231a56a1b815a8e4b2793c31adbcd" name="aafa231a56a1b815a8e4b2793c31adbcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafa231a56a1b815a8e4b2793c31adbcd">&#9670;&#160;</a></span>vertexFilterByCentrality</h2>
 
@@ -11825,25 +12344,138 @@ Notes:
 </div><div class="memdoc">
 
 <p>Filters vertices by their score on the given centrality or prestige index. </p>
+<p>Pushes a <a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a> onto m_visibilityHistory before making any changes, so <a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> can undo this filter.</p>
 <p>Performs two passes over the graph:</p>
 <ul>
 <li>Pass 1: Enables or disables each vertex depending on whether its score satisfies the threshold condition. Emits setVertexVisibility for every vertex whose state changes.</li>
 <li>Pass 2: Updates all edges. An edge is made visible only when both its source and target vertices are enabled after pass 1. Emits signalSetEdgeVisibility for every out-edge of every vertex.</li>
 </ul>
 <p>The two-pass design is required so that edge visibility can be determined correctly: during pass 2 all vertices are already in their final enabled state, so both endpoints of any edge can be queried reliably.</p>
-<p>Calling this function with a threshold that no vertex satisfies (e.g. DC &gt;= 999999) effectively re-enables all vertices and their edges, serving as the undo mechanism.</p>
 <p>Returns early with a status message if the requested index has not been computed yet — the user should run the corresponding analysis first.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">threshold</td><td>Score threshold to compare against. </td></tr>
     <tr><td class="paramname">overThreshold</td><td>If true, disable vertices with score &gt;= threshold; if false, disable vertices with score &lt;= threshold. </td></tr>
-    <tr><td class="paramname">centralityIndex</td><td>The centrality or prestige index to use, as defined by the IndexType enum in <a class="el" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV.">global.h</a>. Must match an entry in prominenceIndexList (1-based).</td></tr>
+    <tr><td class="paramname">centralityIndex</td><td>The centrality or prestige index to use, as defined by the IndexType enum in <a class="el" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV.">global.h</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classGraph.html#ac8ef695fe32d1c37d46d575f71777ec4" title="Returns true if the given centrality/prestige index has been computed.">isCentralityIndexComputed()</a> </dd>
 <dd>
+<a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> </dd>
+<dd>
 <a class="el" href="global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839" title="Centrality / prestige index identifiers.">IndexType</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8a34a552dc269f7e21350521561d2f2e" name="a8a34a552dc269f7e21350521561d2f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a34a552dc269f7e21350521561d2f2e">&#9670;&#160;</a></span>vertexFilterByEgoNetwork</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::vertexFilterByEgoNetwork </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves current visibility state and shows only the ego network of vertex v1 at the given depth. </p>
+<p>Non-destructive: pushes a <a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a> onto m_visibilityHistory before making any changes. Call <a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> to undo.</p>
+<p>Only out-edges in the current relation are used to determine neighbors. Works correctly for both directed and undirected graphs.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>The ego vertex (center of the neighborhood). </td></tr>
+    <tr><td class="paramname">depth</td><td>Neighborhood depth (currently only depth=1 supported). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d4d817a3a7b9ca12a31e08517f9ba87" name="a5d4d817a3a7b9ca12a31e08517f9ba87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4d817a3a7b9ca12a31e08517f9ba87">&#9670;&#160;</a></span>vertexFilterBySelection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::vertexFilterBySelection </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>selectedVertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves current visibility state and shows only the selected vertices and the edges between them. </p>
+<p>Non-destructive: pushes a <a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a> onto m_visibilityHistory before making any changes. Call <a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> to undo.</p>
+<p>Implements the "Focus on Selection" mode (#210): all nodes not in <code>selectedVertices</code> are hidden, and only edges whose both endpoints are in the selection remain visible.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selectedVertices</td><td>List of vertex numbers that should remain visible. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae58b5f4faad702b3326f69099e69c2c7" name="ae58b5f4faad702b3326f69099e69c2c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58b5f4faad702b3326f69099e69c2c7">&#9670;&#160;</a></span>vertexFilterRestoreAll</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::vertexFilterRestoreAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restores vertex and edge visibility from the top snapshot on the history stack. </p>
+<p>If the stack is empty (no filter is active), this is a no-op. Pops the snapshot after restoring, so repeated calls walk back through the filter history one step at a time. </p>
 
 </div>
 </div>
@@ -12398,60 +13030,6 @@ Notes:
 
 </div>
 </div>
-<a id="a305345b49d7a055ac90e5aa223df5ba2" name="a305345b49d7a055ac90e5aa223df5ba2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a305345b49d7a055ac90e5aa223df5ba2">&#9670;&#160;</a></span>vertexNeighborhoodList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QList&lt; int &gt; Graph::vertexNeighborhoodList </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>v1</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a list of all vertices mutually connected to vertex v1 in the current relation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>QList&lt;int&gt; </dd></dl>
-
-</div>
-</div>
-<a id="aa924d4e06bf17fc08f5cf565e4752313" name="aa924d4e06bf17fc08f5cf565e4752313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa924d4e06bf17fc08f5cf565e4752313">&#9670;&#160;</a></span>vertexNeighborhoodSet()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QSet&lt; int &gt; Graph::vertexNeighborhoodSet </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>v1</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the set of all vertices mutually connected to vertex v1 in the current relation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>QList&lt;int&gt; </dd></dl>
-
-</div>
-</div>
 <a id="acc472ff9e94cbda8618f043ea5f3b2ed" name="acc472ff9e94cbda8618f043ea5f3b2ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc472ff9e94cbda8618f043ea5f3b2ed">&#9670;&#160;</a></span>vertexNumberColorInit()</h2>
 
@@ -12681,6 +13259,46 @@ Notes:
 
 </div>
 </div>
+<a id="a57ba8ddbef715800af913c051fb2c829" name="a57ba8ddbef715800af913c051fb2c829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ba8ddbef715800af913c051fb2c829">&#9670;&#160;</a></span>vertexOutNeighborsSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSet&lt; int &gt; Graph::vertexOutNeighborsSet </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>includeInEdges</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the set of all 1-hop neighbors of vertex v1 in the current relation. </p>
+<p>By default returns only out-neighbors (vertices reachable via enabled out-edges). When <code>includeInEdges</code> is true, also includes in-neighbors (vertices that have an enabled out-edge to v1), giving the full set of adjacent nodes regardless of edge direction.</p>
+<p>Only edges in the current relation that are enabled are considered.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>The vertex number to query. </td></tr>
+    <tr><td class="paramname">includeInEdges</td><td>If true, union of out- and in-neighbors is returned. Default: false (out-neighbors only). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QSet&lt;int&gt; of neighbor vertex numbers. </dd></dl>
+
+</div>
+</div>
 <a id="a78ea1ed9384e809461904318e6a300d6" name="a78ea1ed9384e809461904318e6a300d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78ea1ed9384e809461904318e6a300d6">&#9670;&#160;</a></span>vertexPos()</h2>
 
@@ -12768,6 +13386,62 @@ Notes:
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="addd7b62200fb953d088d3c37640a95c7" name="addd7b62200fb953d088d3c37640a95c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd7b62200fb953d088d3c37640a95c7">&#9670;&#160;</a></span>vertexReciprocalNeighborsList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; int &gt; Graph::vertexReciprocalNeighborsList </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of all vertices reciprocally connected to vertex v1 in the current relation. </p>
+<p>A vertex is included only if there is an enabled, reciprocal edge between v1 and that vertex in the current relation. For general 1-hop neighbors (out-edges only), iterate m_outEdges directly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>The vertex number to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QList&lt;int&gt; of reciprocally connected vertex numbers. </dd></dl>
+
+</div>
+</div>
+<a id="aba7f0460edf971fc19867c9e1ca7dc7c" name="aba7f0460edf971fc19867c9e1ca7dc7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7f0460edf971fc19867c9e1ca7dc7c">&#9670;&#160;</a></span>vertexReciprocalNeighborsSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSet&lt; int &gt; Graph::vertexReciprocalNeighborsSet </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>v1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the set of all vertices reciprocally connected to vertex v1 in the current relation. </p>
+<p>A vertex is included only if there is an enabled, reciprocal edge between v1 and that vertex in the current relation. For general 1-hop neighbors (out-edges only), iterate m_outEdges directly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>The vertex number to query. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QSet&lt;int&gt; of reciprocally connected vertex numbers. </dd></dl>
 
 </div>
 </div>
@@ -13298,6 +13972,38 @@ Notes:
 
 <p>Returns the sum of vertices having reciprocal edges. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af095a388d4a33eb47e9a0b117619007c" name="af095a388d4a33eb47e9a0b117619007c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af095a388d4a33eb47e9a0b117619007c">&#9670;&#160;</a></span>visibilityHistoryEmpty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::visibilityHistoryEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the visibility history stack is empty. </p>
+<p>Used by the UI to determine whether a "Restore All" action should be enabled. The stack holds one entry per non-destructive filter operation (e.g. ego network focus). Each call to <a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> pops one entry; when the stack is empty, there is nothing left to restore.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if no filter snapshots are pending, false otherwise. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classGraph.html#a8a34a552dc269f7e21350521561d2f2e" title="Saves current visibility state and shows only the ego network of vertex v1 at the given depth.">vertexFilterByEgoNetwork()</a> </dd>
+<dd>
+<a class="el" href="classGraph.html#ae58b5f4faad702b3326f69099e69c2c7" title="Restores vertex and edge visibility from the top snapshot on the history stack.">vertexFilterRestoreAll()</a> </dd></dl>
 
 </div>
 </div>
@@ -18129,6 +18835,28 @@ Notes:
       <table class="memname">
         <tr>
           <td class="memname">QSet&lt;int&gt; Graph::m_verticesSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acec5b28dfec0d87332d9f21c13b25f4a" name="acec5b28dfec0d87332d9f21c13b25f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec5b28dfec0d87332d9f21c13b25f4a">&#9670;&#160;</a></span>m_visibilityHistory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStack&lt;<a class="el" href="structGraph_1_1GraphVisibilitySnapshot.html">GraphVisibilitySnapshot</a>&gt; Graph::m_visibilityHistory</td>
         </tr>
       </table>
   </td>

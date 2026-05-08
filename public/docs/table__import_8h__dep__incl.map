@@ -1,0 +1,13 @@
+<map id="table_import.h" name="table_import.h">
+<area shape="rect" id="Node000001" title="Declares TableImport — CSV and JSON parsers that return a ParsedTable suitable for attribute&#45;import w..." alt="" coords="209,5,327,31"/>
+<area shape="rect" id="Node000002" href="$dialogimportattributes_8cpp.html" title="Implements DialogImportAttributes (#227)." alt="" coords="5,152,200,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,29,170,36,145,46,122,61,104,80,96,97,95,117,101,151,96,152,89,117,91,96,99,77,119,57,142,41,169,31,195,24"/>
+<area shape="rect" id="Node000003" href="$dialogimportattributes_8h.html" title="Declares DialogImportAttributes — column&#45;mapping dialog for CSV/JSON attribute import (#227)." alt="" coords="114,79,294,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,43,216,80,212,77,246,39"/>
+<area shape="rect" id="Node000004" href="$graphtablewidget_8cpp.html" title="Implements GraphTableWidget — the tabbed node/edge data table panel (#225)." alt="" coords="237,152,400,177"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="288,40,309,78,319,118,321,152,316,152,313,119,304,80,283,43"/>
+<area shape="rect" id="Node000005" href="$table__import_8cpp.html" title="Implements TableImport::fromCSV() and TableImport::fromJSON() (#227)." alt="" coords="370,79,502,104"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="309,34,410,76,407,81,306,38"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="178,114,121,154,118,150,175,110"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="235,109,301,150,299,154,232,113"/>
+</map>

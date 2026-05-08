@@ -1,0 +1,11 @@
+<map id="dialogimportattributes.h" name="dialogimportattributes.h">
+<area shape="rect" id="Node000001" title="Declares DialogImportAttributes — column&#45;mapping dialog for CSV/JSON attribute import (#227)." alt="" coords="30,5,210,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,33,67,71,64,67,106,29"/>
+<area shape="rect" id="Node000003" href="$table__import_8h.html" title="Declares TableImport — CSV and JSON parsers that return a ParsedTable suitable for attribute&#45;import w..." alt="" coords="104,79,291,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,29,176,67,173,71,131,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="96,152,189,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="190,106,162,143,158,140,186,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="214,152,287,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="208,103,236,140,232,143,204,106"/>
+</map>

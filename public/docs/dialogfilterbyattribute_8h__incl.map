@@ -1,0 +1,11 @@
+<map id="dialogfilterbyattribute.h" name="dialogfilterbyattribute.h">
+<area shape="rect" id="Node000001" title="Declares DialogFilterByAttribute for filtering nodes/edges by a custom attribute." alt="" coords="63,5,239,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,86,80,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,33,71,80,68,76,133,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="104,86,197,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,31,153,72,148,72,148,31"/>
+<area shape="rect" id="Node000004" href="$filter__condition_8h.html" title="Defines the FilterCondition struct shared by all attribute&#45;based filters." alt="" coords="222,79,357,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,29,246,70,243,74,170,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="254,167,325,192"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="292,119,292,153,287,153,287,119"/>
+</map>

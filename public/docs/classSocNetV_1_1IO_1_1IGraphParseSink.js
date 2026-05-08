@@ -2,7 +2,7 @@ var classSocNetV_1_1IO_1_1IGraphParseSink =
 [
     [ "~IGraphParseSink", "classSocNetV_1_1IO_1_1IGraphParseSink.html#a6d1637289a23ef9718f9e6a1d8a3ca15", null ],
     [ "addNewRelation", "classSocNetV_1_1IO_1_1IGraphParseSink.html#a23fef0caa4292ea279e4852acaad212a", null ],
-    [ "createEdge", "classSocNetV_1_1IO_1_1IGraphParseSink.html#a67f68efad48e52537d53679c77b549f2", null ],
+    [ "createEdge", "classSocNetV_1_1IO_1_1IGraphParseSink.html#a2837b5754a84cc34545b3c72cfd88f17", null ],
     [ "createNode", "classSocNetV_1_1IO_1_1IGraphParseSink.html#a6ead5d78db63011ecef63291009bf3ae", null ],
     [ "createNodeAtPosRandom", "classSocNetV_1_1IO_1_1IGraphParseSink.html#acb1d8eb17be203e5dff9e6a8083e1d38", null ],
     [ "createNodeAtPosRandomWithLabel", "classSocNetV_1_1IO_1_1IGraphParseSink.html#a3df9b09cb9842c49de66e1413b5fc0e5", null ],
