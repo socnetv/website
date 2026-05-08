@@ -54,46 +54,22 @@ SocNetV supports the creation and analysis of multirelational networks in the Gr
 
 ### Features of SocNetV
 
-1. **Graph Construction**  
-   Use an easy-to-use GUI to construct social networks, or load networks in various formats (GraphML, GraphViz, Adjacency, EdgeList, Pajek, UCINET, GML, etc). Random networks can also be generated using models like:
-   - Barabási–Albert Scale-Free
-   - Erdős–Rényi
-   - Watts-Strogatz Small-World  
-   See more in the [Random Networks](/manual/generate#random-network-creation) section.
-
-2. **Metrics Computation**  
-   Compute standard graph theory and network cohesion metrics, such as:
-   - Density
-   - Diameter
-   - Geodesic distances
-   - Clustering coefficient  
-   See details in the [Cohesion Metrics](/manual/analysis#cohesion-measures) section.
-
-3. **Structural Statistics**  
-   Analyze network centrality and prestige metrics:
-   - Betweenness centrality
-   - Eigenvector centrality
-   - Closeness centrality
-   - PageRank prestige  
-   Explore these metrics in the [Centralities](/manual/analysis#centralities-and-prestige) section.
-
-4. **Community Detection**  
-   Use fast algorithms for detecting communities, including:
-   - Triad census
-   - Clique census  
-   Learn more in the [Communities](/manual/analysis#community-detection) section.
-
-5. **Structural Equivalence Analysis**  
-   Perform hierarchical clustering, actor similarity, and tie profile dissimilarity analysis.  
-   See more in [Structural Equivalence](/manual/analysis#structural-equivalence-methods).
-
-6. **Visualization Models**  
-   Visualize networks using layout algorithms:
-   - Radial
-   - Level-based
-   - Nodal sizes by centrality score
-   - Force-directed placement (Kamada-Kawai, Fruchterman-Reingold)  
-   Learn more in the [Visualization](/manual/visualization) section.
+- Standard graph and network cohesion metrics, such as [density](/manual/analysis/#cohesion-measures), [diameter](/manual/analysis/#diameter), [geodesics](/manual/analysis/#geodesics-matrix), [distances](/manual/analysis/#distances-matrix), [connectedness](/manual/analysis/#connectedness), [eccentricity](/manual/analysis/#eccentricity), [clustering coefficient](/manual/analysis/#clustering-coefficient), reciprocity, etc.
+- Matrix routines: [Adjacency plot](/manual/analysis/#plot-adjacency), [Laplacian matrix](/manual/analysis/#laplacian-matrix), [Degree matrix](/manual/analysis/#degree-matrix), [Cocitation](/manual/analysis/#cocitation-matrix), etc.
+- Advanced measures for social network analysis such as [centrality and prestige indices](/manual/analysis/#centralities-and-prestige) (e.g., [eigenvector centrality](/manual/analysis/#eigenvector-centrality-or-gould-index-evc), [closeness centrality](/manual/analysis/#closeness-centrality-cc), [betweenness centrality](/manual/analysis/#betweenness-centrality-bc), [stress centrality](/manual/analysis/#stress-centrality-sc), [eccentricity centrality](/manual/analysis/#eccentricity-centrality-ec-or-harary-graph-centrality), [influence range closeness centrality](/manual/analysis/#influence-range-closeness-centrality-ircc), [information centrality](/manual/analysis/#information-centrality-ic), [power centrality](/manual/analysis/#power-centrality-pc), [degree prestige](/manual/analysis/#degree-prestige-dp-or-indegree-centrality), [proximity prestige](/manual/analysis/#proximity-prestige-pp), and [pagerank prestige](/manual/analysis/#pagerank-prestige-prp)).
+- Fast algorithms for [community detection](/manual/analysis/#community-detection), such as [triad census](/manual/analysis/#triad-census), [clique census](/manual/analysis/#clique-census), etc.
+- Structural equivalence analysis using [hierarchical clustering](/manual/analysis/#hierarchical-cluster-analysis-hca), actor similarities, tie profile dissimilarities, and Pearson coefficients.
+- [Layout models](/manual/visualization) based on prominence indices (e.g., circular, level, nodal sizes by centrality score), force-directed placement ([Kamada-Kawai](/manual/visualization/#kamada-kawai-layout), [Fruchterman-Reingold](/manual/visualization/#fruchterman-reingold-layout), [Spring Embedder](/manual/visualization/#spring-embedder-layout)), or [ego-centered radial layout](/manual/visualization/#ego-centered-radial-layout) for focused neighborhood exploration.
+- Non-destructive [graph exploration filters](/manual/gui/#filtering-and-graph-exploration): ego network, focus on selection, filter by attribute, filter by centrality, and edge weight filter — all with a persistent [filter bar](/manual/gui/#filter-bar) showing active conditions as chips.
+- Arbitrary [custom attributes](/manual/data/#node-and-edge-custom-attributes) on nodes and edges, with full GraphML roundtrip persistence and an [Edge Properties dialog](/manual/data/#edge-properties-dialog-and-edge-custom-attributes) for inline editing.
+- [Data Table dock](/manual/data/#data-table-dock) (`Ctrl+T`): browse, search, sort, and inline-edit all node and edge data in a live tabular view.
+- [Structured CSV and JSON export and import](/manual/data/#exporting-nodeedge-data-as-csv-or-json) for node and edge attributes, enabling a [spreadsheet-based bulk editing workflow](/manual/data/#spreadsheet-based-bulk-attribute-editing) with any external tool.
+- [Multirelational network loading and editing](/manual/gui/#relations).
+- [Two-mode (bipartite) network support](/manual/formats/#two-mode-sociomatrix-files): load affiliation data (`.2sm`), import as a bipartite graph, a person-projection, or an event-projection network.
+- Random network creation using various models ([Barabási–Albert Scale-Free](/manual/generate/#scale-free-s-f-networks), [Erdős–Rényi](/manual/generate/#erd%C5%91sr%C3%A9nyi-er-networks), [Watts-Strogatz Small-World](/manual/generate/#small-world-sw-networks), d-regular, ring lattice, etc.).
+- [Famous social network analysis datasets](/manual/generate/#recreating-famous-datasets), such as Padgett's Florentine families.
+- Built-in [web crawler](/manual/generate/#web-crawler-networks-of-webpages) to automatically create "social networks" from links found in a given URL.
+- Comprehensive [documentation](/manual) available both online and inside the application.
 
 ---
 
@@ -250,7 +226,7 @@ If you run the SocNetV GUI application from the command prompt, the following op
 SocNetV also includes a headless command-line regression tool called `socnetv-cli`.  
 It is used primarily for automated testing, deterministic metric validation, and performance benchmarking.
 
-For usage examples and kernel documentation, see the project repository.
+See the dedicated [socnetv-cli manual page](/manual/cli) for full usage, kernel reference, and automation scripts.
 
 [homepage]: https://socnetv.org "https://socnetv.org"
 

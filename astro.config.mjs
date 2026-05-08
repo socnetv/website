@@ -71,6 +71,7 @@ export default defineConfig({
 						{ label: 'Generate', slug: 'manual/generate' },
 						{ label: 'Analysis', slug: 'manual/analysis' },
 						{ label: 'Visualization', slug: 'manual/visualization' },
+						{ label: 'socnetv-cli', slug: 'manual/cli' },
 						{ label: 'Credits', slug: 'manual/credits' },
 						{ label: 'References', slug: 'manual/references' },
 						{ label: 'License', slug: 'manual/license' },

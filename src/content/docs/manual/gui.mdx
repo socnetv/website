@@ -221,9 +221,10 @@ In large networks, finding specific nodes can be challenging. Use `CTRL+F` to se
 
 From the **Node Properties** dialog, you can:
 - Enter a node label.
-- Adjust size.
-- Select a color.
-- Change the shape (e.g., rectangle, diamond, ellipse, circle).
+- Adjust size and select a color.
+- Choose a **built-in shape** (circle, rectangle, diamond, ellipse, triangle, star, and more) from the shape dropdown.
+- Set a **Custom Icon**: click the `…` button to browse for any image file on your disk — SocNetV will use it as the node's icon on the canvas.
+- Add, edit, or remove **custom key/value attributes** in the Custom Attributes table. Type a key and value in the fields at the bottom and click **Add**; select a row and click **Remove selected** to delete it. Custom attributes are saved when using the GraphML format.
 
 #### Group Selection
 To select multiple nodes:
@@ -385,6 +386,8 @@ In directed networks, only **out-edges** of the ego node determine the inner rin
 
 This layout pairs well with the **Ego Network filter** (`Edit` → `Filter Nodes` → `Ego Network`), which hides all nodes outside the ego's neighborhood entirely.
 
+![SocNetV v3.5 ego-centered radial layout — selected node at canvas centre, direct neighbours on an inner ring, all other nodes on an outer ring](/data/uploads/screenshots/35/socnetv-35-F1__Ego-centered_Radial_Layout.webp)
+
 ---
 
 ### Force-Directed Layouts for Large Graphs
@@ -441,6 +444,8 @@ A single click on the canvas or the Restore action brings everything back.
 Pair this filter with the **Ego Radial Layout** (`Ctrl+Alt+E`) to both hide non-neighborhood nodes *and* rearrange the visible ones into a clear radial view.
 :::
 
+![SocNetV v3.5 ego network filter active — filter bar shows the 'Nodes: ego network' chip, only the selected node and its direct neighbours remain visible](/data/uploads/screenshots/35/socnetv-35-F2__Ego_Network_filter__Filter_Bar.webp)
+
 ---
 
 ### Focus on Selection
@@ -473,7 +478,11 @@ In the dialog:
 | **Operator** | `=` `≠` `>` `<` `≥` `≤` `contains` |
 | **Value** | Free text (numeric-aware: compared as numbers when both sides parse as `double`; otherwise lexicographic; `contains` is case-insensitive substring) |
 
-Click **Apply** to activate the filter.
+Click **Apply** to activate the filter. The canvas updates immediately and a chip appears in the Filter Bar.
+
+![SocNetV v3.5 Filter by Attribute dialog — scope set to Nodes, key 'faction', operator equals, value 'officer'](/data/uploads/screenshots/35/socnetv-35-F4__Filter_by_Attribute.webp)
+
+![SocNetV v3.5 canvas after Filter by Attribute (faction = officer) — only matching nodes remain visible, filter bar shows the active chip](/data/uploads/screenshots/35/socnetv-35-F4__Filter_by_Attribute_faction_chip.webp)
 
 See [Data Management](/manual/data) for how to add custom attributes to nodes and edges.
 
@@ -519,6 +528,8 @@ Each active filter condition is shown as a **chip**, for example:
 - The **×** on the most recently applied chip removes that filter and pops one entry from the stack.
 - Chips for earlier filters show a disabled × with a tooltip explaining the order constraint — filters must be removed in reverse order of application.
 - **Clear all** removes every active filter in a single click.
+
+![SocNetV v3.5 filter bar with two active chips — 'Edges: weight filter' and 'Nodes: ego network' — each with its own dismiss button and a Clear all button at the right](/data/uploads/screenshots/35/socnetv-35-F3__Multiple_active_filters_in_the_Filter_Bar.webp)
 
 ---
 

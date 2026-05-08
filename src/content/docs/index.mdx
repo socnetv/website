@@ -13,7 +13,7 @@ head:
   - tag: meta
     attrs: { 
       property: 'og:image',
-      content: 'https://socnetv.org/data/uploads/screenshots/33/socnetv-33-lattice-900n-2700e-bc-layout.webp'
+      content: 'https://socnetv.org/data/uploads/screenshots/35/socnetv-35-G1__Main_window_with_a_visualized_network.webp'
     }
   - tag: meta
     attrs: { 
@@ -38,12 +38,12 @@ hero:
       link: /downloads
       icon: right-arrow
     - text: Read the docs
-      link: /documentation
+      link: /manual
       icon: document
       variant: secondary
-    - text: Get the code 
-      link: https://github.com/socnetv/app
-      icon: external
+    - text: Screenshots
+      link: /screenshots
+      icon: right-arrow
       variant: minimal
 ---
 
@@ -53,54 +53,111 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import { LinkButton } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-import myImage from '../../assets/images/socnetv-33-screenshot.webp'; 
+import myImage from '../../assets/images/socnetv-35-screenshot.webp'; 
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
-
 ## Free and Open-Source Tool for Social Network Analysis 🌟 
 
-<Image loading src={myImage} alt="SocNetV automatically created a small world ramdom network of 900 actors and 2700 edges - we have applied the betweenness-centrality radial / size layout." />
+<Image loading src={myImage} alt="SocNetV v3.5 main window — Zachary's Karate Club network visualized with Kamada-Kawai layout and betweenness centrality node colour coding, with Control Panel and Statistics Panel visible." />
 
-{/* ![SocNetV Screenshot](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png) */}
-
-SocNetV is a cross-platform, user-friendly free software application for social network analysis and visualization. With SocNetV you can:
-
-- [Draw social networks](/manual/gui) with a few clicks on a virtual canvas, load field data from a file in a [supported format](/manual/formats) ([GraphML](/manual/formats/#graphml-files), [GraphViz](/manual/formats/#graphviz-dot-files), Adjacency, EdgeList, GML, Pajek, UCINET, etc.), or crawl the internet to create a social network of connected webpages.
-
-- Edit actors and ties through point-and-click, analyze graph and social network properties, produce beautiful HTML reports, and embed visualization layouts in the network.
+SocNetV is a cross-platform, free and open-source application for social network analysis and visualization. Draw networks with a few clicks, load data from dozens of file formats, run analysis, and produce beautiful reports — all from an intuitive interface that works on Windows, macOS, and Linux.
 
 ---
 
-### Main Features 🚀
+## What Can SocNetV Do? 👀
 
-- Standard graph and network cohesion metrics, such as [density](/manual/analysis/#cohesion-measures), [diameter](/manual/analysis/#diameter), [geodesics](/manual/analysis/#geodesics-matrix), [distances](/manual/analysis/#distances-matrix), [connectedness](/manual/analysis/#connectedness), [eccentricity](/manual/analysis/#eccentricity), [clustering coefficient](/manual/analysis/#clustering-coefficient), reciprocity, etc.
-- Matrix routines: [Adjacency plot](/manual/analysis/#plot-adjacency), [Laplacian matrix](/manual/analysis/#laplacian-matrix), [Degree matrix](manual/analysis/#degree-matrix), [Cocitation](/manual/analysis/#cocitation-matrix), etc.
-- Advanced measures for social network analysis such as [centrality and prestige indices](/manual/analysis/#centralities-and-prestige) (e.g., [eigenvector centrality](/manual/analysis/#eigenvector-centrality-or-gould-index-evc), [closeness centrality](/manual/analysis/#closeness-centrality-cc), [betweenness centrality](/manual/analysis/#betweenness-centrality-bc), [information centrality](/manual/analysis/#information-centrality-ic), [power centrality](/manual/analysis/#power-centrality-pc), [proximity prestige](/manual/analysis/#proximity-prestige-pp), and [pagerank prestige](/manual/analysis/#pagerank-prestige-prp)).
-- Fast algorithms for [community detection](/manual/analysis/#community-detection), such as [triad census](/manual/analysis/#triad-census), [clique census](/manual/analysis/#clique-census), etc.
-- Structural equivalence analysis using [hierarchical clustering](/manual/analysis#hierarchical-cluster-analysis-hca), actor similarities, tie profile dissimilarities, and Pearson coefficients.
-- [Layout models](/manual/visualization) based on prominence indices (e.g., circular, level, nodal sizes by centrality score), force-directed placement (e.g., [Kamada-Kawai](/manual/visualization#kamada-kawai-layout), [Fruchterman-Reingold](/manual/visualization#fruchterman-reingold-layout)), or ego-centered radial layout for focused neighborhood exploration.
-- [Multirelational network loading and editing](/manual/gui#relations).
-- Random network creation using various models ([Barabási–Albert Scale-Free](/manual/generate/#scale-free-s-f-networks), [Erdős–Rényi](/manual/generate/#erd%C5%91sr%C3%A9nyi-er-networks), [Watts-Strogatz Small-World](/manual/generate/#small-world-sw-networks), d-regular, ring lattice, etc.).
-- [Famous social network analysis datasets](/manual/generate/#recreating-famous-datasets), such as Padgett's Florentine families.
-- Built-in [web crawler](/manual/generate/#web-crawler-networks-of-webpages) to automatically create "social networks" from links found in a given URL.
-- Comprehensive [documentation](/documentation) available both online and inside the application.
+<CardGrid stagger>
+
+  <Card title="Easy User Interface" icon="open-book">
+    <p>Draw <a href="/manual/gui/#creating-and-handling-nodes">nodes</a> and <a href="/manual/gui/#creating-and-editing-edges">edges</a> with a few clicks on a <a href="/manual/gui/#canvas">virtual canvas</a>, or import data from a file in a <a href="/manual/formats">supported format</a>. <a href="/manual/gui/#tooltips-and-context-menus">Right-click any element</a> for context actions. Customise each node's label, size, color, shape, and even use your own image as a node icon.</p>
+  </Card>
+
+  <Card title="Network Analysis" icon="seti:graphql">
+    <p>
+      Compute <a href="/manual/analysis/#cohesion-measures">cohesion metrics</a> (density, diameter, distances, clustering coefficient, reciprocity),
+      <a href="/manual/analysis/#centralities-and-prestige"> centrality and prestige indices</a> (betweenness, closeness, eigenvector, PageRank, and more),
+      <a href="/manual/analysis/#community-detection"> community detection</a> (triad and clique census), and
+      <a href="/manual/analysis/#hierarchical-cluster-analysis-hca"> structural equivalence</a> analysis.
+    </p>
+  </Card>
+
+  <Card title="Visualization" icon="seti:pipeline">
+    <p>
+      Apply layouts based on prominence scores (circular, radial, level),
+      force-directed models (<a href="/manual/visualization/#kamada-kawai-layout">Kamada-Kawai</a>, <a href="/manual/visualization/#fruchterman-reingold-layout">Fruchterman-Reingold</a>, <a href="/manual/visualization/#spring-embedder-layout">Spring Embedder</a>),
+      or the <a href="/manual/visualization/#ego-centered-radial-layout">ego-centered radial layout</a> to explore a node's neighborhood in depth.
+    </p>
+  </Card>
+
+  <Card title="Graph Exploration" icon="magnifier">
+    <p>
+      Non-destructive <a href="/manual/gui/#filtering-and-graph-exploration">filters</a> let you isolate any part of the network — ego network, selection, attribute value, centrality score, or edge weight — without losing data.
+      A persistent <a href="/manual/gui/#filter-bar">filter bar</a> shows active conditions as chips you can clear one by one or all at once.
+    </p>
+  </Card>
+
+  <Card title="Data Management" icon="list-format">
+    <p>
+      Attach <a href="/manual/data/#node-and-edge-custom-attributes">custom attributes</a> to nodes and edges, browse and inline-edit everything in the <a href="/manual/data/#data-table-dock">Data Table dock</a> (<code>Ctrl+T</code>),
+      and <a href="/manual/data/#exporting-nodeedge-data-as-csv-or-json">export to CSV or JSON</a> for bulk editing in any spreadsheet tool.
+    </p>
+  </Card>
+
+  <Card title="File Formats" icon="pencil">
+    <p>
+      Load and save networks in <a href="/manual/formats/#graphml-files">GraphML</a>, <a href="/manual/formats/#graphviz-dot-files">GraphViz</a>, GML, <a href="/manual/formats/#pajek-files">Pajek</a>, UCINET, Adjacency, EdgeList,
+      and <a href="/manual/formats/#two-mode-sociomatrix-files">two-mode sociomatrix</a> formats. GraphML is the native format with full roundtrip support for custom attributes.
+    </p>
+  </Card>
+
+  <Card title="Multi-relational" icon="add-document">
+    <p>
+      Load, edit, and save networks with <a href="/manual/gui/#relations">multiple relations</a>. Switch between relations in the Control Panel without losing the others.
+    </p>
+  </Card>
+
+  <Card title="Random Networks" icon="random">
+    <p>
+      Generate random networks using <a href="/manual/generate/#scale-free-s-f-networks">Barabási–Albert scale-free</a>, <a href="/manual/generate/#erd%C5%91sr%C3%A9nyi-er-networks">Erdős–Rényi</a>, <a href="/manual/generate/#small-world-sw-networks">Watts-Strogatz small-world</a>, d-regular, and ring lattice models.
+    </p>
+  </Card>
+
+  <Card title="Famous Networks" icon="seti:favicon">
+    <p>Instantly recreate <a href="/manual/generate/#recreating-famous-datasets">classic social network datasets</a> such as Padgett's Florentine families, Zachary's Karate Club, and more.</p>
+  </Card>
+
+  <Card title="Web Crawler" icon="rocket">
+    <p>
+      Automatically build a network of linked web pages by pointing the <a href="/manual/generate/#web-crawler-networks-of-webpages">built-in crawler</a> at any URL.
+    </p>
+  </Card>
+
+  <Card title="Documentation" icon="seti:info">
+    <p>
+      A comprehensive <a href="/manual">manual</a> covers every feature — available both online and inside the application via the Help menu.
+    </p>
+  </Card>
+
+  <Card title="Free Software" icon="linux">
+    <p>
+      SocNetV is free and open-source (GPL3). Use it anywhere, contribute patches on <a href="https://github.com/socnetv/app">GitHub</a>, or <a href="/bugs">report bugs</a>.
+    </p>
+  </Card>
+
+</CardGrid>
 
 ---
 
 ## Latest version 📥
 
-<p><a href="https://github.com/socnetv/app/releases" target="_blank" rel="nofollow nopener"><img alt="SocNetV latest version" width='84' height='20' src="https://img.shields.io/github/release/socnetv/app.svg" /></a></p>
+<p><a href="https://github.com/socnetv/app/releases" target="_blank" rel="nofollow noopener"><img alt="SocNetV latest version" width='84' height='20' src="https://img.shields.io/github/release/socnetv/app.svg" /></a></p>
 
-Installers, packages and executables for Windows, macOS and Linux are available on the [Downloads](/downloads) page. 
+Installers, packages and executables for Windows, macOS and Linux are available on the [Downloads](/downloads) page.
 
 <LinkButton href="/downloads" icon="right-arrow" iconPlacement="end">Download now</LinkButton>
 
-### License
-
-![GPL3 License](../../assets/images/gplv3.gif)
-
-The program is Free Software, licensed under the [GNU General Public License 3 (GPL3)](http://www.gnu.org/copyleft/gpl.html). You can copy or modify it, provided you keep the same license. The documentation is also free, licensed under the Free Documentation License (FDL).
+The program is Free Software, licensed under the [GNU General Public License 3 (GPL3)](http://www.gnu.org/copyleft/gpl.html). The documentation is also free, licensed under the Free Documentation License (FDL).
 
 ---
 
@@ -110,89 +167,14 @@ The program is Free Software, licensed under the [GNU General Public License 3 (
 
 - If you are a SocNetV user, you can:
 
-  -- Report [bugs](/bugs) or propose new features in our [Issues](https://github.com/socnetv/app/issues).
+  - Report [bugs](/bugs) or propose new features in our [Issues](https://github.com/socnetv/app/issues).
 
-  -- Donate any amount to the project! Click the button below to donate to our PayPal account:
+  - Donate any amount to the project! Click the button below to donate to our PayPal account:
 
   <LinkButton href="https://www.paypal.com/donate/?hosted_button_id=XFADB253W6HFC" icon="external" iconPlacement="end">Donate</LinkButton>
-
 
 Thank you for using and contributing to SocNetV! 
 
 **Have fun with social network analysis!** 
-
----
-
-## At a glance 👀 
-
-Explore the nice features of SocNetV to make your social network research real fun!
-
-<CardGrid stagger>
-
-  <Card title="Easy User Interface" icon="open-book">
-    <p>SocNetV's intuitive interface lets you create, analyze, and visualize social networks. Navigate yourself and use the application either with the mouse or the keyboard.</p>
-  </Card>
-
-  <Card title="File Formats" icon="pencil">
-    <p>
-      Load and save to GraphML, but you can also import most network file formats (GML, Pajek,
-      UCINET, GraphViz, Adjacency, EdgeList, etc.).
-    </p>
-  </Card>
-
-  <Card title="Network Analysis" icon="seti:graphql">
-    <p>
-      Compute distances, eccentricity, connectedness, clique census, triad census, and Prominence
-      indices (e.g., eigenvector, betweenness, and information centrality, proximity prestige,
-      PageRank, and more).
-    </p>
-  </Card>
-
-  <Card title="Visualization" icon="seti:pipeline">
-    <p>
-      Apply intuitive visualization layouts on undirected/directed graphs, based on prominence
-      scores, force-directed models, or ego-centered radial layout for focused neighborhood exploration.
-    </p>
-  </Card>
-
-  <Card title="Famous Networks" icon="seti:favicon">
-    <p>Automatically recreate known social network datasets such as Padgett's Families.</p>
-  </Card>
-
-  <Card title="Random Networks" icon="random">
-    <p>
-      Create random networks using one of the supported models (scale-free, Erdős–Rényi, lattice,
-      small worlds).
-    </p>
-  </Card>
-
-  <Card title="Web Crawler" icon="rocket">
-    <i className="fa fa-map-o" aria-hidden="true"></i>
-    <p>
-      Easily visualize and analyze networks of linked web pages and sites through the built-in web
-      crawler.
-    </p>
-  </Card>
-
-  <Card title="Multi-relational" icon="add-document">
-    <p>
-      Work with multiple relations concurrently. SocNetV supports loading, editing, and saving
-      multirelational social networks.
-    </p>
-  </Card>
-
-  <Card title="Documentation" icon="seti:info">
-    <p>
-      Learn to work with SocNetV and make use of Social Network Analysis methods by reading our
-      Manual.
-    </p>
-  </Card>
-
-  <Card title="Free Software" icon="linux">
-    <p>
-      SocNetV is Free and Open-Source Software. Use it everywhere. Have a feature request? Ask us!
-    </p>
-  </Card>
-</CardGrid>
 
 </BaseLayout>

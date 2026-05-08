@@ -1,0 +1,387 @@
+---
+title: "socnetv-cli"
+description: "Reference for the SocNetV headless command-line regression and benchmarking tool"
+layout: "../../../layouts/BaseLayout.astro"
+---
+
+## What Is socnetv-cli?
+
+`socnetv-cli` is a headless command-line tool bundled with SocNetV. It loads network datasets and runs compute kernels **without any GUI or graphics component**, producing deterministic, machine-readable output.
+
+It is **not** a general-purpose network analysis shell. Its primary roles are:
+
+- **Regression testing** — dump a "golden" JSON snapshot of algorithm outputs, commit it, and compare future builds against it to catch silent regressions.
+- **Performance benchmarking** — measure compute times for the distance kernel across N runs and compare against per-machine baselines.
+- **CI integration** — the comparison mode (`--compare-json`) exits non-zero on mismatch, making it safe to use as a CI gate.
+
+`socnetv-cli` uses the **same IO pipeline and compute kernels** as the GUI application — headless loading is unified so regression coverage translates directly to GUI correctness.
+
+---
+
+## Building
+
+`socnetv-cli` is compiled alongside the main application via CMake. After a normal build you will find the binary next to `socnetv` in your build directory:
+
+```bash
+cmake -B build -DCMAKE_BUILD_TYPE=Release .
+cmake --build build -j
+# Binary: build/socnetv-cli
+```
+
+---
+
+## Kernels
+
+Each kernel targets a specific family of algorithms and owns its JSON schema version. Schemas are **never modified** once published — new behavior always gets a new version.
+
+| Kernel | Flag | Schema | What it covers |
+|--------|------|--------|----------------|
+| Distance / Centrality | `distance` (default) | v1 | DistanceEngine, geodesic-based centralities (CC, BC, SC, EC, PC), diameter, connectivity |
+| Reachability | `reachability` | v2 | Reachability matrix R(i,j) = 1 if finite geodesic exists |
+| Walks Matrix | `walks_matrix` | v3 | A^K — number of walks of exact length K between every pair |
+| Prominence | `prominence` | v4 | All node-level centrality and prestige indices |
+| IO Roundtrip | `io_roundtrip` | v5 | Load → export → reload signature comparison for all supported formats |
+| Clustering | `clustering` | v6 | Clustering coefficient per node, triad census (16 MAN classes), maximal clique counts |
+
+Select a kernel with `--kernel <name>`. If omitted, `distance` is used.
+
+---
+
+## Parameters
+
+### Input
+
+#### `-i <path>` / `--input <path>`
+
+Path to the dataset file. Required for all kernels. Relative paths are accepted.
+
+```bash
+-i src/data/Krackhardt_Kite_N10.paj
+```
+
+#### `-f <id>` / `--format <id>`
+
+File format ID. Must match SocNetV's internal file-type enum:
+
+| ID | Format |
+|----|--------|
+| 1 | GraphML |
+| 2 | Pajek (`.paj` / `.net`) |
+| 3 | Adjacency matrix |
+| 4 | GraphViz (DOT) |
+| 5 | UCINET (DL) |
+| 6 | GML |
+| 7 | EdgeList (weighted) |
+| 8 | EdgeList (simple) |
+
+:::note
+Two-mode (ID 9) is not supported by CLI kernels — do not use it for baselines.
+:::
+
+---
+
+### Kernel selection
+
+#### `--kernel <name>`
+
+Selects which kernel to run. See the [Kernels](#kernels) table above for valid names.
+
+---
+
+### Run flags
+
+These flags control graph interpretation and what extra results are computed. **Always encode them explicitly in baseline filenames** — changing a flag changes the output even for the same dataset.
+
+| Flag | Values | Meaning |
+|------|--------|---------|
+| `-c` / `--centralities` | `0` or `1` | Compute geodesic-based centralities. Only meaningful for `distance` kernel. Default: `1`. |
+| `-w` / `--weights` | `0` or `1` | Consider edge weights when present. `0` = treat as unweighted. |
+| `-x` / `--inverse-weights` | `0` or `1` | When `-w 1`: `1` = treat weight as strength and use inverse as distance cost (common in SNA); `0` = use weight directly as cost. |
+| `-k` / `--drop-isolates` | `0` or `1` | `1` = remove isolated nodes before computation. Affects N, averages, and per-node vectors. |
+
+---
+
+### Walks kernel flag
+
+#### `--walks-length <K>`
+
+Required for `--kernel walks_matrix`. Computes the walks matrix A^K, where each element is the number of walks of **exact** length K from node i to node j.
+
+```bash
+--kernel walks_matrix --walks-length 6
+```
+
+---
+
+### Output modes
+
+`socnetv-cli` runs in exactly one mode at a time:
+
+| Mode | Flag | Description |
+|------|------|-------------|
+| Normal | *(none)* | Prints metrics to stdout as `KEY=VALUE` lines. |
+| Dump golden | `--dump-json <path>` | Writes a schema-versioned JSON baseline file. Use this to create new baselines. |
+| Compare | `--compare-json <path>` | Runs the kernel and strictly compares output to an existing JSON. Prints per-field diffs on mismatch; exits non-zero. |
+| Benchmark | `--bench <N>` | Runs the compute step N times, prints timing stats. Distance kernel only. |
+
+`--dump-json` and `--compare-json` are mutually exclusive. Neither can be combined with `--bench`.
+
+---
+
+## Per-kernel Constraints
+
+| Kernel | `-c` | `-w/-x/-k` | `--bench` | `--walks-length` |
+|--------|------|-----------|-----------|-----------------|
+| `distance` | ✓ | ✓ | ✓ | — |
+| `reachability` | must be `0` | ✓ | — | — |
+| `walks_matrix` | — | ✓ | — | required |
+| `prominence` | — | ✓ | — | — |
+| `io_roundtrip` | — | ✓ | — | — |
+| `clustering` | — | ✓ | — | — |
+
+---
+
+## Common Workflows
+
+### 1 — Generate a golden baseline (dump)
+
+Run the kernel once and write its output as the committed reference:
+
+```bash
+# Distance kernel
+./build/socnetv-cli \
+  -i src/data/Krackhardt_Kite_N10.paj \
+  -f 2 -c 1 -w 0 -x 1 -k 0 \
+  --dump-json src/tools/baselines/Krackhardt_Kite_N10__C1_W0_IW1_DI0.json
+
+# Prominence kernel
+./build/socnetv-cli \
+  --kernel prominence \
+  -i src/data/Krackhardt_Kite_N10.paj \
+  -f 2 -w 0 -x 1 -k 0 \
+  --dump-json src/tools/baselines/prominence/Krackhardt_Kite_N10__PROM__V4__FT2__W0_IW1_DI0.json
+
+# IO roundtrip
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i src/data/TinyGraphML_Weighted_Dir_N3.graphml \
+  -f 1 \
+  --dump-json src/tools/baselines/io_roundtrip/TinyGraphML_Weighted_Dir_N3__FT1.json
+
+# Clustering
+./build/socnetv-cli \
+  --kernel clustering \
+  -i src/data/Krackhardt_Kite_N10.paj \
+  -f 2 -w 0 -x 1 -k 0 \
+  --dump-json src/tools/baselines/clustering/Krackhardt_Kite_N10__CLUST__V6__FT2__W0_IW1_DI0.json
+```
+
+Commit the generated JSON file alongside your code change.
+
+---
+
+### 2 — Regression comparison
+
+```bash
+./build/socnetv-cli \
+  --kernel prominence \
+  -i src/data/Krackhardt_Kite_N10.paj \
+  -f 2 -w 0 -x 1 -k 0 \
+  --compare-json src/tools/baselines/prominence/Krackhardt_Kite_N10__PROM__V4__FT2__W0_IW1_DI0.json
+```
+
+On success: exits 0.  
+On mismatch: prints per-field diffs and exits non-zero (CI-safe).
+
+---
+
+### 3 — Benchmarking (distance kernel only)
+
+```bash
+./build/socnetv-cli \
+  -i src/data/Benchmark_BA_Directed_N500_m3.paj \
+  -f 2 -c 1 -w 0 -x 1 -k 0 \
+  --bench 20
+```
+
+Outputs:
+
+```
+COMPUTE_RUNS=20
+COMPUTE_MS_MIN=...
+COMPUTE_MS_MEDIAN=...
+COMPUTE_MS_MEAN=...
+COMPUTE_MS_MAX=...
+```
+
+---
+
+### 4 — IO roundtrip examples
+
+The `io_roundtrip` kernel loads a file, tries to export it in the same format, reloads the exported file, and compares canonical graph signatures between the original and the roundtrip. It is the best way to verify that a parser and its corresponding exporter agree on the same graph.
+
+**Quick one-off check (no baseline needed)**
+
+Just run the kernel without `--dump-json` or `--compare-json`. It prints the result to stdout so you can inspect it immediately:
+
+```bash
+# GraphML (format 1)
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i mynetwork.graphml \
+  -f 1
+
+# Pajek (format 2)
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i mynetwork.paj \
+  -f 2
+```
+
+Key output fields to look at:
+
+```
+LOAD_OK=1            ← file loaded successfully
+ROUNDTRIP_EQUIV=1    ← original and reloaded graph are identical
+ROUNDTRIP_EQUIV=0    ← mismatch — parser/exporter disagreement
+```
+
+**Full GraphML roundtrip (dump then compare)**
+
+```bash
+# Step 1 — dump the golden baseline
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i src/data/TinyGraphML_Weighted_Dir_N3.graphml \
+  -f 1 \
+  --dump-json src/tools/baselines/io_roundtrip/TinyGraphML_Weighted_Dir_N3__FT1.json
+
+# Step 2 — compare after any code change
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i src/data/TinyGraphML_Weighted_Dir_N3.graphml \
+  -f 1 \
+  --compare-json src/tools/baselines/io_roundtrip/TinyGraphML_Weighted_Dir_N3__FT1.json
+```
+
+**Full Pajek roundtrip (dump then compare)**
+
+```bash
+# Step 1 — dump the golden baseline
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i src/data/Padgett_Florentine_Families.paj \
+  -f 2 \
+  --dump-json src/tools/baselines/io_roundtrip/Padgett_Florentine_Families__FT2.json
+
+# Step 2 — compare after any code change
+./build/socnetv-cli \
+  --kernel io_roundtrip \
+  -i src/data/Padgett_Florentine_Families.paj \
+  -f 2 \
+  --compare-json src/tools/baselines/io_roundtrip/Padgett_Florentine_Families__FT2.json
+```
+
+:::note
+Some formats (GraphViz DOT, GML, EdgeList) do not have an exporter yet. For those, the kernel skips the export step and instead locks in a "skipped export" outcome. The baseline is still useful — it confirms the load signatures and ensures the skip behaviour does not change unexpectedly.
+:::
+
+---
+
+## Baseline Naming Convention
+
+Bake the run flags into the filename so baselines are self-describing:
+
+| Kernel | Suffix pattern |
+|--------|---------------|
+| Distance v1 | `__C{0\|1}_W{0\|1}_IW{0\|1}_DI{0\|1}` |
+| Prominence v4 | `__PROM__V4__FT{id}__W{0\|1}_IW{0\|1}_DI{0\|1}` |
+| Reachability v2 | `__REACH__V2` |
+| Walks v3 | `__WALKS_K{N}__V3` |
+| IO roundtrip v5 | `__FT{id}` (optionally `_multirel`, `_big`) |
+| Clustering v6 | `__CLUST__V6__FT{id}__W{0\|1}_IW{0\|1}_DI{0\|1}` |
+
+**Examples:**
+
+```
+Krackhardt_Kite_N10__C1_W0_IW1_DI0.json
+Krackhardt_Kite_N10__PROM__V4__FT2__W0_IW1_DI0.json
+DunbarGelada_H22a__WALKS_K6__V3.json
+TinyGraphML_Weighted_Dir_N3__FT1.json
+```
+
+---
+
+## Baselines Directory Layout
+
+```
+src/tools/baselines/              ← distance v1
+src/tools/baselines/reachability/ ← reachability v2
+src/tools/baselines/walks/        ← walks v3
+src/tools/baselines/prominence/   ← prominence v4
+src/tools/baselines/io_roundtrip/ ← IO roundtrip v5
+src/tools/baselines/clustering/   ← clustering v6
+```
+
+---
+
+## Automation Scripts
+
+Three shell scripts in `scripts/` orchestrate the harness for CI and local use.
+
+### `scripts/run_golden_compares.sh`
+
+Runs all registered kernel cases and compares them against their committed baselines. Exits non-zero if any case fails. Covers all six kernels (v1–v6).
+
+```bash
+./scripts/run_golden_compares.sh
+
+# Point at a specific binary:
+SOCNETV_CLI=./build/socnetv-cli ./scripts/run_golden_compares.sh
+```
+
+To add a new case: dump the baseline JSON, commit it, then add a `run_case_<kernel>` call in the script.
+
+---
+
+### `scripts/run_benchmarks.sh`
+
+Measures compute times and compares against per-machine performance baselines (stored in `scripts/perf_baselines/<set>/perf_expected.env`).
+
+```bash
+# Run all baseline-enforced families (distance + IO):
+./scripts/run_benchmarks.sh
+
+# Run only one family:
+./scripts/run_benchmarks.sh --type distance
+./scripts/run_benchmarks.sh --type io
+./scripts/run_benchmarks.sh --type clustering   # informational only
+
+# Strict mode — fail hard on >10% regression:
+./scripts/run_benchmarks.sh --strict
+
+# Record a new baseline for this machine:
+./scripts/run_benchmarks.sh --record
+BENCH_BASELINE_SET=linux-ryzen ./scripts/run_benchmarks.sh --record
+```
+
+The baseline set is chosen automatically from `<OS>-<ARCH>` (e.g. `linux-x86_64`). Override with `BENCH_BASELINE_SET=<name>`.
+
+:::note
+Benchmarks are sensitive to build type. Always record and compare under the same build type (Debug or Release). Use `BENCH_BUILD_TYPE=Release` or pass `SOCNETV_CLI=./build/socnetv-cli` directly.
+:::
+
+---
+
+### `scripts/run_golden_io_roundtrip.sh`
+
+Iterates over every JSON in `src/tools/baselines/io_roundtrip/` and re-runs the IO roundtrip kernel for each, using the `dataset.path` and `dataset.filetype` embedded in the baseline JSON itself.
+
+```bash
+# Compare all IO baselines:
+./scripts/run_golden_io_roundtrip.sh
+
+# Regenerate all IO baselines in-place after a deliberate fix:
+./scripts/run_golden_io_roundtrip.sh --update
+```
+
