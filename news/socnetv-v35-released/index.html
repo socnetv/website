@@ -86,79 +86,76 @@ svg:where(.astro-c6vsoqas){color:var(--sl-icon-color);font-size:var(--sl-icon-si
 <p><strong>🔎 Graph Exploration Filters</strong></p>
 <p>A new set of non-destructive, snapshot/restore filters lets you focus on the parts of the network that matter:</p>
 <ul>
-<li><strong>Focus on Node (Ego Network)</strong>: hides all nodes except the selected node and its direct neighbors, and all non-incident edges. Available in the Filter menu and node right-click context menu (#211).</li>
-<li><strong>Focus on Selection</strong>: hides all nodes not in the current selection and all edges whose endpoints are not both selected. Action <code dir="auto">Ctrl+X, Ctrl+S</code> (#210).</li>
+<li><strong>Focus on Node (Ego Network)</strong>: hides all nodes except the selected node and its direct neighbors, and all non-incident edges. Available in the Filter menu and node right-click context menu.</li>
+<li><strong>Focus on Selection</strong>: hides all nodes not in the current selection and all edges whose endpoints are not both selected (<code dir="auto">Ctrl+X, Ctrl+S</code>).</li>
 <li><strong>Restore All Nodes</strong>: restores all nodes hidden by any filter (ego network, selection, or centrality). Available in Filter menu and right-click context menu.</li>
-<li><strong>Restore All Edges</strong>: re-enables all edges hidden by the weight filter. Action <code dir="auto">Ctrl+E, Ctrl+R</code> (#213).</li>
-<li>All node-visibility filters now share a <strong>unified non-destructive snapshot/restore history stack</strong> — Restore All works across all filter types (#216).</li>
+<li><strong>Restore All Edges</strong>: re-enables all edges hidden by the weight filter (<code dir="auto">Ctrl+E, Ctrl+R</code>).</li>
+<li>All node-visibility filters share a <strong>unified non-destructive snapshot/restore history stack</strong> — Restore All works across all filter types.</li>
 </ul>
 <p><strong>🌐 Ego-centered Radial Layout</strong></p>
-<p>A new layout places a selected node at the canvas center, its 1-hop out-neighbors on an inner ring, and all remaining nodes on an outer ring. Available via the Layout menu (<code dir="auto">Ctrl+Alt+E</code>) and node right-click context menu (#214).</p>
-<p><strong>🏷 Node/Edge Attribute System (#224)</strong></p>
+<p>A new layout places a selected node at the canvas center, its 1-hop out-neighbors on an inner ring, and all remaining nodes on an outer ring. Available via the Layout menu (<code dir="auto">Ctrl+Alt+E</code>) and node right-click context menu.</p>
+<p><strong>🏷 Node/Edge Attribute System</strong></p>
 <p>SocNetV now supports arbitrary custom attributes on both nodes and edges:</p>
 <ul>
-<li>Single-key node attribute API: <code dir="auto">Graph::vertexCustomAttributeSet()</code> / <code dir="auto">vertexCustomAttributeRemove()</code>.</li>
-<li>Edge custom attribute storage and API: <code dir="auto">Graph::edgeCustomAttributesSet()</code> / <code dir="auto">edgeCustomAttributes()</code>.</li>
-<li><strong>Edge Properties dialog</strong> (<code dir="auto">DialogEdgeEdit</code>): edit label, weight, color, and arbitrary custom key/value pairs — accessible from the toolbar and edge right-click context menu.</li>
-<li><strong>GraphML roundtrip</strong> for edge custom attributes: unique keys exported as <code dir="auto">d2000+</code> <code dir="auto">&#x3C;key for="edge"></code> definitions; per-edge <code dir="auto">&#x3C;data></code> tags written on save and parsed back on load.</li>
-<li><strong>Filter Nodes By Attribute</strong>: <code dir="auto">Graph::vertexFilterByAttribute(key, value)</code> — non-destructive filter available in the Filter menu (<code dir="auto">Ctrl+X, Ctrl+A</code>).</li>
+<li>Set and remove custom key/value pairs on any node or edge via the Properties dialogs.</li>
+<li><strong>Edge Properties dialog</strong>: edit label, weight, color, and arbitrary custom key/value pairs — accessible from the toolbar and edge right-click context menu.</li>
+<li><strong>GraphML roundtrip</strong>: custom node and edge attributes are fully saved and reloaded when working with GraphML files.</li>
+<li><strong>Filter Nodes By Attribute</strong>: a non-destructive filter available in the Filter menu (<code dir="auto">Ctrl+X, Ctrl+A</code>) lets you show only nodes matching a key/value condition.</li>
 </ul>
-<p><strong>⚙️ Attribute-based Filtering (#217)</strong></p>
+<p><strong>⚙️ Attribute-based Filtering</strong></p>
 <ul>
-<li><code dir="auto">FilterCondition</code> struct with scope (Nodes/Edges/Both), key, operator (<code dir="auto">=</code> <code dir="auto">≠</code> <code dir="auto">></code> <code dir="auto">&#x3C;</code> <code dir="auto">≥</code> <code dir="auto">≤</code> <code dir="auto">contains</code>), and value.</li>
-<li><code dir="auto">DialogFilterByAttribute</code>: scope selector, editable key combo populated from the graph’s existing attribute keys, operator dropdown, and free-text value field.</li>
-<li><code dir="auto">Graph::edgeFilterByAttribute(FilterCondition)</code>: hides edges not matching the condition, using the same snapshot/restore stack as node filters. Numeric-aware comparison (tries <code dir="auto">toDouble()</code>, falls back to lexicographic).</li>
-<li>Filter combo added to the <strong>Control Panel</strong> (Network group) for one-click access to all filter actions.</li>
-<li>Dedicated <strong>toolbar filter group</strong> with distinct icons for each filter action.</li>
+<li>Filter conditions support scope (Nodes, Edges, or Both), key, operator (<code dir="auto">=</code> <code dir="auto">≠</code> <code dir="auto">></code> <code dir="auto">&#x3C;</code> <code dir="auto">≥</code> <code dir="auto">≤</code> <code dir="auto">contains</code>), and value.</li>
+<li>A dedicated dialog lets you select a scope, pick from existing attribute keys, choose an operator, and enter a value.</li>
+<li>Edges can also be filtered by attribute, using the same snapshot/restore stack as node filters. Numeric values are compared numerically; text values are compared lexicographically.</li>
+<li>A <strong>filter combo</strong> in the Control Panel and a dedicated <strong>toolbar filter group</strong> give one-click access to all filter actions.</li>
 </ul>
-<p><strong>🏷 Filter Bar with Chips (#219)</strong></p>
+<p><strong>🏷 Filter Bar with Chips</strong></p>
 <ul>
-<li>A persistent <code dir="auto">FilterBarWidget</code> strip between the toolbar and canvas; hidden when no filter is active, auto-shows when any filter is applied.</li>
-<li>Each active filter condition appears as a labelled <strong>chip</strong> (e.g. <code dir="auto">Nodes: ego network</code>, <code dir="auto">Edges: weight filter</code>, <code dir="auto">Nodes: type = investor</code>).</li>
-<li><strong>×-close</strong> on the most recently applied chip removes it and pops one entry from the snapshot/restore stack.</li>
-<li><strong>“Clear all”</strong> button drains the full node filter stack and resets the edge filter in one click.</li>
-<li>All five filter actions emit chips: centrality, ego network, selection, attribute (Nodes/Edges/Both), and edge weight filter.</li>
+<li>A persistent <strong>Filter Bar</strong> strip sits between the toolbar and canvas; it is hidden when no filter is active and appears automatically when any filter is applied.</li>
+<li>Each active filter condition is shown as a labelled <strong>chip</strong> (e.g. <code dir="auto">Nodes: ego network</code>, <code dir="auto">Edges: weight filter</code>, <code dir="auto">Nodes: type = investor</code>).</li>
+<li>Clicking <strong>×</strong> on the most recently applied chip removes it and reverts that one filter step.</li>
+<li>The <strong>“Clear all”</strong> button removes all active filters in one click.</li>
+<li>All five filter actions produce chips: centrality, ego network, selection, attribute, and edge weight.</li>
 </ul>
-<p><strong>📋 Node/Edge Data Table Dock (#225)</strong></p>
+<p><strong>📋 Node/Edge Data Table Dock</strong></p>
 <ul>
-<li>New <code dir="auto">GraphTableWidget</code> dockable panel (<code dir="auto">Ctrl+T</code>, Options menu and Edit menu) with two tabs — <strong>Nodes</strong> and <strong>Edges</strong> — each backed by a <code dir="auto">QAbstractTableModel</code> cache.</li>
-<li><strong>Node tab</strong>: fixed columns (#, Label, Visible, Shape, Size, Color) plus one column per custom attribute key. Label, Size, Color, and custom attribute cells are <strong>inline-editable</strong> (double-click).</li>
-<li><strong>Edge tab</strong>: fixed columns (Source, Target, Relation, Weight, Label, Color) plus custom attrs. Weight, Label, Color, and custom attribute cells are editable.</li>
-<li>All edits write back to the graph immediately via the Graph API.</li>
+<li>A new dockable <strong>Data Table</strong> panel (<code dir="auto">Ctrl+T</code>, also in Options and Edit menus) with two tabs — <strong>Nodes</strong> and <strong>Edges</strong>.</li>
+<li><strong>Nodes tab</strong>: columns for number, label, visibility, shape, size, and color — plus one column per custom attribute key. Label, size, color, and custom attribute cells are <strong>inline-editable</strong> (double-click).</li>
+<li><strong>Edges tab</strong>: columns for source, target, relation, weight, label, and color — plus custom attributes. Weight, label, color, and custom attribute cells are editable.</li>
+<li>All edits write back to the graph immediately.</li>
 <li><strong>Live search bar</strong> filters all columns (case-insensitive); column headers are sortable; a Refresh button reloads data from the current graph.</li>
-<li>Panel <strong>auto-refreshes</strong> on file load and graph reset when it is open.</li>
+<li>The panel auto-refreshes on file load and graph reset when it is open.</li>
 </ul>
-<p><strong>📤 Structured CSV/JSON Export (#226)</strong></p>
+<p><strong>📤 Structured CSV/JSON Export</strong></p>
 <ul>
-<li><code dir="auto">TableExport::toCSV()</code> and <code dir="auto">TableExport::toJSON()</code> free functions — QtCore only, no UI dependency.</li>
-<li>Each tab in the Data Table dock gains <strong>Export CSV</strong> and <strong>Export JSON</strong> buttons; they export the currently visible (search-filtered) rows — what you see is what you get.</li>
+<li>Each tab in the Data Table dock has <strong>Export CSV</strong> and <strong>Export JSON</strong> buttons — they export the currently visible (search-filtered) rows.</li>
 <li><code dir="auto">Network → Export to other...</code> gains four new actions: <strong>Nodes as CSV</strong>, <strong>Edges as CSV</strong>, <strong>Nodes as JSON</strong>, <strong>Edges as JSON</strong> — these always export all rows.</li>
 </ul>
-<p><strong>📥 Structured CSV/JSON Attribute Import (#227)</strong></p>
+<p><strong>📥 Structured CSV/JSON Attribute Import</strong></p>
 <ul>
-<li><code dir="auto">TableImport::fromCSV()</code> and <code dir="auto">TableImport::fromJSON()</code> free functions — RFC 4180 CSV parser and JSON array-of-objects parser; QtCore only.</li>
-<li><code dir="auto">DialogImportAttributes</code>: file-browse + 8-row preview table + column-mapping controls. Nodes scope: <strong>ID column</strong> selector. Edges scope: <strong>Source</strong> and <strong>Target</strong> column selectors with auto-detection of common names (<code dir="auto">source</code>, <code dir="auto">src</code>, <code dir="auto">target</code>, <code dir="auto">tgt</code>, <code dir="auto">dest</code>).</li>
-<li>Smart column routing: editable native columns (<code dir="auto">Label</code>, <code dir="auto">Size</code>, <code dir="auto">Color</code> for nodes; <code dir="auto">Weight</code>, <code dir="auto">Label</code>, <code dir="auto">Color</code> for edges) are routed to their proper setters; read-only native columns are silently skipped; all other columns become custom attributes.</li>
-<li>Each tab in the Data Table dock gains <strong>Import CSV</strong> and <strong>Import JSON</strong> buttons; the table auto-refreshes after import.</li>
-<li>Enables a <strong>full lossless export→import roundtrip</strong>: re-importing an exported file produces no duplicate columns and no data loss.</li>
+<li>Import node or edge attributes from a CSV or JSON file via the <strong>Import</strong> buttons in the Data Table dock.</li>
+<li>A preview dialog shows the first rows of the file and lets you map columns: choose which column holds the node ID (or the source/target for edges).</li>
+<li>Standard columns (<code dir="auto">Label</code>, <code dir="auto">Size</code>, <code dir="auto">Color</code> for nodes; <code dir="auto">Weight</code>, <code dir="auto">Label</code>, <code dir="auto">Color</code> for edges) are routed to their proper fields; all other columns become custom attributes.</li>
+<li>The table auto-refreshes after import.</li>
+<li>Supports a <strong>full lossless export→import roundtrip</strong>: re-importing an exported file produces no duplicate columns and no data loss.</li>
 </ul>
-<p><strong>📊 Spreadsheet-based Bulk Attribute Editing (#232)</strong></p>
-<p>Export the data table to CSV or JSON, edit it freely in any spreadsheet tool (Excel, LibreOffice, Google Sheets), and re-import to update attributes in bulk. Each node/edge can carry different values — unlike in-app bulk operations which assign one value to many.</p>
+<p><strong>📊 Spreadsheet-based Bulk Attribute Editing</strong></p>
+<p>Export the data table to CSV or JSON, edit it freely in any spreadsheet tool (Excel, LibreOffice, Google Sheets), and re-import to update attributes in bulk. Each node or edge can carry different values — unlike in-app bulk operations which assign one value to many.</p>
 <h3 id="-improvements">⚡ Improvements</h3>
 <ul>
-<li><strong>Fruchterman-Reingold</strong> layout: pre-cached adjacency (O(1) edge lookup in inner loop), initial random placement, early convergence detection — significantly faster on large graphs.</li>
-<li><strong>Kamada-Kawai</strong> layout: canvas clamping replaces random teleport on out-of-bounds particles.</li>
+<li><strong>Fruchterman-Reingold</strong> layout: significantly faster on large graphs thanks to pre-cached adjacency lookups, better initial placement, and early convergence detection.</li>
+<li><strong>Kamada-Kawai</strong> layout: particles that drift out of bounds are now clamped to the canvas instead of being teleported randomly.</li>
 </ul>
 <h3 id="-bug-fixes">🐛 Bug Fixes</h3>
 <ul>
 <li>Fixed Kamada-Kawai crash when node filters are active.</li>
-<li>Fixed crash on graph reset: guard edge creation in <code dir="auto">setEdgeVisibility</code> when the edge has already been removed (#231).</li>
-<li>Fixed visibility history stack not cleared on graph clear / <code dir="auto">initApp</code>.</li>
-<li>Fixed custom node attribute key/id mismatch in GraphML export (#208).</li>
-<li>Fixed Pajek parser: use default node shape as fallback when no Pajek shape keyword is present (#179).</li>
-<li>Fixed <code dir="auto">DialogClusteringHierarchical</code> signal/slot mismatch (#194).</li>
-<li>Fixed Node Properties dialog UX issues for custom attributes (#130).</li>
-<li>Fixed <code dir="auto">graphTriadCensus()</code> appending stale zeros on repeated runs.</li>
+<li>Fixed crash on graph reset when an edge had already been removed.</li>
+<li>Fixed filter history stack not being cleared on graph clear / application reset.</li>
+<li>Fixed custom node attribute key/id mismatch in GraphML export.</li>
+<li>Fixed Pajek parser: use default node shape as fallback when no Pajek shape keyword is present.</li>
+<li>Fixed hierarchical clustering dialog signal/slot mismatch.</li>
+<li>Fixed Node Properties dialog UX issues for custom attributes.</li>
+<li>Fixed triad census appending stale zeros on repeated runs.</li>
 </ul>
 <hr>
 <p>We’d like to thank our contributors and users for reporting issues, testing fixes, and helping SocNetV improve with every release. 🙏</p>
