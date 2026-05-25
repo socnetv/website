@@ -52,6 +52,42 @@ In this layout, the size of each node is scaled according to its centrality or p
 **When to Use**: 
 - Nodal size is ideal when you want to show the importance of nodes not just by position, but also by their relative size. This is useful for visualizing the absolute "weight" or "influence" of nodes in the network.
 
+### Node Color Gradient Layout
+
+In this layout, each node's **color** encodes its prominence score using a continuous **blue → red gradient**: nodes with lower scores are colored blue, and nodes with higher scores are colored red (warmer). The gradient makes it immediately obvious which nodes score highest without changing their positions.
+
+The layout is available for all 13 prominence indices:
+
+| Index | Shortcut |
+|---|---|
+| Degree Centrality | `Ctrl+L, Ctrl+C, Ctrl+D` |
+| Closeness Centrality | `Ctrl+L, Ctrl+C, Ctrl+C` |
+| IR Closeness Centrality | `Ctrl+L, Ctrl+C, Ctrl+I` |
+| Betweenness Centrality | `Ctrl+L, Ctrl+C, Ctrl+B` |
+| Stress Centrality | `Ctrl+L, Ctrl+C, Ctrl+S` |
+| Eccentricity Centrality | `Ctrl+L, Ctrl+C, Ctrl+E` |
+| Power Centrality | `Ctrl+L, Ctrl+C, Ctrl+P` |
+| Information Centrality | `Ctrl+L, Ctrl+C, Ctrl+F` |
+| Eigenvector Centrality | `Ctrl+L, Ctrl+C, Ctrl+X` |
+| Degree Prestige | `Ctrl+L, Ctrl+C, Ctrl+A` |
+| PageRank Prestige | `Ctrl+L, Ctrl+C, Ctrl+R` |
+| Proximity Prestige | `Ctrl+L, Ctrl+C, Ctrl+O` |
+| **Clustering Coefficient** | `Ctrl+L, Ctrl+C, Ctrl+G` |
+
+#### Node Color by Clustering Coefficient
+
+Coloring by **Clustering Coefficient** gives an immediate visual read of how tightly each node's neighborhood is connected. Highly clustered nodes (close to 1) appear red; nodes with no closed triangles among their neighbors appear blue.
+
+If the Clustering Coefficient has not been computed yet, applying this layout triggers the computation automatically. The result also appears in the **distribution chart** (Statistics Panel → DISTRIBUTION), the **Filter Nodes by Centrality** dialog, and the **analysis prominence combo** in the Control Panel — identical integration to all other centrality indices.
+
+**How to apply:**
+- **Menu**: Layout → Node Color → Clustering Coefficient (`Ctrl+L, Ctrl+C, Ctrl+G`)
+- **Control Panel**: select *Clustering Coefficient* in the Prominence Index combo, then set Type to *Node Color*.
+
+**When to Use**:
+- Quickly spot structurally embedded nodes (high CLC, red) versus bridge nodes or isolates (low CLC, blue).
+- Combine with the **Ego Radial Layout** or **Ego Network filter** to zoom into the neighborhood of a high-CLC node.
+
 ## Force-directed Placement
 
 ### Kamada-Kawai Layout
