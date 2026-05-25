@@ -27,7 +27,7 @@ head:
     }
 banner:
   content: |
-    <a href="/news/socnetv-v35-released">SocNetV v3.5 has been released!</a>
+    <a href="/news/socnetv-v36-released">SocNetV v3.6 has been released!</a>
 hero:
   tagline: SocNetV - Social Network Analysis and Visualization Software
   image:
@@ -92,21 +92,23 @@ SocNetV is a cross-platform, free and open-source application for social network
   <Card title="Graph Exploration" icon="magnifier">
     <p>
       Non-destructive <a href="/manual/gui/#filtering-and-graph-exploration">filters</a> let you isolate any part of the network — ego network, selection, attribute value, centrality score, or edge weight — without losing data.
-      A persistent <a href="/manual/gui/#filter-bar">filter bar</a> shows active conditions as chips you can clear one by one or all at once.
+      The <a href="/manual/gui/#query-builder">Query Builder</a> (<code>Ctrl+X, Ctrl+B</code>) composes multi-condition AND filters in a single step.
+      A persistent <a href="/manual/gui/#filter-bar">filter bar</a> shows active conditions as chips you can remove individually or clear all at once.
     </p>
   </Card>
 
   <Card title="Data Management" icon="list-format">
     <p>
-      Attach <a href="/manual/data/#node-and-edge-custom-attributes">custom attributes</a> to nodes and edges, browse and inline-edit everything in the <a href="/manual/data/#data-table-dock">Data Table dock</a> (<code>Ctrl+T</code>),
-      and <a href="/manual/data/#exporting-nodeedge-data-as-csv-or-json">export to CSV or JSON</a> for bulk editing in any spreadsheet tool.
+      Attach <a href="/manual/data/#node-and-edge-custom-attributes">custom attributes</a> to nodes and edges, browse and inline-edit everything in the <a href="/manual/data/#data-table-dock">Data Table dock</a> (<code>Ctrl+D</code>),
+      <a href="/manual/data/#in-app-bulk-editing">bulk-edit properties</a> across multiple nodes or edges in one operation,
+      and <a href="/manual/data/#exporting-nodeedge-data-as-csv-or-json">export to CSV or JSON</a> for further editing in any spreadsheet tool.
     </p>
   </Card>
 
   <Card title="File Formats" icon="pencil">
     <p>
       Load and save networks in <a href="/manual/formats/#graphml-files">GraphML</a>, <a href="/manual/formats/#graphviz-dot-files">GraphViz</a>, GML, <a href="/manual/formats/#pajek-files">Pajek</a>, UCINET, Adjacency, EdgeList,
-      and <a href="/manual/formats/#two-mode-sociomatrix-files">two-mode sociomatrix</a> formats. GraphML is the native format with full roundtrip support for custom attributes.
+      and <a href="/manual/formats/#two-mode-sociomatrix-files">two-mode sociomatrix</a> formats. GraphML is the native format with full roundtrip support for custom attributes and <a href="/manual/gui/#zero-weight-edges">zero-weight edges</a>.
     </p>
   </Card>
 
