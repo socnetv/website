@@ -42,6 +42,17 @@ In addition to the above graph topology formats, SocNetV v3.5 also supports **st
 
 GraphML is a highly versatile and widely adopted XML-based format designed for graph data representation. SocNetV supports both reading and saving networks in GraphML format, making it an excellent choice for interoperability with other network analysis tools.
 
+| | |
+|---|---|
+| **Import** | ✅ `File → Load` or `File → Import` |
+| **Export** | ✅ `File → Save` (default format) |
+| **Node labels** | ✅ |
+| **Node colors / shapes** | ✅ |
+| **Edge weights** | ✅ |
+| **Edge labels** | ✅ |
+| **Multiple relations** | ✅ (via `relation` edge attribute) |
+| **Custom node / edge attributes** | ✅ full roundtrip (`d1000+` / `d2000+` key ranges) |
+
 ### Features of GraphML
 
 * **XML-Based**: Uses XML structure to represent nodes, edges, and their attributes.
@@ -298,6 +309,16 @@ To save a network as a GraphML file:
 
 GML (Graph Modeling Language) is a simple, text-based file format designed for describing graphs. It is widely used due to its human-readable structure and its ability to represent both small and large graphs in a flexible way. GML files are commonly used for storing and exchanging graph data and are supported by many graph-processing tools, including SocNetV.
 
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` |
+| **Export** | ❌ not supported |
+| **Node labels** | ✅ (via `label` attribute) |
+| **Node colors / shapes** | ❌ not parsed |
+| **Edge weights** | ✅ (via `value` attribute) |
+| **Multiple relations** | ❌ |
+| **Custom node / edge attributes** | ❌ |
+
 ### Features of GML
 
 1. **Human-readable format**: GML is a text-based format that is easy to read and edit manually, making it accessible even to users without specialized graph software.
@@ -401,6 +422,19 @@ SocNetV supports the following key features of GML files:
 
 GraphViz is a graph description language that uses the "DOT format" to define and represent graphs. SocNetV supports importing GraphViz files for analysis and visualization. These files describe graphs using a simple text-based syntax, making them easy to create and edit.
 
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` |
+| **Export** | ✅ `Network → Export → GraphViz DOT` |
+| **Graph types** | `graph` (undirected) · `digraph` (directed) · `strict` variants |
+| **Node labels** | ✅ |
+| **Node colors / shapes** | ✅ (`color`, `shape`, `pos` attributes) |
+| **Edge weights** | ✅ (`weight` attribute) |
+| **Edge labels** | ✅ (`label` attribute) |
+| **Multiple relations** | ❌ active relation only |
+| **Custom node / edge attributes** | ✅ arbitrary key=value pairs roundtrip via `pos=` and unknown attrs |
+| **Subgraph / cluster hierarchy** | ❌ structure parsed but not preserved as entities |
+
 ### Key Features
 
 1. **Directed and Undirected Graphs**: GraphViz supports both graph types using intuitive syntax (`digraph` for directed graphs and `graph` for undirected graphs). SocNetV determines the graph type directly from this declaration.
@@ -447,9 +481,25 @@ In SocNetV, the same network can be visualized in many ways. For instance, in th
 
 ### How to Use GraphViz Files in SocNetV
 
-1. **Loading Files**: To import a GraphViz file, navigate to **File > Import** and select the `.dot` file. SocNetV will parse the graph and display it for further analysis.
-2. **Visualization Options**: SocNetV renders supported attributes (e.g., node colors, shapes, labels, edge weights). Unsupported or unrecognized attributes are safely ignored.
+#### Importing GraphViz DOT Files
+
+1. Navigate to **File > Import** and select the `.dot` file.
+2. SocNetV renders supported attributes (node colors, shapes, labels, edge weights). Unsupported or unrecognized attributes are safely ignored.
 3. **Limitations**: SocNetV does not support advanced GraphViz features such as full cluster layout control, subgraph hierarchy preservation, or complex attribute inheritance rules.
+
+#### Exporting to GraphViz DOT
+
+Go to **Network → Export → GraphViz DOT** to save the current graph in DOT format.
+
+**What is exported:**
+- Node labels, colors, and shapes as DOT node attributes.
+- Edge weights, labels, and colors as DOT edge attributes.
+- Custom node and edge attributes as additional DOT key/value pairs.
+- Node canvas positions as `pos="x,y"` attributes, enabling a lossless positional roundtrip — reload the exported `.dot` file to restore the same layout.
+
+**Limitations:**
+- Only the **active relation** is exported (single `digraph` or `graph` block). Multi-relation networks require one export per relation.
+- Advanced DOT layout directives (e.g., `rankdir`, `splines`) are not written.
 
 ---
 
@@ -489,22 +539,22 @@ Subgraphs and clusters may be parsed for structural correctness, but their hiera
 
 ---
 
-### Summary
-
-* No structural changes were needed.
-* Clarified directed/undirected detection.
-* Clarified cluster/subgraph handling.
-* Clarified attribute tolerance.
-* Kept tone and structure consistent with your Pajek/GML sections.
-
----
-
 ## Adjacency Matrix Files
 
-The adjacency matrix format is a widely used format for representing one-mode networks, where each element in an NxN matrix represents the connection between nodes (or the weight). This format is simple to use and is typically employed for analyzing networks based on node relationships. 
+The adjacency matrix format is a widely used format for representing one-mode networks, where each element in an NxN matrix represents the connection between nodes (or the weight). This format is simple to use and is typically employed for analyzing networks based on node relationships.
 
-SocNetV supports adjacency matrix files in files with extensions such as `.txt`, `.sm`, `.adj`, and `.csv`.
+SocNetV supports adjacency matrix files with extensions `.sm`, `.adj`, and `.csv`.
 
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` |
+| **Export** | ✅ `Network → Export → Adjacency Matrix` |
+| **Matrix shape** | Square N × N (one-mode only) |
+| **Node labels** | ✅ optional — first `#`-comment line, comma-separated |
+| **Edge weights** | ✅ any non-zero numeric cell value |
+| **Multiple relations** | ❌ active relation only |
+| **Node colors / shapes** | ❌ not in format |
+| **Custom node / edge attributes** | ❌ not in format |
 
 ### Key Features
 
@@ -648,6 +698,18 @@ The Adjacency Matrix Format is widely used in research and applications where th
 A two-mode sociomatrix represents **bipartite networks** — networks where two fundamentally different types of actors exist, and connections only occur *between* types, never *within* them. Classic examples include people and the organisations they belong to, authors and the papers they co-authored, or directors and the company boards they sit on.
 
 SocNetV supports two-mode sociomatrix files with extensions `.2sm` and `.aff`.
+
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` — dialog lets you choose import mode |
+| **Export** | ❌ not supported |
+| **Matrix shape** | Rectangular NR × NC (Mode-1 rows × Mode-2 columns) |
+| **Import modes** | **Bipartite graph** (NR+NC nodes) · **Person network** (NR nodes, B×Bᵀ projection) · **Event network** (NC nodes, Bᵀ×B projection) |
+| **Node labels** | ❌ auto-labelled `p1`…`pNR` and `e1`…`eNC` in bipartite mode |
+| **Edge weights** | ✅ any non-zero cell value treated as affiliation weight |
+| **Multiple relations** | ❌ |
+| **Node colors / shapes** | Mode-2 nodes styled as blue diamonds in bipartite mode |
+| **Comments** | ✅ lines beginning with `#` are ignored |
 
 ### Understanding Two-Mode Data
 
@@ -834,6 +896,18 @@ Importing as a **bipartite graph** produces **41 nodes** (26 CEOs + 15 clubs) an
 ## Pajek Files
 
 SocNetV supports importing Pajek project files, which usually have a `.net` or `.paj` extension. It is important to note that SocNetV supports a **limited subset** of the features of this format.
+
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` |
+| **Export** | ✅ `Network → Export → Pajek` |
+| **Sections** | `*Vertices` · `*Arcs` · `*Edges` · `*ArcsList` · `*Matrix` |
+| **Node labels** | ✅ |
+| **Node colors / shapes** | ✅ (`ic`, shape keywords, canvas coordinates) |
+| **Edge weights** | ✅ |
+| **Multiple relations** | ✅ multiple `*Matrix` blocks, each imported as a separate relation |
+| **Custom node / edge attributes** | ❌ |
+| **Pajek features not supported** | Partitions, vectors, permutations, cluster files |
 
 ### Key Features
 
@@ -1024,14 +1098,26 @@ SocNetV supports the following elements of Pajek files:
 
 ## UCINET DL Files
 
-UCINET's DL (Data Language) format is widely used for representing social networks and other types of relational data. It is a simple and flexible format, primarily designed for use with the UCINET software. 
-SocNetV supports importing DL files in several formats, including full matrices and edge lists, including **full matrices** and **edge lists**.
+UCINET's DL (Data Language) format is widely used for representing social networks and other types of relational data. It is a simple and flexible text-based format, primarily designed for use with the UCINET software. SocNetV supports importing DL files as **full matrices** (`FULLMATRIX`), **edge lists** (`EDGELIST1`), and **two-mode affiliation matrices** (`NR × NC`).
+
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` |
+| **Export** | ✅ `Network → Export → UCINET DL` |
+| **Format variants** | `FULLMATRIX` · `EDGELIST1` · Two-mode (`NR × NC`) |
+| **Node labels** | ✅ `LABELS` / `ROW LABELS` / `COLUMN LABELS` / `COL LABELS` |
+| **Edge weights** | ✅ matrix cell values or edge-list weight column |
+| **Multiple relations** | ✅ `NM=k` header with sequential matrix blocks and optional `LEVEL LABELS` |
+| **Two-mode networks** | ✅ always loads as a bipartite directed graph (see [Example 1c](#example-1c-two-mode-affiliation-matrix)) |
+| **Node colors / shapes** | ❌ not in DL format |
+| **Custom node / edge attributes** | ❌ not in DL format |
 
 ### Key Features
 
-1. **File Header**: DL files start with the `DL` header, followed by metadata describing the number of nodes, whether diagonals are included, and the data format.
-2. **Matrix or Edge List Representation**: SocNetV supports DL files in adjacency matrix formats (FULLMATRIX) and edge list formats (EDGELIST1), making it versatile for different types of network data.
-3. **Node Labels**: DL files can include labels for nodes, making it easier to identify nodes in the graph.
+1. **File Header**: DL files start with the `DL` keyword, followed by metadata describing the number of nodes (`N=`), whether diagonals are present, and the data format.
+2. **Matrix or Edge List Representation**: SocNetV supports `FULLMATRIX` (adjacency matrix) and `EDGELIST1` (source–target–weight triples) formats.
+3. **Two-Mode Networks**: Files that declare `NR=` and `NC=` instead of `N=` are treated as affiliation (bipartite) networks.
+4. **Node Labels**: DL files can include node labels via `LABELS`, `ROW LABELS`, `COLUMN LABELS`, or `COL LABELS` sections.
 
 ### Examples
 
@@ -1156,6 +1242,75 @@ Relation 2 – Collaboration:
 
 ---
 
+#### Example 1c: Two-Mode Affiliation Matrix
+
+UCINET DL files can represent **two-mode (bipartite / affiliation) networks** by using `NR` (number of Mode-1 rows, e.g. persons) and `NC` (number of Mode-2 columns, e.g. events) in the header instead of the square `N=` parameter. The data matrix is rectangular — NR rows × NC columns — where a non-zero cell means that person `i` is affiliated with event `j`.
+
+```
+DL NR=3 NC=3
+FORMAT=FULLMATRIX
+ROW LABELS:
+person1
+person2
+person3
+COLUMN LABELS:
+event1
+event2
+event3
+DATA:
+1 1 0
+1 0 1
+0 1 1
+```
+
+##### Explanation
+
+- **`NR=3 NC=3`**: three Mode-1 actors (persons) and three Mode-2 actors (events). No `N=` is used; SocNetV automatically sets the total node count to `NR + NC = 6`.
+- **`ROW LABELS`**: names for the Mode-1 nodes (persons). `COLUMN LABELS` (or the alias `COL LABELS`) names the Mode-2 nodes (events).
+- **`DATA`**: a 3 × 3 binary matrix. Row 1 (`person1`) has a `1` in columns 1 and 2, meaning affiliation with `event1` and `event2`.
+
+##### What SocNetV creates
+
+SocNetV always loads a two-mode DL file as a **bipartite directed graph**: Mode-1 nodes (persons, numbered 1 … NR) and Mode-2 nodes (events, numbered NR+1 … NR+NC), with a directed edge from each person to each event they attend.
+
+| Node | Number | Type |
+|---|---|---|
+| person1 | 1 | Mode-1 |
+| person2 | 2 | Mode-1 |
+| person3 | 3 | Mode-1 |
+| event1 | 4 | Mode-2 |
+| event2 | 5 | Mode-2 |
+| event3 | 6 | Mode-2 |
+
+Edges created: `person1→event1`, `person1→event2`, `person2→event1`, `person2→event3`, `person3→event2`, `person3→event3` (6 directed edges).
+
+<Mermaid code={`
+graph LR
+  subgraph Mode-1 Persons
+    p1[person1]
+    p2[person2]
+    p3[person3]
+  end
+  subgraph Mode-2 Events
+    e1[event1]
+    e2[event2]
+    e3[event3]
+  end
+  p1 --> e1
+  p1 --> e2
+  p2 --> e1
+  p2 --> e3
+  p3 --> e2
+  p3 --> e3
+`} />
+
+:::note
+**UCINET two-mode files always load as a bipartite directed graph in SocNetV.**
+Directed edges run from each Mode-1 (row) node to each Mode-2 (column) node it is affiliated with. Projection to a person-network or event-network is not yet supported for the DL format. If you need projections, export the affiliation data as a `.2sm` file and import it using `File → Import` — SocNetV will offer the bipartite / person / event choice dialog for that format.
+:::
+
+---
+
 #### Example 2: Edge List Format
 
 ```
@@ -1200,19 +1355,36 @@ This diagram visualizes the network described in the edge list format, where the
 
 ### How to Use UCINET DL Files in SocNetV
 
-1. **Loading Files**: To import a UCINET DL file, go to **File > Import** and select the `.dl` file. SocNetV will parse the file and display the network.
-2. **Full Matrix or Edge List**: Depending on the file format (`FULLMATRIX` or `EDGELIST1`), SocNetV will either render a matrix-based visualization or a graph-based edge list.
-3. **Visualization Options**: Node labels and edge weights will be displayed if included in the DL file.
+#### Importing UCINET DL Files
+
+1. Go to **File > Import** and select the `.dl` file.
+2. Depending on the file format (`FULLMATRIX` or `EDGELIST1`), SocNetV renders a matrix-based visualization or a graph-based edge list.
+3. Node labels and edge weights are displayed if included in the DL file.
+
+#### Exporting to UCINET DL
+
+Go to **Network → Export → UCINET DL** to save the current graph in DL format.
+
+**What is exported:**
+- Uses `FULLMATRIX` format with an N×N adjacency matrix.
+- Node labels are written in a `ROW LABELS` / `COLUMN LABELS` block.
+- Edge weights are written as matrix cell values.
+- **Multi-relational networks**: all relations are exported using the `NM=k` parameter, with one matrix block per relation and optional `LEVEL LABELS` for relation names.
+
+**Limitations:**
+- Node colors, shapes, and custom attributes are **not preserved** — DL format carries no visual metadata.
+- Only the topology and weights are written.
 
 ### Supported UCINET DL Features in SocNetV
 
 SocNetV supports the following key features of UCINET DL files:
 
-- **Full Matrix Format**: `FULLMATRIX` representation with or without diagonals.
-- **Edge List Format**: `EDGELIST1` for defining edges between nodes.
-- **Node Labels**: SocNetV recognizes the `LABELS` section and assigns these labels to the corresponding nodes in the graph.
-- **Weighted Edges**: SocNetV supports weights for both edge list and matrix formats.
-- **Multiple Matrices (NM)**: DL files with multiple matrices are supported. Each matrix is imported as a separate relation in the network.
+- **Full Matrix Format**: `FULLMATRIX` representation with or without diagonal elements (`DIAGONAL PRESENT`).
+- **Edge List Format**: `EDGELIST1` for defining edges between nodes as `source target weight` triples.
+- **Two-Mode Networks**: Files with `NR=` and `NC=` headers are parsed as NR × NC affiliation matrices and imported as bipartite directed graphs (NR + NC nodes, directed edges from Mode-1 to Mode-2 nodes).
+- **Node Labels**: SocNetV recognises `LABELS`, `ROW LABELS`, `COLUMN LABELS`, and the abbreviated `COL LABELS` sections and assigns these labels to the corresponding nodes.
+- **Weighted Edges**: Edge weights are supported for both `FULLMATRIX` (cell values) and `EDGELIST1` (weight column) formats.
+- **Multiple Matrices (NM)**: DL files with multiple matrices (`NM=k`) are supported. Each matrix is imported as a separate relation in the network, with optional `LEVEL LABELS` used as relation names.
 
 ---
 
@@ -1236,7 +1408,18 @@ SocNetV supports the following key features of UCINET DL files:
 
 ## Edge List Files
 
-The edge list format is one of the simplest and most commonly used formats for representing graphs. It describes a graph in terms of its edges, where each line represents a connection (edge) between two nodes. SocNetV supports two types of edge list formats: unvalued and valued (weighted).
+The edge list format is one of the simplest and most commonly used formats for representing graphs. It describes a graph in terms of its edges, where each line represents a connection (edge) between two nodes. SocNetV supports two types of edge list formats: unvalued (`.lst`) and valued/weighted (`.wlst`).
+
+| | |
+|---|---|
+| **Import** | ✅ `File → Import` |
+| **Export** | ✅ `Network → Export → Edge List` (simple or weighted) |
+| **Variants** | Simple `.lst` (`source target`) · Weighted `.wlst` (`source target weight`) |
+| **Node labels** | ✅ source/target identifiers used as labels; spaces replaced with underscores on export |
+| **Edge weights** | ✅ weighted variant only |
+| **Multiple relations** | ❌ active relation only |
+| **Node colors / shapes** | ❌ not in format |
+| **Custom node / edge attributes** | ❌ not in format |
 
 ### Key Features
 
@@ -1300,9 +1483,29 @@ This diagram visualizes the valued edge list. The edges are weighted, as indicat
 
 ### How to Use Edge List Files in SocNetV
 
-1. **Loading Files**: To import an edge list file, navigate to **File > Import** and select the `.lst` or `.list` file. SocNetV will parse the file and display the graph structure.
-2. **Unvalued and Valued Edge Lists**: SocNetV can handle both unvalued and valued edge lists. It will automatically interpret the file based on whether it includes weights for the edges.
-3. **Visualization Options**: SocNetV will render the graph with the appropriate layout, and it will display edge weights if they are provided in the file.
+#### Importing Edge List Files
+
+1. Navigate to **File > Import** and select the `.lst` or `.list` file.
+2. SocNetV handles both unvalued and valued edge lists automatically.
+3. Edge weights are displayed if provided.
+
+#### Exporting Edge Lists
+
+SocNetV exports two edge list variants from **Network → Export**:
+
+**Weighted Edge List** (`source target weight`):
+- Menu: **Network → Export → Weighted Edge List**
+- Each line: source node label, target node label, edge weight — space-separated.
+- Node labels are used; spaces within labels are replaced with underscores.
+
+**Simple Edge List** (`source target`):
+- Menu: **Network → Export → Simple Edge List**
+- Each line: source node label, target node label — no weight column.
+
+**Limitations for both variants:**
+- Only the **active relation** is exported.
+- Node colors, shapes, and all custom node/edge attributes are **not preserved**.
+- Spaces in node labels become underscores in the output file.
 
 #### Supported Edge List Features in SocNetV
 
@@ -1326,6 +1529,42 @@ SocNetV supports the following elements of edge list files:
 
 #### Reference:
 - **Edge List Format Documentation**: [Wikipedia on Edge List](https://en.wikipedia.org/wiki/Edge_list)
+
+---
+
+## Export Format Capability Matrix
+
+The table below summarises what each supported export format can preserve. Use it when choosing a format for export or subgraph save.
+
+| Format | Node labels | Node color/shape | Custom node attrs | Edge weights | Edge labels | Custom edge attrs | Multi-relation |
+|--------|:-----------:|:----------------:|:-----------------:|:------------:|:-----------:|:-----------------:|:--------------:|
+| **GraphML** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| **Pajek** | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✓ (matrix blocks) |
+| **Adjacency Matrix** | ✗ | ✗ | ✗ | optional | ✗ | ✗ | ✗ (active only) |
+| **GraphViz DOT** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ (active only) |
+| **UCINET DL** | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ | ✓ (NM blocks) |
+| **Weighted Edge List** | ✓ (as label col) | ✗ | ✗ | ✓ | ✗ | ✗ | ✗ (active only) |
+| **Simple Edge List** | ✓ (as label col) | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ (active only) |
+
+When a format cannot preserve something the graph contains, the export dialog warns you before writing the file.
+
+---
+
+## Saving Subgraphs
+
+**Edit → Subgraphs → Save visible nodes as subgraph…** and **Save selected nodes as subgraph…** let you extract a subset of the graph to a file. Both dialogs offer all seven supported export formats:
+
+- **GraphML** — full fidelity; recommended when custom attributes must be preserved.
+- **Pajek** — preserves node labels, colors, shapes, and edge weights; no custom attributes.
+- **Adjacency Matrix** — topology only; active relation only.
+- **GraphViz DOT** — full fidelity for attributes; active relation only; positional roundtrip via `pos=`.
+- **UCINET DL** — labels and weights; no custom attributes; active relation only.
+- **Weighted Edge List** — labels and weights; active relation only.
+- **Simple Edge List** — labels only; no weights; active relation only.
+
+:::note
+A fidelity warning is shown before writing when the chosen format cannot preserve custom attributes or all relations.
+:::
 
 ---
 
