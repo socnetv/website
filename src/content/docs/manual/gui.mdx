@@ -42,8 +42,8 @@ At the top of the window, the menu bar provides access to all application featur
 - **Edit**: Tools for modifying the network:
   - Add or remove nodes and edges.
   - Change node and edge properties (color, size, weight, labels, custom attributes, etc.).
-  - **Filter** submenu: non-destructive exploration filters (ego network, focus on selection, attribute-based, centrality, edge weight) and restore actions.
-  - Toggle the **Data Table dock** (`Ctrl+T`) for tabular node/edge editing, export, and import.
+  - **Filter** submenu: non-destructive exploration filters (ego network, focus on selection, attribute-based, query builder, centrality, edge weight) and restore actions.
+  - Toggle the **Data Table dock** (`Ctrl+D`) for tabular node/edge editing, export, and import.
 
 - **Analyze**: Advanced analysis tools:
   - Compute graph and network metrics like adjacency matrices, clustering coefficients, centrality measures, and community detection.
@@ -106,6 +106,7 @@ The **Control Panel**, located on the left, is designed for quick access to esse
 3. **Layout Models**:
    - Apply visual layouts based on metrics like Betweenness Centrality.
    - Use force-directed placement algorithms for realistic visualizations.
+   - Layouts apply **immediately** when you change a combobox selection — there is no separate Apply button. The Type combobox defaults to *None*; selecting a Force-Directed model clears any active Radial/Level type, and vice versa.
 
 Each action in the Control Panel mirrors corresponding menu options, providing a more accessible alternative for frequent operations.
 
@@ -113,16 +114,15 @@ Each action in the Control Panel mirrors corresponding menu options, providing a
 
 #### Statistics Panel
 
-The **Statistics Panel**, located on the right, provides detailed information about the network and its components:
+The **Statistics Panel**, located on the right, provides detailed information about the network and its components. It is divided into five collapsible sections, each with a ▾/▴ toggle header that expands or collapses that section independently:
 
-- **Network Summary**:
-  - Displays overall statistics like node count, edge count, density, and network type (directed or undirected).
-- **Node Details**:
-  - Shows information about selected nodes, such as in-degree, out-degree, and clustering coefficients.
-- **Edge Details**:
-  - Displays edge weight and other attributes for selected edges.
+- **NETWORK** — overall statistics: node count, edge count, density, network type (directed/undirected).
+- **SELECTION** — statistics about the currently selected nodes or edges.
+- **CLICKED NODE** — in-degree, out-degree, clustering coefficient, and other per-node data for the most recently clicked node. In-Degree/Out-Degree rows are hidden until a node is clicked.
+- **CLICKED EDGE** — weight, label, color, and custom attributes for the most recently clicked edge. Weight/Reciprocal rows are hidden until an edge is clicked.
+- **DISTRIBUTION** — distribution chart for the last computed prominence index.
 
-This panel dynamically updates as you interact with the network, offering real-time insights into your data.
+The panel updates dynamically as you interact with the network.
 
 ![Example of Statistics Panel](/data/uploads/screenshots/25/socnetv-25-65-actors-KW-BC-levels.png)
 
@@ -212,7 +212,7 @@ Right-clicking on a node opens a context menu to:
 - Add an edge.
 - Apply an **Ego Radial Layout** centered on that node (`Ctrl+Alt+E`).
 - **Focus on Ego Network**: hide all nodes except the selected node and its direct neighbors (`Ctrl+X, Ctrl+F`).
-- **Focus on Selection**: hide all nodes not in the current selection (`Ctrl+X, Ctrl+S`).
+- **Focus on Selection**: hide all nodes not in the current selection (`Ctrl+X, Ctrl+O`).
 - **Restore All Nodes**: reveal all nodes hidden by any active filter (`Ctrl+X, Ctrl+R`).
 
 All nodes are tagged with their node number by default. To display labels, enable the option in `Options` -> `Node` -> `Display Labels`.
@@ -265,6 +265,28 @@ Create a directed edge from Node 1 to Node 2:
 
 :::note
 Clicking on an edge highlights its source and target nodes. Click again to undo the highlight.
+:::
+
+---
+
+#### Zero-weight Edges
+
+Some weighted network files (e.g. weighted edge lists exported from other tools) may contain edges whose weight is exactly `0`. SocNetV imports and **draws** these edges so your data is rendered faithfully, but it **excludes them from every SNA computation** — they do not contribute to degree, density, reciprocity, clustering coefficient, geodesic distances, or any centrality measure.
+
+Two settings in **Options → Settings** control how zero-weight edges behave:
+
+| Setting | Location in Settings dialog | Default |
+|---------|----------------------------|---------|
+| **Show zero-weight edges** | *Edges* tab → *Show zero-weight edges* checkbox | on |
+| **Zero edge color** | *Edges* tab → *Zero valued edge color* button | blue |
+| **Save zero-weight edges** | *File* tab → *Save zero-weight edges (GraphML only)* checkbox | off |
+
+- **Show zero-weight edges** — when checked (default), zero-weight edges are drawn on the canvas. Uncheck this if your data does not contain zero-weight edges and you want to make sure no ghost edges appear.
+- **Zero edge color** — choose any color for zero-weight edges so they are visually distinct from normal edges. The change is applied immediately to all existing zero-weight edges and becomes the default for all future sessions.
+- **Save zero-weight edges** — when enabled, zero-weight edges are written to GraphML files along with all other edges, preserving the original data on disk. Disabled by default; when disabled, zero-weight edges are omitted on save (they would be indistinguishable from absent edges in other formats).
+
+:::caution
+Zero-weight edges are **visual only**. They do not represent structural connections and will never appear in the adjacency matrix, distance matrix, or any report.
 :::
 
 ---
@@ -452,7 +474,7 @@ Pair this filter with the **Ego Radial Layout** (`Ctrl+Alt+E`) to both hide non-
 
 **Focus on Selection** hides all nodes not currently selected, and all edges whose source and target are not both in the selection. Use group selection (drag a rectangle) or `Ctrl+click` to build the selection first.
 
-- **Shortcut**: `Ctrl+X, Ctrl+S`
+- **Shortcut**: `Ctrl+X, Ctrl+O`
 - **Right-click menu**: *Focus on Selection*
 - **Menu**: Edit → Filter Nodes → Selection
 
@@ -485,6 +507,35 @@ Click **Apply** to activate the filter. The canvas updates immediately and a chi
 ![SocNetV v3.5 canvas after Filter by Attribute (faction = officer) — only matching nodes remain visible, filter bar shows the active chip](/data/uploads/screenshots/35/socnetv-35-F4__Filter_by_Attribute_faction_chip.webp)
 
 See [Data Management](/manual/data) for how to add custom attributes to nodes and edges.
+
+:::tip
+To filter by **multiple conditions at once**, use the **Query Builder** described below — it lets you combine several attribute conditions with AND logic in a single step.
+:::
+
+---
+
+### Query Builder
+
+The **Query Builder** composes a multi-condition filter in one dialog. All conditions must be satisfied simultaneously (AND logic). A single chip is added to the filter bar for the entire compound query, and arbitrary chip removal works the same as for any other filter.
+
+- **Shortcut**: `Ctrl+X, Ctrl+B`
+- **Menu**: Edit → Filter → Query Builder…
+- **From Filter by Attribute**: click the flat **Use Query Builder…** button at the bottom of that dialog to switch to the Query Builder without closing the current dialog.
+
+#### How to use
+
+1. Open the Query Builder dialog.
+2. Choose the **scope**: *Nodes* or *Edges*.
+3. Each **condition row** has three fields:
+   | Field | Description |
+   |---|---|
+   | **Key** | Attribute name — choose from existing keys or type a custom one |
+   | **Operator** | `=` `≠` `>` `<` `≥` `≤` `contains` |
+   | **Value** | Free text; numeric-aware (compared as `double` when both sides parse; otherwise lexicographic; `contains` is case-insensitive substring) |
+4. Click **+ Add condition** to add more rows. Click **−** to remove a row (at least one row is always kept).
+5. Click **Apply**. The dialog stays open so you can apply again with different conditions if needed. Click **Cancel** to close.
+
+The filter bar shows a chip such as `Nodes: query (2 condition(s))`. Remove it with × to restore the hidden elements.
 
 ---
 
@@ -522,11 +573,10 @@ When any filter is active, a **Filter Bar** appears automatically as a thin stri
 Each active filter condition is shown as a **chip**, for example:
 
 ```
-[ Nodes: ego network × ]  [ Nodes: type = investor × ]  [Clear all]
+[ Nodes: ego network × ]  [ Nodes: type = investor × ]  [ Nodes: query (2 condition(s)) × ]  [Clear all]
 ```
 
-- The **×** on the most recently applied chip removes that filter and pops one entry from the stack.
-- Chips for earlier filters show a disabled × with a tooltip explaining the order constraint — filters must be removed in reverse order of application.
+- The **×** on any chip removes that specific filter and replays all remaining filters in their original order — arbitrary removal is supported.
 - **Clear all** removes every active filter in a single click.
 
 ![SocNetV v3.5 filter bar with two active chips — 'Edges: weight filter' and 'Nodes: ego network' — each with its own dismiss button and a Clear all button at the right](/data/uploads/screenshots/35/socnetv-35-F3__Multiple_active_filters_in_the_Filter_Bar.webp)
@@ -538,5 +588,6 @@ Each active filter condition is shown as a **chip**, for example:
 Filters compose by stacking — each application narrows down the visible set further, producing an AND effect. Example workflows:
 
 - Select a cluster of nodes → **Focus on Selection** → apply **Ego Radial Layout** to visualize the subgraph cleanly.
+- **Query Builder** (`type = investor` AND `score > 0.5`) in a single step — then **Filter by Centrality** (top 20%) to find the most connected matching nodes.
 - **Filter by Attribute** (`type = investor`) → then **Filter by Centrality** (top 20%) to find the most connected investors.
 - **Ego Network** filter → export the visible nodes as CSV from the [Data Table](/manual/data) for further analysis.
