@@ -38,7 +38,7 @@ Right-click any edge on the canvas, or select an edge and click the **Edge Prope
 
 The **Data Table dock** is a dockable panel that shows all nodes and edges of the current graph in a tabular view with inline editing, live search, and structured export/import.
 
-**Toggle**: press `Ctrl+T`, or use **Edit → Show Data Table** / **Options → Show Data Table**.
+**Toggle**: press `Ctrl+D`, or use **Edit → Show Data Table** / **Options → Show Data Table**.
 
 The panel docks at the bottom of the main window and auto-refreshes whenever a file is loaded or the graph is reset (while the panel is open).
 
@@ -219,6 +219,59 @@ Import this file in the Nodes tab (ID column = `#`, match by node number). The `
 
 :::tip
 Save as **GraphML** after importing to persist your custom attributes. They will be available on the next file load and will appear as column headers in the Data Table dock.
+:::
+
+---
+
+## In-App Bulk Editing
+
+Beyond inline cell editing (double-click a cell in the table), the Data Table dock provides three **bulk operations** that apply the same change to multiple nodes or edges in one step.
+
+### How to access
+
+| Entry point | How |
+|---|---|
+| **Data Table toolbar** | Buttons at the top of each tab: **Set property**, **Add attribute**, **Remove attribute** |
+| **Canvas context menu** | Right-click a node or edge (with one or more selected) → **Set property for selection…** |
+
+The operations target:
+- **Selected rows** in the table (use `Ctrl+click` or drag to select multiple rows).
+- **All canvas-selected items** (the table selection syncs automatically when you select nodes on the canvas).
+- If nothing is explicitly selected, the operation targets **all proxy-visible rows** — i.e., all rows not hidden by the live search filter (which integrates naturally with any active exploration filter).
+
+---
+
+### Set Property
+
+Opens the **Bulk Edit dialog**, which adapts to the scope (Nodes or Edges):
+
+| Scope | Available properties |
+|---|---|
+| **Nodes** | Label, Size, Color, Shape, and all existing custom attribute keys |
+| **Edges** | Label, Weight, Color, and all existing custom attribute keys |
+
+The value widget changes to match the chosen property (text field, number spinbox, color picker, or shape dropdown). Clicking **Apply** sets the chosen property to the given value on every target node or edge.
+
+:::tip
+To set a built-in property (Label, Size, Color) on many nodes at once without a spreadsheet round-trip, select the nodes on the canvas and use **Set property** → Label/Size/Color.
+:::
+
+---
+
+### Add Attribute
+
+Prompts for a **key** and a **value**, then adds that custom attribute to every target node or edge. If an attribute with the same key already exists on a target, its value is overwritten.
+
+---
+
+### Remove Attribute
+
+Collects all custom attribute keys present across the target nodes or edges and lets you pick one to remove. The chosen attribute is deleted from every target.
+
+---
+
+:::note
+Bulk operations do not currently support undo. Save the graph as **GraphML** (`Ctrl+S`) before running a bulk operation you are unsure about, so you can reload if needed.
 :::
 
 ---
