@@ -1,4 +1,4 @@
 var graphtablewidget_8h =
 [
-    [ "GraphTableWidget", "classGraphTableWidget.html", "classGraphTableWidget" ]
+    [ "GraphTableWidget", "class_graph_table_widget.html", "class_graph_table_widget" ]
 ];

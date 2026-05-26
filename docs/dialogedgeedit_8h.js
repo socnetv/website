@@ -1,4 +1,4 @@
 var dialogedgeedit_8h =
 [
-    [ "DialogEdgeEdit", "classDialogEdgeEdit.html", "classDialogEdgeEdit" ]
+    [ "DialogEdgeEdit", "class_dialog_edge_edit.html", "class_dialog_edge_edit" ]
 ];

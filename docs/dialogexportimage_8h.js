@@ -1,4 +1,4 @@
 var dialogexportimage_8h =
 [
-    [ "DialogExportImage", "classDialogExportImage.html", "classDialogExportImage" ]
+    [ "DialogExportImage", "class_dialog_export_image.html", "class_dialog_export_image" ]
 ];

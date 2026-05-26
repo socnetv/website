@@ -1,6 +1,6 @@
 var namespacecli =
 [
-    [ "CliConfig", "structcli_1_1CliConfig.html", "structcli_1_1CliConfig" ],
+    [ "CliConfig", "structcli_1_1_cli_config.html", "structcli_1_1_cli_config" ],
     [ "almostEqual", "namespacecli.html#a4171d8ad1dbd1027575766cabaa79c54", null ],
     [ "buildCliquesV6", "namespacecli.html#a3c82633e15ea799bf75daa0f44c61f02", null ],
     [ "buildGoldenJsonV1", "namespacecli.html#a959ff1e2b548e0b073ccb7cd1675726f", null ],
@@ -8,6 +8,7 @@ var namespacecli =
     [ "buildGoldenJsonV3WalksMatrix", "namespacecli.html#ae3fcf0754e3c0dc9683b4360f345cd7d", null ],
     [ "buildGoldenJsonV4", "namespacecli.html#a6456152ec308fb0b816ef9d626b307bd", null ],
     [ "buildGoldenJsonV6", "namespacecli.html#ab283f9d8b6e3d035565b80ddacbc1400", null ],
+    [ "buildGoldenJsonV7", "namespacecli.html#a0349c321464962b4dfaa61adc4fbbdf0", null ],
     [ "buildMetricsV6", "namespacecli.html#aab385d7525d1ff602469562c698d194f", null ],
     [ "buildPerNodeArray", "namespacecli.html#a71b82fd7b86c42eb2a98096d5d15e654", null ],
     [ "buildPerNodeArrayV4", "namespacecli.html#a48b07b5039d071e4d60d6cb5272e54bf", null ],
@@ -29,6 +30,7 @@ var namespacecli =
     [ "compareGoldenV3WalksMatrix", "namespacecli.html#a959f0f15abc0dac767695236e90c179f", null ],
     [ "compareGoldenV4", "namespacecli.html#a632d0ecd0005ea84d38a3cfa88cdeaab", null ],
     [ "compareGoldenV6", "namespacecli.html#a5079fb83269192410d9076b233263d4b", null ],
+    [ "compareGoldenV7", "namespacecli.html#a9c568ac028497b488ffe8785f77b42ba", null ],
     [ "d2s", "namespacecli.html#ac17361453ebfb6e134390d001ee41664", null ],
     [ "printKV", "namespacecli.html#a5b7ccfb08616040b97b27cb640275075", null ],
     [ "printKV", "namespacecli.html#a036f55905f6e9fdf937e9f91880a6c03", null ],
@@ -36,6 +38,7 @@ var namespacecli =
     [ "printKV", "namespacecli.html#a4a95f1a954b1d2cb92dbf82fa45b572f", null ],
     [ "readJsonFile", "namespacecli.html#a74fe0370810e9add6776dca31d762c4f", null ],
     [ "runKernelClusteringV6", "namespacecli.html#a120ba987f9016a53154091bd28a90e4b", null ],
+    [ "runKernelConnectivityV7", "namespacecli.html#ac54e3de7eb059c9793d3271098f8e232", null ],
     [ "runKernelDistanceV1", "namespacecli.html#af391af5a27faf6fc4b7805c088b9b103", null ],
     [ "runKernelIoRoundtripV5", "namespacecli.html#ae8f6c2d2d6dedc5554661c98f0cd20f9", null ],
     [ "runKernelProminenceV4", "namespacecli.html#a359cdb41bc8847bfbfbc1ee3a3c0e6b6", null ],

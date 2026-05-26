@@ -2,6 +2,8 @@ var dir_54a3bae93db33bc31f45a49e5407f323 =
 [
     [ "kernel_clustering_v6.cpp", "kernel__clustering__v6_8cpp.html", "kernel__clustering__v6_8cpp" ],
     [ "kernel_clustering_v6.h", "kernel__clustering__v6_8h.html", "kernel__clustering__v6_8h" ],
+    [ "kernel_connectivity_v7.cpp", "kernel__connectivity__v7_8cpp.html", "kernel__connectivity__v7_8cpp" ],
+    [ "kernel_connectivity_v7.h", "kernel__connectivity__v7_8h.html", "kernel__connectivity__v7_8h" ],
     [ "kernel_distance_v1.cpp", "kernel__distance__v1_8cpp.html", "kernel__distance__v1_8cpp" ],
     [ "kernel_distance_v1.h", "kernel__distance__v1_8h.html", "kernel__distance__v1_8h" ],
     [ "kernel_io_roundtrip_v5.cpp", "kernel__io__roundtrip__v5_8cpp.html", "kernel__io__roundtrip__v5_8cpp" ],

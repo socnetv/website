@@ -1,4 +1,4 @@
 var dialogsimilaritypearson_8h =
 [
-    [ "DialogSimilarityPearson", "classDialogSimilarityPearson.html", "classDialogSimilarityPearson" ]
+    [ "DialogSimilarityPearson", "class_dialog_similarity_pearson.html", "class_dialog_similarity_pearson" ]
 ];

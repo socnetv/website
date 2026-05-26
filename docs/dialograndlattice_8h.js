@@ -1,4 +1,4 @@
 var dialograndlattice_8h =
 [
-    [ "DialogRandLattice", "classDialogRandLattice.html", "classDialogRandLattice" ]
+    [ "DialogRandLattice", "class_dialog_rand_lattice.html", "class_dialog_rand_lattice" ]
 ];

@@ -1,4 +1,4 @@
 var dialogsysteminfo_8h =
 [
-    [ "DialogSystemInfo", "classDialogSystemInfo.html", "classDialogSystemInfo" ]
+    [ "DialogSystemInfo", "class_dialog_system_info.html", "class_dialog_system_info" ]
 ];

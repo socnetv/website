@@ -1,4 +1,4 @@
 var dialognodefind_8h =
 [
-    [ "DialogNodeFind", "classDialogNodeFind.html", "classDialogNodeFind" ]
+    [ "DialogNodeFind", "class_dialog_node_find.html", "class_dialog_node_find" ]
 ];

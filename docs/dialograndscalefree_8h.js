@@ -1,4 +1,4 @@
 var dialograndscalefree_8h =
 [
-    [ "DialogRandScaleFree", "classDialogRandScaleFree.html", "classDialogRandScaleFree" ]
+    [ "DialogRandScaleFree", "class_dialog_rand_scale_free.html", "class_dialog_rand_scale_free" ]
 ];
