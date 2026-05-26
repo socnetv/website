@@ -13,7 +13,7 @@ head:
   - tag: meta
     attrs: { 
       property: 'og:image',
-      content: 'https://socnetv.org/data/uploads/screenshots/35/socnetv-35-G1__Main_window_with_a_visualized_network.webp'
+      content: 'https://socnetv.org/data/uploads/screenshots/36/Lattice_Net_N9801_E19404_Undir_PI_BC.webp'
     }
   - tag: meta
     attrs: { 
@@ -52,13 +52,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import { LinkButton } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-import myImage from '../../assets/images/socnetv-35-screenshot.webp'; 
+import myImage from '../../assets/images/socnetv-36-screenshot.webp'; 
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
 ## Free and Open-Source Tool for Social Network Analysis 🌟 
 
-<Image loading src={myImage} alt="SocNetV v3.5 main window — Zachary's Karate Club network visualized with Kamada-Kawai layout and betweenness centrality node colour coding, with Control Panel and Statistics Panel visible." />
+<Image loading src={myImage} alt="SocNetV v3.6 main window — Ring lattice network with 9801 nodes and 19404 edges, visualized with betweenness centrality node colour coding, with Control Panel and Statistics Panel visible." />
 
 SocNetV is a cross-platform, free and open-source application for social network analysis and visualization. Draw networks with a few clicks, load data from dozens of file formats, run analysis, and produce beautiful reports — all from an intuitive interface that works on Windows, macOS, and Linux.
 
@@ -86,14 +86,16 @@ SocNetV is a cross-platform, free and open-source application for social network
       Apply layouts based on prominence scores (circular, radial, level),
       force-directed models (<a href="/manual/visualization/#kamada-kawai-layout">Kamada-Kawai</a>, <a href="/manual/visualization/#fruchterman-reingold-layout">Fruchterman-Reingold</a>, <a href="/manual/visualization/#spring-embedder-layout">Spring Embedder</a>),
       or the <a href="/manual/visualization/#ego-centered-radial-layout">ego-centered radial layout</a> to explore a node's neighborhood in depth.
+      Colour nodes by any <a href="/manual/visualization/#node-color-gradient-layout">centrality or prestige index</a>, by <a href="/manual/visualization/#node-color-by-clustering-coefficient">clustering coefficient</a>, or by connected component — using a continuous gradient that makes differences immediately visible.
     </p>
   </Card>
 
   <Card title="Graph Exploration" icon="magnifier">
     <p>
       Non-destructive <a href="/manual/gui/#filtering-and-graph-exploration">filters</a> let you isolate any part of the network — ego network, selection, attribute value, centrality score, or edge weight — without losing data.
-      The <a href="/manual/gui/#query-builder">Query Builder</a> (<code>Ctrl+X, Ctrl+B</code>) composes multi-condition AND filters in a single step.
+      The <a href="/manual/gui/#query-builder">Query Builder</a> composes multi-condition AND filters in a single step.
       A persistent <a href="/manual/gui/#filter-bar">filter bar</a> shows active conditions as chips you can remove individually or clear all at once.
+      You can also <a href="/manual/gui/#filtering-and-graph-exploration">save any visible or selected subgraph</a> as an independent network file in any supported format.
     </p>
   </Card>
 
