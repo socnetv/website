@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>SocNetV | News</title><description>Social Network Analysis: Social Network Visualizer (SocNetV) is a user-friendly and free software tool for Social Network Analysis and Visualization.</description><link>https://socnetv.org/</link><language>en</language><item><title>SocNetV v3.5 Released</title><link>https://socnetv.org/news/socnetv-v35-released/</link><guid isPermaLink="true">https://socnetv.org/news/socnetv-v35-released/</guid><pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;socnetv-v35-released&quot;&gt;SocNetV v3.5 released! 🎉&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>SocNetV | News</title><description>Social Network Analysis: Social Network Visualizer (SocNetV) is a user-friendly and free software tool for Social Network Analysis and Visualization.</description><link>https://socnetv.org/</link><language>en</language><item><title>SocNetV v3.6 Released</title><link>https://socnetv.org/news/socnetv-v36-released/</link><guid isPermaLink="true">https://socnetv.org/news/socnetv-v36-released/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;socnetv-v36-released&quot;&gt;SocNetV v3.6 released! 🎉&lt;/h3&gt;
+&lt;p&gt;We are happy to announce the release of &lt;strong&gt;SocNetV v3.6&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;This release adds a multi-condition &lt;strong&gt;Query Builder&lt;/strong&gt; filter, &lt;strong&gt;subgraph extraction&lt;/strong&gt;, four new export formats (UCINET DL, GraphViz DOT, weighted and simple edge lists), &lt;strong&gt;connected-component colouring&lt;/strong&gt;, &lt;strong&gt;Clustering Coefficient&lt;/strong&gt; node colouring, and working &lt;strong&gt;Bezier curve edges&lt;/strong&gt;. Analysis of large networks is also noticeably faster — read on for details.&lt;/p&gt;
+&lt;h3 id=&quot;-whats-new-in-socnetv-v36&quot;&gt;🔍 What’s New in SocNetV v3.6?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;🔎 Query Builder — multi-condition filtering&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A new &lt;strong&gt;Filter → Filter by Query…&lt;/strong&gt; action opens the &lt;strong&gt;Query Builder&lt;/strong&gt; dialog. You can add as many conditions as you like (pick an attribute, an operator, and a value), and only nodes or edges matching all of them will be shown. It works alongside the existing Filter Bar — the result appears as a removable chip, just like any other filter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✂️ Subgraph Extraction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A new &lt;strong&gt;Edit → Subgraphs&lt;/strong&gt; submenu lets you save a piece of your network as a separate file:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Save visible nodes as subgraph…&lt;/strong&gt; — saves whatever is currently visible on the canvas (after filters) as an independent network file.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Save selected nodes as subgraph…&lt;/strong&gt; — same, but only for selected nodes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Your original network is never modified.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;📤 Four New Export Formats&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can now export your network to four additional formats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UCINET DL&lt;/strong&gt; — compatible with UCINET and other tools that read the DL format. Multi-relation networks are fully supported.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GraphViz DOT&lt;/strong&gt; — exports node positions, colours, shapes, and custom attributes. You can reload the exported file back into SocNetV and get exactly the same network.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weighted Edge List&lt;/strong&gt; — a simple text file with one &lt;code dir=&quot;auto&quot;&gt;source target weight&lt;/code&gt; per line.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simple Edge List&lt;/strong&gt; — same, without the weights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;strong&gt;Save Subgraph As…&lt;/strong&gt; dialog now also offers all these formats (previously it was limited to GraphML, Pajek, and Adjacency).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🎨 Connected-Component Colouring&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A new &lt;strong&gt;Layout → Node Color by Connected Component&lt;/strong&gt; action colours each node according to its connected component — nodes in the same component share the same colour. This makes it immediately obvious when your network is split into disconnected parts. The &lt;strong&gt;Analyze → Cohesion → Connectedness&lt;/strong&gt; report now also tells you how many components the network has.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;📐 Clustering Coefficient Node Colouring&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Layout → Node Color → Clustering Coefficient&lt;/strong&gt; colours nodes by their local clustering coefficient using the same blue-to-red gradient used by all other centrality measures. It is also available in the Filter Nodes by Centrality dialog and the distribution chart.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;〰️ Bezier Curve Edges — now actually working&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Options → Edges → Bezier Curves&lt;/strong&gt; toggle has been in the menu since v3.4 but never did anything. It is now fully working: edges draw as smooth curves, arrowheads point in the right direction even on reciprocated pairs, and the setting is remembered across sessions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚙️ Zero-weight Edge Settings&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A new &lt;strong&gt;Settings → Edges → Show zero-weight edges&lt;/strong&gt; checkbox (on by default) lets you hide zero-weight edges on load — useful when your data file contains them but you don’t want them cluttering the canvas.&lt;/li&gt;
+&lt;li&gt;The zero-weight edge colour picker in Settings now actually works (it was wired up in the UI but had no effect before).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;↔️ Configurable Arrow Size&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A new &lt;strong&gt;Settings → Edges → Arrow size&lt;/strong&gt; control lets you make arrowheads bigger or smaller. The change applies immediately to all edges and is remembered for future sessions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;-faster-analysis-on-large-networks&quot;&gt;⚡ Faster analysis on large networks&lt;/h3&gt;
+&lt;p&gt;All centrality and distance computations (betweenness, closeness, eccentricity, and others) now use all available CPU cores instead of just one. The numbers below are from our tests on a 12-core Linux machine:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Network&lt;/th&gt;&lt;th&gt;Centralities computed&lt;/th&gt;&lt;th&gt;Before&lt;/th&gt;&lt;th&gt;After&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Directed, 500 nodes, 1 219 edges&lt;/td&gt;&lt;td&gt;yes&lt;/td&gt;&lt;td&gt;679 ms&lt;/td&gt;&lt;td&gt;255 ms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1 000 nodes, 10 000 edges&lt;/td&gt;&lt;td&gt;no&lt;/td&gt;&lt;td&gt;28 423 ms&lt;/td&gt;&lt;td&gt;3 431 ms&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1 000 nodes, 10 000 edges&lt;/td&gt;&lt;td&gt;yes&lt;/td&gt;&lt;td&gt;47 020 ms&lt;/td&gt;&lt;td&gt;5 949 ms&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;Large networks (2 000+ nodes, 40 000+ edges) are also smoother to navigate — selecting, dragging, and rubber-band selection no longer slow to a crawl.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;-other-improvements&quot;&gt;🛠 Other Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Layout section of the Control Panel no longer has “Apply” buttons — layout changes take effect as soon as you make a selection.&lt;/li&gt;
+&lt;li&gt;The Statistics Panel on the right is now divided into collapsible sections, so you can hide the parts you don’t need.&lt;/li&gt;
+&lt;li&gt;Node and edge toolbar actions now behave sensibly when multiple items are selected: one item selected opens its properties dialog, multiple selected opens a bulk-edit dialog.&lt;/li&gt;
+&lt;li&gt;The left Control Panel now scrolls when vertical space is tight (e.g. when the Data Table dock is open) instead of overlapping its own widgets.&lt;/li&gt;
+&lt;li&gt;The status bar now shows a “Computing… please wait” message whenever the app is doing something that takes a moment, so you always know it is working.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;-notable-bug-fixes&quot;&gt;🐛 Notable Bug Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;UCINET DL two-mode networks&lt;/strong&gt; now load correctly (node counts, node numbers, and labels were all wrong before).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Galaskiewicz famous network&lt;/strong&gt; now loads correctly — a missing data file in the app bundle was causing it to silently fail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edge mode&lt;/strong&gt; (directed/undirected) now correctly switches back when you change relation — each relation remembers its own setting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zero-weight edges&lt;/strong&gt; were being counted in several analyses where they shouldn’t have been (density, reciprocity, clustering coefficient, shortest paths). All fixed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shift+click&lt;/strong&gt; on a node now adds it to the current selection instead of replacing it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GraphViz DOT files exported by SocNetV&lt;/strong&gt; could silently drop the first node when reloaded, producing wrong edges. Fixed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-relation networks&lt;/strong&gt; where the first relation had no weights but a later one did were incorrectly reported as unweighted throughout the app. Fixed.&lt;/li&gt;
+&lt;li&gt;Several &lt;strong&gt;keyboard shortcut conflicts&lt;/strong&gt; between actions were resolved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Download SocNetV v3.6 from our &lt;a href=&quot;https://socnetv.org/downloads&quot;&gt;Downloads page&lt;/a&gt; and let us know what you think!&lt;/p&gt;
+&lt;p&gt;Happy analyzing!&lt;br&gt;
+— The SocNetV Team&lt;/p&gt;</content:encoded><category>release</category><category>export</category><category>filters</category><category>layout</category><category>performance</category><category>qt</category></item><item><title>SocNetV v3.5 Released</title><link>https://socnetv.org/news/socnetv-v35-released/</link><guid isPermaLink="true">https://socnetv.org/news/socnetv-v35-released/</guid><pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;socnetv-v35-released&quot;&gt;SocNetV v3.5 released! 🎉&lt;/h3&gt;
 &lt;p&gt;We are excited to announce the release of &lt;strong&gt;SocNetV v3.5&lt;/strong&gt;, the most feature-rich release in the project’s history!&lt;/p&gt;
 &lt;p&gt;This release introduces &lt;strong&gt;graph exploration filters&lt;/strong&gt;, a new &lt;strong&gt;ego-centered radial layout&lt;/strong&gt;, a complete &lt;strong&gt;node/edge attribute system&lt;/strong&gt;, a live &lt;strong&gt;data table dock&lt;/strong&gt; with inline editing, and &lt;strong&gt;structured CSV/JSON export and import&lt;/strong&gt; — unlocking a full roundtrip workflow between SocNetV and external spreadsheet tools.&lt;/p&gt;
 &lt;h3 id=&quot;-whats-new-in-socnetv-v35&quot;&gt;🔍 What’s New in SocNetV v3.5?&lt;/h3&gt;
@@ -631,73 +724,4 @@ Up to version 1.8, the PageRank algorithm used the original Page &amp;#x26; Brin
 &lt;li&gt;Advertise these offers directly within the social network.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This innovative application of SocNetV showcases its potential as an “intelligence” source for network operators, enabling data-driven decision-making and enhanced user engagement.&lt;/p&gt;
-&lt;p&gt;Kudos to the Dolphin and Trident teams for exploring this exciting use case for SocNetV!&lt;/p&gt;</content:encoded><category>Dolphin</category><category>Trident</category><category>Social Network Analysis</category><category>Intelligence</category></item><item><title>SocNetV 1.5 Released</title><link>https://socnetv.org/news/socnetv-15-released/</link><guid isPermaLink="true">https://socnetv.org/news/socnetv-15-released/</guid><pubDate>Fri, 10 Oct 2014 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A new version of SocNetV has just been released! Version 1.5 brings standardization, &lt;a href=&quot;https://launchpad.net/socnetv/+milestone/1.5&quot;&gt;many bug fixes&lt;/a&gt;, and exciting new features. Packages for Windows, Mac OS X, and Linux are available from the &lt;a href=&quot;https://socnetv.org/downloads/&quot;&gt;Downloads&lt;/a&gt; page.&lt;/p&gt;
-&lt;h3 id=&quot;notable-new-features&quot;&gt;Notable New Features&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Prominence Scores on Valued Networks&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A new SSSP-solver algorithm (Dijkstra) enables prominence indices on weighted networks.&lt;/li&gt;
-&lt;li&gt;SocNetV asks whether to consider or invert weights, depending on their meaning (e.g., cost vs. votes).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Standardized Centrality and Prestige Scores&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Scores are now standardized (0.0 to 1.0) where applicable.&lt;/li&gt;
-&lt;li&gt;If no standardized formula exists, SocNetV normalizes by dividing the original score by the sum of all scores.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Prominence Layouts Relative to Highest Score&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Visualization layouts (circular, level, and nodal size) are now based on the highest score in the network rather than theoretical maximums.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Skip Isolates&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Option to omit isolates when computing prominence indices.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Graph Connectedness&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SocNetV reports if the network is connected or has isolates and suggests fixes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;CC Drops Isolates by Default&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Automatically drops isolate nodes to compute CC scores, avoiding user interruptions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;New Datasets&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Stephenson and Zelen (1989): Network of 40 AIDS patients.&lt;/li&gt;
-&lt;li&gt;Stephenson and Zelen (1989): IC test dataset (5 actors).&lt;/li&gt;
-&lt;li&gt;Wasserman and Faust: Star, circle, and line graphs (7 actors).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;bug-fixes&quot;&gt;Bug Fixes&lt;/h3&gt;
-&lt;p&gt;The following bugs have been resolved in this release:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;#1358678: Fix GDC calculation in weighted networks.&lt;/li&gt;
-&lt;li&gt;#379558: Force-directed algorithms produce poor layouts.&lt;/li&gt;
-&lt;li&gt;#1365028: Methods &lt;code dir=&quot;auto&quot;&gt;isOutLinked&lt;/code&gt; &amp;#x26; &lt;code dir=&quot;auto&quot;&gt;setOutLinked&lt;/code&gt; do not consider relations.&lt;/li&gt;
-&lt;li&gt;#1365504: &lt;code dir=&quot;auto&quot;&gt;centralityInformation()&lt;/code&gt; should symmetrize the adjacency matrix.&lt;/li&gt;
-&lt;li&gt;#1366625: Clicking on an edge does not select the correct edge.&lt;/li&gt;
-&lt;li&gt;#1369171: Group IC calculation yields incorrect results.&lt;/li&gt;
-&lt;li&gt;#1371208: Incorrect power centrality scores.&lt;/li&gt;
-&lt;li&gt;#1364955: &lt;code dir=&quot;auto&quot;&gt;vertices()&lt;/code&gt; should report only enabled vertices.&lt;/li&gt;
-&lt;li&gt;#1369336: Pagerank prestige reports incorrect scores.&lt;/li&gt;
-&lt;li&gt;#1370528: SocNetV cannot build on non-x86 architectures.&lt;/li&gt;
-&lt;li&gt;#1364320: Remove SRS PDF and fix spelling errors in code.&lt;/li&gt;
-&lt;li&gt;#1364361: SocNetV does not remember the last directory used by the user.&lt;/li&gt;
-&lt;li&gt;#1378346: Cannot change size and value of a node.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;Enjoy the new features and improvements! If you spot any bugs, please &lt;a href=&quot;https://socnetv.org/bugs/&quot;&gt;report them here&lt;/a&gt;. Have fun!&lt;/p&gt;</content:encoded><category>Network Analysis</category><category>Prominence Scores</category><category>Graph Connectedness</category><category>Bug Fixes</category><category>Datasets</category></item></channel></rss>
+&lt;p&gt;Kudos to the Dolphin and Trident teams for exploring this exciting use case for SocNetV!&lt;/p&gt;</content:encoded><category>Dolphin</category><category>Trident</category><category>Social Network Analysis</category><category>Intelligence</category></item></channel></rss>
