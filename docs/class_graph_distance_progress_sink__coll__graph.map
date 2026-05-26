@@ -1,0 +1,23 @@
+<map id="GraphDistanceProgressSink" name="GraphDistanceProgressSink">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,499,198,524"/>
+<area shape="rect" id="Node000002" href="$class_i_distance_progress_sink.html" title=" " alt="" coords="5,402,161,428"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,442,104,497,99,499,86,444"/>
+<area shape="rect" id="Node000003" href="$class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="184,402,240,428"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,440,120,500,116,496,185,436"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="36,5,106,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,42,123,101,166,242,212,401,206,402,161,243,118,103,85,45"/>
+<area shape="rect" id="Node000005" href="$class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="191,102,250,128"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="122,30,170,53,196,76,215,100,210,103,192,80,167,57,119,35"/>
+<area shape="rect" id="Node000007" href="$class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="16,102,108,128"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="71,47,66,102,60,101,66,46"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="217,143,216,152,212,226,211,299,214,401,209,402,206,299,207,226,211,151,212,143"/>
+<area shape="rect" id="Node000006" href="$class_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="130,5,332,31"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="231,47,224,102,219,101,225,46"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="54,143,38,191,27,254,26,286,30,319,39,349,56,376,68,388,80,395,106,398,137,396,173,399,184,402,183,408,172,405,137,401,106,403,79,400,65,393,52,380,35,351,25,320,21,287,22,253,33,190,49,141"/>
+<area shape="rect" id="Node000008" href="$class_matrix.html" title=" " alt="" coords="282,102,340,128"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="314,143,309,269,300,334,293,360,284,380,265,397,242,408,240,404,262,393,280,376,288,359,295,333,303,268,308,143"/>
+<area shape="rect" id="Node000009" href="$class_matrix_row.html" title=" " alt="" coords="357,5,441,31"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="379,44,324,103,320,100,376,41"/>
+<area shape="rect" id="Node000010" href="$class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="364,102,434,128"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="407,142,414,192,414,255,410,289,402,322,388,352,369,380,347,393,313,402,241,413,241,408,312,397,345,388,365,376,384,350,397,320,405,288,409,255,408,192,402,143"/>
+</map>

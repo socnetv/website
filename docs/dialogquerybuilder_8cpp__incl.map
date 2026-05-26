@@ -1,0 +1,41 @@
+<map id="dialogquerybuilder.cpp" name="dialogquerybuilder.cpp">
+<area shape="rect" id="Node000001" title="Implements DialogQueryBuilder — multi&#45;condition AND filter composer." alt="" coords="793,5,942,31"/>
+<area shape="rect" id="Node000002" href="$dialogquerybuilder_8h.html" title="Declares DialogQueryBuilder — multi&#45;condition AND filter composer." alt="" coords="124,79,259,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="793,29,566,50,275,81,274,76,565,44,792,23"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="283,79,380,105"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="793,30,616,51,396,81,395,76,615,46,792,25"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="404,79,534,105"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="800,34,549,79,548,74,799,29"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="557,79,626,105"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="821,34,642,80,640,75,820,29"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="650,79,739,105"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="839,34,739,75,737,70,837,29"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="762,79,866,105"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="861,33,834,68,830,65,857,30"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="890,79,952,105"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="878,30,905,65,901,68,874,33"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="976,79,1055,105"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="894,29,978,69,975,74,891,34"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1079,79,1178,105"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="913,29,1071,72,1069,77,911,34"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1202,79,1306,105"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="934,29,1188,76,1187,81,933,34"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1330,79,1421,105"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="943,25,1109,46,1315,76,1314,81,1109,51,942,31"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1446,79,1548,105"/>
+<area shape="poly" id="edge20_Node000001_Node000019" title=" " alt="" coords="943,23,1158,43,1431,76,1430,81,1157,49,942,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,160,74,186"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,107,78,155,75,150,167,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,249,242,274"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="177,107,156,127,139,154,134,173,139,192,158,218,181,238,178,242,154,221,134,194,129,173,134,152,152,124,173,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="148,160,235,186"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="194,105,194,144,189,144,189,105"/>
+<area shape="rect" id="Node000006" href="$filter__condition_8h.html" title="Defines the FilterCondition struct shared by all attribute&#45;based filters." alt="" coords="316,241,446,282"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="260,100,349,120,387,134,411,151,419,170,419,191,405,229,400,227,414,190,414,171,407,154,385,138,348,125,259,105"/>
+<area shape="rect" id="Node000008" href="$graph__query_8h.html" title="Defines GraphQuery — a multi&#45;condition AND filter applied as one chip." alt="" coords="259,153,396,193"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="213,103,282,142,279,147,211,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="348,330,414,356"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="384,282,384,314,378,314,378,282"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="304,196,244,241,241,237,300,192"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="342,192,363,227,359,230,337,195"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="per_source_scratch.h" name="per_source_scratch.h">
+<area shape="rect" id="Node000001" title="Per&#45;source scratch state for the Brandes SSSP / centrality computation." alt="" coords="79,5,225,31"/>
+<area shape="rect" id="Node000002" href="$distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="167,79,294,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,40,219,77,216,81,174,43"/>
+<area shape="rect" id="Node000006" href="$thread__local__state_8h.html" title="Per&#45;thread state for the parallel SSSP source loop in DistanceEngine." alt="" coords="5,79,144,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="129,44,89,81,86,77,126,40"/>
+<area shape="rect" id="Node000003" href="$distance__engine_8cpp.html" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="15,153,155,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,114,111,154,109,150,191,109"/>
+<area shape="rect" id="Node000004" href="$graph_8cpp.html" title="Implements the Graph class for managing network structures, nodes, and edges in SocNetV." alt="" coords="185,153,263,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="231,120,228,152,222,152,225,120"/>
+<area shape="rect" id="Node000005" href="$graph__distance__cache_8cpp.html" title="Implements distance matrix creation, geodesic aggregation, SSSP helpers, and caching logic for the Gr..." alt="" coords="288,153,464,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="270,109,352,150,350,154,268,114"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="81,119,86,152,81,153,76,120"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="DialogImportAttributes" name="DialogImportAttributes">
+<area shape="rect" id="Node000001" title="Modal dialog that lets the user pick a CSV or JSON file and map its columns to graph node/edge identi..." alt="" coords="5,79,157,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="47,5,115,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,46,84,79,78,79,78,46"/>
+</map>

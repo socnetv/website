@@ -1,0 +1,7 @@
+<map id="DialogImportAttributes" name="DialogImportAttributes">
+<area shape="rect" id="Node000001" title="Modal dialog that lets the user pick a CSV or JSON file and map its columns to graph node/edge identi..." alt="" coords="34,102,186,128"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,74,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,42,103,100,99,103,55,45"/>
+<area shape="rect" id="Node000003" href="$struct_table_import_1_1_parsed_table.html" title="In&#45;memory representation of a parsed tabular file." alt="" coords="98,5,267,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,45,122,103,117,100,162,42"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="dialogquerybuilder.h" name="dialogquerybuilder.h">
+<area shape="rect" id="Node000001" title="Declares DialogQueryBuilder — multi&#45;condition AND filter composer." alt="" coords="91,5,226,31"/>
+<area shape="rect" id="Node000002" href="$dialogquerybuilder_8cpp.html" title="Implements DialogQueryBuilder — multi&#45;condition AND filter composer." alt="" coords="5,79,155,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,43,95,81,91,77,133,40"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="179,79,296,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,40,226,77,222,81,181,43"/>
+</map>
