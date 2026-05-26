@@ -1,0 +1,5 @@
+<map id="FilterSpec" name="FilterSpec">
+<area shape="rect" id="Node000001" title="Records how to re&#45;apply one filter operation from scratch." alt="" coords="18,102,98,128"/>
+<area shape="rect" id="Node000002" href="$struct_filter_condition.html" title="Describes a single attribute&#45;based filter condition." alt="" coords="5,5,111,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,46,61,101,55,101,55,46"/>
+</map>

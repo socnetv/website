@@ -1,0 +1,25 @@
+var class_dialog_node_edit =
+[
+    [ "DialogNodeEdit", "class_dialog_node_edit.html#a722fc4dda08be997dd6751f71bfef107", null ],
+    [ "~DialogNodeEdit", "class_dialog_node_edit.html#a72592ac345482198dae6bded1007889f", null ],
+    [ "checkErrors", "class_dialog_node_edit.html#ac7261d2425acb43f5f9bbcd202e59a97", null ],
+    [ "getNodeIconFile", "class_dialog_node_edit.html#af47118e4ab50002638f5d8fde0c753c2", null ],
+    [ "getNodeShape", "class_dialog_node_edit.html#affb95a6135120f7d3d5fa201b5e5a7be", null ],
+    [ "getUserChoices", "class_dialog_node_edit.html#a3e8db5c0d610673b7ede5257debee507", null ],
+    [ "nodeEditDialogError", "class_dialog_node_edit.html#acb0432d4876fdfcf842e68801196b3d9", null ],
+    [ "on_addPropertyButton_clicked", "class_dialog_node_edit.html#a6387e34908c80014a31b764728f8d85a", null ],
+    [ "on_removePropertyButton_clicked", "class_dialog_node_edit.html#a34ab9ad550ab76583c3b879bccbaa91e", null ],
+    [ "selectColor", "class_dialog_node_edit.html#aeab2f31db2ec9d0459820ed195b93b01", null ],
+    [ "userChoices", "class_dialog_node_edit.html#aa3fa4c38bf56f0072d67b8f663e60f7f", null ],
+    [ "iconPath", "class_dialog_node_edit.html#a05a6707f4bf9dcdecc56e5ab64f1d6cb", null ],
+    [ "m_customAttributes", "class_dialog_node_edit.html#af387859336d902f7e829d1d414578957", null ],
+    [ "m_iconList", "class_dialog_node_edit.html#a53988cfa61996dc6f9bc8d788163ceb6", null ],
+    [ "m_shapeList", "class_dialog_node_edit.html#a202a37b154bf6b3163254c9aed862326", null ],
+    [ "nodeColor", "class_dialog_node_edit.html#a2cc4afb0b2f93f05e2e8ed0e5b081dfa", null ],
+    [ "nodeLabel", "class_dialog_node_edit.html#a5af80e39167d18ae7df415869d553981", null ],
+    [ "nodeShape", "class_dialog_node_edit.html#a54e2907eb00788435708a466953b61be", null ],
+    [ "nodeSize", "class_dialog_node_edit.html#a3f1ba9d0ee3d9ca14dc8d426252dd6bc", null ],
+    [ "nodeValue", "class_dialog_node_edit.html#a10d5cdf644548e1ebbc7a76ed1087704", null ],
+    [ "pixmap", "class_dialog_node_edit.html#a34ffe072dd8bb00b8f4bc167db48ce30", null ],
+    [ "ui", "class_dialog_node_edit.html#aacd4a0b69f79646723a559a849087371", null ]
+];
