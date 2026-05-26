@@ -26,7 +26,7 @@ The interface consists of the following components:
 
 > The main application window is structured to provide maximum efficiency. Side panels on the left and right host critical tools and information, while the central canvas is the primary area for network visualization and interaction.
 
-![Example of SocNetV Main Window](/data/uploads/screenshots/25/socnetv-25-131-actors-citation-Degree-Centrality-Radial-Node-size-color-Layout-outDegree-distribution.png)
+![SocNetV v3.6 main window — Padgett Florentine Families network with Ego Network filter active, the Filter Bar strip showing the active chip between toolbar and canvas, left Control Panel with Layout section, and the right Statistics Panel with collapsible sections](/data/uploads/screenshots/36/socnetv-36-G1__Main_Window_updated_toolbar_filterbar.webp)
 
 ---
 
@@ -110,6 +110,8 @@ The **Control Panel**, located on the left, is designed for quick access to esse
 
 Each action in the Control Panel mirrors corresponding menu options, providing a more accessible alternative for frequent operations.
 
+![Control Panel → Layout section showing By Prominence Index (Index and Type combos, Type defaults to None) and By Force-Directed Model combo — all apply immediately on change with no Apply button](/data/uploads/screenshots/36/socnetv-36-G3__Control_Panel_Layout_no_apply.webp)
+
 ---
 
 #### Statistics Panel
@@ -124,7 +126,7 @@ The **Statistics Panel**, located on the right, provides detailed information ab
 
 The panel updates dynamically as you interact with the network.
 
-![Example of Statistics Panel](/data/uploads/screenshots/25/socnetv-25-65-actors-KW-BC-levels.png)
+![SocNetV v3.6 Statistics Panel showing all five independently collapsible sections — NETWORK (type, nodes, arcs, density), SELECTION, CLICKED NODE (with per-node degree data), CLICKED EDGE (with edge weight and reciprocity), and DISTRIBUTION (prominence chart)](/data/uploads/screenshots/36/socnetv-36-G2__Statistics_Panel_5_sections.webp)
 
 ---
 
@@ -273,21 +275,42 @@ Clicking on an edge highlights its source and target nodes. Click again to undo 
 
 Some weighted network files (e.g. weighted edge lists exported from other tools) may contain edges whose weight is exactly `0`. SocNetV imports and **draws** these edges so your data is rendered faithfully, but it **excludes them from every SNA computation** — they do not contribute to degree, density, reciprocity, clustering coefficient, geodesic distances, or any centrality measure.
 
-Two settings in **Options → Settings** control how zero-weight edges behave:
+The **Options → Settings → Edges** tab controls all edge display settings:
 
 | Setting | Location in Settings dialog | Default |
 |---------|----------------------------|---------|
+| **Display edges** | *Edges* tab → *Display edges* checkbox | on |
+| **Display edge arrows** | *Edges* tab → *Display edge arrows* checkbox | on |
+| **Arrow size** | *Edges* tab → *Arrow size* spinbox (range 2–20) | 6 |
+| **Edge shape** | *Edges* tab → *Straight Lines / Bezier Curves* radio | Straight Lines |
 | **Show zero-weight edges** | *Edges* tab → *Show zero-weight edges* checkbox | on |
 | **Zero edge color** | *Edges* tab → *Zero valued edge color* button | blue |
 | **Save zero-weight edges** | *File* tab → *Save zero-weight edges (GraphML only)* checkbox | off |
 
+- **Arrow size** — controls the size of arrowheads on directed edges (range 2–20). The change applies to all edges immediately and is persisted for future sessions.
+- **Edge shape** — switch between *Straight Lines* (default) and *Bezier Curves* (smooth quadratic arcs). See [Bezier Curve Edges](#bezier-curve-edges) below.
 - **Show zero-weight edges** — when checked (default), zero-weight edges are drawn on the canvas. Uncheck this if your data does not contain zero-weight edges and you want to make sure no ghost edges appear.
-- **Zero edge color** — choose any color for zero-weight edges so they are visually distinct from normal edges. The change is applied immediately to all existing zero-weight edges and becomes the default for all future sessions.
-- **Save zero-weight edges** — when enabled, zero-weight edges are written to GraphML files along with all other edges, preserving the original data on disk. Disabled by default; when disabled, zero-weight edges are omitted on save (they would be indistinguishable from absent edges in other formats).
+- **Zero edge color** — choose any color for zero-weight edges so they are visually distinct from normal edges. The change is applied immediately and becomes the default for all future sessions.
+- **Save zero-weight edges** — when enabled, zero-weight edges are written to GraphML files on save. Disabled by default.
+
+![SocNetV v3.6 Settings dialog → Edges tab — showing Arrow size spinbox (set to 12), Edge shape radio (Bezier Curves selected), Display edge arrows checkbox, Show zero-weight edges checkbox, and Zero valued edge color picker; directed network with enlarged arrowheads visible on the canvas behind the dialog](/data/uploads/screenshots/36/socnetv-36-G4__Settings_Edge_Arrow_size.webp)
 
 :::caution
 Zero-weight edges are **visual only**. They do not represent structural connections and will never appear in the adjacency matrix, distance matrix, or any report.
 :::
+
+---
+
+#### Bezier Curve Edges
+
+Toggle **Options → Settings → Edges → Edge shape → Bezier Curves** (or use **Options → Edges → Bezier Curves** from the menu) to draw all edges as smooth quadratic arcs instead of straight lines.
+
+- Arrowheads follow the curve tangent at each endpoint.
+- Reciprocated edges (A→B and B→A) curve in opposite directions so both arcs are clearly visible.
+- New edges drawn while the toggle is on are born as curves.
+- The setting persists across sessions.
+
+![SocNetV v3.6 canvas with Bezier Curves enabled — directed edges draw as smooth quadratic arcs with arrowheads following the curve tangent; reciprocated pairs curve in opposite directions](/data/uploads/screenshots/36/socnetv-36-F5__Bezier_curve_edges.webp)
 
 ---
 
@@ -522,6 +545,8 @@ The **Query Builder** composes a multi-condition filter in one dialog. All condi
 - **Menu**: Edit → Filter → Query Builder…
 - **From Filter by Attribute**: click the flat **Use Query Builder…** button at the bottom of that dialog to switch to the Query Builder without closing the current dialog.
 
+![SocNetV v3.6 Query Builder dialog — Nodes scope selected, two condition rows filled: 'type = investor' and 'score > 0.5', before clicking Apply](/data/uploads/screenshots/36/socnetv-36-F1__Query_Builder_dialog.webp)
+
 #### How to use
 
 1. Open the Query Builder dialog.
@@ -536,6 +561,8 @@ The **Query Builder** composes a multi-condition filter in one dialog. All condi
 5. Click **Apply**. The dialog stays open so you can apply again with different conditions if needed. Click **Cancel** to close.
 
 The filter bar shows a chip such as `Nodes: query (2 condition(s))`. Remove it with × to restore the hidden elements.
+
+![SocNetV v3.6 canvas after Query Builder filter — filter bar showing the chip 'Nodes: query (2 condition(s)) ×', only nodes matching all conditions remain visible; Data Table open at bottom showing the matching attribute values](/data/uploads/screenshots/36/socnetv-36-F2__Query_Builder_canvas_chip.webp)
 
 ---
 

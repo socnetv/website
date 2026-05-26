@@ -489,7 +489,9 @@ In SocNetV, the same network can be visualized in many ways. For instance, in th
 
 #### Exporting to GraphViz DOT
 
-Go to **Network → Export → GraphViz DOT** to save the current graph in DOT format.
+Go to **Network → Export to other… → GraphViz DOT…** to save the current graph in DOT format.
+
+![SocNetV v3.6 Network → Export to other… submenu — showing all available export formats: Adjacency Matrix, Pajek, GraphViz DOT, DL (UCINET), List (weighted/simple edge list), and structured CSV/JSON for node and edge attributes](/data/uploads/screenshots/36/socnetv-36-F8__Network_Export_submenu.webp)
 
 **What is exported:**
 - Node labels, colors, and shapes as DOT node attributes.
@@ -1552,7 +1554,11 @@ When a format cannot preserve something the graph contains, the export dialog wa
 
 ## Saving Subgraphs
 
-**Edit → Subgraphs → Save visible nodes as subgraph…** and **Save selected nodes as subgraph…** let you extract a subset of the graph to a file. Both dialogs offer all seven supported export formats:
+**Edit → Subgraphs → Save visible nodes as subgraph…** and **Save selected nodes as subgraph…** let you extract a subset of the graph to a file.
+
+![SocNetV v3.6 Edit → Subgraphs submenu — showing 'Save visible nodes as subgraph…' and 'Save selected nodes as subgraph…' actions; network visible on canvas with some nodes selected](/data/uploads/screenshots/36/socnetv-36-F9__Save_Subgraph_of_slection.webp)
+
+Both dialogs offer all seven supported export formats:
 
 - **GraphML** — full fidelity; recommended when custom attributes must be preserved.
 - **Pajek** — preserves node labels, colors, shapes, and edge weights; no custom attributes.
@@ -1565,6 +1571,8 @@ When a format cannot preserve something the graph contains, the export dialog wa
 :::note
 A fidelity warning is shown before writing when the chosen format cannot preserve custom attributes or all relations.
 :::
+
+![SocNetV v3.6 Save Subgraph As dialog — format dropdown open showing all seven supported output formats: GraphML, Pajek, Adjacency, GraphViz DOT (highlighted), UCINET DL, Weighted Edge List, Simple Edge List](/data/uploads/screenshots/36/socnetv-36-F9__Save_Subgraph_As_dialog.webp)
 
 ---
 

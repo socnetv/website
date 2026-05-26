@@ -88,6 +88,23 @@ If the Clustering Coefficient has not been computed yet, applying this layout tr
 - Quickly spot structurally embedded nodes (high CLC, red) versus bridge nodes or isolates (low CLC, blue).
 - Combine with the **Ego Radial Layout** or **Ego Network filter** to zoom into the neighborhood of a high-CLC node.
 
+![SocNetV v3.6 Zachary Karate Club network with nodes colored by Clustering Coefficient — blue nodes have low CLC (few closed triangles among neighbors), red nodes have high CLC (tightly clustered neighborhoods); Kamada-Kawai layout](/data/uploads/screenshots/36/socnetv-36-F3__Node_Color_CLC_gradient.webp)
+
+#### Node Color by Connected Component
+
+Coloring by **Connected Component** makes disconnected sub-networks immediately visible. Every node in the same weakly connected component shares the same palette color; nodes in different components get different colors (up to 15 distinct palette colors; the palette cycles for networks with more components).
+
+**How to apply:**
+- **Menu**: Layout → Node Color → Connected Component (`Ctrl+L, Ctrl+C, Ctrl+0`)
+
+If the network is fully connected, the action reports "one component" and leaves colors unchanged. Both directed and undirected networks are supported — weak connectivity is used throughout (edge directions are ignored), consistent with Gephi, igraph, and NetworkX defaults.
+
+**When to Use**:
+- Instantly identify how many isolated sub-networks are present in a disconnected graph.
+- Combine with **Analyze → Cohesion → Connectedness** which also reports the component count.
+
+![SocNetV v3.6 directed network with nodes colored by weakly connected component — each isolated sub-network gets a distinct palette color (red, blue, green, yellow), making disconnected islands immediately visible](/data/uploads/screenshots/36/socnetv-36-F4__Node_Color_Connected_Component.webp)
+
 ## Force-directed Placement
 
 ### Kamada-Kawai Layout
