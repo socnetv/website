@@ -1,4 +1,4 @@
 var dialogsettings_8h =
 [
-    [ "DialogSettings", "classDialogSettings.html", "classDialogSettings" ]
+    [ "DialogSettings", "class_dialog_settings.html", "class_dialog_settings" ]
 ];

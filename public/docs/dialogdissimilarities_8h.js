@@ -1,4 +1,4 @@
 var dialogdissimilarities_8h =
 [
-    [ "DialogDissimilarities", "classDialogDissimilarities.html", "classDialogDissimilarities" ]
+    [ "DialogDissimilarities", "class_dialog_dissimilarities.html", "class_dialog_dissimilarities" ]
 ];

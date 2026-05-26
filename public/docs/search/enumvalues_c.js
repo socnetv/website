@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reciprocated_0',['Reciprocated',['../global_8h.html#a424a64da753a3cd5e96ab8d0553a04c4aca85fda1839439e2a6ce741aaff1d0dd',1,'global.h']]]
+  ['query_0',['Query',['../struct_filter_spec.html#a9af7cc4d14a1bc2c560e4a55073a23f8a66c1b4c7f3dc385b68a9fa903ccd016d',1,'FilterSpec']]]
 ];

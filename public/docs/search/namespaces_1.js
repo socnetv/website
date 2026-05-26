@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['socnetv_0',['SocNetV',['../namespaceSocNetV.html',1,'']]],
-  ['socnetv_3a_3aio_1',['IO',['../namespaceSocNetV_1_1IO.html',1,'SocNetV']]]
+  ['socnetv_0',['SocNetV',['../namespace_soc_net_v.html',1,'']]],
+  ['socnetv_3a_3aio_1',['IO',['../namespace_soc_net_v_1_1_i_o.html',1,'SocNetV']]]
 ];

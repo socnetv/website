@@ -1,4 +1,4 @@
 var dialogfilteredgesbyweight_8h =
 [
-    [ "DialogFilterEdgesByWeight", "classDialogFilterEdgesByWeight.html", "classDialogFilterEdgesByWeight" ]
+    [ "DialogFilterEdgesByWeight", "class_dialog_filter_edges_by_weight.html", "class_dialog_filter_edges_by_weight" ]
 ];

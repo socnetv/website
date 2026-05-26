@@ -1,4 +1,4 @@
 var dialogpreviewfile_8h =
 [
-    [ "DialogPreviewFile", "classDialogPreviewFile.html", "classDialogPreviewFile" ]
+    [ "DialogPreviewFile", "class_dialog_preview_file.html", "class_dialog_preview_file" ]
 ];

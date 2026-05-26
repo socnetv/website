@@ -1,4 +1,4 @@
 var distance__engine_8h =
 [
-    [ "DistanceEngine", "classDistanceEngine.html", "classDistanceEngine" ]
+    [ "DistanceEngine", "class_distance_engine.html", "class_distance_engine" ]
 ];

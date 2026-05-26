@@ -1,4 +1,4 @@
 var dialogclusteringhierarchical_8h =
 [
-    [ "DialogClusteringHierarchical", "classDialogClusteringHierarchical.html", "classDialogClusteringHierarchical" ]
+    [ "DialogClusteringHierarchical", "class_dialog_clustering_hierarchical.html", "class_dialog_clustering_hierarchical" ]
 ];

@@ -1,4 +1,4 @@
 var distance__progress__sink_8h =
 [
-    [ "IDistanceProgressSink", "classIDistanceProgressSink.html", "classIDistanceProgressSink" ]
+    [ "IDistanceProgressSink", "class_i_distance_progress_sink.html", "class_i_distance_progress_sink" ]
 ];

@@ -1,4 +1,4 @@
 var dialogedgedichotomization_8h =
 [
-    [ "DialogEdgeDichotomization", "classDialogEdgeDichotomization.html", "classDialogEdgeDichotomization" ]
+    [ "DialogEdgeDichotomization", "class_dialog_edge_dichotomization.html", "class_dialog_edge_dichotomization" ]
 ];

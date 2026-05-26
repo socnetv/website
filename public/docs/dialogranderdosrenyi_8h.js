@@ -1,4 +1,4 @@
 var dialogranderdosrenyi_8h =
 [
-    [ "DialogRandErdosRenyi", "classDialogRandErdosRenyi.html", "classDialogRandErdosRenyi" ]
+    [ "DialogRandErdosRenyi", "class_dialog_rand_erdos_renyi.html", "class_dialog_rand_erdos_renyi" ]
 ];

@@ -1,4 +1,4 @@
 var dialognodeedit_8h =
 [
-    [ "DialogNodeEdit", "classDialogNodeEdit.html", "classDialogNodeEdit" ]
+    [ "DialogNodeEdit", "class_dialog_node_edit.html", "class_dialog_node_edit" ]
 ];

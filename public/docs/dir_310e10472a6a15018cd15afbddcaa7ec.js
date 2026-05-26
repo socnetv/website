@@ -5,5 +5,7 @@ var dir_310e10472a6a15018cd15afbddcaa7ec =
     [ "distance_progress_sink.h", "distance__progress__sink_8h.html", "distance__progress__sink_8h" ],
     [ "graph_distance_progress_sink.cpp", "graph__distance__progress__sink_8cpp.html", null ],
     [ "graph_distance_progress_sink.h", "graph__distance__progress__sink_8h.html", "graph__distance__progress__sink_8h" ],
-    [ "null_distance_progress_sink.h", "null__distance__progress__sink_8h.html", "null__distance__progress__sink_8h" ]
+    [ "null_distance_progress_sink.h", "null__distance__progress__sink_8h.html", "null__distance__progress__sink_8h" ],
+    [ "per_source_scratch.h", "per__source__scratch_8h.html", "per__source__scratch_8h" ],
+    [ "thread_local_state.h", "thread__local__state_8h.html", "thread__local__state_8h" ]
 ];

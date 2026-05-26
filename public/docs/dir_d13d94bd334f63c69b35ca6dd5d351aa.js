@@ -1,5 +1,7 @@
 var dir_d13d94bd334f63c69b35ca6dd5d351aa =
 [
+    [ "dialogbulkedit.cpp", "dialogbulkedit_8cpp.html", null ],
+    [ "dialogbulkedit.h", "dialogbulkedit_8h.html", "dialogbulkedit_8h" ],
     [ "dialogclusteringhierarchical.cpp", "dialogclusteringhierarchical_8cpp.html", null ],
     [ "dialogclusteringhierarchical.h", "dialogclusteringhierarchical_8h.html", "dialogclusteringhierarchical_8h" ],
     [ "dialogdatasetselect.cpp", "dialogdatasetselect_8cpp.html", null ],
@@ -28,6 +30,8 @@ var dir_d13d94bd334f63c69b35ca6dd5d351aa =
     [ "dialognodefind.h", "dialognodefind_8h.html", "dialognodefind_8h" ],
     [ "dialogpreviewfile.cpp", "dialogpreviewfile_8cpp.html", null ],
     [ "dialogpreviewfile.h", "dialogpreviewfile_8h.html", "dialogpreviewfile_8h" ],
+    [ "dialogquerybuilder.cpp", "dialogquerybuilder_8cpp.html", null ],
+    [ "dialogquerybuilder.h", "dialogquerybuilder_8h.html", "dialogquerybuilder_8h" ],
     [ "dialogranderdosrenyi.cpp", "dialogranderdosrenyi_8cpp.html", null ],
     [ "dialogranderdosrenyi.h", "dialogranderdosrenyi_8h.html", "dialogranderdosrenyi_8h" ],
     [ "dialograndlattice.cpp", "dialograndlattice_8cpp.html", null ],

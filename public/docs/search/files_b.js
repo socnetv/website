@@ -9,5 +9,6 @@ var searchData=
   ['parser_5fedgelist_2ecpp_6',['parser_edgelist.cpp',['../parser__edgelist_8cpp.html',1,'']]],
   ['parser_5fgml_2ecpp_7',['parser_gml.cpp',['../parser__gml_8cpp.html',1,'']]],
   ['parser_5fgraphml_2ecpp_8',['parser_graphml.cpp',['../parser__graphml_8cpp.html',1,'']]],
-  ['parser_5fpajek_2ecpp_9',['parser_pajek.cpp',['../parser__pajek_8cpp.html',1,'']]]
+  ['parser_5fpajek_2ecpp_9',['parser_pajek.cpp',['../parser__pajek_8cpp.html',1,'']]],
+  ['per_5fsource_5fscratch_2eh_10',['per_source_scratch.h',['../per__source__scratch_8h.html',1,'']]]
 ];

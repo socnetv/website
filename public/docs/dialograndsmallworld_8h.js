@@ -1,4 +1,4 @@
 var dialograndsmallworld_8h =
 [
-    [ "DialogRandSmallWorld", "classDialogRandSmallWorld.html", "classDialogRandSmallWorld" ]
+    [ "DialogRandSmallWorld", "class_dialog_rand_small_world.html", "class_dialog_rand_small_world" ]
 ];

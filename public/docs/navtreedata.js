@@ -26,125 +26,39 @@ var NAVTREE =
 [
   [ "Code Documentation", "index.html", [
     [ "Welcome", "index.html", "index" ],
-    [ "Baselines", "md_tools_2baselines_2BASELINES____README.html", [
-      [ "1. Schema Versions", "md_tools_2baselines_2BASELINES____README.html#autotoc_md4", null ],
-      [ "2. Naming Convention", "md_tools_2baselines_2BASELINES____README.html#autotoc_md6", [
-        [ "Distance Kernel (schema v1)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md7", null ],
-        [ "Reachability Kernel (schema v2)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md9", null ],
-        [ "Walks Kernel (schema v3)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md11", null ],
-        [ "Prominence Kernel (schema v4)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md13", null ]
+    [ "Baselines", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html", [
+      [ "1. Schema Versions", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "2. Naming Convention", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md6", [
+        [ "Distance Kernel (schema v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md7", null ],
+        [ "Reachability Kernel (schema v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md9", null ],
+        [ "Walks Kernel (schema v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md11", null ],
+        [ "Prominence Kernel (schema v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md13", null ],
+        [ "IO Roundtrip Kernel (schema v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md15", null ],
+        [ "Clustering Kernel (schema v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md17", null ],
+        [ "Connectivity Kernel (schema v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md19", null ]
       ] ],
-      [ "3. Golden Checklist (Pre-Release)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md15", null ],
-      [ "4. How to Add a New Baseline", "md_tools_2baselines_2BASELINES____README.html#autotoc_md17", [
-        [ "Step 1 — Generate JSON", "md_tools_2baselines_2BASELINES____README.html#autotoc_md18", [
-          [ "Distance (v1)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md19", null ],
-          [ "Reachability (v2)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md20", null ],
-          [ "Walks (v3)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md21", null ],
-          [ "Prominence (v4)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md22", null ]
-        ] ],
-        [ "Step 2 — Review", "md_tools_2baselines_2BASELINES____README.html#autotoc_md24", null ],
-        [ "Step 3 — Commit", "md_tools_2baselines_2BASELINES____README.html#autotoc_md26", null ]
+      [ "3. Golden Checklist (Pre-Release)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md21", null ],
+      [ "4. How to Add a New Baseline", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md23", [
+        [ "Distance (v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md24", null ],
+        [ "Reachability (v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md25", null ],
+        [ "Walks (v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md26", null ],
+        [ "Prominence (v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md27", null ],
+        [ "IO Roundtrip (v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md28", null ],
+        [ "Clustering (v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md29", null ],
+        [ "Connectivity (v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md30", null ]
       ] ],
-      [ "5. What Is Verified", "md_tools_2baselines_2BASELINES____README.html#autotoc_md28", [
-        [ "Distance Kernel (v1)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md29", [
-          [ "Graph-Level Metrics", "md_tools_2baselines_2BASELINES____README.html#autotoc_md30", null ],
-          [ "Per-Node Metrics (when C=1)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md31", null ]
-        ] ],
-        [ "Reachability Kernel (v2)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md33", null ],
-        [ "Walks Kernel (v3)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md35", null ],
-        [ "Prominence Kernel (v4)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md37", [
-          [ "Graph-Level", "md_tools_2baselines_2BASELINES____README.html#autotoc_md38", null ],
-          [ "Per-Node (deterministic ascending id)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md39", null ]
-        ] ]
+      [ "5. What Is Verified", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md32", [
+        [ "Distance Kernel (v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md33", null ],
+        [ "Reachability Kernel (v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md35", null ],
+        [ "Walks Kernel (v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md37", null ],
+        [ "Prominence Kernel (v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md39", null ],
+        [ "IO Roundtrip Kernel (v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md41", null ],
+        [ "Clustering Kernel (v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md43", null ],
+        [ "Connectivity Kernel (v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md45", null ]
       ] ],
-      [ "6. Exit Codes & CI Integration", "md_tools_2baselines_2BASELINES____README.html#autotoc_md41", null ],
-      [ "7. Existing Baselines", "md_tools_2baselines_2BASELINES____README.html#autotoc_md43", [
-        [ "Distance (v1)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md44", null ],
-        [ "Reachability (v2)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md46", null ],
-        [ "Walks (v3)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md48", null ],
-        [ "Prominence (v4)", "md_tools_2baselines_2BASELINES____README.html#autotoc_md50", null ]
-      ] ],
-      [ "8. Notes", "md_tools_2baselines_2BASELINES____README.html#autotoc_md52", null ]
-    ] ],
-    [ "SocNetV Tools", "md_tools_2README.html", [
-      [ "socnetv-cli", "md_tools_2README.html#autotoc_md54", null ]
-    ] ],
-    [ "SocNetV CLI Regression Tool", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html", [
-      [ "Purpose", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md57", null ],
-      [ "Architecture", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md59", null ],
-      [ "Design Principles", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md61", null ],
-      [ "Build", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md63", null ],
-      [ "Kernels and JSON Schemas", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md65", [
-        [ "Distance / Centrality Kernel", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md67", null ],
-        [ "Reachability Kernel", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md69", null ],
-        [ "Walks Matrix Kernel", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md71", null ],
-        [ "Prominence Kernel", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md73", [
-          [ "Centrality", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md74", null ],
-          [ "Prestige", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md75", null ]
-        ] ],
-        [ "IO Roundtrip Kernel", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md77", null ],
-        [ "Clustering Kernel", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md79", null ]
-      ] ],
-      [ "Basic Usage", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md81", [
-        [ "Available Parameters", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md82", [
-          [ "Input selection", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md83", [
-            [ "<tt>-i <path></tt> / <tt>--input <path></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md84", null ],
-            [ "<tt>-f <id></tt> / <tt>--format <id></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md85", null ]
-          ] ],
-          [ "Kernel selection", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md87", [
-            [ "<tt>--kernel <name></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md88", null ]
-          ] ],
-          [ "Run flags (shared semantics)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md90", [
-            [ "<tt>-c <0|1></tt> / <tt>--centralities <0|1></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md91", null ],
-            [ "<tt>-w <0|1></tt> / <tt>--weights <0|1></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md92", null ],
-            [ "<tt>-x <0|1></tt> / <tt>--inverse-weights <0|1></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md93", null ],
-            [ "<tt>-k <0|1></tt> / <tt>--drop-isolates <0|1></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md94", null ]
-          ] ],
-          [ "Walks kernel specific", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md96", [
-            [ "<tt>--walks-length <K></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md97", null ]
-          ] ],
-          [ "Output modes", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md99", [
-            [ "<tt>--dump-json <path></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md100", null ],
-            [ "<tt>--compare-json <baseline.json></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md101", null ]
-          ] ],
-          [ "Benchmarking (distance kernel only)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md103", [
-            [ "<tt>--bench <runs></tt>", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md104", null ]
-          ] ]
-        ] ],
-        [ "Per-kernel constraints summary", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md106", [
-          [ "<tt>--kernel distance</tt> (schema v1)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md107", null ],
-          [ "<tt>--kernel reachability</tt> (schema v2)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md108", null ],
-          [ "<tt>--kernel walks_matrix</tt> (schema v3)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md109", null ],
-          [ "<tt>--kernel prominence</tt> (schema v4)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md110", null ],
-          [ "<tt>--kernel io_roundtrip</tt> (schema v5)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md111", null ],
-          [ "<tt>--kernel clustering</tt> (schema v6)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md113", null ]
-        ] ],
-        [ "Baseline naming convention (recommended)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md114", null ]
-      ] ],
-      [ "Golden Output Dump", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md116", [
-        [ "Distance (schema v1)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md117", null ],
-        [ "Reachability (schema v2)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md119", null ],
-        [ "Walks Matrix (schema v3)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md121", null ],
-        [ "Prominence (schema v4)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md123", null ],
-        [ "IO Roundtrip (schema v5)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md125", null ],
-        [ "Clustering (schema v6)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md127", null ]
-      ] ],
-      [ "Golden Output Compare", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md129", null ],
-      [ "What Is Verified", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md131", [
-        [ "Distance Kernel (v1)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md132", null ],
-        [ "Reachability Kernel (v2)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md134", null ],
-        [ "Walks Kernel (v3)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md136", null ],
-        [ "Prominence Kernel (v4)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md138", null ],
-        [ "IO Roundtrip Kernel (v5)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md140", null ],
-        [ "Clustering Kernel (v6)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md142", null ]
-      ] ],
-      [ "Micro-Benchmarking Mode (Distance Kernel Only)", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md144", null ],
-      [ "Automated Regression Scripts", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md146", [
-        [ "Golden Comparisons", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md147", null ],
-        [ "Performance Benchmarks", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md149", null ]
-      ] ],
-      [ "Baselines", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md151", null ],
-      [ "Regression Discipline", "md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md153", null ]
+      [ "6. Exit Codes &amp; CI Integration", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md47", null ],
+      [ "7. Existing Baselines", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md49", null ],
+      [ "8. Notes", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md51", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -184,21 +98,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classDialogRandRegular.html#a292c0590f69ecf12eae3fbdd291feb01",
-"classGraph.html#a0bb4167f5d9d370f0341de65c8e80762",
-"classGraph.html#a651b54c88584d3b8498df8985f86a0a9",
-"classGraph.html#ad261ae1ff287588b9d0e10adc864afa6aa8de07e5227bff2026d9242e139ba38f",
-"classGraphVertex.html#a2f1df0616f1515d38c4b7f8477e14764",
-"classGraphicsEdgeLabel.html#a495b7adac91bee93fe755965d2010e3a",
-"classMainWindow.html#a06f505769cb30cd136eb54cea7dd3690",
-"classMainWindow.html#a728254e563cbaab3cd8c624d189404dd",
-"classMainWindow.html#ad5c0bca5eee0faace92f2db301429758",
-"classParser.html#a5ba8e3b42b7752a6efa9306d5b08ccc2",
-"dialogfilternodesbycentrality_8cpp.html",
-"global_8h.html#ac8471c13fec21de0626abe78a6f11142",
-"md_tools_2SOCNETV__CLI__REGRESSION__TOOL.html#autotoc_md59",
-"structParser_1_1ParseConfig.html#a8c501046f042956646300ec055b6424b"
+"class_dialog_query_builder.html#a2cf9925f28965d39ea5b1f5220bd33bd",
+"class_edge_table_model.html#a9fb422bfe47e8849963afc59a2ee1ae1",
+"class_graph.html#a5187299ff2cd823056c83fcef5ceeb59",
+"class_graph.html#ab87c00af5dc8b9f46ee4ec8356d4f8be",
+"class_graph_table_widget.html#a471996582e3a747ffb64890159913154",
+"class_graphics_edge.html#a0e217f59f78a1f2b3063b2b349378954",
+"class_graphics_widget.html#a67f2017d6c7b9bd842772006e8647dac",
+"class_main_window.html#a4a5f3f25fce8fcac1af3af4d636b0f4f",
+"class_main_window.html#aa6db3b4839238e04f786e83b2b63c126",
+"class_matrix.html#a861fc71860b0c52566eb4b5e5ddd13c4",
+"class_text_editor.html#a0a0eeb357238c41d850037669f0a30b7",
+"functions_vars.html",
+"index.html",
+"struct_filter_spec.html#a43f809de7d35e2230ab5680a46082f0a"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['vertexcount_0',['VertexCount',['../classGraph.html#ad261ae1ff287588b9d0e10adc864afa6aa953fd2bf604349580576e154efed834',1,'Graph']]],
-  ['vertexedgecount_1',['VertexEdgeCount',['../classGraph.html#ad261ae1ff287588b9d0e10adc864afa6aa8de07e5227bff2026d9242e139ba38f',1,'Graph']]],
-  ['vertexmetadata_2',['VertexMetadata',['../classGraph.html#ad261ae1ff287588b9d0e10adc864afa6acee5ffd0bf6e510bedd866e20bff1d52',1,'Graph']]],
-  ['vertexpositions_3',['VertexPositions',['../classGraph.html#ad261ae1ff287588b9d0e10adc864afa6a996e4fcd794c0c5c1a1f0c846747d5b0',1,'Graph']]]
+  ['ucinet_0',['UCINET',['../global_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3a9ab07ec4c6ec3b262bbf8f154290d396',1,'global.h']]],
+  ['undirected_1',['Undirected',['../global_8h.html#a424a64da753a3cd5e96ab8d0553a04c4ad3d287a542850c46b3b403dd47d5baea',1,'global.h']]],
+  ['unrecognized_2',['UNRECOGNIZED',['../global_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3acb9331d084ecdba0890ee39bda83e7b8',1,'global.h']]]
 ];
