@@ -72,7 +72,7 @@ To recreate a dataset:
 </Steps>
 
 
-![SocNetV visualizing Padgett's Florentine Families](/data/uploads/screenshots/32/socnetv-32-example-padgett-families.png)
+![SocNetV v3.6 visualizing Padgett's Florentine Families — directed network of 16 Renaissance families with Fruchterman-Reingold layout; node color and size encode Betweenness Centrality, with the Medici family dominant in red at centre](/data/uploads/screenshots/36/socnetv-36-R1__Padgett_Florentine_Families.webp)
 
 
 ---
@@ -106,6 +106,9 @@ where:
 
 If $\alpha = 0$ and $p = 1$, the preferential attachment is linear, which corresponds to the BA model.
 
+![SocNetV v3.6 Barabási–Albert scale-free undirected network — radial layout with nodes colored by Betweenness Centrality (blue → red); a handful of high-BC hubs appear near the centre while the majority of low-degree nodes form the outer ring, clearly illustrating the power-law degree distribution](/data/uploads/screenshots/36/socnetv-36-R5__BA_Scale_Free_BC_Radial.webp)
+*Barabási–Albert scale-free undirected network — radial BC layout. A few high-centrality hubs dominate the inner ring while most nodes remain on the periphery.*
+
 ---
 
 ### Small-World (SW) Networks
@@ -121,8 +124,11 @@ To generate a small-world network, go to **Network > Create Random Network > Sma
 
 
 
-![Small-world random network](/data/uploads/screenshots/24/socnetv-24-1000-actors-small-world-betweenness-radial-nodesize-nodecolor.png)
-*Example: Small-world random network of 1000 actors created by SocNetV. Actor positions, colors and sizes reflect their betweenness centrality*
+![SocNetV v3.6 Watts-Strogatz small-world network (N=260, E=1040) — radial layout with nodes colored by Betweenness Centrality (blue → red); the characteristic ring backbone of a small-world graph is clearly visible](/data/uploads/screenshots/36/socnetv-36-SW-N260-E1040-BC-Radial_Color.webp)
+*Watts-Strogatz small-world network (N=260, K=8) — radial BC layout showing the characteristic ring structure.*
+
+![SocNetV v3.6 Watts-Strogatz small-world network (N=100, K=6, β=0.1) — Kamada-Kawai layout with nodes colored by Clustering Coefficient (blue → red); most nodes are green/cyan indicating high local clustering, the defining property of small-world networks](/data/uploads/screenshots/36/socnetv-36-R7__SW_N100_KK_CLC.webp)
+*Watts-Strogatz small-world network (N=100, K=6, β=0.1) — Kamada-Kawai layout colored by Clustering Coefficient. The predominantly warm colors confirm the high local clustering characteristic of small-world networks.*
 
 
 ---
@@ -139,8 +145,11 @@ To create an ER network:
 2. Specify the number of nodes ($n$) and either the edge probability ($p$) or the number of edges ($M$).
 3. Choose whether the network is directed, undirected, or allows self-loops.
 
-![Erdos-Renyi random network](/data/uploads/screenshots/25/socnetv-25-erdos-renyi-200actors.jpg)
-*Erdos-Renyi random network*
+![SocNetV v3.6 Erdős–Rényi random network (N=500, E=2000, undirected) — force-directed layout with nodes colored by Betweenness Centrality (blue → red)](/data/uploads/screenshots/36/ER_Net_N500_E2000_Undir_FD_BC.webp)
+*Erdős–Rényi random network (N=500, E=2000) — force-directed layout colored by Betweenness Centrality.*
+
+![SocNetV v3.6 Erdős–Rényi random network G(200, 0.03) undirected — Kamada-Kawai layout with nodes colored by Degree Centrality (blue → red); the structure near the connectivity threshold shows a dominant large component alongside smaller clusters](/data/uploads/screenshots/36/socnetv-36-R6__ER_N200_KK_DC.webp)
+*Erdős–Rényi G(200, 0.03) network — Kamada-Kawai layout colored by Degree Centrality. The graph sits near the connectivity threshold, producing a large dominant component typical of ER random graphs.*
 
 ---
 
@@ -148,8 +157,8 @@ To create an ER network:
 
 SocNetV can generate regular lattice networks with arbitrary dimensions $d$, size $l$ for each dimension, and custom neighborhood size $n$, which defines the distance within which neighbors are connected.
 
-![lattice generator](/data/uploads/screenshots/25/socnetv-25-lattice-network-generator.png)
-*The lattice generator*
+![SocNetV v3.6 Lattice network generator dialog — showing parameters: Nodes, Length per dimension, Dimension d, Neighborhood n, Graph Mode (Undirected/Directed), and Circular toggle](/data/uploads/screenshots/36/socnetv-36-R2__Lattice_Generator_dialog.webp)
+*The lattice network generator dialog — configure dimensions, length, neighbourhood size, and graph mode.*
 
 
 ---
@@ -173,8 +182,9 @@ To use the web crawler:
 
 
 <Steps>
-1. Go to **Network > Web Crawler** or press `Shift+C`. The web crawler dialog will appear. ![Web Crawler dialog](/data/uploads/screenshots/25/socnetv-25-crawler-dialog.jpg)
-*Web Crawler dialog*
+1. Go to **Network > Web Crawler** or press `Shift+C`. The web crawler dialog will appear.
+
+   ![SocNetV v3.6 Web Crawler dialog — showing the initial URL field, Max URLs to crawl, Max links per page, URL patterns to include/exclude, and options for internal/external link following and self-links](/data/uploads/screenshots/36/socnetv-36-R3__Web_Crawler_dialog.webp)
 
 2. Enter the initial URL and configure limits, such as:
    - Maximum URLs to crawl (total nodes in the network).
@@ -186,6 +196,6 @@ To use the web crawler:
 
 </Steps>
 
-![Network generated by the Web Crawler](/data/uploads/screenshots/25/socnetv-25-crawler.jpg)
-*Network generated by the Web Crawler*
+![SocNetV v3.6 network generated by the Web Crawler — hub-and-spoke structure of linked webpages crawled from socnetv.org; nodes represent pages, directed edges represent hyperlinks; Kamada-Kawai layout with node size reflecting Betweenness Centrality](/data/uploads/screenshots/36/socnetv-36-R4__Web_Crawler_result.webp)
+*Network of linked webpages generated by the SocNetV Web Crawler starting from socnetv.org.*
 
