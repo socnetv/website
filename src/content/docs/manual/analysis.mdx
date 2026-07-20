@@ -105,13 +105,19 @@ The **Symmetry Test** reports whether the network is symmetric or not. A network
 
 ### Distance
 
-Computes the geodesic distance (length of the shortest path) between two actors.
+Computes the geodesic distance (length of the shortest path) between two actors, and shows you the exact sequence of intermediate nodes along that path.
 
 In graph theory, the shortest path between two vertices of the graph is called a **geodesic**.
 
 Thus, the geodesic distance of two nodes in a social network is the length of the shortest path between the corresponding vertices in the graph $ G(V,E) $.
 
-By clicking on the **Analyze -> Cohesion -> Distance** option (or pressing `Ctrl+G, Ctrl+G`), you will be asked for source and target nodes. Then their distance will be calculated and displayed.
+By clicking on the **Analyze → Cohesion → Distance** option (or pressing `Ctrl+G, Ctrl+G`), you will be asked to pick a source and a target node. SocNetV then displays:
+
+- The **geodesic distance** — the number of hops (edges) on the shortest path.
+- The **shortest path itself** — the ordered sequence of nodes from source to target, using node labels where available (e.g. *Alice → Carol → Bob*).
+
+For **unweighted** networks SocNetV uses **Breadth-First Search (BFS)**, which guarantees the shortest hop-count path in O(V + E) time.  
+For **weighted** networks SocNetV uses **Dijkstra's algorithm**, which finds the minimum-cost path in O((V + E) log V) time.
 
 ---
 
@@ -132,6 +138,30 @@ It can be proved that in connected networks of $ n $ actors, the least upper bou
 In the case of disconnected networks/graphs, the denominator used is the total number of existing paths between connected vertices.
 
 In graph theory, the Average Distance is considered to be a natural measure of the compactness of a graph.
+
+---
+
+### Geodesic Distance Distribution
+
+The **Analyze → Cohesion → Geodesic Distance Distribution** option (shortcut `Ctrl+G, Ctrl+I`) answers the question: *how many pairs of nodes are exactly d hops apart?*
+
+For each distance value $ d = 1, 2, \ldots, D $ (where $ D $ is the diameter of the network), SocNetV counts the number of ordered connected pairs separated by exactly that distance and produces a report table:
+
+| Distance (d) | Pairs | % of connected pairs | Cumulative % |
+|---|---|---|---|
+| 1 | … | … | … |
+| 2 | … | … | … |
+| … | … | … | … |
+
+Unreachable pairs (nodes in different weakly connected components) are excluded from the count.
+
+**What the distribution reveals:**
+
+- **Small-world networks** typically show most pairs clustered at distance 2–3, with a rapid cumulative rise and a low diameter relative to network size.
+- **Sparse or chain-like networks** show a flat, spread-out distribution with pairs at many different distances.
+- The **average distance** $ \bar{d} $ is the weighted mean of this distribution: $ \bar{d} = \sum_d d \cdot P(d) $, where $ P(d) $ is the fraction of pairs at distance $ d $.
+
+The computation re-uses the all-pairs shortest-path (APSP) cache produced by any prior distance or centrality calculation, so it is fast when the cache is warm.
 
 ---
 
@@ -705,15 +735,76 @@ Where the sum is over every node $ v $ in $ I $.
 
 A **clique** is a group of people who interact with each other more regularly and intensely than with other people not belonging to the clique. In mathematical terms, a **clique** is a subset of vertices in an undirected graph $ G $, where every two distinct vertices in the clique are adjacent to each other, forming a **complete subgraph**.
 
-In **Social Network Analysis**, a **clique** refers to the largest subgroup of actors who are all directly connected to each other. A **maximal clique** is a clique that cannot be extended by including one more actor. **Maximal cliques** overlap and form closed triads, and the term **maximal** means that no additional actors can be added without breaking the clique's completeness.
+In **Social Network Analysis**, a **clique** refers to a maximal subgroup of actors who are all directly connected to each other. A **maximal clique** is a clique that cannot be extended by adding any further actor — all remaining actors are missing at least one tie to a current member. **Maximal cliques** may overlap (an actor can belong to more than one), and finding all of them reveals the dense sub-communities inside the network.
 
-SocNetV uses the **Bron–Kerbosch algorithm** to find all **maximal cliques** in both undirected and directed graphs. The algorithm computes a **census of maximal cliques**, producing useful statistics and co-membership information about the cliques.
+SocNetV computes a **census of maximal cliques**, producing:
+- A list of all maximal cliques and their members.
+- Per-actor clique membership counts.
+- A **co-membership matrix** $ CLQM $, where $ CLQM_{ij} $ counts how many maximal cliques actors $ i $ and $ j $ share.
 
 ![Clique census of Florentine families](/data/uploads/screenshots/22/socnetv-2.2-clique-census-florentine-families-report-1.png)
 
+#### How it works — the Bron–Kerbosch algorithm with pivot selection
+
+SocNetV implements the **Bron–Kerbosch algorithm** [1] with the **Tomita et al. (2006) pivot selection** heuristic [2].
+
+The algorithm maintains three disjoint vertex sets at each recursive step:
+
+| Set | Meaning |
+|---|---|
+| **R** | The clique being built — all vertices in R are mutually adjacent |
+| **P** | Candidates that can still extend R (each is adjacent to every vertex in R) |
+| **X** | Vertices already processed that are also adjacent to every vertex in R — used to avoid reporting the same clique twice |
+
+When both **P** and **X** are empty, **R** is a maximal clique and is recorded.
+
+**Example:** Consider a network with four actors — A, B, C, D — and edges A–B, A–C, B–C, and C–D:
+
+<Mermaid chart={`
+graph LR
+    A((A)) --- B((B))
+    A((A)) --- C((C))
+    B((B)) --- C((C))
+    C((C)) --- D((D))
+    style A fill:#4f86c6,color:#fff,stroke:#2d5f9e
+    style B fill:#4f86c6,color:#fff,stroke:#2d5f9e
+    style C fill:#e07b39,color:#fff,stroke:#b05a1e
+    style D fill:#6aaa64,color:#fff,stroke:#4a8a44
+`} />
+
+The two maximal cliques are **{A, B, C}** (the triangle) and **{C, D}** (the edge, since D has no other neighbours).
+
+**Recursion trace:**
+
+| Step | R | P | X | Action |
+|---|---|---|---|---|
+| Start | {} | {A,B,C,D} | {} | choose pivot C (most neighbours in P) |
+| Branch C | {C} | {A,B,D} | {} | choose pivot A |
+| Branch A | {C,A} | {B} | {} | |
+| Branch B | {C,A,B} | {} | {} | ✅ clique {A,B,C} |
+| Back to {C} | {C} | {A,B,D} | {A} | branch D |
+| Branch D | {C,D} | {} | {} | ✅ clique {C,D} |
+
+#### Why pivot selection matters
+
+Without pivoting, the algorithm would iterate over every vertex in P at each level. For a network with many vertices and few cliques this produces an explosion of redundant recursive calls.
+
+**Tomita et al. (2006)** proved that choosing a pivot vertex $ u \in P \cup X $ that **maximises $ |N(u) \cap P| $** (the number of candidates that are neighbours of $ u $) allows the main loop to only iterate over the **non-neighbours of $ u $ in P** — the set $ P \setminus N(u) $.
+
+**Why this is correct:** any maximal clique that extends R must contain at least one vertex from $ P \setminus N(u) $. If a clique contained only neighbours of $ u $, it could be extended by $ u $ itself (since $ u $ is adjacent to all of them and to all of R), contradicting maximality.
+
+**Why this is faster:** by choosing the pivot that maximises $ |N(u) \cap P| $, we minimise $ |P \setminus N(u)| $ — the number of branches at this level. In the example above, pivot C covers 3 out of 4 candidates, reducing the top-level loop from 4 iterations to just **1**.
+
+In practice this gives dramatic speedups on dense graphs and real-world social networks, where high-degree nodes cover most candidates.
+
 :::caution
-The computation of **maximal cliques** can be slow in very large or dense social networks due to the **NP-complete** nature of the clique problem.
+Finding all maximal cliques is an **NP-complete** problem. Even with pivot selection, the computation can be slow on very large or highly connected networks, since the number of maximal cliques can itself be exponential. For networks with thousands of nodes and high density, expect long runtimes.
 :::
+
+#### References
+
+1. Bron, C. & Kerbosch, J. (1973). Algorithm 457: Finding all cliques of an undirected graph. *Communications of the ACM*, 16(9), 575–577.
+2. Tomita, E., Tanaka, A. & Takahashi, H. (2006). The worst-case time complexity for generating all maximal cliques and computational experiments. *Theoretical Computer Science*, 363(1), 28–42. https://doi.org/10.1016/j.tcs.2006.06.015
 
 ---
 
