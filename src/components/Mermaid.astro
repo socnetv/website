@@ -1,10 +1,6 @@
 ---
-import mermaid from "mermaid";
-
 const { code } = Astro.props;
-
-mermaid.initialize({ startOnLoad: true });
 ---
-<div class="mermaid">
+<div class="mermaid" data-mermaid-source={code}>
   {code}
 </div>

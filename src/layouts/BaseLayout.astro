@@ -29,7 +29,34 @@ import '../styles/global.css'; // Include a global css file
 
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
-      mermaid.initialize({ startOnLoad: true });
+
+      function currentTheme() {
+        return document.documentElement.dataset.theme === "light" ? "default" : "dark";
+      }
+
+      function renderDiagrams() {
+        const nodes = document.querySelectorAll(".mermaid");
+        if (!nodes.length) return;
+        mermaid.initialize({ startOnLoad: false, theme: currentTheme() });
+        nodes.forEach((node) => {
+          const source = node.dataset.mermaidSource;
+          if (source) {
+            node.removeAttribute("data-processed");
+            node.innerHTML = source;
+          }
+        });
+        mermaid.run({ nodes });
+      }
+
+      renderDiagrams();
+
+      // Starlight's theme toggle sets documentElement.dataset.theme directly
+      // (no event is dispatched), so watch the attribute to re-render diagrams
+      // in the newly selected theme.
+      new MutationObserver(renderDiagrams).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-theme"],
+      });
     </script>
     <!-- Include KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
