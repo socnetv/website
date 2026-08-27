@@ -147,8 +147,14 @@ The **Canvas** is the central workspace where networks are visualized and manipu
 - **Zoom and Pan**:
   - Use the mouse wheel to zoom in or out.
   - Drag the canvas to pan across the network.
+  - Zooming stays anchored to wherever you last panned, rather than jumping back to the network's center — useful for zooming in on a corner of a large network without losing your place.
+  - Press `Ctrl+0` to reset the view to a tight, margin-free fit of the whole network.
 
 The canvas background is customizable, allowing users to select colors that suit their preferences or enhance visualization clarity.
+
+:::tip
+**Viewport auto-fit**: the canvas automatically scales and re-centers to show the entire network after every layout algorithm runs, after opening a file, and after generating a random network. Resizing the application window rescales node positions proportionally and re-fits the view once you stop dragging — so the network never "disappears" off-screen during a window resize. Small networks are never scaled beyond 100%, and auto-fit only zooms out when the network is genuinely larger than the viewport, so it won't leave visible empty margins around content that already fits.
+:::
 
 ---
 
@@ -405,6 +411,20 @@ To print:
 
 SocNetV follows a **WYSIWYG** approach: what you see on the canvas is what you print.  
 For high-quality output, export to vector-based PDF.
+
+---
+
+#### Report Output Format: HTML or CSV
+
+Most reports written by the **Analyze** menu — matrices (Adjacency, Distances, Geodesics, Reachability, Laplacian, Degree, Cocitation, Transpose, Inverse Adjacency, Walks), every Centrality and Prestige index, Reciprocity, Eccentricity, Clustering Coefficient, and Triad Census — can be written in either of two formats, set once for the whole application:
+
+- **Options → Settings → Reports → Output format**: choose **HTML** (the default) or **CSV**.
+
+**HTML** opens in the built-in report viewer / your default browser, with prose explanations, summary statistics, and (where applicable) charts. **CSV** is a lean, table-only alternative with just the raw numbers — no prose or charts — that opens directly in your system's default spreadsheet application, making it convenient to import scores into Excel, R, Python, or similar tools for further analysis.
+
+:::note
+**Clique Census** and **Hierarchical Clustering** always write HTML, regardless of this setting — both combine several different kinds of sub-tables (co-membership matrices, a dendrogram) that don't reduce to one flat CSV table. **Connectedness** and **Node/Graph Connectivity** were never file reports to begin with — both show their result directly in a dialog box.
+:::
 
 ---
 

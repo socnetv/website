@@ -56,7 +56,7 @@ In this layout, the size of each node is scaled according to its centrality or p
 
 In this layout, each node's **color** encodes its prominence score using a continuous **blue → red gradient**: nodes with lower scores are colored blue, and nodes with higher scores are colored red (warmer). The gradient makes it immediately obvious which nodes score highest without changing their positions.
 
-The layout is available for all 13 prominence indices:
+The layout is available for all 15 prominence indices:
 
 | Index | Shortcut |
 |---|---|
@@ -69,10 +69,14 @@ The layout is available for all 13 prominence indices:
 | Power Centrality | `Ctrl+L, Ctrl+C, Ctrl+P` |
 | Information Centrality | `Ctrl+L, Ctrl+C, Ctrl+F` |
 | Eigenvector Centrality | `Ctrl+L, Ctrl+C, Ctrl+X` |
+| Katz Centrality | — (no shortcut) |
+| Bonacich Power Centrality | — (no shortcut) |
 | Degree Prestige | `Ctrl+L, Ctrl+C, Ctrl+A` |
 | PageRank Prestige | `Ctrl+L, Ctrl+C, Ctrl+R` |
 | Proximity Prestige | `Ctrl+L, Ctrl+C, Ctrl+O` |
 | **Clustering Coefficient** | `Ctrl+L, Ctrl+C, Ctrl+G` |
+
+Katz and Bonacich Power Centrality must be computed via **Analyze → Centrality** first (they need parameters — alpha, or alpha and beta — that this layout has no way to prompt for); applying the layout before that shows a message asking you to do so.
 
 #### Node Color by Clustering Coefficient
 

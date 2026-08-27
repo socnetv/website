@@ -211,14 +211,23 @@ make
 
 ## Command line options
 
-
 If you run the SocNetV GUI application from the command prompt, the following options are available:
 
-`--version | -V`      Displays the version of the program.
+| Option | Effect |
+|---|---|
+| `file.net` | The name of a network file to load on startup (any supported format: `.net`, `.csv`, `.dot`, `.graphml`, ...). |
+| `--version` \| `-v` | Displays the version of the program. |
+| `--help` \| `-h` | Displays a short help message listing all options. |
+| `-p`, `--progress` | Force showing progress dialogs/bars during computations. |
+| `--nm`, `--notmaximized` | Do not maximize the app window on startup. |
+| `-f`, `--fullscreen` | Show the app in full screen mode. |
+| `-d`, `--debug <level>` | Print debug messages to stdout/console. `<level>` is one of `none`, `min`, or `full` (default `min`). |
+| `--encoding <name>` | Load the startup file with a given text encoding (e.g. `UTF-8`), bypassing the "Preview file & Choose Encoding" dialog. |
+| `--interactive-script <path>` | Run a plain-text automation script after startup — one command per line, driving the app through its real event loop instead of manual clicking. Intended for scripted testing, demos, and performance profiling rather than everyday use. |
 
-`--help | -H` 	      Displays a short help message.
-
-`file.net`	      The name of the file you want to open.
+:::tip
+`--interactive-script` supports a growing command set beyond simple delays — switching relations, generating random networks, adding nodes/edges/relations, saving files, and writing most Analyze-menu reports headlessly. It's aimed at developers and advanced users automating repeatable workflows or benchmarks.
+:::
 
 
 ## socnetv-cli (Headless Mode)
