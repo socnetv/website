@@ -4,6 +4,8 @@ description: This page discusses the measures for graph and social network analy
 layout: "../../../layouts/BaseLayout.astro"
 ---
 
+import Mermaid from "../../../components/Mermaid.astro";
+
 Once you load or create a network in SocNetV, you may use the options in the Analyze menu to compute graph and social network analysis measures.
 
 :::tip
@@ -95,6 +97,18 @@ In an undirected graph, all edges are reciprocal. Thus the reciprocity of the gr
 
 Reciprocity can be computed on undirected, directed, and weighted graphs.
 
+Concretely, if $ L $ is the total number of ties (arcs) in the network and $ L_{\leftrightarrow} $ is the number of those ties that are reciprocated (i.e. the reverse arc also exists), then:
+
+$$
+r_{arc} = \frac{L_{\leftrightarrow}}{L}
+$$
+
+Similarly, if $ M $ is the number of actor pairs that have at least one tie between them, and $ M_{\leftrightarrow} $ is the number of those pairs with ties in both directions, then:
+
+$$
+r_{dyad} = \frac{M_{\leftrightarrow}}{M}
+$$
+
 ---
 
 ### Symmetry Test
@@ -118,6 +132,10 @@ By clicking on the **Analyze → Cohesion → Distance** option (or pressing `Ct
 
 For **unweighted** networks SocNetV uses **Breadth-First Search (BFS)**, which guarantees the shortest hop-count path in O(V + E) time.  
 For **weighted** networks SocNetV uses **Dijkstra's algorithm**, which finds the minimum-cost path in O((V + E) log V) time.
+
+:::tip
+The edges along the reported path are also **selected on the canvas**, exactly as if you had Shift-clicked each one in turn. This lets you immediately move, inspect, or right-click the whole path without hunting for it visually — useful on large or dense networks where the path is hard to trace by eye. Only the path's edges are selected, not its nodes, so the highlight doesn't pull in unrelated edges attached to those same nodes.
+:::
 
 ---
 
@@ -191,7 +209,11 @@ Therefore, the measure reflects how far, at most, each node is from every other 
 
 The Eccentricity can be calculated in both graphs and digraphs but is usually best suited for undirected graphs.
 
-It can also be calculated in weighted graphs, although the weight of each edge $ (v,u) $ in $ E $ is always considered to be 1.
+It can also be calculated in weighted graphs: real edge weights are used as shortest-path costs (or their inverse, if you choose to invert weights) — see [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
+
+:::note
+This raw eccentricity $ \epsilon_u $ is a **distance**, not a centrality score — larger means *less* central. See [Eccentricity Centrality (EC)](/manual/analysis#eccentricity-centrality-ec-or-harary-graph-centrality) below for the standardized, inverted version ($ EC_u = 1/\epsilon_u $) used to rank nodes by centrality.
+:::
 
 ---
 
@@ -207,15 +229,58 @@ $$
 
 ### Connectedness
 
-Checks whether the network is a connected graph, a weakly connected digraph, or a disconnected graph/digraph.
+In plain terms: can you get from any actor to any other actor by following ties, possibly through intermediaries? **Connectedness** answers exactly that, and reports how many separate "islands" (components) the network splits into if the answer is no.
 
-In graph theory, a graph is **connected** if there is a path between every pair of nodes.
+In an **undirected** graph, this is unambiguous: a graph is **connected** if there is a path between every pair of nodes, and **disconnected** otherwise, with the report telling you how many disconnected components exist.
 
-A digraph is **strongly connected** if there is a path from $ i $ to $ j $ and from $ j $ to $ i $ for all pairs of nodes $ (i,j) $.
+In a **directed** graph, edge direction creates two genuinely different, both meaningful, notions of "connected" — so SocNetV asks you which one you mean before computing:
 
-A digraph is **weakly connected** if at least a pair of nodes are joined by a semipath.
+- **Weak connectivity** — treats every edge as if it were bidirectional, i.e. ignores arrow direction entirely. This answers "how many disconnected islands are there, if I don't care which way information can flow?" A directed chain $ A \to B \to C $ is weakly connected even though there's no way back from $ C $ to $ A $.
+- **Strong connectivity** — respects edge direction. The network is strongly connected only if *every* node can both reach, and be reached from, every other node via directed paths. The same chain $ A \to B \to C $ is **not** strongly connected, since $ C $ cannot reach $ A $.
 
-A digraph or a graph is **disconnected** if at least one node is isolated.
+Formally:
+
+- A digraph is **strongly connected** if, for every pair of nodes $ (i,j) $, there is a directed path from $ i $ to $ j $ **and** a directed path from $ j $ to $ i $.
+- A digraph is **weakly connected** if every pair of nodes is joined by a *semipath* — a path in the underlying undirected graph, ignoring direction.
+
+Strong connectivity is always the stricter condition: any strongly connected digraph is automatically weakly connected too, but not the reverse. So a directed network can be reported "weakly connected" while still failing the strong test — if that happens, run Connectedness again and choose Strong to see the directed-reachability picture instead.
+
+A graph or digraph is **disconnected** if it has more than one component (in the undirected case) or more than one weakly-connected component (in the directed case) — in particular, any isolated node on its own makes the network disconnected.
+
+:::tip
+Use **Layout → Node Color by Connected Component** to visualize the separate components directly on the canvas when a network turns out to be disconnected.
+:::
+
+---
+
+### Node Connectivity
+
+Node Connectivity asks a very concrete question about two specific actors: *if an adversary (or a random failure) could remove other nodes from the network, how many would they need to remove to cut off actor A from actor B?* A low number means that pair's connection depends on just a few "bridge" actors — a structural vulnerability; a high number means many independent routes exist between them.
+
+Formally, for two non-adjacent nodes $ s $ and $ t $, the **local vertex connectivity** $ \kappa(s,t) $ is the minimum number of nodes — other than $ s $ and $ t $ themselves — whose removal disconnects $ t $ from $ s $.
+
+By **Menger's theorem** (Menger, 1927), this minimum "cut" size is always exactly equal to the maximum number of *internally vertex-disjoint* paths between $ s $ and $ t $ — paths that share no intermediate node. So $ \kappa(s,t) $ simultaneously answers "how many nodes must fail to disconnect them?" and "how many completely independent routes exist between them?" — the two are the same number. SocNetV computes it via a maximum-flow algorithm on an internal representation of the network built specifically for this purpose (each node split into an "in" and "out" half joined by a capacity-1 link), which is the standard way to turn Menger's theorem into an efficient computation.
+
+If $ s $ and $ t $ are directly tied, node connectivity is not defined — the edge between them is a "path" that no removal of *other* nodes can ever break, so SocNetV reports "directly connected" rather than a number.
+
+By **Analyze → Cohesion → Node Connectivity**, you pick a source and a target node. On a directed network, you're also asked whether to respect edge direction:
+
+- **Weak**: treats every edge as bidirectional.
+- **Strong**: counts only the nodes needed to block *directed* paths from source to target — note that $ \kappa(s,t) $ and $ \kappa(t,s) $ can differ under this mode, since blocking the forward direction doesn't necessarily block the reverse one.
+
+---
+
+### Graph Connectivity
+
+Graph Connectivity asks the same question as Node Connectivity, but network-wide: *what is the fewest nodes that would need to be removed to disconnect the network at its single weakest point?*
+
+Formally, the **global vertex connectivity** $ \kappa(G) $ is the minimum of $ \kappa(s,t) $ over every non-adjacent pair of nodes $ (s,t) $ in the network — i.e. the worst-case (most vulnerable) pair anywhere in the graph.
+
+$ \kappa(G) $ is a standard measure of a network's robustness to targeted or random node failure: a low $ \kappa(G) $ (e.g. 1, an actual "cut vertex" whose removal splits the network) flags a single point of failure, while a high $ \kappa(G) $ means the network keeps functioning even after several actors are removed.
+
+A useful sanity bound (Whitney's inequality, Whitney 1932) is that $ \kappa(G) $ can never exceed $ \delta(G) $, the minimum degree in the network — you can always disconnect the least-connected node from the rest just by removing all of its neighbors. SocNetV uses this bound to skip unnecessary computation where possible.
+
+By **Analyze → Cohesion → Graph Connectivity**, on a directed network you are likewise asked to choose **Weak** or **Strong** (matching the same choice offered by Connectedness and Node Connectivity above).
 
 ---
 
@@ -339,11 +404,15 @@ SocNetV supports a wide variety of centrality indices, including those conceptua
 
 - **Eccentricity Centrality (EC)**: Measures the longest shortest path from a node to all other nodes in the network. The node with the lowest eccentricity is considered the most "central" in terms of distance.
 
-- **Proximity Prestige (PP)**: Measures how close a node is to other influential nodes within its influence domain. A node with high proximity prestige is close to important nodes in the network.
-
 - **Influence Range Closeness Centrality (IRCC)**: A variation of **Closeness Centrality** that considers only the nodes reachable from a given node, making it useful for disconnected networks.
 
 - **Stress Centrality (SC)**: Measures how often a node appears on the shortest paths between other nodes. High stress centrality indicates a node is a key intermediary or bridge within the network.
+
+- **Power Centrality (PC)**: A generalized degree centrality (Gil-Schmidt) that credits a node for its whole neighborhood at every distance, weighted so closer neighbors count for more.
+
+- **Information Centrality (IC)**: Uses *all* paths between actors, not just the shortest ones, weighted by tie strength and distance.
+
+- **Katz Centrality (KC)** and **Bonacich Power Centrality (BPC)**: give a node credit for indirect connections (friends-of-friends, and so on), discounted the further away they are — useful when Eigenvector Centrality's own decay collapses to zero on sparse or directed networks.
 
 These centrality measures focus on the node’s direct connections, its geodesic distances, or its ability to influence others through its position in the network. Wasserman and Faust's conceptualization of **centrality** focuses on connectivity and control, with a particular emphasis on how nodes serve as intermediaries or closers in the network.
 
@@ -367,7 +436,7 @@ The table below compares the key characteristics of **centrality** and **prestig
 |-----------------------------|------------------------------------------------|------------------------------------------------|
 | **Focus**                    | Quantifies how well-connected a node is within the network | Quantifies the status or importance based on the node's inbound connections |
 | **Type of Networks**         | Typically used in undirected or directed networks | Primarily used in directed networks (but also weighted graphs) |
-| **Common Measures**          | Degree Centrality (DC), Closeness Centrality (CC), Betweenness Centrality (BC), Eigenvector Centrality (EVC), Eccentricity Centrality (EC), Proximity Prestige (PP), Influence Range Closeness Centrality (IRCC) | Degree Prestige (DP), PageRank Prestige (PRP), Proximity Prestige (PP) |
+| **Common Measures**          | Degree Centrality (DC), Closeness Centrality (CC), Influence Range Closeness Centrality (IRCC), Betweenness Centrality (BC), Stress Centrality (SC), Eccentricity Centrality (EC), Power Centrality (PC), Information Centrality (IC), Eigenvector Centrality (EVC), Katz Centrality (KC), Bonacich Power Centrality (BPC) | Degree Prestige (DP), PageRank Prestige (PRP), Proximity Prestige (PP) |
 | **Application**              | Identifies nodes that are influential in terms of connectivity | Identifies nodes that are influential based on being highly valued or referenced by others |
 | **Mathematical Basis**       | Based on direct connections or shortest paths between nodes | Based on the flow of influence or status across the network |
 | **Example in Social Networks** | A node with many friends (DC), a person who is close to everyone (CC), or a broker (BC) | A highly referenced academic paper (PRP), a person who receives many nominations (DP) |
@@ -385,7 +454,52 @@ This distinction between **centrality** and **prestige** measures, following the
 :::note
 Centrality measures are calculated for each node (node Centrality) and for the whole network (group Centrality). Thus, when you click on a centrality option, SocNetV will calculate the corresponding index of every node and the whole network, and it will display the report in a new browser window (using the system's default web browser). 
 By default, analysis files are saved in the **socnetv-data/** subfolder.
+
+Most reports across the Analyze menu (this one included) can also be exported as a plain CSV table instead of HTML — see [Report Output Format](/manual/gui#report-output-format-html-or-csv) in the User Interface page.
 :::
+
+### Edge Weights: Considering and Inverting Them
+
+When SocNetV detects a weighted network, most centrality/prestige/cohesion computations ask two questions first:
+
+1. **Consider edge weights?** — No treats every tie as unit-weight (binary); Yes uses the network's real edge weights.
+2. **Inverse edge weights?** (only if you answered Yes above) — whether to use each weight directly, or its reciprocal ($ 1/weight $).
+
+The right answer to the second question depends on what your weights represent, **and on which measure you're about to compute**:
+
+**Shortest-path (distance-based) measures** — Closeness Centrality, Betweenness Centrality, Stress Centrality, Eccentricity Centrality, Influence Range Closeness Centrality, Power Centrality (Gil-Schmidt), Proximity Prestige, and the Cohesion section's Distance/Eccentricity/Diameter measures — find the shortest path between actors, treating each edge weight as a traversal cost.
+
+- If your weights already represent cost or real distance (miles, minutes, price): don't invert. A cheaper/shorter tie should behave like a short path.
+- If your weights represent value or strength (trust, votes, interaction frequency): invert. A strong tie should behave like a short/cheap path too, so shortest-path routing naturally favors your strongest connections.
+
+**Walk-counting (matrix-power) measures** — Eigenvector Centrality, Katz Centrality, Bonacich Power Centrality, and Information Centrality — don't do shortest-path routing at all. They use the adjacency matrix directly: a bigger entry means more influence flows along that tie.
+
+- If your weights represent value or strength: don't invert. You want your strongest ties to count for *more*, not less.
+- Only invert if the weight genuinely represents a cost or resistance to influence — unusual for these measures, but the option is still there.
+
+**PageRank Prestige** doesn't offer a weight choice at all — every inbound link always counts as weight 1, normalized by the sender's out-degree.
+
+| Measure | Category | Invert a strength-type weight? |
+|---|---|---|
+| Closeness Centrality (CC) | Shortest-path | Yes |
+| Influence Range Closeness Centrality (IRCC) | Shortest-path | Yes |
+| Betweenness Centrality (BC) | Shortest-path | Yes |
+| Stress Centrality (SC) | Shortest-path | Yes |
+| Eccentricity Centrality (EC) | Shortest-path | Yes |
+| Power Centrality (PC) | Shortest-path | Yes |
+| Proximity Prestige (PP) | Shortest-path | Yes |
+| Information Centrality (IC) | Walk-counting | No |
+| Eigenvector Centrality (EVC) | Walk-counting | No |
+| Katz Centrality (KC) | Walk-counting | No |
+| Bonacich Power Centrality (BPC) | Walk-counting | No |
+| Degree Centrality (DC) / Degree Prestige (DP) | Direct sum, no inversion choice | n/a |
+| PageRank Prestige (PRP) | No weight option at all | n/a |
+
+:::tip
+When in doubt, try both and compare the resulting ranking — SocNetV's computations are cheap to re-run, and the "wrong" choice usually produces a visibly less sensible result (e.g. your most active/trusted actors ranking near the bottom).
+:::
+
+---
 
 ### Filter Nodes by Centrality
 
@@ -404,15 +518,11 @@ Combine Filter by Centrality with the [Ego-centered Radial Layout](/manual/visua
 
 ### Degree Centrality (DC)
 
-The DC measure quantifies how many ties a node has to other nodes in the network. In social network theory, this index is often considered a measure of actor activity. It can be computed in both undirected and directed networks/relations, but is usually best suited for undirected ones.
+**Degree Centrality (DC)** measures how many ties a node has to other nodes in the network — the simplest possible notion of "how connected is this actor?" In social network theory, DC is often read as a measure of actor activity: an actor with many direct ties is presumed to be more active or more able to reach others without going through intermediaries.
 
-Mathematically, in undirected graphs, the DC index of each vertex $ u $ is the number of edges attached to it.
+**When to use**: DC is the natural first index to check — it's cheap to compute and easy to interpret, and a good baseline before reaching for distance-based measures (Closeness, Betweenness) or walk-counting measures (Eigenvector, Katz). It can be computed in both undirected and directed networks/relations, but is usually best suited for undirected ones.
 
-In directed graphs, the DC is the total number of arcs (outEdges) starting from $ u $ (outDegree).
-
-The index can be computed in weighted graphs as well. In that case, the DC of each node $ u $ is the sum of weights of all edges/outEdges attached to $ u $.
-
-Along with other metrics that are based on the notion of distance (closeness, eccentricity, etc.), the DC falls in the category of reachability measures.
+Mathematically, in undirected graphs, the DC index of each vertex $ u $ is the number of edges attached to it. In directed graphs, DC is the total number of arcs (outEdges) starting from $ u $ (outDegree). In weighted graphs, the DC of each node $ u $ is the sum of weights of all edges/outEdges attached to $ u $.
 
 To compute Degree Centralization (or Group Degree Centrality), SocNetV uses Freeman's formula for unvalued graphs:
 
@@ -420,23 +530,25 @@ $$
 GDC = \frac{\sum{(\text{maxDC'} - \text{DC'})}}{(N-1) \cdot (N-2) / (2 \cdot N - 1)}
 $$
 
-> **Note**: In valued (or weighted) graphs, GDC cannot be computed with Freeman's formula. As a measure of degree centralization, one can use DC variance or mean instead.
+:::note
+In valued (or weighted) graphs, GDC cannot be computed with Freeman's formula. As a measure of degree centralization, one can use DC variance or mean instead.
+:::
+
+**Weights**: DC is a direct sum, not a shortest-path or walk-counting measure — there is no invert-weights choice. See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above.
+
+---
 
 ### Closeness Centrality (CC)
 
-This CC index focuses on how close each node is to all other nodes in the network.
+**Closeness Centrality (CC)** measures how close a node is to all other nodes in the network. Nodes with high CC can reach many other nodes in few steps — the idea is that a node is more central if it can quickly interact with more of the others. CC is also interpreted as the ability to access information through the "grapevine" of network members.
 
-Nodes with high Closeness Centrality are those who can reach many other nodes in few steps. The idea is that a node is more central if it can quickly interact with more of the others. CC is also interpreted as the ability to access information through the "grapevine" of network members.
+**When to use**: CC is well suited to graphs and **strongly connected** digraphs — that is, if there is a directed path from $ v $ to $ u $ for all nodes $ v $ and $ u $ in the graph. If there are isolated nodes, they are dropped by default. In non-strongly connected digraphs the ordinary CC is undefined — use **Influence Range Closeness Centrality (IRCC)** below instead.
 
 For each node $ u $, the CC score is the inverse sum of geodesic distances from that node to every other node:
 
 $$
 CC_u = \frac{1}{\sum_{v \in E} {d(u,v)}}
 $$
-
-This index can be calculated in graphs and strongly connected digraphs (that is, if there is a directed path from $ v $ to $ u $ for all nodes $ v $ and $ u $ in the graph). If there are isolated nodes in the network, they are dropped by default. In non-strongly connected digraphs, the ordinary CC is undefined. In that case, you can use the **Influence Range Closeness Centrality** index.
-
-CC can also be calculated in weighted graphs, although the value of each edge $ (u,v) $ is always considered to be 1.
 
 The maximum value of CC is $ \frac{1}{N-1} $, when the node is adjacent to all others. Thus, the standardized CC index $ CC' $ is calculated by:
 
@@ -450,41 +562,35 @@ $$
 GCC = \frac{\sum{(\text{maxCC'} - \text{CC'})}}{(N-1) \cdot (N-2) / (2 \cdot N - 1)}
 $$
 
-> **Note**: As with all centrality measures in directed graphs, CC considers only outbound edges. If you want to analyze inbound edges, use a Prestige measure, i.e., **Proximity Prestige**.
+:::note
+As with all centrality measures in directed graphs, CC considers only outbound edges. If you want to analyze inbound edges, use a Prestige measure, i.e., **Proximity Prestige**.
+:::
+
+**Weights**: CC is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
 
 ---
 
 ### Influence Range Closeness Centrality (IRCC)
 
-For each node $ u $, IRCC is the standardized inverse average distance between $ u $ and every other node reachable from it.
+**Influence Range Closeness Centrality (IRCC)** answers the same question as ordinary Closeness Centrality — *how close is this node to the rest of the network?* — but stays well-defined on directed networks that aren't strongly connected, where ordinary CC simply isn't. For each node $ u $, IRCC is the standardized inverse average distance between $ u $ and every other node reachable from it.
 
-This improved CC index is optimized for graphs and directed graphs which are not strongly connected. Unlike the ordinary CC, which is the inverted sum of distances from node $ v $ to all others (thus undefined if a node is isolated or the digraph is not strongly connected), the IRCC considers only distances from node $ u $ to nodes in its influence range $ J $ (nodes reachable from $ u $).
+**When to use**: whenever you'd reach for CC but your digraph isn't strongly connected. Unlike ordinary CC, which is the inverted sum of distances from node $ v $ to all others (thus undefined if a node is isolated or the digraph is not strongly connected), IRCC considers only distances from node $ u $ to nodes in its influence range $ J $ (the nodes reachable from $ u $) — so it stays defined on graphs and directed graphs that are not strongly connected.
 
 The IRCC formula used is the ratio of the fraction of nodes reachable by $ u $ $ \left(\frac{|J|}{n-1}\right) $ to the average distance of these nodes from $ u $:
 
 $$
-\frac{\frac{|J|}{n-1}}{\frac{\sum{d(u,j)}}{|J|}}
+IRCC_u = \frac{\frac{|J|}{n-1}}{\frac{\sum_{j \in J}{d(u,j)}}{|J|}}
 $$
 
+**Weights**: like CC, IRCC is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
 
-
-
+---
 
 ### Betweenness Centrality (BC)
 
-For each node $ u $, **BC** is the ratio of all geodesics between pairs of nodes which run through $ u $. It reflects how often that node lies on the geodesics between the other nodes of the network.
+For each node $ u $, **Betweenness Centrality (BC)** is the ratio of all geodesics between pairs of nodes which run through $ u $. It reflects how often that node lies on the shortest paths between other nodes of the network. The **BC** score of each actor can be interpreted as a measure of potential control, since it quantifies just how much that actor acts as an intermediary to others — an actor who lies between many others has a higher likelihood of being able to control information flow in the network.
 
-The **BC** score of each actor can be interpreted as a measure of potential control as it quantifies just how much that actor acts as an intermediary to others. An actor which lies between many others is assumed to have a higher likelihood of being able to control information flow in the network.
-
-In essence, **BC** assumes that communication in a network occurs along the shortest possible path, the geodesic. It totally neglects the possibility of communication along non-geodesic paths between actors. If you need a centrality index that considers all possible paths, use the **Information Centrality (IC)**.
-
-Note that betweenness centrality assumes that all geodesics have equal weight or are equally likely to be chosen for the flow of information between any two nodes. This is reasonable only on "regular" networks where all nodes have similar degrees. On networks with significant degree variance, you might want to try using **IC** instead.
-
-Also, **BC** is very sensitive to network dynamics, i.e., it changes a lot when we add or remove a vertex or an edge.
-
-This index can be calculated in both graphs and digraphs but is usually best suited for undirected graphs. It can also be calculated in weighted graphs, although the weight of each edge $ (u,v) $ in $ E $ is always considered to be 1.
-
-**Formula for Betweenness Centrality**:
+**When to use**: BC assumes that communication in a network occurs only along the shortest possible path (the geodesic), and neglects the possibility of communication along non-geodesic paths — reasonable only on "regular" networks where all nodes have similar degrees. On networks with significant degree variance, or if you need a centrality index that considers *all* possible paths, use **Information Centrality (IC)** instead. Also note that BC is very sensitive to network dynamics: it changes a lot when a single vertex or edge is added or removed. This index can be calculated in both graphs and digraphs but is usually best suited for undirected graphs.
 
 The **BC** of a node $ u $ is given by the formula:
 
@@ -498,17 +604,15 @@ Where:
 
 - $ \sigma_{st}(u) $ is the number of geodesics between $ s $ and $ t $ that pass through node $ u $.
 
+**Weights**: BC is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
+
 ---
 
 ### Stress Centrality (SC)
 
-The **SC** of each node $ u $ is the total number of geodesics between all other nodes which run through $ u $. When one node falls on all geodesics between all the remaining $ (N-1) $ nodes, then we have a star graph with maximum **Stress Centrality**. This index reflects how often a node lies on the geodesics between other nodes.
+The **Stress Centrality (SC)** of each node $ u $ is the total number of geodesics between all other nodes which run through $ u $. This index reflects how often a node lies on the geodesics between other nodes — when one node falls on all geodesics between all the remaining $ (N-1) $ nodes, then we have a star graph with maximum Stress Centrality. This index was introduced by Shimbel (1953).
 
-This index can be calculated in both graphs and digraphs but is usually best suited for undirected graphs. It can also be calculated in weighted graphs, although the weight of each edge $ (v,u) $ in $ E $ is always considered to be 1.
-
-This index was introduced by Shimbel (1953).
-
-**Formula for Stress Centrality**:
+**When to use**: SC is very similar to Betweenness Centrality (BC) in that it counts how many geodesics pass through node $ u $, but unlike BC it does not normalize by the total number of geodesics between each pair — it just sums the raw count over all pairs of nodes in the network. This index can be calculated in both graphs and digraphs but is usually best suited for undirected graphs.
 
 The **SC** of node $ u $ is given by the formula:
 
@@ -521,20 +625,18 @@ Where:
 - $ \sigma_{st}(u) $ is the number of geodesics between nodes $ s $ and $ t $ that pass through node $ u $.
 
 :::note
-The formula for SC is very similar to BC in that it counts how many geodesics pass through node uu, but it sums this count over all pairs of nodes in the network.
+The formula for SC is very similar to BC in that it counts how many geodesics pass through node $ u $, but it sums this count over all pairs of nodes in the network without dividing by the total number of geodesics $ \sigma_{st} $.
 :::
+
+**Weights**: SC is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
+
+---
 
 ### Eccentricity Centrality (EC) or Harary Graph Centrality
 
-For each node $ u $, the **Eccentricity Centrality (EC)** is the inverse of the largest geodesic distance $ (u,v) $ to every other node $ v $ in the network. Therefore, the **EC** score reflects how close each node is to every other node and, hence, to the middle of the network.
+For each node $ u $, the **Eccentricity Centrality (EC)** is the inverse of the largest geodesic distance to every other node $ v $ in the network. Therefore, the **EC** score reflects how close each node is to every other node and, hence, to the middle of the network. Nodes with high EC scores have short distances to other nodes in the graph and are likely to be near the middle of the network; nodes with low EC scores have longer distances to some other nodes, and are therefore most likely towards the "edge" of the network. EC is also known as **Graph Centrality** (Hage and Harary, 1995).
 
-Nodes with high **EC** scores have short distances to other nodes in the graph and are likely to be near the middle of the network. Nodes with low **EC** scores have longer distances to some other nodes in the graph, and therefore are most likely towards the "edge" of the network.
-
-This index can be calculated in both graphs and digraphs, but it is usually best suited for undirected graphs. It can also be calculated in weighted graphs, although the weight of each edge $ (v,u) $ in $ E $ is always considered to be 1.
-
-The **EC** is also known as **Graph Centrality** (Hage and Harary, 1995).
-
-**Formula for Eccentricity Centrality (EC)**:
+**When to use**: this index can be calculated in both graphs and digraphs, but it is usually best suited for undirected graphs.
 
 The **EC** of node $ u $ is given by the formula:
 
@@ -548,20 +650,19 @@ Where:
 
 - $ \max_{v \in V} d(u,v) $ is the largest geodesic distance from node $ u $ to any other node in the network.
 
->The formula for EC calculates the inverse of the maximum geodesic distance from a node to any other node in the network. This is a measure of how "central" the node is within the graph, with nodes having short distances to all others being more central.
+:::note
+This raw eccentricity distance $ \max_{v \in V} d(u,v) $ is the same quantity described in [Eccentricity](/manual/analysis#eccentricity) under Cohesion Measures above — EC is simply its standardized, inverted form, $ EC_u = 1/\epsilon_u $, used to rank nodes by centrality rather than by raw distance.
+:::
+
+**Weights**: EC is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
+
 ---
 
 ### Power Centrality (PC)
 
-The **Power Centrality (PC)** is a generalized degree centrality measure suggested by Gil and Schmidt.
+The **Power Centrality (PC)** is a generalized degree centrality measure suggested by Gil and Schmidt. For each node $ u $, this index sums its degree (with weight 1), the size of the 2nd-order neighborhood (with weight 2), and in general the size of the $ k $-th order neighborhood (with weight $ k $). Thus, for each node $ u $, the most important other nodes are its immediate neighbors and then, in decreasing importance, the nodes of the 2nd-order neighborhood, 3rd-order neighborhood, etc. — each successive neighborhood contributing less to the score. For each node, the sum obtained is normalized by the total number of nodes in the same component minus 1.
 
-For each node $ u $, this index sums its degree (with weight 1), with the size of the 2nd-order neighborhood (with weight 2), and in general, with the size of the $ k $-th order neighborhood (with weight $ k $).
-
-Thus, for each node $ u $, the most important other nodes are its immediate neighbors and then, in decreasing importance, the nodes of the 2nd-order neighborhood, 3rd-order neighborhood, etc. For each node, the sum obtained is normalized by the total number of nodes in the same component minus 1.
-
-This index can be calculated in both graphs and digraphs but is usually best suited for undirected graphs. It can also be calculated in weighted graphs, although the weight of each edge $ (u,v) $ in $ E $ is always considered to be 1 (therefore not considered).
-
-**Formula for Power Centrality (PC)**:
+**When to use**: this index can be calculated in both graphs and digraphs but is usually best suited for undirected graphs.
 
 The **PC** of node $ u $ is given by:
 
@@ -575,19 +676,19 @@ Where:
 
 - The sum is taken over all neighborhood sizes from $ k = 1 $ to the maximum neighborhood size.
 
-> This approach emphasizes nodes that are connected to important neighbors, with each successive neighborhood contributing less to the centrality score.
+:::note
+This approach emphasizes nodes that are connected to important neighbors, with each successive neighborhood contributing less to the centrality score.
+:::
+
+**Weights**: since $ N_k(u) $ is derived from shortest-path distances, PC is shortest-path-based — real edge weights (or their inverse, if you choose to invert weights) affect which nodes fall into which order-$k$ neighborhood. See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
+
+---
 
 ### Information Centrality (IC)
 
-The **Information Centrality (IC)** is an index suggested by Stephenson and Zelen (1989) which focuses on how information might flow through many different paths. Unlike **SC** and **BC**, the **IC** metric uses all paths between actors, weighted by strength of tie and distance.
+The **Information Centrality (IC)** is an index suggested by Stephenson and Zelen (1989) which focuses on how information might flow through many different paths. Unlike **SC** and **BC**, IC uses *all* paths between actors, not just the shortest ones, weighted by strength of tie and distance. The **IC'** score is the standardized IC (IC divided by the sum of all IC scores) and can be seen as the proportion of total information flow that is controlled by each actor — note that standard IC' values sum to unity, unlike most other centrality measures.
 
-The **IC'** score is the standardized **IC** (IC divided by the sum of all IC scores) and can be seen as the proportion of total information flow that is controlled by each actor.
-
-Note that standard **IC'** values sum to unity, unlike most other centrality measures.
-
-Since there is no known generalization of Stephenson & Zelen's theory for information centrality to directional relations, the index should be calculated only for undirected graphs and is more meaningful in weighted graphs/networks.
-
-> **Note**: To compute this index, SocNetV drops all isolated nodes and symmetrizes (if needed) the adjacency matrix even when the graph is directed (Wasserman & Faust, p. 196).
+**When to use**: if degree variance is high enough that BC's "communication only travels along the shortest path" assumption feels unrealistic, IC is the natural alternative since it credits every path, not just geodesics. Since there is no known generalization of Stephenson & Zelen's theory for information centrality to directional relations, the index should be calculated only for undirected graphs, and is more meaningful in weighted graphs/networks. IC has a minimum value but not a maximum.
 
 **Algorithm**: In order to calculate the **IC** index of each actor, we create an $ N \times N $ matrix $ A $ from the (symmetrized) sociomatrix with:
 
@@ -616,20 +717,20 @@ Where:
 - $ T $ is the trace of matrix $ C $ (the sum of diagonal elements).
 
 - $ R $ is the sum of the elements of any row (since all rows of $ C $ have the same sum).
-  
-**IC** has a minimum value but not a maximum.
+
+:::note
+To compute this index, SocNetV drops all isolated nodes and symmetrizes (if needed) the adjacency matrix even when the graph is directed (Wasserman & Faust, p. 196).
+:::
+
+**Weights**: unlike the shortest-path measures above, IC is not distance-based — the raw weight feeds directly into the matrix $ A $ above, so a stronger tie already increases connectivity between two actors. Don't invert a value/strength weight here; see [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above.
 
 ---
 
 ### Eigenvector Centrality or Gould index (EVC)
 
-The **Eigenvector Centrality (EVC)** of each node is defined as the $ i $-th element of the leading eigenvector of the adjacency matrix. The leading eigenvector is the eigenvector corresponding to the largest positive eigenvalue.
+The **Eigenvector Centrality (EVC)**, proposed by Bonacich (1989), is an extension of the simpler Degree Centrality because it gives each actor a score proportional to the scores of its neighbors. Thus, a node may be important, in terms of its EVC, because it has lots of ties, or because it has fewer ties but to important other nodes. Formally, EVC is defined as the $ i $-th element of the leading eigenvector of the adjacency matrix — the eigenvector corresponding to the largest positive eigenvalue.
 
-The **Eigenvector Centrality**, proposed by Bonacich (1989), is an extension of the simpler **Degree Centrality** because it gives each actor a score proportional to the scores of its neighbors.
-
-Thus, a node may be important, in terms of its **EVC**, because it has lots of ties or it has fewer ties to important other nodes.
-
-**Formula for Eigenvector Centrality (EVC)**:
+**When to use**: whenever "important connections matter more than many connections" — ranking actors by who their neighbors are, not just how many they have. Its own decay can collapse to zero on sparse or directed networks with few or no cycles; if that happens, try **Katz Centrality** or **Bonacich Power Centrality** below instead.
 
 The **EVC** of node $ u $ is calculated as the $ i $-th element of the eigenvector corresponding to the largest eigenvalue of the adjacency matrix $ A $, i.e., we solve the following eigenvalue equation:
 
@@ -659,31 +760,79 @@ Where:
 
 - $\lambda$ is the largest eigenvalue of the adjacency matrix $A$.
 
+**Weights**: EVC is not distance-based — the adjacency matrix entry is used directly as "how much this tie contributes." Don't invert a value/strength weight here; see [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above.
+
+---
+
+### Katz Centrality (KC)
+
+**Katz Centrality**, proposed by Katz (1953), gives each actor credit for indirect connections, not just direct ones — a friend-of-a-friend still counts, just discounted the further away they are. Unlike Degree Centrality, which only counts an actor's direct ties, Katz Centrality also counts friends-of-friends, friends-of-friends-of-friends, and so on, each extra hop discounted by an attenuation factor **alpha** that you choose: a direct tie counts full price, a 2-hop tie counts $ \alpha $ times as much, a 3-hop tie counts $ \alpha^2 $ times as much, and so on.
+
+**When to use**: ranking actors by total reach through the network, with a tunable "how much does distance matter" knob — useful when Eigenvector Centrality's own decay isn't the one you want, or the graph is disconnected/sparse enough that EVC's power iteration doesn't produce a useful ranking (e.g. directed networks with few or no cycles).
+
+Computed in closed form via the matrix identity
+
+$$
+I + \alpha A + \alpha^2 A^2 + \alpha^3 A^3 + \dots = (I - \alpha A)^{-1}
+$$
+
+(the same geometric-series identity used for ordinary numbers, applied to matrices, valid for $ |\alpha| < 1/\lambda_{max} $), giving:
+
+$$
+C_{Katz} = \left( (I - \alpha A^T)^{-1} - I \right) \cdot \mathbf{1}
+$$
+
+Where $ \lambda_{max} $ is the adjacency matrix's largest eigenvalue (the transpose only matters for directed graphs; for undirected graphs $ A = A^T $).
+
+:::note
+Alpha must satisfy $ |\alpha| < 1/\lambda_{max} $ or the underlying series does not converge. SocNetV estimates $ \lambda_{max} $ for your specific network **before** showing the alpha dialog, and clamps the input field to the actual valid range — you don't need to guess a value and hope, and the computation will not silently return all-zero scores because of a value picked too large.
+:::
+
+**Weights**: like EVC, this is walk-counting, not distance-based. Don't invert a value/strength weight — see [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above.
+
+---
+
+### Bonacich Power Centrality (BPC)
+
+**Bonacich Power Centrality** extends Katz Centrality with a second parameter, **beta**, that — unlike Katz's alpha — is allowed to be **negative**. This is Bonacich's signature idea: being tied to well-connected others doesn't always help. In an exchange or bargaining network, being connected to *powerful* partners can actually reduce your own power (e.g. a supplier dealing with a few dominant buyers has less leverage the more dominant those buyers are). With negative beta, per-actor scores can come out **negative** — unlike every other measure in this manual, where this is a genuine property of the measure, not an error.
+
+**When to use**: whenever the *sign* of "connections to well-connected others" itself matters — bargaining power, exchange networks, negotiation position — rather than assuming more indirect connections is always better, which Katz Centrality and Eigenvector Centrality both do.
+
+$$
+b = \alpha (I - \beta R)^{-1} R \cdot \mathbf{1}, \quad R = A^T
+$$
+
+Only **beta** must satisfy $ |\beta| < 1/\lambda_{max} $ for the series to converge; **alpha** is a free overall scale factor with no such bound — it changes the size of the numbers, not the ranking.
+
+:::note
+As with Katz, SocNetV estimates $ \lambda_{max} $ before showing the dialog and clamps the beta field to the actual valid range.
+:::
+
+**Weights**: like Katz and EVC, this is walk-counting, not distance-based. Don't invert a value/strength weight — see [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above.
+
+Not to be confused with the older, unrelated **Power Centrality (PC)** (Gil-Schmidt) described above — same-sounding name, different measure.
+
 ---
 
 ### Degree Prestige (DP) or InDegree Centrality
 
-For each node $ u $, this metric counts the number of inbound arcs at $ u $. The index is meaningful in directed graphs as a measure of the prestige of each node. Thus, it is called **Degree Prestige** (also known as **InDegree Centrality**). 
+For each node $ u $, **Degree Prestige (DP)** counts the number of inbound arcs at $ u $ (also known as **InDegree Centrality**). Actors with higher DP are considered more prominent among others because they receive more nominations or choices — the larger the index, the more prestigious the node/actor. Note that in undirected graphs, DP is identical to Degree Centrality.
 
-Note that in undirected graphs, the **DP** index is identical to **Degree Centrality**.
+**When to use**: this index can be calculated only for unvalued or valued digraphs, as a measure of the prestige of each node. In weighted relations, DP is the sum of weights of all arcs/inLinks ending at node $ u $.
 
-Actors with higher **DP** are considered more prominent among others because they receive more nominations or choices (i.e., they have a larger **inDegree**). The larger the index, the more prestigious the node/actor.
+:::note
+In unvalued graphs, SocNetV computes **Group Degree Prestige** using Freeman's formula. For valued or weighted graphs, Group Degree Prestige cannot be calculated with Freeman's formula — you can use DP variance or mean instead.
+:::
 
-This index can be calculated only for unvalued or valued digraphs. In weighted relations, **DP** is the sum of weights of all arcs/inLinks ending at node $ v $.
-
-> **Note**: In unvalued graphs, SocNetV computes **Group Degree Prestige** using Freeman's formula.
-
-> **Note**: For valued or weighted graphs, we cannot calculate **Group Degree Centrality (DC)** using Freeman's formula. You can use **DP** variance or mean instead.
+**Weights**: like Degree Centrality, DP is a direct sum — there is no invert-weights choice.
 
 ---
 
 ### PageRank Prestige (PRP)
 
-The **PageRank Prestige (PRP)** is an importance ranking for each node based on the structure of its incoming links/edges and the rank of the nodes linking to it.
+The **PageRank Prestige (PRP)** is an importance ranking for each node based on the structure of its incoming links/edges and the rank of the nodes linking to it. The original PageRank algorithm, developed by Page and Brin (1997), treats each link from a node as a citation/backlink/vote to another. In essence, for each node the algorithm counts all incoming links to it, but does so by not counting all links equally — it normalizes each in-link from a node by the total number of that node's outgoing edges. The PR values correspond to the principal eigenvector of the normalized link matrix.
 
-The original **PageRank** algorithm, developed by Page and Brin (1997), focuses on how nodes are connected to each other, treating each link from a node as a citation/backlink/vote to another.
-
-In essence, for each node, the algorithm counts all incoming links (edges) to it, but it does so by not counting all links equally. It normalizes each in-link from a node by the total number of its outgoing edges.
+**When to use**: this index can be calculated in both graphs and digraphs but is usually best suited for directed graphs, since it is a prestige measure.
 
 The **PR** index for each node $ u $ is computed iteratively by the formula:
 
@@ -703,29 +852,29 @@ Where:
 
 - $ DC_v $ is the out-degree of node $ v $.
 
-The **PR** values correspond to the principal eigenvector of the normalized link matrix.
+:::note
+PageRank Prestige does not offer a "consider edge weights" choice at all — every backlink always counts as weight 1, normalized by the plain out-degree (edge count, not summed weight) of the node it comes from, as in the formula above. This is unlike every other measure in this manual.
+:::
 
-This index can be calculated in both graphs and digraphs but is usually best suited for directed graphs since it is a prestige measure.
-
-The **PageRank Prestige** index can also be calculated in weighted graphs.
-
-> **Note**: In weighted relations, each backlink to node $ u $ from node $ v $ is considered to have weight = 1, but it is normalized by the sum of out-degree weights (outEdges) of node $ v $. Therefore, nodes with high out-link weights give a smaller percentage of their **PR** to node $ u $.
+**Weights**: none — see the note above.
 
 ---
 
 ### Proximity Prestige (PP)
 
-The **Proximity Prestige (PP)** index measures how proximate a node $ u $ is to the nodes in its influence domain $ I $ — the influence domain of a node is the number of other nodes that can reach it. In this metric, the proximity of each node $ u $ is based on distances to, rather than from, it. To put it simply, in **PP**, what matters is how close all the other nodes are to node $ u $.
+The **Proximity Prestige (PP)** index measures how proximate a node $ u $ is to the nodes in its influence domain $ I $ — the set of other nodes that can reach it. In this metric, the proximity of each node $ u $ is based on distances *to*, rather than *from*, it: what matters is how close all the other nodes are to node $ u $. The algorithm takes the average distance to node $ u $ of all nodes in its influence domain, standardizes it by multiplying with $ \frac{(N-1)}{|I|} $, and takes its reciprocal.
 
-The algorithm takes the average distance to node $ u $ of all nodes in its influence domain, standardizes it by multiplying with $ \frac{(N-1)}{|I|} $, and takes its reciprocal.
+**When to use**: PP is the Prestige counterpart of Closeness Centrality — use it when you want a "closeness" ranking based on inbound reachability rather than outbound reach.
 
 In essence, the formula SocNetV uses to calculate **PP** for every node $ u $ is the ratio of the fraction of nodes that can reach node $ u $ to the average distance of those nodes to $ u $:
 
 $$
-PP = \frac{\frac{|I|}{N-1}}{\frac{\sum{d(v,u)}}{|I|}}
+PP_u = \frac{\frac{|I|}{N-1}}{\frac{\sum_{v \in I}{d(v,u)}}{|I|}}
 $$
 
 Where the sum is over every node $ v $ in $ I $.
+
+**Weights**: like Closeness Centrality, PP is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
 
 ---
 
@@ -760,7 +909,7 @@ When both **P** and **X** are empty, **R** is a maximal clique and is recorded.
 
 **Example:** Consider a network with four actors — A, B, C, D — and edges A–B, A–C, B–C, and C–D:
 
-<Mermaid chart={`
+<Mermaid code={`
 graph LR
     A((A)) --- B((B))
     A((A)) --- C((C))
@@ -772,18 +921,18 @@ graph LR
     style D fill:#6aaa64,color:#fff,stroke:#4a8a44
 `} />
 
-The two maximal cliques are **{A, B, C}** (the triangle) and **{C, D}** (the edge, since D has no other neighbours).
+The two maximal cliques are **`{A, B, C}`** (the triangle) and **`{C, D}`** (the edge, since D has no other neighbours).
 
 **Recursion trace:**
 
 | Step | R | P | X | Action |
 |---|---|---|---|---|
-| Start | {} | {A,B,C,D} | {} | choose pivot C (most neighbours in P) |
-| Branch C | {C} | {A,B,D} | {} | choose pivot A |
-| Branch A | {C,A} | {B} | {} | |
-| Branch B | {C,A,B} | {} | {} | ✅ clique {A,B,C} |
-| Back to {C} | {C} | {A,B,D} | {A} | branch D |
-| Branch D | {C,D} | {} | {} | ✅ clique {C,D} |
+| Start | `{}` | `{A,B,C,D}` | `{}` | choose pivot C (most neighbours in P) |
+| Branch C | `{C}` | `{A,B,D}` | `{}` | choose pivot A |
+| Branch A | `{C,A}` | `{B}` | `{}` | |
+| Branch B | `{C,A,B}` | `{}` | `{}` | ✅ clique `{A,B,C}` |
+| Back to `{C}` | `{C}` | `{A,B,D}` | `{A}` | branch D |
+| Branch D | `{C,D}` | `{}` | `{}` | ✅ clique `{C,D}` |
 
 #### Why pivot selection matters
 
