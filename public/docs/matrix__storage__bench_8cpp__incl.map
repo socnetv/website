@@ -1,0 +1,29 @@
+<map id="matrix_storage_bench.cpp" name="matrix_storage_bench.cpp">
+<area shape="rect" id="Node000001" title="Standalone WS5 A2.0 benchmark: QHash&lt;int, QPair&lt;int,qreal&gt;&gt; (current APSP storage,..." alt="" coords="424,5,598,31"/>
+<area shape="rect" id="Node000002" href="$matrix_8h.html" title="Declares the Matrix class for handling adjacency and sociomatrix data structures in network analysis." alt="" coords="190,79,270,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="464,34,286,79,285,74,463,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,153,71,178"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="424,29,306,47,241,62,179,81,118,112,67,145,64,141,115,107,177,77,240,56,305,41,423,24"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="369,153,427,178"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="425,30,374,47,353,62,335,80,330,96,336,112,349,128,366,142,363,146,346,131,331,115,325,96,330,78,349,58,372,43,423,25"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="345,79,456,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="494,34,434,73,431,68,491,29"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="480,79,542,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="514,31,514,63,509,63,509,31"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="567,79,621,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="527,30,570,67,567,71,524,34"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="646,79,702,105"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="540,29,633,70,631,75,538,34"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="726,79,785,105"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="553,29,712,75,710,80,552,34"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="809,79,870,105"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="575,29,795,76,794,81,574,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,153,168,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,107,162,146,158,141,212,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="198,108,86,149,84,144,197,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="191,153,269,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="233,105,233,137,227,137,227,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="293,153,346,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="247,103,294,141,291,145,243,107"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="260,103,356,144,354,149,257,108"/>
+</map>

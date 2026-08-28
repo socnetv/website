@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['vertexcount_0',['VertexCount',['../class_graph.html#ad261ae1ff287588b9d0e10adc864afa6aa953fd2bf604349580576e154efed834',1,'Graph']]],
-  ['vertexedgecount_1',['VertexEdgeCount',['../class_graph.html#ad261ae1ff287588b9d0e10adc864afa6aa8de07e5227bff2026d9242e139ba38f',1,'Graph']]],
-  ['vertexmetadata_2',['VertexMetadata',['../class_graph.html#ad261ae1ff287588b9d0e10adc864afa6acee5ffd0bf6e510bedd866e20bff1d52',1,'Graph']]],
-  ['vertexpositions_3',['VertexPositions',['../class_graph.html#ad261ae1ff287588b9d0e10adc864afa6a996e4fcd794c0c5c1a1f0c846747d5b0',1,'Graph']]]
+  ['triangle_0',['Triangle',['../global_8h.html#a37e50858781617a826d3709db82aba70a773e9be14af3bc697c412f3e6c5c509e',1,'global.h']]],
+  ['twomode_1',['TWOMODE',['../global_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3ac8fd252142e85172b944bea55b0d8f67',1,'global.h']]],
+  ['type_2',['Type',['../class_graphics_edge.html#a0a9a9532d02a293143b94d1cc29793b3aa34c5f34cca12b784a1cedb8ec4f6393',1,'GraphicsEdge::Type'],['../class_graphics_edge_label.html#ae49603f5734c2922935c94c28cd800eaaa2c62397f6a0ec2a7cc31dc053cbe79e',1,'GraphicsEdgeLabel::Type'],['../class_graphics_edge_weight.html#a7fd332dec1db4f4837ef85096698be37ac1d55affa1f176bdb88fe6274b9ac862',1,'GraphicsEdgeWeight::Type'],['../class_graphics_guide.html#a2ba18c0ee983a0ec8e243933899c4b54a38ca47f06b425561ee99fc4eaebd4164',1,'GraphicsGuide::Type'],['../class_graphics_node.html#a3d1f13e9e5818f356ebeed49e810d8aeabca034f545f18dad221f869d69c84aea',1,'GraphicsNode::Type'],['../class_graphics_node_label.html#a8b11b6e3d78c4a2082480c8fd910c85bac483602921219e5bff09b10199d9a3c0',1,'GraphicsNodeLabel::Type'],['../class_graphics_node_number.html#a8e57e4832cfe1c824c8f24cd85071c67a78a5629d25647652f5c134329b384e18',1,'GraphicsNodeNumber::Type']]]
 ];

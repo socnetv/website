@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -122,6 +122,9 @@ $(function(){initNavTree('mainwindow_8cpp.html','',''); });
 <code>#include &lt;QProgressDialog&gt;</code><br />
 <code>#include &lt;QKeySequence&gt;</code><br />
 <code>#include &lt;QDateTime&gt;</code><br />
+<code>#include &lt;QSignalBlocker&gt;</code><br />
+<code>#include &lt;QElapsedTimer&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;QtSvg&gt;</code><br />
 <code>#include &lt;QLoggingCategory&gt;</code><br />
 <code>#include &lt;QtCharts/QChart&gt;</code><br />
@@ -176,51 +179,12 @@ $(function(){initNavTree('mainwindow_8cpp.html','',''); });
 <code>#include &quot;<a class="el" href="dialogdissimilarities_8h_source.html">forms/dialogdissimilarities.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dialogsettings_8h_source.html">forms/dialogsettings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dialogsysteminfo_8h_source.html">forms/dialogsysteminfo.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ab34b0e84d5bad6f2eac2eb52f0fd613f" id="r_ab34b0e84d5bad6f2eac2eb52f0fd613f"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ab34b0e84d5bad6f2eac2eb52f0fd613f">compareVersions</a> (const QString &amp;a, const QString &amp;b)</td></tr>
-<tr class="memdesc:ab34b0e84d5bad6f2eac2eb52f0fd613f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two version strings component-by-component.  <br /></td></tr>
-</table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+</div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements the <a class="el" href="class_main_window.html" title="The base window of SocNetV contains all widgets and functionality.">MainWindow</a> class, which serves as the primary interface for the <a class="el" href="namespace_soc_net_v.html">SocNetV</a> application. </p>
 <p>This file contains the logic for the main application window, including menus, toolbars, and user interactions for network visualization and analysis. </p><dl class="section author"><dt>Author</dt><dd>Dimitris B. Kalamaras (<a href="http://dimitris.apeiro.gr">http://dimitris.apeiro.gr</a>) </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2005-2026 by Dimitris B. Kalamaras. This file is part of <a class="el" href="namespace_soc_net_v.html">SocNetV</a> (Social Network Visualizer). @license This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 or later. For more details, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://socnetv.org">https://socnetv.org</a> </dd></dl>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ab34b0e84d5bad6f2eac2eb52f0fd613f" name="ab34b0e84d5bad6f2eac2eb52f0fd613f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab34b0e84d5bad6f2eac2eb52f0fd613f">&#9670;&#160;</a></span>compareVersions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int compareVersions </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Compares two version strings component-by-component. </p>
-<p>Handles versions with 1, 2, or 3 components (e.g. "3.3", "3.3.1", "3.10"). Returns: -1 if a &lt; b 0 if a == b +1 if a &gt; b </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

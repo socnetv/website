@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -112,125 +112,119 @@ $(function(){initNavTree('class_matrix.html','','class_matrix-members'); });
 </div><!--header-->
 <div class="contents">
 
+<p>General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.), used throughout <a class="el" href="namespace_soc_net_v.html">SocNetV</a> wherever a network needs to be represented or analyzed as an N x M grid of numbers.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="matrix_8h_source.html">matrix.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Matrix:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_matrix__coll__graph.png" border="0" usemap="#a_matrix_coll__map" loading="lazy" alt="Collaboration graph"/></div>
-<map name="a_matrix_coll__map" id="a_matrix_coll__map">
-<area shape="rect" title=" " alt="" coords="19,102,76,128"/>
-<area shape="rect" href="class_matrix_row.html" title=" " alt="" coords="5,5,90,31"/>
-<area shape="poly" title=" " alt="" coords="50,46,50,101,45,101,45,46"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b5cc0016481d9e834a1b116507ca5f0" id="r_a9b5cc0016481d9e834a1b116507ca5f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9b5cc0016481d9e834a1b116507ca5f0">Matrix</a> (int rowDim=0, int colDim=0)</td></tr>
-<tr class="memdesc:a9b5cc0016481d9e834a1b116507ca5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a9b5cc0016481d9e834a1b116507ca5f0" title="Matrix::Matrix Default constructor - creates a Matrix of given dimension (0x0) Use resize(m,...">Matrix::Matrix</a> Default constructor - creates a <a class="el" href="class_matrix.html">Matrix</a> of given dimension (0x0) Use resize(m,n) or zeromatrix(m,n) to resize it.  <br /></td></tr>
+<tr class="memdesc:a9b5cc0016481d9e834a1b116507ca5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a rowDim x colDim matrix, all cells zero-initialized. Defaults to 0x0 (an empty matrix) - use <a class="el" href="#a3f46f39a935b8209013bb6ba1211d3a2" title="Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized.">resize()</a>/zeroMatrix()/identityMatrix() to size it later.  <br /></td></tr>
 <tr class="memitem:a086a20e89f81f1e6f1807e8198993620" id="r_a086a20e89f81f1e6f1807e8198993620"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a086a20e89f81f1e6f1807e8198993620">Matrix</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a086a20e89f81f1e6f1807e8198993620"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a9b5cc0016481d9e834a1b116507ca5f0" title="Matrix::Matrix Default constructor - creates a Matrix of given dimension (0x0) Use resize(m,...">Matrix::Matrix</a> Copy constructor. Creates a <a class="el" href="class_matrix.html">Matrix</a> identical to <a class="el" href="class_matrix.html">Matrix</a> b Allows <a class="el" href="class_matrix.html">Matrix</a> a=b declaration Every <a class="el" href="class_matrix_row.html">MatrixRow</a> object holds max_int=32762.  <br /></td></tr>
+<tr class="memdesc:a086a20e89f81f1e6f1807e8198993620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor: creates a <a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> identical to (an independent copy of) b. Allows the <span class="tt"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> a = b</span> declaration form.  <br /></td></tr>
 <tr class="memitem:a9b1c3627f573d78a2f08623fdfef990f" id="r_a9b1c3627f573d78a2f08623fdfef990f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9b1c3627f573d78a2f08623fdfef990f">~Matrix</a> ()</td></tr>
-<tr class="memdesc:a9b1c3627f573d78a2f08623fdfef990f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a9b1c3627f573d78a2f08623fdfef990f" title="Matrix::~Matrix Destructor.">Matrix::~Matrix</a> Destructor.  <br /></td></tr>
+<tr class="memdesc:a9b1c3627f573d78a2f08623fdfef990f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor: frees the data buffer and the row-pointer index.  <br /></td></tr>
 <tr class="memitem:ac0e2adb05e204d5a40cd129d9fb0593f" id="r_ac0e2adb05e204d5a40cd129d9fb0593f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0e2adb05e204d5a40cd129d9fb0593f">clear</a> ()</td></tr>
-<tr class="memdesc:ac0e2adb05e204d5a40cd129d9fb0593f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears data.  <br /></td></tr>
+<tr class="memdesc:ac0e2adb05e204d5a40cd129d9fb0593f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees this matrix's data buffer and row-pointer index and resets it to 0x0. Called at the start of <a class="el" href="#a3f46f39a935b8209013bb6ba1211d3a2" title="Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized.">resize()</a>/identityMatrix()/zeroMatrix()/operator= before they allocate a fresh buffer at the new size.  <br /></td></tr>
 <tr class="memitem:a3f46f39a935b8209013bb6ba1211d3a2" id="r_a3f46f39a935b8209013bb6ba1211d3a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3f46f39a935b8209013bb6ba1211d3a2">resize</a> (const int m, const int n)</td></tr>
-<tr class="memdesc:a3f46f39a935b8209013bb6ba1211d3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes this matrix to m x n Called before every operation on new matrices. Every <a class="el" href="class_matrix_row.html">MatrixRow</a> object holds max_int=32762.  <br /></td></tr>
+<tr class="memdesc:a3f46f39a935b8209013bb6ba1211d3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized.  <br /></td></tr>
 <tr class="memitem:acf9348504c25d9f54b065c567c9deaef" id="r_acf9348504c25d9f54b065c567c9deaef"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#acf9348504c25d9f54b065c567c9deaef">item</a> (int r, int c)</td></tr>
-<tr class="memdesc:acf9348504c25d9f54b065c567c9deaef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the (r,c) matrix element.  <br /></td></tr>
 <tr class="memitem:a62f17622afe35fa3f6a0e07fcf08b8d6" id="r_a62f17622afe35fa3f6a0e07fcf08b8d6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a62f17622afe35fa3f6a0e07fcf08b8d6">setItem</a> (const int r, const int c, const qreal elem)</td></tr>
-<tr class="memdesc:a62f17622afe35fa3f6a0e07fcf08b8d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the (r,c) matrix element calling the setColumn method.  <br /></td></tr>
-<tr class="memitem:ae81491e32603914aae2e302a3594faf8" id="r_ae81491e32603914aae2e302a3594faf8"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ae81491e32603914aae2e302a3594faf8">operator()</a> (const int r, const int c)</td></tr>
-<tr class="memitem:aaa4a1562ebf9d783834024dc88131631" id="r_aaa4a1562ebf9d783834024dc88131631"><td class="memItemLeft"><a class="el" href="class_matrix_row.html">MatrixRow</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aaa4a1562ebf9d783834024dc88131631">operator[]</a> (const int &amp;r)</td></tr>
+<tr class="memitem:a5515bab8c32ce3737d9ab8837af1a09c" id="r_a5515bab8c32ce3737d9ab8837af1a09c"><td class="memItemLeft">qreal *&#160;</td><td class="memItemRight"><a class="el" href="#a5515bab8c32ce3737d9ab8837af1a09c">operator[]</a> (const int &amp;r)</td></tr>
 <tr class="memitem:ab6d72e265a32cf6fc0256392a076d647" id="r_ab6d72e265a32cf6fc0256392a076d647"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6d72e265a32cf6fc0256392a076d647">clearItem</a> (int r, int c)</td></tr>
-<tr class="memdesc:ab6d72e265a32cf6fc0256392a076d647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the (r,c) matrix element.  <br /></td></tr>
 <tr class="memitem:a35649f43610688d020b2cad91f616d51" id="r_a35649f43610688d020b2cad91f616d51"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a35649f43610688d020b2cad91f616d51">cols</a> ()</td></tr>
 <tr class="memitem:add9c23e5ff5e2456a8d48024ab19fe96" id="r_add9c23e5ff5e2456a8d48024ab19fe96"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows</a> ()</td></tr>
 <tr class="memitem:a7e960a1c6e8f5aa90dddb18d9394890c" id="r_a7e960a1c6e8f5aa90dddb18d9394890c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7e960a1c6e8f5aa90dddb18d9394890c">size</a> ()</td></tr>
 <tr class="memitem:ab48d85988859bc436cbb69b0111f2ca5" id="r_ab48d85988859bc436cbb69b0111f2ca5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5">findMinMaxValues</a> (qreal &amp;min, qreal &amp;max, bool &amp;hasRealNumbers)</td></tr>
-<tr class="memdesc:ab48d85988859bc436cbb69b0111f2ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">finds Min-Max values in current <a class="el" href="class_matrix.html">Matrix</a>  <br /></td></tr>
+<tr class="memdesc:ab48d85988859bc436cbb69b0111f2ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values found, plus whether any cell has a fractional (non-integer) part - used by report writers to decide display precision and, for distance matrices, whether the max value is RAND_MAX (meaning some pair is unreachable). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a263c9e49df2a476afec20d2dce404497" id="r_a263c9e49df2a476afec20d2dce404497"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a263c9e49df2a476afec20d2dce404497">NeighboursNearestFarthest</a> (qreal &amp;min, qreal &amp;max, int &amp;imin, int &amp;jmin, int &amp;imax, int &amp;jmax)</td></tr>
-<tr class="memdesc:a263c9e49df2a476afec20d2dce404497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5" title="finds Min-Max values in current Matrix">Matrix::findMinMaxValues</a> only it skips r==c.  <br /></td></tr>
+<tr class="memdesc:a263c9e49df2a476afec20d2dce404497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5" title="Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values ...">findMinMaxValues()</a>, but skips the diagonal (r==c) and also reports which pair of distinct vertices achieved the min/max - used to find the closest and farthest pair of nodes in a distance/dissimilarity matrix (e.g. by hierarchical clustering, which repeatedly needs "which two clusters are nearest right now"). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:ad031e4cac2d7564347c8870cfb08e840" id="r_ad031e4cac2d7564347c8870cfb08e840"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad031e4cac2d7564347c8870cfb08e840">deleteRowColumn</a> (int i)</td></tr>
-<tr class="memdesc:ad031e4cac2d7564347c8870cfb08e840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes row and column and shifts rows and cols accordingly.  <br /></td></tr>
+<tr class="memdesc:ad031e4cac2d7564347c8870cfb08e840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes row erased and column erased from this (square) matrix, shifting every later row/column back by one to close the gap. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()) - rebuilds the whole matrix into a new, smaller buffer (see the comment inside).  <br /></td></tr>
 <tr class="memitem:a50e3219050552b2f9683be6a4662292b" id="r_a50e3219050552b2f9683be6a4662292b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a50e3219050552b2f9683be6a4662292b">identityMatrix</a> (int dim)</td></tr>
 <tr class="memdesc:a50e3219050552b2f9683be6a4662292b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes this square matrix the identity square matrix I.  <br /></td></tr>
 <tr class="memitem:acda39cf7bbe9a7409386a6e36cb2f558" id="r_acda39cf7bbe9a7409386a6e36cb2f558"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acda39cf7bbe9a7409386a6e36cb2f558">zeroMatrix</a> (const int m, const int n)</td></tr>
 <tr class="memdesc:acda39cf7bbe9a7409386a6e36cb2f558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes this matrix the zero matrix of size mxn.  <br /></td></tr>
 <tr class="memitem:a335ff4e4b97b1f412b6ba94fc57ab7a2" id="r_a335ff4e4b97b1f412b6ba94fc57ab7a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a335ff4e4b97b1f412b6ba94fc57ab7a2">fillMatrix</a> (qreal value)</td></tr>
-<tr class="memdesc:a335ff4e4b97b1f412b6ba94fc57ab7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a matrix with a given value.  <br /></td></tr>
+<tr class="memdesc:a335ff4e4b97b1f412b6ba94fc57ab7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills every cell of this matrix with the given value. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:aa637521475da1b4e7e215de25b2f6b16" id="r_aa637521475da1b4e7e215de25b2f6b16"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa637521475da1b4e7e215de25b2f6b16">subtractFromI</a> ()</td></tr>
-<tr class="memdesc:aa637521475da1b4e7e215de25b2f6b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts this matrix from I and returns.  <br /></td></tr>
+<tr class="memdesc:aa637521475da1b4e7e215de25b2f6b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this matrix with I - this (the identity matrix minus this matrix), in place. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:ae8d865d3beaec2cce97db3dbcfa42646" id="r_ae8d865d3beaec2cce97db3dbcfa42646"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae8d865d3beaec2cce97db3dbcfa42646">operator=</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a)</td></tr>
-<tr class="memdesc:ae8d865d3beaec2cce97db3dbcfa42646"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html">Matrix</a> equality/assignment , operator = Allows copying a matrix onto another using b=a where b,a matrices Equals two matrices.  <br /></td></tr>
+<tr class="memdesc:ae8d865d3beaec2cce97db3dbcfa42646"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> equality/assignment , operator = Allows copying a matrix onto another using b=a where b,a matrices Equals two matrices.  <br /></td></tr>
 <tr class="memitem:a1e7680b5e35607556088d94101bedf82" id="r_a1e7680b5e35607556088d94101bedf82"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1e7680b5e35607556088d94101bedf82">sum</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, <a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a1e7680b5e35607556088d94101bedf82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html">Matrix</a> addition Takes two (nxn) matrices and returns their sum as a reference to this Same algorithm as operator +, just different interface. In this case, you use something like: c.sum(a,b).  <br /></td></tr>
+<tr class="memdesc:a1e7680b5e35607556088d94101bedf82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition: sets this matrix to a + b, cell by cell. Same result as <a class="el" href="#ae0ed296536f062f5857e1e5550093890" title="Matrix addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S....">operator+()</a>, just a different calling interface: c.sum(a,b) instead of c = a + b. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:abb3c8d544c682255888602203ad4f76c" id="r_abb3c8d544c682255888602203ad4f76c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abb3c8d544c682255888602203ad4f76c">operator+=</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:abb3c8d544c682255888602203ad4f76c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#abb3c8d544c682255888602203ad4f76c" title="Matrix::operator += Matrix add another matrix: += Adds to this matrix another matrix B of the same di...">Matrix::operator +=</a> <a class="el" href="class_matrix.html">Matrix</a> add another matrix: += Adds to this matrix another matrix B of the same dim and returns to this Allows A+=B.  <br /></td></tr>
+<tr class="memdesc:abb3c8d544c682255888602203ad4f76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds matrix b to this matrix, in place, cell by cell. Allows A += B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:ae0ed296536f062f5857e1e5550093890" id="r_ae0ed296536f062f5857e1e5550093890"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae0ed296536f062f5857e1e5550093890">operator+</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:ae0ed296536f062f5857e1e5550093890"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html">Matrix</a> addition, operator + Adds this matrix and B of the same dim and returns the sum S Allows S = A+B.  <br /></td></tr>
+<tr class="memdesc:ae0ed296536f062f5857e1e5550093890"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S. Allows S = A + B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a982dfa156a7e026fdf32f9cb3a7aa341" id="r_a982dfa156a7e026fdf32f9cb3a7aa341"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a982dfa156a7e026fdf32f9cb3a7aa341">operator-</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a982dfa156a7e026fdf32f9cb3a7aa341"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html">Matrix</a> subtraction, operator - Subtract this matrix - B of the same dim and returns the result S Allows S = A-B.  <br /></td></tr>
+<tr class="memdesc:a982dfa156a7e026fdf32f9cb3a7aa341"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> subtraction, operator -. Subtracts b (same dimensions) from this matrix and returns the result S. Allows S = A - B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a2a024b6ea1ea94c6293a829689c92cdb" id="r_a2a024b6ea1ea94c6293a829689c92cdb"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a024b6ea1ea94c6293a829689c92cdb">operator*</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a2a024b6ea1ea94c6293a829689c92cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html">Matrix</a> multiplication, operator * Multiplies (right) this matrix with given matrix b. Allows P = A * B where A,B of same dimension and returns product as a reference to the calling object.  <br /></td></tr>
+<tr class="memdesc:a2a024b6ea1ea94c6293a829689c92cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> multiplication, operator *. Allows P = A * B, where A is this (m x n) and B is b (n x p); returns the m x p product P. Complexity: O(m*n*p).  <br /></td></tr>
 <tr class="memitem:a02aa856e2460a5110376a3682a20935e" id="r_a02aa856e2460a5110376a3682a20935e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02aa856e2460a5110376a3682a20935e">operator*=</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a02aa856e2460a5110376a3682a20935e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies (right) this m x n matrix with given n x p matrix b and returns the product in the calling matrix which becomes an m x p matrix. This convenience operator *= allows A *= B.  <br /></td></tr>
+<tr class="memdesc:a02aa856e2460a5110376a3682a20935e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies (right) this m x n matrix with given n x p matrix b, replacing this matrix's own contents with the m x p product. Allows A *= B. Complexity: O(m*n*p).  <br /></td></tr>
 <tr class="memitem:a9363be8aae4aa23516e1c3475e4902e9" id="r_a9363be8aae4aa23516e1c3475e4902e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9">product</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;A, <a class="el" href="class_matrix.html">Matrix</a> &amp;B, bool symmetry=false)</td></tr>
-<tr class="memdesc:a9363be8aae4aa23516e1c3475e4902e9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html">Matrix</a> Multiplication. Given two matrices A (mxn) and B (nxp) computes their product and stores it to the calling matrix which becomes an m x p matrix Allows P.product(A, B).  <br /></td></tr>
+<tr class="memdesc:a9363be8aae4aa23516e1c3475e4902e9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it into the calling matrix, which becomes an m x p matrix. Allows P.product(A, B).  <br /></td></tr>
 <tr class="memitem:a79b7242fbf4ad8f420088894ce4ee0ac" id="r_a79b7242fbf4ad8f420088894ce4ee0ac"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a79b7242fbf4ad8f420088894ce4ee0ac">productSym</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, <a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a79b7242fbf4ad8f420088894ce4ee0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes two ( N x N ) matrices (symmetric) and outputs an upper triangular matrix.  <br /></td></tr>
+<tr class="memdesc:a79b7242fbf4ad8f420088894ce4ee0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">OBSOLETE - no caller found anywhere in the codebase. Was intended to take two (N x N) symmetric matrices a and b and write an upper-triangular product into this matrix (the lower triangle, i&gt;=j, left at zero). Unlike <a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9" title="Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identit...">inverseByGaussJordanElimination()</a> (also uncalled, but explicitly kept for cross-checking matrix inversion), there is no stated reason to keep this one - a real candidate for removal. Complexity: O(N^3).  <br /></td></tr>
 <tr class="memitem:ac0e73d5e98817e12b82a3f626c8343de" id="r_ac0e73d5e98817e12b82a3f626c8343de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0e73d5e98817e12b82a3f626c8343de">swapRows</a> (int rowA, int rowB)</td></tr>
-<tr class="memdesc:ac0e73d5e98817e12b82a3f626c8343de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps row A with row B of this matrix.  <br /></td></tr>
+<tr class="memdesc:ac0e73d5e98817e12b82a3f626c8343de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps row rowA with row rowB of this matrix, element by element. Used by <a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9" title="Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identit...">inverseByGaussJordanElimination()</a> and <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> during partial pivoting (moving the row with the largest pivot candidate into the current position improves numerical stability of the elimination). Complexity: O(cols()).  <br /></td></tr>
 <tr class="memitem:afac4817d5f0980756d72092a2c50a36c" id="r_afac4817d5f0980756d72092a2c50a36c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afac4817d5f0980756d72092a2c50a36c">multiplyScalar</a> (const qreal &amp;f)</td></tr>
-<tr class="memdesc:afac4817d5f0980756d72092a2c50a36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar Multiplication. Multiplies this by qreal f and returns the product matrix of the same dim Allows to use P.multiplyScalar(f).  <br /></td></tr>
-<tr class="memitem:a292e782a2e80d0e8582ba6999a8cc737" id="r_a292e782a2e80d0e8582ba6999a8cc737"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a292e782a2e80d0e8582ba6999a8cc737">multiplyRow</a> (int <a class="el" href="#a60c5ba9f9ca2c6fa3655133f6ef0acdb">row</a>, qreal value)</td></tr>
-<tr class="memdesc:a292e782a2e80d0e8582ba6999a8cc737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply every element of row by value.  <br /></td></tr>
+<tr class="memdesc:afac4817d5f0980756d72092a2c50a36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies every cell of this matrix, in place, by scalar f. Allows P.multiplyScalar(f). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
+<tr class="memitem:a292e782a2e80d0e8582ba6999a8cc737" id="r_a292e782a2e80d0e8582ba6999a8cc737"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a292e782a2e80d0e8582ba6999a8cc737">multiplyRow</a> (int row, qreal value)</td></tr>
+<tr class="memdesc:a292e782a2e80d0e8582ba6999a8cc737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies every element of the given row by value, in place. Complexity: O(cols()).  <br /></td></tr>
 <tr class="memitem:afdf864c48534cf7e00563c72cadc32a2" id="r_afdf864c48534cf7e00563c72cadc32a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afdf864c48534cf7e00563c72cadc32a2">productByVector</a> (qreal in[], qreal out[], const bool &amp;leftMultiply=false)</td></tr>
-<tr class="memdesc:afdf864c48534cf7e00563c72cadc32a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the matrix-by-vector product Ax of this matrix Default product: Ax if leftMultiply=true then it returns the left product xA.  <br /></td></tr>
+<tr class="memdesc:afdf864c48534cf7e00563c72cadc32a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the matrix-by-vector product Ax of this matrix (or the left product xA, if leftMultiply is true). Used by <a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8" title="Implementation of the Power method which computes the leading eigenvector x of this matrix,...">powerIteration()</a>'s inner loop. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a82da700fb408afed1883cc70fcfed906" id="r_a82da700fb408afed1883cc70fcfed906"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a82da700fb408afed1883cc70fcfed906">pow</a> (int n, bool symmetry=false)</td></tr>
-<tr class="memdesc:a82da700fb408afed1883cc70fcfed906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the n-nth power of this matrix.  <br /></td></tr>
+<tr class="memdesc:a82da700fb408afed1883cc70fcfed906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>). Used by the walks-matrix code (XM = AM.pow(length)): entry (i,j) of AM^n counts the number of walks of length n from vertex i to vertex j.  <br /></td></tr>
 <tr class="memitem:a0f3d752d7b307582b5c34af1cc468df7" id="r_a0f3d752d7b307582b5c34af1cc468df7"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7">expBySquaring2</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;Y, <a class="el" href="class_matrix.html">Matrix</a> &amp;X, int n, bool symmetry=false)</td></tr>
 <tr class="memdesc:a0f3d752d7b307582b5c34af1cc468df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive algorithm implementing "Exponentiation by squaring". Also known as Fast Modulo Multiplication, this algorithm allows fast computation of a large power n of square matrix X.  <br /></td></tr>
 <tr class="memitem:a772e644ebf88c4db20141d9453892d84" id="r_a772e644ebf88c4db20141d9453892d84"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a772e644ebf88c4db20141d9453892d84">distanceManhattan</a> (qreal x[], qreal y[], int n)</td></tr>
 <tr class="memdesc:a772e644ebf88c4db20141d9453892d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function, takes to vectors and returns their Manhattan distance (also known as l1 norm, Taxicab or L1 distance) which is the sum of the absolute differences of their coordinates.  <br /></td></tr>
 <tr class="memitem:a68fc9e95ee2d9d9b18a12abdc95e27dd" id="r_a68fc9e95ee2d9d9b18a12abdc95e27dd"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a68fc9e95ee2d9d9b18a12abdc95e27dd">distanceEuclidean</a> (qreal x[], int n)</td></tr>
 <tr class="memdesc:a68fc9e95ee2d9d9b18a12abdc95e27dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function, computes the Euclideian length (also known as L2 distance) of a vector: if x = (x1 x2 ... xn), then ||x|| = square_root(x1*x1 + x2*x2 + ... + xn*xn).  <br /></td></tr>
-<tr class="memitem:a2ad3327d203585b13e758dff8e1ad4a8" id="r_a2ad3327d203585b13e758dff8e1ad4a8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ad3327d203585b13e758dff8e1ad4a8">powerIteration</a> (qreal x[], qreal &amp;xsum, qreal &amp;xmax, int &amp;xmaxi, qreal &amp;xmin, int &amp;xmini, const qreal eps, const int &amp;maxIter)</td></tr>
-<tr class="memdesc:a2ad3327d203585b13e758dff8e1ad4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the Power method which computes the leading eigenvector x of this matrix, that is the eigenvector corresponding to the largest positive eigenvalue. In the process, it also computes min and max values. Used by Eigenvector Centrality (EVC). We use C arrays instead of std::vectors or anything else, as we know from start the size (n) of vectors x and tmp This approach is faster than using std::vector when n &gt; 1000.  <br /></td></tr>
+<tr class="memitem:a9a6c70cc1421518b7a3a6c5c9398b3f8" id="r_a9a6c70cc1421518b7a3a6c5c9398b3f8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8">powerIteration</a> (qreal x[], qreal &amp;xsum, qreal &amp;xmax, int &amp;xmaxi, qreal &amp;xmin, int &amp;xmini, const qreal eps, const int &amp;maxIter, std::function&lt; bool()&gt; cancelCheck=nullptr, qreal *lambdaMax=nullptr)</td></tr>
+<tr class="memdesc:a9a6c70cc1421518b7a3a6c5c9398b3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the Power method which computes the leading eigenvector x of this matrix, that is the eigenvector corresponding to the largest positive eigenvalue. In the process, it also computes min and max values. Used by Eigenvector Centrality (EVC).  <br /></td></tr>
 <tr class="memitem:ab270bc5fddb676f9f54e4a29ed2162f9" id="r_ab270bc5fddb676f9f54e4a29ed2162f9"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab270bc5fddb676f9f54e4a29ed2162f9">degreeMatrix</a> ()</td></tr>
-<tr class="memdesc:ab270bc5fddb676f9f54e4a29ed2162f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Degree <a class="el" href="class_matrix.html">Matrix</a> of this matrix. The Degree <a class="el" href="class_matrix.html">Matrix</a> is diagonal matrix which contains information about the degree of each graph vertex (row of the adjacency matrix) Allows S = A.degreeMatrix().  <br /></td></tr>
+<tr class="memdesc:ab270bc5fddb676f9f54e4a29ed2162f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the degree matrix of this matrix: a diagonal matrix where S(i,i) is the sum of row i (i.e. vertex i's degree, if this is an adjacency matrix). Allows S = A.degreeMatrix(). Used by <a class="el" href="#a42bf675c54d9282b437a708ad86b37ad" title="Returns the Laplacian of this matrix: an N x N matrix L = D - A, where D is this matrix&#39;s degreeMatri...">laplacianMatrix()</a>. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a42bf675c54d9282b437a708ad86b37ad" id="r_a42bf675c54d9282b437a708ad86b37ad"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a42bf675c54d9282b437a708ad86b37ad">laplacianMatrix</a> ()</td></tr>
-<tr class="memdesc:a42bf675c54d9282b437a708ad86b37ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Laplacian of this matrix. The Laplacian is a NxN matrix L = D - A where D is the degree matrix of A Allows S = A.laplacianMatrix().  <br /></td></tr>
+<tr class="memdesc:a42bf675c54d9282b437a708ad86b37ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Laplacian of this matrix: an N x N matrix L = D - A, where D is this matrix's <a class="el" href="#ab270bc5fddb676f9f54e4a29ed2162f9" title="Returns the degree matrix of this matrix: a diagonal matrix where S(i,i) is the sum of row i (i....">degreeMatrix()</a>. Allows S = A.laplacianMatrix(). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:ad609fedfd61e93679803bb114e544569" id="r_ad609fedfd61e93679803bb114e544569"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad609fedfd61e93679803bb114e544569">transpose</a> ()</td></tr>
-<tr class="memdesc:ad609fedfd61e93679803bb114e544569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Transpose of this matrix Allows T = A.transpose().  <br /></td></tr>
+<tr class="memdesc:ad609fedfd61e93679803bb114e544569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transpose of this matrix (T(i,j) = this(j,i)). Allows T = A.transpose(). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a3caf2889831de95e3e045c60f8db0122" id="r_a3caf2889831de95e3e045c60f8db0122"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3caf2889831de95e3e045c60f8db0122">cocitationMatrix</a> ()</td></tr>
-<tr class="memdesc:a3caf2889831de95e3e045c60f8db0122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Cocitation <a class="el" href="class_matrix.html">Matrix</a> of this matrix (C = A * A^T) Allows T = A.cocitationMatrix().  <br /></td></tr>
+<tr class="memdesc:a3caf2889831de95e3e045c60f8db0122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cocitation matrix of this matrix (C = A * A^T). Allows T = A.cocitationMatrix(). C(i,j) counts how many nodes both i and j point to (or, read the other way with the transpose on the other side, how many nodes point to both i and j) - the basis of bibliometric cocitation/coupling analysis. Complexity: O(rows()^3) - <a class="el" href="#ad609fedfd61e93679803bb114e544569" title="Returns the transpose of this matrix (T(i,j) = this(j,i)). Allows T = A.transpose()....">transpose()</a> is O(N^2), but the <a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9" title="Matrix Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it i...">product()</a> call that follows dominates at O(N^3).  <br /></td></tr>
 <tr class="memitem:ab1ec5d4a1f06ad0c8a9787e73641a9a9" id="r_ab1ec5d4a1f06ad0c8a9787e73641a9a9"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9">inverseByGaussJordanElimination</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a)</td></tr>
-<tr class="memdesc:ab1ec5d4a1f06ad0c8a9787e73641a9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts given matrix A by Gauss Jordan elimination Input: matrix A Output: matrix A becomes unit matrix this becomes the invert of A and is returned back.  <br /></td></tr>
-<tr class="memitem:a30645e0907e08bd26a92607773d20f4d" id="r_a30645e0907e08bd26a92607773d20f4d"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a30645e0907e08bd26a92607773d20f4d">inverse</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a)</td></tr>
-<tr class="memdesc:a30645e0907e08bd26a92607773d20f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the inverse of given matrix a Allows b.inverse(a).  <br /></td></tr>
+<tr class="memdesc:ab1ec5d4a1f06ad0c8a9787e73641a9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identity, then applies the same row operations to both A and this that drive A to the identity - by the time A has become the identity, this matrix has become A's inverse. Input: matrix A. Output: A becomes the identity matrix; this matrix becomes A's inverse and is returned. Complexity: O(n^3).  <br /></td></tr>
+<tr class="memitem:aa31ea218e2858488f9a3cfe25c82883f" id="r_aa31ea218e2858488f9a3cfe25c82883f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f">inverse</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, std::function&lt; bool()&gt; cancelCheck=nullptr)</td></tr>
+<tr class="memdesc:aa31ea218e2858488f9a3cfe25c82883f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a). Decomposes a once via <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> (LU decomposition with partial pivoting), then solves n separate systems - one per column of the identity matrix - via <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a>, each giving one column of the inverse. This is the "lu" method createMatrixAdjacencyInverse() actually uses (as opposed to <a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9" title="Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identit...">inverseByGaussJordanElimination()</a>'s "gauss" method, which has no caller). If a is singular, <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> returns false and this matrix is left unmodified (see the weak-singularity-detection finding, #269, in roadmap_ws5_matrices_modernization.md). Complexity: O(n^3) for the one-time <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> decomposition, plus O(n) calls to <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> at O(n^2) each (one per column) - O(n^3) overall, same order as the decomposition itself.  <br /></td></tr>
 <tr class="memitem:a9c3c70b5ced4aff37457087c03e50052" id="r_a9c3c70b5ced4aff37457087c03e50052"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9c3c70b5ced4aff37457087c03e50052">solve</a> (qreal b[])</td></tr>
-<tr class="memdesc:a9c3c70b5ced4aff37457087c03e50052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the solution of the set of n linear equations A·x = b Allows A.solve(b).  <br /></td></tr>
-<tr class="memitem:a6a403dce8bf4ee2cbda5cded9b1ff1ab" id="r_a6a403dce8bf4ee2cbda5cded9b1ff1ab"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6a403dce8bf4ee2cbda5cded9b1ff1ab">ludcmp</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, const int &amp;n, int indx[], qreal &amp;d)</td></tr>
-<tr class="memdesc:a6a403dce8bf4ee2cbda5cded9b1ff1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself. Used in combination with lubksb to solve linear equations or invert a matrix.  <br /></td></tr>
+<tr class="memdesc:a9c3c70b5ced4aff37457087c03e50052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the linear system A*x = b, where A is this matrix, in place: b is overwritten with the solution vector x. Allows A.solve(b). Works on a private copy of this matrix (<a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> would otherwise decompose - and so overwrite - the caller's own data), via the same <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a>+<a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> pair <a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">inverse()</a> uses. Complexity: O(n^3), dominated by the one-time <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> decomposition (<a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> itself is only O(n^2)).  <br /></td></tr>
+<tr class="memitem:a6618e3850d78335c2f8cf61dd8d3f672" id="r_a6618e3850d78335c2f8cf61dd8d3f672"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672">ludcmp</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, const int &amp;n, int indx[], qreal &amp;d, std::function&lt; bool()&gt; cancelCheck=nullptr)</td></tr>
+<tr class="memdesc:a6618e3850d78335c2f8cf61dd8d3f672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself. Used in combination with lubksb to solve linear equations or invert a matrix. Complexity: O(n^3).  <br /></td></tr>
 <tr class="memitem:a50a87971f24dc5247a8711a36903b751" id="r_a50a87971f24dc5247a8711a36903b751"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a50a87971f24dc5247a8711a36903b751">lubksb</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, const int &amp;n, int indx[], qreal b[])</td></tr>
-<tr class="memdesc:a50a87971f24dc5247a8711a36903b751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangular and U upper triangular) by forward substitution and backsubstitution.  <br /></td></tr>
-<tr class="memitem:a721047b8a8639b22617cd7716de60f2d" id="r_a721047b8a8639b22617cd7716de60f2d"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a721047b8a8639b22617cd7716de60f2d">distancesMatrix</a> (const int &amp;metric, const QString varLocation, const bool &amp;diagonal, const bool &amp;considerWeights)</td></tr>
-<tr class="memdesc:a721047b8a8639b22617cd7716de60f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the dissimilarities matrix of the variables (rows, columns, both) of this matrix using the user defined metric.  <br /></td></tr>
-<tr class="memitem:a861fc71860b0c52566eb4b5e5ddd13c4" id="r_a861fc71860b0c52566eb4b5e5ddd13c4"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a861fc71860b0c52566eb4b5e5ddd13c4">similarityMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;AM, const int &amp;measure, const QString varLocation=&quot;Rows&quot;, const bool &amp;diagonal=false, const bool &amp;considerWeights=true)</td></tr>
-<tr class="memdesc:a861fc71860b0c52566eb4b5e5ddd13c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pair-wise matching score of the rows, columns or both of the given matrix AM, based on the given matching measure and returns the similarity matrix.  <br /></td></tr>
-<tr class="memitem:ab27c4f1d20bc4717d784b0176d61ff33" id="r_ab27c4f1d20bc4717d784b0176d61ff33"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab27c4f1d20bc4717d784b0176d61ff33">pearsonCorrelationCoefficients</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;AM, const QString &amp;varLocation=&quot;Rows&quot;, const bool &amp;diagonal=false)</td></tr>
-<tr class="memdesc:ab27c4f1d20bc4717d784b0176d61ff33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Pearson Correlation Coefficient of the rows or the columns of the given matrix AM.  <br /></td></tr>
+<tr class="memdesc:a50a87971f24dc5247a8711a36903b751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangular and U upper triangular) by forward substitution and backsubstitution. Complexity: O(n^2) - cheap compared to <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a>'s O(n^3) decomposition, which is exactly why <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> is only run once and <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> can then be reused per right-hand side.  <br /></td></tr>
+<tr class="memitem:a5dbc9a5a3d0a866e8892c8d57beef153" id="r_a5dbc9a5a3d0a866e8892c8d57beef153"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153">distancesMatrix</a> (const int &amp;metric, const QString varLocation, const bool &amp;diagonal, const bool &amp;considerWeights, std::function&lt; bool()&gt; cancelCheck=nullptr)</td></tr>
+<tr class="memdesc:a5dbc9a5a3d0a866e8892c8d57beef153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are, under the chosen metric, treating either this matrix's rows, its columns, or both (concatenated) as the "variables" being compared. Backs the Distances dialog's Euclidean/Manhattan/Jaccard/Hamming/Chebyshev options (see <a class="el" href="graph__reports_8cpp.html" title="Implements reporting, export, and analytical output generation for the Graph class.">graph_reports.cpp</a>'s MATRIX_DISTANCES_* cases).  <br /></td></tr>
+<tr class="memitem:aa0453b08cb3dc44ab71215808deb030f" id="r_aa0453b08cb3dc44ab71215808deb030f"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa0453b08cb3dc44ab71215808deb030f">similarityMatrix</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;AM, const int &amp;measure, const QString varLocation=&quot;Rows&quot;, const bool &amp;diagonal=false, const bool &amp;considerWeights=true, std::function&lt; bool()&gt; cancelCheck=nullptr)</td></tr>
+<tr class="memdesc:aa0453b08cb3dc44ab71215808deb030f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a pairwise similarity matrix SCM: SCM(i,k) is how alike variable i and variable k are, under the chosen matching measure, treating either AM's rows, its columns, or both (concatenated) as the "variables" being compared. The mirror image of <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a> (similarity instead of dissimilarity) - backs the Similarity dialog's simple-matching/Jaccard/Hamming/Cosine options.  <br /></td></tr>
+<tr class="memitem:a8e348e9f16cb4f77b8b0174935d8502e" id="r_a8e348e9f16cb4f77b8b0174935d8502e"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8e348e9f16cb4f77b8b0174935d8502e">pearsonCorrelationCoefficients</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;AM, const QString &amp;varLocation=&quot;Rows&quot;, const bool &amp;diagonal=false, std::function&lt; bool()&gt; cancelCheck=nullptr)</td></tr>
+<tr class="memdesc:a8e348e9f16cb4f77b8b0174935d8502e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Pearson product-moment correlation coefficient between every pair of variables (AM's rows or its columns, per varLocation), where each variable's "sample" is the sequence of values across the other axis. r ranges -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 meaning no linear correlation.  <br /></td></tr>
 <tr class="memitem:a22f283984f1ffea03ff83bd14c06529e" id="r_a22f283984f1ffea03ff83bd14c06529e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a22f283984f1ffea03ff83bd14c06529e">printHTMLTable</a> (QTextStream &amp;os, const bool markDiag=false, const bool &amp;plain=false, const bool &amp;printInfinity=true)</td></tr>
-<tr class="memdesc:a22f283984f1ffea03ff83bd14c06529e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints this matrix as HTML table WARNING: DO NOT USE WHEN THE NETWORK CONTAINS DISABLED/DELETED NODES It has the problem that the real actorNumber != elementLabel i.e. when we have deleted a node/vertex.  <br /></td></tr>
+<tr class="memdesc:a22f283984f1ffea03ff83bd14c06529e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes this matrix as an HTML table to os, one row of table cells per matrix row.  <br /></td></tr>
 <tr class="memitem:ad95d4b525ae65103fff67a94e2d4bcd4" id="r_ad95d4b525ae65103fff67a94e2d4bcd4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad95d4b525ae65103fff67a94e2d4bcd4">printMatrixConsole</a> (bool debug=true)</td></tr>
-<tr class="memdesc:ad95d4b525ae65103fff67a94e2d4bcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints this matrix to stderr or stdout.  <br /></td></tr>
+<tr class="memdesc:ad95d4b525ae65103fff67a94e2d4bcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints this matrix as plain text, one line per row, cells right-aligned to a fixed width. Cells &gt;= RAND_MAX (unreachable/no edge) print as "x" instead of the raw number. A quick way to eyeball a matrix's contents while debugging. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a67ed03d8373835e23cc4ca5a4c9b38e6" id="r_a67ed03d8373835e23cc4ca5a4c9b38e6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a67ed03d8373835e23cc4ca5a4c9b38e6">illDefined</a> ()</td></tr>
-<tr class="memdesc:a67ed03d8373835e23cc4ca5a4c9b38e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if matrix is ill-defined (contains at least an inf element).  <br /></td></tr>
+<tr class="memdesc:a67ed03d8373835e23cc4ca5a4c9b38e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether this matrix is "ill-defined": whether any cell holds RAND_MAX, the sentinel value used elsewhere in the codebase for "infinite"/unreachable (e.g. a distance matrix entry for a disconnected pair).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a96fc7d93be8c81c6a76632ff5e870872" id="r_a96fc7d93be8c81c6a76632ff5e870872"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a96fc7d93be8c81c6a76632ff5e870872">rebuildRowPtr</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a60c5ba9f9ca2c6fa3655133f6ef0acdb" id="r_a60c5ba9f9ca2c6fa3655133f6ef0acdb"><td class="memItemLeft"><a class="el" href="class_matrix_row.html">MatrixRow</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a60c5ba9f9ca2c6fa3655133f6ef0acdb">row</a></td></tr>
+<tr class="memitem:a178cc06960bcfd0417b35e2e822335af" id="r_a178cc06960bcfd0417b35e2e822335af"><td class="memItemLeft">qreal *&#160;</td><td class="memItemRight"><a class="el" href="#a178cc06960bcfd0417b35e2e822335af">m_data</a></td></tr>
+<tr class="memitem:ab0a1665c11bd43506eba978dfa240290" id="r_ab0a1665c11bd43506eba978dfa240290"><td class="memItemLeft">qreal **&#160;</td><td class="memItemRight"><a class="el" href="#ab0a1665c11bd43506eba978dfa240290">m_rowPtr</a></td></tr>
 <tr class="memitem:a5bb8d22211af56adfd2a7c8b7cc6f5d2" id="r_a5bb8d22211af56adfd2a7c8b7cc6f5d2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5bb8d22211af56adfd2a7c8b7cc6f5d2">m_rows</a></td></tr>
 <tr class="memitem:a5c66cddcf56fa64732c07bcaf88077b5" id="r_a5c66cddcf56fa64732c07bcaf88077b5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5c66cddcf56fa64732c07bcaf88077b5">m_cols</a></td></tr>
 </table><table class="memberdecls">
@@ -239,7 +233,11 @@ Friends</h2></td></tr>
 <tr class="memitem:a0679b655926c60b09c665c5654374c11" id="r_a0679b655926c60b09c665c5654374c11"><td class="memItemLeft">QTextStream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0679b655926c60b09c665c5654374c11">operator&lt;&lt;</a> (QTextStream &amp;os, <a class="el" href="class_matrix.html">Matrix</a> &amp;m)</td></tr>
 <tr class="memdesc:a0679b655926c60b09c665c5654374c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints matrix m to given textstream.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.), used throughout <a class="el" href="namespace_soc_net_v.html">SocNetV</a> wherever a network needs to be represented or analyzed as an N x M grid of numbers. </p>
+<p>Storage: 2D access on a 1D array, via a precomputed row-pointer index. Every cell lives in one single contiguous allocation (<span class="tt"><a class="el" href="#a178cc06960bcfd0417b35e2e822335af">m_data</a></span>, row-major: row 0's cells, then row 1's, and so on) - one allocation total for the whole grid, rather than one per row. A second, much smaller array (<span class="tt"><a class="el" href="#ab0a1665c11bd43506eba978dfa240290">m_rowPtr</a></span>) records where each row starts inside <span class="tt"><a class="el" href="#a178cc06960bcfd0417b35e2e822335af">m_data</a></span> - one pointer per row, computed once whenever the matrix is built or resized (see <a class="el" href="#a96fc7d93be8c81c6a76632ff5e870872">rebuildRowPtr()</a>). Reading or writing cell (r,c) is then: look up row r's starting address in <span class="tt"><a class="el" href="#ab0a1665c11bd43506eba978dfa240290">m_rowPtr</a></span> (one array lookup), then step c cells forward from it (one pointer offset) - no multiplication needed at access time, no matter how large the matrix is.</p>
+<p><span class="tt">operator[]</span> (the <span class="tt">a[i][j]</span> syntax) returns a raw <span class="tt">qreal*</span> into <span class="tt"><a class="el" href="#a178cc06960bcfd0417b35e2e822335af">m_data</a></span> via <span class="tt"><a class="el" href="#ab0a1665c11bd43506eba978dfa240290">m_rowPtr</a></span>, because the LU-decomposition/inversion code (<span class="tt"><a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a></span>, <span class="tt"><a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a></span>, <span class="tt"><a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">inverse()</a></span>) needs to modify cells in place with compound assignment (<span class="tt">a[i][j] -= ...</span>), which <span class="tt"><a class="el" href="#acf9348504c25d9f54b065c567c9deaef">item()</a></span>/ <span class="tt"><a class="el" href="#a62f17622afe35fa3f6a0e07fcf08b8d6">setItem()</a></span> (a plain value-returning getter and a separate setter) can't express. Everything else in the codebase reads/writes exclusively through <span class="tt"><a class="el" href="#acf9348504c25d9f54b065c567c9deaef">item()</a></span>/<span class="tt"><a class="el" href="#a62f17622afe35fa3f6a0e07fcf08b8d6">setItem()</a></span>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9b5cc0016481d9e834a1b116507ca5f0" name="a9b5cc0016481d9e834a1b116507ca5f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b5cc0016481d9e834a1b116507ca5f0">&#9670;&#160;</a></span>Matrix() <span class="overload">[1/2]</span></h2>
 
@@ -259,11 +257,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a9b5cc0016481d9e834a1b116507ca5f0" title="Matrix::Matrix Default constructor - creates a Matrix of given dimension (0x0) Use resize(m,...">Matrix::Matrix</a> Default constructor - creates a <a class="el" href="class_matrix.html">Matrix</a> of given dimension (0x0) Use resize(m,n) or zeromatrix(m,n) to resize it. </p>
+<p>Constructs a rowDim x colDim matrix, all cells zero-initialized. Defaults to 0x0 (an empty matrix) - use <a class="el" href="#a3f46f39a935b8209013bb6ba1211d3a2" title="Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized.">resize()</a>/zeroMatrix()/identityMatrix() to size it later. </p>
 <p>default constructor - default rows = cols = 0</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Actors</td><td></td></tr>
+    <tr><td class="paramname">rowDim</td><td></td></tr>
+    <tr><td class="paramname">colDim</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -285,7 +284,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a9b5cc0016481d9e834a1b116507ca5f0" title="Matrix::Matrix Default constructor - creates a Matrix of given dimension (0x0) Use resize(m,...">Matrix::Matrix</a> Copy constructor. Creates a <a class="el" href="class_matrix.html">Matrix</a> identical to <a class="el" href="class_matrix.html">Matrix</a> b Allows <a class="el" href="class_matrix.html">Matrix</a> a=b declaration Every <a class="el" href="class_matrix_row.html">MatrixRow</a> object holds max_int=32762. </p>
+<p>Copy constructor: creates a <a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> identical to (an independent copy of) b. Allows the <span class="tt"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> a = b</span> declaration form. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td></td></tr>
@@ -310,7 +309,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#a9b1c3627f573d78a2f08623fdfef990f" title="Matrix::~Matrix Destructor.">Matrix::~Matrix</a> Destructor. </p>
+<p>Destructor: frees the data buffer and the row-pointer index. </p>
 
 </div>
 </div>
@@ -330,7 +329,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clears data. </p>
+<p>Frees this matrix's data buffer and row-pointer index and resets it to 0x0. Called at the start of <a class="el" href="#a3f46f39a935b8209013bb6ba1211d3a2" title="Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized.">resize()</a>/identityMatrix()/zeroMatrix()/operator= before they allocate a fresh buffer at the new size. </p>
 
 </div>
 </div>
@@ -339,6 +338,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Matrix::clearItem </td>
@@ -351,16 +353,12 @@ Friends</h2></td></tr>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Clears the (r,c) matrix element. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">r</td><td></td></tr>
-    <tr><td class="paramname">c</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -379,14 +377,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Cocitation <a class="el" href="class_matrix.html">Matrix</a> of this matrix (C = A * A^T) Allows T = A.cocitationMatrix(). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> T </dd></dl>
+<p>Returns the cocitation matrix of this matrix (C = A * A^T). Allows T = A.cocitationMatrix(). C(i,j) counts how many nodes both i and j point to (or, read the other way with the transpose on the other side, how many nodes point to both i and j) - the basis of bibliometric cocitation/coupling analysis. Complexity: O(rows()^3) - <a class="el" href="#ad609fedfd61e93679803bb114e544569" title="Returns the transpose of this matrix (T(i,j) = this(j,i)). Allows T = A.transpose()....">transpose()</a> is O(N^2), but the <a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9" title="Matrix Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it i...">product()</a> call that follows dominates at O(N^3). </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> T </dd></dl>
 
 </div>
 </div>
@@ -430,14 +422,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Degree <a class="el" href="class_matrix.html">Matrix</a> of this matrix. The Degree <a class="el" href="class_matrix.html">Matrix</a> is diagonal matrix which contains information about the degree of each graph vertex (row of the adjacency matrix) Allows S = A.degreeMatrix(). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> S </dd></dl>
+<p>Returns the degree matrix of this matrix: a diagonal matrix where S(i,i) is the sum of row i (i.e. vertex i's degree, if this is an adjacency matrix). Allows S = A.degreeMatrix(). Used by <a class="el" href="#a42bf675c54d9282b437a708ad86b37ad" title="Returns the Laplacian of this matrix: an N x N matrix L = D - A, where D is this matrix&#39;s degreeMatri...">laplacianMatrix()</a>. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> S </dd></dl>
 
 </div>
 </div>
@@ -456,7 +442,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Deletes row and column and shifts rows and cols accordingly. </p>
+<p>Deletes row erased and column erased from this (square) matrix, shifting every later row/column back by one to close the gap. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()) - rebuilds the whole matrix into a new, smaller buffer (see the comment inside). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">erased</td><td>row/col to delete </td></tr>
@@ -533,8 +519,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a721047b8a8639b22617cd7716de60f2d" name="a721047b8a8639b22617cd7716de60f2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a721047b8a8639b22617cd7716de60f2d">&#9670;&#160;</a></span>distancesMatrix()</h2>
+<a id="a5dbc9a5a3d0a866e8892c8d57beef153" name="a5dbc9a5a3d0a866e8892c8d57beef153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dbc9a5a3d0a866e8892c8d57beef153">&#9670;&#160;</a></span>distancesMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,22 +543,27 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>considerWeights</em></span>&#160;)</td>
+          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>considerWeights</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes the dissimilarities matrix of the variables (rows, columns, both) of this matrix using the user defined metric. </p>
+<p>Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are, under the chosen metric, treating either this matrix's rows, its columns, or both (concatenated) as the "variables" being compared. Backs the Distances dialog's Euclidean/Manhattan/Jaccard/Hamming/Chebyshev options (see <a class="el" href="graph__reports_8cpp.html" title="Implements reporting, export, and analytical output generation for the Graph class.">graph_reports.cpp</a>'s MATRIX_DISTANCES_* cases). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">metric</td><td></td></tr>
-    <tr><td class="paramname">varLocation</td><td></td></tr>
-    <tr><td class="paramname">diagonal</td><td></td></tr>
-    <tr><td class="paramname">considerWeights</td><td></td></tr>
+    <tr><td class="paramname">metric</td><td>One of the METRIC_* constants declared at the top of <a class="el" href="matrix_8h.html" title="Declares the Matrix class for handling adjacency and sociomatrix data structures in network analysis.">matrix.h</a> (Jaccard, Hamming, Euclidean, Manhattan, or Chebyshev - simple matching and Pearson are handled by <a class="el" href="#aa0453b08cb3dc44ab71215808deb030f" title="Computes a pairwise similarity matrix SCM: SCM(i,k) is how alike variable i and variable k are,...">similarityMatrix()</a>/pearsonCorrelationCoefficients() instead, not here). </td></tr>
+    <tr><td class="paramname">varLocation</td><td>"Rows", "Columns", or "Both" - which axis holds the variables being compared. </td></tr>
+    <tr><td class="paramname">diagonal</td><td>If true, i==k / k==j comparisons are included; if false, they're skipped (a variable is never compared against itself). </td></tr>
+    <tr><td class="paramname">considerWeights</td><td>Currently unused (Q_UNUSED) - accepted for interface symmetry with <a class="el" href="#aa0453b08cb3dc44ab71215808deb030f" title="Computes a pairwise similarity matrix SCM: SCM(i,k) is how alike variable i and variable k are,...">similarityMatrix()</a>/pearsonCorrelationCoefficients(), which do use it. Complexity: O(N^2 * M), where N is the number of variables being compared and M is the length of each variable's sample (the other axis) - a triple-nested loop, effectively O(N^3) when varLocation is "Rows" or "Columns" (M==N there). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> T, the dissimilarities matrix. </dd></dl>
 
 </div>
 </div>
@@ -615,8 +606,8 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a>&amp;</dd></dl>
-<p>On first call, parameters must be: Y=I, X the orginal matrix to power and n the power. Returns the power of matrix X to this object. For n &gt; 4 it is more efficient than naively multiplying the base with itself repeatedly. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a>&amp;</dd></dl>
+<p>On first call, parameters must be: Y=I, X the orginal matrix to power and n the power. Returns the power of matrix X to this object. For n &gt; 4 it is more efficient than naively multiplying the base with itself repeatedly: O(log(n)) matrix multiplications instead of O(n), each multiplication itself O(rows()^3). </p>
 
 </div>
 </div>
@@ -635,7 +626,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fills a matrix with a given value. </p>
+<p>Fills every cell of this matrix with the given value. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td></td></tr>
@@ -669,11 +660,12 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>finds Min-Max values in current <a class="el" href="class_matrix.html">Matrix</a> </p>
+<p>Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values found, plus whether any cell has a fractional (non-integer) part - used by report writers to decide display precision and, for distance matrices, whether the max value is RAND_MAX (meaning some pair is unreachable). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">min</td><td>value in the matrix </td></tr>
-    <tr><td class="paramname">max</td><td>value Complexity: O(n^2) </td></tr>
+    <tr><td class="paramname">min</td><td>Output: the smallest value found. </td></tr>
+    <tr><td class="paramname">max</td><td>Output: the largest value found. </td></tr>
+    <tr><td class="paramname">hasRealNumbers</td><td>Output: true if any cell has a non-zero fractional part. </td></tr>
   </table>
   </dd>
 </dl>
@@ -720,34 +712,39 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if matrix is ill-defined (contains at least an inf element). </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Checks whether this matrix is "ill-defined": whether any cell holds RAND_MAX, the sentinel value used elsewhere in the codebase for "infinite"/unreachable (e.g. a distance matrix entry for a disconnected pair). </p>
+<dl class="section return"><dt>Returns</dt><dd>true if at least one cell is RAND_MAX or greater; false otherwise. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()) worst case, but returns as soon as one such cell is found. </dd></dl>
 
 </div>
 </div>
-<a id="a30645e0907e08bd26a92607773d20f4d" name="a30645e0907e08bd26a92607773d20f4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30645e0907e08bd26a92607773d20f4d">&#9670;&#160;</a></span>inverse()</h2>
+<a id="aa31ea218e2858488f9a3cfe25c82883f" name="aa31ea218e2858488f9a3cfe25c82883f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31ea218e2858488f9a3cfe25c82883f">&#9670;&#160;</a></span>inverse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::inverse </td>
+          <td class="memname">bool Matrix::inverse </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes and returns the inverse of given matrix a Allows b.inverse(a). </p>
+<p>Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a). Decomposes a once via <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> (LU decomposition with partial pivoting), then solves n separate systems - one per column of the identity matrix - via <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a>, each giving one column of the inverse. This is the "lu" method createMatrixAdjacencyInverse() actually uses (as opposed to <a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9" title="Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identit...">inverseByGaussJordanElimination()</a>'s "gauss" method, which has no caller). If a is singular, <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> returns false and this matrix is left unmodified (see the weak-singularity-detection finding, #269, in roadmap_ws5_matrices_modernization.md). Complexity: O(n^3) for the one-time <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> decomposition, plus O(n) calls to <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> at O(n^2) each (one per column) - O(n^3) overall, same order as the decomposition itself. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">cancelCheck</td><td>Optional callback, also forwarded to <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> (see its own doc) since <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a>'s one-time O(n^3) decomposition is what this method actually spends most of its time in - checked there once per outer-loop iteration, and here once per column, before that column's <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> call; if it returns true, the loop stops early and this matrix holds only the columns already solved (the rest are left at whatever <a class="el" href="#a3f46f39a935b8209013bb6ba1211d3a2" title="Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized.">resize()</a>/identityMatrix() initialized them to - not a valid inverse). Defaults to nullptr (never cancels), so existing callers are unaffected. Callers must check their own cancellation flag after calling this, not infer it from the return value - <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> returns false identically for "canceled" and "singular", and this method has no way to tell those apart either. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if a's inverse was fully computed into this matrix; false if a is singular (Fix #269: now a real relative-tolerance pivot check in <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a>, not a weak after-the-fact scan for nonzero entries) or cancelCheck fired, in which case this matrix is left unmodified/partial - callers must not treat its contents as valid without checking the return value first. </dd></dl>
 
 </div>
 </div>
@@ -766,14 +763,15 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Inverts given matrix A by Gauss Jordan elimination Input: matrix A Output: matrix A becomes unit matrix this becomes the invert of A and is returned back. </p>
+<p>Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identity, then applies the same row operations to both A and this that drive A to the identity - by the time A has become the identity, this matrix has become A's inverse. Input: matrix A. Output: A becomes the identity matrix; this matrix becomes A's inverse and is returned. Complexity: O(n^3). </p>
+<dl class="section note"><dt>Note</dt><dd>Unreachable in the current codebase - createMatrixAdjacencyInverse()'s only caller always passes "lu" (<a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">Matrix::inverse()</a>/ludcmp(), below), never "gauss". Kept rather than removed: matrix inversion is numerically sensitive code, and a second independent implementation is useful for cross-checking even while unused. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>inverse matrix of A </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>This matrix, now holding A's inverse. </dd></dl>
 
 </div>
 </div>
@@ -782,6 +780,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">qreal Matrix::item </td>
@@ -794,17 +795,12 @@ Friends</h2></td></tr>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Returns the (r,c) matrix element. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">r</td><td></td></tr>
-    <tr><td class="paramname">c</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -823,14 +819,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Laplacian of this matrix. The Laplacian is a NxN matrix L = D - A where D is the degree matrix of A Allows S = A.laplacianMatrix(). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> S </dd></dl>
+<p>Returns the Laplacian of this matrix: an N x N matrix L = D - A, where D is this matrix's <a class="el" href="#ab270bc5fddb676f9f54e4a29ed2162f9" title="Returns the degree matrix of this matrix: a diagonal matrix where S(i,i) is the sum of row i (i....">degreeMatrix()</a>. Allows S = A.laplacianMatrix(). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> S </dd></dl>
 
 </div>
 </div>
@@ -863,7 +853,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangular and U upper triangular) by forward substitution and backsubstitution. </p>
+<p>Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangular and U upper triangular) by forward substitution and backsubstitution. Complexity: O(n^2) - cheap compared to <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a>'s O(n^3) decomposition, which is exactly why <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> is only run once and <a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> can then be reused per right-hand side. </p>
 <p>Given A = L·U we have A · x = (L · U) · x = L · (U · x) = b So, this routine first solves L · y = b for the vector y by forward substitution and then solves U · x = y for the vector x using backsubstitution</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -880,8 +870,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a403dce8bf4ee2cbda5cded9b1ff1ab" name="a6a403dce8bf4ee2cbda5cded9b1ff1ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a403dce8bf4ee2cbda5cded9b1ff1ab">&#9670;&#160;</a></span>ludcmp()</h2>
+<a id="a6618e3850d78335c2f8cf61dd8d3f672" name="a6618e3850d78335c2f8cf61dd8d3f672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6618e3850d78335c2f8cf61dd8d3f672">&#9670;&#160;</a></span>ludcmp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -904,18 +894,24 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+          <td class="paramtype">qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself. Used in combination with lubksb to solve linear equations or invert a matrix. </p>
+<p>Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself. Used in combination with lubksb to solve linear equations or invert a matrix. Complexity: O(n^3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>input matrix n x n and output arranged as in Knuth's equation (2.3.14) </td></tr>
     <tr><td class="paramname">n</td><td>input size of matrix </td></tr>
     <tr><td class="paramname">indx</td><td>output vector, records the row permutation effected by the partial pivoting </td></tr>
     <tr><td class="paramname">d</td><td>output as ±1 depending on whether the number of row interchanges was even or odd </td></tr>
+    <tr><td class="paramname">cancelCheck</td><td>Optional callback, checked once per outer-loop iteration in both the O(n^2) scaling pass and the O(n^3) Crout's-method pass; if it returns true, decomposition stops early and this returns false (same as the singular-matrix case - callers must not distinguish the two from this return value alone; <a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">inverse()</a>'s post-cancelCheck() logic is what does that, not this). Defaults to nullptr (never cancels), so existing callers are unaffected. Added because <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> is the dominant O(n^3) cost <a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">inverse()</a> wraps - without this, <a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">inverse()</a>'s own per-column cancelCheck (see below) can never fire in time, since it's only reached after <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> already finished (see WS15 P1, roadmap_ws15_cancellation_progress_unification.md). </td></tr>
   </table>
   </dd>
 </dl>
@@ -943,10 +939,10 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Multiply every element of row by value. </p>
+<p>Multiplies every element of the given row by value, in place. Complexity: O(cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="#a60c5ba9f9ca2c6fa3655133f6ef0acdb">row</a></td><td></td></tr>
+    <tr><td class="paramname">row</td><td></td></tr>
     <tr><td class="paramname">value</td><td></td></tr>
   </table>
   </dd>
@@ -969,7 +965,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Scalar Multiplication. Multiplies this by qreal f and returns the product matrix of the same dim Allows to use P.multiplyScalar(f). </p>
+<p>Multiplies every cell of this matrix, in place, by scalar f. Allows P.multiplyScalar(f). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td></td></tr>
@@ -1018,43 +1014,18 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5" title="finds Min-Max values in current Matrix">Matrix::findMinMaxValues</a> only it skips r==c. </p>
+<p>Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5" title="Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values ...">findMinMaxValues()</a>, but skips the diagonal (r==c) and also reports which pair of distinct vertices achieved the min/max - used to find the closest and farthest pair of nodes in a distance/dissimilarity matrix (e.g. by hierarchical clustering, which repeatedly needs "which two clusters are nearest right now"). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">min</td><td>value. If (r,c) = minimum, it mean that neighbors r and c are the nearest in the matrix/network </td></tr>
-    <tr><td class="paramname">max</td><td>value Complexity: O(n^2) </td></tr>
+    <tr><td class="paramname">min</td><td>Output: the smallest off-diagonal value found. </td></tr>
+    <tr><td class="paramname">max</td><td>Output: the largest off-diagonal value found. </td></tr>
+    <tr><td class="paramname">imin</td><td>Output: row of the cell where the minimum was found. </td></tr>
+    <tr><td class="paramname">jmin</td><td>Output: column of the cell where the minimum was found. </td></tr>
+    <tr><td class="paramname">imax</td><td>Output: row of the cell where the maximum was found. </td></tr>
+    <tr><td class="paramname">jmax</td><td>Output: column of the cell where the maximum was found. </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ae81491e32603914aae2e302a3594faf8" name="ae81491e32603914aae2e302a3594faf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae81491e32603914aae2e302a3594faf8">&#9670;&#160;</a></span>operator()()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">qreal Matrix::operator() </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1073,15 +1044,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html">Matrix</a> multiplication, operator * Multiplies (right) this matrix with given matrix b. Allows P = A * B where A,B of same dimension and returns product as a reference to the calling object. </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> multiplication, operator *. Allows P = A * B, where A is this (m x n) and B is b (n x p); returns the m x p product P. Complexity: O(m*n*p). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td></td></tr>
-    <tr><td class="paramname">symmetry</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> P </dd></dl>
 
 </div>
 </div>
@@ -1100,15 +1070,13 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Multiplies (right) this m x n matrix with given n x p matrix b and returns the product in the calling matrix which becomes an m x p matrix. This convenience operator *= allows A *= B. </p>
+<p>Multiplies (right) this m x n matrix with given n x p matrix b, replacing this matrix's own contents with the m x p product. Allows A *= B. Complexity: O(m*n*p). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td></td></tr>
-    <tr><td class="paramname">symmetry</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -1127,14 +1095,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html">Matrix</a> addition, operator + Adds this matrix and B of the same dim and returns the sum S Allows S = A+B. </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S. Allows S = A + B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> S </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> S </dd></dl>
 
 </div>
 </div>
@@ -1153,14 +1121,13 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="#abb3c8d544c682255888602203ad4f76c" title="Matrix::operator += Matrix add another matrix: += Adds to this matrix another matrix B of the same di...">Matrix::operator +=</a> <a class="el" href="class_matrix.html">Matrix</a> add another matrix: += Adds to this matrix another matrix B of the same dim and returns to this Allows A+=B. </p>
+<p>Adds matrix b to this matrix, in place, cell by cell. Allows A += B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>this </dd></dl>
 
 </div>
 </div>
@@ -1179,14 +1146,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html">Matrix</a> subtraction, operator - Subtract this matrix - B of the same dim and returns the result S Allows S = A-B. </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> subtraction, operator -. Subtracts b (same dimensions) from this matrix and returns the result S. Allows S = A - B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">b</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> S </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> S </dd></dl>
 
 </div>
 </div>
@@ -1205,7 +1172,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html">Matrix</a> equality/assignment , operator = Allows copying a matrix onto another using b=a where b,a matrices Equals two matrices. </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> equality/assignment , operator = Allows copying a matrix onto another using b=a where b,a matrices Equals two matrices. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td></td></tr>
@@ -1216,8 +1183,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aaa4a1562ebf9d783834024dc88131631" name="aaa4a1562ebf9d783834024dc88131631"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa4a1562ebf9d783834024dc88131631">&#9670;&#160;</a></span>operator[]()</h2>
+<a id="a5515bab8c32ce3737d9ab8837af1a09c" name="a5515bab8c32ce3737d9ab8837af1a09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5515bab8c32ce3737d9ab8837af1a09c">&#9670;&#160;</a></span>operator[]()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1226,7 +1193,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix_row.html">MatrixRow</a> &amp; Matrix::operator[] </td>
+          <td class="memname">qreal * Matrix::operator[] </td>
           <td>(</td>
           <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
           <td></td>
@@ -1241,8 +1208,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab27c4f1d20bc4717d784b0176d61ff33" name="ab27c4f1d20bc4717d784b0176d61ff33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab27c4f1d20bc4717d784b0176d61ff33">&#9670;&#160;</a></span>pearsonCorrelationCoefficients()</h2>
+<a id="a8e348e9f16cb4f77b8b0174935d8502e" name="a8e348e9f16cb4f77b8b0174935d8502e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e348e9f16cb4f77b8b0174935d8502e">&#9670;&#160;</a></span>pearsonCorrelationCoefficients()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1260,19 +1227,26 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>diagonal</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>diagonal</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes the Pearson Correlation Coefficient of the rows or the columns of the given matrix AM. </p>
+<p>Computes the Pearson product-moment correlation coefficient between every pair of variables (AM's rows or its columns, per varLocation), where each variable's "sample" is the sequence of values across the other axis. r ranges -1 (perfect negative correlation) to +1 (perfect positive correlation), with 0 meaning no linear correlation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">AM</td><td><a class="el" href="class_matrix.html">Matrix</a> </td></tr>
+    <tr><td class="paramname">AM</td><td>Input matrix whose rows or columns are being compared. </td></tr>
+    <tr><td class="paramname">varLocation</td><td>"Rows" or "Columns" - which axis holds the variables being compared. </td></tr>
+    <tr><td class="paramname">diagonal</td><td>If true, i==k comparisons are included (always r=1, trivially); if false, a variable is never compared against itself. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> nxn with PPC values for every pair of rows/columns of AM </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> N x N (N = number of variables being compared) of Pearson r values. Complexity: O(N^2 * M), same shape as <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a> - see its complexity note. </dd></dl>
 
 </div>
 </div>
@@ -1295,20 +1269,21 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the n-nth power of this matrix. </p>
+<p>Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>). Used by the walks-matrix code (XM = AM.pow(length)): entry (i,j) of AM^n counts the number of walks of length n from vertex i to vertex j. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td></td></tr>
-    <tr><td class="paramname">symmetry</td><td></td></tr>
+    <tr><td class="paramname">symmetry</td><td>Passed straight through to <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>/product() - see <a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9" title="Matrix Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it i...">product()</a>'s own</td></tr>
+    <tr><td class="paramname">symmetry</td><td>for what it does. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>This matrix, raised to the n-th power. Complexity: O(log(n)) matrix multiplications, each O(rows()^3) - see <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a2ad3327d203585b13e758dff8e1ad4a8" name="a2ad3327d203585b13e758dff8e1ad4a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ad3327d203585b13e758dff8e1ad4a8">&#9670;&#160;</a></span>powerIteration()</h2>
+<a id="a9a6c70cc1421518b7a3a6c5c9398b3f8" name="a9a6c70cc1421518b7a3a6c5c9398b3f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6c70cc1421518b7a3a6c5c9398b3f8">&#9670;&#160;</a></span>powerIteration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1351,12 +1326,24 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>maxIter</em></span>&#160;)</td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>maxIter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qreal *</td>          <td class="paramname"><span class="paramname"><em>lambdaMax</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of the Power method which computes the leading eigenvector x of this matrix, that is the eigenvector corresponding to the largest positive eigenvalue. In the process, it also computes min and max values. Used by Eigenvector Centrality (EVC). We use C arrays instead of std::vectors or anything else, as we know from start the size (n) of vectors x and tmp This approach is faster than using std::vector when n &gt; 1000. </p>
+<p>Implementation of the Power method which computes the leading eigenvector x of this matrix, that is the eigenvector corresponding to the largest positive eigenvalue. In the process, it also computes min and max values. Used by Eigenvector Centrality (EVC). </p>
+<p>Meaning: start from any vector x, repeatedly multiply by the matrix and rescale back to unit length - the vector converges to the eigenvector for the matrix's largest eigenvalue (lambda_max), which is exactly the vector eigenvector centrality reports.</p>
+<p>We use C arrays instead of std::vectors or anything else, as we know from start the size (n) of vectors x and tmp This approach is faster than using std::vector when n &gt; 1000 </p><dl class="section note"><dt>Note</dt><dd>Uses n = <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a> throughout (for tmp's size, and as both the row and column count passed to <a class="el" href="#afdf864c48534cf7e00563c72cadc32a2" title="Calculates the matrix-by-vector product Ax of this matrix (or the left product xA,...">productByVector()</a>/distanceEuclidean()/distanceManhattan()) - correct only for square matrices. Unlike <a class="el" href="#a82da700fb408afed1883cc70fcfed906" title="Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see expBySquaring2())....">pow()</a>, this method does not check <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>==<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a> itself; it relies on the caller (centralityEigenvector()) only ever passing a square (adjacency) matrix. Complexity: O(maxIter * n^2) - each iteration is one O(n^2) <a class="el" href="#afdf864c48534cf7e00563c72cadc32a2" title="Calculates the matrix-by-vector product Ax of this matrix (or the left product xA,...">productByVector()</a> call plus a handful of O(n) passes; iterates until the vector's Manhattan distance to its previous value drops below eps, or maxIter is reached. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td></td></tr>
@@ -1367,6 +1354,8 @@ Friends</h2></td></tr>
     <tr><td class="paramname">xmini</td><td></td></tr>
     <tr><td class="paramname">eps</td><td></td></tr>
     <tr><td class="paramname">maxIter</td><td></td></tr>
+    <tr><td class="paramname">cancelCheck</td><td>Optional callback checked once per iteration; if it returns true, the loop stops early (x/xsum/xmax/xmin reflect the last completed iteration, not a full result). Defaults to nullptr (never cancels), so existing callers are unaffected. </td></tr>
+    <tr><td class="paramname">lambdaMax</td><td>Optional out param: the largest eigenvalue itself, read off from the pre-normalization vector length on the final iteration (norm(Ax) ~= lambda_max once x has converged to unit length). Correctly reports exactly 0 for a nilpotent matrix (any directed acyclic graph - no cycles at all), meaning "no convergence bound, any value works" - this is the genuine mathematical answer, not a numerical-error placeholder (a symmetric/undirected adjacency matrix can never be nilpotent unless it's the zero matrix, so this only ever arises for directed graphs). Callers that only need the eigenvector (e.g. centralityEigenvector()) can leave this nullptr; callers that need to validate a convergence bound like Katz's alpha &lt; 1/lambda_max need it. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1402,15 +1391,18 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints this matrix as HTML table WARNING: DO NOT USE WHEN THE NETWORK CONTAINS DISABLED/DELETED NODES It has the problem that the real actorNumber != elementLabel i.e. when we have deleted a node/vertex. </p>
+<p>Writes this matrix as an HTML table to os, one row of table cells per matrix row. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Do not use on a network with disabled/deleted nodes - row/column headers are generated from a running counter, not the real vertex number, so they go out of sync with actual actor numbers once any vertex has been deleted. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">os</td><td></td></tr>
-    <tr><td class="paramname">debug</td><td></td></tr>
+    <tr><td class="paramname">os</td><td>Output stream to write the HTML table to. </td></tr>
+    <tr><td class="paramname">markDiag</td><td>If true, diagonal cells get distinct styling. </td></tr>
+    <tr><td class="paramname">plain</td><td>If true, skip HTML styling/highlighting (a plain table). </td></tr>
+    <tr><td class="paramname">printInfinity</td><td>If true, RAND_MAX cells print as the infinity symbol (unreachable/no edge) instead of the raw number. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </dd></dl>
 
 </div>
 </div>
@@ -1429,8 +1421,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints this matrix to stderr or stdout. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Prints this matrix as plain text, one line per row, cells right-aligned to a fixed width. Cells &gt;= RAND_MAX (unreachable/no edge) print as "x" instead of the raw number. A quick way to eyeball a matrix's contents while debugging. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">debug</td><td>If true, print to stderr; if false, print to stdout. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true. </dd></dl>
 
 </div>
 </div>
@@ -1458,16 +1456,15 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html">Matrix</a> Multiplication. Given two matrices A (mxn) and B (nxp) computes their product and stores it to the calling matrix which becomes an m x p matrix Allows P.product(A, B). </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it into the calling matrix, which becomes an m x p matrix. Allows P.product(A, B). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td></td></tr>
     <tr><td class="paramname">B</td><td></td></tr>
-    <tr><td class="paramname">symmetry</td><td></td></tr>
+    <tr><td class="paramname">symmetry</td><td>If true, the result is assumed symmetric (P(i,j)==P(j,i)): only the upper triangle (i&lt;=j) is actually computed, and each computed value is mirrored directly into its (j,i) counterpart instead of being recomputed - roughly half the multiply-accumulate work of the general case. Used where A and B are already known to be symmetric (e.g. <a class="el" href="#a3caf2889831de95e3e045c60f8db0122" title="Returns the cocitation matrix of this matrix (C = A * A^T). Allows T = A.cocitationMatrix()....">cocitationMatrix()</a>, which multiplies a matrix by its own transpose). Complexity: O(m*n*p), or roughly half that with symmetry=true. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>i x k matrix </dd></dl>
 
 </div>
 </div>
@@ -1495,11 +1492,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the matrix-by-vector product Ax of this matrix Default product: Ax if leftMultiply=true then it returns the left product xA. </p>
+<p>Calculates the matrix-by-vector product Ax of this matrix (or the left product xA, if leftMultiply is true). Used by <a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8" title="Implementation of the Power method which computes the leading eigenvector x of this matrix,...">powerIteration()</a>'s inner loop. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>input array/vector </td></tr>
-    <tr><td class="paramname">out</td><td>output array </td></tr>
+    <tr><td class="paramname">in</td><td>input array/vector, <a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a> elements (<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>, if leftMultiply). </td></tr>
+    <tr><td class="paramname">out</td><td>output array, <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a> elements (<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a>, if leftMultiply). </td></tr>
     <tr><td class="paramname">leftMultiply</td><td></td></tr>
   </table>
   </dd>
@@ -1526,7 +1523,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Takes two ( N x N ) matrices (symmetric) and outputs an upper triangular matrix. </p>
+<p>OBSOLETE - no caller found anywhere in the codebase. Was intended to take two (N x N) symmetric matrices a and b and write an upper-triangular product into this matrix (the lower triangle, i&gt;=j, left at zero). Unlike <a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9" title="Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identit...">inverseByGaussJordanElimination()</a> (also uncalled, but explicitly kept for cross-checking matrix inversion), there is no stated reason to keep this one - a real candidate for removal. Complexity: O(N^3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td></td></tr>
@@ -1534,7 +1531,31 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a96fc7d93be8c81c6a76632ff5e870872" name="a96fc7d93be8c81c6a76632ff5e870872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96fc7d93be8c81c6a76632ff5e870872">&#9670;&#160;</a></span>rebuildRowPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matrix::rebuildRowPtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1557,10 +1578,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Resizes this matrix to m x n Called before every operation on new matrices. Every <a class="el" href="class_matrix_row.html">MatrixRow</a> object holds max_int=32762. </p>
+<p>Resizes this matrix to m x n, discarding any previous contents. All cells start zero-initialized. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Actors</td><td></td></tr>
+    <tr><td class="paramname">m</td><td>New row count. </td></tr>
+    <tr><td class="paramname">n</td><td>New column count. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1597,6 +1619,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Matrix::setItem </td>
@@ -1614,22 +1639,17 @@ Friends</h2></td></tr>
           <td class="paramtype">const qreal</td>          <td class="paramname"><span class="paramname"><em>elem</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the (r,c) matrix element calling the setColumn method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">r</td><td></td></tr>
-    <tr><td class="paramname">c</td><td></td></tr>
-    <tr><td class="paramname">elem</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="a861fc71860b0c52566eb4b5e5ddd13c4" name="a861fc71860b0c52566eb4b5e5ddd13c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a861fc71860b0c52566eb4b5e5ddd13c4">&#9670;&#160;</a></span>similarityMatrix()</h2>
+<a id="aa0453b08cb3dc44ab71215808deb030f" name="aa0453b08cb3dc44ab71215808deb030f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0453b08cb3dc44ab71215808deb030f">&#9670;&#160;</a></span>similarityMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1657,19 +1677,28 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>considerWeights</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>considerWeights</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes the pair-wise matching score of the rows, columns or both of the given matrix AM, based on the given matching measure and returns the similarity matrix. </p>
+<p>Computes a pairwise similarity matrix SCM: SCM(i,k) is how alike variable i and variable k are, under the chosen matching measure, treating either AM's rows, its columns, or both (concatenated) as the "variables" being compared. The mirror image of <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a> (similarity instead of dissimilarity) - backs the Similarity dialog's simple-matching/Jaccard/Hamming/Cosine options. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">AM</td><td><a class="el" href="class_matrix.html">Matrix</a> </td></tr>
+    <tr><td class="paramname">AM</td><td>Input matrix whose rows/columns/both are being compared. </td></tr>
+    <tr><td class="paramname">measure</td><td>One of the METRIC_* constants (simple matching, Jaccard, Hamming, Cosine - Pearson is handled separately by <a class="el" href="#a8e348e9f16cb4f77b8b0174935d8502e" title="Computes the Pearson product-moment correlation coefficient between every pair of variables (AM&#39;s row...">pearsonCorrelationCoefficients()</a>). </td></tr>
+    <tr><td class="paramname">varLocation</td><td>"Rows", "Columns", or "Both" - which axis holds the variables being compared. </td></tr>
+    <tr><td class="paramname">diagonal</td><td>If true, i==k comparisons are included; if false, a variable is never compared against itself. </td></tr>
+    <tr><td class="paramname">considerWeights</td><td>Whether edge weights factor into the match/mismatch decision. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> nxn with matching scores for every pair of rows/columns of AM </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> SCM, N x N (N = number of variables being compared), with a similarity score for every pair. Complexity: O(N^2 * M), same shape as <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a> - see its complexity note. </dd></dl>
 
 </div>
 </div>
@@ -1713,14 +1742,14 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Computes and returns the solution of the set of n linear equations A·x = b Allows A.solve(b). </p>
+<p>Solves the linear system A*x = b, where A is this matrix, in place: b is overwritten with the solution vector x. Allows A.solve(b). Works on a private copy of this matrix (<a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> would otherwise decompose - and so overwrite - the caller's own data), via the same <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a>+<a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> pair <a class="el" href="#aa31ea218e2858488f9a3cfe25c82883f" title="Computes and returns the inverse of matrix a, into this matrix. Allows b.inverse(a)....">inverse()</a> uses. Complexity: O(n^3), dominated by the one-time <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> decomposition (<a class="el" href="#a50a87971f24dc5247a8711a36903b751" title="Solves the set of n linear equations A·X = b, where A nxn matrix decomposed as L·U (L lower triangula...">lubksb()</a> itself is only O(n^2)). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">b</td><td>vector </td></tr>
+    <tr><td class="paramname">b</td><td>Right-hand-side vector on input, solution vector x on output. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>false if A is singular (b is left unmodified) or the working copy couldn't be allocated; true on success. </dd></dl>
 
 </div>
 </div>
@@ -1739,8 +1768,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Subtracts this matrix from I and returns. </p>
-<dl class="section return"><dt>Returns</dt><dd>I-this to this matrix </dd></dl>
+<p>Replaces this matrix with I - this (the identity matrix minus this matrix), in place. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<dl class="section return"><dt>Returns</dt><dd>this, now holding I - this. </dd></dl>
 
 </div>
 </div>
@@ -1763,7 +1792,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html">Matrix</a> addition Takes two (nxn) matrices and returns their sum as a reference to this Same algorithm as operator +, just different interface. In this case, you use something like: c.sum(a,b). </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition: sets this matrix to a + b, cell by cell. Same result as <a class="el" href="#ae0ed296536f062f5857e1e5550093890" title="Matrix addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S....">operator+()</a>, just a different calling interface: c.sum(a,b) instead of c = a + b. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td></td></tr>
@@ -1771,7 +1800,6 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -1794,7 +1822,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Swaps row A with row B of this matrix. </p>
+<p>Swaps row rowA with row rowB of this matrix, element by element. Used by <a class="el" href="#ab1ec5d4a1f06ad0c8a9787e73641a9a9" title="Inverts matrix A by Gauss-Jordan elimination with partial pivoting: starts this matrix as the identit...">inverseByGaussJordanElimination()</a> and <a class="el" href="#a6618e3850d78335c2f8cf61dd8d3f672" title="Given matrix a, it replaces a by the LU decomposition of a rowwise permutation of itself....">ludcmp()</a> during partial pivoting (moving the row with the largest pivot candidate into the current position improves numerical stability of the elimination). Complexity: O(cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rowA</td><td></td></tr>
@@ -1820,14 +1848,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Transpose of this matrix Allows T = A.transpose(). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html">Matrix</a> T </dd></dl>
+<p>Returns the transpose of this matrix (T(i,j) = this(j,i)). Allows T = A.transpose(). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> T </dd></dl>
 
 </div>
 </div>
@@ -1924,8 +1946,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a5bb8d22211af56adfd2a7c8b7cc6f5d2" name="a5bb8d22211af56adfd2a7c8b7cc6f5d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bb8d22211af56adfd2a7c8b7cc6f5d2">&#9670;&#160;</a></span>m_rows</h2>
+<a id="a178cc06960bcfd0417b35e2e822335af" name="a178cc06960bcfd0417b35e2e822335af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178cc06960bcfd0417b35e2e822335af">&#9670;&#160;</a></span>m_data</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1934,7 +1956,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Matrix::m_rows</td>
+          <td class="memname">qreal* Matrix::m_data</td>
         </tr>
       </table>
   </td>
@@ -1946,8 +1968,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a60c5ba9f9ca2c6fa3655133f6ef0acdb" name="a60c5ba9f9ca2c6fa3655133f6ef0acdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60c5ba9f9ca2c6fa3655133f6ef0acdb">&#9670;&#160;</a></span>row</h2>
+<a id="ab0a1665c11bd43506eba978dfa240290" name="ab0a1665c11bd43506eba978dfa240290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a1665c11bd43506eba978dfa240290">&#9670;&#160;</a></span>m_rowPtr</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1956,7 +1978,29 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix_row.html">MatrixRow</a>* Matrix::row</td>
+          <td class="memname">qreal** Matrix::m_rowPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bb8d22211af56adfd2a7c8b7cc6f5d2" name="a5bb8d22211af56adfd2a7c8b7cc6f5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb8d22211af56adfd2a7c8b7cc6f5d2">&#9670;&#160;</a></span>m_rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Matrix::m_rows</td>
         </tr>
       </table>
   </td>

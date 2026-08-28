@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -112,54 +112,38 @@ $(function(){initNavTree('class_graph_vertex.html','','class_graph_vertex-member
 </div><!--header-->
 <div class="contents">
 
+<p>Plain QtCore value class (not a QObject, WS3 M2) representing a vertex and its adjacency. Notifies the UI layer of edge-visibility changes via a plain call to its owning <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> (<a class="el" href="class_graph.html#ae4c55d37f9276a65d962b5e17851a2d6" title="Plain relay to signalSetEdgeVisibility, for GraphVertex (a QtCore-only value class,...">Graph::notifyEdgeVisibilityChanged</a> / notifyEdgesVisibilityBatch) rather than emitting its own signal.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="graphvertex_8h_source.html">graphvertex.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for GraphVertex:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_graph_vertex__inherit__graph.png" border="0" usemap="#a_graph_vertex_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
-<map name="a_graph_vertex_inherit__map" id="a_graph_vertex_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,100,105"/>
-<area shape="rect" title=" " alt="" coords="18,5,87,31"/>
-<area shape="poly" title=" " alt="" coords="55,46,55,79,50,79,50,46"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for GraphVertex:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_graph_vertex__coll__graph.png" border="0" usemap="#a_graph_vertex_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_graph_vertex_coll__map" id="a_graph_vertex_coll__map">
-<area shape="rect" title=" " alt="" coords="5,499,100,524"/>
-<area shape="rect" title=" " alt="" coords="48,5,118,31"/>
-<area shape="poly" title=" " alt="" coords="71,46,67,56,62,79,60,102,52,223,50,340,54,498,49,498,45,340,47,223,55,102,57,78,62,54,66,44"/>
-<area shape="rect" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="162,402,218,428"/>
-<area shape="poly" title=" " alt="" coords="79,47,67,111,62,197,64,244,72,291,87,336,109,376,120,388,133,396,162,407,160,412,131,401,117,392,105,380,82,338,67,292,59,245,56,197,62,110,74,46"/>
-<area shape="rect" href="class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="219,102,278,128"/>
-<area shape="poly" title=" " alt="" coords="113,38,172,76,220,99,218,104,170,80,110,42"/>
-<area shape="rect" href="class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="305,102,397,128"/>
-<area shape="poly" title=" " alt="" coords="130,34,244,75,314,99,313,104,242,81,128,39"/>
-<area shape="poly" title=" " alt="" coords="162,439,72,500,69,496,159,434"/>
-<area shape="poly" title=" " alt="" coords="254,142,257,189,256,249,247,315,227,379,208,403,204,400,222,377,242,314,251,249,252,189,249,143"/>
-<area shape="rect" href="class_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="147,5,350,31"/>
-<area shape="poly" title=" " alt="" coords="251,46,251,101,246,101,246,46"/>
-<area shape="poly" title=" " alt="" coords="355,143,352,270,343,336,335,361,325,380,302,399,274,410,245,416,219,417,218,412,244,410,272,405,299,394,321,376,331,359,338,334,347,270,349,143"/>
-<area shape="rect" href="class_matrix.html" title=" " alt="" coords="436,102,493,128"/>
-<area shape="poly" title=" " alt="" coords="474,142,481,193,483,256,479,290,471,323,457,353,437,380,421,391,398,399,338,410,219,416,219,411,337,404,396,394,419,386,433,376,453,350,466,321,474,289,478,256,476,193,468,143"/>
-<area shape="rect" href="class_matrix_row.html" title=" " alt="" coords="422,5,507,31"/>
-<area shape="poly" title=" " alt="" coords="467,46,467,101,462,101,462,46"/>
-<area shape="rect" href="class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="119,102,188,128"/>
-<area shape="poly" title=" " alt="" coords="135,141,130,153,120,201,115,266,117,331,122,357,130,377,144,392,163,402,160,407,141,396,125,379,117,358,112,331,109,266,115,201,125,151,131,139"/>
+<area shape="rect" title="Plain QtCore value class (not a QObject, WS3 M2) representing a vertex and its adjacency...." alt="" coords="281,499,375,524"/>
+<area shape="rect" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="300,402,356,428"/>
+<area shape="poly" title=" " alt="" coords="330,443,330,498,325,498,325,443"/>
+<area shape="rect" title=" " alt="" coords="232,5,301,31"/>
+<area shape="poly" title=" " alt="" coords="278,45,297,101,312,151,322,225,328,298,331,401,325,401,322,298,317,226,307,152,292,103,273,46"/>
+<area shape="rect" href="class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="98,102,158,128"/>
+<area shape="poly" title=" " alt="" coords="245,44,200,80,157,104,155,99,197,76,242,39"/>
+<area shape="rect" href="class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="190,102,282,128"/>
+<area shape="poly" title=" " alt="" coords="260,47,242,102,237,101,255,45"/>
+<area shape="poly" title=" " alt="" coords="120,143,106,192,97,254,97,287,101,319,111,349,128,376,139,385,156,392,203,402,300,410,299,415,202,407,155,397,137,389,125,380,107,352,96,320,91,287,92,254,101,191,115,141"/>
+<area shape="rect" href="class_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="5,5,208,31"/>
+<area shape="poly" title=" " alt="" coords="112,46,117,77,125,101,120,103,112,79,106,47"/>
+<area shape="poly" title=" " alt="" coords="228,143,214,191,204,252,203,285,206,317,215,348,230,376,244,390,262,400,300,409,299,415,260,405,241,395,226,380,210,350,201,318,198,285,199,252,209,190,223,141"/>
+<area shape="rect" href="class_matrix.html" title="General&#45;purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),..." alt="" coords="366,102,423,128"/>
+<area shape="poly" title=" " alt="" coords="395,143,381,248,368,314,349,379,338,403,333,400,344,377,362,312,376,247,390,143"/>
+<area shape="rect" href="class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="448,102,517,128"/>
+<area shape="poly" title=" " alt="" coords="490,143,496,192,495,255,491,288,482,321,469,352,450,380,429,397,405,408,357,416,356,411,403,402,426,392,446,376,464,349,477,319,485,287,490,254,490,192,485,143"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
-Signals</h2></td></tr>
-<tr class="memitem:a993b0137f9b197d09b40edfae1e66027" id="r_a993b0137f9b197d09b40edfae1e66027"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a993b0137f9b197d09b40edfae1e66027">signalSetEdgeVisibility</a> (const int &amp;relation, const int &amp;name, const int &amp;target, const bool &amp;visible, const bool &amp;preserveReverseEdge=false, const int &amp;edgeWeight=1, const int &amp;reverseEdgeWeight=1)</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a20c44cca0faeeaae8e0114fe90a65627" id="r_a20c44cca0faeeaae8e0114fe90a65627"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a20c44cca0faeeaae8e0114fe90a65627">GraphVertex</a> (<a class="el" href="class_graph.html">Graph</a> *parentGraph, const int &amp;name, const int &amp;relation, const int &amp;<a class="el" href="#a1ee2b56207ad162f3183ae5d16bae714">size</a>, const QString &amp;<a class="el" href="#aad5411ddf67cc30ccf2a3f8b8c0fc8da">color</a>, const QString &amp;numColor, const int &amp;numSize, const QString &amp;<a class="el" href="#a86d7323eeb57d6adcf2a16ae2b2c0fa2">label</a>, const QString &amp;<a class="el" href="#a2f1df0616f1515d38c4b7f8477e14764">labelColor</a>, const int &amp;<a class="el" href="#a5603b3e37b7f821ea9a2290c9afc447e">labelSize</a>, const QPointF &amp;p, const QString &amp;<a class="el" href="#a21ec3c1074dffef02e8fd5999572b85b">shape</a>, const QString &amp;iconPath, const int &amp;edgesEstimate=2000, const QHash&lt; QString, QString &gt; &amp;nodeAttr=QHash&lt; QString, QString &gt;())</td></tr>
-<tr class="memitem:a1102ebf27117659c253bf5ed6daeda23" id="r_a1102ebf27117659c253bf5ed6daeda23"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1102ebf27117659c253bf5ed6daeda23">GraphVertex</a> (const int &amp;name)</td></tr>
-<tr class="memdesc:a1102ebf27117659c253bf5ed6daeda23"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with default values  <br /></td></tr>
 <tr class="memitem:ab21c6e70263205acf42360500b88b26a" id="r_ab21c6e70263205acf42360500b88b26a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab21c6e70263205acf42360500b88b26a">~GraphVertex</a> ()</td></tr>
 <tr class="memitem:accaacda39e3ebce0050ac24d2b5df2f9" id="r_accaacda39e3ebce0050ac24d2b5df2f9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#accaacda39e3ebce0050ac24d2b5df2f9">number</a> () const</td></tr>
 <tr class="memdesc:accaacda39e3ebce0050ac24d2b5df2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex number.  <br /></td></tr>
@@ -193,7 +177,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a28f8600723cc605e226412f8a61d8749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the vertex number.  <br /></td></tr>
 <tr class="memitem:a1881065414873687469f6a63c38c5ce8" id="r_a1881065414873687469f6a63c38c5ce8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1881065414873687469f6a63c38c5ce8">numberSize</a> () const</td></tr>
 <tr class="memdesc:a1881065414873687469f6a63c38c5ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the vertex number.  <br /></td></tr>
-<tr class="memitem:a570ba42108c140643c4cff311c731dad" id="r_a570ba42108c140643c4cff311c731dad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a570ba42108c140643c4cff311c731dad">setNumberDistance</a> (const int &amp;<a class="el" href="#a9ac2d0c7be40afa03d5ab86475e504b4">distance</a>)</td></tr>
+<tr class="memitem:a570ba42108c140643c4cff311c731dad" id="r_a570ba42108c140643c4cff311c731dad"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a570ba42108c140643c4cff311c731dad">setNumberDistance</a> (const int &amp;distance)</td></tr>
 <tr class="memdesc:a570ba42108c140643c4cff311c731dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distance (in pixels) of the vertex number from the vertex.  <br /></td></tr>
 <tr class="memitem:a9f83854969299e0c103ae4e0e30048e4" id="r_a9f83854969299e0c103ae4e0e30048e4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9f83854969299e0c103ae4e0e30048e4">numberDistance</a> () const</td></tr>
 <tr class="memdesc:a9f83854969299e0c103ae4e0e30048e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance (in pixels) of the vertex number from the vertex.  <br /></td></tr>
@@ -209,7 +193,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2b84974bdc1e98b0463cd3a3d7338d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the vertex label.  <br /></td></tr>
 <tr class="memitem:a5603b3e37b7f821ea9a2290c9afc447e" id="r_a5603b3e37b7f821ea9a2290c9afc447e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5603b3e37b7f821ea9a2290c9afc447e">labelSize</a> () const</td></tr>
 <tr class="memdesc:a5603b3e37b7f821ea9a2290c9afc447e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the vertex label.  <br /></td></tr>
-<tr class="memitem:a2324fce4e81590020237ca919fc4e9f2" id="r_a2324fce4e81590020237ca919fc4e9f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2324fce4e81590020237ca919fc4e9f2">setLabelDistance</a> (const int &amp;<a class="el" href="#a9ac2d0c7be40afa03d5ab86475e504b4">distance</a>)</td></tr>
+<tr class="memitem:a2324fce4e81590020237ca919fc4e9f2" id="r_a2324fce4e81590020237ca919fc4e9f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2324fce4e81590020237ca919fc4e9f2">setLabelDistance</a> (const int &amp;distance)</td></tr>
 <tr class="memdesc:a2324fce4e81590020237ca919fc4e9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distance (in pixels) of the label from the vertex.  <br /></td></tr>
 <tr class="memitem:a9cc6e50ba6a7ed2753c1752cc0feedd3" id="r_a9cc6e50ba6a7ed2753c1752cc0feedd3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9cc6e50ba6a7ed2753c1752cc0feedd3">labelDistance</a> () const</td></tr>
 <tr class="memdesc:a9cc6e50ba6a7ed2753c1752cc0feedd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance (in pixels) of the label from the vertex.  <br /></td></tr>
@@ -235,8 +219,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7c68f203bde2e91fe8cb65bda7c4dafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the y coordinate of the displacement vector.  <br /></td></tr>
 <tr class="memitem:a68d51ff3f06187620984abaaf7476422" id="r_a68d51ff3f06187620984abaaf7476422"><td class="memItemLeft">QPointF &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a68d51ff3f06187620984abaaf7476422">disp</a> ()</td></tr>
 <tr class="memdesc:a68d51ff3f06187620984abaaf7476422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns displacement vector.  <br /></td></tr>
-<tr class="memitem:a70b35d75fd003bb9fe9151359737a026" id="r_a70b35d75fd003bb9fe9151359737a026"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70b35d75fd003bb9fe9151359737a026">setRelation</a> (int newRel)</td></tr>
-<tr class="memdesc:a70b35d75fd003bb9fe9151359737a026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current relation of this vertex.  <br /></td></tr>
+<tr class="memitem:ab4384bbb829ca185d6ad3373bba8c051" id="r_ab4384bbb829ca185d6ad3373bba8c051"><td class="memItemLeft">QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab4384bbb829ca185d6ad3373bba8c051">setRelation</a> (int newRel)</td></tr>
+<tr class="memdesc:ab4384bbb829ca185d6ad3373bba8c051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current relation of this vertex.  <br /></td></tr>
 <tr class="memitem:a310b46118a6b80533e3f7140f1f5b6e7" id="r_a310b46118a6b80533e3f7140f1f5b6e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a310b46118a6b80533e3f7140f1f5b6e7">addOutEdge</a> (const int &amp;v2, const qreal &amp;weight, const QString &amp;<a class="el" href="#aad5411ddf67cc30ccf2a3f8b8c0fc8da">color</a>=QString(), const QString &amp;<a class="el" href="#a86d7323eeb57d6adcf2a16ae2b2c0fa2">label</a>=QString())</td></tr>
 <tr class="memdesc:a310b46118a6b80533e3f7140f1f5b6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an outbound edge to vertex v2 with weight w.  <br /></td></tr>
 <tr class="memitem:a602aba5524dcabec6ec3e95840da7448" id="r_a602aba5524dcabec6ec3e95840da7448"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a602aba5524dcabec6ec3e95840da7448">hasEdgeTo</a> (const int &amp;v, const bool &amp;allRelations=false)</td></tr>
@@ -307,26 +291,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2aad20f32dafed9d04ac747fd801654b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the indegree. Avoid using it alone.  <br /></td></tr>
 <tr class="memitem:aca66a3c139297a6560968514dfd9aa3a" id="r_aca66a3c139297a6560968514dfd9aa3a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aca66a3c139297a6560968514dfd9aa3a">localDegree</a> ()</td></tr>
 <tr class="memdesc:aca66a3c139297a6560968514dfd9aa3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the localDegree of the vertex.  <br /></td></tr>
-<tr class="memitem:a73c823731853fa4c11875cdf63956e20" id="r_a73c823731853fa4c11875cdf63956e20"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73c823731853fa4c11875cdf63956e20">setEnabledEdgesByRelation</a> (const int relation, const bool status)</td></tr>
-<tr class="memdesc:a73c823731853fa4c11875cdf63956e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the status of all edges in the given relation.  <br /></td></tr>
-<tr class="memitem:aa7d38da5b44dd38460c4cdd9dcd89dc9" id="r_aa7d38da5b44dd38460c4cdd9dcd89dc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa7d38da5b44dd38460c4cdd9dcd89dc9">setEnabledUnilateralEdges</a> (const bool &amp;status=false)</td></tr>
-<tr class="memdesc:aa7d38da5b44dd38460c4cdd9dcd89dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the status of all unilateral (non-reciprocal) outbound edges, in current relation.  <br /></td></tr>
-<tr class="memitem:a9ac2d0c7be40afa03d5ab86475e504b4" id="r_a9ac2d0c7be40afa03d5ab86475e504b4"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a9ac2d0c7be40afa03d5ab86475e504b4">distance</a> (const int &amp;v1)</td></tr>
-<tr class="memdesc:a9ac2d0c7be40afa03d5ab86475e504b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geodesic distance to vertex v1.  <br /></td></tr>
-<tr class="memitem:abe474c58ceaf0b40672ff5b380bf1780" id="r_abe474c58ceaf0b40672ff5b380bf1780"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abe474c58ceaf0b40672ff5b380bf1780">setDistance</a> (const int &amp;v1, const qreal &amp;d)</td></tr>
-<tr class="memdesc:abe474c58ceaf0b40672ff5b380bf1780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the geodesic distance to vertex v1.  <br /></td></tr>
-<tr class="memitem:afdcfdca354f0e0b853f5718e7fdd79de" id="r_afdcfdca354f0e0b853f5718e7fdd79de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afdcfdca354f0e0b853f5718e7fdd79de">reserveDistance</a> (const int &amp;N)</td></tr>
-<tr class="memdesc:afdcfdca354f0e0b853f5718e7fdd79de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserves N items for the distance hash. See QHash Algorithmic Complexity Not to be used on large nets, atm.  <br /></td></tr>
-<tr class="memitem:a1e80a6fb8002a82e43e0b7856f7fa681" id="r_a1e80a6fb8002a82e43e0b7856f7fa681"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1e80a6fb8002a82e43e0b7856f7fa681">clearDistance</a> ()</td></tr>
-<tr class="memdesc:a1e80a6fb8002a82e43e0b7856f7fa681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all items from m_distance hash dictionary.  <br /></td></tr>
-<tr class="memitem:af344c8aadf1cd5e5d642b18aa196c6fe" id="r_af344c8aadf1cd5e5d642b18aa196c6fe"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af344c8aadf1cd5e5d642b18aa196c6fe">shortestPaths</a> (const int &amp;v1)</td></tr>
-<tr class="memdesc:af344c8aadf1cd5e5d642b18aa196c6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the stored number of shortest paths to vertex v1.  <br /></td></tr>
-<tr class="memitem:a463de3e7d42638cb1a49f6c657898198" id="r_a463de3e7d42638cb1a49f6c657898198"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a463de3e7d42638cb1a49f6c657898198">setShortestPaths</a> (const int &amp;v1, const int &amp;sp)</td></tr>
-<tr class="memdesc:a463de3e7d42638cb1a49f6c657898198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the number of shortest paths from this vertex to vertex v1.  <br /></td></tr>
-<tr class="memitem:ab84a88b20aca425fb72766c6e51d0fab" id="r_ab84a88b20aca425fb72766c6e51d0fab"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab84a88b20aca425fb72766c6e51d0fab">reserveShortestPaths</a> (const int &amp;N)</td></tr>
-<tr class="memdesc:ab84a88b20aca425fb72766c6e51d0fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserves N items for the ShortestPaths hash.  <br /></td></tr>
-<tr class="memitem:af27642d096dc40752d4422e49ce5b9d2" id="r_af27642d096dc40752d4422e49ce5b9d2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af27642d096dc40752d4422e49ce5b9d2">clearShortestPaths</a> ()</td></tr>
-<tr class="memdesc:af27642d096dc40752d4422e49ce5b9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all items from m_shortestPaths hash dictionary.  <br /></td></tr>
+<tr class="memitem:a82fd3f44394f0bea30d6c1be88784dc2" id="r_a82fd3f44394f0bea30d6c1be88784dc2"><td class="memItemLeft">QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a82fd3f44394f0bea30d6c1be88784dc2">setEnabledEdgesByRelation</a> (const int relation, const bool status)</td></tr>
+<tr class="memdesc:a82fd3f44394f0bea30d6c1be88784dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the status of all edges in the given relation.  <br /></td></tr>
+<tr class="memitem:ab1a3df76299298120f8b9180d7bb2f4e" id="r_ab1a3df76299298120f8b9180d7bb2f4e"><td class="memItemLeft">QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab1a3df76299298120f8b9180d7bb2f4e">setEnabledUnilateralEdges</a> (const bool &amp;status=false)</td></tr>
+<tr class="memdesc:ab1a3df76299298120f8b9180d7bb2f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the status of all unilateral (non-reciprocal) outbound edges, in current relation.  <br /></td></tr>
 <tr class="memitem:a4644cd530329c849dde44f42340d754b" id="r_a4644cd530329c849dde44f42340d754b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4644cd530329c849dde44f42340d754b">setEccentricity</a> (const qreal &amp;c)</td></tr>
 <tr class="memdesc:a4644cd530329c849dde44f42340d754b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the eccentricity of the vertex.  <br /></td></tr>
 <tr class="memitem:af0c55c78e69e59917b569e2ebca37c54" id="r_af0c55c78e69e59917b569e2ebca37c54"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#af0c55c78e69e59917b569e2ebca37c54">eccentricity</a> ()</td></tr>
@@ -390,6 +358,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24cf3aed2e90f095a07603d9c22f92c5" id="r_a24cf3aed2e90f095a07603d9c22f92c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a24cf3aed2e90f095a07603d9c22f92c5">setSEVC</a> (const qreal &amp;c)</td></tr>
 <tr class="memitem:ae4385913ebb60cb42792ad49eb72533d" id="r_ae4385913ebb60cb42792ad49eb72533d"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ae4385913ebb60cb42792ad49eb72533d">EVC</a> ()</td></tr>
 <tr class="memitem:a9d03a993aa4d02f97597889ba6c1828c" id="r_a9d03a993aa4d02f97597889ba6c1828c"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a9d03a993aa4d02f97597889ba6c1828c">SEVC</a> ()</td></tr>
+<tr class="memitem:a37f1f2bda5e441002569102ea77d2eb5" id="r_a37f1f2bda5e441002569102ea77d2eb5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a37f1f2bda5e441002569102ea77d2eb5">setKC</a> (const qreal &amp;c)</td></tr>
+<tr class="memitem:ab3a3baffee1fc70d38252a6c6b593f18" id="r_ab3a3baffee1fc70d38252a6c6b593f18"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab3a3baffee1fc70d38252a6c6b593f18">setSKC</a> (const qreal &amp;c)</td></tr>
+<tr class="memitem:a215b96ccb64d98899862d2d8f66edd0a" id="r_a215b96ccb64d98899862d2d8f66edd0a"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a215b96ccb64d98899862d2d8f66edd0a">KC</a> ()</td></tr>
+<tr class="memitem:a253394d169a4fd89a404210f4734c253" id="r_a253394d169a4fd89a404210f4734c253"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a253394d169a4fd89a404210f4734c253">SKC</a> ()</td></tr>
+<tr class="memitem:a0084bd143e3ce20cb7e7361f4016cb63" id="r_a0084bd143e3ce20cb7e7361f4016cb63"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0084bd143e3ce20cb7e7361f4016cb63">setBPC</a> (const qreal &amp;c)</td></tr>
+<tr class="memitem:aabd59f6b4b53e414eb9f8594150e4151" id="r_aabd59f6b4b53e414eb9f8594150e4151"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aabd59f6b4b53e414eb9f8594150e4151">setSBPC</a> (const qreal &amp;c)</td></tr>
+<tr class="memitem:ab65a7d83c82f6fed3d6d344c57faa35e" id="r_ab65a7d83c82f6fed3d6d344c57faa35e"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ab65a7d83c82f6fed3d6d344c57faa35e">BPC</a> ()</td></tr>
+<tr class="memitem:a495c2994b93b9cd415c20e59e6fbf234" id="r_a495c2994b93b9cd415c20e59e6fbf234"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a495c2994b93b9cd415c20e59e6fbf234">SBPC</a> ()</td></tr>
 <tr class="memitem:aab7dcee827cf726f9652cc7b1430ef0a" id="r_aab7dcee827cf726f9652cc7b1430ef0a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aab7dcee827cf726f9652cc7b1430ef0a">cliques</a> (const int &amp;ofSize)</td></tr>
 <tr class="memdesc:aab7dcee827cf726f9652cc7b1430ef0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of cliques sized size this vertex belongs to.  <br /></td></tr>
 <tr class="memitem:a0ee0dca972adf638d937c57dd4a31406" id="r_a0ee0dca972adf638d937c57dd4a31406"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ee0dca972adf638d937c57dd4a31406">cliqueAdd</a> (const QList&lt; int &gt; &amp;clique)</td></tr>
@@ -400,8 +376,6 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0e535279c07ec42b2e55b0d6841c88f6" id="r_a0e535279c07ec42b2e55b0d6841c88f6"><td class="memItemLeft"><a class="el" href="graph_8h.html#aca1a23cc1f6ca42c626d8e729116449b">H_edges</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0e535279c07ec42b2e55b0d6841c88f6">m_outEdges</a></td></tr>
 <tr class="memitem:abf279f832cd00a3c214aa12c0d37615b" id="r_abf279f832cd00a3c214aa12c0d37615b"><td class="memItemLeft"><a class="el" href="graph_8h.html#aca1a23cc1f6ca42c626d8e729116449b">H_edges</a>&#160;</td><td class="memItemRight"><a class="el" href="#abf279f832cd00a3c214aa12c0d37615b">m_inEdges</a></td></tr>
-<tr class="memitem:a6023659283b5e93e3df91b27200ac5a2" id="r_a6023659283b5e93e3df91b27200ac5a2"><td class="memItemLeft"><a class="el" href="graphvertex_8h.html#a5ffaacfc185220ddeb7654b003345526">H_distance</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6023659283b5e93e3df91b27200ac5a2">m_distance</a></td></tr>
-<tr class="memitem:aacd8f29d1b2edb78bd7c561e9a9148ab" id="r_aacd8f29d1b2edb78bd7c561e9a9148ab"><td class="memItemLeft"><a class="el" href="graphvertex_8h.html#a52e9eb78cc92d34c42250b5b8ed242d6">H_shortestPaths</a>&#160;</td><td class="memItemRight"><a class="el" href="#aacd8f29d1b2edb78bd7c561e9a9148ab">m_shortestPaths</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -453,6 +427,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a0d1626477722a08d600aa3dac60ae52c" id="r_a0d1626477722a08d600aa3dac60ae52c"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a0d1626477722a08d600aa3dac60ae52c">m_SPP</a></td></tr>
 <tr class="memitem:ac0476ad4b256379d211e9f28f378a260" id="r_ac0476ad4b256379d211e9f28f378a260"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ac0476ad4b256379d211e9f28f378a260">m_EVC</a></td></tr>
 <tr class="memitem:a53aa5568d2cf7fc71ceb098255f31cf3" id="r_a53aa5568d2cf7fc71ceb098255f31cf3"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a53aa5568d2cf7fc71ceb098255f31cf3">m_SEVC</a></td></tr>
+<tr class="memitem:a061718c769cb96f6ddcf19a5217458a5" id="r_a061718c769cb96f6ddcf19a5217458a5"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a061718c769cb96f6ddcf19a5217458a5">m_KC</a></td></tr>
+<tr class="memitem:af05ebf67131e73aa18fdfe16820de96e" id="r_af05ebf67131e73aa18fdfe16820de96e"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#af05ebf67131e73aa18fdfe16820de96e">m_SKC</a></td></tr>
+<tr class="memitem:a0102f0fe6a7d785d14a55c7230498738" id="r_a0102f0fe6a7d785d14a55c7230498738"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a0102f0fe6a7d785d14a55c7230498738">m_BPC</a></td></tr>
+<tr class="memitem:a46f9ab60f347a1d53342b12bf1124afc" id="r_a46f9ab60f347a1d53342b12bf1124afc"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a46f9ab60f347a1d53342b12bf1124afc">m_SBPC</a></td></tr>
 <tr class="memitem:a99bda955360ae34da4a5830f48654101" id="r_a99bda955360ae34da4a5830f48654101"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a99bda955360ae34da4a5830f48654101">m_distanceSum</a></td></tr>
 <tr class="memitem:a170df8cf07bcc84e1ac2c7adc7f30087" id="r_a170df8cf07bcc84e1ac2c7adc7f30087"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a170df8cf07bcc84e1ac2c7adc7f30087">m_color</a></td></tr>
 <tr class="memitem:ad6f8ecfbe7d833f325c5a85368e9ec0f" id="r_ad6f8ecfbe7d833f325c5a85368e9ec0f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ad6f8ecfbe7d833f325c5a85368e9ec0f">m_numberColor</a></td></tr>
@@ -468,9 +446,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a86799225eacaaee5d8bc80cecd9e2556" id="r_a86799225eacaaee5d8bc80cecd9e2556"><td class="memItemLeft"><a class="el" href="graphvertex_8h.html#a287f89e80480c88690b7ba00c70f1a6f">H_IntToStr</a>&#160;</td><td class="memItemRight"><a class="el" href="#a86799225eacaaee5d8bc80cecd9e2556">m_outEdgeLabels</a></td></tr>
 <tr class="memitem:ab980da04c9c461c2a833aa11a4de7bb0" id="r_ab980da04c9c461c2a833aa11a4de7bb0"><td class="memItemLeft">QHash&lt; int, QHash&lt; QString, QString &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab980da04c9c461c2a833aa11a4de7bb0">m_outEdgeCustomAttributes</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Plain QtCore value class (not a QObject, WS3 M2) representing a vertex and its adjacency. Notifies the UI layer of edge-visibility changes via a plain call to its owning <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> (<a class="el" href="class_graph.html#ae4c55d37f9276a65d962b5e17851a2d6" title="Plain relay to signalSetEdgeVisibility, for GraphVertex (a QtCore-only value class,...">Graph::notifyEdgeVisibilityChanged</a> / notifyEdgesVisibilityBatch) rather than emitting its own signal. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a20c44cca0faeeaae8e0114fe90a65627" name="a20c44cca0faeeaae8e0114fe90a65627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20c44cca0faeeaae8e0114fe90a65627">&#9670;&#160;</a></span>GraphVertex() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c44cca0faeeaae8e0114fe90a65627">&#9670;&#160;</a></span>GraphVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,31 +532,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1102ebf27117659c253bf5ed6daeda23" name="a1102ebf27117659c253bf5ed6daeda23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1102ebf27117659c253bf5ed6daeda23">&#9670;&#160;</a></span>GraphVertex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GraphVertex::GraphVertex </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>constructor with default values </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -693,6 +648,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab65a7d83c82f6fed3d6d344c57faa35e" name="ab65a7d83c82f6fed3d6d344c57faa35e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65a7d83c82f6fed3d6d344c57faa35e">&#9670;&#160;</a></span>BPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::BPC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a12830a0b5f86662615d295f6783d1329" name="a12830a0b5f86662615d295f6783d1329"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12830a0b5f86662615d295f6783d1329">&#9670;&#160;</a></span>CC()</h2>
 
@@ -765,44 +745,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1e80a6fb8002a82e43e0b7856f7fa681" name="a1e80a6fb8002a82e43e0b7856f7fa681"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e80a6fb8002a82e43e0b7856f7fa681">&#9670;&#160;</a></span>clearDistance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::clearDistance </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes all items from m_distance hash dictionary. </p>
-
-</div>
-</div>
-<a id="af27642d096dc40752d4422e49ce5b9d2" name="af27642d096dc40752d4422e49ce5b9d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af27642d096dc40752d4422e49ce5b9d2">&#9670;&#160;</a></span>clearShortestPaths()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::clearShortestPaths </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes all items from m_shortestPaths hash dictionary. </p>
 
 </div>
 </div>
@@ -999,32 +941,6 @@ Private Attributes</h2></td></tr>
 
 <p>Returns displacement vector. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a id="a9ac2d0c7be40afa03d5ab86475e504b4" name="a9ac2d0c7be40afa03d5ab86475e504b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ac2d0c7be40afa03d5ab86475e504b4">&#9670;&#160;</a></span>distance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">qreal GraphVertex::distance </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the geodesic distance to vertex v1. </p>
-<p>If d to v1 has not been set previously, returns RAND_MAX</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1494,6 +1410,31 @@ Private Attributes</h2></td></tr>
 
 <p>Returns true if the vertex has at least one outEdge. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a id="a215b96ccb64d98899862d2d8f66edd0a" name="a215b96ccb64d98899862d2d8f66edd0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215b96ccb64d98899862d2d8f66edd0a">&#9670;&#160;</a></span>KC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::KC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2137,57 +2078,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afdcfdca354f0e0b853f5718e7fdd79de" name="afdcfdca354f0e0b853f5718e7fdd79de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdcfdca354f0e0b853f5718e7fdd79de">&#9670;&#160;</a></span>reserveDistance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::reserveDistance </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reserves N items for the distance hash. See QHash Algorithmic Complexity Not to be used on large nets, atm. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">N</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab84a88b20aca425fb72766c6e51d0fab" name="ab84a88b20aca425fb72766c6e51d0fab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab84a88b20aca425fb72766c6e51d0fab">&#9670;&#160;</a></span>reserveShortestPaths()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::reserveShortestPaths </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>N</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reserves N items for the ShortestPaths hash. </p>
-<p>See QHash Algorithmic Complexit. Not to be used on large nets, atm.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">N</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a7f7f2523856ac74c73d091c702ec689c" name="a7f7f2523856ac74c73d091c702ec689c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f7f2523856ac74c73d091c702ec689c">&#9670;&#160;</a></span>SBC()</h2>
 
@@ -2199,6 +2089,31 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">qreal GraphVertex::SBC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a495c2994b93b9cd415c20e59e6fbf234" name="a495c2994b93b9cd415c20e59e6fbf234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495c2994b93b9cd415c20e59e6fbf234">&#9670;&#160;</a></span>SBPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::SBPC </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -2413,6 +2328,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0084bd143e3ce20cb7e7361f4016cb63" name="a0084bd143e3ce20cb7e7361f4016cb63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0084bd143e3ce20cb7e7361f4016cb63">&#9670;&#160;</a></span>setBPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphVertex::setBPC </td>
+          <td>(</td>
+          <td class="paramtype">const qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab33d21d4ea22aa5fbb1faada9cb0fc71" name="ab33d21d4ea22aa5fbb1faada9cb0fc71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab33d21d4ea22aa5fbb1faada9cb0fc71">&#9670;&#160;</a></span>setCC()</h2>
 
@@ -2536,36 +2476,6 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="abe474c58ceaf0b40672ff5b380bf1780" name="abe474c58ceaf0b40672ff5b380bf1780"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe474c58ceaf0b40672ff5b380bf1780">&#9670;&#160;</a></span>setDistance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::setDistance </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stores the geodesic distance to vertex v1. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-    <tr><td class="paramname">dist</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -2694,14 +2604,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a73c823731853fa4c11875cdf63956e20" name="a73c823731853fa4c11875cdf63956e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73c823731853fa4c11875cdf63956e20">&#9670;&#160;</a></span>setEnabledEdgesByRelation()</h2>
+<a id="a82fd3f44394f0bea30d6c1be88784dc2" name="a82fd3f44394f0bea30d6c1be88784dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82fd3f44394f0bea30d6c1be88784dc2">&#9670;&#160;</a></span>setEnabledEdgesByRelation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void GraphVertex::setEnabledEdgesByRelation </td>
+          <td class="memname">QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt; GraphVertex::setEnabledEdgesByRelation </td>
           <td>(</td>
           <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>relation</em></span>, </td>
         </tr>
@@ -2724,14 +2634,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa7d38da5b44dd38460c4cdd9dcd89dc9" name="aa7d38da5b44dd38460c4cdd9dcd89dc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7d38da5b44dd38460c4cdd9dcd89dc9">&#9670;&#160;</a></span>setEnabledUnilateralEdges()</h2>
+<a id="ab1a3df76299298120f8b9180d7bb2f4e" name="ab1a3df76299298120f8b9180d7bb2f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a3df76299298120f8b9180d7bb2f4e">&#9670;&#160;</a></span>setEnabledUnilateralEdges()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void GraphVertex::setEnabledUnilateralEdges </td>
+          <td class="memname">QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt; GraphVertex::setEnabledUnilateralEdges </td>
           <td>(</td>
           <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
           <td></td>
@@ -2934,6 +2844,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a37f1f2bda5e441002569102ea77d2eb5" name="a37f1f2bda5e441002569102ea77d2eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f1f2bda5e441002569102ea77d2eb5">&#9670;&#160;</a></span>setKC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphVertex::setKC </td>
+          <td>(</td>
+          <td class="paramtype">const qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a067aaba9282073d31670dcf676fbfebc" name="a067aaba9282073d31670dcf676fbfebc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a067aaba9282073d31670dcf676fbfebc">&#9670;&#160;</a></span>setLabel()</h2>
 
@@ -3002,7 +2937,7 @@ Private Attributes</h2></td></tr>
 <p>Sets the distance (in pixels) of the label from the vertex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="#a9ac2d0c7be40afa03d5ab86475e504b4" title="Returns the geodesic distance to vertex v1.">distance</a></td><td></td></tr>
+    <tr><td class="paramname">distance</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -3102,7 +3037,7 @@ Private Attributes</h2></td></tr>
 <p>Sets the distance (in pixels) of the vertex number from the vertex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="#a9ac2d0c7be40afa03d5ab86475e504b4" title="Returns the geodesic distance to vertex v1.">distance</a></td><td></td></tr>
+    <tr><td class="paramname">distance</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -3434,14 +3369,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a70b35d75fd003bb9fe9151359737a026" name="a70b35d75fd003bb9fe9151359737a026"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70b35d75fd003bb9fe9151359737a026">&#9670;&#160;</a></span>setRelation()</h2>
+<a id="ab4384bbb829ca185d6ad3373bba8c051" name="ab4384bbb829ca185d6ad3373bba8c051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4384bbb829ca185d6ad3373bba8c051">&#9670;&#160;</a></span>setRelation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void GraphVertex::setRelation </td>
+          <td class="memname">QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt; GraphVertex::setRelation </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>newRel</em></span></td><td>)</td>
           <td></td>
@@ -3470,6 +3405,31 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void GraphVertex::setSBC </td>
+          <td>(</td>
+          <td class="paramtype">const qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabd59f6b4b53e414eb9f8594150e4151" name="aabd59f6b4b53e414eb9f8594150e4151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd59f6b4b53e414eb9f8594150e4151">&#9670;&#160;</a></span>setSBPC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphVertex::setSBPC </td>
           <td>(</td>
           <td class="paramtype">const qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -3664,36 +3624,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a463de3e7d42638cb1a49f6c657898198" name="a463de3e7d42638cb1a49f6c657898198"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a463de3e7d42638cb1a49f6c657898198">&#9670;&#160;</a></span>setShortestPaths()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::setShortestPaths </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>sp</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stores the number of shortest paths from this vertex to vertex v1. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-    <tr><td class="paramname">sp</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ab7e26811221bf7d8a354d1b29432e19d" name="ab7e26811221bf7d8a354d1b29432e19d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7e26811221bf7d8a354d1b29432e19d">&#9670;&#160;</a></span>setSIC()</h2>
 
@@ -3766,6 +3696,31 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab3a3baffee1fc70d38252a6c6b593f18" name="ab3a3baffee1fc70d38252a6c6b593f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a3baffee1fc70d38252a6c6b593f18">&#9670;&#160;</a></span>setSKC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphVertex::setSKC </td>
+          <td>(</td>
+          <td class="paramtype">const qreal &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3984,32 +3939,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af344c8aadf1cd5e5d642b18aa196c6fe" name="af344c8aadf1cd5e5d642b18aa196c6fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af344c8aadf1cd5e5d642b18aa196c6fe">&#9670;&#160;</a></span>shortestPaths()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GraphVertex::shortestPaths </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the stored number of shortest paths to vertex v1. </p>
-<p>If it has not been set previously, then returns 0</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a71f0b3565e6d4d4628a25b61a9de1051" name="a71f0b3565e6d4d4628a25b61a9de1051"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71f0b3565e6d4d4628a25b61a9de1051">&#9670;&#160;</a></span>SIC()</h2>
 
@@ -4029,60 +3958,6 @@ Private Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a993b0137f9b197d09b40edfae1e66027" name="a993b0137f9b197d09b40edfae1e66027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a993b0137f9b197d09b40edfae1e66027">&#9670;&#160;</a></span>signalSetEdgeVisibility</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphVertex::signalSetEdgeVisibility </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>relation</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>visible</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>preserveReverseEdge</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeWeight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>reverseEdgeWeight</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -4131,6 +4006,31 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the size of the vertex. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a253394d169a4fd89a404210f4734c253" name="a253394d169a4fd89a404210f4734c253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253394d169a4fd89a404210f4734c253">&#9670;&#160;</a></span>SKC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::SKC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -4286,6 +4186,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">qreal GraphVertex::m_BC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0102f0fe6a7d785d14a55c7230498738" name="a0102f0fe6a7d785d14a55c7230498738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0102f0fe6a7d785d14a55c7230498738">&#9670;&#160;</a></span>m_BPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::m_BPC</td>
         </tr>
       </table>
   </td>
@@ -4469,20 +4391,6 @@ Private Attributes</h2></td></tr>
 <span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6023659283b5e93e3df91b27200ac5a2" name="a6023659283b5e93e3df91b27200ac5a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6023659283b5e93e3df91b27200ac5a2">&#9670;&#160;</a></span>m_distance</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="graphvertex_8h.html#a5ffaacfc185220ddeb7654b003345526">H_distance</a> GraphVertex::m_distance</td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>
@@ -4820,6 +4728,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool GraphVertex::m_isolated</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a061718c769cb96f6ddcf19a5217458a5" name="a061718c769cb96f6ddcf19a5217458a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061718c769cb96f6ddcf19a5217458a5">&#9670;&#160;</a></span>m_KC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::m_KC</td>
         </tr>
       </table>
   </td>
@@ -5329,6 +5259,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a46f9ab60f347a1d53342b12bf1124afc" name="a46f9ab60f347a1d53342b12bf1124afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f9ab60f347a1d53342b12bf1124afc">&#9670;&#160;</a></span>m_SBPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::m_SBPC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab84411ef85bf33859bc1f7306241a37b" name="ab84411ef85bf33859bc1f7306241a37b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab84411ef85bf33859bc1f7306241a37b">&#9670;&#160;</a></span>m_SC</h2>
 
@@ -5483,20 +5435,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aacd8f29d1b2edb78bd7c561e9a9148ab" name="aacd8f29d1b2edb78bd7c561e9a9148ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacd8f29d1b2edb78bd7c561e9a9148ab">&#9670;&#160;</a></span>m_shortestPaths</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="graphvertex_8h.html#a52e9eb78cc92d34c42250b5b8ed242d6">H_shortestPaths</a> GraphVertex::m_shortestPaths</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad6132103a5e9b6ec34f4e1cf3bb21243" name="ad6132103a5e9b6ec34f4e1cf3bb21243"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6132103a5e9b6ec34f4e1cf3bb21243">&#9670;&#160;</a></span>m_SIC</h2>
 
@@ -5552,6 +5490,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int GraphVertex::m_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af05ebf67131e73aa18fdfe16820de96e" name="af05ebf67131e73aa18fdfe16820de96e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af05ebf67131e73aa18fdfe16820de96e">&#9670;&#160;</a></span>m_SKC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal GraphVertex::m_SKC</td>
         </tr>
       </table>
   </td>

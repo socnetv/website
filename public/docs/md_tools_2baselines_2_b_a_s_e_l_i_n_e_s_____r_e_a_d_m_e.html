@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -124,7 +124,7 @@ $(function(){initNavTree('md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Kernel  </th><th class="markdownTableHeadNone">Schema  </th><th class="markdownTableHeadNone">Folder  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">distance  </td><td class="markdownTableBodyNone">v1  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/</span>  </td></tr>
+<td class="markdownTableBodyNone">distance  </td><td class="markdownTableBodyNone">v1  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/distance/</span>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">reachability  </td><td class="markdownTableBodyNone">v2  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/reachability/</span>  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -137,6 +137,10 @@ $(function(){initNavTree('md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_
 <td class="markdownTableBodyNone">clustering  </td><td class="markdownTableBodyNone">v6  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/clustering/</span>  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">connectivity  </td><td class="markdownTableBodyNone">v7  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/connectivity/</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">matrix  </td><td class="markdownTableBodyNone">v8  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/matrix/</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">vertex_connectivity  </td><td class="markdownTableBodyNone">v9  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/vertex_connectivity/</span>  </td></tr>
 </table>
 <p>Schemas are never modified retroactively.</p>
 <p>New algorithm families must use a new schema version.</p>
@@ -184,10 +188,22 @@ Clustering Kernel (schema v6)</h2>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Connectivity Kernel (schema v7)</h2>
 <div class="fragment"><div class="line">&lt;DATASET&gt;__CONN__V7__FT&lt;filetype&gt;.json</div>
-</div><!-- fragment --><p>No weight/centrality flags — connectivity is topology-only.</p>
-<p>Example: <span class="tt">TinyDisconnected_Undir_N6_E4__CONN__V7__FT2.json</span></p>
+</div><!-- fragment --><p>No weight/centrality flags — connectivity is topology-only. Add <span class="tt">__STRONG</span> for <span class="tt">--connectivity-type strong</span> on directed graphs (default <span class="tt">weak</span> gets no suffix).</p>
+<p>Example: <span class="tt">TinyDisconnected_Undir_N6_E4__CONN__V7__FT2.json</span>, <span class="tt">TinyArc_Dir_N2_E1__CONN__V7__FT2__STRONG.json</span></p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+Matrix Kernel (schema v8)</h2>
+<div class="fragment"><div class="line">&lt;DATASET&gt;__MATRIX__V8__FT&lt;filetype&gt;__W&lt;0|1&gt;_IW&lt;0|1&gt;_DI&lt;0|1&gt;.json</div>
+</div><!-- fragment --><p>Note: <span class="tt">C</span> is not encoded — matrix requires <span class="tt">-c 0</span> (rejects centralities outright).</p>
+<p>Example: <span class="tt">TinyPath_N3_E2__MATRIX__V8__FT2__W0_IW1_DI0.json</span></p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+Vertex Connectivity Kernel (schema v9)</h2>
+<div class="fragment"><div class="line">&lt;DATASET&gt;__VCONN__V9__FT&lt;filetype&gt;__&lt;mode suffix&gt;.json</div>
+</div><!-- fragment --><p>No weight/centrality flags — topology-only. Mode suffix is <span class="tt">global</span> (optionally <span class="tt">_weak</span>/<span class="tt">_strong</span> on directed graphs) or <span class="tt">local_&lt;source&gt;_&lt;target&gt;</span> (optionally <span class="tt">_adjacent</span> when the pair has no finite cut).</p>
+<p>Example: <span class="tt">TinyPath_N3_E2__VCONN__V9__FT2__local_1_3.json</span>, <span class="tt">TinyWeaklyConn_Dir_N3_E2__VCONN__V9__FT2__global_strong.json</span></p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 3. Golden Checklist (Pre-Release)</h1>
 <p>Before tagging a release:</p>
 <ol type="1">
@@ -202,80 +218,92 @@ Connectivity Kernel (schema v7)</h2>
 <li>Only update baseline if the change is intentional and documented.</li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 4. How to Add a New Baseline</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 Distance (v1)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli \</div>
 <div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
 <div class="line">  -c &lt;0|1&gt; -w &lt;0|1&gt; -x &lt;0|1&gt; -k &lt;0|1&gt; \</div>
-<div class="line">  --dump-json src/tools/baselines/&lt;NAME&gt;.json</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+<div class="line">  --dump-json src/tools/baselines/distance/&lt;NAME&gt;.json</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Reachability (v2)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli --kernel reachability \</div>
 <div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
 <div class="line">  -c 0 -w &lt;0|1&gt; -x &lt;0|1&gt; -k &lt;0|1&gt; \</div>
 <div class="line">  --dump-json src/tools/baselines/reachability/&lt;NAME&gt;.json</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Walks (v3)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli --kernel walks_matrix \</div>
 <div class="line">  --walks-length &lt;K&gt; \</div>
 <div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
 <div class="line">  --dump-json src/tools/baselines/walks/&lt;NAME&gt;.json</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
 Prominence (v4)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli --kernel prominence \</div>
 <div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
 <div class="line">  -w &lt;0|1&gt; -x &lt;0|1&gt; -k &lt;0|1&gt; \</div>
 <div class="line">  --dump-json src/tools/baselines/prominence/&lt;NAME&gt;.json</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 IO Roundtrip (v5)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli --kernel io_roundtrip \</div>
 <div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
 <div class="line">  --dump-json src/tools/baselines/io_roundtrip/&lt;NAME&gt;.json</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
 Clustering (v6)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli --kernel clustering \</div>
 <div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
 <div class="line">  -w &lt;0|1&gt; -x &lt;0|1&gt; -k &lt;0|1&gt; \</div>
 <div class="line">  --dump-json src/tools/baselines/clustering/&lt;NAME&gt;.json</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
 Connectivity (v7)</h2>
 <div class="fragment"><div class="line">./build/socnetv-cli --kernel connectivity \</div>
-<div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
+<div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; [--connectivity-type weak|strong] \</div>
 <div class="line">  --dump-json src/tools/baselines/connectivity/&lt;NAME&gt;.json</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+Matrix (v8)</h2>
+<div class="fragment"><div class="line">./build/socnetv-cli --kernel matrix \</div>
+<div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
+<div class="line">  -c 0 -w &lt;0|1&gt; -x &lt;0|1&gt; -k &lt;0|1&gt; \</div>
+<div class="line">  --dump-json src/tools/baselines/matrix/&lt;NAME&gt;.json</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
+Vertex Connectivity (v9)</h2>
+<div class="fragment"><div class="line">./build/socnetv-cli --kernel vertex_connectivity \</div>
+<div class="line">  -i &lt;dataset&gt; -f &lt;filetype&gt; \</div>
+<div class="line">  --conn-mode local|global [--conn-source S --conn-target T] [--connectivity-type weak|strong] \</div>
+<div class="line">  --dump-json src/tools/baselines/vertex_connectivity/&lt;NAME&gt;.json</div>
 </div><!-- fragment --><hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
 5. What Is Verified</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
 Distance Kernel (v1)</h2>
 <p>Graph-level: nodes, links_sna, ties_graph, directed, weighted, average geodesic distance, diameter, disconnected_pairs, connected</p>
 <p>Per-node (when C=1): CC/SCC, BC/SBC, SC/SSC, EC/SEC, PC/SPC, distance_sum, eccentricity</p>
 <p>Floating-point values are serialized as strings.</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
 Reachability Kernel (v2)</h2>
 <p>nodes, matrix (0/1), reachable_pairs, reachable_density</p>
 <p>Diagonal convention: R(i,i) = 1</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
 Walks Kernel (v3)</h2>
 <p>nodes, matrix (integer counts), walks.length, walks.total_walks</p>
 <p>Walk semantics: XM(i,j) = number of walks of exact length K from i to j</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
 Prominence Kernel (v4)</h2>
 <p>Graph-level: nodes, links_sna, ties_graph, directed, weighted</p>
 <p>Per-node centrality: DC/SDC, CC/SCC, IRCC/SIRCC, BC/SBC, SC/SSC, PC/SPC, IC/SIC, EVC/SEVC, eccentricity</p>
 <p>Per-node prestige: DP/SDP, PP/SPP, PRP/SPRP</p>
 <p>All floating-point values are serialized as strings.</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
 IO Roundtrip Kernel (v5)</h2>
 <p>Graph-level: nodes, relations, directed, symmetric, weighted, ties_graph, links_sna</p>
 <p>Roundtrip: performed vs skipped export, ROUNDTRIP_EQUIV, per-relation signature bundle for multi-relational datasets</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
 Clustering Kernel (v6)</h2>
 <p>Graph-level: nodes, links_sna, ties_graph, directed, weighted</p>
 <p>Metrics: averageCLC, nodesWithCLC</p>
@@ -283,17 +311,29 @@ Clustering Kernel (v6)</h2>
 <p>Triad census (16 MAN classes): 003, 012, 102, 021D, 021U, 021C, 111D, 111U, 030T, 030C, 201, 120D, 120U, 120C, 210, 300</p>
 <p>Cliques: counts by size, max_clique_size, total_cliques</p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
 Connectivity Kernel (v7)</h2>
-<p>Graph-level: component_count, connected (bool), type ("weak" for directed / "connected" for undirected)</p>
-<p>Per-node: component_id (1-based integer)</p>
+<p>Graph-level: component_count, connected (bool), type ("connected" for undirected, "weak" or "strong" for directed per <span class="tt">--connectivity-type</span>, default <span class="tt">weak</span>)</p>
+<p>Per-node: component_id (1-based integer) — <b>weak mode only</b>; strong mode reports a count, not per-vertex membership (<span class="tt"><a class="el" href="class_graph.html#ab4ffdda5cbf42542fa3565a1422ab698" title="Counts strongly connected components using Tarjan&#39;s algorithm.">Graph::graphStronglyConnectedComponents()</a></span> doesn't track it)</p>
 <p>Connectivity semantics:</p>
 <ul>
-<li>Undirected: standard BFS — connected if 1 component</li>
-<li>Directed: BFS treating all arcs as undirected (weak connectivity) — connected if 1 weak component</li>
+<li>Undirected: standard BFS — connected if 1 component; <span class="tt">--connectivity-type</span> has no effect</li>
+<li>Directed, weak (default): BFS treating all arcs as undirected — connected if 1 weak component</li>
+<li>Directed, strong: Tarjan's SCC algorithm, respecting arc direction — connected if 1 strong component</li>
 </ul>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
+Matrix Kernel (v8)</h2>
+<p>Raw contents of every <span class="tt"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a></span>-producing <span class="tt"><a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a></span> operation: adjacency, adjacency inverse, distances, similarity, reachability, walks, total walks (skipped above <span class="tt">kTotalWalksSkipThreshold</span> nodes — see <span class="tt"><a class="el" href="kernel__matrix__v8_8cpp.html">kernel_matrix_v8.cpp</a></span>), clique co-membership.</p>
+<p>Networks above <span class="tt">kFullGridSizeLimit</span> (20 nodes) are dumped as a compact summary (row/col sums, trace, five sampled cells) instead of the full N×N grid — a full-grid dump is impractical past a few dozen nodes (WS5 A2.0 measured ~461 MB for one <span class="tt"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a></span> at N=7,343).</p>
+<p>Exists specifically because every other kernel only ever checks downstream results (centrality scores, distance values, clique counts), never a <span class="tt"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a></span>'s actual contents — see <span class="tt">roadmap_ws6_testing_ci_regression.md</span>'s WS6.7 section for the full design rationale.</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
+Vertex Connectivity Kernel (v9)</h2>
+<p>Local kappa(s,t) (<span class="tt">--conn-mode local</span>) or global kappa(G) (<span class="tt">--conn-mode global</span>, the default) via Menger's theorem / vertex-split max-flow — see #7 and <span class="tt">roadmap_ws11_algorithm_additions.md</span>.</p>
+<p>Local mode: <span class="tt">source</span>, <span class="tt">target</span>, <span class="tt">status</span> (<span class="tt">"ok"</span> with a <span class="tt">value</span>, <span class="tt">"adjacent"</span> — no finite cut exists, or <span class="tt">"invalid"</span> — bad source/target). Global mode: <span class="tt">value</span> = kappa(G), 0 meaning already disconnected. Same weak/strong split as the Connectivity Kernel above, via <span class="tt">--connectivity-type</span>.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
 6. Exit Codes &amp; CI Integration</h1>
 <p><span class="tt">socnetv-cli --compare-json</span> exits with:</p>
 <ul>
@@ -302,13 +342,13 @@ Connectivity Kernel (v7)</h2>
 </ul>
 <p><span class="tt">scripts/run_golden_compares.sh</span> aggregates failures and exits non-zero if any mismatch occurs.</p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md59"></a>
 7. Existing Baselines</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Kernel  </th><th class="markdownTableHeadNone">Directory  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">distance v1  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/</span>  </td></tr>
+<td class="markdownTableBodyNone">distance v1  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/distance/</span>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">reachability v2  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/reachability/</span>  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -321,9 +361,13 @@ Connectivity Kernel (v7)</h2>
 <td class="markdownTableBodyNone">clustering v6  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/clustering/</span>  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">connectivity v7  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/connectivity/</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">matrix v8  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/matrix/</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">vertex_connectivity v9  </td><td class="markdownTableBodyNone"><span class="tt">src/tools/baselines/vertex_connectivity/</span>  </td></tr>
 </table>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md61"></a>
 8. Notes</h1>
 <ul>
 <li><span class="tt">LINKS_SNA</span> reflects loader semantics.</li>

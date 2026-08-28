@@ -1,11 +1,17 @@
 var searchData=
 [
-  ['walks_20kernel_20schema_20v3_0',['Walks Kernel (schema v3)',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md11',1,'']]],
-  ['walks_20kernel_20v3_1',['Walks Kernel (v3)',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md37',1,'']]],
-  ['walks_20v3_2',['Walks (v3)',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md26',1,'']]],
-  ['welcome_3',['Welcome',['../index.html',1,'']]],
-  ['what_20is_20verified_4',['5. What Is Verified',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md32',1,'']]],
-  ['what_20you_20ll_20find_20here_5',['What You&apos;ll Find Here',['../index.html#autotoc_md55',1,'']]],
-  ['with_20node_20labels_6',['edgelist with node labels',['../class_parser.html#autotoc_md1',1,'']]],
-  ['with_20node_20numbers_7',['edgelist with node numbers',['../class_parser.html#autotoc_md0',1,'']]]
+  ['v1_0',['v1',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md28',1,'Distance (v1)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md7',1,'Distance Kernel (schema v1)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md39',1,'Distance Kernel (v1)']]],
+  ['v2_1',['v2',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md29',1,'Reachability (v2)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md9',1,'Reachability Kernel (schema v2)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md41',1,'Reachability Kernel (v2)']]],
+  ['v3_2',['v3',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md30',1,'Walks (v3)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md11',1,'Walks Kernel (schema v3)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md43',1,'Walks Kernel (v3)']]],
+  ['v4_3',['v4',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md31',1,'Prominence (v4)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md13',1,'Prominence Kernel (schema v4)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md45',1,'Prominence Kernel (v4)']]],
+  ['v5_4',['v5',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md32',1,'IO Roundtrip (v5)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md15',1,'IO Roundtrip Kernel (schema v5)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md47',1,'IO Roundtrip Kernel (v5)']]],
+  ['v6_5',['v6',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md33',1,'Clustering (v6)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md17',1,'Clustering Kernel (schema v6)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md49',1,'Clustering Kernel (v6)']]],
+  ['v7_6',['v7',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md34',1,'Connectivity (v7)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md19',1,'Connectivity Kernel (schema v7)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md51',1,'Connectivity Kernel (v7)']]],
+  ['v8_7',['v8',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md35',1,'Matrix (v8)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md21',1,'Matrix Kernel (schema v8)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md53',1,'Matrix Kernel (v8)']]],
+  ['v9_8',['v9',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md36',1,'Vertex Connectivity (v9)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md23',1,'Vertex Connectivity Kernel (schema v9)'],['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md55',1,'Vertex Connectivity Kernel (v9)']]],
+  ['verified_9',['5. What Is Verified',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md38',1,'']]],
+  ['versions_10',['1. Schema Versions',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['vertex_20connectivity_20kernel_20schema_20v9_11',['Vertex Connectivity Kernel (schema v9)',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md23',1,'']]],
+  ['vertex_20connectivity_20kernel_20v9_12',['Vertex Connectivity Kernel (v9)',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md55',1,'']]],
+  ['vertex_20connectivity_20v9_13',['Vertex Connectivity (v9)',['../md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md36',1,'']]]
 ];

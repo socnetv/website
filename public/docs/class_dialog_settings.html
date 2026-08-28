@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -143,6 +143,8 @@ Public Slots</h2></td></tr>
 <tr class="memdesc:ab27d84219471394e774ba5da4c16b44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the real number precision.  <br /></td></tr>
 <tr class="memitem:a6c2a5a0402e152ee09e0aed4fe3631f7" id="r_a6c2a5a0402e152ee09e0aed4fe3631f7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c2a5a0402e152ee09e0aed4fe3631f7">getReportsChartType</a> (const int &amp;type)</td></tr>
 <tr class="memdesc:a6c2a5a0402e152ee09e0aed4fe3631f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the chart type in reports.  <br /></td></tr>
+<tr class="memitem:a345f290306af3020dd018466075cd061" id="r_a345f290306af3020dd018466075cd061"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a345f290306af3020dd018466075cd061">getReportsOutputFormat</a> (const int &amp;format)</td></tr>
+<tr class="memdesc:a345f290306af3020dd018466075cd061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the report output format (HTML or CSV).  <br /></td></tr>
 <tr class="memitem:a4ced5a3ed3f29f72ab2717e302e60f0b" id="r_a4ced5a3ed3f29f72ab2717e302e60f0b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ced5a3ed3f29f72ab2717e302e60f0b">getCanvasBgColor</a> ()</td></tr>
 <tr class="memdesc:a4ced5a3ed3f29f72ab2717e302e60f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a4ced5a3ed3f29f72ab2717e302e60f0b" title="DialogSettings::getCanvasBgColor Opens a QColorDialog for the user to select a new bg color.">DialogSettings::getCanvasBgColor</a> Opens a QColorDialog for the user to select a new bg color.  <br /></td></tr>
 <tr class="memitem:a2319a8dca92b2bcc1fd5552c2d4354dc" id="r_a2319a8dca92b2bcc1fd5552c2d4354dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2319a8dca92b2bcc1fd5552c2d4354dc">getCanvasBgImage</a> ()</td></tr>
@@ -209,6 +211,7 @@ Signals</h2></td></tr>
 <tr class="memitem:a61ab7104e4c869cfcd5c092d3b1a05bc" id="r_a61ab7104e4c869cfcd5c092d3b1a05bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61ab7104e4c869cfcd5c092d3b1a05bc">setReportsRealNumberPrecision</a> (const int &amp;precision)</td></tr>
 <tr class="memitem:af855190e675252f622abe7b59498c5fb" id="r_af855190e675252f622abe7b59498c5fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af855190e675252f622abe7b59498c5fb">setReportsLabelLength</a> (const int &amp;length)</td></tr>
 <tr class="memitem:a4e8355b7fa7e30e02b12401ca2b7e529" id="r_a4e8355b7fa7e30e02b12401ca2b7e529"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e8355b7fa7e30e02b12401ca2b7e529">setReportsChartType</a> (const int &amp;type)</td></tr>
+<tr class="memitem:acee50e6a109368d6b3f960cf83d18c11" id="r_acee50e6a109368d6b3f960cf83d18c11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acee50e6a109368d6b3f960cf83d18c11">setReportsOutputFormat</a> (const int &amp;format)</td></tr>
 <tr class="memitem:aec0915a75e9611ec47c39df4f87a7b4e" id="r_aec0915a75e9611ec47c39df4f87a7b4e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aec0915a75e9611ec47c39df4f87a7b4e">setCustomStylesheet</a> (const bool &amp;toggle)</td></tr>
 <tr class="memitem:a1b5c78fbe129d0f7651dafb91ee4818b" id="r_a1b5c78fbe129d0f7651dafb91ee4818b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1b5c78fbe129d0f7651dafb91ee4818b">setProgressDialog</a> (bool)</td></tr>
 <tr class="memitem:a2a3ee29c55a8d4a76ef12c96540b6725" id="r_a2a3ee29c55a8d4a76ef12c96540b6725"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2a3ee29c55a8d4a76ef12c96540b6725">setToolBar</a> (bool)</td></tr>
@@ -244,7 +247,7 @@ Signals</h2></td></tr>
 <tr class="memitem:a4e08f867e66af6cd1dee170d66e7286c" id="r_a4e08f867e66af6cd1dee170d66e7286c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4e08f867e66af6cd1dee170d66e7286c">setEdgeArrowsVisibility</a> (const bool &amp;toggle)</td></tr>
 <tr class="memitem:abcf42847c3b1e623d9dc36d35b0c6d66" id="r_abcf42847c3b1e623d9dc36d35b0c6d66"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abcf42847c3b1e623d9dc36d35b0c6d66">setEdgeArrowSize</a> (const int &amp;size)</td></tr>
 <tr class="memitem:aa61154811307822d9efec9b70b96b010" id="r_aa61154811307822d9efec9b70b96b010"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa61154811307822d9efec9b70b96b010">setEdgeColor</a> (const QColor, const int &amp;)</td></tr>
-<tr class="memitem:a9664e0ba3d93af383be8c5bc4d833ce5" id="r_a9664e0ba3d93af383be8c5bc4d833ce5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9664e0ba3d93af383be8c5bc4d833ce5">setEdgeShape</a> (const QString, const long int)</td></tr>
+<tr class="memitem:a1f8724c9f830d26587533d432999afe2" id="r_a1f8724c9f830d26587533d432999afe2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1f8724c9f830d26587533d432999afe2">setEdgesBezier</a> (const bool)</td></tr>
 <tr class="memitem:a91a8b040882f1de6f31fd535ab2a0659" id="r_a91a8b040882f1de6f31fd535ab2a0659"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a91a8b040882f1de6f31fd535ab2a0659">setEdgeOffsetFromNode</a> (const int &amp;offset, const int &amp;v1=0, const int &amp;v2=0)</td></tr>
 <tr class="memitem:a367c0a157b31721d7a18e31422e2d781" id="r_a367c0a157b31721d7a18e31422e2d781"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a367c0a157b31721d7a18e31422e2d781">setEdgeWeightNumbersVisibility</a> (const bool &amp;toggle)</td></tr>
 <tr class="memitem:af357e4b8c1612c3698e07d83422c4efd" id="r_af357e4b8c1612c3698e07d83422c4efd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af357e4b8c1612c3698e07d83422c4efd">setEdgeLabelsVisibility</a> (const bool &amp;toggle)</td></tr>
@@ -1258,6 +1261,33 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a345f290306af3020dd018466075cd061" name="a345f290306af3020dd018466075cd061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345f290306af3020dd018466075cd061">&#9670;&#160;</a></span>getReportsOutputFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DialogSettings::getReportsOutputFormat </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>format</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the report output format (HTML or CSV). </p>
+
+</div>
+</div>
 <a id="a6af89a54be4d1dc55533601a8ee34f65" name="a6af89a54be4d1dc55533601a8ee34f65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6af89a54be4d1dc55533601a8ee34f65">&#9670;&#160;</a></span>getReportsRealNumberPrecision</h2>
 
@@ -1845,8 +1875,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9664e0ba3d93af383be8c5bc4d833ce5" name="a9664e0ba3d93af383be8c5bc4d833ce5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9664e0ba3d93af383be8c5bc4d833ce5">&#9670;&#160;</a></span>setEdgeShape</h2>
+<a id="a1f8724c9f830d26587533d432999afe2" name="a1f8724c9f830d26587533d432999afe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8724c9f830d26587533d432999afe2">&#9670;&#160;</a></span>setEdgesBezier</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1855,14 +1885,10 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DialogSettings::setEdgeShape </td>
+          <td class="memname">void DialogSettings::setEdgesBezier </td>
           <td>(</td>
-          <td class="paramtype">const QString</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const long int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2400,6 +2426,31 @@ Private Attributes</h2></td></tr>
           <td class="memname">void DialogSettings::setReportsLabelLength </td>
           <td>(</td>
           <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>length</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acee50e6a109368d6b3f960cf83d18c11" name="acee50e6a109368d6b3f960cf83d18c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee50e6a109368d6b3f960cf83d18c11">&#9670;&#160;</a></span>setReportsOutputFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DialogSettings::setReportsOutputFormat </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>format</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

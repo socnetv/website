@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -117,7 +117,8 @@ $(function(){initNavTree('namespace_table_export.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0f0f1f971f760359e0fa84d39cf70073" id="r_a0f0f1f971f760359e0fa84d39cf70073"><td class="memItemLeft">static QString&#160;</td><td class="memItemRight"><a class="el" href="#a0f0f1f971f760359e0fa84d39cf70073">csvQuote</a> (const QString &amp;value)</td></tr>
+<tr class="memitem:ac8bb5ee82003d717fbe6845967f21ae0" id="r_ac8bb5ee82003d717fbe6845967f21ae0"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ac8bb5ee82003d717fbe6845967f21ae0">csvQuote</a> (const QString &amp;value)</td></tr>
+<tr class="memdesc:ac8bb5ee82003d717fbe6845967f21ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a CSV-safe quoted field: wraps <code class="param">value</code> in double-quotes if it contains a comma, double-quote, or newline; embedded double-quotes are escaped as "".  <br /></td></tr>
 <tr class="memitem:a18f8dc1abe7643fa12d9460769e4c3cc" id="r_a18f8dc1abe7643fa12d9460769e4c3cc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a18f8dc1abe7643fa12d9460769e4c3cc">toCSV</a> (QAbstractItemModel *model, const QString &amp;filePath)</td></tr>
 <tr class="memdesc:a18f8dc1abe7643fa12d9460769e4c3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <code class="param">model</code> to an RFC 4180 CSV file at <code class="param">filePath</code>.  <br /></td></tr>
 <tr class="memitem:ad22121b051435820c92267b5d67b02eb" id="r_ad22121b051435820c92267b5d67b02eb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad22121b051435820c92267b5d67b02eb">toJSON</a> (QAbstractItemModel *model, const QString &amp;filePath)</td></tr>
@@ -128,14 +129,11 @@ Functions</h2></td></tr>
 <p>Both functions operate on whatever rows and columns the model exposes — pass a QSortFilterProxyModel to export only the currently visible rows, or the raw source model to export everything.</p>
 <p>Constraint: QtCore only — no widgets, no UI signals. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a0f0f1f971f760359e0fa84d39cf70073" name="a0f0f1f971f760359e0fa84d39cf70073"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f0f1f971f760359e0fa84d39cf70073">&#9670;&#160;</a></span>csvQuote()</h2>
+<a id="ac8bb5ee82003d717fbe6845967f21ae0" name="ac8bb5ee82003d717fbe6845967f21ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb5ee82003d717fbe6845967f21ae0">&#9670;&#160;</a></span>csvQuote()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QString TableExport::csvQuote </td>
@@ -144,12 +142,10 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Returns a CSV-safe quoted field: wraps <code class="param">value</code> in double-quotes if it contains a comma, double-quote, or newline; embedded double-quotes are escaped as "". </p>
+<p>Exposed so other CSV writers outside this module (e.g. <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a>'s report writers, which build rows from data that never passes through a QAbstractItemModel) can reuse the same escaping rules instead of reimplementing them. </p>
 
 </div>
 </div>

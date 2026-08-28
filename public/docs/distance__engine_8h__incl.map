@@ -1,12 +1,12 @@
 <map id="distance_engine.h" name="distance_engine.h">
 <area shape="rect" id="Node000001" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="359,5,485,31"/>
-<area shape="rect" id="Node000002" href="$graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class that implements IDistanceProgressSink to receive progres..." alt="" coords="101,79,252,120"/>
+<area shape="rect" id="Node000002" href="$graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class, which forwards DistanceEngine&#39;s status messages and can..." alt="" coords="101,79,252,120"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,34,253,76,252,71,383,29"/>
 <area shape="rect" id="Node000005" href="$per__source__scratch_8h.html" title="Per&#45;source scratch state for the Brandes SSSP / centrality computation." alt="" coords="328,86,516,112"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="425,31,425,71,419,71,419,31"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="618,168,687,193"/>
 <area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="448,29,530,77,585,117,630,155,626,159,581,121,527,81,445,34"/>
-<area shape="rect" id="Node000003" href="$distance__progress__sink_8h.html" title="Declares the IDistanceProgressSink interface for receiving progress updates during distance and centr..." alt="" coords="5,168,175,193"/>
+<area shape="rect" id="Node000003" href="$distance__progress__sink_8h.html" title="Declares the IDistanceProgressSink interface for status messages and cancellation during distance and..." alt="" coords="5,168,175,193"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,122,116,159,113,155,153,118"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="57,241,123,267"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,194,93,226,87,226,87,194"/>

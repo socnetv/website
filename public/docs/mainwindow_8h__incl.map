@@ -1,30 +1,32 @@
 <map id="mainwindow.h" name="mainwindow.h">
-<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="503,5,606,31"/>
+<area shape="rect" id="Node000001" title="Declares the MainWindow class, the primary interface for the SocNetV application." alt="" coords="578,5,680,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,86,112,112"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="503,27,334,46,229,62,124,82,112,85,110,79,123,76,228,57,333,41,503,22"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="578,25,378,43,251,60,124,82,111,85,110,79,123,76,250,54,377,38,577,20"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="136,86,205,112"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="503,28,373,47,295,62,218,82,212,83,211,78,216,76,294,57,372,42,502,23"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="578,26,416,43,316,59,218,82,212,83,210,78,216,76,315,54,415,38,577,20"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="229,86,336,112"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="513,34,340,84,338,79,512,29"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="578,32,350,82,339,84,337,79,349,76,577,27"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="361,86,452,112"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="533,34,444,81,441,77,531,29"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="476,86,542,112"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="550,33,526,74,521,72,545,30"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="566,86,637,112"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="564,30,588,71,584,74,559,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="661,86,776,112"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="581,29,681,77,679,82,579,34"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="800,86,957,112"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="605,29,815,80,813,85,604,34"/>
-<area shape="rect" id="Node000010" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="981,86,1048,112"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="606,20,770,37,870,53,970,76,976,78,974,83,968,82,869,59,769,42,606,25"/>
-<area shape="rect" id="Node000014" href="$filter__condition_8h.html" title="Defines the FilterCondition struct shared by all attribute&#45;based filters." alt="" coords="1071,79,1190,120"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="606,20,801,39,926,55,1056,76,1056,81,926,60,800,44,606,26"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="895,168,950,193"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1002,115,950,159,946,155,999,111"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="974,168,1063,193"/>
-<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="1018,112,1020,152,1014,152,1012,113"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="1094,168,1159,193"/>
-<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="1033,110,1099,157,1096,161,1030,115"/>
-<area shape="poly" id="edge14_Node000014_Node000013" title=" " alt="" coords="1132,120,1131,152,1125,152,1127,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="596,34,456,83,454,78,594,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="476,86,548,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="613,34,544,80,541,75,610,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="572,86,686,112"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="632,31,632,71,626,71,626,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="710,86,839,112"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="653,29,740,76,738,81,650,34"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="864,86,941,112"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="681,29,853,76,858,78,857,83,851,82,679,34"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="965,86,1122,112"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="681,26,954,76,973,80,972,85,953,82,680,31"/>
+<area shape="rect" id="Node000011" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="1147,86,1213,112"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="681,18,768,23,882,33,1009,50,1135,76,1141,78,1139,83,1134,82,1008,55,881,38,768,28,681,24"/>
+<area shape="rect" id="Node000015" href="$filter__condition_8h.html" title="Defines the FilterCondition struct shared by all attribute&#45;based filters." alt="" coords="1237,79,1355,120"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="681,19,912,36,1064,52,1222,76,1221,81,1064,58,912,41,681,24"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1061,168,1115,193"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1168,115,1115,159,1112,155,1164,111"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1140,168,1228,193"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="1183,112,1185,152,1180,152,1178,113"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1259,168,1324,193"/>
+<area shape="poly" id="edge13_Node000011_Node000014" title=" " alt="" coords="1198,110,1264,157,1261,161,1195,115"/>
+<area shape="poly" id="edge15_Node000015_Node000014" title=" " alt="" coords="1298,120,1296,152,1291,152,1292,120"/>
 </map>

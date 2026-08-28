@@ -2,6 +2,7 @@ var global_8h =
 [
     [ "ClickedEdge", "struct_clicked_edge.html", "struct_clicked_edge" ],
     [ "MyEdge", "class_my_edge.html", "class_my_edge" ],
+    [ "EdgeVisibilityChange", "class_edge_visibility_change.html", "class_edge_visibility_change" ],
     [ "GraphDistance", "class_graph_distance.html", "class_graph_distance" ],
     [ "GraphDistancesCompare", "class_graph_distances_compare.html", "class_graph_distances_compare" ],
     [ "PairVF", "class_pair_v_f.html", "class_pair_v_f" ],
@@ -45,6 +46,8 @@ var global_8h =
       [ "PC", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839aa2c62b62b658ac45e83749e9e9c1cb46", null ],
       [ "IC", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a71f819af1febe12353c9bd1a7aa32196", null ],
       [ "EVC", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839af92228b6cdbb5a77a97a23c9a7102a55", null ],
+      [ "KATZ", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a7ab58fa280015fa4df068db4ac8e8488", null ],
+      [ "BPC", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839acd8c04c31c80022e8e00a6a385bfd6b1", null ],
       [ "DP", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839ad7952717003d90fc1d54ccecbcbfa00a", null ],
       [ "PRP", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839af476d219e7476a700a37160a11c4e8bc", null ],
       [ "PP", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a6950076e5ba177055e1b6687118e4c2a", null ],
@@ -68,6 +71,10 @@ var global_8h =
       [ "Heart", "global_8h.html#a37e50858781617a826d3709db82aba70aeaef218f765028fa425ac884c64b5818", null ],
       [ "Dice", "global_8h.html#a37e50858781617a826d3709db82aba70a20f62020542b70600c24162d29c872e8", null ],
       [ "Custom", "global_8h.html#a37e50858781617a826d3709db82aba70a26b367bcdd210f7345b551b921c5551f", null ]
+    ] ],
+    [ "ReportFormat", "global_8h.html#a3d5da577e76f50d29898f666100d9e9d", [
+      [ "Html", "global_8h.html#a3d5da577e76f50d29898f666100d9e9da178b44515b6878e2b2cd5d517d371b5f", null ],
+      [ "Csv", "global_8h.html#a3d5da577e76f50d29898f666100d9e9da91edd1c409f43faeb97b07b3af6d1f23", null ]
     ] ],
     [ "M_PI", "global_8h.html#a7dd8de910244c0c514f90d00e2854724", null ],
     [ "M_PI_3", "global_8h.html#a7fef15cb175acb759e40f1b1de06ad5c", null ],

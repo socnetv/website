@@ -1,6 +1,5 @@
 var matrix_8h =
 [
-    [ "MatrixRow", "class_matrix_row.html", "class_matrix_row" ],
     [ "Matrix", "class_matrix.html", "class_matrix" ],
     [ "infinity", "matrix_8h.html#a8a324c8db4351fe174d18c09909b49ed", null ],
     [ "METRIC_CHEBYSHEV_MAXIMUM", "matrix_8h.html#a69f32ea6e9628aeadfe37541d3b8861a", null ],

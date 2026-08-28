@@ -2,6 +2,10 @@
 
 Notes on gotchas and non-obvious behavior in this Astro/Starlight site that aren't worth putting in the README.
 
+## Remember to regenerate `public/docs/` (Doxygen) on release day
+
+It's not built by CI — see [public/README.md](public/README.md) for how to regenerate it.
+
 ## MDX treats bare `{...}` as JavaScript, not literal text
 
 **Symptom**: `npm start` (or `astro build`) fails with:

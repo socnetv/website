@@ -1,8 +1,14 @@
 var structcli_1_1_cli_config =
 [
     [ "benchRuns", "structcli_1_1_cli_config.html#a89d765dbd5a76db33687ed4eeae2b572", null ],
+    [ "bonacichAlpha", "structcli_1_1_cli_config.html#add7aeeb000434ceea68de7d85732ee16", null ],
+    [ "bonacichBeta", "structcli_1_1_cli_config.html#ac32408c805a1552d5080e792694010e4", null ],
     [ "compareJsonPath", "structcli_1_1_cli_config.html#ac6cd8f1615829d28ff8d3f8cb97978f5", null ],
     [ "computeCentralities", "structcli_1_1_cli_config.html#ae9421e06b56424b4e8e0c198d0959621", null ],
+    [ "connectivityType", "structcli_1_1_cli_config.html#a9bf12192cd39e025eebca768fb074e95", null ],
+    [ "connMode", "structcli_1_1_cli_config.html#ac47eda8d743f1845e19a62743effa12b", null ],
+    [ "connSource", "structcli_1_1_cli_config.html#a3bd7f16da60fb60b729b98c16203f704", null ],
+    [ "connTarget", "structcli_1_1_cli_config.html#a19ff065422814be0ed0faa4913045618", null ],
     [ "considerWeights", "structcli_1_1_cli_config.html#acd55c77eaca6f2f5f557487b7c2c6935", null ],
     [ "delimiter", "structcli_1_1_cli_config.html#af3d7ed07c59d31e9e5788bc1f8431e8f", null ],
     [ "dropIsolates", "structcli_1_1_cli_config.html#adb0343ab50fc06a58807dc4d99efc264", null ],
@@ -11,6 +17,7 @@ var structcli_1_1_cli_config =
     [ "hasLabels", "structcli_1_1_cli_config.html#a2ee5eeb9c6948d5c6e6dc72298e23246", null ],
     [ "inputPath", "structcli_1_1_cli_config.html#acd4d34c0c38ee6736f3f4e1869dc644d", null ],
     [ "inverseWeights", "structcli_1_1_cli_config.html#aba16d9cb94fb715592b208c930c420c7", null ],
+    [ "katzAlpha", "structcli_1_1_cli_config.html#a93bbc0b9dc2cf92e8943af251b750121", null ],
     [ "kernel", "structcli_1_1_cli_config.html#a6bed6c16e4be8e53bdabca29135e63df", null ],
     [ "strict", "structcli_1_1_cli_config.html#a1c4acd7db16ed47ee7a1b45f93f95aa7", null ],
     [ "twoMode", "structcli_1_1_cli_config.html#abe16c6ddd166c43d17b12b99d1bff30a", null ],

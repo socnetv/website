@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -112,7 +112,7 @@ $(function(){initNavTree('distance__progress__sink_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Declares the <a class="el" href="class_i_distance_progress_sink.html">IDistanceProgressSink</a> interface for receiving progress updates during distance and centrality computations.  
+<p>Declares the <a class="el" href="class_i_distance_progress_sink.html">IDistanceProgressSink</a> interface for status messages and cancellation during distance and centrality computations.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;QString&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -120,9 +120,9 @@ Include dependency graph for distance_progress_sink.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="distance__progress__sink_8h__incl.png" border="0" usemap="#adistance__progress__sink_8h" loading="lazy" alt=""/></div>
 <map name="adistance__progress__sink_8h" id="adistance__progress__sink_8h">
-<area shape="rect" title="Declares the IDistanceProgressSink interface for receiving progress updates during distance and centr..." alt="" coords="5,5,192,31"/>
-<area shape="rect" title=" " alt="" coords="63,79,134,104"/>
-<area shape="poly" title=" " alt="" coords="101,31,101,65,96,65,96,31"/>
+<area shape="rect" title="Declares the IDistanceProgressSink interface for status messages and cancellation during distance and..." alt="" coords="5,5,175,31"/>
+<area shape="rect" title=" " alt="" coords="57,79,123,105"/>
+<area shape="poly" title=" " alt="" coords="93,31,93,63,87,63,87,31"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -130,23 +130,23 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="distance__progress__sink_8h__dep__incl.png" border="0" usemap="#adistance__progress__sink_8hdep" loading="lazy" alt=""/></div>
 <map name="adistance__progress__sink_8hdep" id="adistance__progress__sink_8hdep">
-<area shape="rect" title="Declares the IDistanceProgressSink interface for receiving progress updates during distance and centr..." alt="" coords="341,5,528,31"/>
-<area shape="rect" href="graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class that implements IDistanceProgressSink to receive progres..." alt="" coords="243,79,427,119"/>
-<area shape="poly" title=" " alt="" coords="411,41,360,81,357,76,407,37"/>
-<area shape="rect" href="null__distance__progress__sink_8h.html" title="Declares the NullDistanceProgressSink class that implements IDistanceProgressSink with empty methods,..." alt="" coords="451,79,621,119"/>
-<area shape="poly" title=" " alt="" coords="462,37,513,76,510,81,459,41"/>
-<area shape="rect" href="distance__engine_8cpp.html" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="5,255,160,280"/>
-<area shape="poly" title=" " alt="" coords="278,127,200,169,140,216,96,256,92,253,136,211,197,164,276,122"/>
-<area shape="rect" href="distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="211,174,351,199"/>
-<area shape="poly" title=" " alt="" coords="318,132,291,175,286,172,313,129"/>
-<area shape="rect" href="graph_8cpp.html" title="Implements the Graph class for managing network structures, nodes, and edges in SocNetV." alt="" coords="402,255,489,280"/>
-<area shape="poly" title=" " alt="" coords="357,129,440,253,435,256,353,132"/>
-<area shape="rect" href="graph__distance__progress__sink_8cpp.html" title="Implements the GraphDistanceProgressSink class that receives progress updates from the DistanceEngine..." alt="" coords="427,167,611,207"/>
-<area shape="poly" title=" " alt="" coords="389,122,480,164,477,169,386,127"/>
-<area shape="poly" title=" " alt="" coords="241,207,113,257,111,252,239,202"/>
-<area shape="poly" title=" " alt="" coords="319,203,423,252,420,257,316,208"/>
-<area shape="rect" href="graph__distance__cache_8cpp.html" title="Implements distance matrix creation, geodesic aggregation, SSSP helpers, and caching logic for the Gr..." alt="" coords="185,255,378,280"/>
-<area shape="poly" title=" " alt="" coords="284,213,284,254,279,254,279,213"/>
+<area shape="rect" title="Declares the IDistanceProgressSink interface for status messages and cancellation during distance and..." alt="" coords="315,5,484,31"/>
+<area shape="rect" href="graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class, which forwards DistanceEngine&#39;s status messages and can..." alt="" coords="224,79,391,120"/>
+<area shape="poly" title=" " alt="" coords="376,43,332,81,328,77,372,39"/>
+<area shape="rect" href="null__distance__progress__sink_8h.html" title="Declares the NullDistanceProgressSink class that implements IDistanceProgressSink with empty methods,..." alt="" coords="414,79,569,120"/>
+<area shape="poly" title=" " alt="" coords="427,39,471,77,467,81,423,43"/>
+<area shape="rect" href="distance__engine_8cpp.html" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="5,256,146,282"/>
+<area shape="poly" title=" " alt="" coords="253,129,185,170,129,217,89,258,85,254,126,213,182,165,251,125"/>
+<area shape="rect" href="distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="195,175,321,201"/>
+<area shape="poly" title=" " alt="" coords="291,135,267,176,263,174,286,132"/>
+<area shape="rect" href="graph_8cpp.html" title="Implements the Graph class for managing network structures, nodes, and edges in SocNetV." alt="" coords="371,256,449,282"/>
+<area shape="poly" title=" " alt="" coords="329,131,405,255,401,257,325,134"/>
+<area shape="rect" href="graph__distance__progress__sink_8cpp.html" title="Implements the GraphDistanceProgressSink class, which forwards DistanceEngine&#39;s status messages and c..." alt="" coords="395,168,561,208"/>
+<area shape="poly" title=" " alt="" coords="361,125,441,165,438,170,358,129"/>
+<area shape="poly" title=" " alt="" coords="217,210,104,258,102,253,215,205"/>
+<area shape="poly" title=" " alt="" coords="296,206,388,253,386,258,294,211"/>
+<area shape="rect" href="graph__distance__cache_8cpp.html" title="Implements distance matrix creation, geodesic aggregation, SSSP helpers, and caching logic for the Gr..." alt="" coords="170,256,346,282"/>
+<area shape="poly" title=" " alt="" coords="261,217,261,256,256,256,256,217"/>
 </map>
 </div>
 </div>
@@ -157,7 +157,7 @@ Classes</h2></td></tr>
 <tr class="memitem:IDistanceProgressSink" id="r_IDistanceProgressSink"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_i_distance_progress_sink.html">IDistanceProgressSink</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Declares the <a class="el" href="class_i_distance_progress_sink.html">IDistanceProgressSink</a> interface for receiving progress updates during distance and centrality computations. </p>
+<div class="textblock"><p>Declares the <a class="el" href="class_i_distance_progress_sink.html">IDistanceProgressSink</a> interface for status messages and cancellation during distance and centrality computations. </p>
 <dl class="section author"><dt>Author</dt><dd>Dimitris B. Kalamaras </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2005-2025 by Dimitris B. Kalamaras. This file is part of <a class="el" href="namespace_soc_net_v.html">SocNetV</a> (Social Network Visualizer). @license This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 or later. For more details, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://socnetv.org">https://socnetv.org</a> </dd></dl>

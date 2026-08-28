@@ -1,0 +1,51 @@
+<map id="forms_logging.h" name="forms_logging.h">
+<area shape="rect" id="Node000001" title="Shared WS14 logging category declaration for src/forms/ dialog files." alt="" coords="2207,5,2321,31"/>
+<area shape="rect" id="Node000002" href="$dialogbulkedit_8cpp.html" title="Implements DialogBulkEdit for applying a single property value to multiple nodes or edges." alt="" coords="5,79,131,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2192,23,1200,40,591,57,336,69,143,82,131,83,131,78,142,76,335,63,591,52,1200,34,2192,18"/>
+<area shape="rect" id="Node000003" href="$dialogcentralitybonacich_8cpp.html" title="Implements the DialogCentralityBonacich class for collecting the Bonacich Power Centrality parameters..." alt="" coords="155,79,341,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2192,22,1899,25,1446,34,907,51,628,65,354,82,341,83,341,77,353,76,627,59,907,46,1446,28,1898,20,2192,17"/>
+<area shape="rect" id="Node000004" href="$dialogcentralitykatz_8cpp.html" title="Implements the DialogCentralityKatz class for collecting the Katz Centrality attenuation factor (alph..." alt="" coords="365,79,523,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2192,22,1923,25,1514,33,1031,51,780,64,535,82,524,83,523,77,534,76,780,59,1030,45,1514,28,1923,19,2192,17"/>
+<area shape="rect" id="Node000005" href="$dialogclusteringhierarchical_8cpp.html" title="Implements hierarchical clustering dialog for social network visualization and analysis." alt="" coords="547,79,749,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2192,23,1602,40,1186,57,762,82,750,83,749,77,761,76,1186,51,1602,34,2192,18"/>
+<area shape="rect" id="Node000006" href="$dialogdatasetselect_8cpp.html" title="Implements the DialogDatasetSelect class for selecting datasets in SocNetV." alt="" coords="773,79,931,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="2192,23,1671,39,1311,56,943,82,932,83,931,77,942,76,1310,51,1671,33,2192,18"/>
+<area shape="rect" id="Node000007" href="$dialogdissimilarities_8cpp.html" title="Implements the DialogDissimilarities class for managing dissimilarity calculations in SocNetV." alt="" coords="955,79,1114,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="2192,24,1743,42,1438,58,1127,82,1115,83,1115,77,1126,76,1437,53,1743,36,2192,19"/>
+<area shape="rect" id="Node000008" href="$dialogedgedichotomization_8cpp.html" title="Implements the DialogEdgeDichotomization class for managing edge dichotomization in SocNetV." alt="" coords="1139,79,1338,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="2192,26,1830,47,1350,82,1339,83,1339,77,1349,76,1830,42,2191,21"/>
+<area shape="rect" id="Node000009" href="$dialogedgeedit_8cpp.html" title="Implements the DialogEdgeEdit class for editing edge properties." alt="" coords="1362,79,1491,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="2192,26,1891,46,1698,62,1503,82,1492,83,1491,78,1502,76,1698,57,1891,41,2192,21"/>
+<area shape="rect" id="Node000010" href="$dialogexportimage_8cpp.html" title="Implements the DialogExportImage class for exporting network visualizations as images in SocNetV." alt="" coords="1515,79,1666,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="2192,29,1679,82,1667,83,1667,78,1678,76,2192,24"/>
+<area shape="rect" id="Node000011" href="$dialogexportpdf_8cpp.html" title="Implements the DialogExportPDF class for exporting network visualizations as PDF files in SocNetV." alt="" coords="1690,79,1824,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="2192,32,1838,82,1825,83,1825,78,1837,76,2191,27"/>
+<area shape="rect" id="Node000012" href="$dialogfilteredgesbyweight_8cpp.html" title="Implements the DialogFilterEdgesByWeight class for filtering edges based on weight in the social netw..." alt="" coords="1849,79,2042,105"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="2195,38,2000,81,1999,76,2194,32"/>
+<area shape="rect" id="Node000013" href="$dialogfilternodesbycentrality_8cpp.html" title="Implements the DialogFilterNodesByCentrality class for filtering nodes based on their attributes." alt="" coords="2065,79,2271,105"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="2237,43,2186,81,2182,76,2234,38"/>
+<area shape="rect" id="Node000014" href="$dialognodeedit_8cpp.html" title="Implements the DialogNodeEdit class for editing node properties in the network graph visualization." alt="" coords="2295,79,2425,105"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="2294,38,2346,76,2342,81,2291,43"/>
+<area shape="rect" id="Node000015" href="$dialognodefind_8cpp.html" title="Implements the DialogNodeFind class for searching and selecting nodes within the network graph in Soc..." alt="" coords="2449,79,2578,105"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="2322,33,2472,76,2470,81,2320,38"/>
+<area shape="rect" id="Node000016" href="$dialogpreviewfile_8cpp.html" title="Implements the DialogPreviewFile class which displays file contents with encoding options for preview..." alt="" coords="2602,79,2744,105"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="2336,29,2604,76,2603,81,2335,35"/>
+<area shape="rect" id="Node000017" href="$dialogranderdosrenyi_8cpp.html" title=" " alt="" coords="2768,79,2933,105"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="2336,26,2756,76,2768,78,2767,83,2756,82,2336,31"/>
+<area shape="rect" id="Node000018" href="$dialograndlattice_8cpp.html" title="Implements the DialogRandLattice class for generating random lattice networks in SocNetV." alt="" coords="2958,79,3098,105"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="2336,22,2605,43,2946,76,2958,78,2957,83,2945,82,2604,48,2336,27"/>
+<area shape="rect" id="Node000019" href="$dialograndregular_8cpp.html" title="Implements the DialogRandRegular class for generating random regular graphs in SocNetV." alt="" coords="3122,79,3265,105"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="2336,20,2671,40,2890,56,3111,76,3122,78,3121,83,3110,82,2889,61,2671,45,2336,26"/>
+<area shape="rect" id="Node000020" href="$dialograndscalefree_8cpp.html" title=" " alt="" coords="3289,79,3447,105"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="2337,19,2738,38,3005,55,3278,76,3289,77,3288,83,3277,82,3005,60,2737,43,2336,25"/>
+<area shape="rect" id="Node000021" href="$dialograndsmallworld_8cpp.html" title="Implements the DialogRandSmallWorld class for generating small&#45;world networks using the Watts&#45;Strogat..." alt="" coords="3471,79,3638,105"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="2336,19,2808,36,3130,53,3459,76,3471,77,3470,83,3458,82,3130,58,2808,41,2336,24"/>
+<area shape="rect" id="Node000022" href="$dialogsettings_8cpp.html" title="Implements the DialogSettings class for managing user preferences and application settings in SocNetV..." alt="" coords="3662,79,3788,105"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="2336,17,2558,20,2883,29,3263,47,3651,76,3662,78,3662,83,3650,82,3263,52,2883,34,2558,25,2336,22"/>
+<area shape="rect" id="Node000023" href="$dialogsimilaritymatches_8cpp.html" title="Implements the DialogSimilarityMatches class for calculating similarity between nodes using matching ..." alt="" coords="3813,79,3995,105"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="2336,18,2940,33,3365,50,3800,76,3813,77,3813,83,3800,82,3365,55,2940,38,2336,23"/>
+<area shape="rect" id="Node000024" href="$dialogsimilaritypearson_8cpp.html" title="Implements the DialogSimilarityPearson class for computing Pearson correlation similarity between nod..." alt="" coords="4019,79,4197,105"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="2337,17,2607,21,3019,30,3507,47,4007,76,4019,77,4018,83,4006,82,3506,53,3019,35,2607,26,2336,23"/>
+<area shape="rect" id="Node000025" href="$dialogwebcrawler_8cpp.html" title="Implements the DialogWebCrawler class for configuring and executing web crawling functionality in Soc..." alt="" coords="4221,79,4366,105"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="2336,16,2634,17,3095,23,3645,41,3930,56,4210,76,4220,77,4220,83,4209,82,3930,62,3645,46,3095,28,2634,22,2336,22"/>
+</map>

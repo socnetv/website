@@ -1,7 +1,19 @@
 <map id="dialogpreviewfile.h" name="dialogpreviewfile.h">
-<area shape="rect" id="Node000001" title="Declares the DialogPreviewFile class used for displaying a preview of network files before importing ..." alt="" coords="98,5,245,31"/>
-<area shape="rect" id="Node000002" href="$dialogpreviewfile_8cpp.html" title="Implements the DialogPreviewFile class which displays file contents with encoding options for preview..." alt="" coords="5,79,167,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,41,102,80,98,76,146,37"/>
-<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="191,79,322,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,37,244,76,241,80,194,41"/>
+<area shape="rect" id="Node000001" title="Declares the DialogPreviewFile class used for displaying a preview of network files before importing ..." alt="" coords="626,5,754,31"/>
+<area shape="rect" id="Node000002" href="$dialogpreviewfile_8cpp.html" title="Implements the DialogPreviewFile class which displays file contents with encoding options for preview..." alt="" coords="5,86,148,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="611,28,406,48,160,82,125,89,124,83,159,76,405,43,610,23"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="172,86,288,112"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="610,32,466,52,301,82,272,88,271,83,300,76,465,47,609,26"/>
+<area shape="rect" id="Node000004" href="$mainwindow__init__settings_8cpp.html" title="Implements MainWindow settings load/save and last&#45;used&#45;path bookkeeping." alt="" coords="312,86,508,112"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="633,38,454,88,452,83,631,33"/>
+<area shape="rect" id="Node000005" href="$mainwindow__network__file_8cpp.html" title="Implements MainWindow Network menu: new/open/save/close/print, recent files, file dialog plumbing,..." alt="" coords="531,79,678,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="668,44,627,81,624,77,664,40"/>
+<area shape="rect" id="Node000006" href="$mainwindow__network__import__export_8cpp.html" title="Implements MainWindow Network menu: import (GraphML, GML, Pajek, Adjacency, GraphViz,..." alt="" coords="702,79,848,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="716,40,756,77,752,81,712,44"/>
+<area shape="rect" id="Node000007" href="$mainwindow__network__random_8cpp.html" title="Implements MainWindow Network menu: sample dataset selection and random network generation (Erdos&#45;Ren..." alt="" coords="873,79,1019,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="745,34,883,76,881,81,743,39"/>
+<area shape="rect" id="Node000008" href="$mainwindow__network__view_8cpp.html" title="Implements MainWindow Network menu: file preview in system browser, internal text editor,..." alt="" coords="1043,79,1190,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="770,30,1032,76,1044,79,1042,84,1031,82,769,35"/>
+<area shape="rect" id="Node000009" href="$mainwindow__network__web_8cpp.html" title="Implements MainWindow Network menu web crawler dialog/launch and the QNetworkAccessManager request/re..." alt="" coords="1214,79,1360,120"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="770,24,967,44,1202,76,1214,79,1213,84,1201,82,966,49,769,29"/>
 </map>

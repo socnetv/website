@@ -8,9 +8,11 @@ var searchData=
   ['bez_5fp2_5fx_5',['bez_p2_x',['../class_parser.html#ae9b0a1b511a5291af023f13af4e101f3',1,'Parser']]],
   ['bez_5fp2_5fy_6',['bez_p2_y',['../class_parser.html#aaebb84618add6abab5334c2dc574e746',1,'Parser']]],
   ['bezier_7',['bezier',['../class_parser.html#a34fee048aff6e56a947c94b3639d08f5',1,'Parser']]],
-  ['bool_5fedge_8',['bool_edge',['../class_parser.html#adf86e8c6abeb72d61423dca8cd95ee77',1,'Parser']]],
-  ['bool_5fkey_9',['bool_key',['../class_parser.html#aac1208050a1feed390572c0c2c415ba7',1,'Parser']]],
-  ['bool_5fnode_10',['bool_node',['../class_parser.html#ac552bcafa6da4ad856743e4e157b8bc4',1,'Parser']]],
-  ['bprob_11',['bprob',['../class_dialog_rand_small_world.html#ac9c2c4fa8572a189b70e651f42351fca',1,'DialogRandSmallWorld']]],
-  ['buttonbox_12',['buttonBox',['../class_dialog_preview_file.html#a8f17b02dbd744bbb71a69760fb2cc517',1,'DialogPreviewFile']]]
+  ['bonacichalpha_8',['bonacichAlpha',['../structcli_1_1_cli_config.html#add7aeeb000434ceea68de7d85732ee16',1,'cli::CliConfig']]],
+  ['bonacichbeta_9',['bonacichBeta',['../structcli_1_1_cli_config.html#ac32408c805a1552d5080e792694010e4',1,'cli::CliConfig']]],
+  ['bool_5fedge_10',['bool_edge',['../class_parser.html#adf86e8c6abeb72d61423dca8cd95ee77',1,'Parser']]],
+  ['bool_5fkey_11',['bool_key',['../class_parser.html#aac1208050a1feed390572c0c2c415ba7',1,'Parser']]],
+  ['bool_5fnode_12',['bool_node',['../class_parser.html#ac552bcafa6da4ad856743e4e157b8bc4',1,'Parser']]],
+  ['bprob_13',['bprob',['../class_dialog_rand_small_world.html#ac9c2c4fa8572a189b70e651f42351fca',1,'DialogRandSmallWorld']]],
+  ['buttonbox_14',['buttonBox',['../class_dialog_preview_file.html#a8f17b02dbd744bbb71a69760fb2cc517',1,'DialogPreviewFile']]]
 ];

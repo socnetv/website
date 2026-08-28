@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -119,6 +119,7 @@ $(function(){initNavTree('distance__engine_8cpp.html','',''); });
 <code>#include &quot;<a class="el" href="graph__distance__progress__sink_8h_source.html">engine/graph_distance_progress_sink.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="thread__local__state_8h_source.html">engine/thread_local_state.h</a>&quot;</code><br />
 <code>#include &lt;QDebug&gt;</code><br />
+<code>#include &lt;QLoggingCategory&gt;</code><br />
 <code>#include &lt;QMutex&gt;</code><br />
 <code>#include &lt;QThread&gt;</code><br />
 <code>#include &lt;QtConcurrent/QtConcurrent&gt;</code><br />
@@ -129,136 +130,148 @@ Include dependency graph for distance_engine.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="distance__engine_8cpp__incl.png" border="0" usemap="#adistance__engine_8cpp" loading="lazy" alt=""/></div>
 <map name="adistance__engine_8cpp" id="adistance__engine_8cpp">
-<area shape="rect" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="2319,5,2460,31"/>
-<area shape="rect" href="distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="2218,86,2387,112"/>
-<area shape="poly" title=" " alt="" coords="2378,33,2329,78,2325,74,2374,29"/>
-<area shape="rect" href="graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class that implements IDistanceProgressSink to receive progres..." alt="" coords="2058,168,2209,208"/>
-<area shape="poly" title=" " alt="" coords="2320,34,2262,52,2234,65,2208,81,2175,116,2151,155,2146,152,2171,113,2205,77,2232,60,2260,47,2318,29"/>
-<area shape="rect" title=" " alt="" coords="2576,264,2635,290"/>
-<area shape="poly" title=" " alt="" coords="2461,27,2512,44,2537,59,2558,77,2573,97,2584,119,2600,165,2607,210,2609,248,2603,248,2602,211,2595,166,2580,121,2568,100,2554,81,2534,63,2510,49,2459,32"/>
-<area shape="rect" href="graph_8h.html" title="Defines the Graph class and related algorithms for social network visualization." alt="" coords="900,86,964,112"/>
-<area shape="poly" title=" " alt="" coords="2319,26,979,98,979,93,2318,21"/>
-<area shape="rect" title=" " alt="" coords="1814,264,1885,290"/>
-<area shape="poly" title=" " alt="" coords="2319,27,2212,44,2153,60,2097,81,2028,121,1964,169,1911,216,1872,254,1869,251,1907,212,1961,165,2025,117,2095,77,2152,55,2211,39,2318,22"/>
-<area shape="rect" title=" " alt="" coords="1909,264,1979,290"/>
-<area shape="poly" title=" " alt="" coords="2319,34,2244,52,2167,81,2103,120,2045,168,1998,215,1964,254,1960,250,1994,212,2042,164,2100,116,2164,77,2243,47,2318,29"/>
-<area shape="rect" href="thread__local__state_8h.html" title="Per&#45;thread state for the parallel SSSP source loop in DistanceEngine." alt="" coords="2411,79,2544,120"/>
-<area shape="poly" title=" " alt="" coords="2404,29,2446,67,2443,71,2401,33"/>
-<area shape="rect" title=" " alt="" coords="2638,86,2706,112"/>
-<area shape="poly" title=" " alt="" coords="2443,29,2621,76,2627,78,2625,84,2619,82,2442,34"/>
-<area shape="rect" title=" " alt="" coords="2729,86,2911,112"/>
-<area shape="poly" title=" " alt="" coords="2457,29,2718,76,2741,81,2740,86,2717,82,2456,34"/>
-<area shape="rect" title=" " alt="" coords="2934,86,2991,112"/>
-<area shape="poly" title=" " alt="" coords="2460,17,2553,21,2670,31,2797,48,2923,76,2927,78,2926,83,2922,82,2796,53,2669,36,2553,26,2460,23"/>
-<area shape="poly" title=" " alt="" coords="2280,115,2186,163,2184,158,2278,110"/>
-<area shape="rect" href="per__source__scratch_8h.html" title="Per&#45;source scratch state for the Brandes SSSP / centrality computation." alt="" coords="2284,175,2473,201"/>
-<area shape="poly" title=" " alt="" coords="2315,111,2360,162,2356,165,2311,114"/>
-<area shape="rect" title=" " alt="" coords="2476,264,2545,290"/>
-<area shape="poly" title=" " alt="" coords="2351,110,2430,135,2465,150,2487,166,2500,185,2508,207,2514,248,2509,248,2503,208,2495,187,2483,170,2462,155,2428,140,2350,115"/>
-<area shape="rect" href="distance__progress__sink_8h.html" title="Declares the IDistanceProgressSink interface for receiving progress updates during distance and centr..." alt="" coords="2054,264,2223,290"/>
-<area shape="poly" title=" " alt="" coords="2137,209,2140,248,2134,249,2132,209"/>
-<area shape="rect" title=" " alt="" coords="778,345,843,371"/>
-<area shape="poly" title=" " alt="" coords="2054,293,1991,300,1652,325,1321,342,859,358,859,353,1320,337,1651,319,1990,294,2053,287"/>
-<area shape="rect" title=" " alt="" coords="2395,264,2448,290"/>
-<area shape="poly" title=" " alt="" coords="2387,200,2411,249,2406,251,2382,202"/>
-<area shape="rect" title=" " alt="" coords="1653,345,1715,371"/>
-<area shape="poly" title=" " alt="" coords="2380,202,2368,250,2354,277,2333,299,2299,312,2238,323,2066,340,1877,351,1731,358,1730,352,1877,346,2065,335,2237,318,2297,307,2331,295,2350,274,2363,248,2375,201"/>
-<area shape="rect" title=" " alt="" coords="470,264,522,290"/>
-<area shape="poly" title=" " alt="" coords="2290,204,2222,211,2056,217,1851,218,1374,212,1130,212,899,217,697,232,610,244,535,259,531,260,530,255,534,254,609,239,696,227,899,212,1130,206,1374,206,1851,212,2056,212,2221,206,2290,199"/>
-<area shape="poly" title=" " alt="" coords="2398,199,2481,253,2478,257,2396,204"/>
-<area shape="rect" title=" " alt="" coords="2248,264,2320,290"/>
-<area shape="poly" title=" " alt="" coords="2367,203,2310,256,2306,252,2364,199"/>
-<area shape="poly" title=" " alt="" coords="2412,199,2558,254,2562,255,2560,260,2556,259,2410,204"/>
-<area shape="poly" title=" " alt="" coords="965,99,1247,117,1446,136,1648,165,1703,172,1753,173,1842,173,1881,178,1919,191,1956,216,1993,255,2003,271,2006,286,2003,300,1995,311,1967,329,1925,342,1876,351,1824,356,1731,360,1731,354,1824,351,1876,346,1924,337,1964,325,1992,307,1998,297,2001,286,1998,273,1989,258,1953,220,1917,196,1880,183,1841,178,1753,178,1703,177,1648,170,1445,141,1246,122,965,105"/>
-<area shape="poly" title=" " alt="" coords="900,108,809,128,756,146,705,170,692,180,684,189,675,200,661,211,628,228,600,238,571,246,536,259,534,259,532,255,534,254,569,241,598,233,626,223,659,206,671,196,680,186,689,176,703,165,754,141,808,123,899,103"/>
-<area shape="rect" title=" " alt="" coords="1143,264,1212,290"/>
-<area shape="poly" title=" " alt="" coords="942,111,978,156,1003,183,1031,206,1136,255,1134,260,1028,211,999,186,974,160,938,114"/>
-<area shape="rect" title=" " alt="" coords="5,264,75,290"/>
-<area shape="poly" title=" " alt="" coords="899,104,721,110,468,121,229,141,143,155,114,162,96,170,78,186,65,207,48,250,43,248,60,204,74,183,93,165,112,157,142,149,228,136,467,116,721,104,899,99"/>
-<area shape="rect" title=" " alt="" coords="1041,175,1092,201"/>
-<area shape="poly" title=" " alt="" coords="952,110,1036,164,1034,169,949,115"/>
-<area shape="rect" title=" " alt="" coords="547,264,637,290"/>
-<area shape="poly" title=" " alt="" coords="900,113,835,137,763,170,734,189,705,211,628,258,625,253,703,206,731,185,760,165,833,132,899,108"/>
-<area shape="rect" title=" " alt="" coords="1346,264,1430,290"/>
-<area shape="poly" title=" " alt="" coords="965,108,1031,131,1105,165,1131,187,1141,196,1156,206,1203,226,1243,235,1283,241,1334,254,1341,256,1339,261,1333,259,1282,246,1242,240,1202,231,1153,211,1138,201,1127,191,1103,170,1029,136,964,113"/>
-<area shape="rect" title=" " alt="" coords="1167,175,1265,201"/>
-<area shape="poly" title=" " alt="" coords="965,108,1162,168,1161,173,964,113"/>
-<area shape="poly" title=" " alt="" coords="965,99,1067,102,1216,113,1391,132,1480,147,1567,165,1636,185,1703,208,1812,254,1809,259,1701,213,1634,190,1566,170,1479,152,1390,138,1216,118,1066,108,964,104"/>
-<area shape="rect" title=" " alt="" coords="1289,175,1354,201"/>
-<area shape="poly" title=" " alt="" coords="965,102,1102,123,1190,142,1278,165,1283,167,1281,172,1277,170,1189,147,1102,129,964,107"/>
-<area shape="rect" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="238,264,304,290"/>
-<area shape="poly" title=" " alt="" coords="900,104,782,108,622,118,464,138,400,152,355,170,332,187,313,208,285,251,280,248,308,205,328,183,352,165,399,147,463,132,621,112,782,102,899,98"/>
-<area shape="rect" href="filter__condition_8h.html" title="Defines the FilterCondition struct shared by all attribute&#45;based filters." alt="" coords="328,256,446,297"/>
-<area shape="poly" title=" " alt="" coords="899,105,773,112,605,125,451,144,398,156,371,170,363,185,361,204,371,242,366,243,356,204,358,184,367,166,397,151,450,139,604,119,773,106,899,99"/>
-<area shape="rect" href="filter__spec_8h.html" title="Replay descriptor stored alongside each GraphVisibilitySnapshot." alt="" coords="381,168,499,208"/>
-<area shape="poly" title=" " alt="" coords="900,107,738,130,515,170,514,164,737,125,899,102"/>
-<area shape="rect" href="graph__query_8h.html" title="Defines GraphQuery — a multi&#45;condition AND filter applied as one chip." alt="" coords="523,168,648,208"/>
-<area shape="poly" title=" " alt="" coords="900,111,664,170,663,165,899,106"/>
-<area shape="rect" href="graphvertex_8h.html" title="Declares the GraphVertex class for representing and managing vertices in the network graph structure." alt="" coords="774,175,874,201"/>
-<area shape="poly" title=" " alt="" coords="919,115,853,167,849,163,915,111"/>
-<area shape="rect" href="matrix_8h.html" title="Declares the Matrix class for handling adjacency and sociomatrix data structures in network analysis." alt="" coords="898,175,966,201"/>
-<area shape="poly" title=" " alt="" coords="935,113,935,159,929,159,929,113"/>
-<area shape="rect" href="parser_8h.html" title="Declares the Parser class for reading and interpreting various network data formats,..." alt="" coords="1488,175,1555,201"/>
-<area shape="poly" title=" " alt="" coords="965,103,1472,177,1472,182,964,108"/>
-<area shape="rect" href="webcrawler_8h.html" title="Declares the WebCrawler class for extracting and processing network data from web pages and online re..." alt="" coords="107,175,205,201"/>
-<area shape="poly" title=" " alt="" coords="900,106,636,128,452,147,263,170,220,177,220,172,262,165,451,142,636,123,899,100"/>
-<area shape="poly" title=" " alt="" coords="297,288,317,294,406,311,531,327,763,350,762,355,530,332,406,316,315,300,295,293"/>
-<area shape="rect" title=" " alt="" coords="562,345,616,371"/>
-<area shape="poly" title=" " alt="" coords="298,288,317,294,441,327,547,347,546,352,440,332,315,300,296,293"/>
-<area shape="rect" title=" " alt="" coords="226,345,315,371"/>
-<area shape="poly" title=" " alt="" coords="273,290,273,329,268,329,268,290"/>
-<area shape="poly" title=" " alt="" coords="447,292,458,294,625,326,763,347,762,353,624,331,457,300,446,297"/>
-<area shape="poly" title=" " alt="" coords="455,207,482,250,478,252,450,210"/>
-<area shape="poly" title=" " alt="" coords="403,211,309,259,307,254,400,206"/>
-<area shape="poly" title=" " alt="" coords="430,210,409,245,404,242,426,207"/>
-<area shape="poly" title=" " alt="" coords="567,211,521,255,517,251,563,207"/>
-<area shape="poly" title=" " alt="" coords="541,211,447,252,445,247,539,206"/>
-<area shape="poly" title=" " alt="" coords="805,204,776,226,763,241,753,257,748,277,753,296,766,316,782,333,778,337,761,319,748,298,743,277,748,255,759,238,772,222,801,199"/>
-<area shape="poly" title=" " alt="" coords="844,199,923,254,947,277,958,286,973,294,1068,307,1259,323,1637,351,1637,356,1258,329,1067,312,971,300,955,291,943,281,920,258,841,203"/>
-<area shape="poly" title=" " alt="" coords="774,200,663,222,599,239,536,259,533,260,531,255,534,254,597,234,662,217,773,195"/>
-<area shape="poly" title=" " alt="" coords="862,199,886,206,955,220,1009,228,1063,237,1131,254,1137,256,1135,261,1130,259,1062,242,1008,233,954,225,885,211,860,204"/>
-<area shape="poly" title=" " alt="" coords="792,204,639,261,637,256,790,199"/>
-<area shape="poly" title=" " alt="" coords="809,204,620,338,616,334,806,199"/>
-<area shape="rect" title=" " alt="" coords="1236,264,1322,290"/>
-<area shape="poly" title=" " alt="" coords="860,199,886,206,980,222,1055,229,1130,236,1225,254,1233,256,1232,261,1223,259,1129,241,1055,234,980,227,885,211,859,204"/>
-<area shape="rect" title=" " alt="" coords="1433,345,1503,371"/>
-<area shape="poly" title=" " alt="" coords="833,200,870,248,898,274,929,295,970,309,1025,321,1161,338,1304,348,1418,353,1418,358,1304,353,1161,343,1024,326,968,314,927,299,894,278,866,251,829,203"/>
-<area shape="rect" title=" " alt="" coords="762,264,808,290"/>
-<area shape="poly" title=" " alt="" coords="821,202,799,251,794,249,816,200"/>
-<area shape="poly" title=" " alt="" coords="925,203,830,334,826,331,921,200"/>
-<area shape="poly" title=" " alt="" coords="967,195,1030,206,1213,221,1369,224,1507,219,1636,211,1764,206,1901,208,2056,222,2237,254,2244,256,2243,261,2235,259,2055,228,1901,213,1764,211,1636,217,1507,224,1369,229,1213,226,1029,211,966,200"/>
-<area shape="rect" title=" " alt="" coords="1066,264,1118,290"/>
-<area shape="poly" title=" " alt="" coords="956,199,1058,254,1055,258,953,204"/>
-<area shape="rect" title=" " alt="" coords="985,264,1042,290"/>
-<area shape="poly" title=" " alt="" coords="945,199,994,251,990,254,941,203"/>
-<area shape="poly" title=" " alt="" coords="1556,195,1610,216,1637,233,1661,255,1672,272,1679,292,1686,329,1681,330,1674,293,1667,275,1657,258,1634,237,1608,220,1554,200"/>
-<area shape="poly" title=" " alt="" coords="1488,198,1371,221,1225,259,1219,261,1218,256,1223,254,1369,216,1487,192"/>
-<area shape="poly" title=" " alt="" coords="1504,204,1421,257,1418,253,1501,199"/>
-<area shape="poly" title=" " alt="" coords="1556,193,1667,217,1803,254,1808,255,1806,260,1802,259,1666,222,1555,198"/>
-<area shape="poly" title=" " alt="" coords="1488,204,1328,261,1326,256,1486,199"/>
-<area shape="poly" title=" " alt="" coords="1518,202,1496,257,1476,330,1471,329,1491,255,1513,200"/>
-<area shape="poly" title=" " alt="" coords="1556,190,1706,212,1802,230,1898,254,1904,256,1902,261,1897,259,1801,235,1705,217,1555,196"/>
-<area shape="rect" title=" " alt="" coords="1722,264,1790,290"/>
-<area shape="poly" title=" " alt="" coords="1555,199,1710,256,1708,261,1554,204"/>
-<area shape="rect" href="graph__parse__sink_8h.html" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="1505,256,1647,297"/>
-<area shape="poly" title=" " alt="" coords="1531,200,1558,242,1553,245,1527,203"/>
-<area shape="poly" title=" " alt="" coords="1505,291,1443,300,1109,334,859,355,859,350,1109,329,1442,294,1504,286"/>
-<area shape="poly" title=" " alt="" coords="1604,295,1657,333,1654,338,1601,300"/>
-<area shape="poly" title=" " alt="" coords="1551,300,1498,338,1495,333,1548,295"/>
-<area shape="poly" title=" " alt="" coords="141,203,70,256,67,252,138,199"/>
-<area shape="rect" title=" " alt="" coords="99,264,213,290"/>
-<area shape="poly" title=" " alt="" coords="159,201,159,248,153,248,153,201"/>
-<area shape="poly" title=" " alt="" coords="2457,122,2405,167,2402,163,2453,118"/>
-<area shape="poly" title=" " alt="" coords="2500,119,2518,140,2532,167,2536,189,2535,211,2525,250,2520,249,2530,210,2531,189,2527,169,2514,143,2496,122"/>
-<area shape="poly" title=" " alt="" coords="2411,121,2324,147,2290,160,2274,169,2266,188,2265,208,2274,249,2269,250,2259,209,2261,186,2270,166,2288,155,2322,142,2409,116"/>
+<area shape="rect" title="Implements the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="2464,5,2604,31"/>
+<area shape="rect" href="distance__engine_8h.html" title="Declares the DistanceEngine class for computing geodesic distances and centralities in the graph." alt="" coords="2450,86,2618,112"/>
+<area shape="poly" title=" " alt="" coords="2537,31,2537,71,2532,71,2532,31"/>
+<area shape="rect" href="graph__distance__progress__sink_8h.html" title="Declares the GraphDistanceProgressSink class, which forwards DistanceEngine&#39;s status messages and can..." alt="" coords="2693,168,2845,208"/>
+<area shape="poly" title=" " alt="" coords="2576,29,2626,48,2676,77,2717,114,2749,153,2745,157,2713,118,2673,81,2623,53,2574,34"/>
+<area shape="rect" title=" " alt="" coords="2626,264,2685,290"/>
+<area shape="poly" title=" " alt="" coords="2569,29,2603,48,2619,61,2633,78,2652,121,2661,168,2664,213,2662,249,2656,249,2658,213,2656,169,2647,123,2628,80,2616,65,2600,53,2567,34"/>
+<area shape="rect" href="graph_8h.html" title="Defines the Graph class and related algorithms for social network visualization." alt="" coords="1328,86,1392,112"/>
+<area shape="poly" title=" " alt="" coords="2464,27,1408,97,1407,92,2464,22"/>
+<area shape="rect" title=" " alt="" coords="5,264,77,290"/>
+<area shape="poly" title=" " alt="" coords="2464,22,2105,26,1580,34,1042,52,817,65,648,82,543,97,461,114,382,137,281,170,169,215,78,259,76,254,167,210,279,165,380,131,460,109,542,92,647,76,817,60,1042,47,1579,29,2105,20,2464,17"/>
+<area shape="rect" title=" " alt="" coords="100,264,230,290"/>
+<area shape="poly" title=" " alt="" coords="2464,23,2060,32,1456,56,1138,75,838,100,581,132,476,150,390,170,335,189,283,212,198,258,195,253,280,207,333,184,388,165,475,145,580,126,838,95,1137,70,1456,51,2060,27,2464,18"/>
+<area shape="rect" title=" " alt="" coords="1209,264,1278,290"/>
+<area shape="poly" title=" " alt="" coords="2464,23,2184,30,1812,42,1479,59,1368,70,1334,75,1317,81,1299,98,1284,118,1263,163,1252,210,1247,249,1242,248,1247,209,1258,161,1280,115,1295,94,1314,77,1333,70,1368,64,1479,54,1812,36,2184,25,2463,18"/>
+<area shape="rect" href="thread__local__state_8h.html" title="Per&#45;thread state for the parallel SSSP source loop in DistanceEngine." alt="" coords="2293,79,2426,120"/>
+<area shape="poly" title=" " alt="" coords="2509,34,2418,75,2416,70,2506,29"/>
+<area shape="rect" title=" " alt="" coords="2743,86,2811,112"/>
+<area shape="poly" title=" " alt="" coords="2576,29,2726,76,2731,78,2730,83,2724,82,2574,34"/>
+<area shape="rect" title=" " alt="" coords="2834,86,3016,112"/>
+<area shape="poly" title=" " alt="" coords="2595,29,2850,80,2849,86,2594,34"/>
+<area shape="rect" title=" " alt="" coords="3040,86,3096,112"/>
+<area shape="poly" title=" " alt="" coords="2605,18,2691,23,2798,33,2914,50,3028,76,3032,78,3031,83,3027,82,2913,55,2797,38,2691,28,2605,24"/>
+<area shape="poly" title=" " alt="" coords="2568,110,2702,159,2700,164,2567,115"/>
+<area shape="rect" href="per__source__scratch_8h.html" title="Per&#45;source scratch state for the Brandes SSSP / centrality computation." alt="" coords="2328,175,2516,201"/>
+<area shape="poly" title=" " alt="" coords="2520,115,2451,168,2448,163,2517,111"/>
+<area shape="rect" title=" " alt="" coords="2533,264,2602,290"/>
+<area shape="poly" title=" " alt="" coords="2546,111,2562,136,2576,167,2580,210,2576,249,2571,249,2575,210,2570,168,2558,138,2542,114"/>
+<area shape="rect" href="distance__progress__sink_8h.html" title="Declares the IDistanceProgressSink interface for status messages and cancellation during distance and..." alt="" coords="2710,264,2879,290"/>
+<area shape="poly" title=" " alt="" coords="2777,208,2789,248,2784,250,2772,210"/>
+<area shape="rect" title=" " alt="" coords="1824,345,1890,371"/>
+<area shape="poly" title=" " alt="" coords="2739,293,2697,300,2465,325,2237,342,1905,358,1905,352,2237,337,2465,320,2697,294,2738,287"/>
+<area shape="rect" title=" " alt="" coords="2456,264,2509,290"/>
+<area shape="poly" title=" " alt="" coords="2433,200,2468,250,2463,253,2428,203"/>
+<area shape="rect" title=" " alt="" coords="1284,345,1347,371"/>
+<area shape="poly" title=" " alt="" coords="2426,202,2422,249,2412,277,2394,299,2257,311,1951,328,1362,357,1362,352,1951,322,2256,305,2392,295,2408,274,2417,248,2421,201"/>
+<area shape="rect" title=" " alt="" coords="1780,264,1832,290"/>
+<area shape="poly" title=" " alt="" coords="2328,203,2265,211,2146,220,2053,223,1961,232,1908,243,1846,259,1842,260,1840,255,1844,254,1907,237,1960,227,2052,218,2146,215,2265,206,2328,198"/>
+<area shape="poly" title=" " alt="" coords="2444,199,2536,253,2533,258,2441,204"/>
+<area shape="rect" title=" " alt="" coords="2309,264,2381,290"/>
+<area shape="poly" title=" " alt="" coords="2414,203,2368,254,2364,250,2410,200"/>
+<area shape="poly" title=" " alt="" coords="2461,199,2615,254,2618,255,2616,260,2613,259,2459,204"/>
+<area shape="poly" title=" " alt="" coords="1356,114,1344,139,1334,168,1321,256,1318,329,1313,329,1316,255,1329,167,1339,137,1351,112"/>
+<area shape="poly" title=" " alt="" coords="1392,100,1445,107,1513,118,1587,137,1660,165,1686,184,1711,206,1777,253,1774,257,1707,210,1683,188,1657,170,1586,143,1512,124,1445,112,1392,106"/>
+<area shape="rect" title=" " alt="" coords="449,264,518,290"/>
+<area shape="poly" title=" " alt="" coords="1327,105,1223,112,1085,125,949,144,893,156,853,170,840,179,832,189,823,201,809,211,769,227,734,237,672,243,609,245,573,249,531,259,526,261,524,256,530,254,572,244,608,239,672,238,733,232,768,222,806,206,819,197,827,186,836,175,850,165,892,151,948,139,1084,119,1223,107,1327,100"/>
+<area shape="rect" title=" " alt="" coords="900,264,969,290"/>
+<area shape="poly" title=" " alt="" coords="1331,115,979,260,977,255,1329,110"/>
+<area shape="rect" title=" " alt="" coords="745,175,796,201"/>
+<area shape="poly" title=" " alt="" coords="1327,104,1238,108,1110,119,963,139,815,170,810,172,808,167,814,165,962,133,1109,114,1237,103,1327,99"/>
+<area shape="rect" title=" " alt="" coords="1353,264,1444,290"/>
+<area shape="poly" title=" " alt="" coords="1356,113,1342,156,1339,182,1344,207,1357,231,1374,251,1370,255,1352,234,1338,209,1334,182,1337,155,1351,111"/>
+<area shape="rect" title=" " alt="" coords="543,264,627,290"/>
+<area shape="poly" title=" " alt="" coords="1327,103,1251,105,1145,115,1027,135,967,150,910,170,893,179,882,190,870,200,853,211,795,231,748,240,700,246,640,259,633,261,631,256,639,254,699,241,747,235,794,226,851,206,867,196,878,186,890,175,908,165,966,145,1025,130,1145,109,1250,100,1327,98"/>
+<area shape="rect" title=" " alt="" coords="1721,175,1820,201"/>
+<area shape="poly" title=" " alt="" coords="1393,104,1529,128,1703,165,1715,168,1714,173,1702,170,1527,133,1392,109"/>
+<area shape="poly" title=" " alt="" coords="1327,103,1180,104,948,112,672,132,529,149,389,170,303,188,237,207,89,259,85,260,83,255,87,254,235,201,302,183,389,165,528,143,671,127,948,107,1180,99,1327,98"/>
+<area shape="rect" title=" " alt="" coords="1843,175,1908,201"/>
+<area shape="poly" title=" " alt="" coords="1393,100,1471,105,1581,117,1707,136,1832,165,1838,167,1836,172,1831,170,1706,142,1580,122,1471,111,1392,105"/>
+<area shape="poly" title=" " alt="" coords="1327,103,1166,106,931,115,809,123,695,135,597,150,526,170,511,179,501,189,491,200,475,211,383,234,244,263,243,258,382,229,473,206,488,196,497,186,508,175,524,165,596,145,694,130,809,118,931,109,1165,100,1327,98"/>
+<area shape="rect" title=" " alt="" coords="402,175,462,201"/>
+<area shape="poly" title=" " alt="" coords="1327,105,914,125,664,145,560,157,482,170,474,172,473,167,480,165,559,152,663,140,914,120,1327,99"/>
+<area shape="rect" title=" " alt="" coords="1998,264,2076,290"/>
+<area shape="poly" title=" " alt="" coords="1392,98,1552,102,1776,113,1887,121,1984,133,2057,147,2081,156,2096,166,2103,177,2105,189,2099,212,2084,235,2065,255,2061,251,2080,232,2094,210,2100,188,2098,179,2092,170,2079,161,2055,152,1983,138,1887,127,1776,118,1552,108,1392,104"/>
+<area shape="rect" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="1638,264,1705,290"/>
+<area shape="poly" title=" " alt="" coords="1382,111,1468,166,1493,187,1518,206,1573,234,1625,256,1623,261,1571,239,1516,211,1490,191,1465,170,1379,115"/>
+<area shape="rect" href="filter__condition_8h.html" title="Defines the FilterCondition struct shared by all attribute&#45;based filters." alt="" coords="1856,256,1975,297"/>
+<area shape="poly" title=" " alt="" coords="1392,99,1548,103,1764,114,1871,122,1964,134,2034,148,2058,156,2072,166,2081,180,2082,194,2076,207,2065,219,2031,240,1991,257,1989,252,2029,235,2061,215,2072,204,2077,193,2076,182,2068,170,2055,161,2033,153,1963,139,1870,128,1764,119,1548,108,1392,104"/>
+<area shape="rect" href="filter__spec_8h.html" title="Replay descriptor stored alongside each GraphVisibilitySnapshot." alt="" coords="1528,168,1647,208"/>
+<area shape="poly" title=" " alt="" coords="1393,110,1523,159,1521,164,1391,115"/>
+<area shape="rect" href="graph__query_8h.html" title="Defines GraphQuery — a multi&#45;condition AND filter applied as one chip." alt="" coords="1933,168,2058,208"/>
+<area shape="poly" title=" " alt="" coords="1392,100,1609,121,1760,140,1918,165,1917,170,1759,145,1608,126,1392,106"/>
+<area shape="rect" href="graphvertex_8h.html" title="Declares the GraphVertex class for representing and managing vertices in the network graph structure." alt="" coords="1354,175,1454,201"/>
+<area shape="poly" title=" " alt="" coords="1368,111,1393,160,1388,163,1363,114"/>
+<area shape="rect" href="matrix_8h.html" title="Declares the Matrix class for handling adjacency and sociomatrix data structures in network analysis." alt="" coords="2184,175,2252,201"/>
+<area shape="poly" title=" " alt="" coords="1392,98,1518,99,1710,107,1936,128,2052,144,2166,165,2175,167,2174,173,2164,170,2051,149,1935,133,1709,113,1518,104,1392,103"/>
+<area shape="rect" href="parser_8h.html" title="Declares the Parser class for reading and interpreting various network data formats,..." alt="" coords="537,175,604,201"/>
+<area shape="poly" title=" " alt="" coords="1327,107,733,170,620,183,619,178,733,165,1327,101"/>
+<area shape="rect" href="webcrawler_8h.html" title="Declares the WebCrawler class for extracting and processing network data from web pages and online re..." alt="" coords="922,175,1019,201"/>
+<area shape="poly" title=" " alt="" coords="1328,110,1035,175,1034,170,1327,105"/>
+<area shape="poly" title=" " alt="" coords="1701,288,1816,336,1814,341,1699,293"/>
+<area shape="rect" title=" " alt="" coords="1574,345,1628,371"/>
+<area shape="poly" title=" " alt="" coords="1663,292,1624,335,1620,331,1659,288"/>
+<area shape="rect" title=" " alt="" coords="1653,345,1741,371"/>
+<area shape="poly" title=" " alt="" coords="1678,289,1691,329,1686,331,1673,291"/>
+<area shape="poly" title=" " alt="" coords="1903,299,1877,334,1873,331,1899,296"/>
+<area shape="poly" title=" " alt="" coords="1640,206,1762,254,1767,256,1765,261,1760,259,1638,211"/>
+<area shape="poly" title=" " alt="" coords="1609,207,1651,251,1648,255,1605,211"/>
+<area shape="poly" title=" " alt="" coords="1648,202,1842,253,1841,258,1647,207"/>
+<area shape="poly" title=" " alt="" coords="1951,211,1846,259,1845,259,1843,254,1844,254,1949,207"/>
+<area shape="poly" title=" " alt="" coords="1979,211,1946,247,1942,243,1976,207"/>
+<area shape="poly" title=" " alt="" coords="1454,196,1608,227,1718,254,1745,273,1769,295,1827,334,1824,338,1766,299,1742,277,1716,259,1607,232,1453,201"/>
+<area shape="poly" title=" " alt="" coords="1419,199,1438,219,1455,243,1464,271,1464,285,1458,298,1439,320,1414,335,1363,353,1361,348,1412,330,1435,315,1453,296,1458,284,1459,272,1450,246,1433,222,1415,203"/>
+<area shape="poly" title=" " alt="" coords="1455,196,1632,227,1762,254,1767,256,1766,261,1760,259,1631,233,1454,201"/>
+<area shape="poly" title=" " alt="" coords="1406,201,1403,248,1397,248,1400,201"/>
+<area shape="poly" title=" " alt="" coords="1446,199,1620,254,1626,256,1624,261,1619,259,1444,204"/>
+<area shape="poly" title=" " alt="" coords="1448,199,1523,224,1556,239,1578,254,1589,272,1597,291,1603,329,1598,330,1592,293,1584,274,1574,258,1553,244,1521,229,1447,204"/>
+<area shape="rect" title=" " alt="" coords="790,264,876,290"/>
+<area shape="poly" title=" " alt="" coords="1353,195,1149,215,1018,233,888,259,879,261,878,256,887,254,1018,228,1148,209,1353,190"/>
+<area shape="rect" title=" " alt="" coords="972,345,1041,371"/>
+<area shape="poly" title=" " alt="" coords="1353,194,1271,201,1176,213,1089,232,1056,244,1033,258,1022,274,1014,292,1008,330,1003,329,1009,290,1017,271,1030,254,1054,239,1088,226,1175,207,1271,196,1353,189"/>
+<area shape="rect" title=" " alt="" coords="1518,264,1564,290"/>
+<area shape="poly" title=" " alt="" coords="1424,199,1510,253,1507,257,1421,204"/>
+<area shape="poly" title=" " alt="" coords="2230,200,2243,220,2254,246,2258,273,2256,287,2248,299,2224,316,2189,330,2145,340,2095,348,1992,357,1905,359,1905,354,1992,351,2094,343,2144,335,2187,325,2222,312,2244,295,2251,285,2253,273,2249,247,2238,223,2225,203"/>
+<area shape="poly" title=" " alt="" coords="2237,199,2316,252,2313,257,2234,203"/>
+<area shape="poly" title=" " alt="" coords="2194,204,2077,259,2075,254,2192,199"/>
+<area shape="rect" title=" " alt="" coords="2100,264,2152,290"/>
+<area shape="poly" title=" " alt="" coords="2207,203,2152,255,2148,251,2204,199"/>
+<area shape="rect" title=" " alt="" coords="2176,264,2234,290"/>
+<area shape="poly" title=" " alt="" coords="2219,202,2212,249,2206,248,2214,201"/>
+<area shape="poly" title=" " alt="" coords="538,204,479,229,454,244,439,258,431,278,433,286,438,295,470,301,548,308,791,325,1269,352,1269,357,791,331,548,314,469,306,436,299,428,288,426,277,435,255,451,240,477,225,536,199"/>
+<area shape="poly" title=" " alt="" coords="560,203,508,255,504,251,556,199"/>
+<area shape="poly" title=" " alt="" coords="575,201,583,248,578,249,570,202"/>
+<area shape="poly" title=" " alt="" coords="537,199,475,211,366,224,280,229,195,237,88,259,82,261,81,256,87,254,194,232,280,224,365,219,474,206,536,194"/>
+<area shape="poly" title=" " alt="" coords="541,204,519,211,444,228,385,238,325,246,250,259,232,263,231,257,248,254,324,240,384,233,443,223,518,206,539,199"/>
+<area shape="poly" title=" " alt="" coords="605,198,779,254,786,256,784,261,777,259,604,203"/>
+<area shape="poly" title=" " alt="" coords="541,204,519,211,476,220,430,226,340,237,306,244,285,256,280,263,280,271,295,295,307,303,329,311,394,324,482,334,583,342,793,350,956,353,956,359,793,356,583,347,481,339,393,329,327,316,305,308,291,299,275,272,275,261,281,252,304,239,339,231,429,221,476,215,518,206,539,199"/>
+<area shape="poly" title=" " alt="" coords="605,191,733,206,864,216,967,219,1069,228,1198,254,1204,256,1203,261,1196,259,1068,233,967,225,864,221,733,211,604,196"/>
+<area shape="rect" title=" " alt="" coords="306,264,374,290"/>
+<area shape="poly" title=" " alt="" coords="539,204,387,260,385,255,537,199"/>
+<area shape="rect" href="graph__parse__sink_8h.html" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="1043,256,1186,297"/>
+<area shape="poly" title=" " alt="" coords="605,192,1028,259,1027,264,604,197"/>
+<area shape="poly" title=" " alt="" coords="1186,292,1197,294,1353,315,1474,324,1597,330,1753,342,1809,348,1809,354,1753,348,1596,335,1474,329,1352,320,1197,300,1185,298"/>
+<area shape="poly" title=" " alt="" coords="1166,295,1272,336,1270,341,1164,300"/>
+<area shape="poly" title=" " alt="" coords="1089,300,1037,338,1033,333,1086,295"/>
+<area shape="poly" title=" " alt="" coords="968,202,948,251,943,249,963,200"/>
+<area shape="rect" title=" " alt="" coords="652,264,766,290"/>
+<area shape="poly" title=" " alt="" coords="934,204,761,261,759,256,933,199"/>
+<area shape="poly" title=" " alt="" coords="2376,119,2407,161,2403,164,2372,122"/>
+<area shape="poly" title=" " alt="" coords="2426,118,2488,141,2513,153,2531,166,2545,185,2556,206,2567,248,2562,249,2551,208,2541,188,2527,170,2511,158,2486,146,2424,123"/>
+<area shape="poly" title=" " alt="" coords="2345,122,2330,143,2318,168,2315,189,2318,211,2333,249,2328,251,2313,212,2310,189,2313,167,2325,141,2340,119"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:DistanceScratch" id="r_DistanceScratch"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_distance_scratch.html">DistanceScratch</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-run scratch state for <a class="el" href="class_distance_engine.html#aff595b5f3217e421a007136f6ef487d6" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call.  <a href="struct_distance_scratch.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CentralityScratchSSSP" id="r_CentralityScratchSSSP"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_centrality_scratch_s_s_s_p.html">CentralityScratchSSSP</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-run scratch for centrality values computed once per SSSP source, before the parallel per-source loop existed to own its own copy (see <a class="el" href="struct_thread_local_state.html#a4765f29c059a903fdbeb2375fa65015d">ThreadLocalState::pss</a> for the per-thread equivalent used inside runAllSources()'s blockingMap lambda).  <a href="struct_centrality_scratch_s_s_s_p.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CentralityScratchFinalize" id="r_CentralityScratchFinalize"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_centrality_scratch_finalize.html">CentralityScratchFinalize</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scratch for the finalize() phase — the single-threaded pass that runs once after runAllSources() completes, scanning every vertex to compute connectivity, group-level aggregates, and normalised (standardised) centrality scores from the raw per-vertex values runAllSources() already wrote. Distinct from <a class="el" href="struct_centrality_scratch_s_s_s_p.html" title="Per-run scratch for centrality values computed once per SSSP source, before the parallel per-source l...">CentralityScratchSSSP</a> because these values are only meaningful for this one post-loop scan, not during the per-source SSSP pass itself.  <a href="struct_centrality_scratch_finalize.html#details">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements the <a class="el" href="class_distance_engine.html">DistanceEngine</a> class for computing geodesic distances and centralities in the graph. </p>

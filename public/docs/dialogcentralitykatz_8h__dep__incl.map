@@ -1,0 +1,7 @@
+<map id="dialogcentralitykatz.h" name="dialogcentralitykatz.h">
+<area shape="rect" id="Node000001" title="Declares the DialogCentralityKatz class for collecting the Katz Centrality attenuation factor (alpha)..." alt="" coords="100,5,245,31"/>
+<area shape="rect" id="Node000002" href="$dialogcentralitykatz_8cpp.html" title="Implements the DialogCentralityKatz class for collecting the Katz Centrality attenuation factor (alph..." alt="" coords="5,86,164,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,43,100,88,96,84,146,40"/>
+<area shape="rect" id="Node000003" href="$mainwindow__analyze__centrality_8cpp.html" title="Implements MainWindow Analyze menu centrality and prestige index reports." alt="" coords="188,79,333,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,40,241,77,237,81,196,44"/>
+</map>

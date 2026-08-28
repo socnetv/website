@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -112,6 +112,7 @@ $(function(){initNavTree('functions_vars_c.html','',''); });
 
 <h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>calculatedAdjacencyMatrix&#160;:&#160;<a class="el" href="class_graph.html#a66da9755a2a4a6a2498ec23dee67991a">Graph</a></li>
+<li>calculatedBPC&#160;:&#160;<a class="el" href="class_graph.html#a0e44bad06b9c402d0864c5882edaf3c0">Graph</a></li>
 <li>calculatedCentralities&#160;:&#160;<a class="el" href="class_graph.html#ad7487e3106c78950db40dbefb092c69f">Graph</a></li>
 <li>calculatedDC&#160;:&#160;<a class="el" href="class_graph.html#af2e181b5c9ad28d90d53c0976f7cd988">Graph</a></li>
 <li>calculatedDistances&#160;:&#160;<a class="el" href="class_graph.html#aae066df955b9f96c2b6796315ed421b3">Graph</a></li>
@@ -125,6 +126,7 @@ $(function(){initNavTree('functions_vars_c.html','',''); });
 <li>calculatedIC&#160;:&#160;<a class="el" href="class_graph.html#a01c64b9b65d19ea5f84c83ae310b9e19">Graph</a></li>
 <li>calculatedIRCC&#160;:&#160;<a class="el" href="class_graph.html#ad2c31003da86f9ad4765785e6b8dbe34">Graph</a></li>
 <li>calculatedIsolates&#160;:&#160;<a class="el" href="class_graph.html#af43edd978dcae9b4c6255231c419c7ad">Graph</a></li>
+<li>calculatedKC&#160;:&#160;<a class="el" href="class_graph.html#ad3b436de73b60387166f88000aebb343">Graph</a></li>
 <li>calculatedPP&#160;:&#160;<a class="el" href="class_graph.html#ae71a3460cc6f7955974019eeb58eda2c">Graph</a></li>
 <li>calculatedPRP&#160;:&#160;<a class="el" href="class_graph.html#a37e453be649d751eafcf3563d0c48a04">Graph</a></li>
 <li>calculatedTriad&#160;:&#160;<a class="el" href="class_graph.html#ada232de419cdfaa133f7962ba0f86acf">Graph</a></li>
@@ -134,12 +136,12 @@ $(function(){initNavTree('functions_vars_c.html','',''); });
 <li>canvasHeight&#160;:&#160;<a class="el" href="class_graph.html#a4a209cb24b0f2652ae44810698a43969">Graph</a></li>
 <li>canvasWidth&#160;:&#160;<a class="el" href="class_graph.html#a508fc9015a1076112b05534999e2fbca">Graph</a></li>
 <li>cBetweennessAct&#160;:&#160;<a class="el" href="class_main_window.html#a0b7a0a30d5aa602f2197cab421a3dc5d">MainWindow</a></li>
+<li>cBonacichAct&#160;:&#160;<a class="el" href="class_main_window.html#aa24f46ed5e8d3a0fcda2a541f1e1ebde">MainWindow</a></li>
 <li>CC&#160;:&#160;<a class="el" href="struct_centrality_scratch_finalize.html#adb8f4df0788b9e45a506421d2a412fba">CentralityScratchFinalize</a>, <a class="el" href="struct_centrality_scratch_s_s_s_p.html#ad871f42c097aed0c00753ac53ad174f1">CentralityScratchSSSP</a></li>
 <li>cClosenessAct&#160;:&#160;<a class="el" href="class_main_window.html#a9d7c95ac7ba63ddac50d9a7059795a38">MainWindow</a></li>
 <li>cDegreeAct&#160;:&#160;<a class="el" href="class_main_window.html#aadadea1eb639e3e8ecfc041b9e87a244">MainWindow</a></li>
 <li>cEccentAct&#160;:&#160;<a class="el" href="class_main_window.html#af411d4f0a43291da946ac394ceb03d09">MainWindow</a></li>
 <li>cEigenvectorAct&#160;:&#160;<a class="el" href="class_main_window.html#ac0397ac1115cc33c54156ad0fbb05080">MainWindow</a></li>
-<li>cell&#160;:&#160;<a class="el" href="class_matrix_row.html#a39be8c134dea234ef5a755e6e6a55052">MatrixRow</a></li>
 <li>centralityIndex&#160;:&#160;<a class="el" href="struct_filter_spec.html#acd4e86ac664d9ef279664e9ebab4be95">FilterSpec</a></li>
 <li>centralityOverThreshold&#160;:&#160;<a class="el" href="struct_filter_spec.html#a3aff064219ad739d3f0cd243288f140e">FilterSpec</a></li>
 <li>centralityThreshold&#160;:&#160;<a class="el" href="struct_filter_spec.html#a43f809de7d35e2230ab5680a46082f0a">FilterSpec</a></li>
@@ -151,12 +153,15 @@ $(function(){initNavTree('functions_vars_c.html','',''); });
 <li>cInformationAct&#160;:&#160;<a class="el" href="class_main_window.html#abad3337d1c2b5cdd0959620957d90e77">MainWindow</a></li>
 <li>circle&#160;:&#160;<a class="el" href="class_graphics_guide.html#a6704a50d151ecd53ff75a388333ef0c2">GraphicsGuide</a></li>
 <li>circular&#160;:&#160;<a class="el" href="class_dialog_rand_lattice.html#aca5b350d274f7ff0ad7c9f1d2212279b">DialogRandLattice</a></li>
+<li>cKatzAct&#160;:&#160;<a class="el" href="class_main_window.html#a7fe3bbdd7a1ef29bc22d70feafb0f7b5">MainWindow</a></li>
+<li>classesBPC&#160;:&#160;<a class="el" href="class_graph.html#aac8978fc57c5eeb3de3b5623cde7333e">Graph</a></li>
 <li>classesCLC&#160;:&#160;<a class="el" href="class_graph.html#a079c1be216e571b3c477fcf35b030eb5">Graph</a></li>
 <li>classesEC&#160;:&#160;<a class="el" href="class_graph.html#a7933ac1d236f28d99498adab33bb42ab">Graph</a></li>
 <li>classesEccentricity&#160;:&#160;<a class="el" href="class_graph.html#a77fd09e2c5b1ff2b8d9231dc57f9b2bf">Graph</a></li>
 <li>classesEVC&#160;:&#160;<a class="el" href="class_graph.html#a1b0685dcfc376308965eec579cb0fb03">Graph</a></li>
 <li>classesIC&#160;:&#160;<a class="el" href="class_graph.html#ad25c2f330e27ea1cdd6aa181cb1b6cf1">Graph</a></li>
 <li>classesIRCC&#160;:&#160;<a class="el" href="class_graph.html#af1c17880c51b2e52f19043315dc35602">Graph</a></li>
+<li>classesKC&#160;:&#160;<a class="el" href="class_graph.html#a81af0d6dda611512aeabf3bad4b4f42f">Graph</a></li>
 <li>classesPP&#160;:&#160;<a class="el" href="class_graph.html#ae295058d32185d9c04817d7331a4a91d">Graph</a></li>
 <li>classesPRP&#160;:&#160;<a class="el" href="class_graph.html#ae210c9f6c39336cfbaaac840b6c6aecd">Graph</a></li>
 <li>classesSBC&#160;:&#160;<a class="el" href="class_graph.html#add41e9944e1253e06dd180954a6f659e">Graph</a></li>
@@ -192,7 +197,10 @@ $(function(){initNavTree('functions_vars_c.html','',''); });
 <li>computeCentralities&#160;:&#160;<a class="el" href="structcli_1_1_cli_config.html#ae9421e06b56424b4e8e0c198d0959621">cli::CliConfig</a></li>
 <li>condition&#160;:&#160;<a class="el" href="struct_filter_spec.html#a62661f6ea81b027dfabfa8a3a28faa57">FilterSpec</a></li>
 <li>conditions&#160;:&#160;<a class="el" href="struct_graph_query.html#a4e3c55321a74f3f89b4c0586774ba233">GraphQuery</a></li>
-<li>connectivityMenu&#160;:&#160;<a class="el" href="class_main_window.html#a8514c96e144ca63101e8af2f99ec64c4">MainWindow</a></li>
+<li>connectivityType&#160;:&#160;<a class="el" href="structcli_1_1_cli_config.html#a9bf12192cd39e025eebca768fb074e95">cli::CliConfig</a></li>
+<li>connMode&#160;:&#160;<a class="el" href="structcli_1_1_cli_config.html#ac47eda8d743f1845e19a62743effa12b">cli::CliConfig</a></li>
+<li>connSource&#160;:&#160;<a class="el" href="structcli_1_1_cli_config.html#a3bd7f16da60fb60b729b98c16203f704">cli::CliConfig</a></li>
+<li>connTarget&#160;:&#160;<a class="el" href="structcli_1_1_cli_config.html#a19ff065422814be0ed0faa4913045618">cli::CliConfig</a></li>
 <li>considerWeights&#160;:&#160;<a class="el" href="structcli_1_1_cli_config.html#acd55c77eaca6f2f5f557487b7c2c6935">cli::CliConfig</a></li>
 <li>constIterator&#160;:&#160;<a class="el" href="class_web_crawler.html#ad02e5711163299d5f1f87e1f88b554c6">WebCrawler</a></li>
 <li>conv_OK&#160;:&#160;<a class="el" href="class_parser.html#a9fe4305dc7abfcc800def131ae9d9d45">Parser</a></li>

@@ -2,6 +2,10 @@ var dir_d13d94bd334f63c69b35ca6dd5d351aa =
 [
     [ "dialogbulkedit.cpp", "dialogbulkedit_8cpp.html", null ],
     [ "dialogbulkedit.h", "dialogbulkedit_8h.html", "dialogbulkedit_8h" ],
+    [ "dialogcentralitybonacich.cpp", "dialogcentralitybonacich_8cpp.html", null ],
+    [ "dialogcentralitybonacich.h", "dialogcentralitybonacich_8h.html", "dialogcentralitybonacich_8h" ],
+    [ "dialogcentralitykatz.cpp", "dialogcentralitykatz_8cpp.html", null ],
+    [ "dialogcentralitykatz.h", "dialogcentralitykatz_8h.html", "dialogcentralitykatz_8h" ],
     [ "dialogclusteringhierarchical.cpp", "dialogclusteringhierarchical_8cpp.html", null ],
     [ "dialogclusteringhierarchical.h", "dialogclusteringhierarchical_8h.html", "dialogclusteringhierarchical_8h" ],
     [ "dialogdatasetselect.cpp", "dialogdatasetselect_8cpp.html", null ],
@@ -51,5 +55,6 @@ var dir_d13d94bd334f63c69b35ca6dd5d351aa =
     [ "dialogsysteminfo.cpp", "dialogsysteminfo_8cpp.html", "dialogsysteminfo_8cpp" ],
     [ "dialogsysteminfo.h", "dialogsysteminfo_8h.html", "dialogsysteminfo_8h" ],
     [ "dialogwebcrawler.cpp", "dialogwebcrawler_8cpp.html", null ],
-    [ "dialogwebcrawler.h", "dialogwebcrawler_8h.html", "dialogwebcrawler_8h" ]
+    [ "dialogwebcrawler.h", "dialogwebcrawler_8h.html", "dialogwebcrawler_8h" ],
+    [ "forms_logging.h", "forms__logging_8h.html", null ]
 ];

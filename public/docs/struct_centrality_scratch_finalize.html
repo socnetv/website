@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -111,6 +111,9 @@ $(function(){initNavTree('struct_centrality_scratch_finalize.html','','struct_ce
   <div class="headertitle"><div class="title">CentralityScratchFinalize Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Scratch for the finalize() phase — the single-threaded pass that runs once after runAllSources() completes, scanning every vertex to compute connectivity, group-level aggregates, and normalised (standardised) centrality scores from the raw per-vertex values runAllSources() already wrote. Distinct from <a class="el" href="struct_centrality_scratch_s_s_s_p.html" title="Per-run scratch for centrality values computed once per SSSP source, before the parallel per-source l...">CentralityScratchSSSP</a> because these values are only meaningful for this one post-loop scan, not during the per-source SSSP pass itself.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -130,7 +133,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8165918b38952f01e81bacfc5e3fd2c4" id="r_a8165918b38952f01e81bacfc5e3fd2c4"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a8165918b38952f01e81bacfc5e3fd2c4">tempVarianceCC</a> = 0</td></tr>
 <tr class="memitem:a90045eb0006be96cdcd1e38a293aca63" id="r_a90045eb0006be96cdcd1e38a293aca63"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a90045eb0006be96cdcd1e38a293aca63">tempVariancePC</a> = 0</td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Scratch for the finalize() phase — the single-threaded pass that runs once after runAllSources() completes, scanning every vertex to compute connectivity, group-level aggregates, and normalised (standardised) centrality scores from the raw per-vertex values runAllSources() already wrote. Distinct from <a class="el" href="struct_centrality_scratch_s_s_s_p.html" title="Per-run scratch for centrality values computed once per SSSP source, before the parallel per-source l...">CentralityScratchSSSP</a> because these values are only meaningful for this one post-loop scan, not during the per-source SSSP pass itself. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ad8a36c87d076100ee2d3040eb02e6ef0" name="ad8a36c87d076100ee2d3040eb02e6ef0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8a36c87d076100ee2d3040eb02e6ef0">&#9670;&#160;</a></span>BC</h2>
 

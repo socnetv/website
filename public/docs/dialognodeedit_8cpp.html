@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -120,6 +120,7 @@ $(function(){initNavTree('dialognodeedit_8cpp.html','',''); });
 <code>#include &lt;QGlobalStatic&gt;</code><br />
 <code>#include &lt;QFileDialog&gt;</code><br />
 <code>#include &lt;QDebug&gt;</code><br />
+<code>#include &quot;<a class="el" href="forms__logging_8h_source.html">forms_logging.h</a>&quot;</code><br />
 <code>#include &lt;QLineEdit&gt;</code><br />
 <code>#include &lt;QSpinBox&gt;</code><br />
 <code>#include &lt;QToolButton&gt;</code><br />
@@ -134,47 +135,51 @@ Include dependency graph for dialognodeedit.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="dialognodeedit_8cpp__incl.png" border="0" usemap="#adialognodeedit_8cpp" loading="lazy" alt=""/></div>
 <map name="adialognodeedit_8cpp" id="adialognodeedit_8cpp">
-<area shape="rect" title="Implements the DialogNodeEdit class for editing node properties in the network graph visualization." alt="" coords="888,5,1035,31"/>
-<area shape="rect" href="dialognodeedit_8h.html" title="Declares the DialogNodeEdit class for editing node properties in the network graph visualization." alt="" coords="24,79,155,104"/>
-<area shape="poly" title=" " alt="" coords="888,26,579,45,377,61,168,81,168,76,376,56,578,40,888,20"/>
-<area shape="rect" title=" " alt="" coords="179,79,330,104"/>
-<area shape="poly" title=" " alt="" coords="888,28,651,50,344,81,343,76,650,45,888,23"/>
-<area shape="rect" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="355,79,429,104"/>
-<area shape="poly" title=" " alt="" coords="888,28,687,48,443,81,443,81,442,76,442,76,686,43,888,23"/>
-<area shape="rect" title=" " alt="" coords="454,79,565,104"/>
-<area shape="poly" title=" " alt="" coords="888,33,579,81,578,76,887,28"/>
-<area shape="rect" title=" " alt="" coords="589,79,686,104"/>
-<area shape="poly" title=" " alt="" coords="910,33,700,79,699,74,909,28"/>
-<area shape="rect" title=" " alt="" coords="711,79,785,104"/>
-<area shape="poly" title=" " alt="" coords="928,33,796,77,795,72,926,28"/>
-<area shape="rect" title=" " alt="" coords="810,79,894,104"/>
-<area shape="poly" title=" " alt="" coords="945,33,883,73,880,69,942,28"/>
-<area shape="rect" title=" " alt="" coords="919,79,1004,104"/>
-<area shape="poly" title=" " alt="" coords="964,31,964,65,959,65,959,31"/>
-<area shape="rect" title=" " alt="" coords="1028,79,1129,104"/>
-<area shape="poly" title=" " alt="" coords="982,28,1049,69,1046,74,979,33"/>
-<area shape="rect" title=" " alt="" coords="1153,79,1265,104"/>
-<area shape="poly" title=" " alt="" coords="1002,28,1157,72,1155,77,1000,33"/>
-<area shape="rect" title=" " alt="" coords="1289,79,1396,104"/>
-<area shape="poly" title=" " alt="" coords="1023,28,1276,75,1275,80,1022,33"/>
-<area shape="rect" title=" " alt="" coords="1421,79,1529,104"/>
-<area shape="poly" title=" " alt="" coords="1035,26,1407,76,1407,81,1035,31"/>
-<area shape="rect" title=" " alt="" coords="1553,79,1634,104"/>
-<area shape="poly" title=" " alt="" coords="1035,22,1257,41,1396,56,1539,76,1539,81,1396,61,1256,46,1035,27"/>
-<area shape="rect" title=" " alt="" coords="1659,79,1837,104"/>
-<area shape="poly" title=" " alt="" coords="1035,22,1645,76,1645,81,1035,28"/>
-<area shape="rect" title=" " alt="" coords="1861,79,1973,104"/>
-<area shape="poly" title=" " alt="" coords="1035,19,1382,36,1612,53,1848,76,1847,81,1611,58,1382,42,1035,24"/>
-<area shape="rect" title=" " alt="" coords="5,152,80,177"/>
-<area shape="poly" title=" " alt="" coords="84,106,60,142,56,139,79,103"/>
-<area shape="rect" title=" " alt="" coords="105,152,170,177"/>
-<area shape="poly" title=" " alt="" coords="99,103,124,139,120,142,95,106"/>
-<area shape="rect" title=" " alt="" coords="264,152,320,177"/>
-<area shape="poly" title=" " alt="" coords="377,106,321,146,318,142,374,102"/>
-<area shape="rect" title=" " alt="" coords="345,152,439,177"/>
-<area shape="poly" title=" " alt="" coords="395,104,395,138,389,138,389,104"/>
-<area shape="rect" title=" " alt="" coords="463,152,534,177"/>
-<area shape="poly" title=" " alt="" coords="411,102,471,142,468,147,408,106"/>
+<area shape="rect" title="Implements the DialogNodeEdit class for editing node properties in the network graph visualization." alt="" coords="911,5,1040,31"/>
+<area shape="rect" href="dialognodeedit_8h.html" title="Declares the DialogNodeEdit class for editing node properties in the network graph visualization." alt="" coords="26,79,141,105"/>
+<area shape="poly" title=" " alt="" coords="910,25,590,43,377,59,157,81,156,76,377,54,590,37,910,20"/>
+<area shape="rect" title=" " alt="" coords="165,79,298,105"/>
+<area shape="poly" title=" " alt="" coords="910,27,653,47,313,81,313,76,653,42,910,21"/>
+<area shape="rect" href="global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="322,79,389,105"/>
+<area shape="poly" title=" " alt="" coords="911,26,690,44,549,60,404,81,404,76,549,54,690,38,910,20"/>
+<area shape="rect" title=" " alt="" coords="412,79,515,105"/>
+<area shape="poly" title=" " alt="" coords="911,30,743,51,530,81,530,76,742,46,910,25"/>
+<area shape="rect" title=" " alt="" coords="539,79,628,105"/>
+<area shape="poly" title=" " alt="" coords="911,33,644,81,643,76,910,28"/>
+<area shape="rect" title=" " alt="" coords="653,79,722,105"/>
+<area shape="poly" title=" " alt="" coords="927,34,738,81,737,76,926,29"/>
+<area shape="rect" href="forms__logging_8h.html" title="Shared WS14 logging category declaration for src/forms/ dialog files." alt="" coords="747,79,860,105"/>
+<area shape="poly" title=" " alt="" coords="947,34,848,75,846,70,945,29"/>
+<area shape="rect" title=" " alt="" coords="884,79,963,105"/>
+<area shape="poly" title=" " alt="" coords="969,33,943,68,939,65,965,30"/>
+<area shape="rect" title=" " alt="" coords="987,79,1068,105"/>
+<area shape="poly" title=" " alt="" coords="986,30,1012,65,1008,68,982,33"/>
+<area shape="rect" title=" " alt="" coords="1092,79,1185,105"/>
+<area shape="poly" title=" " alt="" coords="1004,29,1098,70,1095,75,1002,34"/>
+<area shape="rect" title=" " alt="" coords="1209,79,1312,105"/>
+<area shape="poly" title=" " alt="" coords="1025,29,1198,72,1197,77,1023,34"/>
+<area shape="rect" title=" " alt="" coords="1336,79,1436,105"/>
+<area shape="poly" title=" " alt="" coords="1041,28,1322,76,1321,81,1040,33"/>
+<area shape="rect" title=" " alt="" coords="1460,79,1560,105"/>
+<area shape="poly" title=" " alt="" coords="1041,24,1219,45,1446,76,1445,81,1218,50,1040,29"/>
+<area shape="rect" title=" " alt="" coords="1584,79,1660,105"/>
+<area shape="poly" title=" " alt="" coords="1041,21,1270,39,1417,55,1569,76,1569,82,1417,60,1270,44,1040,26"/>
+<area shape="rect" title=" " alt="" coords="1684,79,1851,105"/>
+<area shape="poly" title=" " alt="" coords="1041,22,1310,43,1669,76,1668,81,1310,48,1041,27"/>
+<area shape="rect" title=" " alt="" coords="1874,79,1978,105"/>
+<area shape="poly" title=" " alt="" coords="1041,19,1387,35,1619,52,1859,76,1859,81,1619,57,1386,40,1041,24"/>
+<area shape="rect" title=" " alt="" coords="5,153,74,178"/>
+<area shape="poly" title=" " alt="" coords="79,106,57,141,53,138,74,103"/>
+<area shape="rect" title=" " alt="" coords="98,153,160,178"/>
+<area shape="poly" title=" " alt="" coords="93,103,115,138,111,141,89,106"/>
+<area shape="rect" title=" " alt="" coords="232,153,287,178"/>
+<area shape="poly" title=" " alt="" coords="341,107,289,146,286,141,338,103"/>
+<area shape="rect" title=" " alt="" coords="311,153,400,178"/>
+<area shape="poly" title=" " alt="" coords="358,105,358,137,353,137,353,105"/>
+<area shape="rect" title=" " alt="" coords="424,153,490,178"/>
+<area shape="poly" title=" " alt="" coords="374,103,429,141,425,145,371,107"/>
+<area shape="rect" title=" " alt="" coords="739,153,868,178"/>
+<area shape="poly" title=" " alt="" coords="806,105,806,137,801,137,801,105"/>
 </map>
 </div>
 </div><a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>

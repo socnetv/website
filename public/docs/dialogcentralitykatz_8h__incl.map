@@ -1,0 +1,7 @@
+<map id="dialogcentralitykatz.h" name="dialogcentralitykatz.h">
+<area shape="rect" id="Node000001" title="Declares the DialogCentralityKatz class for collecting the Katz Centrality attenuation factor (alpha)..." alt="" coords="37,5,181,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,33,64,70,60,66,95,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,79,259,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,29,158,66,154,70,118,33"/>
+</map>
