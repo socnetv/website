@@ -4,19 +4,17 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,46,119,498,114,498,104,47"/>
 <area shape="rect" id="Node000005" href="$class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="160,102,219,128"/>
 <area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="121,44,143,76,171,100,168,104,139,80,117,47"/>
-<area shape="rect" id="Node000003" href="$class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="274,402,331,428"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,438,154,501,151,496,266,433"/>
+<area shape="rect" id="Node000003" href="$class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="277,402,333,428"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="271,438,155,501,152,496,268,433"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="242,5,312,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="280,46,284,188,298,378,303,401,297,402,293,378,279,188,275,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="282,46,307,401,302,402,276,46"/>
 <area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="259,45,227,80,204,103,200,100,223,76,255,41"/>
 <area shape="rect" id="Node000006" href="$class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="315,102,407,128"/>
 <area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="300,41,352,100,348,103,296,44"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="183,143,170,191,162,253,163,285,167,318,177,349,193,376,209,392,230,402,274,411,273,416,228,407,206,396,188,380,172,351,162,319,157,286,157,252,165,190,178,142"/>
-<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="344,141,339,153,318,224,308,297,305,359,305,402,299,402,299,359,303,296,313,223,334,151,340,139"/>
-<area shape="rect" id="Node000007" href="$class_matrix.html" title=" " alt="" coords="431,102,488,128"/>
-<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="462,143,451,270,439,336,430,361,419,380,400,396,377,406,332,415,331,410,375,401,397,391,415,376,425,359,434,334,446,269,456,143"/>
-<area shape="rect" id="Node000008" href="$class_matrix_row.html" title=" " alt="" coords="418,5,502,31"/>
-<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="462,46,462,101,457,101,457,46"/>
-<area shape="rect" id="Node000009" href="$class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="513,102,582,128"/>
-<area shape="poly" id="edge11_Node000003_Node000009" title=" " alt="" coords="556,143,563,193,564,256,559,290,551,323,537,353,516,380,503,389,483,397,433,407,331,415,331,410,432,402,482,392,500,384,513,376,532,350,546,321,554,289,558,256,558,193,551,143"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="183,143,170,191,162,253,163,286,167,318,177,349,193,376,210,392,232,403,277,411,276,416,230,408,207,397,188,380,172,351,162,319,157,286,157,253,165,190,178,142"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="355,143,352,152,324,298,309,402,304,401,318,298,347,151,349,142"/>
+<area shape="rect" id="Node000007" href="$class_matrix.html" title="General&#45;purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),..." alt="" coords="431,102,488,128"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="463,143,460,270,450,335,443,361,433,380,411,398,385,409,334,417,333,411,383,403,408,393,428,376,438,359,445,334,454,270,458,143"/>
+<area shape="rect" id="Node000008" href="$class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="513,102,582,128"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="557,143,564,193,565,256,561,290,553,322,539,353,519,380,506,389,486,397,436,407,334,415,333,410,435,402,485,392,503,385,515,376,534,350,548,321,556,289,560,256,559,193,551,143"/>
 </map>

@@ -11,11 +11,13 @@ var hierarchy =
     [ "DistanceEngine", "class_distance_engine.html", null ],
     [ "DistanceScratch", "struct_distance_scratch.html", null ],
     [ "EdgeTableModel::EdgeRow", "struct_edge_table_model_1_1_edge_row.html", null ],
+    [ "EdgeVisibilityChange", "class_edge_visibility_change.html", null ],
     [ "FilterCondition", "struct_filter_condition.html", null ],
     [ "FilterSpec", "struct_filter_spec.html", null ],
     [ "GraphDistance", "class_graph_distance.html", null ],
     [ "GraphDistancesCompare", "class_graph_distances_compare.html", null ],
     [ "GraphQuery", "struct_graph_query.html", null ],
+    [ "GraphVertex", "class_graph_vertex.html", null ],
     [ "Graph::GraphVisibilitySnapshot", "struct_graph_1_1_graph_visibility_snapshot.html", null ],
     [ "HeadlessLoadResult", "struct_headless_load_result.html", null ],
     [ "IDistanceProgressSink", "class_i_distance_progress_sink.html", [
@@ -26,8 +28,8 @@ var hierarchy =
       [ "SocNetV::IO::GraphParseSinkGraph", "class_soc_net_v_1_1_i_o_1_1_graph_parse_sink_graph.html", null ]
     ] ],
     [ "Matrix", "class_matrix.html", null ],
-    [ "MatrixRow", "class_matrix_row.html", null ],
     [ "MyEdge", "class_my_edge.html", null ],
+    [ "Graph::NodeConnectivityResult", "struct_graph_1_1_node_connectivity_result.html", null ],
     [ "NodeTableModel::NodeRow", "struct_node_table_model_1_1_node_row.html", null ],
     [ "PairVF", "class_pair_v_f.html", null ],
     [ "PairVFCompare", "class_pair_v_f_compare.html", null ],
@@ -43,6 +45,8 @@ var hierarchy =
     ] ],
     [ "QDialog", null, [
       [ "DialogBulkEdit", "class_dialog_bulk_edit.html", null ],
+      [ "DialogCentralityBonacich", "class_dialog_centrality_bonacich.html", null ],
+      [ "DialogCentralityKatz", "class_dialog_centrality_katz.html", null ],
       [ "DialogClusteringHierarchical", "class_dialog_clustering_hierarchical.html", null ],
       [ "DialogDataSetSelect", "class_dialog_data_set_select.html", null ],
       [ "DialogDissimilarities", "class_dialog_dissimilarities.html", null ],
@@ -89,7 +93,6 @@ var hierarchy =
     ] ],
     [ "QObject", null, [
       [ "Graph", "class_graph.html", null ],
-      [ "GraphVertex", "class_graph_vertex.html", null ],
       [ "GraphicsEdge", "class_graphics_edge.html", null ],
       [ "GraphicsGuide", "class_graphics_guide.html", null ],
       [ "GraphicsNode", "class_graphics_node.html", null ],

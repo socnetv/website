@@ -35,36 +35,43 @@ var NAVTREE =
         [ "Prominence Kernel (schema v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md13", null ],
         [ "IO Roundtrip Kernel (schema v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md15", null ],
         [ "Clustering Kernel (schema v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md17", null ],
-        [ "Connectivity Kernel (schema v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md19", null ]
+        [ "Connectivity Kernel (schema v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md19", null ],
+        [ "Matrix Kernel (schema v8)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md21", null ],
+        [ "Vertex Connectivity Kernel (schema v9)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md23", null ]
       ] ],
-      [ "3. Golden Checklist (Pre-Release)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md21", null ],
-      [ "4. How to Add a New Baseline", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md23", [
-        [ "Distance (v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md24", null ],
-        [ "Reachability (v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md25", null ],
-        [ "Walks (v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md26", null ],
-        [ "Prominence (v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md27", null ],
-        [ "IO Roundtrip (v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md28", null ],
-        [ "Clustering (v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md29", null ],
-        [ "Connectivity (v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md30", null ]
+      [ "3. Golden Checklist (Pre-Release)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md25", null ],
+      [ "4. How to Add a New Baseline", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md27", [
+        [ "Distance (v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md28", null ],
+        [ "Reachability (v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md29", null ],
+        [ "Walks (v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md30", null ],
+        [ "Prominence (v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md31", null ],
+        [ "IO Roundtrip (v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md32", null ],
+        [ "Clustering (v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md33", null ],
+        [ "Connectivity (v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md34", null ],
+        [ "Matrix (v8)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md35", null ],
+        [ "Vertex Connectivity (v9)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md36", null ]
       ] ],
-      [ "5. What Is Verified", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md32", [
-        [ "Distance Kernel (v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md33", null ],
-        [ "Reachability Kernel (v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md35", null ],
-        [ "Walks Kernel (v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md37", null ],
-        [ "Prominence Kernel (v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md39", null ],
-        [ "IO Roundtrip Kernel (v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md41", null ],
-        [ "Clustering Kernel (v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md43", null ],
-        [ "Connectivity Kernel (v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md45", null ]
+      [ "5. What Is Verified", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md38", [
+        [ "Distance Kernel (v1)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md39", null ],
+        [ "Reachability Kernel (v2)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md41", null ],
+        [ "Walks Kernel (v3)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md43", null ],
+        [ "Prominence Kernel (v4)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md45", null ],
+        [ "IO Roundtrip Kernel (v5)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md47", null ],
+        [ "Clustering Kernel (v6)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md49", null ],
+        [ "Connectivity Kernel (v7)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md51", null ],
+        [ "Matrix Kernel (v8)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md53", null ],
+        [ "Vertex Connectivity Kernel (v9)", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md55", null ]
       ] ],
-      [ "6. Exit Codes &amp; CI Integration", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md47", null ],
-      [ "7. Existing Baselines", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md49", null ],
-      [ "8. Notes", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md51", null ]
+      [ "6. Exit Codes &amp; CI Integration", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md57", null ],
+      [ "7. Existing Baselines", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md59", null ],
+      [ "8. Notes", "md_tools_2baselines_2_b_a_s_e_l_i_n_e_s_____r_e_a_d_m_e.html#autotoc_md61", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -98,20 +105,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_dialog_query_builder.html#a2cf9925f28965d39ea5b1f5220bd33bd",
-"class_edge_table_model.html#a9fb422bfe47e8849963afc59a2ee1ae1",
-"class_graph.html#a5187299ff2cd823056c83fcef5ceeb59",
-"class_graph.html#ab87c00af5dc8b9f46ee4ec8356d4f8be",
-"class_graph_table_widget.html#a471996582e3a747ffb64890159913154",
-"class_graphics_edge.html#a0e217f59f78a1f2b3063b2b349378954",
-"class_graphics_widget.html#a67f2017d6c7b9bd842772006e8647dac",
-"class_main_window.html#a4a5f3f25fce8fcac1af3af4d636b0f4f",
-"class_main_window.html#aa6db3b4839238e04f786e83b2b63c126",
-"class_matrix.html#a861fc71860b0c52566eb4b5e5ddd13c4",
-"class_text_editor.html#a0a0eeb357238c41d850037669f0a30b7",
-"functions_vars.html",
-"index.html",
-"struct_filter_spec.html#a43f809de7d35e2230ab5680a46082f0a"
+"class_dialog_preview_file.html#ace2ca7cfe4707e2f95a8095d9458f2a9",
+"class_edge_table_model.html",
+"class_graph.html#a445ca91a75e97883a07ebcf25e4b650f",
+"class_graph.html#aa4683eab1a5ab4bf32f8eda176c77895",
+"class_graph.html#af102a5b47c93629d0a38f08019a374d3",
+"class_graph_vertex.html#ab84411ef85bf33859bc1f7306241a37b",
+"class_graphics_node.html#af15e8130439ef15af20abf620fbcf53b",
+"class_main_window.html#a291e5a9f81ff1ac6721cbd1d81ed4523",
+"class_main_window.html#a83641edb8a6c6f1ef1ebf80a5f4a349d",
+"class_main_window.html#ae17e047019d7a6718f2197c10a1018d0",
+"class_parser.html#aa960d48d04f0b3e8d702be58d8c4e7dd",
+"dir_02403f584f959d1d8f54bbda49334d3d.html",
+"graph_8h.html#adc764b55e2f1dbe6a045727a3932a006",
+"namespacecli.html#a006012127c80761ff957e38dd0f656eb",
+"struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

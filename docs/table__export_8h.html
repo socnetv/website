@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -119,13 +119,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="table__export_8h__dep__incl.png" border="0" usemap="#atable__export_8hdep" loading="lazy" alt=""/></div>
 <map name="atable__export_8hdep" id="atable__export_8hdep">
-<area shape="rect" title="Declares TableExport — CSV and JSON serialisers for QAbstractItemModel (#226)." alt="" coords="199,5,315,31"/>
-<area shape="rect" href="graphtablewidget_8cpp.html" title="Implements GraphTableWidget — the tabbed node/edge data table panel (#225)." alt="" coords="5,79,168,104"/>
-<area shape="poly" title=" " alt="" coords="218,38,116,81,114,76,216,33"/>
-<area shape="rect" href="mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="192,79,323,104"/>
-<area shape="poly" title=" " alt="" coords="260,44,260,79,255,79,255,44"/>
-<area shape="rect" href="table__export_8cpp.html" title="Implements TableExport::toCSV() and TableExport::toJSON() (#226)." alt="" coords="347,79,477,104"/>
-<area shape="poly" title=" " alt="" coords="296,34,388,76,386,81,293,39"/>
+<area shape="rect" title="Declares TableExport — CSV and JSON serialisers for QAbstractItemModel (#226)." alt="" coords="407,5,510,31"/>
+<area shape="rect" href="graph__reports_8cpp.html" title="Implements reporting, export, and analytical output generation for the Graph class." alt="" coords="5,86,131,112"/>
+<area shape="poly" title=" " alt="" coords="392,34,143,82,114,88,113,83,142,76,391,28"/>
+<area shape="rect" href="graphtablewidget_8cpp.html" title="Implements GraphTableWidget — the tabbed node/edge data table panel (#225)." alt="" coords="154,86,299,112"/>
+<area shape="poly" title=" " alt="" coords="410,39,263,88,262,83,408,34"/>
+<area shape="rect" href="mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="323,86,440,112"/>
+<area shape="poly" title=" " alt="" coords="438,44,395,88,391,84,435,40"/>
+<area shape="rect" href="mainwindow__network__file_8cpp.html" title="Implements MainWindow Network menu: new/open/save/close/print, recent files, file dialog plumbing,..." alt="" coords="464,79,610,120"/>
+<area shape="poly" title=" " alt="" coords="483,40,520,77,516,81,479,44"/>
+<area shape="rect" href="mainwindow__network__import__export_8cpp.html" title="Implements MainWindow Network menu: import (GraphML, GML, Pajek, Adjacency, GraphViz,..." alt="" coords="635,79,781,120"/>
+<area shape="poly" title=" " alt="" coords="512,34,647,76,645,81,511,39"/>
+<area shape="rect" href="table__export_8cpp.html" title="Implements TableExport::toCSV() and TableExport::toJSON() (#226)." alt="" coords="805,86,923,112"/>
+<area shape="poly" title=" " alt="" coords="526,27,651,48,794,76,822,83,821,88,793,82,650,53,525,32"/>
 </map>
 </div>
 </div>
@@ -138,6 +144,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac8bb5ee82003d717fbe6845967f21ae0" id="r_ac8bb5ee82003d717fbe6845967f21ae0"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="namespace_table_export.html#ac8bb5ee82003d717fbe6845967f21ae0">TableExport::csvQuote</a> (const QString &amp;value)</td></tr>
+<tr class="memdesc:ac8bb5ee82003d717fbe6845967f21ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a CSV-safe quoted field: wraps <code class="param">value</code> in double-quotes if it contains a comma, double-quote, or newline; embedded double-quotes are escaped as "".  <br /></td></tr>
 <tr class="memitem:a18f8dc1abe7643fa12d9460769e4c3cc" id="r_a18f8dc1abe7643fa12d9460769e4c3cc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespace_table_export.html#a18f8dc1abe7643fa12d9460769e4c3cc">TableExport::toCSV</a> (QAbstractItemModel *model, const QString &amp;filePath)</td></tr>
 <tr class="memdesc:a18f8dc1abe7643fa12d9460769e4c3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <code class="param">model</code> to an RFC 4180 CSV file at <code class="param">filePath</code>.  <br /></td></tr>
 <tr class="memitem:ad22121b051435820c92267b5d67b02eb" id="r_ad22121b051435820c92267b5d67b02eb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespace_table_export.html#ad22121b051435820c92267b5d67b02eb">TableExport::toJSON</a> (QAbstractItemModel *model, const QString &amp;filePath)</td></tr>

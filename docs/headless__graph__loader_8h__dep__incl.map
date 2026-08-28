@@ -1,21 +1,25 @@
 <map id="headless_graph_loader.h" name="headless_graph_loader.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="719,5,883,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="880,5,1045,31"/>
 <area shape="rect" id="Node000002" href="$headless__graph__loader_8cpp.html" title=" " alt="" coords="5,86,184,112"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="704,29,472,49,196,82,155,89,154,83,195,76,471,44,703,24"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="865,26,566,45,381,61,196,82,154,89,153,83,195,76,381,55,565,39,865,21"/>
 <area shape="rect" id="Node000003" href="$kernel__clustering__v6_8cpp.html" title=" " alt="" coords="208,86,373,112"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="704,35,386,82,348,89,347,83,385,76,703,29"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="865,29,645,49,386,82,347,88,346,83,385,76,645,44,865,24"/>
 <area shape="rect" id="Node000004" href="$kernel__connectivity__v7_8cpp.html" title=" " alt="" coords="397,79,530,120"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="733,38,543,82,531,84,530,79,542,76,732,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="865,33,713,53,543,82,532,84,531,79,542,76,713,48,865,28"/>
 <area shape="rect" id="Node000005" href="$kernel__distance__v1_8cpp.html" title=" " alt="" coords="554,86,712,112"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="763,40,660,88,658,84,760,36"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="898,38,685,88,683,83,896,33"/>
 <area shape="rect" id="Node000006" href="$kernel__io__roundtrip__v5_8cpp.html" title=" " alt="" coords="736,79,866,120"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="804,46,804,79,798,79,798,46"/>
-<area shape="rect" id="Node000007" href="$kernel__prominence__v4_8cpp.html" title=" " alt="" coords="890,86,1067,112"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="844,35,953,84,950,88,841,40"/>
-<area shape="rect" id="Node000008" href="$kernel__reachability__v2_8cpp.html" title=" " alt="" coords="1091,79,1220,120"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="876,32,1079,76,1091,79,1090,84,1078,82,874,37"/>
-<area shape="rect" id="Node000009" href="$kernel__walks__v3_8cpp.html" title=" " alt="" coords="1244,86,1388,112"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="899,28,1056,48,1234,76,1267,83,1266,89,1233,82,1056,53,898,33"/>
-<area shape="rect" id="Node000010" href="$socnetv__cli_8cpp.html" title=" " alt="" coords="1412,86,1524,112"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="899,21,1129,39,1265,55,1400,76,1430,83,1428,88,1399,82,1264,60,1128,44,899,27"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="925,41,843,81,840,76,923,36"/>
+<area shape="rect" id="Node000007" href="$kernel__matrix__v8_8cpp.html" title=" " alt="" coords="890,86,1035,112"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="965,47,965,86,960,86,960,47"/>
+<area shape="rect" id="Node000008" href="$kernel__prominence__v4_8cpp.html" title=" " alt="" coords="1060,86,1236,112"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1006,35,1121,84,1119,88,1004,40"/>
+<area shape="rect" id="Node000009" href="$kernel__reachability__v2_8cpp.html" title=" " alt="" coords="1260,79,1390,120"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1039,32,1248,76,1261,79,1260,84,1247,82,1038,37"/>
+<area shape="rect" id="Node000010" href="$kernel__vertex__connectivity__v9_8cpp.html" title=" " alt="" coords="1414,79,1591,120"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1060,29,1403,76,1414,78,1413,83,1402,82,1060,34"/>
+<area shape="rect" id="Node000011" href="$kernel__walks__v3_8cpp.html" title=" " alt="" coords="1615,86,1758,112"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1061,22,1307,41,1455,56,1603,76,1638,83,1637,88,1602,82,1455,61,1307,46,1060,27"/>
+<area shape="rect" id="Node000012" href="$socnetv__cli_8cpp.html" title=" " alt="" coords="1782,86,1895,112"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1060,18,1200,22,1378,32,1574,49,1771,76,1801,83,1800,88,1770,82,1574,54,1377,37,1200,27,1060,23"/>
 </map>

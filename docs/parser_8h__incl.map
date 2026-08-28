@@ -1,25 +1,27 @@
 <map id="parser.h" name="parser.h">
-<area shape="rect" id="Node000001" title="Declares the Parser class for reading and interpreting various network data formats,..." alt="" coords="459,5,533,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,86,83,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="459,26,302,45,202,61,102,81,90,85,88,79,101,76,201,55,302,39,458,20"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="159,167,225,192"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="458,23,380,26,286,35,200,52,168,65,147,80,141,98,145,118,157,137,172,155,167,159,152,141,140,120,135,98,143,77,166,60,199,47,285,30,380,21,458,17"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="157,86,251,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="459,31,263,81,252,85,251,79,262,76,458,26"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="633,167,706,192"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="534,17,615,20,715,28,806,46,841,60,865,77,875,97,871,115,857,130,836,142,779,161,720,174,719,168,778,156,833,138,854,126,867,112,870,98,861,80,839,64,805,51,714,34,615,25,534,22"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="459,86,533,111"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="499,31,499,72,493,72,493,31"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="557,86,651,111"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="513,29,578,76,575,80,510,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="675,86,749,111"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="530,28,664,76,670,79,668,84,662,81,528,33"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="773,86,851,111"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="534,24,638,45,762,76,771,79,769,84,761,81,636,50,533,29"/>
-<area shape="rect" id="Node000010" href="$graph__parse__sink_8h.html" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="275,79,434,119"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="476,33,402,74,399,70,474,29"/>
-<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="317,121,229,163,227,158,315,116"/>
-<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="431,116,620,163,618,168,429,121"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="319,167,390,192"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="357,119,357,153,352,153,352,119"/>
+<area shape="rect" id="Node000001" title="Declares the Parser class for reading and interpreting various network data formats,..." alt="" coords="427,5,495,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,86,77,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,26,282,45,189,61,96,82,88,84,86,79,95,76,188,56,281,40,427,20"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="94,168,156,193"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="427,24,356,29,270,39,191,56,161,67,142,81,131,97,125,115,124,152,118,152,120,114,126,94,138,77,159,63,190,51,270,34,356,23,427,18"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="367,86,454,112"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="456,33,429,75,424,72,451,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="288,168,357,193"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="428,34,391,53,358,81,338,117,328,153,323,152,333,115,354,77,388,48,426,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="477,86,546,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="471,30,498,72,493,75,466,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="571,86,655,112"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="485,29,577,77,575,81,483,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="680,86,749,112"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="496,26,575,47,669,76,673,78,671,83,667,82,574,52,494,31"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="774,86,903,112"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="496,23,762,76,776,80,775,85,760,82,495,28"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="927,86,995,112"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="495,18,677,33,797,50,916,76,922,78,921,83,915,82,796,56,676,38,495,24"/>
+<area shape="rect" id="Node000011" href="$graph__parse__sink_8h.html" title="Transitional mutation sink interface for Parser &#45;&gt; Graph IO operations." alt="" coords="151,79,294,120"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="428,33,297,76,295,71,426,28"/>
+<area shape="poly" id="edge11_Node000011_Node000003" title=" " alt="" coords="200,122,153,160,150,156,197,118"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="249,118,297,156,294,160,245,122"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="190,168,255,193"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="225,120,225,152,220,152,220,120"/>
 </map>

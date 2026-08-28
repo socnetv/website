@@ -24,8 +24,10 @@ var searchData=
   ['almostequal_21',['almostEqual',['../namespacecli.html#a4171d8ad1dbd1027575766cabaa79c54',1,'cli']]],
   ['appendtoseries_22',['appendToSeries',['../class_chart.html#a5842d2fe75edf7313c5730f0bb4e7dcf',1,'Chart']]],
   ['applyvisibilitysnapshot_23',['applyVisibilitySnapshot',['../class_graph.html#acad85663a8a9030eee263c0a6630b9d3',1,'Graph']]],
-  ['arrowsize_24',['arrowSize',['../class_graphics_edge.html#abc35bb8fa5dea8ae0680514b38a58c06',1,'GraphicsEdge']]],
-  ['askaboutedgeweights_25',['askAboutEdgeWeights',['../class_main_window.html#a6fe1346e969e47ab558bae0e32ab1d9c',1,'MainWindow']]],
-  ['attrkeys_26',['attrKeys',['../class_edge_table_model.html#a19671824e89dc741a5839ea009580d27',1,'EdgeTableModel::attrKeys()'],['../class_node_table_model.html#ac0e1d2ef1c78de26e9392753bb6bb928',1,'NodeTableModel::attrKeys()']]],
-  ['axes_27',['axes',['../class_chart.html#ad0811ecb2aabac5c488c57259aa12391',1,'Chart']]]
+  ['apspdistance_24',['apspDistance',['../class_graph.html#a63922ad5a214994249eef90984f2837a',1,'Graph']]],
+  ['apspshortestpaths_25',['apspShortestPaths',['../class_graph.html#a849dce30e3b421f82b140f09a5a495df',1,'Graph']]],
+  ['arrowsize_26',['arrowSize',['../class_graphics_edge.html#abc35bb8fa5dea8ae0680514b38a58c06',1,'GraphicsEdge']]],
+  ['askaboutedgeweights_27',['askAboutEdgeWeights',['../class_main_window.html#a6fe1346e969e47ab558bae0e32ab1d9c',1,'MainWindow']]],
+  ['attrkeys_28',['attrKeys',['../class_edge_table_model.html#a19671824e89dc741a5839ea009580d27',1,'EdgeTableModel::attrKeys()'],['../class_node_table_model.html#ac0e1d2ef1c78de26e9392753bb6bb928',1,'NodeTableModel::attrKeys()']]],
+  ['axes_29',['axes',['../class_chart.html#ad0811ecb2aabac5c488c57259aa12391',1,'Chart']]]
 ];

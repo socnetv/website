@@ -1,11 +1,59 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,140,106"/>
-<area shape="rect" id="Node000001" href="$class_graphics_edge_label.html" title=" " alt="" coords="196,5,330,31"/>
-<area shape="poly" id="edge42_Node000000_Node000001" title=" " alt="" coords="114,71,187,40,217,29,218,34,189,45,116,76"/>
-<area shape="rect" id="Node000002" href="$class_graphics_edge_weight.html" title=" " alt="" coords="191,55,334,80"/>
-<area shape="poly" id="edge43_Node000000_Node000002" title=" " alt="" coords="155,79,190,74,191,80,155,85"/>
-<area shape="rect" id="Node000003" href="$class_graphics_node_label.html" title=" " alt="" coords="195,104,330,130"/>
-<area shape="poly" id="edge44_Node000000_Node000003" title=" " alt="" coords="155,101,195,106,194,111,154,106"/>
-<area shape="rect" id="Node000004" href="$class_graphics_node_number.html" title=" " alt="" coords="188,153,338,179"/>
-<area shape="poly" id="edge45_Node000000_Node000004" title=" " alt="" coords="117,110,189,140,219,150,217,155,187,145,115,115"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,672,74,698"/>
+<area shape="rect" id="Node000001" href="$class_dialog_bulk_edit.html" title=" " alt="" coords="167,5,274,31"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="38,656,38,526,47,342,57,247,71,161,92,90,105,62,120,40,141,25,166,17,167,22,143,30,124,44,109,64,97,91,77,162,62,248,52,342,43,526,43,656"/>
+<area shape="rect" id="Node000002" href="$class_dialog_centrality_bonacich.html" title=" " alt="" coords="136,55,304,80"/>
+<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="38,656,40,535,50,365,60,279,74,200,94,135,106,109,120,90,134,78,137,82,124,93,111,112,99,137,80,201,65,280,55,366,45,535,43,656"/>
+<area shape="rect" id="Node000003" href="$class_dialog_centrality_katz.html" title=" " alt="" coords="150,104,291,130"/>
+<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="38,657,42,544,53,390,63,311,77,239,96,180,107,157,120,139,133,128,148,121,150,126,136,133,124,143,112,160,101,182,82,240,68,312,58,390,47,545,44,657"/>
+<area shape="rect" id="Node000004" href="$class_dialog_clustering_hierarchical.html" title=" " alt="" coords="127,153,314,179"/>
+<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="39,656,44,553,56,413,67,342,80,278,98,225,120,188,133,177,137,182,124,192,103,227,85,279,72,343,61,414,49,553,44,656"/>
+<area shape="rect" id="Node000005" href="$class_dialog_data_set_select.html" title=" " alt="" coords="149,203,292,228"/>
+<area shape="poly" id="edge10_Node000000_Node000005" title=" " alt="" coords="39,656,46,562,59,437,70,374,83,317,100,270,120,238,147,220,150,225,124,241,104,272,88,319,75,375,65,438,51,563,45,656"/>
+<area shape="rect" id="Node000006" href="$class_dialog_dissimilarities.html" title=" " alt="" coords="150,252,290,278"/>
+<area shape="poly" id="edge11_Node000000_Node000006" title=" " alt="" coords="40,657,48,572,63,462,86,357,101,315,120,287,133,276,149,269,151,274,136,281,124,291,106,318,91,358,68,463,53,573,45,657"/>
+<area shape="rect" id="Node000007" href="$class_dialog_edge_dichotomization.html" title=" " alt="" coords="129,301,312,327"/>
+<area shape="poly" id="edge12_Node000000_Node000007" title=" " alt="" coords="41,656,50,581,66,486,89,396,103,361,120,336,134,325,137,330,124,340,108,363,94,397,71,487,56,582,46,657"/>
+<area shape="rect" id="Node000008" href="$class_dialog_edge_edit.html" title=" " alt="" coords="165,351,276,376"/>
+<area shape="poly" id="edge13_Node000000_Node000008" title=" " alt="" coords="37,656,39,600,50,527,60,489,75,451,94,416,120,386,140,372,164,364,165,369,143,377,123,389,99,419,79,453,65,490,55,528,44,600,42,657"/>
+<area shape="rect" id="Node000009" href="$class_dialog_export_image.html" title=" " alt="" coords="154,400,286,426"/>
+<area shape="poly" id="edge14_Node000000_Node000009" title=" " alt="" coords="39,656,44,608,56,549,80,488,98,460,120,435,135,424,153,417,155,422,138,429,123,439,102,463,85,490,61,550,49,609,44,657"/>
+<area shape="rect" id="Node000010" href="$class_dialog_export_p_d_f.html" title=" " alt="" coords="159,449,282,475"/>
+<area shape="poly" id="edge15_Node000000_Node000010" title=" " alt="" coords="42,656,49,618,64,571,86,524,102,503,120,484,138,473,157,465,159,470,140,477,123,488,106,506,91,527,69,573,54,619,47,657"/>
+<area shape="rect" id="Node000011" href="$class_dialog_filter_by_attribute.html" title=" " alt="" coords="144,499,296,524"/>
+<area shape="poly" id="edge16_Node000000_Node000011" title=" " alt="" coords="46,656,72,594,93,561,120,533,142,521,145,525,123,538,97,564,76,596,51,658"/>
+<area shape="rect" id="Node000012" href="$class_dialog_filter_edges_by_weight.html" title=" " alt="" coords="130,548,310,574"/>
+<area shape="poly" id="edge17_Node000000_Node000012" title=" " alt="" coords="53,657,81,618,99,599,120,583,142,572,144,577,123,587,103,603,85,622,57,660"/>
+<area shape="rect" id="Node000013" href="$class_dialog_filter_nodes_by_centrality.html" title=" " alt="" coords="122,597,319,623"/>
+<area shape="poly" id="edge18_Node000000_Node000013" title=" " alt="" coords="70,660,121,632,151,621,153,626,123,637,72,665"/>
+<area shape="rect" id="Node000014" href="$class_dialog_import_attributes.html" title="Modal dialog that lets the user pick a CSV or JSON file and map its columns to graph node/edge identi..." alt="" coords="145,647,296,672"/>
+<area shape="poly" id="edge19_Node000000_Node000014" title=" " alt="" coords="88,675,144,667,145,673,89,681"/>
+<area shape="rect" id="Node000015" href="$class_dialog_node_edit.html" title=" " alt="" coords="164,696,276,722"/>
+<area shape="poly" id="edge20_Node000000_Node000015" title=" " alt="" coords="89,689,164,699,163,704,89,694"/>
+<area shape="rect" id="Node000016" href="$class_dialog_node_find.html" title=" " alt="" coords="163,745,278,771"/>
+<area shape="poly" id="edge21_Node000000_Node000016" title=" " alt="" coords="73,704,123,732,164,745,162,750,121,737,70,709"/>
+<area shape="rect" id="Node000017" href="$class_dialog_preview_file.html" title=" " alt="" coords="157,795,284,820"/>
+<area shape="poly" id="edge22_Node000000_Node000017" title=" " alt="" coords="58,709,85,747,103,766,123,781,158,796,156,801,120,786,99,770,81,750,53,712"/>
+<area shape="rect" id="Node000018" href="$class_dialog_query_builder.html" title="Visual query builder that composes a multi&#45;condition AND filter." alt="" coords="154,844,287,870"/>
+<area shape="poly" id="edge23_Node000000_Node000018" title=" " alt="" coords="51,712,77,773,97,804,123,831,154,846,152,851,120,835,93,808,72,775,46,714"/>
+<area shape="rect" id="Node000019" href="$class_dialog_rand_erdos_renyi.html" title=" " alt="" coords="142,893,299,919"/>
+<area shape="poly" id="edge24_Node000000_Node000019" title=" " alt="" coords="47,713,55,751,69,796,91,842,106,862,123,880,143,892,140,897,120,884,102,866,87,845,64,798,50,752,42,714"/>
+<area shape="rect" id="Node000020" href="$class_dialog_rand_lattice.html" title=" " alt="" coords="156,943,284,968"/>
+<area shape="poly" id="edge25_Node000000_Node000020" title=" " alt="" coords="44,713,49,760,62,819,85,879,102,906,123,930,139,940,157,947,155,952,136,945,120,933,98,909,81,881,57,820,44,761,39,713"/>
+<area shape="rect" id="Node000021" href="$class_dialog_rand_regular.html" title=" " alt="" coords="153,992,288,1018"/>
+<area shape="poly" id="edge26_Node000000_Node000021" title=" " alt="" coords="42,713,44,769,55,841,65,879,79,915,99,949,123,979,137,989,154,996,152,1001,135,994,120,983,94,952,75,917,60,880,50,842,39,770,37,713"/>
+<area shape="rect" id="Node000022" href="$class_dialog_rand_scale_free.html" title=" " alt="" coords="146,1041,294,1067"/>
+<area shape="poly" id="edge27_Node000000_Node000022" title=" " alt="" coords="46,713,56,787,71,882,94,971,108,1005,124,1028,147,1043,144,1048,120,1032,103,1008,89,973,66,883,50,788,41,713"/>
+<area shape="rect" id="Node000023" href="$class_dialog_rand_small_world.html" title=" " alt="" coords="143,1091,298,1116"/>
+<area shape="poly" id="edge28_Node000000_Node000023" title=" " alt="" coords="45,713,53,797,68,907,91,1011,106,1051,124,1078,144,1091,141,1096,120,1081,102,1053,86,1012,63,908,48,798,40,714"/>
+<area shape="rect" id="Node000024" href="$class_dialog_settings.html" title=" " alt="" coords="167,1140,274,1166"/>
+<area shape="poly" id="edge29_Node000000_Node000024" title=" " alt="" coords="45,713,51,807,65,931,75,993,88,1050,104,1096,124,1127,144,1141,168,1148,166,1153,141,1146,120,1131,100,1098,83,1051,70,994,59,932,46,807,39,713"/>
+<area shape="rect" id="Node000025" href="$class_dialog_similarity_matches.html" title=" " alt="" coords="139,1189,302,1215"/>
+<area shape="poly" id="edge30_Node000000_Node000025" title=" " alt="" coords="44,713,49,816,62,955,72,1025,85,1089,103,1141,124,1176,140,1189,137,1193,120,1180,98,1143,80,1091,67,1026,56,956,44,816,39,713"/>
+<area shape="rect" id="Node000026" href="$class_dialog_similarity_pearson.html" title=" " alt="" coords="140,1239,300,1264"/>
+<area shape="poly" id="edge31_Node000000_Node000026" title=" " alt="" coords="44,713,47,825,58,979,69,1057,82,1128,101,1187,112,1209,124,1226,141,1239,138,1243,120,1229,107,1212,96,1188,77,1130,63,1058,53,979,42,825,38,713"/>
+<area shape="rect" id="Node000027" href="$class_dialog_system_info.html" title=" " alt="" coords="158,1288,283,1314"/>
+<area shape="poly" id="edge32_Node000000_Node000027" title=" " alt="" coords="43,713,45,834,55,1003,65,1089,80,1168,99,1232,111,1256,124,1275,139,1287,158,1295,156,1300,137,1292,120,1279,106,1259,94,1234,74,1169,60,1090,50,1004,40,835,38,713"/>
+<area shape="rect" id="Node000028" href="$class_dialog_web_crawler.html" title=" " alt="" coords="156,1337,285,1363"/>
+<area shape="poly" id="edge33_Node000000_Node000028" title=" " alt="" coords="43,713,44,843,52,1027,62,1121,77,1207,97,1277,110,1304,124,1324,138,1336,156,1343,154,1348,136,1341,120,1328,105,1307,92,1279,71,1208,57,1121,47,1027,38,843,38,713"/>
 </map>

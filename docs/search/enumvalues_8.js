@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lt_0',['Lt',['../struct_filter_condition.html#a7449e3a6b25e60c370bda3ac12352d2ba50033c15af7795cd6617f117b29d6922',1,'FilterCondition']]],
-  ['lte_1',['Lte',['../struct_filter_condition.html#a7449e3a6b25e60c370bda3ac12352d2baab3a1c916736c18e2083a72a34db90a5',1,'FilterCondition']]]
+  ['katz_0',['KATZ',['../global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a7ab58fa280015fa4df068db4ac8e8488',1,'global.h']]]
 ];

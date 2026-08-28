@@ -1,32 +1,30 @@
 <map id="GraphTableWidget" name="GraphTableWidget">
-<area shape="rect" id="Node000001" title="A QWidget containing a QTabWidget with two tabs — Nodes and Edges — each backed by a sortable,..." alt="" coords="107,595,235,621"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,499,78,524"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,533,108,569,148,593,145,597,105,574,62,537"/>
-<area shape="rect" id="Node000003" href="$class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="179,402,235,428"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,440,159,467,141,500,137,525,143,551,164,593,160,596,138,553,132,525,136,498,155,464,179,437"/>
-<area shape="rect" id="Node000011" href="$class_node_table_model.html" title="Table model that caches node data from Graph and writes back via the Graph API." alt="" coords="349,499,467,524"/>
-<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="248,432,383,496,381,501,245,437"/>
-<area shape="rect" id="Node000013" href="$class_edge_table_model.html" title="Table model that caches edge data for the current relation from Graph and writes back via the Graph A..." alt="" coords="208,499,326,524"/>
-<area shape="poly" id="edge17_Node000013_Node000003" title=" " alt="" coords="205,443,206,459,211,473,222,486,237,496,234,500,219,490,207,476,201,460,200,443"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="31,5,100,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="85,42,117,101,161,242,206,401,201,402,156,243,112,103,80,45"/>
-<area shape="rect" id="Node000005" href="$class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="185,102,244,128"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="116,30,164,53,190,76,209,100,205,103,187,80,161,57,114,35"/>
-<area shape="rect" id="Node000007" href="$class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="10,102,102,128"/>
-<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="65,47,60,102,55,101,60,46"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="212,143,211,152,206,226,206,299,209,401,203,402,200,299,201,226,206,151,207,143"/>
-<area shape="rect" id="Node000006" href="$class_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="124,5,327,31"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="225,47,219,102,214,101,220,46"/>
-<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="48,143,33,192,22,254,21,287,25,319,34,349,50,376,71,389,104,398,179,409,178,414,103,403,69,393,47,380,29,351,19,320,16,287,16,253,28,191,43,142"/>
-<area shape="rect" id="Node000008" href="$class_matrix.html" title=" " alt="" coords="277,102,334,128"/>
-<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="308,143,303,269,294,334,287,360,278,380,259,397,237,408,234,404,256,393,274,376,282,359,289,333,298,268,303,143"/>
-<area shape="rect" id="Node000009" href="$class_matrix_row.html" title=" " alt="" coords="351,5,436,31"/>
-<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="374,44,319,103,315,100,370,41"/>
-<area shape="rect" id="Node000010" href="$class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="359,102,428,128"/>
-<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="402,142,408,192,409,255,405,289,396,322,383,352,363,380,342,393,308,402,236,413,235,408,307,397,339,388,360,376,378,350,391,320,399,288,404,255,403,192,397,143"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="385,536,357,556,325,574,281,590,236,600,235,595,279,584,323,569,354,551,382,532"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="318,402,464,428"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="398,442,409,498,403,499,393,443"/>
-<area shape="poly" id="edge16_Node000013_Node000012" title=" " alt="" coords="383,443,372,461,358,477,337,491,315,501,313,496,335,486,354,473,368,458,378,440"/>
-<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="246,537,185,597,181,593,242,533"/>
+<area shape="rect" id="Node000001" title="A QWidget containing a QTabWidget with two tabs — Nodes and Edges — each backed by a sortable,..." alt="" coords="230,595,359,621"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="129,499,201,524"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,533,232,569,271,593,269,597,229,574,186,537"/>
+<area shape="rect" id="Node000003" href="$class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="302,402,359,428"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="306,440,283,467,264,500,261,525,267,551,288,593,283,596,262,553,256,525,259,498,278,464,302,437"/>
+<area shape="rect" id="Node000010" href="$class_node_table_model.html" title="Table model that caches node data from Graph and writes back via the Graph API." alt="" coords="331,499,450,524"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="329,443,330,459,335,473,346,486,360,496,357,500,342,490,330,476,325,460,324,443"/>
+<area shape="rect" id="Node000012" href="$class_edge_table_model.html" title="Table model that caches edge data for the current relation from Graph and writes back via the Graph A..." alt="" coords="473,499,590,524"/>
+<area shape="poly" id="edge16_Node000012_Node000003" title=" " alt="" coords="371,432,507,496,505,501,369,437"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="232,5,301,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,46,287,189,302,283,321,377,328,401,323,403,316,379,297,284,282,189,266,47"/>
+<area shape="rect" id="Node000005" href="$class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="142,102,202,128"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="246,44,186,103,182,100,242,40"/>
+<area shape="rect" id="Node000007" href="$class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="298,102,390,128"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="288,41,336,100,332,103,284,45"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="165,143,152,192,143,254,144,287,148,319,159,349,175,376,195,389,229,398,302,409,302,414,228,403,193,393,171,380,154,351,143,320,138,287,138,254,147,191,160,142"/>
+<area shape="rect" id="Node000006" href="$class_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="5,5,208,31"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="110,46,114,62,121,77,133,89,147,99,144,104,129,93,116,79,109,64,105,47"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="337,143,335,152,327,226,326,298,332,401,327,402,321,298,322,225,330,151,332,142"/>
+<area shape="rect" id="Node000008" href="$class_matrix.html" title="General&#45;purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),..." alt="" coords="414,102,471,128"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="445,143,441,269,432,335,425,361,415,380,404,391,389,400,360,411,358,406,387,396,400,387,411,376,420,359,427,334,436,269,440,143"/>
+<area shape="rect" id="Node000009" href="$class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="496,102,565,128"/>
+<area shape="poly" id="edge10_Node000003_Node000009" title=" " alt="" coords="539,143,546,192,546,256,542,289,534,322,520,353,500,380,480,389,443,397,360,412,359,407,442,392,478,384,497,376,515,350,529,320,537,288,541,255,540,193,534,143"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="369,537,309,597,305,593,366,533"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="441,402,588,428"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="506,443,496,461,482,477,461,491,438,501,436,496,458,486,478,473,491,458,502,440"/>
+<area shape="poly" id="edge15_Node000012_Node000011" title=" " alt="" coords="522,442,532,498,527,499,517,443"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="509,536,481,556,449,574,404,590,360,600,359,595,403,584,447,569,478,551,506,532"/>
 </map>

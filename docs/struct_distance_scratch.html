@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -111,6 +111,9 @@ $(function(){initNavTree('struct_distance_scratch.html','','struct_distance_scra
   <div class="headertitle"><div class="title">DistanceScratch Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Per-run scratch state for <a class="el" href="class_distance_engine.html#aff595b5f3217e421a007136f6ef487d6" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -132,7 +135,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac314d2b93e9ced661b3e763667591f1d" id="r_ac314d2b93e9ced661b3e763667591f1d"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ac314d2b93e9ced661b3e763667591f1d">tempEdgeWeight</a> = 0</td></tr>
 <tr class="memitem:a658f5663b57a0191562afc00811c2129" id="r_a658f5663b57a0191562afc00811c2129"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a658f5663b57a0191562afc00811c2129">pairDistance</a> = 0</td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Per-run scratch state for <a class="el" href="class_distance_engine.html#aff595b5f3217e421a007136f6ef487d6" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call. </p>
+<p>Not per-source (see PerSourceScratch/ThreadLocalState in <a class="el" href="per__source__scratch_8h.html" title="Per-source scratch state for the Brandes SSSP / centrality computation.">per_source_scratch.h</a> / <a class="el" href="thread__local__state_8h.html" title="Per-thread state for the parallel SSSP source loop in DistanceEngine.">thread_local_state.h</a> for that) — this is the state threaded through compute()'s three phases (initRun / runAllSources / finalize) that used to be a long list of local variables before WS1's Phase C extraction. One instance lives on compute()'s stack for the whole call. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a1e8d2134861c3c5886aa488928ceb147" name="a1e8d2134861c3c5886aa488928ceb147"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e8d2134861c3c5886aa488928ceb147">&#9670;&#160;</a></span>distances_sum_for_s</h2>
 

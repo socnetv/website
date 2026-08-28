@@ -6,7 +6,6 @@ var searchData=
   ['hasclc_3',['hasCLC',['../class_graph_vertex.html#aff2fa4c0b1edf3b95fd106d381fe2466',1,'GraphVertex']]],
   ['hasedgefrom_4',['hasEdgeFrom',['../class_graph_vertex.html#afa466091fbcb7ef40af750c70ed02595',1,'GraphVertex']]],
   ['hasedgeto_5',['hasEdgeTo',['../class_graph_vertex.html#a602aba5524dcabec6ec3e95840da7448',1,'GraphVertex']]],
-  ['hasnode_6',['hasNode',['../class_graphics_widget.html#afb9411d1b9b29abfcc4843785e60cb82',1,'GraphicsWidget']]],
-  ['headerdata_7',['headerData',['../class_edge_table_model.html#ab6de0e1ddbf40d79f8e8238b4bf20bdc',1,'EdgeTableModel::headerData()'],['../class_node_table_model.html#acd88a89641c0b3d7a583c248157e1f6d',1,'NodeTableModel::headerData()']]],
-  ['htmlescaped_8',['htmlEscaped',['../class_graph.html#a6ca7e7bdf73bd740f28e90b7d7c21925',1,'Graph']]]
+  ['headerdata_6',['headerData',['../class_edge_table_model.html#ab6de0e1ddbf40d79f8e8238b4bf20bdc',1,'EdgeTableModel::headerData()'],['../class_node_table_model.html#acd88a89641c0b3d7a583c248157e1f6d',1,'NodeTableModel::headerData()']]],
+  ['htmlescaped_7',['htmlEscaped',['../class_graph.html#a6ca7e7bdf73bd740f28e90b7d7c21925',1,'Graph']]]
 ];

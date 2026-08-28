@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -130,9 +130,7 @@ Inheritance diagram for IDistanceProgressSink:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8abe752708880060a2c4f7f0d84a0032" id="r_a8abe752708880060a2c4f7f0d84a0032"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a8abe752708880060a2c4f7f0d84a0032">~IDistanceProgressSink</a> ()=default</td></tr>
 <tr class="memitem:aa46aac5ed5593dc458a2f9c19d831678" id="r_aa46aac5ed5593dc458a2f9c19d831678"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa46aac5ed5593dc458a2f9c19d831678">statusMessage</a> (const QString &amp;msg)=0</td></tr>
-<tr class="memitem:af8703976bcbb1778d0504fe194ad5f20" id="r_af8703976bcbb1778d0504fe194ad5f20"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af8703976bcbb1778d0504fe194ad5f20">progressCreate</a> (int total, const QString &amp;msg)=0</td></tr>
-<tr class="memitem:a644a2c825a78b9b32c3ebdb1ef6bf255" id="r_a644a2c825a78b9b32c3ebdb1ef6bf255"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a644a2c825a78b9b32c3ebdb1ef6bf255">progressUpdate</a> (int value)=0</td></tr>
-<tr class="memitem:a0efa35ddf3bcd337d996a0e33fd4c844" id="r_a0efa35ddf3bcd337d996a0e33fd4c844"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0efa35ddf3bcd337d996a0e33fd4c844">progressKill</a> ()=0</td></tr>
+<tr class="memitem:a9b0ab32d6890ed40b0255f4d248d8861" id="r_a9b0ab32d6890ed40b0255f4d248d8861"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9b0ab32d6890ed40b0255f4d248d8861">resetCancellation</a> ()=0</td></tr>
 <tr class="memitem:a6eaa897e18fc2e4b4400c3d4c2b53267" id="r_a6eaa897e18fc2e4b4400c3d4c2b53267"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a6eaa897e18fc2e4b4400c3d4c2b53267">progressCanceled</a> () const =0</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -189,8 +187,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af8703976bcbb1778d0504fe194ad5f20" name="af8703976bcbb1778d0504fe194ad5f20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8703976bcbb1778d0504fe194ad5f20">&#9670;&#160;</a></span>progressCreate()</h2>
+<a id="a9b0ab32d6890ed40b0255f4d248d8861" name="a9b0ab32d6890ed40b0255f4d248d8861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0ab32d6890ed40b0255f4d248d8861">&#9670;&#160;</a></span>resetCancellation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,38 +197,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void IDistanceProgressSink::progressCreate </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>total</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_graph_distance_progress_sink.html#a16e90eb812eb54facf1a30a4c5e57967">GraphDistanceProgressSink</a>, and <a class="el" href="class_null_distance_progress_sink.html#a2e627cc9bc6ade324b737255f7e31ba9">NullDistanceProgressSink</a>.</p>
-
-</div>
-</div>
-<a id="a0efa35ddf3bcd337d996a0e33fd4c844" name="a0efa35ddf3bcd337d996a0e33fd4c844"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0efa35ddf3bcd337d996a0e33fd4c844">&#9670;&#160;</a></span>progressKill()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IDistanceProgressSink::progressKill </td>
+          <td class="memname">virtual void IDistanceProgressSink::resetCancellation </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -243,34 +210,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_graph_distance_progress_sink.html#adbf7615860dff11dc483ea5243e3be0f">GraphDistanceProgressSink</a>, and <a class="el" href="class_null_distance_progress_sink.html#a2ac4f6f52c1238011da713d1abe8c85f">NullDistanceProgressSink</a>.</p>
-
-</div>
-</div>
-<a id="a644a2c825a78b9b32c3ebdb1ef6bf255" name="a644a2c825a78b9b32c3ebdb1ef6bf255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a644a2c825a78b9b32c3ebdb1ef6bf255">&#9670;&#160;</a></span>progressUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void IDistanceProgressSink::progressUpdate </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_graph_distance_progress_sink.html#ae3598e06f70b758eb0c515328028cc72">GraphDistanceProgressSink</a>, and <a class="el" href="class_null_distance_progress_sink.html#a149d6763099305f6f01b0516911c964c">NullDistanceProgressSink</a>.</p>
+<p>Implemented in <a class="el" href="class_graph_distance_progress_sink.html#aba42c863bd3e2dcc73050379be34e8b2">GraphDistanceProgressSink</a>, and <a class="el" href="class_null_distance_progress_sink.html#ae790c8f441a48bd86ebf065875497556">NullDistanceProgressSink</a>.</p>
 
 </div>
 </div>

@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -131,6 +131,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a89d765dbd5a76db33687ed4eeae2b572" id="r_a89d765dbd5a76db33687ed4eeae2b572"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a89d765dbd5a76db33687ed4eeae2b572">benchRuns</a> = 0</td></tr>
 <tr class="memitem:a6bed6c16e4be8e53bdabca29135e63df" id="r_a6bed6c16e4be8e53bdabca29135e63df"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a6bed6c16e4be8e53bdabca29135e63df">kernel</a></td></tr>
 <tr class="memitem:a1c4acd7db16ed47ee7a1b45f93f95aa7" id="r_a1c4acd7db16ed47ee7a1b45f93f95aa7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1c4acd7db16ed47ee7a1b45f93f95aa7">strict</a> = false</td></tr>
+<tr class="memitem:a9bf12192cd39e025eebca768fb074e95" id="r_a9bf12192cd39e025eebca768fb074e95"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a9bf12192cd39e025eebca768fb074e95">connectivityType</a> = &quot;weak&quot;</td></tr>
+<tr class="memitem:ac47eda8d743f1845e19a62743effa12b" id="r_ac47eda8d743f1845e19a62743effa12b"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ac47eda8d743f1845e19a62743effa12b">connMode</a> = &quot;global&quot;</td></tr>
+<tr class="memitem:a3bd7f16da60fb60b729b98c16203f704" id="r_a3bd7f16da60fb60b729b98c16203f704"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3bd7f16da60fb60b729b98c16203f704">connSource</a> = -1</td></tr>
+<tr class="memitem:a19ff065422814be0ed0faa4913045618" id="r_a19ff065422814be0ed0faa4913045618"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a19ff065422814be0ed0faa4913045618">connTarget</a> = -1</td></tr>
+<tr class="memitem:a93bbc0b9dc2cf92e8943af251b750121" id="r_a93bbc0b9dc2cf92e8943af251b750121"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a93bbc0b9dc2cf92e8943af251b750121">katzAlpha</a> = -1</td></tr>
+<tr class="memitem:add7aeeb000434ceea68de7d85732ee16" id="r_add7aeeb000434ceea68de7d85732ee16"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#add7aeeb000434ceea68de7d85732ee16">bonacichAlpha</a> = -1</td></tr>
+<tr class="memitem:ac32408c805a1552d5080e792694010e4" id="r_ac32408c805a1552d5080e792694010e4"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ac32408c805a1552d5080e792694010e4">bonacichBeta</a> = 0</td></tr>
 </table>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a89d765dbd5a76db33687ed4eeae2b572" name="a89d765dbd5a76db33687ed4eeae2b572"></a>
@@ -141,6 +148,34 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int cli::CliConfig::benchRuns = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add7aeeb000434ceea68de7d85732ee16" name="add7aeeb000434ceea68de7d85732ee16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7aeeb000434ceea68de7d85732ee16">&#9670;&#160;</a></span>bonacichAlpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal cli::CliConfig::bonacichAlpha = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac32408c805a1552d5080e792694010e4" name="ac32408c805a1552d5080e792694010e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32408c805a1552d5080e792694010e4">&#9670;&#160;</a></span>bonacichBeta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal cli::CliConfig::bonacichBeta = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -169,6 +204,62 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool cli::CliConfig::computeCentralities = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bf12192cd39e025eebca768fb074e95" name="a9bf12192cd39e025eebca768fb074e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf12192cd39e025eebca768fb074e95">&#9670;&#160;</a></span>connectivityType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString cli::CliConfig::connectivityType = &quot;weak&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac47eda8d743f1845e19a62743effa12b" name="ac47eda8d743f1845e19a62743effa12b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47eda8d743f1845e19a62743effa12b">&#9670;&#160;</a></span>connMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString cli::CliConfig::connMode = &quot;global&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bd7f16da60fb60b729b98c16203f704" name="a3bd7f16da60fb60b729b98c16203f704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd7f16da60fb60b729b98c16203f704">&#9670;&#160;</a></span>connSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cli::CliConfig::connSource = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19ff065422814be0ed0faa4913045618" name="a19ff065422814be0ed0faa4913045618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ff065422814be0ed0faa4913045618">&#9670;&#160;</a></span>connTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cli::CliConfig::connTarget = -1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -281,6 +372,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool cli::CliConfig::inverseWeights = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93bbc0b9dc2cf92e8943af251b750121" name="a93bbc0b9dc2cf92e8943af251b750121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93bbc0b9dc2cf92e8943af251b750121">&#9670;&#160;</a></span>katzAlpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal cli::CliConfig::katzAlpha = -1</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,23 +1,41 @@
 <map id="graphicsedgelabel.cpp" name="graphicsedgelabel.cpp">
-<area shape="rect" id="Node000001" title="Implements the GraphicsEdgeLabel class for rendering edge labels in the network graph." alt="" coords="357,5,508,31"/>
-<area shape="rect" id="Node000002" href="$graphicsedgelabel_8h.html" title="Declares the GraphicsEdgeLabel class for managing and rendering edge labels in the network graph." alt="" coords="106,79,242,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="389,34,233,77,232,72,388,29"/>
-<area shape="rect" id="Node000004" href="$graphicsedge_8h.html" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="322,79,431,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="425,33,397,68,393,65,421,30"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="455,79,524,105"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="444,30,473,65,469,68,440,33"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="549,79,606,105"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="458,29,541,69,538,74,456,34"/>
+<area shape="rect" id="Node000001" title="Implements the GraphicsEdgeLabel class for rendering edge labels in the network graph." alt="" coords="728,5,878,31"/>
+<area shape="rect" id="Node000002" href="$graphicsedgelabel_8h.html" title="Declares the GraphicsEdgeLabel class for managing and rendering edge labels in the network graph." alt="" coords="107,79,243,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="728,31,259,84,259,78,727,25"/>
+<area shape="rect" id="Node000004" href="$graphicsedge_8h.html" title="Declares the GraphicsEdge class for visualizing edges in the network graph." alt="" coords="411,79,520,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="746,34,536,78,535,73,745,29"/>
+<area shape="rect" id="Node000010" href="$graphicswidget_8h.html" title="Declares the GraphicsWidget class for handling the main visualization widget in the network graph int..." alt="" coords="744,79,863,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="806,31,806,63,800,63,800,31"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="887,79,956,105"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="825,29,890,68,887,73,822,34"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="981,79,1038,105"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="839,29,967,73,966,78,837,34"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,153,140,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="158,107,104,145,101,141,155,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,107,104,146,101,141,156,103"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="163,153,272,178"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="351,108,260,148,257,144,348,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="424,108,276,150,274,145,423,103"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="296,153,366,178"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="371,106,349,141,345,138,367,103"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="444,108,369,147,366,143,442,103"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="390,153,456,178"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="386,103,409,138,405,141,382,106"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="461,106,440,141,436,138,457,104"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="480,153,534,178"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="400,103,473,143,471,147,397,108"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="475,104,495,138,490,141,470,106"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="558,153,611,178"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="413,103,545,148,543,153,411,108"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="487,103,553,142,550,147,485,107"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="635,153,747,178"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="786,107,724,146,722,142,783,103"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="772,153,834,178"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="806,105,806,137,800,137,800,105"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="859,153,923,178"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="820,103,866,141,863,145,816,107"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="948,153,1077,178"/>
+<area shape="poly" id="edge13_Node000010_Node000014" title=" " alt="" coords="840,103,963,145,962,150,838,108"/>
+<area shape="rect" id="Node000015" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="1101,153,1167,178"/>
+<area shape="poly" id="edge14_Node000010_Node000015" title=" " alt="" coords="864,102,1086,149,1085,154,863,107"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1011,226,1065,252"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="1119,181,1067,219,1064,215,1116,177"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1090,226,1178,252"/>
+<area shape="poly" id="edge16_Node000015_Node000017" title=" " alt="" coords="1136,179,1136,211,1131,211,1131,179"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1202,226,1268,252"/>
+<area shape="poly" id="edge17_Node000015_Node000018" title=" " alt="" coords="1153,177,1207,215,1204,219,1149,181"/>
 </map>

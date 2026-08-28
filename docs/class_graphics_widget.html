@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -180,8 +180,6 @@ Public Slots</h2></td></tr>
 <tr class="memdesc:a037d8074b2918603cf02e34de9105bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the node with the given number to the new coordinates.  <br /></td></tr>
 <tr class="memitem:a8b265585906d5f233eaf9215be646d78" id="r_a8b265585906d5f233eaf9215be646d78"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8b265585906d5f233eaf9215be646d78">setNodeSize</a> (const int &amp;nodeNumber, const int &amp;size=0)</td></tr>
 <tr class="memdesc:a8b265585906d5f233eaf9215be646d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the size of a node.  <br /></td></tr>
-<tr class="memitem:a053359e5a8aa7bde0f47a6a9fa24d826" id="r_a053359e5a8aa7bde0f47a6a9fa24d826"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a053359e5a8aa7bde0f47a6a9fa24d826">setNodeSizeAll</a> (const int &amp;size=0)</td></tr>
-<tr class="memdesc:a053359e5a8aa7bde0f47a6a9fa24d826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the size of all nodes.  <br /></td></tr>
 <tr class="memitem:a5f24b6630e777e051768e30e8ef4e1a6" id="r_a5f24b6630e777e051768e30e8ef4e1a6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5f24b6630e777e051768e30e8ef4e1a6">setNodeShape</a> (const int &amp;nodeNum, const QString &amp;shape, const QString &amp;iconPath=QString())</td></tr>
 <tr class="memdesc:a5f24b6630e777e051768e30e8ef4e1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shape of an node.  <br /></td></tr>
 <tr class="memitem:afad4ea25f93cca2858aad83364b8712a" id="r_afad4ea25f93cca2858aad83364b8712a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afad4ea25f93cca2858aad83364b8712a">setNodeColor</a> (const int &amp;nodeNum, const QString &amp;color)</td></tr>
@@ -210,6 +208,8 @@ Public Slots</h2></td></tr>
 <tr class="memdesc:a99b3dee093c8dcee3cc9b7b9999f99f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the edge from node sourceNum to node targetNum from the scene.  <br /></td></tr>
 <tr class="memitem:ab9391b721e7478d48196ea417012bbdd" id="r_ab9391b721e7478d48196ea417012bbdd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab9391b721e7478d48196ea417012bbdd">setEdgeVisibility</a> (const int &amp;relation, const int &amp;sourceNum, const int &amp;targetNum, const bool &amp;visible, const bool &amp;preserveReverseEdge=false, const int &amp;edgeWeight=1, const int &amp;reverseEdgeWeight=1)</td></tr>
 <tr class="memdesc:ab9391b721e7478d48196ea417012bbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the visibility of the given edge.  <br /></td></tr>
+<tr class="memitem:ad91d547121092705dde56761585187f4" id="r_ad91d547121092705dde56761585187f4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad91d547121092705dde56761585187f4">setEdgesVisibilityBatch</a> (const QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt; &amp;changes)</td></tr>
+<tr class="memdesc:ad91d547121092705dde56761585187f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a batch of edge visibility changes in one call (WS3 M2).  <br /></td></tr>
 <tr class="memitem:a14c7b3cfe956b6b37b41bdf941182455" id="r_a14c7b3cfe956b6b37b41bdf941182455"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a14c7b3cfe956b6b37b41bdf941182455">setEdgeDirectionType</a> (const int &amp;source, const int &amp;target, const int &amp;dirType=false)</td></tr>
 <tr class="memdesc:a14c7b3cfe956b6b37b41bdf941182455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the direction type of an existing edge.  <br /></td></tr>
 <tr class="memitem:a31516c1495b27deaa71786167639cf17" id="r_a31516c1495b27deaa71786167639cf17"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a31516c1495b27deaa71786167639cf17">setEdgeWeight</a> (const int &amp;, const int &amp;, const qreal &amp;)</td></tr>
@@ -231,11 +231,15 @@ Public Slots</h2></td></tr>
 <tr class="memitem:ac254fb1334c403bae1a8bf9d5048ef50" id="r_ac254fb1334c403bae1a8bf9d5048ef50"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac254fb1334c403bae1a8bf9d5048ef50">setEdgeLabelsVisibility</a> (const bool &amp;toggle)</td></tr>
 <tr class="memdesc:ac254fb1334c403bae1a8bf9d5048ef50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles all edge labels visibility.  <br /></td></tr>
 <tr class="memitem:a8e0a32468217009c02024d5b63305d64" id="r_a8e0a32468217009c02024d5b63305d64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e0a32468217009c02024d5b63305d64">setEdgesBezier</a> (const bool &amp;toggle)</td></tr>
+<tr class="memdesc:a8e0a32468217009c02024d5b63305d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles bezier-curve rendering for all edges currently in the scene.  <br /></td></tr>
 <tr class="memitem:af9a6a736b1448dc6d19cfba28f4045bd" id="r_af9a6a736b1448dc6d19cfba28f4045bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9a6a736b1448dc6d19cfba28f4045bd">setEdgeHighlighting</a> (const bool &amp;toggle)</td></tr>
 <tr class="memdesc:af9a6a736b1448dc6d19cfba28f4045bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables edge highlighting.  <br /></td></tr>
+<tr class="memitem:a4b807ffdcf87ba313e048a6303f78605" id="r_a4b807ffdcf87ba313e048a6303f78605"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4b807ffdcf87ba313e048a6303f78605">selectPath</a> (const QList&lt; int &gt; &amp;path)</td></tr>
+<tr class="memdesc:a4b807ffdcf87ba313e048a6303f78605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the edges that form a shortest path, exactly as if the user had Shift-clicked each edge in turn.  <br /></td></tr>
 <tr class="memitem:ae45b0837c77db97b27117d87fb2ce7bc" id="r_ae45b0837c77db97b27117d87fb2ce7bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae45b0837c77db97b27117d87fb2ce7bc">handleDoubleClickOnNode</a> (<a class="el" href="class_graphics_node.html">GraphicsNode</a> *node)</td></tr>
 <tr class="memdesc:ae45b0837c77db97b27117d87fb2ce7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles double-clicks (or middle-clicks) on the given node, creating a new edge if needed.  <br /></td></tr>
 <tr class="memitem:a87150f887da940b8ec376c7666266dae" id="r_a87150f887da940b8ec376c7666266dae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a87150f887da940b8ec376c7666266dae">clearGuides</a> ()</td></tr>
+<tr class="memdesc:a87150f887da940b8ec376c7666266dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and deletes all guide items previously added via <a class="el" href="#a727fdb3c0f674035448cdd3884f30d31" title="Adds a circular guideline.">addGuideCircle()</a>/addGuideHLine(), without scanning the scene.  <br /></td></tr>
 <tr class="memitem:a727fdb3c0f674035448cdd3884f30d31" id="r_a727fdb3c0f674035448cdd3884f30d31"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a727fdb3c0f674035448cdd3884f30d31">addGuideCircle</a> (const double &amp;x0, const double &amp;y0, const double &amp;radius)</td></tr>
 <tr class="memdesc:a727fdb3c0f674035448cdd3884f30d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a circular guideline.  <br /></td></tr>
 <tr class="memitem:ab20b245987d567b672146e782cd7497e" id="r_ab20b245987d567b672146e782cd7497e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab20b245987d567b672146e782cd7497e">addGuideHLine</a> (const double &amp;y0)</td></tr>
@@ -244,6 +248,8 @@ Public Slots</h2></td></tr>
 <tr class="memdesc:a54f30538dd7c6664e70f88cce9361c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the numerical zoom index of the scene by the given step.  <br /></td></tr>
 <tr class="memitem:a7a86cc7add58817ab93f376eb8abcfc4" id="r_a7a86cc7add58817ab93f376eb8abcfc4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7a86cc7add58817ab93f376eb8abcfc4">zoomOut</a> (const int step=1)</td></tr>
 <tr class="memdesc:a7a86cc7add58817ab93f376eb8abcfc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases the numerical zoom index of the scene by the given step.  <br /></td></tr>
+<tr class="memitem:a2f6f0020c4f32251a5219dae692d0599" id="r_a2f6f0020c4f32251a5219dae692d0599"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2f6f0020c4f32251a5219dae692d0599">zoomToFit</a> ()</td></tr>
+<tr class="memdesc:a2f6f0020c4f32251a5219dae692d0599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales and centres the view so that the full network is visible.  <br /></td></tr>
 <tr class="memitem:acdda208b09d8ab6198ff5af7758d2498" id="r_acdda208b09d8ab6198ff5af7758d2498"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acdda208b09d8ab6198ff5af7758d2498">rotateLeft</a> ()</td></tr>
 <tr class="memdesc:acdda208b09d8ab6198ff5af7758d2498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases the numerical rotation Rotates the view to the left, by a fixed angle.  <br /></td></tr>
 <tr class="memitem:a965961de2cea560a6617665cf32f9fca" id="r_a965961de2cea560a6617665cf32f9fca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a965961de2cea560a6617665cf32f9fca">rotateRight</a> ()</td></tr>
@@ -264,18 +270,31 @@ Public Slots</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a15597dbf9a3fab50a0c3cdb58b081639" id="r_a15597dbf9a3fab50a0c3cdb58b081639"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a15597dbf9a3fab50a0c3cdb58b081639">userDoubleClickNewNode</a> (const QPointF &amp;)</td></tr>
+<tr class="memdesc:a15597dbf9a3fab50a0c3cdb58b081639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Double-click on empty canvas space; MW creates a new node at this scene position.  <br /></td></tr>
 <tr class="memitem:a16f51c2cb52ec56054b1828e52e32e7f" id="r_a16f51c2cb52ec56054b1828e52e32e7f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16f51c2cb52ec56054b1828e52e32e7f">userMiddleClicked</a> (const int &amp;sourceNum, const int &amp;targetNum, const qreal &amp;weight=1)</td></tr>
+<tr class="memdesc:a16f51c2cb52ec56054b1828e52e32e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two consecutive middle-clicks (or double-clicks) on two different nodes; MW/Graph creates a new edge from the first node to the second.  <br /></td></tr>
 <tr class="memitem:a426c99b6de44a4242b9e04f3c286994f" id="r_a426c99b6de44a4242b9e04f3c286994f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a426c99b6de44a4242b9e04f3c286994f">userClickOnEmptySpace</a> (const QPointF &amp;p)</td></tr>
+<tr class="memdesc:a426c99b6de44a4242b9e04f3c286994f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left-click on empty canvas space, at scene position p.  <br /></td></tr>
 <tr class="memitem:acf0903ced0a15709097b86370261b5de" id="r_acf0903ced0a15709097b86370261b5de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acf0903ced0a15709097b86370261b5de">openNodeMenu</a> ()</td></tr>
+<tr class="memdesc:acf0903ced0a15709097b86370261b5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right-click on a node; MW opens the node context menu for the currently clicked node.  <br /></td></tr>
 <tr class="memitem:aaf827222814d0ccef6ec0cb239f178ae" id="r_aaf827222814d0ccef6ec0cb239f178ae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf827222814d0ccef6ec0cb239f178ae">openContextMenu</a> (const QPointF p)</td></tr>
+<tr class="memdesc:aaf827222814d0ccef6ec0cb239f178ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right-click on empty canvas space, at scene position p; MW opens the general context menu.  <br /></td></tr>
 <tr class="memitem:a18055bac210ce6c7008200af4b5039d3" id="r_a18055bac210ce6c7008200af4b5039d3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a18055bac210ce6c7008200af4b5039d3">userNodeMoved</a> (const int &amp;, const int &amp;, const int &amp;)</td></tr>
+<tr class="memdesc:a18055bac210ce6c7008200af4b5039d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">One node from the current selection finished being dragged to a new position (nodeNumber, x, y); emitted once per selected node on mouse release.  <br /></td></tr>
 <tr class="memitem:a69ab4dc67a6069ab1e798a205808c436" id="r_a69ab4dc67a6069ab1e798a205808c436"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a69ab4dc67a6069ab1e798a205808c436">userSelectedItems</a> (const QList&lt; int &gt; <a class="el" href="#a7b5eb8d3ef2d225677aae459f260b707">selectedNodes</a>, const QList&lt; <a class="el" href="global_8h.html#a8b13926d7ec34c00f1539a41c0749201">SelectedEdge</a> &gt; <a class="el" href="#a4a583a0f9f812f014c9b82a671dca723">selectedEdges</a>)</td></tr>
+<tr class="memdesc:a69ab4dc67a6069ab1e798a205808c436"><td class="mdescLeft">&#160;</td><td class="mdescRight">The full current node/edge selection, emitted whenever it changes (single emission per change, not per item).  <br /></td></tr>
 <tr class="memitem:a3d0493e6f7bf0e1f7850eb6bcd019f29" id="r_a3d0493e6f7bf0e1f7850eb6bcd019f29"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3d0493e6f7bf0e1f7850eb6bcd019f29">userClickedNode</a> (const int &amp;nodeNumber, const QPointF &amp;p)</td></tr>
+<tr class="memdesc:a3d0493e6f7bf0e1f7850eb6bcd019f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">A node was clicked (nodeNumber, scene position); also used with nodeNumber=0 as a generic "selection changed" notification from <a class="el" href="#a40227782cb7ff7a72919efbb72bbc7a4" title="Forces the scene to select all items. Also signals that no node is clicked.">selectAll()</a>/selectNone().  <br /></td></tr>
 <tr class="memitem:a2794f217392d370e6b08e5f373c621bb" id="r_a2794f217392d370e6b08e5f373c621bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2794f217392d370e6b08e5f373c621bb">userClickedEdge</a> (const int &amp;source, const int &amp;target, const bool &amp;openMenu=false)</td></tr>
+<tr class="memdesc:a2794f217392d370e6b08e5f373c621bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">An edge was clicked (source, target); openMenu requests MW open its context menu.  <br /></td></tr>
 <tr class="memitem:a9ebea995da131e5871dfb587b14c4179" id="r_a9ebea995da131e5871dfb587b14c4179"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9ebea995da131e5871dfb587b14c4179">zoomChanged</a> (const int)</td></tr>
+<tr class="memdesc:a9ebea995da131e5871dfb587b14c4179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current zoom index changed; keeps the MW zoom slider in sync.  <br /></td></tr>
 <tr class="memitem:ad35cd65dc87bd1d13fdb9fa4c8d1130a" id="r_ad35cd65dc87bd1d13fdb9fa4c8d1130a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad35cd65dc87bd1d13fdb9fa4c8d1130a">rotationChanged</a> (const int)</td></tr>
+<tr class="memdesc:ad35cd65dc87bd1d13fdb9fa4c8d1130a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current rotation angle changed; keeps the MW rotation slider in sync.  <br /></td></tr>
 <tr class="memitem:a26573e7b0c37c36563900536fe4094bc" id="r_a26573e7b0c37c36563900536fe4094bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26573e7b0c37c36563900536fe4094bc">resized</a> (const int, const int)</td></tr>
+<tr class="memdesc:a26573e7b0c37c36563900536fe4094bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canvas viewport was resized (debounced to fire once, 150ms after the last resize event).  <br /></td></tr>
 <tr class="memitem:ac1bb1527189848cd99660c4c68f2c78c" id="r_ac1bb1527189848cd99660c4c68f2c78c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac1bb1527189848cd99660c4c68f2c78c">setCursor</a> (Qt::CursorShape)</td></tr>
+<tr class="memdesc:ac1bb1527189848cd99660c4c68f2c78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests MW change the application cursor shape (e.g. while creating an edge).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -285,18 +304,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1ab088c9377f8e5a17e20153d2eaf366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Calls the method to clear the data.  <br /></td></tr>
 <tr class="memitem:aa42332273a5bc8b45b97466b3d623590" id="r_aa42332273a5bc8b45b97466b3d623590"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa42332273a5bc8b45b97466b3d623590">clear</a> ()</td></tr>
 <tr class="memdesc:aa42332273a5bc8b45b97466b3d623590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the scene and all hashes, lists, var etc.  <br /></td></tr>
-<tr class="memitem:aa0474bd6a505b7a8fd4b695f7f7a8762" id="r_aa0474bd6a505b7a8fd4b695f7f7a8762"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#aa0474bd6a505b7a8fd4b695f7f7a8762">createEdgeName</a> (const int &amp;v1, const int &amp;v2, const int &amp;relation=-1)</td></tr>
-<tr class="memdesc:aa0474bd6a505b7a8fd4b695f7f7a8762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a QString with the edge name.  <br /></td></tr>
+<tr class="memitem:a70589fe8d1cb47b60891c15a8b35167a" id="r_a70589fe8d1cb47b60891c15a8b35167a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a70589fe8d1cb47b60891c15a8b35167a">isClearing</a> () const</td></tr>
+<tr class="memdesc:a70589fe8d1cb47b60891c15a8b35167a"><td class="mdescLeft">&#160;</td><td class="mdescRight">True while a bulk <a class="el" href="#aa42332273a5bc8b45b97466b3d623590" title="Clears the scene and all hashes, lists, var etc.">clear()</a> is in progress; false otherwise.  <br /></td></tr>
+<tr class="memitem:a55d58b1acbaf7d540104a86344b1ead3" id="r_a55d58b1acbaf7d540104a86344b1ead3"><td class="memItemLeft">quint64&#160;</td><td class="memItemRight"><a class="el" href="#a55d58b1acbaf7d540104a86344b1ead3">edgeKey</a> (const int &amp;v1, const int &amp;v2, const int &amp;relation=-1)</td></tr>
+<tr class="memdesc:a55d58b1acbaf7d540104a86344b1ead3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Packs (relation, v1, v2) into a single quint64 key for edgesHash.  <br /></td></tr>
 <tr class="memitem:a063bdc157537443ab90f78c98e44bce3" id="r_a063bdc157537443ab90f78c98e44bce3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a063bdc157537443ab90f78c98e44bce3">setInitNodeSize</a> (int)</td></tr>
 <tr class="memdesc:a063bdc157537443ab90f78c98e44bce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets initial node size from MW.  <br /></td></tr>
 <tr class="memitem:af2c893b8888c1baa0f776b0d9d84e1ff" id="r_af2c893b8888c1baa0f776b0d9d84e1ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2c893b8888c1baa0f776b0d9d84e1ff">setInitZoomIndex</a> (const int &amp;)</td></tr>
 <tr class="memdesc:af2c893b8888c1baa0f776b0d9d84e1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the initial zoom setting. Use <a class="el" href="#a5ccbbd43597bd8e742f7cb2bb2655c2d" title="Sets the max zoom allowed (and the initial zoom as half of it). Called from MW on startup.">setMaxZoomIndex()</a> instead.  <br /></td></tr>
 <tr class="memitem:a5ccbbd43597bd8e742f7cb2bb2655c2d" id="r_a5ccbbd43597bd8e742f7cb2bb2655c2d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ccbbd43597bd8e742f7cb2bb2655c2d">setMaxZoomIndex</a> (const int &amp;)</td></tr>
 <tr class="memdesc:a5ccbbd43597bd8e742f7cb2bb2655c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the max zoom allowed (and the initial zoom as half of it). Called from MW on startup.  <br /></td></tr>
-<tr class="memitem:afb9411d1b9b29abfcc4843785e60cb82" id="r_afb9411d1b9b29abfcc4843785e60cb82"><td class="memItemLeft"><a class="el" href="class_graphics_node.html">GraphicsNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afb9411d1b9b29abfcc4843785e60cb82">hasNode</a> (QString text)</td></tr>
-<tr class="memdesc:afb9411d1b9b29abfcc4843785e60cb82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a node with label or nodeNum 'text' exists and returns it.  <br /></td></tr>
-<tr class="memitem:a8d4e0d898464f6f05fc33631e75c60aa" id="r_a8d4e0d898464f6f05fc33631e75c60aa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d4e0d898464f6f05fc33631e75c60aa">setSelectedNodes</a> (QList&lt; int &gt; list)</td></tr>
-<tr class="memdesc:a8d4e0d898464f6f05fc33631e75c60aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects all nodes in the given list.  <br /></td></tr>
+<tr class="memitem:aabeecab598cd3bdee676c9b5a5c4a62b" id="r_aabeecab598cd3bdee676c9b5a5c4a62b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aabeecab598cd3bdee676c9b5a5c4a62b">setSelectedNodes</a> (const QList&lt; int &gt; &amp;list)</td></tr>
+<tr class="memdesc:aabeecab598cd3bdee676c9b5a5c4a62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects all nodes in the given list.  <br /></td></tr>
 <tr class="memitem:a13517190d57ac853d773893e9b8f3bfd" id="r_a13517190d57ac853d773893e9b8f3bfd"><td class="memItemLeft">QList&lt; QGraphicsItem * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a13517190d57ac853d773893e9b8f3bfd">selectedItems</a> ()</td></tr>
 <tr class="memdesc:a13517190d57ac853d773893e9b8f3bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all selected QGraphicsItem(s).  <br /></td></tr>
 <tr class="memitem:a7b5eb8d3ef2d225677aae459f260b707" id="r_a7b5eb8d3ef2d225677aae459f260b707"><td class="memItemLeft">QList&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7b5eb8d3ef2d225677aae459f260b707">selectedNodes</a> ()</td></tr>
@@ -323,8 +342,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4d5f79d89dc8f440a1396ce005333ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles displaying node numbers in or out of nodes.  <br /></td></tr>
 <tr class="memitem:a86f15d94fb856a6c0ff94794b16620ce" id="r_a86f15d94fb856a6c0ff94794b16620ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86f15d94fb856a6c0ff94794b16620ce">setAllItemsVisibility</a> (int, bool)</td></tr>
 <tr class="memdesc:a86f15d94fb856a6c0ff94794b16620ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the visibility of all items of the given type.  <br /></td></tr>
-<tr class="memitem:af45bed31c2e5503476246f8739ce3616" id="r_af45bed31c2e5503476246f8739ce3616"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af45bed31c2e5503476246f8739ce3616">removeAllItems</a> (int)</td></tr>
-<tr class="memdesc:af45bed31c2e5503476246f8739ce3616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all items of the given type.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -338,11 +355,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:aaae97f631d9efd5e921374ec56538a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the mouse release events.  <br /></td></tr>
 <tr class="memitem:a80ac825cb57cb2d1b2b74e3dfac29d3c" id="r_a80ac825cb57cb2d1b2b74e3dfac29d3c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a80ac825cb57cb2d1b2b74e3dfac29d3c">resizeEvent</a> (QResizeEvent *e)</td></tr>
 <tr class="memdesc:a80ac825cb57cb2d1b2b74e3dfac29d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the canvas resize event.  <br /></td></tr>
+<tr class="memitem:a85ebcdea4a60e4305d79bdadedc13dc9" id="r_a85ebcdea4a60e4305d79bdadedc13dc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a85ebcdea4a60e4305d79bdadedc13dc9">scrollContentsBy</a> (int dx, int dy) override</td></tr>
+<tr class="memdesc:a85ebcdea4a60e4305d79bdadedc13dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the user's pan position so zoom can anchor to it.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a444f6272bd89933742f25566d465e65f" id="r_a444f6272bd89933742f25566d465e65f"><td class="memItemLeft"><a class="el" href="graphicswidget_8h.html#a51bdeb6bac77a20bdb913a8b0ea4f739">H_NumToNode</a>&#160;</td><td class="memItemRight"><a class="el" href="#a444f6272bd89933742f25566d465e65f">nodeHash</a></td></tr>
-<tr class="memitem:aff02a404d4b2e5340da573c7a47140d9" id="r_aff02a404d4b2e5340da573c7a47140d9"><td class="memItemLeft"><a class="el" href="graphicswidget_8h.html#ad3beb5cfe9d91a6d8f7eb4d978a6e83d">H_StrToEdge</a>&#160;</td><td class="memItemRight"><a class="el" href="#aff02a404d4b2e5340da573c7a47140d9">edgesHash</a></td></tr>
+<tr class="memitem:a04093297d5289622b2a521f799b91054" id="r_a04093297d5289622b2a521f799b91054"><td class="memItemLeft"><a class="el" href="graphicswidget_8h.html#aa64a98e9bb9dd25dab0bd25b5dda10de">H_KeyToEdge</a>&#160;</td><td class="memItemRight"><a class="el" href="#a04093297d5289622b2a521f799b91054">edgesHash</a></td></tr>
 <tr class="memitem:a6eeb6add0164a7232271c7c840c383a9" id="r_a6eeb6add0164a7232271c7c840c383a9"><td class="memItemLeft">QList&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6eeb6add0164a7232271c7c840c383a9">m_selectedNodes</a></td></tr>
 <tr class="memitem:a17a97dfb4966483c196f550551d7516b" id="r_a17a97dfb4966483c196f550551d7516b"><td class="memItemLeft">QList&lt; <a class="el" href="global_8h.html#a8b13926d7ec34c00f1539a41c0749201">SelectedEdge</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a17a97dfb4966483c196f550551d7516b">m_selectedEdges</a></td></tr>
 <tr class="memitem:ac76b05e14b047744ada034001d575394" id="r_ac76b05e14b047744ada034001d575394"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac76b05e14b047744ada034001d575394">m_curRelation</a></td></tr>
@@ -362,8 +381,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad25cdc53246d7d5fbd6e546983c82835" id="r_ad25cdc53246d7d5fbd6e546983c82835"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ad25cdc53246d7d5fbd6e546983c82835">m_nodeLabel</a></td></tr>
 <tr class="memitem:a1220b04202ce0aae08c8ecb99eafbeab" id="r_a1220b04202ce0aae08c8ecb99eafbeab"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a1220b04202ce0aae08c8ecb99eafbeab">m_numberColor</a></td></tr>
 <tr class="memitem:a051820aec59b99c694289fc5e505089c" id="r_a051820aec59b99c694289fc5e505089c"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#a051820aec59b99c694289fc5e505089c">m_labelColor</a></td></tr>
-<tr class="memitem:ac3577bfe68662aa4df2e5e579a89629f" id="r_ac3577bfe68662aa4df2e5e579a89629f"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="#ac3577bfe68662aa4df2e5e579a89629f">edgeName</a></td></tr>
+<tr class="memitem:aeec6f3d5e4860f12cb02e1a5ee512064" id="r_aeec6f3d5e4860f12cb02e1a5ee512064"><td class="memItemLeft">quint64&#160;</td><td class="memItemRight"><a class="el" href="#aeec6f3d5e4860f12cb02e1a5ee512064">m_edgeKey</a></td></tr>
+<tr class="memitem:a4f433816f63e04b70a71baf2f2bf55e9" id="r_a4f433816f63e04b70a71baf2f2bf55e9"><td class="memItemLeft">QPointF&#160;</td><td class="memItemRight"><a class="el" href="#a4f433816f63e04b70a71baf2f2bf55e9">m_viewCenter</a></td></tr>
+<tr class="memitem:ae22219e61b8cbc48397d9c002e3248ee" id="r_ae22219e61b8cbc48397d9c002e3248ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae22219e61b8cbc48397d9c002e3248ee">m_viewCenterValid</a></td></tr>
+<tr class="memitem:a90505eb997fa0aec4ab1c2012a770822" id="r_a90505eb997fa0aec4ab1c2012a770822"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a90505eb997fa0aec4ab1c2012a770822">m_isZooming</a></td></tr>
 <tr class="memitem:a464ae91ab0fba70d3446a4ff7eaf6080" id="r_a464ae91ab0fba70d3446a4ff7eaf6080"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a464ae91ab0fba70d3446a4ff7eaf6080">m_isTransformationActive</a></td></tr>
+<tr class="memitem:a9bafd4aa6c5285d57a32b62a386d0eed" id="r_a9bafd4aa6c5285d57a32b62a386d0eed"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9bafd4aa6c5285d57a32b62a386d0eed">m_isClearing</a></td></tr>
 <tr class="memitem:a29639f216db15de7e0134b179844efe7" id="r_a29639f216db15de7e0134b179844efe7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a29639f216db15de7e0134b179844efe7">hasDoubleClickedNode</a></td></tr>
 <tr class="memitem:a734c5120c025e41e06ae1165604dd110" id="r_a734c5120c025e41e06ae1165604dd110"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a734c5120c025e41e06ae1165604dd110">clickedEdgeExists</a></td></tr>
 <tr class="memitem:aeeba9e4c1a66c32a77ae15077e71d7e3" id="r_aeeba9e4c1a66c32a77ae15077e71d7e3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aeeba9e4c1a66c32a77ae15077e71d7e3">m_nodeNumbersInside</a></td></tr>
@@ -371,6 +394,8 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:abec53b449371469a52c5ff7d56d81dae" id="r_abec53b449371469a52c5ff7d56d81dae"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abec53b449371469a52c5ff7d56d81dae">m_nodeLabelVisibility</a></td></tr>
 <tr class="memitem:ae1be428c52594c5980d33822c2948a2d" id="r_ae1be428c52594c5980d33822c2948a2d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae1be428c52594c5980d33822c2948a2d">m_edgeHighlighting</a></td></tr>
 <tr class="memitem:a771a09e91241cd4f98ac9718c4d66bc6" id="r_a771a09e91241cd4f98ac9718c4d66bc6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a771a09e91241cd4f98ac9718c4d66bc6">m_edgesBezier</a></td></tr>
+<tr class="memitem:a4a5d0e50b4ed6dc4dff45b45ae5e9b62" id="r_a4a5d0e50b4ed6dc4dff45b45ae5e9b62"><td class="memItemLeft">QTimer&#160;</td><td class="memItemRight"><a class="el" href="#a4a5d0e50b4ed6dc4dff45b45ae5e9b62">m_resizeTimer</a></td></tr>
+<tr class="memitem:a7e1d973a4302af7935e6ae6db4cde06a" id="r_a7e1d973a4302af7935e6ae6db4cde06a"><td class="memItemLeft">QList&lt; <a class="el" href="class_graphics_guide.html">GraphicsGuide</a> * &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7e1d973a4302af7935e6ae6db4cde06a">m_guides</a></td></tr>
 <tr class="memitem:ae0529c0eee81acdfc30c6edb03ea5a0c" id="r_ae0529c0eee81acdfc30c6edb03ea5a0c"><td class="memItemLeft"><a class="el" href="class_graphics_node.html">GraphicsNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae0529c0eee81acdfc30c6edb03ea5a0c">firstDoubleClickedNode</a></td></tr>
 <tr class="memitem:a246967f46d67cb3cdfb0702d349cb928" id="r_a246967f46d67cb3cdfb0702d349cb928"><td class="memItemLeft"><a class="el" href="class_graphics_node.html">GraphicsNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a246967f46d67cb3cdfb0702d349cb928">secondDoubleClickedNode</a></td></tr>
 <tr class="memitem:a94eadf97e1688762ffb60c39602880df" id="r_a94eadf97e1688762ffb60c39602880df"><td class="memItemLeft"><a class="el" href="class_graphics_node.html">GraphicsNode</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a94eadf97e1688762ffb60c39602880df">markedEdgeSource</a></td></tr>
@@ -614,43 +639,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="aa0474bd6a505b7a8fd4b695f7f7a8762" name="aa0474bd6a505b7a8fd4b695f7f7a8762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0474bd6a505b7a8fd4b695f7f7a8762">&#9670;&#160;</a></span>createEdgeName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QString GraphicsWidget::createEdgeName </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v2</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>relation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a QString with the edge name. </p>
-<p>Edge names are used in edgesHash</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v1</td><td></td></tr>
-    <tr><td class="paramname">v2</td><td></td></tr>
-    <tr><td class="paramname">relation</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Removes and deletes all guide items previously added via <a class="el" href="#a727fdb3c0f674035448cdd3884f30d31" title="Adds a circular guideline.">addGuideCircle()</a>/addGuideHLine(), without scanning the scene. </p>
+<p><a class="el" href="class_graphics_guide.html#a0455cbfed3b90bdbaee7806e96162a31">GraphicsGuide::die()</a> only clears geometry/visibility bookkeeping — it does not delete or schedule deletion — so a direct synchronous delete is safe. </p>
 
 </div>
 </div>
@@ -840,6 +830,46 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a55d58b1acbaf7d540104a86344b1ead3" name="a55d58b1acbaf7d540104a86344b1ead3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d58b1acbaf7d540104a86344b1ead3">&#9670;&#160;</a></span>edgeKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">quint64 GraphicsWidget::edgeKey </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>v2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>relation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Packs (relation, v1, v2) into a single quint64 key for edgesHash. </p>
+<p>Used to be a QString built as "relation:v1&gt;v2" (e.g. "0:3&gt;7"), which cost several heap allocations per call (QString::number() x3 plus concatenation) and character-wise hashing on every lookup. This is purely a UI-layer lookup key for <a class="el" href="class_graphics_widget.html">GraphicsWidget</a>'s own edgesHash (mapping a graph edge to its <a class="el" href="class_graphics_edge.html">GraphicsEdge</a> item) — it has nothing to do with <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a>'s own data model or any algorithm kernel.</p>
+<p>The key is decimal-digit-packed, not bit-packed, so it stays readable in a debugger the same way the old string was: reading left to right you get relation, then v1, then v2 - e.g. relation=0, v1=3, v2=7 packs to 300000007. (Leading zeros aren't preserved by a plain integer print, so a value like relation=0 won't visually show its 3-digit field width unless printed zero-padded to 19 digits — this key is only ever used as an opaque hash bucket key, never parsed back into fields, so that's not a correctness concern.)</p>
+<p>This is a positional encoding, not a mixing hash: as long as every field's value stays within its allocated width (relation &lt; 1000, v1 &lt; 100'000'000, v2 &lt; 100'000'000), the mapping from (relation, v1, v2) to key is a true bijection - collisions between distinct triples are structurally impossible, not just statistically unlikely. The three asserts below exist because that guarantee only holds while every field stays under its digit budget; an overflow would silently bleed into the next field and could produce a genuine collision with a different triple.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>Source node number (must be &lt; 100,000,000) </td></tr>
+    <tr><td class="paramname">v2</td><td>Target node number (must be &lt; 100,000,000) </td></tr>
+    <tr><td class="paramname">relation</td><td>Relation index, or -1 to use the current relation (must be &lt; 1000) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Packed key, unique per (relation, v1, v2) triple within the bounds above </dd></dl>
+
+</div>
+</div>
 <a id="ae45b0837c77db97b27117d87fb2ce7bc" name="ae45b0837c77db97b27117d87fb2ce7bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae45b0837c77db97b27117d87fb2ce7bc">&#9670;&#160;</a></span>handleDoubleClickOnNode</h2>
 
@@ -898,33 +928,35 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Handles the event of selection change in the scene. </p>
-<p>Emits selected nodes and edges to <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> </p>
+<p>Queries scene()-&gt;<a class="el" href="#a13517190d57ac853d773893e9b8f3bfd" title="Returns a list of all selected QGraphicsItem(s).">selectedItems()</a> once, populates m_selectedNodes and m_selectedEdges from a single pass, then emits both lists to <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a>. </p>
 
 </div>
 </div>
-<a id="afb9411d1b9b29abfcc4843785e60cb82" name="afb9411d1b9b29abfcc4843785e60cb82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb9411d1b9b29abfcc4843785e60cb82">&#9670;&#160;</a></span>hasNode()</h2>
+<a id="a70589fe8d1cb47b60891c15a8b35167a" name="a70589fe8d1cb47b60891c15a8b35167a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70589fe8d1cb47b60891c15a8b35167a">&#9670;&#160;</a></span>isClearing()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_graphics_node.html">GraphicsNode</a> * GraphicsWidget::hasNode </td>
+          <td class="memname">bool GraphicsWidget::isClearing </td>
           <td>(</td>
-          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
-          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Checks if a node with label or nodeNum 'text' exists and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">text</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>True while a bulk <a class="el" href="#aa42332273a5bc8b45b97466b3d623590" title="Clears the scene and all hashes, lists, var etc.">clear()</a> is in progress; false otherwise. </p>
+<p>GraphicsNode/GraphicsEdge destructors check this to skip per-item unlinking work (edge-list removal from neighbours, individual scene/hash removal) that's pointless during a bulk teardown - scene()-&gt;<a class="el" href="#aa42332273a5bc8b45b97466b3d623590" title="Clears the scene and all hashes, lists, var etc.">clear()</a> destroys every item anyway, so proactively unlinking each one from its neighbours' edge lists is pure wasted O(degree) work per edge, repeated across the whole network. See #260. </p>
 
 </div>
 </div>
@@ -1097,6 +1129,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Right-click on empty canvas space, at scene position p; MW opens the general context menu. </p>
+
 </div>
 </div>
 <a id="acf0903ced0a15709097b86370261b5de" name="acf0903ced0a15709097b86370261b5de"></a>
@@ -1121,6 +1155,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Right-click on a node; MW opens the node context menu for the currently clicked node. </p>
 
 </div>
 </div>
@@ -1151,31 +1187,6 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">relation</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af45bed31c2e5503476246f8739ce3616" name="af45bed31c2e5503476246f8739ce3616"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af45bed31c2e5503476246f8739ce3616">&#9670;&#160;</a></span>removeAllItems()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphicsWidget::removeAllItems </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes all items of the given type. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -1467,6 +1478,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Canvas viewport was resized (debounced to fire once, 150ms after the last resize event). </p>
+
 </div>
 </div>
 <a id="a80ac825cb57cb2d1b2b74e3dfac29d3c" name="a80ac825cb57cb2d1b2b74e3dfac29d3c"></a>
@@ -1493,7 +1506,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Handles the canvas resize event. </p>
-<p>Repositions guides then emits <a class="el" href="#a26573e7b0c37c36563900536fe4094bc">resized()</a> signal to MW and eventually <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> which does the node repositioning maintaining proportions</p>
+<p>Repositions guides then emits <a class="el" href="#a26573e7b0c37c36563900536fe4094bc" title="Canvas viewport was resized (debounced to fire once, 150ms after the last resize event).">resized()</a> signal to MW and eventually <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> which does the node repositioning maintaining proportions</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td></td></tr>
@@ -1579,6 +1592,40 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Current rotation angle changed; keeps the MW rotation slider in sync. </p>
+
+</div>
+</div>
+<a id="a85ebcdea4a60e4305d79bdadedc13dc9" name="a85ebcdea4a60e4305d79bdadedc13dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85ebcdea4a60e4305d79bdadedc13dc9">&#9670;&#160;</a></span>scrollContentsBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphicsWidget::scrollContentsBy </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dy</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tracks the user's pan position so zoom can anchor to it. </p>
+<p>Called by Qt whenever the scroll position changes — user scroll bars, mouse wheel scroll, or programmatic centerOn(). The m_isZooming flag blocks updates during our own centerOn() call in <a class="el" href="#ad582b14fe5776108360d1518a2fc0e51" title="Does the actual zoom in or out while preserving current rotation.">changeMatrixScale()</a>, so only genuine user pans update m_viewCenter. </p>
 
 </div>
 </div>
@@ -1680,6 +1727,41 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4b807ffdcf87ba313e048a6303f78605" name="a4b807ffdcf87ba313e048a6303f78605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b807ffdcf87ba313e048a6303f78605">&#9670;&#160;</a></span>selectPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphicsWidget::selectPath </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selects the edges that form a shortest path, exactly as if the user had Shift-clicked each edge in turn. </p>
+<p>Uses QSignalBlocker so that scene()-&gt;selectionChanged fires only once (via the explicit <a class="el" href="#a7bbfa74c4179ed9095a995b4d7aec1b8" title="Handles the event of selection change in the scene.">handleSelectionChanged()</a> call at the end), not once per edge. <a class="el" href="class_main_window.html" title="The base window of SocNetV contains all widgets and functionality.">MainWindow</a> then receives a single <a class="el" href="#a69ab4dc67a6069ab1e798a205808c436" title="The full current node/edge selection, emitted whenever it changes (single emission per change,...">userSelectedItems()</a> emission with the complete path edge set — same as any other multi-selection.</p>
+<p>For each hop (path[i] → path[i+1]) the forward key is tried first; if the edge is not found (directed graph, path goes the "other way") the reverse key is tried.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Ordered list of vertex numbers returned by <a class="el" href="class_graph.html#a7702ad8e00f049470f2c23ddb907b3f5" title="Reconstructs one shortest path from vertex v1 to vertex v2.">Graph::graphGeodesicShortestPath()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a86f15d94fb856a6c0ff94794b16620ce" name="a86f15d94fb856a6c0ff94794b16620ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86f15d94fb856a6c0ff94794b16620ce">&#9670;&#160;</a></span>setAllItemsVisibility()</h2>
 
@@ -1732,6 +1814,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Requests MW change the application cursor shape (e.g. while creating an edge). </p>
 
 </div>
 </div>
@@ -2112,6 +2196,49 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Toggles bezier-curve rendering for all edges currently in the scene. </p>
+<p>Also stores the toggle in m_edgesBezier so it applies to edges drawn afterwards. Viewport updates are disabled for the duration of the loop to avoid a repaint per edge.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toggle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad91d547121092705dde56761585187f4" name="ad91d547121092705dde56761585187f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91d547121092705dde56761585187f4">&#9670;&#160;</a></span>setEdgesVisibilityBatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphicsWidget::setEdgesVisibilityBatch </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="class_edge_visibility_change.html">EdgeVisibilityChange</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>changes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies a batch of edge visibility changes in one call (WS3 M2). </p>
+<p>Reuses <a class="el" href="#ab9391b721e7478d48196ea417012bbdd" title="Toggles the visibility of the given edge.">setEdgeVisibility()</a> per entry unchanged - the only difference from N separate signal/slot dispatches is that this whole batch crosses from graphThread to the GUI thread as a single queued call, not one per edge. See <a class="el" href="class_graph.html#aa82bd231a77f5c189ab0047c2b62a51d">Graph::signalSetEdgesVisibilityBatch</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">changes</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2831,39 +2958,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a053359e5a8aa7bde0f47a6a9fa24d826" name="a053359e5a8aa7bde0f47a6a9fa24d826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a053359e5a8aa7bde0f47a6a9fa24d826">&#9670;&#160;</a></span>setNodeSizeAll</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphicsWidget::setNodeSizeAll </td>
-          <td>(</td>
-          <td class="paramtype">const int &amp;</td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Changes the size of all nodes. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ac73697d864ac3169ecb9f615e4630a96" name="ac73697d864ac3169ecb9f615e4630a96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac73697d864ac3169ecb9f615e4630a96">&#9670;&#160;</a></span>setNodeVisibility</h2>
 
@@ -3027,8 +3121,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d4e0d898464f6f05fc33631e75c60aa" name="a8d4e0d898464f6f05fc33631e75c60aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d4e0d898464f6f05fc33631e75c60aa">&#9670;&#160;</a></span>setSelectedNodes()</h2>
+<a id="aabeecab598cd3bdee676c9b5a5c4a62b" name="aabeecab598cd3bdee676c9b5a5c4a62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabeecab598cd3bdee676c9b5a5c4a62b">&#9670;&#160;</a></span>setSelectedNodes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3036,7 +3130,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void GraphicsWidget::setSelectedNodes </td>
           <td>(</td>
-          <td class="paramtype">QList&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
+          <td class="paramtype">const QList&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3084,6 +3178,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>An edge was clicked (source, target); openMenu requests MW open its context menu. </p>
+
 </div>
 </div>
 <a id="a3d0493e6f7bf0e1f7850eb6bcd019f29" name="a3d0493e6f7bf0e1f7850eb6bcd019f29"></a>
@@ -3113,6 +3209,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A node was clicked (nodeNumber, scene position); also used with nodeNumber=0 as a generic "selection changed" notification from <a class="el" href="#a40227782cb7ff7a72919efbb72bbc7a4" title="Forces the scene to select all items. Also signals that no node is clicked.">selectAll()</a>/selectNone(). </p>
+
 </div>
 </div>
 <a id="a426c99b6de44a4242b9e04f3c286994f" name="a426c99b6de44a4242b9e04f3c286994f"></a>
@@ -3138,6 +3236,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Left-click on empty canvas space, at scene position p. </p>
+
 </div>
 </div>
 <a id="a15597dbf9a3fab50a0c3cdb58b081639" name="a15597dbf9a3fab50a0c3cdb58b081639"></a>
@@ -3162,6 +3262,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Double-click on empty canvas space; MW creates a new node at this scene position. </p>
 
 </div>
 </div>
@@ -3197,6 +3299,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Two consecutive middle-clicks (or double-clicks) on two different nodes; MW/Graph creates a new edge from the first node to the second. </p>
+
 </div>
 </div>
 <a id="a18055bac210ce6c7008200af4b5039d3" name="a18055bac210ce6c7008200af4b5039d3"></a>
@@ -3231,6 +3335,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>One node from the current selection finished being dragged to a new position (nodeNumber, x, y); emitted once per selected node on mouse release. </p>
+
 </div>
 </div>
 <a id="a69ab4dc67a6069ab1e798a205808c436" name="a69ab4dc67a6069ab1e798a205808c436"></a>
@@ -3259,6 +3365,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The full current node/edge selection, emitted whenever it changes (single emission per change, not per item). </p>
 
 </div>
 </div>
@@ -3317,6 +3425,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Current zoom index changed; keeps the MW zoom slider in sync. </p>
 
 </div>
 </div>
@@ -3388,6 +3498,36 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2f6f0020c4f32251a5219dae692d0599" name="a2f6f0020c4f32251a5219dae692d0599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6f0020c4f32251a5219dae692d0599">&#9670;&#160;</a></span>zoomToFit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GraphicsWidget::zoomToFit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Scales and centres the view so that the full network is visible. </p>
+<p>Computes the scale factor needed to fit the scene's bounding rect inside the viewport (with a 20 px margin on each side), maps it to the nearest discrete zoom index, updates <code>m_viewCenter</code> to the content centre, and applies the transform via <code><a class="el" href="#ad582b14fe5776108360d1518a2fc0e51" title="Does the actual zoom in or out while preserving current rotation.">changeMatrixScale()</a></code>. <code><a class="el" href="#a9ebea995da131e5871dfb587b14c4179" title="Current zoom index changed; keeps the MW zoom slider in sync.">zoomChanged()</a></code> is also emitted to keep the zoom slider in sync, but the transform is applied unconditionally — not via the slider chain — so the view is always re-centred even when the computed zoom index equals the slider's current value.</p>
+<p>Called automatically via a QueuedConnection on <code><a class="el" href="class_graph.html#a90da8ec24e4d1a4e726595af8802401d">Graph::signalLayoutFinished</a></code>, which is emitted after every layout algorithm completes. The queued delivery guarantees that all <code>setNodePos</code> signals (which move scene items to their new positions) have been processed before this slot runs — so <code>itemsBoundingRect()</code> reflects the finished layout.</p>
+<p>After this call, subsequent zoom or pan operations anchor normally to the new view centre (the #248 behaviour is preserved). </p>
+
+</div>
+</div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ad98fbdd49f155f5bac8a489fda26b113" name="ad98fbdd49f155f5bac8a489fda26b113"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad98fbdd49f155f5bac8a489fda26b113">&#9670;&#160;</a></span>clickedEdge</h2>
@@ -3433,8 +3573,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac3577bfe68662aa4df2e5e579a89629f" name="ac3577bfe68662aa4df2e5e579a89629f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3577bfe68662aa4df2e5e579a89629f">&#9670;&#160;</a></span>edgeName</h2>
+<a id="a04093297d5289622b2a521f799b91054" name="a04093297d5289622b2a521f799b91054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04093297d5289622b2a521f799b91054">&#9670;&#160;</a></span>edgesHash</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3443,29 +3583,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QString GraphicsWidget::edgeName</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aff02a404d4b2e5340da573c7a47140d9" name="aff02a404d4b2e5340da573c7a47140d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff02a404d4b2e5340da573c7a47140d9">&#9670;&#160;</a></span>edgesHash</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="graphicswidget_8h.html#ad3beb5cfe9d91a6d8f7eb4d978a6e83d">H_StrToEdge</a> GraphicsWidget::edgesHash</td>
+          <td class="memname"><a class="el" href="graphicswidget_8h.html#aa64a98e9bb9dd25dab0bd25b5dda10de">H_KeyToEdge</a> GraphicsWidget::edgesHash</td>
         </tr>
       </table>
   </td>
@@ -3697,6 +3815,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aeec6f3d5e4860f12cb02e1a5ee512064" name="aeec6f3d5e4860f12cb02e1a5ee512064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec6f3d5e4860f12cb02e1a5ee512064">&#9670;&#160;</a></span>m_edgeKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">quint64 GraphicsWidget::m_edgeKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a02bb491977086138ef93d68f110d7400" name="a02bb491977086138ef93d68f110d7400"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02bb491977086138ef93d68f110d7400">&#9670;&#160;</a></span>m_edgeMinOffsetFromNode</h2>
 
@@ -3741,6 +3881,50 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a7e1d973a4302af7935e6ae6db4cde06a" name="a7e1d973a4302af7935e6ae6db4cde06a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e1d973a4302af7935e6ae6db4cde06a">&#9670;&#160;</a></span>m_guides</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="class_graphics_guide.html">GraphicsGuide</a> *&gt; GraphicsWidget::m_guides</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bafd4aa6c5285d57a32b62a386d0eed" name="a9bafd4aa6c5285d57a32b62a386d0eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bafd4aa6c5285d57a32b62a386d0eed">&#9670;&#160;</a></span>m_isClearing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GraphicsWidget::m_isClearing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a464ae91ab0fba70d3446a4ff7eaf6080" name="a464ae91ab0fba70d3446a4ff7eaf6080"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a464ae91ab0fba70d3446a4ff7eaf6080">&#9670;&#160;</a></span>m_isTransformationActive</h2>
 
@@ -3752,6 +3936,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool GraphicsWidget::m_isTransformationActive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90505eb997fa0aec4ab1c2012a770822" name="a90505eb997fa0aec4ab1c2012a770822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90505eb997fa0aec4ab1c2012a770822">&#9670;&#160;</a></span>m_isZooming</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GraphicsWidget::m_isZooming</td>
         </tr>
       </table>
   </td>
@@ -3917,6 +4123,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4a5d0e50b4ed6dc4dff45b45ae5e9b62" name="a4a5d0e50b4ed6dc4dff45b45ae5e9b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5d0e50b4ed6dc4dff45b45ae5e9b62">&#9670;&#160;</a></span>m_resizeTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer GraphicsWidget::m_resizeTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a17a97dfb4966483c196f550551d7516b" name="a17a97dfb4966483c196f550551d7516b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17a97dfb4966483c196f550551d7516b">&#9670;&#160;</a></span>m_selectedEdges</h2>
 
@@ -3950,6 +4178,50 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">QList&lt;int&gt; GraphicsWidget::m_selectedNodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f433816f63e04b70a71baf2f2bf55e9" name="a4f433816f63e04b70a71baf2f2bf55e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f433816f63e04b70a71baf2f2bf55e9">&#9670;&#160;</a></span>m_viewCenter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPointF GraphicsWidget::m_viewCenter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae22219e61b8cbc48397d9c002e3248ee" name="ae22219e61b8cbc48397d9c002e3248ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae22219e61b8cbc48397d9c002e3248ee">&#9670;&#160;</a></span>m_viewCenterValid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GraphicsWidget::m_viewCenterValid</td>
         </tr>
       </table>
   </td>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query_0',['Query',['../struct_filter_spec.html#a9af7cc4d14a1bc2c560e4a55073a23f8a66c1b4c7f3dc385b68a9fa903ccd016d',1,'FilterSpec']]]
+  ['ok_0',['Ok',['../class_graph.html#adbfff7f510255a4a85174bfadb49ef1baa60852f204ed8028c1c58808b746d115',1,'Graph']]]
 ];

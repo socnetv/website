@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_0',['y',['../class_graph_vertex.html#aa25880b20dfb6658dbb3fba8015bfa0b',1,'GraphVertex']]]
+  ['x_0',['x',['../class_graph_vertex.html#afb84b459e018e21cf40892be90dcffa7',1,'GraphVertex']]]
 ];

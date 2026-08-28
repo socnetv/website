@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -120,14 +120,17 @@ $(function(){initNavTree('table__export_8h_source.html','',''); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_table_export.html">TableExport</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_table_export.html#a18f8dc1abe7643fa12d9460769e4c3cc">toCSV</a>(QAbstractItemModel *model, <span class="keyword">const</span> QString &amp;filePath);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>QString <a class="code hl_function" href="namespace_table_export.html#ac8bb5ee82003d717fbe6845967f21ae0">csvQuote</a>(<span class="keyword">const</span> QString &amp;value);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_table_export.html#ad22121b051435820c92267b5d67b02eb">toJSON</a>(QAbstractItemModel *model, <span class="keyword">const</span> QString &amp;filePath);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// namespace TableExport</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_table_export.html#a18f8dc1abe7643fa12d9460769e4c3cc">toCSV</a>(QAbstractItemModel *model, <span class="keyword">const</span> QString &amp;filePath);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_table_export.html#ad22121b051435820c92267b5d67b02eb">toJSON</a>(QAbstractItemModel *model, <span class="keyword">const</span> QString &amp;filePath);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace TableExport</span></div>
 <div class="ttc" id="anamespace_table_export_html"><div class="ttname"><a href="namespace_table_export.html">TableExport</a></div><div class="ttdoc">Free functions that serialise any QAbstractItemModel to CSV or JSON.</div><div class="ttdef"><b>Definition</b> table_export.cpp:23</div></div>
-<div class="ttc" id="anamespace_table_export_html_a18f8dc1abe7643fa12d9460769e4c3cc"><div class="ttname"><a href="namespace_table_export.html#a18f8dc1abe7643fa12d9460769e4c3cc">TableExport::toCSV</a></div><div class="ttdeci">bool toCSV(QAbstractItemModel *model, const QString &amp;filePath)</div><div class="ttdoc">Writes model to an RFC 4180 CSV file at filePath.</div><div class="ttdef"><b>Definition</b> table_export.cpp:41</div></div>
-<div class="ttc" id="anamespace_table_export_html_ad22121b051435820c92267b5d67b02eb"><div class="ttname"><a href="namespace_table_export.html#ad22121b051435820c92267b5d67b02eb">TableExport::toJSON</a></div><div class="ttdeci">bool toJSON(QAbstractItemModel *model, const QString &amp;filePath)</div><div class="ttdoc">Writes model to a JSON file at filePath.</div><div class="ttdef"><b>Definition</b> table_export.cpp:78</div></div>
+<div class="ttc" id="anamespace_table_export_html_a18f8dc1abe7643fa12d9460769e4c3cc"><div class="ttname"><a href="namespace_table_export.html#a18f8dc1abe7643fa12d9460769e4c3cc">TableExport::toCSV</a></div><div class="ttdeci">bool toCSV(QAbstractItemModel *model, const QString &amp;filePath)</div><div class="ttdoc">Writes model to an RFC 4180 CSV file at filePath.</div><div class="ttdef"><b>Definition</b> table_export.cpp:39</div></div>
+<div class="ttc" id="anamespace_table_export_html_ac8bb5ee82003d717fbe6845967f21ae0"><div class="ttname"><a href="namespace_table_export.html#ac8bb5ee82003d717fbe6845967f21ae0">TableExport::csvQuote</a></div><div class="ttdeci">QString csvQuote(const QString &amp;value)</div><div class="ttdoc">Returns a CSV-safe quoted field: wraps value in double-quotes if it contains a comma,...</div><div class="ttdef"><b>Definition</b> table_export.cpp:25</div></div>
+<div class="ttc" id="anamespace_table_export_html_ad22121b051435820c92267b5d67b02eb"><div class="ttname"><a href="namespace_table_export.html#ad22121b051435820c92267b5d67b02eb">TableExport::toJSON</a></div><div class="ttdeci">bool toJSON(QAbstractItemModel *model, const QString &amp;filePath)</div><div class="ttdoc">Writes model to a JSON file at filePath.</div><div class="ttdef"><b>Definition</b> table_export.cpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -1,7 +1,17 @@
 <map id="dialograndlattice.h" name="dialograndlattice.h">
-<area shape="rect" id="Node000001" title="Declares the DialogRandLattice class for configuring random lattice generation in SocNetV." alt="" coords="97,5,241,31"/>
-<area shape="rect" id="Node000002" href="$dialograndlattice_8cpp.html" title="Implements the DialogRandLattice class for generating random lattice networks in SocNetV." alt="" coords="5,79,164,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,42,100,80,97,76,143,38"/>
-<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="189,79,319,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,37,242,76,238,80,191,41"/>
+<area shape="rect" id="Node000001" title="Declares the DialogRandLattice class for configuring random lattice generation in SocNetV." alt="" coords="491,5,617,31"/>
+<area shape="rect" id="Node000002" href="$dialograndlattice_8cpp.html" title="Implements the DialogRandLattice class for generating random lattice networks in SocNetV." alt="" coords="5,86,146,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,32,328,53,157,82,125,89,124,83,156,76,327,48,475,27"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implements the MainWindow class, which serves as the primary interface for the SocNetV application." alt="" coords="169,86,286,112"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="486,38,299,82,272,88,271,83,298,76,484,32"/>
+<area shape="rect" id="Node000004" href="$mainwindow__network__file_8cpp.html" title="Implements MainWindow Network menu: new/open/save/close/print, recent files, file dialog plumbing,..." alt="" coords="310,79,457,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="515,40,427,81,425,76,513,35"/>
+<area shape="rect" id="Node000005" href="$mainwindow__network__import__export_8cpp.html" title="Implements MainWindow Network menu: import (GraphML, GML, Pajek, Adjacency, GraphViz,..." alt="" coords="481,79,627,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="557,46,557,79,552,79,552,46"/>
+<area shape="rect" id="Node000006" href="$mainwindow__network__random_8cpp.html" title="Implements MainWindow Network menu: sample dataset selection and random network generation (Erdos&#45;Ren..." alt="" coords="652,79,798,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="595,35,683,76,681,81,593,40"/>
+<area shape="rect" id="Node000007" href="$mainwindow__network__view_8cpp.html" title="Implements MainWindow Network menu: file preview in system browser, internal text editor,..." alt="" coords="822,79,969,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="622,32,823,78,821,84,621,38"/>
+<area shape="rect" id="Node000008" href="$mainwindow__network__web_8cpp.html" title="Implements MainWindow Network menu web crawler dialog/launch and the QNetworkAccessManager request/re..." alt="" coords="993,79,1139,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="633,26,794,47,981,76,993,79,992,84,980,82,793,52,632,31"/>
 </map>

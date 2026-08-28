@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -117,11 +117,11 @@ Directory dependency graph for tools:</div>
 <div class="center"><img src="dir_59c959e1577b487eeed24059576a0389_dep.png" border="0" usemap="#adir__59c959e1577b487eeed24059576a0389__dep" loading="lazy" alt="tools"/></div>
 <map name="adir__59c959e1577b487eeed24059576a0389__dep" id="adir__59c959e1577b487eeed24059576a0389__dep">
 <area shape="rect" href="dir_88a9db09927203e673744852e4016471.html" title="cli" alt="" coords="33,100,71,126"/>
-<area shape="poly" href="dir_000026_000003.html" alt="" coords="55,52,55,85,49,85,49,52"/>
-<area shape="rect" href="dir_000026_000003.html" title="8" alt="" coords="57,74,64,89"/>
+<area shape="poly" href="dir_000037_000004.html" alt="" coords="55,52,55,85,49,85,49,52"/>
+<area shape="rect" href="dir_000037_000004.html" title="10" alt="" coords="53,74,67,89"/>
 <area shape="rect" href="dir_613771f21be7203136085b33d045d8ce.html" title="graph" alt="" coords="199,100,252,126"/>
-<area shape="poly" href="dir_000026_000013.html" alt="" coords="77,48,185,93,183,97,75,53"/>
-<area shape="rect" href="dir_000026_000013.html" title="1" alt="" coords="181,79,188,94"/>
+<area shape="poly" href="dir_000037_000016.html" alt="" coords="77,48,185,93,183,97,75,53"/>
+<area shape="rect" href="dir_000037_000016.html" title="1" alt="" coords="181,79,188,94"/>
 <area shape="rect" href="dir_1e5078709b534ccfa011fb5163fb954f.html" title="baselines" alt="" coords="100,27,177,52"/>
 <area shape="rect" href="dir_59c959e1577b487eeed24059576a0389.html" alt="" coords="16,16,188,137"/>
 </map>
@@ -136,15 +136,17 @@ Directories</h2></td></tr>
 Files</h2></td></tr>
 <tr class="memitem:headless_5Fgraph_5Floader_2Ecpp" id="r_headless_5Fgraph_5Floader_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="headless__graph__loader_8cpp.html">headless_graph_loader.cpp</a></td></tr>
 <tr class="memitem:headless_5Fgraph_5Floader_2Eh" id="r_headless_5Fgraph_5Floader_2Eh"><td class="memItemLeft"><a href="headless__graph__loader_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><a class="el" href="headless__graph__loader_8h.html">headless_graph_loader.h</a></td></tr>
+<tr class="memitem:matrix_5Fstorage_5Fbench_2Ecpp" id="r_matrix_5Fstorage_5Fbench_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="matrix__storage__bench_8cpp.html">matrix_storage_bench.cpp</a></td></tr>
+<tr class="memdesc:matrix__storage__bench_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standalone WS5 A2.0 benchmark: QHash&lt;int, QPair&lt;int,qreal&gt;&gt; (current APSP storage, one per <a class="el" href="class_graph_vertex.html" title="Plain QtCore value class (not a QObject, WS3 M2) representing a vertex and its adjacency....">GraphVertex</a>) vs. a flat <a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> (proposed APSP storage), measuring construction and lookup speed for a single (N, topology, structure) configuration per run. Peak RSS is measured externally by the driver script (see scripts/run_matrix_storage_bench.sh), not by this process itself — see the note above buildComponents() for why. <br /></td></tr>
 <tr class="memitem:socnetv_5Fcli_2Ecpp" id="r_socnetv_5Fcli_2Ecpp"><td class="memItemLeft"><span class="icondoc"><div class="doc-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="socnetv__cli_8cpp.html">socnetv_cli.cpp</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md62"></a>
 SocNetV Tools</h1>
 <p>This directory contains headless utilities used for refactoring safety nets.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md63"></a>
 socnetv-cli</h1>
-<p><span class="tt">socnetv-cli</span> loads a dataset headlessly (no GUI), runs distance metrics, and can dump/compare deterministic JSON golden outputs.</p>
+<p><span class="tt">socnetv-cli</span> loads a dataset headlessly (no GUI) and runs one of nine analysis kernels — distance, reachability, walks, prominence, io_roundtrip, clustering, connectivity, matrix, vertex_connectivity — dumping or strictly comparing deterministic JSON golden outputs.</p>
 <p>See: SOCNETV_CLI_REGRESSION_TOOL </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

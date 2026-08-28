@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -168,7 +168,7 @@ Classes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Per-source scratch state for the Brandes SSSP / centrality computation. </p>
-<p>All mutable state that is local to a single source-vertex iteration of the <a class="el" href="class_distance_engine.html">DistanceEngine</a> source loop lives here. Moving it out of <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> and <a class="el" href="class_graph_vertex.html">GraphVertex</a> is WS3 Phase 1; making it thread-local enables Phase 2 parallelism.</p>
+<p>All mutable state that is local to a single source-vertex iteration of the <a class="el" href="class_distance_engine.html">DistanceEngine</a> source loop lives here. Moving it out of <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> and <a class="el" href="class_graph_vertex.html" title="Plain QtCore value class (not a QObject, WS3 M2) representing a vertex and its adjacency....">GraphVertex</a> is WS3 Phase 1; making it thread-local enables Phase 2 parallelism.</p>
 <p>The corresponding transitional Graph/GraphVertex members (Stack, sizeOfNthOrderNeighborhood, sizeOfComponent, myPs, m_delta) were removed in the WS3 Phase 2 dead-code cleanup after the regression harness passed. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

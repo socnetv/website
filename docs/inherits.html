@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.6</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -121,12 +121,12 @@ $(function(){initNavTree('hierarchy.html','',''); });
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#a_centrality_scratch_finalize" loading="lazy" alt=""/>
 <map name="a_centrality_scratch_finalize" id="a_centrality_scratch_finalize">
-<area shape="rect" href="struct_centrality_scratch_finalize.html" title=" " alt="" coords="5,5,173,31"/>
+<area shape="rect" href="struct_centrality_scratch_finalize.html" title="Scratch for the finalize() phase — the single&#45;threaded pass that runs once after runAllSources() comp..." alt="" coords="5,5,173,31"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" usemap="#a_centrality_scratch_s_s_s_p" loading="lazy" alt=""/>
 <map name="a_centrality_scratch_s_s_s_p" id="a_centrality_scratch_s_s_s_p">
-<area shape="rect" href="struct_centrality_scratch_s_s_s_p.html" title=" " alt="" coords="5,5,164,31"/>
+<area shape="rect" href="struct_centrality_scratch_s_s_s_p.html" title="Per&#45;run scratch for centrality values computed once per SSSP source, before the parallel per&#45;source l..." alt="" coords="5,5,164,31"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_3.png" border="0" usemap="#acli_1_1_cli_config" loading="lazy" alt=""/>
@@ -156,7 +156,7 @@ $(function(){initNavTree('hierarchy.html','',''); });
 </td></tr>
 <tr><td><img src="inherit_graph_8.png" border="0" usemap="#a_distance_scratch" loading="lazy" alt=""/>
 <map name="a_distance_scratch" id="a_distance_scratch">
-<area shape="rect" href="struct_distance_scratch.html" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" href="struct_distance_scratch.html" title="Per&#45;run scratch state for DistanceEngine::compute(), scoped to one compute() call." alt="" coords="5,5,124,31"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_9.png" border="0" usemap="#a_edge_table_model_1_1_edge_row" loading="lazy" alt=""/>
@@ -164,47 +164,62 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="rect" href="struct_edge_table_model_1_1_edge_row.html" title=" " alt="" coords="5,5,188,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_filter_bar_widget_1_1_chip_data" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#a_edge_visibility_change" loading="lazy" alt=""/>
+<map name="a_edge_visibility_change" id="a_edge_visibility_change">
+<area shape="rect" href="class_edge_visibility_change.html" title="One edge&#39;s visibility change, batched with others in signalSetEdgesVisibilityBatch (WS3 M2) so a bulk..." alt="" coords="5,5,151,31"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_filter_bar_widget_1_1_chip_data" loading="lazy" alt=""/>
 <map name="a_filter_bar_widget_1_1_chip_data" id="a_filter_bar_widget_1_1_chip_data">
 <area shape="rect" href="struct_filter_bar_widget_1_1_chip_data.html" title=" " alt="" coords="5,5,180,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#a_filter_condition" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_filter_condition" loading="lazy" alt=""/>
 <map name="a_filter_condition" id="a_filter_condition">
 <area shape="rect" href="struct_filter_condition.html" title="Describes a single attribute&#45;based filter condition." alt="" coords="5,5,111,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#a_filter_spec" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#a_filter_spec" loading="lazy" alt=""/>
 <map name="a_filter_spec" id="a_filter_spec">
 <area shape="rect" href="struct_filter_spec.html" title="Records how to re&#45;apply one filter operation from scratch." alt="" coords="5,5,86,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" usemap="#a_graph_1_1_graph_visibility_snapshot" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#a_graph_1_1_graph_visibility_snapshot" loading="lazy" alt=""/>
 <map name="a_graph_1_1_graph_visibility_snapshot" id="a_graph_1_1_graph_visibility_snapshot">
 <area shape="rect" href="struct_graph_1_1_graph_visibility_snapshot.html" title=" " alt="" coords="5,5,209,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" usemap="#a_graph_distance" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#a_graph_1_1_node_connectivity_result" loading="lazy" alt=""/>
+<map name="a_graph_1_1_node_connectivity_result" id="a_graph_1_1_node_connectivity_result">
+<area shape="rect" href="struct_graph_1_1_node_connectivity_result.html" title=" " alt="" coords="5,5,212,31"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#a_graph_distance" loading="lazy" alt=""/>
 <map name="a_graph_distance" id="a_graph_distance">
 <area shape="rect" href="class_graph_distance.html" title="Holds a (target, distance) pair for use in Dijkstra&#39;s priority queue." alt="" coords="5,5,114,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" usemap="#a_graph_distances_compare" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#a_graph_distances_compare" loading="lazy" alt=""/>
 <map name="a_graph_distances_compare" id="a_graph_distances_compare">
 <area shape="rect" href="class_graph_distances_compare.html" title="Min&#45;priority comparator for GraphDistance (used in std::priority_queue)." alt="" coords="5,5,174,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" usemap="#a_graph_query" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#a_graph_query" loading="lazy" alt=""/>
 <map name="a_graph_query" id="a_graph_query">
 <area shape="rect" href="struct_graph_query.html" title="A compound AND&#45;logic filter applied in one operation (one snapshot, one chip)." alt="" coords="5,5,97,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" usemap="#a_headless_load_result" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#a_graph_vertex" loading="lazy" alt=""/>
+<map name="a_graph_vertex" id="a_graph_vertex">
+<area shape="rect" href="class_graph_vertex.html" title="Plain QtCore value class (not a QObject, WS3 M2) representing a vertex and its adjacency...." alt="" coords="5,5,100,31"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#a_headless_load_result" loading="lazy" alt=""/>
 <map name="a_headless_load_result" id="a_headless_load_result">
 <area shape="rect" href="struct_headless_load_result.html" title=" " alt="" coords="5,5,148,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" usemap="#a_i_distance_progress_sink" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_21.png" border="0" usemap="#a_i_distance_progress_sink" loading="lazy" alt=""/>
 <map name="a_i_distance_progress_sink" id="a_i_distance_progress_sink">
 <area shape="rect" href="class_i_distance_progress_sink.html" title=" " alt="" coords="5,31,161,56"/>
 <area shape="rect" href="class_graph_distance_progress_sink.html" title=" " alt="" coords="209,5,395,31"/>
@@ -213,47 +228,42 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="poly" title=" " alt="" coords="177,51,215,55,214,61,176,56"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" usemap="#a_matrix" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_22.png" border="0" usemap="#a_matrix" loading="lazy" alt=""/>
 <map name="a_matrix" id="a_matrix">
-<area shape="rect" href="class_matrix.html" title=" " alt="" coords="5,5,63,31"/>
+<area shape="rect" href="class_matrix.html" title="General&#45;purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),..." alt="" coords="5,5,63,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_20.png" border="0" usemap="#a_matrix_row" loading="lazy" alt=""/>
-<map name="a_matrix_row" id="a_matrix_row">
-<area shape="rect" href="class_matrix_row.html" title=" " alt="" coords="5,5,90,31"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_21.png" border="0" usemap="#a_my_edge" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_23.png" border="0" usemap="#a_my_edge" loading="lazy" alt=""/>
 <map name="a_my_edge" id="a_my_edge">
 <area shape="rect" href="class_my_edge.html" title="Lightweight value type representing a directed or undirected edge." alt="" coords="5,5,75,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_22.png" border="0" usemap="#a_node_table_model_1_1_node_row" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_24.png" border="0" usemap="#a_node_table_model_1_1_node_row" loading="lazy" alt=""/>
 <map name="a_node_table_model_1_1_node_row" id="a_node_table_model_1_1_node_row">
 <area shape="rect" href="struct_node_table_model_1_1_node_row.html" title=" " alt="" coords="5,5,190,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_23.png" border="0" usemap="#a_pair_v_f" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_25.png" border="0" usemap="#a_pair_v_f" loading="lazy" alt=""/>
 <map name="a_pair_v_f" id="a_pair_v_f">
 <area shape="rect" href="class_pair_v_f.html" title="(value, frequency) pair, used in distribution charts." alt="" coords="5,5,67,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_24.png" border="0" usemap="#a_pair_v_f_compare" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_26.png" border="0" usemap="#a_pair_v_f_compare" loading="lazy" alt=""/>
 <map name="a_pair_v_f_compare" id="a_pair_v_f_compare">
 <area shape="rect" href="class_pair_v_f_compare.html" title="Min&#45;priority comparator for PairVF (used in std::priority_queue)." alt="" coords="5,5,120,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_25.png" border="0" usemap="#a_parser_1_1_parse_config" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_27.png" border="0" usemap="#a_parser_1_1_parse_config" loading="lazy" alt=""/>
 <map name="a_parser_1_1_parse_config" id="a_parser_1_1_parse_config">
 <area shape="rect" href="struct_parser_1_1_parse_config.html" title="ParseConfig boundary &#45; the immutable config object." alt="" coords="5,5,145,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_26.png" border="0" usemap="#a_per_source_scratch" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_28.png" border="0" usemap="#a_per_source_scratch" loading="lazy" alt=""/>
 <map name="a_per_source_scratch" id="a_per_source_scratch">
 <area shape="rect" href="struct_per_source_scratch.html" title=" " alt="" coords="5,5,133,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_27.png" border="0" usemap="#a_q_abstract_table_model" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_29.png" border="0" usemap="#a_q_abstract_table_model" loading="lazy" alt=""/>
 <map name="a_q_abstract_table_model" id="a_q_abstract_table_model">
 <area shape="rect" title=" " alt="" coords="5,31,152,56"/>
 <area shape="rect" href="class_edge_table_model.html" title="Table model that caches edge data for the current relation from Graph and writes back via the Graph A..." alt="" coords="200,5,318,31"/>
@@ -262,71 +272,75 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="poly" title=" " alt="" coords="167,53,200,57,199,62,167,58"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_28.png" border="0" usemap="#a_q_chart_view" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_30.png" border="0" usemap="#a_q_chart_view" loading="lazy" alt=""/>
 <map name="a_q_chart_view" id="a_q_chart_view">
 <area shape="rect" title=" " alt="" coords="5,5,98,31"/>
 <area shape="rect" href="class_chart.html" title=" " alt="" coords="146,5,199,31"/>
 <area shape="poly" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_29.png" border="0" usemap="#a_q_dialog" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_31.png" border="0" usemap="#a_q_dialog" loading="lazy" alt=""/>
 <map name="a_q_dialog" id="a_q_dialog">
-<area shape="rect" title=" " alt="" coords="5,623,74,648"/>
+<area shape="rect" title=" " alt="" coords="5,672,74,698"/>
 <area shape="rect" href="class_dialog_bulk_edit.html" title=" " alt="" coords="167,5,274,31"/>
-<area shape="poly" title=" " alt="" coords="38,607,40,485,50,316,60,230,74,150,94,85,106,60,120,40,141,25,165,17,167,22,143,30,124,44,111,63,99,87,80,152,65,230,55,316,45,486,43,607"/>
-<area shape="rect" href="class_dialog_clustering_hierarchical.html" title=" " alt="" coords="127,55,314,80"/>
-<area shape="poly" title=" " alt="" coords="38,607,42,495,53,340,63,262,77,190,96,131,107,107,120,90,133,79,137,83,124,93,112,110,101,133,82,191,68,262,58,341,47,495,44,607"/>
-<area shape="rect" href="class_dialog_data_set_select.html" title=" " alt="" coords="149,104,292,130"/>
-<area shape="poly" title=" " alt="" coords="39,607,44,504,56,364,67,293,80,229,98,176,120,139,132,129,147,121,149,126,135,133,124,143,103,178,85,230,72,294,61,364,49,504,44,607"/>
-<area shape="rect" href="class_dialog_dissimilarities.html" title=" " alt="" coords="150,153,290,179"/>
-<area shape="poly" title=" " alt="" coords="39,607,46,513,59,388,70,325,83,268,100,221,120,188,133,178,149,170,151,175,136,182,124,192,104,223,88,269,75,326,65,389,51,513,45,607"/>
-<area shape="rect" href="class_dialog_edge_dichotomization.html" title=" " alt="" coords="129,203,312,228"/>
-<area shape="poly" title=" " alt="" coords="40,607,48,523,63,413,86,307,101,266,120,238,134,227,137,231,124,241,106,268,91,309,68,413,53,524,45,608"/>
-<area shape="rect" href="class_dialog_edge_edit.html" title=" " alt="" coords="165,252,276,278"/>
-<area shape="poly" title=" " alt="" coords="41,607,50,532,66,437,89,346,103,311,120,287,140,273,163,265,165,270,143,278,124,291,108,314,94,348,71,438,56,533,46,607"/>
-<area shape="rect" href="class_dialog_export_image.html" title=" " alt="" coords="154,301,286,327"/>
-<area shape="poly" title=" " alt="" coords="37,607,39,550,50,478,60,439,75,402,94,367,120,336,135,325,153,318,155,323,138,330,123,340,99,370,79,404,65,441,55,479,44,551,42,607"/>
-<area shape="rect" href="class_dialog_export_p_d_f.html" title=" " alt="" coords="159,351,282,376"/>
-<area shape="poly" title=" " alt="" coords="39,607,44,559,56,499,80,438,98,410,120,385,137,374,157,366,159,371,140,378,123,390,102,413,85,441,61,501,49,560,44,608"/>
-<area shape="rect" href="class_dialog_filter_by_attribute.html" title=" " alt="" coords="144,400,296,426"/>
-<area shape="poly" title=" " alt="" coords="42,607,49,568,64,522,86,475,102,454,120,435,142,421,145,426,123,439,106,457,91,478,69,524,54,570,47,608"/>
-<area shape="rect" href="class_dialog_filter_edges_by_weight.html" title=" " alt="" coords="130,449,310,475"/>
-<area shape="poly" title=" " alt="" coords="46,607,72,545,93,512,120,484,138,473,141,478,123,488,97,515,76,547,51,609"/>
-<area shape="rect" href="class_dialog_filter_nodes_by_centrality.html" title=" " alt="" coords="122,499,319,524"/>
-<area shape="poly" title=" " alt="" coords="53,608,81,569,99,550,120,533,142,523,144,527,123,538,103,554,85,572,57,611"/>
-<area shape="rect" href="class_dialog_import_attributes.html" title="Modal dialog that lets the user pick a CSV or JSON file and map its columns to graph node/edge identi..." alt="" coords="145,548,296,574"/>
-<area shape="poly" title=" " alt="" coords="70,611,121,582,151,572,153,577,123,587,72,616"/>
-<area shape="rect" href="class_dialog_node_edit.html" title=" " alt="" coords="164,597,276,623"/>
-<area shape="poly" title=" " alt="" coords="89,626,163,615,164,621,89,631"/>
-<area shape="rect" href="class_dialog_node_find.html" title=" " alt="" coords="163,647,278,672"/>
-<area shape="poly" title=" " alt="" coords="89,639,163,649,162,655,88,645"/>
-<area shape="rect" href="class_dialog_preview_file.html" title=" " alt="" coords="157,696,284,722"/>
-<area shape="poly" title=" " alt="" coords="73,655,123,682,158,694,156,699,121,687,70,660"/>
-<area shape="rect" href="class_dialog_query_builder.html" title="Visual query builder that composes a multi&#45;condition AND filter." alt="" coords="154,745,287,771"/>
-<area shape="poly" title=" " alt="" coords="58,660,85,698,103,716,123,732,154,746,152,751,120,736,99,720,81,701,53,663"/>
-<area shape="rect" href="class_dialog_rand_erdos_renyi.html" title=" " alt="" coords="142,795,299,820"/>
-<area shape="poly" title=" " alt="" coords="51,662,77,723,97,755,123,781,143,792,140,797,120,786,93,758,72,726,46,665"/>
-<area shape="rect" href="class_dialog_rand_lattice.html" title=" " alt="" coords="156,844,284,870"/>
-<area shape="poly" title=" " alt="" coords="47,663,55,702,69,747,91,792,106,813,123,831,139,841,157,848,155,853,136,846,120,835,102,816,87,795,64,749,50,703,42,664"/>
-<area shape="rect" href="class_dialog_rand_regular.html" title=" " alt="" coords="153,893,288,919"/>
-<area shape="poly" title=" " alt="" coords="44,664,49,711,62,770,85,829,102,856,123,880,137,890,154,897,152,902,135,895,120,884,98,860,81,832,57,771,44,712,39,664"/>
-<area shape="rect" href="class_dialog_rand_scale_free.html" title=" " alt="" coords="146,943,294,968"/>
-<area shape="poly" title=" " alt="" coords="42,664,44,720,55,792,65,829,79,866,99,900,123,929,147,944,144,949,120,934,94,903,75,868,60,831,50,793,39,720,37,664"/>
-<area shape="rect" href="class_dialog_rand_small_world.html" title=" " alt="" coords="143,992,298,1018"/>
-<area shape="poly" title=" " alt="" coords="46,663,56,738,71,833,94,922,108,956,124,979,144,993,141,997,120,983,103,958,89,923,66,834,50,739,41,664"/>
-<area shape="rect" href="class_dialog_settings.html" title=" " alt="" coords="167,1041,274,1067"/>
-<area shape="poly" title=" " alt="" coords="45,664,53,748,68,857,91,961,106,1001,124,1028,144,1042,167,1049,166,1055,141,1047,120,1032,102,1004,86,963,63,858,48,748,40,664"/>
-<area shape="rect" href="class_dialog_similarity_matches.html" title=" " alt="" coords="139,1091,302,1116"/>
-<area shape="poly" title=" " alt="" coords="45,664,51,757,65,882,75,944,88,1001,104,1047,124,1078,140,1090,137,1094,120,1081,100,1049,83,1002,70,945,59,882,46,758,39,664"/>
-<area shape="rect" href="class_dialog_similarity_pearson.html" title=" " alt="" coords="140,1140,300,1166"/>
-<area shape="poly" title=" " alt="" coords="44,664,49,767,62,906,72,976,85,1040,103,1092,124,1127,141,1140,138,1144,120,1131,98,1094,80,1041,67,977,56,906,44,767,39,664"/>
-<area shape="rect" href="class_dialog_system_info.html" title=" " alt="" coords="158,1189,283,1215"/>
-<area shape="poly" title=" " alt="" coords="44,663,47,775,58,929,69,1008,82,1079,101,1137,112,1160,124,1176,139,1188,158,1196,156,1201,137,1193,120,1180,107,1162,96,1139,77,1080,63,1009,53,930,42,776,38,664"/>
-<area shape="rect" href="class_dialog_web_crawler.html" title=" " alt="" coords="156,1239,285,1264"/>
-<area shape="poly" title=" " alt="" coords="43,664,45,785,55,954,65,1040,80,1118,99,1182,111,1207,124,1226,138,1237,156,1245,154,1250,136,1242,120,1229,106,1210,94,1184,74,1119,60,1041,50,954,40,785,38,664"/>
+<area shape="poly" title=" " alt="" coords="38,656,38,526,47,342,57,247,71,161,92,90,105,62,120,40,141,25,166,17,167,22,143,30,124,44,109,64,97,91,77,162,62,248,52,342,43,526,43,656"/>
+<area shape="rect" href="class_dialog_centrality_bonacich.html" title=" " alt="" coords="136,55,304,80"/>
+<area shape="poly" title=" " alt="" coords="38,656,40,535,50,365,60,279,74,200,94,135,106,109,120,90,134,78,137,82,124,93,111,112,99,137,80,201,65,280,55,366,45,535,43,656"/>
+<area shape="rect" href="class_dialog_centrality_katz.html" title=" " alt="" coords="150,104,291,130"/>
+<area shape="poly" title=" " alt="" coords="38,657,42,544,53,390,63,311,77,239,96,180,107,157,120,139,133,128,148,121,150,126,136,133,124,143,112,160,101,182,82,240,68,312,58,390,47,545,44,657"/>
+<area shape="rect" href="class_dialog_clustering_hierarchical.html" title=" " alt="" coords="127,153,314,179"/>
+<area shape="poly" title=" " alt="" coords="39,656,44,553,56,413,67,342,80,278,98,225,120,188,133,177,137,182,124,192,103,227,85,279,72,343,61,414,49,553,44,656"/>
+<area shape="rect" href="class_dialog_data_set_select.html" title=" " alt="" coords="149,203,292,228"/>
+<area shape="poly" title=" " alt="" coords="39,656,46,562,59,437,70,374,83,317,100,270,120,238,147,220,150,225,124,241,104,272,88,319,75,375,65,438,51,563,45,656"/>
+<area shape="rect" href="class_dialog_dissimilarities.html" title=" " alt="" coords="150,252,290,278"/>
+<area shape="poly" title=" " alt="" coords="40,657,48,572,63,462,86,357,101,315,120,287,133,276,149,269,151,274,136,281,124,291,106,318,91,358,68,463,53,573,45,657"/>
+<area shape="rect" href="class_dialog_edge_dichotomization.html" title=" " alt="" coords="129,301,312,327"/>
+<area shape="poly" title=" " alt="" coords="41,656,50,581,66,486,89,396,103,361,120,336,134,325,137,330,124,340,108,363,94,397,71,487,56,582,46,657"/>
+<area shape="rect" href="class_dialog_edge_edit.html" title=" " alt="" coords="165,351,276,376"/>
+<area shape="poly" title=" " alt="" coords="37,656,39,600,50,527,60,489,75,451,94,416,120,386,140,372,164,364,165,369,143,377,123,389,99,419,79,453,65,490,55,528,44,600,42,657"/>
+<area shape="rect" href="class_dialog_export_image.html" title=" " alt="" coords="154,400,286,426"/>
+<area shape="poly" title=" " alt="" coords="39,656,44,608,56,549,80,488,98,460,120,435,135,424,153,417,155,422,138,429,123,439,102,463,85,490,61,550,49,609,44,657"/>
+<area shape="rect" href="class_dialog_export_p_d_f.html" title=" " alt="" coords="159,449,282,475"/>
+<area shape="poly" title=" " alt="" coords="42,656,49,618,64,571,86,524,102,503,120,484,138,473,157,465,159,470,140,477,123,488,106,506,91,527,69,573,54,619,47,657"/>
+<area shape="rect" href="class_dialog_filter_by_attribute.html" title=" " alt="" coords="144,499,296,524"/>
+<area shape="poly" title=" " alt="" coords="46,656,72,594,93,561,120,533,142,521,145,525,123,538,97,564,76,596,51,658"/>
+<area shape="rect" href="class_dialog_filter_edges_by_weight.html" title=" " alt="" coords="130,548,310,574"/>
+<area shape="poly" title=" " alt="" coords="53,657,81,618,99,599,120,583,142,572,144,577,123,587,103,603,85,622,57,660"/>
+<area shape="rect" href="class_dialog_filter_nodes_by_centrality.html" title=" " alt="" coords="122,597,319,623"/>
+<area shape="poly" title=" " alt="" coords="70,660,121,632,151,621,153,626,123,637,72,665"/>
+<area shape="rect" href="class_dialog_import_attributes.html" title="Modal dialog that lets the user pick a CSV or JSON file and map its columns to graph node/edge identi..." alt="" coords="145,647,296,672"/>
+<area shape="poly" title=" " alt="" coords="88,675,144,667,145,673,89,681"/>
+<area shape="rect" href="class_dialog_node_edit.html" title=" " alt="" coords="164,696,276,722"/>
+<area shape="poly" title=" " alt="" coords="89,689,164,699,163,704,89,694"/>
+<area shape="rect" href="class_dialog_node_find.html" title=" " alt="" coords="163,745,278,771"/>
+<area shape="poly" title=" " alt="" coords="73,704,123,732,164,745,162,750,121,737,70,709"/>
+<area shape="rect" href="class_dialog_preview_file.html" title=" " alt="" coords="157,795,284,820"/>
+<area shape="poly" title=" " alt="" coords="58,709,85,747,103,766,123,781,158,796,156,801,120,786,99,770,81,750,53,712"/>
+<area shape="rect" href="class_dialog_query_builder.html" title="Visual query builder that composes a multi&#45;condition AND filter." alt="" coords="154,844,287,870"/>
+<area shape="poly" title=" " alt="" coords="51,712,77,773,97,804,123,831,154,846,152,851,120,835,93,808,72,775,46,714"/>
+<area shape="rect" href="class_dialog_rand_erdos_renyi.html" title=" " alt="" coords="142,893,299,919"/>
+<area shape="poly" title=" " alt="" coords="47,713,55,751,69,796,91,842,106,862,123,880,143,892,140,897,120,884,102,866,87,845,64,798,50,752,42,714"/>
+<area shape="rect" href="class_dialog_rand_lattice.html" title=" " alt="" coords="156,943,284,968"/>
+<area shape="poly" title=" " alt="" coords="44,713,49,760,62,819,85,879,102,906,123,930,139,940,157,947,155,952,136,945,120,933,98,909,81,881,57,820,44,761,39,713"/>
+<area shape="rect" href="class_dialog_rand_regular.html" title=" " alt="" coords="153,992,288,1018"/>
+<area shape="poly" title=" " alt="" coords="42,713,44,769,55,841,65,879,79,915,99,949,123,979,137,989,154,996,152,1001,135,994,120,983,94,952,75,917,60,880,50,842,39,770,37,713"/>
+<area shape="rect" href="class_dialog_rand_scale_free.html" title=" " alt="" coords="146,1041,294,1067"/>
+<area shape="poly" title=" " alt="" coords="46,713,56,787,71,882,94,971,108,1005,124,1028,147,1043,144,1048,120,1032,103,1008,89,973,66,883,50,788,41,713"/>
+<area shape="rect" href="class_dialog_rand_small_world.html" title=" " alt="" coords="143,1091,298,1116"/>
+<area shape="poly" title=" " alt="" coords="45,713,53,797,68,907,91,1011,106,1051,124,1078,144,1091,141,1096,120,1081,102,1053,86,1012,63,908,48,798,40,714"/>
+<area shape="rect" href="class_dialog_settings.html" title=" " alt="" coords="167,1140,274,1166"/>
+<area shape="poly" title=" " alt="" coords="45,713,51,807,65,931,75,993,88,1050,104,1096,124,1127,144,1141,168,1148,166,1153,141,1146,120,1131,100,1098,83,1051,70,994,59,932,46,807,39,713"/>
+<area shape="rect" href="class_dialog_similarity_matches.html" title=" " alt="" coords="139,1189,302,1215"/>
+<area shape="poly" title=" " alt="" coords="44,713,49,816,62,955,72,1025,85,1089,103,1141,124,1176,140,1189,137,1193,120,1180,98,1143,80,1091,67,1026,56,956,44,816,39,713"/>
+<area shape="rect" href="class_dialog_similarity_pearson.html" title=" " alt="" coords="140,1239,300,1264"/>
+<area shape="poly" title=" " alt="" coords="44,713,47,825,58,979,69,1057,82,1128,101,1187,112,1209,124,1226,141,1239,138,1243,120,1229,107,1212,96,1188,77,1130,63,1058,53,979,42,825,38,713"/>
+<area shape="rect" href="class_dialog_system_info.html" title=" " alt="" coords="158,1288,283,1314"/>
+<area shape="poly" title=" " alt="" coords="43,713,45,834,55,1003,65,1089,80,1168,99,1232,111,1256,124,1275,139,1287,158,1295,156,1300,137,1292,120,1279,106,1259,94,1234,74,1169,60,1090,50,1004,40,835,38,713"/>
+<area shape="rect" href="class_dialog_web_crawler.html" title=" " alt="" coords="156,1337,285,1363"/>
+<area shape="poly" title=" " alt="" coords="43,713,44,843,52,1027,62,1121,77,1207,97,1277,110,1304,124,1324,138,1336,156,1343,154,1348,136,1341,120,1328,105,1307,92,1279,71,1208,57,1121,47,1027,38,843,38,713"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_30.png" border="0" usemap="#a_q_graphics_item" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_32.png" border="0" usemap="#a_q_graphics_item" loading="lazy" alt=""/>
 <map name="a_q_graphics_item" id="a_q_graphics_item">
 <area shape="rect" title=" " alt="" coords="5,55,115,80"/>
 <area shape="rect" href="class_graphics_edge.html" title=" " alt="" coords="165,5,268,31"/>
@@ -335,21 +349,19 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="poly" title=" " alt="" coords="130,65,162,65,162,70,130,70"/>
 <area shape="rect" href="class_graphics_node.html" title=" " alt="" coords="164,104,268,130"/>
 <area shape="poly" title=" " alt="" coords="118,83,174,101,172,106,117,88"/>
-<area shape="rect" title=" " alt="" coords="25,153,95,179"/>
-<area shape="poly" title=" " alt="" coords="78,139,121,83,161,40,179,29,181,34,164,44,125,87,82,142"/>
-<area shape="poly" title=" " alt="" coords="87,141,161,89,182,79,184,83,164,94,90,146"/>
-<area shape="poly" title=" " alt="" coords="108,148,172,128,174,133,110,153"/>
-<area shape="rect" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="188,203,244,228"/>
-<area shape="poly" title=" " alt="" coords="110,179,188,204,187,209,109,184"/>
-<area shape="rect" href="class_graph_vertex.html" title=" " alt="" coords="169,252,264,278"/>
-<area shape="poly" title=" " alt="" coords="90,187,164,239,184,249,182,254,161,243,87,191"/>
-<area shape="rect" href="class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="187,301,246,327"/>
-<area shape="poly" title=" " alt="" coords="80,191,115,239,139,265,164,288,188,302,185,306,161,292,135,269,111,243,75,194"/>
-<area shape="rect" href="class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="170,153,262,179"/>
-<area shape="poly" title=" " alt="" coords="110,164,170,164,170,169,110,169"/>
+<area shape="rect" title=" " alt="" coords="25,128,95,154"/>
+<area shape="poly" title=" " alt="" coords="86,116,113,91,136,64,161,40,179,29,182,34,164,44,139,68,117,95,90,120"/>
+<area shape="poly" title=" " alt="" coords="101,119,162,89,184,78,187,83,164,94,103,123"/>
+<area shape="poly" title=" " alt="" coords="110,131,163,122,164,127,110,136"/>
+<area shape="rect" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,..." alt="" coords="188,153,244,179"/>
+<area shape="poly" title=" " alt="" coords="110,146,188,159,187,164,109,151"/>
+<area shape="rect" href="class_parser.html" title="Defines a class for network file loading and parsing." alt="" coords="187,203,246,228"/>
+<area shape="poly" title=" " alt="" coords="102,159,164,189,187,200,185,205,162,194,100,163"/>
+<area shape="rect" href="class_web_crawler.html" title="The WebCrawler class Parses HTML code it receives, locates urls inside it and puts them into a url qu..." alt="" coords="170,252,262,278"/>
+<area shape="poly" title=" " alt="" coords="84,164,120,202,164,239,183,249,180,254,161,243,116,205,80,168"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_31.png" border="0" usemap="#a_q_graphics_text_item" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_33.png" border="0" usemap="#a_q_graphics_text_item" loading="lazy" alt=""/>
 <map name="a_q_graphics_text_item" id="a_q_graphics_text_item">
 <area shape="rect" title=" " alt="" coords="5,80,140,106"/>
 <area shape="rect" href="class_graphics_edge_label.html" title=" " alt="" coords="196,5,330,31"/>
@@ -362,14 +374,14 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="poly" title=" " alt="" coords="117,110,189,140,219,150,217,155,187,145,115,115"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_32.png" border="0" usemap="#a_q_graphics_view" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_34.png" border="0" usemap="#a_q_graphics_view" loading="lazy" alt=""/>
 <map name="a_q_graphics_view" id="a_q_graphics_view">
 <area shape="rect" title=" " alt="" coords="5,5,118,31"/>
 <area shape="rect" href="class_graphics_widget.html" title=" " alt="" coords="166,5,280,31"/>
 <area shape="poly" title=" " alt="" coords="134,16,165,16,165,21,134,21"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_33.png" border="0" usemap="#a_q_main_window" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_35.png" border="0" usemap="#a_q_main_window" loading="lazy" alt=""/>
 <map name="a_q_main_window" id="a_q_main_window">
 <area shape="rect" title=" " alt="" coords="5,31,112,56"/>
 <area shape="rect" href="class_main_window.html" title="The base window of SocNetV contains all widgets and functionality." alt="" coords="160,5,256,31"/>
@@ -378,7 +390,7 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="poly" title=" " alt="" coords="127,52,168,58,167,64,126,57"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_34.png" border="0" usemap="#a_q_widget" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_36.png" border="0" usemap="#a_q_widget" loading="lazy" alt=""/>
 <map name="a_q_widget" id="a_q_widget">
 <area shape="rect" title=" " alt="" coords="5,31,78,56"/>
 <area shape="rect" href="class_filter_bar_widget.html" title="Thin strip between toolbar and canvas showing one chip per active filter." alt="" coords="134,5,246,31"/>
@@ -387,19 +399,19 @@ $(function(){initNavTree('hierarchy.html','',''); });
 <area shape="poly" title=" " alt="" coords="94,49,126,54,125,60,93,54"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_35.png" border="0" usemap="#a_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_37.png" border="0" usemap="#a_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink" loading="lazy" alt=""/>
 <map name="a_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink" id="a_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink">
 <area shape="rect" href="class_soc_net_v_1_1_i_o_1_1_i_graph_parse_sink.html" title="Explicit mutation surface for parse&#45;time graph construction." alt="" coords="5,13,208,38"/>
 <area shape="rect" href="class_soc_net_v_1_1_i_o_1_1_graph_parse_sink_graph.html" title="Forwards parse mutations directly into an existing Graph instance." alt="" coords="256,5,454,46"/>
 <area shape="poly" title=" " alt="" coords="223,23,255,23,255,28,223,28"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_36.png" border="0" usemap="#a_table_import_1_1_parsed_table" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_38.png" border="0" usemap="#a_table_import_1_1_parsed_table" loading="lazy" alt=""/>
 <map name="a_table_import_1_1_parsed_table" id="a_table_import_1_1_parsed_table">
 <area shape="rect" href="struct_table_import_1_1_parsed_table.html" title="In&#45;memory representation of a parsed tabular file." alt="" coords="5,5,175,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_37.png" border="0" usemap="#a_thread_local_state" loading="lazy" alt=""/>
+<tr><td><img src="inherit_graph_39.png" border="0" usemap="#a_thread_local_state" loading="lazy" alt=""/>
 <map name="a_thread_local_state" id="a_thread_local_state">
 <area shape="rect" href="struct_thread_local_state.html" title=" " alt="" coords="5,5,129,31"/>
 </map>
