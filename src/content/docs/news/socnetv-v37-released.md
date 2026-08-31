@@ -11,6 +11,8 @@ We are happy to announce the release of **SocNetV v3.7**!
 
 This release adds two new centrality measures (**Katz** and **Bonacich Power Centrality**), **Node** and **Graph Connectivity** analysis, a **geodesic distance distribution** report, **shortest-path reconstruction and canvas highlighting**, automatic **viewport auto-fit**, and **CSV export** for nearly every analysis report. It also fixes a major responsiveness problem — layouts and analyses on large networks used to freeze the whole app solid. Read on for details.
 
+![SocNetV v3.7 — Katz Centrality dialog](/data/uploads/screenshots/37/socnetv-37-N1__Katz_Centrality_dialog.webp)
+
 ### 🔍 What's New in SocNetV v3.7?
 
 **🧮 Katz Centrality (KC)**
