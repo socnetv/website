@@ -280,6 +280,17 @@ $ \kappa(G) $ is a standard measure of a network's robustness to targeted or ran
 
 A useful sanity bound (Whitney's inequality, Whitney 1932) is that $ \kappa(G) $ can never exceed $ \delta(G) $, the minimum degree in the network — you can always disconnect the least-connected node from the rest just by removing all of its neighbors. SocNetV uses this bound to skip unnecessary computation where possible.
 
+**How SocNetV computes it efficiently.** Checking *every* non-adjacent pair in the network directly, the way the definition above reads, means a full max-flow computation for each pair — fine for small networks, but prohibitively slow on a network of a few thousand actors, where the number of pairs runs into the millions. SocNetV instead uses the algorithm of Esfahanian & Hakimi (1984), which needs only a small, carefully-chosen fraction of that work to guarantee the same, exact answer:
+
+1. Pick the actor with the fewest ties, $ v $ (the same actor Whitney's bound above already points to).
+2. Compute $ \kappa(v, w) $ for $ v $ against every other actor $ w $ it isn't already tied to, and keep the smallest value found.
+3. Compute $ \kappa(u, w) $ for every pair of $ v $'s *own* ties against each other, and keep the smallest value found there too.
+4. $ \kappa(G) $ is the smaller of the two results from steps 2 and 3.
+
+Step 3 is what makes this safe to stop at: if the network's true weakest point doesn't involve $ v $ directly, it turns out that weak point must still separate two of $ v $'s own ties from one another (there simply aren't enough "removal slots" in a cut smaller than $ v $'s degree to isolate every one of $ v $'s ties without leaving at least two of them on opposite sides) — so checking pairs among $ v $'s ties is guaranteed to catch it instead. Since it's never known in advance which of the two cases applies to a given network, both are always checked, and the smaller of the two results is always the exact, correct $ \kappa(G) $ — not an approximation.
+
+This cuts the work from checking every pair in the network down to checking $ v $ against everyone plus the (typically much smaller) set of pairs among $ v $'s own ties — orders of magnitude fewer max-flow computations on a large, sparse network, with no loss of accuracy.
+
 By **Analyze → Cohesion → Graph Connectivity**, on a directed network you are likewise asked to choose **Weak** or **Strong** (matching the same choice offered by Connectedness and Node Connectivity above).
 
 ---
