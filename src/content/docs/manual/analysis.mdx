@@ -261,6 +261,8 @@ Formally, for two non-adjacent nodes $ s $ and $ t $, the **local vertex connect
 
 By **Menger's theorem** (Menger, 1927), this minimum "cut" size is always exactly equal to the maximum number of *internally vertex-disjoint* paths between $ s $ and $ t $ — paths that share no intermediate node. So $ \kappa(s,t) $ simultaneously answers "how many nodes must fail to disconnect them?" and "how many completely independent routes exist between them?" — the two are the same number. SocNetV computes it via a maximum-flow algorithm on an internal representation of the network built specifically for this purpose (each node split into an "in" and "out" half joined by a capacity-1 link), which is the standard way to turn Menger's theorem into an efficient computation.
 
+Specifically, SocNetV finds that maximum flow using the **Edmonds-Karp algorithm** (Edmonds & Karp, 1972): repeatedly search for the shortest still-available route from $ s $ to $ t $ (a breadth-first search), push one unit of flow along it, and repeat until no route remains — the number of successful rounds is $ \kappa(s,t) $. Because every node in the split representation can carry at most one unit of flow, each round is guaranteed to use up exactly one node's capacity, so the number of rounds needed is bounded by the smaller actor's own number of ties — small and fast for the sizes of networks SocNetV is built for, even though asymptotically faster max-flow algorithms exist for very large, dense graphs.
+
 If $ s $ and $ t $ are directly tied, node connectivity is not defined — the edge between them is a "path" that no removal of *other* nodes can ever break, so SocNetV reports "directly connected" rather than a number.
 
 By **Analyze → Cohesion → Node Connectivity**, you pick a source and a target node. On a directed network, you're also asked whether to respect edge direction:
@@ -1007,6 +1009,159 @@ Furthermore, the order of the elements of vector T is the same as the aforementi
 T = [ T003, T012, T102, T021D, T021U, T021C, T111D, T111U, T030T, T030C, T201, T120D, T120U, T120C, T210, T300 ]
 
 The sum of all these frequencies equals $ C(N,3) $, the total number of possible triads in the network.
+
+### What Each Triad Type Means
+
+Knowing the *count* of each type is only useful once you know what each type actually represents structurally. The table below shows the exact tie pattern for each of the 16 types — $ a \leftrightarrow b $ means a reciprocated (mutual) tie, $ a \rightarrow b $ means a one-way tie from $ a $ to $ b $, and a pair with no arrow between them has no tie at all:
+
+| Type | Pattern | Meaning |
+|---|---|---|
+| 003 | no ties | Three mutual strangers — no relationship at all. |
+| 012 | $ a \rightarrow b $, $ c $ alone | One actor reaches out to another; the third is uninvolved. |
+| 102 | $ a \leftrightarrow b $, $ c $ alone | One reciprocated pair; the third is uninvolved. |
+| 021D | $ a \leftarrow b \rightarrow c $ | **Divergent ("Down")**: one actor sends ties to both others — a common source, e.g. one boss directing two subordinates who don't yet know each other. |
+| 021U | $ a \rightarrow b \leftarrow c $ | **Convergent ("Up")**: two actors both send to a third — a common target, e.g. two employees each reporting to the same manager. |
+| 021C | $ a \rightarrow b \rightarrow c $ | **Chain**: an open two-step path — information or influence could flow from $ a $ to $ c $ only via $ b $. |
+| 111D | $ b \rightarrow c $, $ a \leftrightarrow c $ | A reciprocated pair, plus a third actor sending one-way into one member of that pair. |
+| 111U | $ c \rightarrow b $, $ a \leftrightarrow c $ | Mirror of 111D — the one-way tie points *out of* a member of the reciprocated pair toward the third actor, instead of into it. |
+| 030T | $ a \rightarrow b $, $ b \rightarrow c $, $ a \rightarrow c $ | **Transitive**: the classic hierarchy/pecking-order triad — if $ a $ "beats" $ b $ and $ b $ "beats" $ c $, then $ a $ also "beats" $ c $. The building block of status hierarchies and balanced social structure. |
+| 030C | $ a \rightarrow b \rightarrow c \rightarrow a $ | **Cyclic**: a closed loop with no hierarchy — $ a $ beats $ b $, $ b $ beats $ c $, but $ c $ beats $ a $ right back. Structurally unstable in status-ordering terms (no consistent "winner"). |
+| 201 | $ a \leftrightarrow b $, $ a \leftrightarrow c $ | Two reciprocated pairs sharing one common actor; the third pair has no tie. |
+| 120D | 201's shape plus one more tie, divergent | Same "common source" shape as 021D, but one of the three dyads is upgraded to a reciprocated tie. |
+| 120U | 201's shape plus one more tie, convergent | Same "common target" shape as 021U, but one of the three dyads is upgraded to a reciprocated tie. |
+| 120C | 201's shape plus one more tie, cyclic | Same chain/cycle shape as 021C, but one of the three dyads is upgraded to a reciprocated tie. |
+| 210 | two mutual pairs, one one-way tie | Almost a fully closed triangle — only one dyad is still one-directional instead of reciprocated. |
+| 300 | $ a \leftrightarrow b \leftrightarrow c \leftrightarrow a $ | **Fully reciprocated triangle** — every pair confirms the tie both ways. The strongest, most cohesive triad shape. |
+
+The **D/U/C/T** letters recur across the 021, 111, 120, and 030 rows because the same underlying distinction applies at each mutual/asymmetric/null combination: which direction the "extra" one-way tie (or ties) point relative to a hub actor, or whether they close into a cycle versus a one-directional chain. **030T vs. 030C** is the most commonly cited contrast in the literature: a network dominated by 030T triads tends toward stable status hierarchies (transitivity), while one with many 030C triads has cyclical, non-hierarchical local structure.
+
+The diagrams below show all 16 shapes. A double-headed arrow is a reciprocated (mutual) tie, a single-headed arrow is one-way, and an actor drawn with no line to the others has no tie to them at all.
+
+**003, 012, 102** — zero or one dyad tied, so a diagram would just be an arrow or nothing:
+
+```txt
+003:  a   b   c        012:  a ──▶ b     c        102:  a ◀──▶ b     c
+     (no ties)               (c uninvolved)              (c uninvolved)
+```
+
+**021D, 021U, 021C** — two dyads tied, one still null:
+
+<Mermaid code={`
+graph LR
+    b1((b)) --> a1((a))
+    b1 --> c1((c))
+`} />
+
+*021D — divergent ("Down"): b sends to both a and c.*
+
+<Mermaid code={`
+graph LR
+    a2((a)) --> b2((b))
+    c2((c)) --> b2
+`} />
+
+*021U — convergent ("Up"): a and c both send to b.*
+
+<Mermaid code={`
+graph LR
+    a3((a)) --> b3((b))
+    b3 --> c3((c))
+`} />
+
+*021C — chain: a reaches c only by way of b.*
+
+**111D, 111U** — one mutual dyad plus one asymmetric tie, third dyad null:
+
+<Mermaid code={`
+graph LR
+    b4((b)) --> c4((c))
+    a4((a)) <--> c4
+`} />
+
+*111D — b sends into c, who also shares a mutual tie with a.*
+
+<Mermaid code={`
+graph LR
+    c5((c)) --> b5((b))
+    a5((a)) <--> c5
+`} />
+
+*111U — c sends out to b, while c and a share a mutual tie.*
+
+**030T, 030C** — three asymmetric dyads, no null and no mutual:
+
+<Mermaid code={`
+graph LR
+    a6((a)) --> b6((b))
+    b6 --> c6((c))
+    a6 --> c6
+`} />
+
+*030T — transitive: a beats b, b beats c, and a beats c too. The classic status-hierarchy triad.*
+
+<Mermaid code={`
+graph LR
+    a7((a)) --> b7((b))
+    b7 --> c7((c))
+    c7 --> a7
+`} />
+
+*030C — cyclic: a beats b, b beats c, but c beats a right back. No consistent hierarchy.*
+
+**201** — two mutual dyads sharing one actor, third dyad null:
+
+<Mermaid code={`
+graph LR
+    a8((a)) <--> b8((b))
+    a8 <--> c8((c))
+`} />
+
+**120D, 120U, 120C** — 201's shape plus one more asymmetric tie, divergent/convergent/cyclic:
+
+<Mermaid code={`
+graph LR
+    a9((a)) <--> c9((c))
+    b9((b)) --> a9
+    b9 --> c9
+`} />
+
+*120D*
+
+<Mermaid code={`
+graph LR
+    a10((a)) <--> c10((c))
+    a10 --> b10((b))
+    c10 --> b10
+`} />
+
+*120U*
+
+<Mermaid code={`
+graph LR
+    a11((a)) <--> c11((c))
+    a11 --> b11((b))
+    b11 --> c11
+`} />
+
+*120C*
+
+**210** — two mutual dyads, one asymmetric; every actor now tied to every other:
+
+<Mermaid code={`
+graph LR
+    a12((a)) <--> b12((b))
+    b12 <--> c12((c))
+    a12 --> c12
+`} />
+
+**300** — fully reciprocated triangle:
+
+<Mermaid code={`
+graph LR
+    a13((a)) <--> b13((b))
+    b13 <--> c13((c))
+    a13 <--> c13
+`} />
 
 ---
 
