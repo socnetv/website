@@ -371,6 +371,8 @@ $$
 
 > **Note**: The clustering can be used to determine whether a network is a small-world or not.
 
+> **Note**: The Clustering Coefficient only considers whether a tie exists between two of a node's neighbors, not how strong that tie is - edge weights are not part of the formula (a zero-weight edge is simply excluded, as if it were absent). A weighted variant that factors in tie strength is not currently implemented.
+
 :::tip
 The local Clustering Coefficient is also available as a **node color gradient layout**: go to **Layout → Node Color → Clustering Coefficient** (shortcut `Ctrl+L, Ctrl+C, Ctrl+G`) to color nodes from blue (low CLC) to red (high CLC). See [Node Color by Clustering Coefficient](/manual/visualization#node-color-by-clustering-coefficient) in the Visualization page.
 :::
