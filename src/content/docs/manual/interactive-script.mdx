@@ -1,0 +1,152 @@
+---
+title: "Interactive Script Mode"
+description: "Reference for driving the real SocNetV GUI from a plain-text script via --interactive-script"
+layout: "../../../layouts/BaseLayout.astro"
+---
+
+## What Is Interactive Script Mode?
+
+`--interactive-script <path>` runs the real, full SocNetV application — the same event loop,
+graph engine, and canvas you use interactively — driven by a plain-text script instead of manual
+clicking.
+
+It is useful for:
+
+- **Scripted demos** — reproduce a specific sequence of actions exactly, every time.
+- **Automated testing** — exercise menu actions, dialogs, and canvas behavior that a purely
+  headless tool can't reach.
+- **Reproducible profiling** — drive a specific scenario deterministically while profiling.
+
+This is different from [`socnetv-cli`](/manual/cli), SocNetV's headless regression tool.
+`socnetv-cli` runs compute kernels with **no GUI at all**; interactive script mode drives the
+**real GUI application** through a scripted sequence of actions. Use `socnetv-cli` for pure
+algorithm/data checks, and interactive script mode for anything touching menus, dialogs, or the
+canvas.
+
+---
+
+## Usage
+
+```bash
+socnetv --interactive-script path/to/script.txt
+```
+
+The script is a plain-text file, one command per line. Blank lines and `#`-prefixed comments are
+ignored. Commands run in order — each command finishes before the next one starts.
+
+Every command prints one line to stdout on completion, of the form:
+
+```
+BENCH <command> [command-specific fields] N=<node count> E=<edge count> elapsed_ms=<N>
+```
+
+---
+
+## Commands
+
+### Control
+
+| Command | Effect |
+|---|---|
+| `delay X` | Wait X seconds before the next command. |
+| `new` | File → New. |
+| `quit` | End the script and the app. |
+
+### Network construction
+
+| Command | Effect |
+|---|---|
+| `relation N` | Switch to relation N. |
+| `add-relation name` | Add a new relation and switch to it. |
+| `add-node` | Add a node at a random position. |
+| `add-edge source target [weight]` | Add a directed edge (default weight 1). |
+| `erdos N p directed\|undirected` | Generate an Erdős–Rényi `G(n,p)` network. |
+| `move <node> <x> <y>` | Set an absolute canvas position. |
+| `save path` | Save the current network as GraphML. |
+
+### Filters
+
+| Command | Effect |
+|---|---|
+| `unilateral` | Toggle unilateral edges. |
+| `filter-ego` | Ego-network filter. |
+| `filter-isolates` | Filter isolated nodes. |
+| `symmetrize-strongties` | Symmetrize by strong ties. |
+| `symmetrize-cocitation` | Symmetrize by cocitation. |
+
+### Distances / matrices
+
+| Command | Effect |
+|---|---|
+| `distances [weights] [inverse] [dropisolates] [csv]` | Distances Matrix report (Cohesion → Distances Matrix). |
+| `distances-bench [weights] [inverse] [dropisolates] [centralities]` | Same computation, no disk write — benchmarking only. |
+
+### Centrality / prestige reports
+
+Each of these mirrors its equivalent `Analyze` menu action:
+
+```
+report-centrality-degree [weights] [dropisolates] [csv]
+report-centrality-degree-signed [weights] [dropisolates] [csv]
+report-centrality-pn [all|out|in] [dropisolates] [csv]
+report-centrality-closeness [weights] [inverse] [dropisolates] [csv]
+report-centrality-closeness-ir [weights] [inverse] [dropisolates] [csv]
+report-centrality-betweenness [weights] [inverse] [dropisolates] [csv]
+report-centrality-stress [weights] [inverse] [dropisolates] [csv]
+report-centrality-eccentricity [weights] [inverse] [dropisolates] [csv]
+report-centrality-power [weights] [inverse] [dropisolates] [csv]
+report-centrality-information [weights] [inverse] [csv]
+report-centrality-eigenvector [weights] [inverse] [csv]
+report-prestige-degree [weights] [dropisolates] [csv]
+report-prestige-proximity [dropisolates] [csv]
+report-prestige-pagerank [dropisolates] [csv]
+```
+
+:::note
+Trailing tokens are order-independent — presence means "true," absence means "false." Add `csv`
+to get CSV output instead of the default HTML report. `report-centrality-pn`'s mode
+(`all`/`out`/`in`, default `all`) is required and must come first among its own tokens.
+:::
+
+### Other reports
+
+```
+report-reciprocity [weights] [csv]
+report-eccentricity [weights] [inverse] [dropisolates] [csv]
+report-clustering-coefficient [csv]
+report-triad-census [csv]
+```
+
+### Canvas / bulk edit
+
+| Command | Effect |
+|---|---|
+| `render` | Force a synchronous canvas repaint. |
+| `bulk-node-size <N>` | Set all node sizes to N. |
+| `bulk-edge-color <name>` | Set all edge colors. |
+
+---
+
+## Example
+
+```
+# example.txt
+new
+erdos 50 0.1 undirected
+relation 1
+report-centrality-betweenness weights csv
+render
+save /tmp/demo.graphml
+quit
+```
+
+```bash
+socnetv --interactive-script example.txt
+```
+
+---
+
+## See also
+
+- [`socnetv-cli`](/manual/cli) — the headless regression/benchmarking tool, for pure compute
+  checks with no GUI at all.

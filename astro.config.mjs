@@ -72,6 +72,7 @@ export default defineConfig({
 						{ label: 'Analysis', slug: 'manual/analysis' },
 						{ label: 'Visualization', slug: 'manual/visualization' },
 						{ label: 'socnetv-cli', slug: 'manual/cli' },
+						{ label: 'Interactive Script Mode', slug: 'manual/interactive-script' },
 						{ label: 'Credits', slug: 'manual/credits' },
 						{ label: 'References', slug: 'manual/references' },
 						{ label: 'License', slug: 'manual/license' },

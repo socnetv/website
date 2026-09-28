@@ -16,6 +16,8 @@ It is **not** a general-purpose network analysis shell. Its primary roles are:
 
 `socnetv-cli` uses the **same IO pipeline and compute kernels** as the GUI application — headless loading is unified so regression coverage translates directly to GUI correctness.
 
+Looking to drive the real GUI application through a scripted sequence of actions (menus, dialogs, canvas) instead of running a compute kernel headlessly? See [Interactive Script Mode](/manual/interactive-script).
+
 ---
 
 ## Building
@@ -42,6 +44,10 @@ Each kernel targets a specific family of algorithms and owns its JSON schema ver
 | Prominence | `prominence` | v4 | All node-level centrality and prestige indices |
 | IO Roundtrip | `io_roundtrip` | v5 | Load → export → reload signature comparison for all supported formats |
 | Clustering | `clustering` | v6 | Clustering coefficient per node, triad census (16 MAN classes), maximal clique counts |
+| Connectivity | `connectivity` | v7 | Weakly/strongly connected components count + per-node component IDs |
+| Matrix | `matrix` | v8 | Raw contents of every Matrix-producing `Graph` operation (adjacency, inverse, distances, similarity, dissimilarity, reachability, walks, clique co-membership) plus spectral-radius scalars |
+| Vertex Connectivity | `vertex_connectivity` | v9 | Local or global vertex connectivity (κ(G)) via Esfahanian-Hakimi |
+| Signed | `signed` | v10 | Johnson's-algorithm potentials and negative-cycle detection on signed graphs |
 
 Select a kernel with `--kernel <name>`. If omitted, `distance` is used.
 
@@ -138,6 +144,16 @@ Required for `--kernel walks_matrix`. Computes the walks matrix A^K, where each 
 | `prominence` | — | ✓ | — | — |
 | `io_roundtrip` | — | ✓ | — | — |
 | `clustering` | — | ✓ | — | — |
+| `connectivity` | — | — | — | — |
+| `matrix` | — | ✓ | — | — |
+| `vertex_connectivity` | — | — | — | — |
+| `signed` | — | ✓ | — | — |
+
+`connectivity` also takes `--connectivity-type weak\|strong` (directed graphs only).
+`vertex_connectivity` takes `--conn-mode local\|global`, plus `--conn-source`/`--conn-target` for
+local mode and `--verify-naive` to cross-check against the naive O(n²) sweep. `matrix` takes
+`--similarity-measure`, `--similarity-input`, `--dissimilarity-measure` depending on which matrix
+category is requested.
 
 ---
 
@@ -300,6 +316,10 @@ Bake the run flags into the filename so baselines are self-describing:
 | Walks v3 | `__WALKS_K{N}__V3` |
 | IO roundtrip v5 | `__FT{id}` (optionally `_multirel`, `_big`) |
 | Clustering v6 | `__CLUST__V6__FT{id}__W{0\|1}_IW{0\|1}_DI{0\|1}` |
+| Connectivity v7 | `__CONN__V7__FT{id}` (optionally `__STRONG`) |
+| Matrix v8 | `__MATRIX__V8__FT{id}__W{0\|1}_IW{0\|1}_DI{0\|1}` (optionally `__jaccard`/`__pearson`/`__simple_matching`) |
+| Vertex Connectivity v9 | `__VCONN__V9__FT{id}__global` or `__local_{source}_{target}` |
+| Signed v10 | `__SIGNED__V10__FT{id}__W{0\|1}_IW{0\|1}` |
 
 **Examples:**
 
@@ -315,12 +335,16 @@ TinyGraphML_Weighted_Dir_N3__FT1.json
 ## Baselines Directory Layout
 
 ```
-src/tools/baselines/              ← distance v1
-src/tools/baselines/reachability/ ← reachability v2
-src/tools/baselines/walks/        ← walks v3
-src/tools/baselines/prominence/   ← prominence v4
-src/tools/baselines/io_roundtrip/ ← IO roundtrip v5
-src/tools/baselines/clustering/   ← clustering v6
+src/tools/baselines/                    ← distance v1
+src/tools/baselines/reachability/       ← reachability v2
+src/tools/baselines/walks/              ← walks v3
+src/tools/baselines/prominence/         ← prominence v4
+src/tools/baselines/io_roundtrip/       ← IO roundtrip v5
+src/tools/baselines/clustering/         ← clustering v6
+src/tools/baselines/connectivity/       ← connectivity v7
+src/tools/baselines/matrix/             ← matrix v8
+src/tools/baselines/vertex_connectivity/ ← vertex connectivity v9
+src/tools/baselines/signed/             ← signed v10
 ```
 
 ---
@@ -331,7 +355,7 @@ Three shell scripts in `scripts/` orchestrate the harness for CI and local use.
 
 ### `scripts/run_golden_compares.sh`
 
-Runs all registered kernel cases and compares them against their committed baselines. Exits non-zero if any case fails. Covers all six kernels (v1–v6).
+Runs all registered kernel cases and compares them against their committed baselines. Exits non-zero if any case fails. Covers all ten kernels (v1–v10).
 
 ```bash
 ./scripts/run_golden_compares.sh
