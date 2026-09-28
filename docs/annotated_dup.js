@@ -21,6 +21,7 @@ var annotated_dup =
     [ "DialogBulkEdit", "class_dialog_bulk_edit.html", "class_dialog_bulk_edit" ],
     [ "DialogCentralityBonacich", "class_dialog_centrality_bonacich.html", "class_dialog_centrality_bonacich" ],
     [ "DialogCentralityKatz", "class_dialog_centrality_katz.html", "class_dialog_centrality_katz" ],
+    [ "DialogCentralityPN", "class_dialog_centrality_p_n.html", "class_dialog_centrality_p_n" ],
     [ "DialogClusteringHierarchical", "class_dialog_clustering_hierarchical.html", "class_dialog_clustering_hierarchical" ],
     [ "DialogDataSetSelect", "class_dialog_data_set_select.html", "class_dialog_data_set_select" ],
     [ "DialogDissimilarities", "class_dialog_dissimilarities.html", "class_dialog_dissimilarities" ],

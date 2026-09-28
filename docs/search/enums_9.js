@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type_0',['Type',['../struct_filter_spec.html#a9af7cc4d14a1bc2c560e4a55073a23f8',1,'FilterSpec']]]
+  ['reportformat_0',['ReportFormat',['../global_8h.html#a3d5da577e76f50d29898f666100d9e9d',1,'global.h']]]
 ];

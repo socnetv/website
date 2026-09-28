@@ -1,0 +1,15 @@
+<map id="dialogcentralitypn.h" name="dialogcentralitypn.h">
+<area shape="rect" id="Node000001" title="Declares the DialogCentralityPN class for collecting the PN Centrality mode in SocNetV." alt="" coords="65,5,198,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,74,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,34,68,72,65,67,114,29"/>
+<area shape="rect" id="Node000003" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="98,79,165,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,31,134,63,129,63,129,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="188,79,339,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="155,29,229,69,227,74,153,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="8,153,63,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="117,107,65,146,62,141,114,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="87,153,176,178"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="134,105,134,137,129,137,129,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="200,153,266,178"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="150,103,205,141,201,145,147,107"/>
+</map>

@@ -6,6 +6,8 @@ var dir_d13d94bd334f63c69b35ca6dd5d351aa =
     [ "dialogcentralitybonacich.h", "dialogcentralitybonacich_8h.html", "dialogcentralitybonacich_8h" ],
     [ "dialogcentralitykatz.cpp", "dialogcentralitykatz_8cpp.html", null ],
     [ "dialogcentralitykatz.h", "dialogcentralitykatz_8h.html", "dialogcentralitykatz_8h" ],
+    [ "dialogcentralitypn.cpp", "dialogcentralitypn_8cpp.html", null ],
+    [ "dialogcentralitypn.h", "dialogcentralitypn_8h.html", "dialogcentralitypn_8h" ],
     [ "dialogclusteringhierarchical.cpp", "dialogclusteringhierarchical_8cpp.html", null ],
     [ "dialogclusteringhierarchical.h", "dialogclusteringhierarchical_8h.html", "dialogclusteringhierarchical_8h" ],
     [ "dialogdatasetselect.cpp", "dialogdatasetselect_8cpp.html", null ],

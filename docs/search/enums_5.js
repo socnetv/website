@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['networkrequesttype_0',['NetworkRequestType',['../global_8h.html#a17d029b82aae6495213d94a2bcd498f4',1,'global.h']]],
-  ['nodeconnectivitystatus_1',['NodeConnectivityStatus',['../class_graph.html#adbfff7f510255a4a85174bfadb49ef1b',1,'Graph']]],
-  ['nodeshape_2',['NodeShape',['../global_8h.html#a37e50858781617a826d3709db82aba70',1,'global.h']]]
+  ['modstatus_0',['ModStatus',['../class_graph.html#ad261ae1ff287588b9d0e10adc864afa6',1,'Graph']]]
 ];

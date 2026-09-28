@@ -45,7 +45,7 @@ var searchData=
   ['endgraphmlelementnode_42',['endGraphMLElementNode',['../class_parser.html#aa960d48d04f0b3e8d702be58d8c4e7dd',1,'Parser']]],
   ['estimatespectralradius_43',['estimateSpectralRadius',['../class_graph.html#a047f441735e64562d0484f84ccda0058',1,'Graph']]],
   ['evc_44',['EVC',['../class_graph_vertex.html#ae4385913ebb60cb42792ad49eb72533d',1,'GraphVertex']]],
-  ['expbysquaring2_45',['expBySquaring2',['../class_matrix.html#a0f3d752d7b307582b5c34af1cc468df7',1,'Matrix']]],
+  ['expbysquaring2_45',['expBySquaring2',['../class_matrix.html#a9682e3d7e9035f20e7737b53ca537e78',1,'Matrix']]],
   ['exportedgescsv_46',['exportEdgesCSV',['../class_graph_table_widget.html#a81439e92613e70d9801516b624f6f161',1,'GraphTableWidget']]],
   ['exportedgesjson_47',['exportEdgesJSON',['../class_graph_table_widget.html#ac930dfdfea31bc96f25a5b68548fdc0c',1,'GraphTableWidget']]],
   ['exportnodescsv_48',['exportNodesCSV',['../class_graph_table_widget.html#a97bbe226eced8e0938811b2353a79d4e',1,'GraphTableWidget']]],
