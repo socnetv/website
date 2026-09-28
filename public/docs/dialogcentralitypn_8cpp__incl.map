@@ -1,0 +1,25 @@
+<map id="dialogcentralitypn.cpp" name="dialogcentralitypn.cpp">
+<area shape="rect" id="Node000001" title="Implements the DialogCentralityPN class for collecting the PN Centrality mode in SocNetV." alt="" coords="251,5,398,31"/>
+<area shape="rect" id="Node000002" href="$dialogcentralitypn_8h.html" title="Declares the DialogCentralityPN class for collecting the PN Centrality mode in SocNetV." alt="" coords="65,79,198,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,34,180,76,178,71,291,29"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="222,79,321,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="318,33,292,68,288,65,314,30"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="345,79,414,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="336,30,363,65,359,68,332,33"/>
+<area shape="rect" id="Node000011" href="$forms__logging_8h.html" title="Shared WS14 logging category declaration for src/forms/ dialog files." alt="" coords="439,79,552,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="355,29,454,70,452,75,353,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,74,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,107,68,145,65,141,114,103"/>
+<area shape="rect" id="Node000004" href="$global_8h.html" title="Global definitions, constants, enumerations, and utility types for SocNetV." alt="" coords="98,153,165,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="134,105,134,137,129,137,129,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="188,153,339,178"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="155,103,229,143,227,147,153,108"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="8,226,63,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="117,181,65,219,62,215,114,177"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="87,226,176,252"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="134,179,134,211,129,211,129,179"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="200,226,266,252"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="150,177,205,215,201,219,147,181"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="431,153,560,178"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="498,105,498,137,493,137,493,105"/>
+</map>

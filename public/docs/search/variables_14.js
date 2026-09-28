@@ -2,7 +2,7 @@ var searchData=
 [
   ['v1_0',['v1',['../struct_clicked_edge.html#ad639818b197dfb4a2d57aaf4f7fa1377',1,'ClickedEdge']]],
   ['v2_1',['v2',['../struct_clicked_edge.html#acc7618afd91c8c3b5565c8700bade1d6',1,'ClickedEdge']]],
-  ['value_2',['value',['../class_pair_v_f.html#aa5791d9bab6f690df6507aa35f166cb5',1,'PairVF::value'],['../struct_graph_1_1_node_connectivity_result.html#a5e63df382c0448c39bf0cd4dd77038ee',1,'Graph::NodeConnectivityResult::value'],['../struct_filter_condition.html#a3dcb58779b6fb0cc4c37d1c56f934461',1,'FilterCondition::value'],['../struct_actor.html#a8df2091bdf14edccdda648165c94f69d',1,'Actor::value']]],
+  ['value_2',['value',['../class_pair_v_f.html#aa5791d9bab6f690df6507aa35f166cb5',1,'PairVF::value'],['../struct_graph_1_1_node_connectivity_result.html#a5e63df382c0448c39bf0cd4dd77038ee',1,'Graph::NodeConnectivityResult::value'],['../struct_graph_1_1_graph_connectivity_result.html#aefd7cf29ac8bc8e8cab8e6bfa14e1815',1,'Graph::GraphConnectivityResult::value'],['../struct_filter_condition.html#a3dcb58779b6fb0cc4c37d1c56f934461',1,'FilterCondition::value'],['../struct_actor.html#a8df2091bdf14edccdda648165c94f69d',1,'Actor::value']]],
   ['valueedit_3',['valueEdit',['../struct_dialog_query_builder_1_1_condition_row.html#a20b3d1352516422b44f0878218a6922f',1,'DialogQueryBuilder::ConditionRow']]],
   ['variableslocationlist_4',['variablesLocationList',['../class_dialog_clustering_hierarchical.html#a5856c34704d94f91aeae0acb11f4a805',1,'DialogClusteringHierarchical::variablesLocationList'],['../class_dialog_dissimilarities.html#a1ccb4ac680acf1bedcdb5eca9535549e',1,'DialogDissimilarities::variablesLocationList'],['../class_dialog_similarity_matches.html#a36e245b4720b67a287977f997663d696',1,'DialogSimilarityMatches::variablesLocationList'],['../class_dialog_similarity_pearson.html#ae873a9ea1b0a036fbf532e342b2ec1a2',1,'DialogSimilarityPearson::variablesLocationList']]],
   ['variancebpc_5',['varianceBPC',['../class_graph.html#a5c530e4ca31c5ae9d3a50e6a92e0c64a',1,'Graph']]],
@@ -21,9 +21,10 @@ var searchData=
   ['variancespc_18',['varianceSPC',['../class_graph.html#a8aadfa6eccbfacda394a62a4de1e43fd',1,'Graph']]],
   ['variancessc_19',['varianceSSC',['../class_graph.html#adf5908e0d5bd9f4184afa2433cb3ee71',1,'Graph']]],
   ['verbose_20',['verbose',['../structcli_1_1_cli_config.html#a8f511e6d3694cb8e027307d8ebecc862',1,'cli::CliConfig']]],
-  ['version_21',['VERSION',['../global_8h.html#a0bb1acd26e99b7fc2dfd883596a4a7f5',1,'global.h']]],
-  ['viewdatatableact_22',['viewDataTableAct',['../class_main_window.html#aaf9b3ca608ff5f4498b3190ec90fe463',1,'MainWindow']]],
-  ['viewoptionsmenu_23',['viewOptionsMenu',['../class_main_window.html#a946d7a7ec27b130f25833b12947ed85c',1,'MainWindow']]],
-  ['visible_24',['visible',['../class_edge_visibility_change.html#a9c2afc5d5fd073b8448952db06329a40',1,'EdgeVisibilityChange::visible'],['../struct_node_table_model_1_1_node_row.html#aa9e6692c28d8287f008999f8035e4282',1,'NodeTableModel::NodeRow::visible']]],
-  ['vpos_25',['vpos',['../class_graph.html#aa7843b7958fadd9229b859fdfb06ed76',1,'Graph']]]
+  ['verifynaive_21',['verifyNaive',['../structcli_1_1_cli_config.html#a3de6fb39088c1775b5739d9d8421964b',1,'cli::CliConfig']]],
+  ['version_22',['VERSION',['../global_8h.html#a0bb1acd26e99b7fc2dfd883596a4a7f5',1,'global.h']]],
+  ['viewdatatableact_23',['viewDataTableAct',['../class_main_window.html#aaf9b3ca608ff5f4498b3190ec90fe463',1,'MainWindow']]],
+  ['viewoptionsmenu_24',['viewOptionsMenu',['../class_main_window.html#a946d7a7ec27b130f25833b12947ed85c',1,'MainWindow']]],
+  ['visible_25',['visible',['../class_edge_visibility_change.html#a9c2afc5d5fd073b8448952db06329a40',1,'EdgeVisibilityChange::visible'],['../struct_node_table_model_1_1_node_row.html#aa9e6692c28d8287f008999f8035e4282',1,'NodeTableModel::NodeRow::visible']]],
+  ['vpos_26',['vpos',['../class_graph.html#aa7843b7958fadd9229b859fdfb06ed76',1,'Graph']]]
 ];

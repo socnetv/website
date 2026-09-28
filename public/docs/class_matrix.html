@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.8</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -137,9 +137,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add9c23e5ff5e2456a8d48024ab19fe96" id="r_add9c23e5ff5e2456a8d48024ab19fe96"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows</a> ()</td></tr>
 <tr class="memitem:a7e960a1c6e8f5aa90dddb18d9394890c" id="r_a7e960a1c6e8f5aa90dddb18d9394890c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7e960a1c6e8f5aa90dddb18d9394890c">size</a> ()</td></tr>
 <tr class="memitem:ab48d85988859bc436cbb69b0111f2ca5" id="r_ab48d85988859bc436cbb69b0111f2ca5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5">findMinMaxValues</a> (qreal &amp;min, qreal &amp;max, bool &amp;hasRealNumbers)</td></tr>
-<tr class="memdesc:ab48d85988859bc436cbb69b0111f2ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values found, plus whether any cell has a fractional (non-integer) part - used by report writers to decide display precision and, for distance matrices, whether the max value is RAND_MAX (meaning some pair is unreachable). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
+<tr class="memitem:a745abb22a41eade06980343a35d4aa80" id="r_a745abb22a41eade06980343a35d4aa80"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a745abb22a41eade06980343a35d4aa80">hasNegativeEntry</a> ()</td></tr>
+<tr class="memdesc:a745abb22a41eade06980343a35d4aa80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values found, plus whether any cell has a fractional (non-integer) part - used by report writers to decide display precision and, for distance matrices, whether the max value is RAND_MAX (meaning some pair is unreachable). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a263c9e49df2a476afec20d2dce404497" id="r_a263c9e49df2a476afec20d2dce404497"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a263c9e49df2a476afec20d2dce404497">NeighboursNearestFarthest</a> (qreal &amp;min, qreal &amp;max, int &amp;imin, int &amp;jmin, int &amp;imax, int &amp;jmax)</td></tr>
-<tr class="memdesc:a263c9e49df2a476afec20d2dce404497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5" title="Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values ...">findMinMaxValues()</a>, but skips the diagonal (r==c) and also reports which pair of distinct vertices achieved the min/max - used to find the closest and farthest pair of nodes in a distance/dissimilarity matrix (e.g. by hierarchical clustering, which repeatedly needs "which two clusters are nearest right now"). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
+<tr class="memdesc:a263c9e49df2a476afec20d2dce404497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5">findMinMaxValues()</a>, but skips the diagonal (r==c) and also reports which pair of distinct vertices achieved the min/max - used to find the closest and farthest pair of nodes in a distance/dissimilarity matrix (e.g. by hierarchical clustering, which repeatedly needs "which two clusters are nearest right now"). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:ad031e4cac2d7564347c8870cfb08e840" id="r_ad031e4cac2d7564347c8870cfb08e840"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad031e4cac2d7564347c8870cfb08e840">deleteRowColumn</a> (int i)</td></tr>
 <tr class="memdesc:ad031e4cac2d7564347c8870cfb08e840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes row erased and column erased from this (square) matrix, shifting every later row/column back by one to close the gap. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()) - rebuilds the whole matrix into a new, smaller buffer (see the comment inside).  <br /></td></tr>
 <tr class="memitem:a50e3219050552b2f9683be6a4662292b" id="r_a50e3219050552b2f9683be6a4662292b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a50e3219050552b2f9683be6a4662292b">identityMatrix</a> (int dim)</td></tr>
@@ -150,18 +151,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a335ff4e4b97b1f412b6ba94fc57ab7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills every cell of this matrix with the given value. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:aa637521475da1b4e7e215de25b2f6b16" id="r_aa637521475da1b4e7e215de25b2f6b16"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa637521475da1b4e7e215de25b2f6b16">subtractFromI</a> ()</td></tr>
 <tr class="memdesc:aa637521475da1b4e7e215de25b2f6b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces this matrix with I - this (the identity matrix minus this matrix), in place. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
-<tr class="memitem:ae8d865d3beaec2cce97db3dbcfa42646" id="r_ae8d865d3beaec2cce97db3dbcfa42646"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae8d865d3beaec2cce97db3dbcfa42646">operator=</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a)</td></tr>
-<tr class="memdesc:ae8d865d3beaec2cce97db3dbcfa42646"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> equality/assignment , operator = Allows copying a matrix onto another using b=a where b,a matrices Equals two matrices.  <br /></td></tr>
+<tr class="memitem:aeb13b9955c6fe0fc86538093c894ff1c" id="r_aeb13b9955c6fe0fc86538093c894ff1c"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aeb13b9955c6fe0fc86538093c894ff1c">operator=</a> (const <a class="el" href="class_matrix.html">Matrix</a> &amp;a)</td></tr>
+<tr class="memdesc:aeb13b9955c6fe0fc86538093c894ff1c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> equality/assignment , operator = Allows copying a matrix onto another using b=a where b,a matrices Equals two matrices.  <br /></td></tr>
 <tr class="memitem:a1e7680b5e35607556088d94101bedf82" id="r_a1e7680b5e35607556088d94101bedf82"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1e7680b5e35607556088d94101bedf82">sum</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;a, <a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a1e7680b5e35607556088d94101bedf82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition: sets this matrix to a + b, cell by cell. Same result as <a class="el" href="#ae0ed296536f062f5857e1e5550093890" title="Matrix addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S....">operator+()</a>, just a different calling interface: c.sum(a,b) instead of c = a + b. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
+<tr class="memdesc:a1e7680b5e35607556088d94101bedf82"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition: sets this matrix to a + b, cell by cell. Same result as <a class="el" href="#af0722ceaa06d860a236378a04f610942" title="Matrix addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S....">operator+()</a>, just a different calling interface: c.sum(a,b) instead of c = a + b. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:abb3c8d544c682255888602203ad4f76c" id="r_abb3c8d544c682255888602203ad4f76c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abb3c8d544c682255888602203ad4f76c">operator+=</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
 <tr class="memdesc:abb3c8d544c682255888602203ad4f76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds matrix b to this matrix, in place, cell by cell. Allows A += B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
-<tr class="memitem:ae0ed296536f062f5857e1e5550093890" id="r_ae0ed296536f062f5857e1e5550093890"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae0ed296536f062f5857e1e5550093890">operator+</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:ae0ed296536f062f5857e1e5550093890"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S. Allows S = A + B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
-<tr class="memitem:a982dfa156a7e026fdf32f9cb3a7aa341" id="r_a982dfa156a7e026fdf32f9cb3a7aa341"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a982dfa156a7e026fdf32f9cb3a7aa341">operator-</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a982dfa156a7e026fdf32f9cb3a7aa341"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> subtraction, operator -. Subtracts b (same dimensions) from this matrix and returns the result S. Allows S = A - B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
-<tr class="memitem:a2a024b6ea1ea94c6293a829689c92cdb" id="r_a2a024b6ea1ea94c6293a829689c92cdb"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a024b6ea1ea94c6293a829689c92cdb">operator*</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
-<tr class="memdesc:a2a024b6ea1ea94c6293a829689c92cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> multiplication, operator *. Allows P = A * B, where A is this (m x n) and B is b (n x p); returns the m x p product P. Complexity: O(m*n*p).  <br /></td></tr>
+<tr class="memitem:af0722ceaa06d860a236378a04f610942" id="r_af0722ceaa06d860a236378a04f610942"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#af0722ceaa06d860a236378a04f610942">operator+</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
+<tr class="memdesc:af0722ceaa06d860a236378a04f610942"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S. Allows S = A + B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
+<tr class="memitem:ab3bdfa8f9991e3fca8ee8e70c579fc34" id="r_ab3bdfa8f9991e3fca8ee8e70c579fc34"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab3bdfa8f9991e3fca8ee8e70c579fc34">operator-</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
+<tr class="memdesc:ab3bdfa8f9991e3fca8ee8e70c579fc34"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> subtraction, operator -. Subtracts b (same dimensions) from this matrix and returns the result S. Allows S = A - B. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
+<tr class="memitem:a77109678219b5ceafe82b63c73f9ff20" id="r_a77109678219b5ceafe82b63c73f9ff20"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a77109678219b5ceafe82b63c73f9ff20">operator*</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
+<tr class="memdesc:a77109678219b5ceafe82b63c73f9ff20"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> multiplication, operator *. Allows P = A * B, where A is this (m x n) and B is b (n x p); returns the m x p product P. Complexity: O(m*n*p).  <br /></td></tr>
 <tr class="memitem:a02aa856e2460a5110376a3682a20935e" id="r_a02aa856e2460a5110376a3682a20935e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02aa856e2460a5110376a3682a20935e">operator*=</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;b)</td></tr>
 <tr class="memdesc:a02aa856e2460a5110376a3682a20935e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies (right) this m x n matrix with given n x p matrix b, replacing this matrix's own contents with the m x p product. Allows A *= B. Complexity: O(m*n*p).  <br /></td></tr>
 <tr class="memitem:a9363be8aae4aa23516e1c3475e4902e9" id="r_a9363be8aae4aa23516e1c3475e4902e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9">product</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;A, <a class="el" href="class_matrix.html">Matrix</a> &amp;B, bool symmetry=false)</td></tr>
@@ -176,16 +177,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a292e782a2e80d0e8582ba6999a8cc737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies every element of the given row by value, in place. Complexity: O(cols()).  <br /></td></tr>
 <tr class="memitem:afdf864c48534cf7e00563c72cadc32a2" id="r_afdf864c48534cf7e00563c72cadc32a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afdf864c48534cf7e00563c72cadc32a2">productByVector</a> (qreal in[], qreal out[], const bool &amp;leftMultiply=false)</td></tr>
 <tr class="memdesc:afdf864c48534cf7e00563c72cadc32a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the matrix-by-vector product Ax of this matrix (or the left product xA, if leftMultiply is true). Used by <a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8" title="Implementation of the Power method which computes the leading eigenvector x of this matrix,...">powerIteration()</a>'s inner loop. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
-<tr class="memitem:a82da700fb408afed1883cc70fcfed906" id="r_a82da700fb408afed1883cc70fcfed906"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a82da700fb408afed1883cc70fcfed906">pow</a> (int n, bool symmetry=false)</td></tr>
-<tr class="memdesc:a82da700fb408afed1883cc70fcfed906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>). Used by the walks-matrix code (XM = AM.pow(length)): entry (i,j) of AM^n counts the number of walks of length n from vertex i to vertex j.  <br /></td></tr>
-<tr class="memitem:a0f3d752d7b307582b5c34af1cc468df7" id="r_a0f3d752d7b307582b5c34af1cc468df7"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7">expBySquaring2</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;Y, <a class="el" href="class_matrix.html">Matrix</a> &amp;X, int n, bool symmetry=false)</td></tr>
-<tr class="memdesc:a0f3d752d7b307582b5c34af1cc468df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive algorithm implementing "Exponentiation by squaring". Also known as Fast Modulo Multiplication, this algorithm allows fast computation of a large power n of square matrix X.  <br /></td></tr>
+<tr class="memitem:a7c70b64c04eb04e5d5a85949aeaebeba" id="r_a7c70b64c04eb04e5d5a85949aeaebeba"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7c70b64c04eb04e5d5a85949aeaebeba">pow</a> (int n, bool symmetry=false)</td></tr>
+<tr class="memdesc:a7c70b64c04eb04e5d5a85949aeaebeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see <a class="el" href="#a9682e3d7e9035f20e7737b53ca537e78" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>). Used by the walks-matrix code (XM = AM.pow(length)): entry (i,j) of AM^n counts the number of walks of length n from vertex i to vertex j.  <br /></td></tr>
+<tr class="memitem:a9682e3d7e9035f20e7737b53ca537e78" id="r_a9682e3d7e9035f20e7737b53ca537e78"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9682e3d7e9035f20e7737b53ca537e78">expBySquaring2</a> (<a class="el" href="class_matrix.html">Matrix</a> &amp;Y, <a class="el" href="class_matrix.html">Matrix</a> &amp;X, int n, bool symmetry=false)</td></tr>
+<tr class="memdesc:a9682e3d7e9035f20e7737b53ca537e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive algorithm implementing "Exponentiation by squaring". Also known as Fast Modulo Multiplication, this algorithm allows fast computation of a large power n of square matrix X.  <br /></td></tr>
 <tr class="memitem:a772e644ebf88c4db20141d9453892d84" id="r_a772e644ebf88c4db20141d9453892d84"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a772e644ebf88c4db20141d9453892d84">distanceManhattan</a> (qreal x[], qreal y[], int n)</td></tr>
 <tr class="memdesc:a772e644ebf88c4db20141d9453892d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function, takes to vectors and returns their Manhattan distance (also known as l1 norm, Taxicab or L1 distance) which is the sum of the absolute differences of their coordinates.  <br /></td></tr>
 <tr class="memitem:a68fc9e95ee2d9d9b18a12abdc95e27dd" id="r_a68fc9e95ee2d9d9b18a12abdc95e27dd"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a68fc9e95ee2d9d9b18a12abdc95e27dd">distanceEuclidean</a> (qreal x[], int n)</td></tr>
 <tr class="memdesc:a68fc9e95ee2d9d9b18a12abdc95e27dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function, computes the Euclideian length (also known as L2 distance) of a vector: if x = (x1 x2 ... xn), then ||x|| = square_root(x1*x1 + x2*x2 + ... + xn*xn).  <br /></td></tr>
 <tr class="memitem:a9a6c70cc1421518b7a3a6c5c9398b3f8" id="r_a9a6c70cc1421518b7a3a6c5c9398b3f8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8">powerIteration</a> (qreal x[], qreal &amp;xsum, qreal &amp;xmax, int &amp;xmaxi, qreal &amp;xmin, int &amp;xmini, const qreal eps, const int &amp;maxIter, std::function&lt; bool()&gt; cancelCheck=nullptr, qreal *lambdaMax=nullptr)</td></tr>
 <tr class="memdesc:a9a6c70cc1421518b7a3a6c5c9398b3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the Power method which computes the leading eigenvector x of this matrix, that is the eigenvector corresponding to the largest positive eigenvalue. In the process, it also computes min and max values. Used by Eigenvector Centrality (EVC).  <br /></td></tr>
+<tr class="memitem:af8f31792471490b719557124c6969726" id="r_af8f31792471490b719557124c6969726"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#af8f31792471490b719557124c6969726">spectralRadiusExact</a> (const qreal eps=0.0000001, const int maxIter=500, std::function&lt; bool()&gt; cancelCheck=nullptr)</td></tr>
+<tr class="memdesc:af8f31792471490b719557124c6969726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates this matrix's spectral radius (dominant eigenvalue magnitude) exactly, via power iteration from a unit seed vector.  <br /></td></tr>
+<tr class="memitem:a9b6c8f6ee7d2fc21275178852f005240" id="r_a9b6c8f6ee7d2fc21275178852f005240"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a9b6c8f6ee7d2fc21275178852f005240">spectralRadiusBound</a> ()</td></tr>
+<tr class="memdesc:a9b6c8f6ee7d2fc21275178852f005240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a safe upper bound on this matrix's spectral radius (max |eigenvalue|), via Gerschgorin's circle theorem. Works on any square matrix, signed entries included.  <br /></td></tr>
 <tr class="memitem:ab270bc5fddb676f9f54e4a29ed2162f9" id="r_ab270bc5fddb676f9f54e4a29ed2162f9"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab270bc5fddb676f9f54e4a29ed2162f9">degreeMatrix</a> ()</td></tr>
 <tr class="memdesc:ab270bc5fddb676f9f54e4a29ed2162f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the degree matrix of this matrix: a diagonal matrix where S(i,i) is the sum of row i (i.e. vertex i's degree, if this is an adjacency matrix). Allows S = A.degreeMatrix(). Used by <a class="el" href="#a42bf675c54d9282b437a708ad86b37ad" title="Returns the Laplacian of this matrix: an N x N matrix L = D - A, where D is this matrix&#39;s degreeMatri...">laplacianMatrix()</a>. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()).  <br /></td></tr>
 <tr class="memitem:a42bf675c54d9282b437a708ad86b37ad" id="r_a42bf675c54d9282b437a708ad86b37ad"><td class="memItemLeft"><a class="el" href="class_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a42bf675c54d9282b437a708ad86b37ad">laplacianMatrix</a> ()</td></tr>
@@ -563,18 +568,19 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a square input (<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>==<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a>): N is always taken from <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>, including as the bound for the "other axis" in every varLocation mode. Every current caller passes the (always-square) adjacency or distances matrix; a non-square input would read/write past the intended bounds. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> T, the dissimilarities matrix. </dd></dl>
 
 </div>
 </div>
-<a id="a0f3d752d7b307582b5c34af1cc468df7" name="a0f3d752d7b307582b5c34af1cc468df7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f3d752d7b307582b5c34af1cc468df7">&#9670;&#160;</a></span>expBySquaring2()</h2>
+<a id="a9682e3d7e9035f20e7737b53ca537e78" name="a9682e3d7e9035f20e7737b53ca537e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9682e3d7e9035f20e7737b53ca537e78">&#9670;&#160;</a></span>expBySquaring2()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::expBySquaring2 </td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::expBySquaring2 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>Y</em></span>, </td>
         </tr>
@@ -660,15 +666,34 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a745abb22a41eade06980343a35d4aa80" name="a745abb22a41eade06980343a35d4aa80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745abb22a41eade06980343a35d4aa80">&#9670;&#160;</a></span>hasNegativeEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Matrix::hasNegativeEntry </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values found, plus whether any cell has a fractional (non-integer) part - used by report writers to decide display precision and, for distance matrices, whether the max value is RAND_MAX (meaning some pair is unreachable). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">min</td><td>Output: the smallest value found. </td></tr>
     <tr><td class="paramname">max</td><td>Output: the largest value found. </td></tr>
-    <tr><td class="paramname">hasRealNumbers</td><td>Output: true if any cell has a non-zero fractional part. </td></tr>
+    <tr><td class="paramname">hasRealNumbers</td><td>Output: true if any cell has a non-zero fractional part.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Returns true if any cell in this matrix is negative.</p>
+<p>Meaning: a cheap, always-fresh way to tell a plain (non-negative) matrix from a signed one - e.g. deciding whether <a class="el" href="#af8f31792471490b719557124c6969726" title="Estimates this matrix&#39;s spectral radius (dominant eigenvalue magnitude) exactly, via power iteration ...">Matrix::spectralRadiusExact()</a> (Perron-Frobenius, non-negative only) or <a class="el" href="#a9b6c8f6ee7d2fc21275178852f005240" title="Returns a safe upper bound on this matrix&#39;s spectral radius (max |eigenvalue|), via Gerschgorin&#39;s cir...">Matrix::spectralRadiusBound()</a> (Gerschgorin, any matrix) is the correct one to call for a given matrix. Deliberately not cached on <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a>: a cached "does this graph have negative weights" flag would need its own invalidation on every edge-weight-changing code path (same class of bug as this session's <a class="el" href="class_distance_engine.html">DistanceEngine</a> cache-mode fix) - this stays a plain O(rows*cols) scan (with early exit) on the actual matrix in hand instead, so it's never stale. </p><dl class="section return"><dt>Returns</dt><dd>true on the first negative cell found, false if the matrix is empty or all entries are &gt;= 0. </dd></dl>
 
 </div>
 </div>
@@ -1014,7 +1039,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5" title="Scans every cell of this matrix (including the diagonal) and reports the smallest and largest values ...">findMinMaxValues()</a>, but skips the diagonal (r==c) and also reports which pair of distinct vertices achieved the min/max - used to find the closest and farthest pair of nodes in a distance/dissimilarity matrix (e.g. by hierarchical clustering, which repeatedly needs "which two clusters are nearest right now"). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<p>Like <a class="el" href="#ab48d85988859bc436cbb69b0111f2ca5">findMinMaxValues()</a>, but skips the diagonal (r==c) and also reports which pair of distinct vertices achieved the min/max - used to find the closest and farthest pair of nodes in a distance/dissimilarity matrix (e.g. by hierarchical clustering, which repeatedly needs "which two clusters are nearest right now"). Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">min</td><td>Output: the smallest off-diagonal value found. </td></tr>
@@ -1029,14 +1054,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a024b6ea1ea94c6293a829689c92cdb" name="a2a024b6ea1ea94c6293a829689c92cdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a024b6ea1ea94c6293a829689c92cdb">&#9670;&#160;</a></span>operator*()</h2>
+<a id="a77109678219b5ceafe82b63c73f9ff20" name="a77109678219b5ceafe82b63c73f9ff20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77109678219b5ceafe82b63c73f9ff20">&#9670;&#160;</a></span>operator*()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::operator* </td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::operator* </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
           <td></td>
@@ -1080,14 +1105,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0ed296536f062f5857e1e5550093890" name="ae0ed296536f062f5857e1e5550093890"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0ed296536f062f5857e1e5550093890">&#9670;&#160;</a></span>operator+()</h2>
+<a id="af0722ceaa06d860a236378a04f610942" name="af0722ceaa06d860a236378a04f610942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0722ceaa06d860a236378a04f610942">&#9670;&#160;</a></span>operator+()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::operator+ </td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::operator+ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
           <td></td>
@@ -1131,14 +1156,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a982dfa156a7e026fdf32f9cb3a7aa341" name="a982dfa156a7e026fdf32f9cb3a7aa341"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a982dfa156a7e026fdf32f9cb3a7aa341">&#9670;&#160;</a></span>operator-()</h2>
+<a id="ab3bdfa8f9991e3fca8ee8e70c579fc34" name="ab3bdfa8f9991e3fca8ee8e70c579fc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bdfa8f9991e3fca8ee8e70c579fc34">&#9670;&#160;</a></span>operator-()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::operator- </td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::operator- </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
           <td></td>
@@ -1157,8 +1182,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ae8d865d3beaec2cce97db3dbcfa42646" name="ae8d865d3beaec2cce97db3dbcfa42646"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8d865d3beaec2cce97db3dbcfa42646">&#9670;&#160;</a></span>operator=()</h2>
+<a id="aeb13b9955c6fe0fc86538093c894ff1c" name="aeb13b9955c6fe0fc86538093c894ff1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb13b9955c6fe0fc86538093c894ff1c">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1166,7 +1191,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1247,17 +1272,20 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> N x N (N = number of variables being compared) of Pearson r values. Complexity: O(N^2 * M), same shape as <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a> - see its complexity note. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a square AM (<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>==<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a>) - see <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a>'s </dd>
+<dd>
+for why. </dd></dl>
 
 </div>
 </div>
-<a id="a82da700fb408afed1883cc70fcfed906" name="a82da700fb408afed1883cc70fcfed906"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82da700fb408afed1883cc70fcfed906">&#9670;&#160;</a></span>pow()</h2>
+<a id="a7c70b64c04eb04e5d5a85949aeaebeba" name="a7c70b64c04eb04e5d5a85949aeaebeba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c70b64c04eb04e5d5a85949aeaebeba">&#9670;&#160;</a></span>pow()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> &amp; Matrix::pow </td>
+          <td class="memname"><a class="el" href="class_matrix.html">Matrix</a> Matrix::pow </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
         </tr>
@@ -1269,16 +1297,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>). Used by the walks-matrix code (XM = AM.pow(length)): entry (i,j) of AM^n counts the number of walks of length n from vertex i to vertex j. </p>
+<p>Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see <a class="el" href="#a9682e3d7e9035f20e7737b53ca537e78" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>). Used by the walks-matrix code (XM = AM.pow(length)): entry (i,j) of AM^n counts the number of walks of length n from vertex i to vertex j. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td></td></tr>
-    <tr><td class="paramname">symmetry</td><td>Passed straight through to <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>/product() - see <a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9" title="Matrix Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it i...">product()</a>'s own</td></tr>
+    <tr><td class="paramname">symmetry</td><td>Passed straight through to <a class="el" href="#a9682e3d7e9035f20e7737b53ca537e78" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>/product() - see <a class="el" href="#a9363be8aae4aa23516e1c3475e4902e9" title="Matrix Multiplication. Given two matrices A (mxn) and B (nxp), computes their product and stores it i...">product()</a>'s own</td></tr>
     <tr><td class="paramname">symmetry</td><td>for what it does. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>This matrix, raised to the n-th power. Complexity: O(log(n)) matrix multiplications, each O(rows()^3) - see <a class="el" href="#a0f3d752d7b307582b5c34af1cc468df7" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>This matrix, raised to the n-th power. Complexity: O(log(n)) matrix multiplications, each O(rows()^3) - see <a class="el" href="#a9682e3d7e9035f20e7737b53ca537e78" title="Recursive algorithm implementing &quot;Exponentiation by squaring&quot;. Also known as Fast Modulo Multiplicati...">expBySquaring2()</a>. </dd></dl>
 
 </div>
 </div>
@@ -1343,17 +1371,18 @@ Friends</h2></td></tr>
 
 <p>Implementation of the Power method which computes the leading eigenvector x of this matrix, that is the eigenvector corresponding to the largest positive eigenvalue. In the process, it also computes min and max values. Used by Eigenvector Centrality (EVC). </p>
 <p>Meaning: start from any vector x, repeatedly multiply by the matrix and rescale back to unit length - the vector converges to the eigenvector for the matrix's largest eigenvalue (lambda_max), which is exactly the vector eigenvector centrality reports.</p>
-<p>We use C arrays instead of std::vectors or anything else, as we know from start the size (n) of vectors x and tmp This approach is faster than using std::vector when n &gt; 1000 </p><dl class="section note"><dt>Note</dt><dd>Uses n = <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a> throughout (for tmp's size, and as both the row and column count passed to <a class="el" href="#afdf864c48534cf7e00563c72cadc32a2" title="Calculates the matrix-by-vector product Ax of this matrix (or the left product xA,...">productByVector()</a>/distanceEuclidean()/distanceManhattan()) - correct only for square matrices. Unlike <a class="el" href="#a82da700fb408afed1883cc70fcfed906" title="Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see expBySquaring2())....">pow()</a>, this method does not check <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>==<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a> itself; it relies on the caller (centralityEigenvector()) only ever passing a square (adjacency) matrix. Complexity: O(maxIter * n^2) - each iteration is one O(n^2) <a class="el" href="#afdf864c48534cf7e00563c72cadc32a2" title="Calculates the matrix-by-vector product Ax of this matrix (or the left product xA,...">productByVector()</a> call plus a handful of O(n) passes; iterates until the vector's Manhattan distance to its previous value drops below eps, or maxIter is reached. </dd></dl>
+<p>Preconditions/guarantee: this only converges to a meaningful, correct result for a non-negative, irreducible matrix (e.g. a plain adjacency matrix - never a signed one, where some entries are negative). Under those conditions, the Perron-Frobenius theorem guarantees a single dominant eigenvalue that is real, positive, and strictly larger in magnitude than every other eigenvalue - that's the value this method converges to. Without non-negativity, that guarantee is gone: eigenvalues can be complex (e.g. a matrix like [[0,1],[-4,0]] has eigenvalues +-2i, not real numbers at all) or tied in magnitude with opposite sign (e.g. [[0,1],[1,0]] has +1 and -1 tied), and this method's iteration can oscillate forever instead of converging. Callers on a possibly-signed matrix need a different bound - see <a class="el" href="#a9b6c8f6ee7d2fc21275178852f005240" title="Returns a safe upper bound on this matrix&#39;s spectral radius (max |eigenvalue|), via Gerschgorin&#39;s cir...">Matrix::spectralRadiusBound()</a> (Gerschgorin's theorem), which works on any matrix but only returns a safe overestimate, not the exact value.</p>
+<p>We use C arrays instead of std::vectors or anything else, as we know from start the size (n) of vectors x and tmp This approach is faster than using std::vector when n &gt; 1000 </p><dl class="section note"><dt>Note</dt><dd>Uses n = <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a> throughout (for tmp's size, and as both the row and column count passed to <a class="el" href="#afdf864c48534cf7e00563c72cadc32a2" title="Calculates the matrix-by-vector product Ax of this matrix (or the left product xA,...">productByVector()</a>/distanceEuclidean()/distanceManhattan()) - correct only for square matrices. Unlike <a class="el" href="#a7c70b64c04eb04e5d5a85949aeaebeba" title="Returns the n-th power of this matrix (X^n), via exponentiation by squaring (see expBySquaring2())....">pow()</a>, this method does not check <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>==<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a> itself; it relies on the caller (centralityEigenvector()) only ever passing a square (adjacency) matrix. Complexity: O(maxIter * n^2) - each iteration is one O(n^2) <a class="el" href="#afdf864c48534cf7e00563c72cadc32a2" title="Calculates the matrix-by-vector product Ax of this matrix (or the left product xA,...">productByVector()</a> call plus a handful of O(n) passes; iterates until the vector's Manhattan distance to its previous value drops below eps, or maxIter is reached. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">xsum</td><td></td></tr>
-    <tr><td class="paramname">xmax</td><td></td></tr>
-    <tr><td class="paramname">xmaxi</td><td></td></tr>
-    <tr><td class="paramname">xmin</td><td></td></tr>
-    <tr><td class="paramname">xmini</td><td></td></tr>
-    <tr><td class="paramname">eps</td><td></td></tr>
-    <tr><td class="paramname">maxIter</td><td></td></tr>
+    <tr><td class="paramname">x</td><td>In: the seed vector (any nonzero starting guess, e.g. all-ones - size must be <a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>). Out: overwritten with the converged, unit-normalized eigenvector for the dominant eigenvalue (this is the ranking eigenvector centrality reports). </td></tr>
+    <tr><td class="paramname">xsum</td><td>Out: sum of x's components after convergence (or after the last completed iteration, if canceled/maxIter reached first). </td></tr>
+    <tr><td class="paramname">xmax</td><td>Out: the largest component value in the converged x. </td></tr>
+    <tr><td class="paramname">xmaxi</td><td>Out: the 1-based index (vertex number) of that largest component. </td></tr>
+    <tr><td class="paramname">xmin</td><td>Out: the smallest component value in the converged x. </td></tr>
+    <tr><td class="paramname">xmini</td><td>Out: the 1-based index (vertex number) of that smallest component. </td></tr>
+    <tr><td class="paramname">eps</td><td>Convergence threshold: the loop stops once the Manhattan distance between successive x vectors drops below this. </td></tr>
+    <tr><td class="paramname">maxIter</td><td>Hard cap on iterations, in case eps is never reached. </td></tr>
     <tr><td class="paramname">cancelCheck</td><td>Optional callback checked once per iteration; if it returns true, the loop stops early (x/xsum/xmax/xmin reflect the last completed iteration, not a full result). Defaults to nullptr (never cancels), so existing callers are unaffected. </td></tr>
     <tr><td class="paramname">lambdaMax</td><td>Optional out param: the largest eigenvalue itself, read off from the pre-normalization vector length on the final iteration (norm(Ax) ~= lambda_max once x has converged to unit length). Correctly reports exactly 0 for a nilpotent matrix (any directed acyclic graph - no cycles at all), meaning "no convergence bound, any value works" - this is the genuine mathematical answer, not a numerical-error placeholder (a symmetric/undirected adjacency matrix can never be nilpotent unless it's the zero matrix, so this only ever arises for directed graphs). Callers that only need the eigenvector (e.g. centralityEigenvector()) can leave this nullptr; callers that need to validate a convergence bound like Katz's alpha &lt; 1/lambda_max need it. </td></tr>
   </table>
@@ -1699,6 +1728,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> SCM, N x N (N = number of variables being compared), with a similarity score for every pair. Complexity: O(N^2 * M), same shape as <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a> - see its complexity note. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Assumes a square AM (<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>==<a class="el" href="#a35649f43610688d020b2cad91f616d51">cols()</a>) - see <a class="el" href="#a5dbc9a5a3d0a866e8892c8d57beef153" title="Computes a dissimilarities matrix T: T(i,k) is how different variable i and variable k are,...">distancesMatrix()</a>'s </dd>
+<dd>
+for why. </dd></dl>
 
 </div>
 </div>
@@ -1753,6 +1785,71 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a9b6c8f6ee7d2fc21275178852f005240" name="a9b6c8f6ee7d2fc21275178852f005240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6c8f6ee7d2fc21275178852f005240">&#9670;&#160;</a></span>spectralRadiusBound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal Matrix::spectralRadiusBound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a safe upper bound on this matrix's spectral radius (max |eigenvalue|), via Gerschgorin's circle theorem. Works on any square matrix, signed entries included. </p>
+<p>Meaning: every eigenvalue of a matrix A - real or complex - lies within some "Gerschgorin
+disc": for row i, the disc centered at A(i,i) with radius equal to the sum of the absolute values of the rest of row i. So the magnitude of every eigenvalue is bounded by (that row's center distance from 0, plus its radius), and the largest such bound across all rows is a safe (if possibly loose) upper bound on the true spectral radius. Unlike <a class="el" href="#af8f31792471490b719557124c6969726" title="Estimates this matrix&#39;s spectral radius (dominant eigenvalue magnitude) exactly, via power iteration ...">Matrix::spectralRadiusExact()</a>, this needs no iteration and no non-negativity precondition - it's a handful of row sums, always correct, just not always tight.</p>
+<p>When to use: as PN centrality's (WS18 P3) convergence bound - its A = P - 2N is a signed matrix, so <a class="el" href="#af8f31792471490b719557124c6969726" title="Estimates this matrix&#39;s spectral radius (dominant eigenvalue magnitude) exactly, via power iteration ...">spectralRadiusExact()</a>'s Perron-Frobenius-based iteration can't be trusted (see that method's own doc comment for why: complex or tied eigenvalues are possible once entries go negative). Any matrix where <a class="el" href="#af8f31792471490b719557124c6969726" title="Estimates this matrix&#39;s spectral radius (dominant eigenvalue magnitude) exactly, via power iteration ...">spectralRadiusExact()</a> applies could use this too, but would get a looser bound for no benefit - prefer <a class="el" href="#af8f31792471490b719557124c6969726" title="Estimates this matrix&#39;s spectral radius (dominant eigenvalue magnitude) exactly, via power iteration ...">spectralRadiusExact()</a> whenever the matrix is known non-negative.</p>
+<p>Compare to: <a class="el" href="#af8f31792471490b719557124c6969726" title="Estimates this matrix&#39;s spectral radius (dominant eigenvalue magnitude) exactly, via power iteration ...">Matrix::spectralRadiusExact()</a>, the exact value, but only trustworthy on a non-negative, irreducible matrix.</p>
+<p>Math: rho(A) &lt;= max_i ( |A(i,i)| + sum_{j != i} |A(i,j)| ), i.e. the largest row sum of absolute values (using |A(i,i)| as the center's own distance from 0, plus the rest of the row as the disc's radius - equivalent to just summing |A(i,j)| over the whole row).</p>
+<dl class="section return"><dt>Returns</dt><dd>the Gerschgorin bound, or 0 for an empty matrix. </dd></dl>
+
+</div>
+</div>
+<a id="af8f31792471490b719557124c6969726" name="af8f31792471490b719557124c6969726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f31792471490b719557124c6969726">&#9670;&#160;</a></span>spectralRadiusExact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal Matrix::spectralRadiusExact </td>
+          <td>(</td>
+          <td class="paramtype">const qreal</td>          <td class="paramname"><span class="paramname"><em>eps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0000001</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>maxIter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">500</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; bool()&gt;</td>          <td class="paramname"><span class="paramname"><em>cancelCheck</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estimates this matrix's spectral radius (dominant eigenvalue magnitude) exactly, via power iteration from a unit seed vector. </p>
+<p>Meaning: see <a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8" title="Implementation of the Power method which computes the leading eigenvector x of this matrix,...">Matrix::powerIteration()</a>'s own doc comment for the full mechanism and the Perron-Frobenius preconditions this relies on. In short: only trustworthy for a non-negative, irreducible matrix (a plain adjacency matrix, not a signed one) - the value this returns is the exact dominant eigenvalue for that case, not an estimate/bound.</p>
+<p>Compare to: <a class="el" href="#a9b6c8f6ee7d2fc21275178852f005240" title="Returns a safe upper bound on this matrix&#39;s spectral radius (max |eigenvalue|), via Gerschgorin&#39;s cir...">Matrix::spectralRadiusBound()</a>, which works on any matrix (signed included) but only returns a safe upper bound, not the exact value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eps</td><td>Convergence threshold on successive iterations' Manhattan distance. </td></tr>
+    <tr><td class="paramname">maxIter</td><td>Iteration cap if eps is never reached. </td></tr>
+    <tr><td class="paramname">cancelCheck</td><td>Optional callback checked once per iteration; see <a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8" title="Implementation of the Power method which computes the leading eigenvector x of this matrix,...">powerIteration()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the estimated spectral radius, or 0 for a nilpotent matrix (a genuine "no bound, any
+        value converges" answer - see <a class="el" href="#a9a6c70cc1421518b7a3a6c5c9398b3f8" title="Implementation of the Power method which computes the leading eigenvector x of this matrix,...">powerIteration()</a>'s own note on this) or if canceled. </dd></dl>
+
+</div>
+</div>
 <a id="aa637521475da1b4e7e215de25b2f6b16" name="aa637521475da1b4e7e215de25b2f6b16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa637521475da1b4e7e215de25b2f6b16">&#9670;&#160;</a></span>subtractFromI()</h2>
 
@@ -1792,7 +1889,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition: sets this matrix to a + b, cell by cell. Same result as <a class="el" href="#ae0ed296536f062f5857e1e5550093890" title="Matrix addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S....">operator+()</a>, just a different calling interface: c.sum(a,b) instead of c = a + b. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
+<p><a class="el" href="class_matrix.html" title="General-purpose dense matrix (adjacency, distance, similarity, sociomatrix, etc.),...">Matrix</a> addition: sets this matrix to a + b, cell by cell. Same result as <a class="el" href="#af0722ceaa06d860a236378a04f610942" title="Matrix addition, operator +. Adds this matrix and b (same dimensions) and returns the sum S....">operator+()</a>, just a different calling interface: c.sum(a,b) instead of c = a + b. Complexity: O(<a class="el" href="#add9c23e5ff5e2456a8d48024ab19fe96">rows()</a>*cols()). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td></td></tr>

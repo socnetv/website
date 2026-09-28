@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.8</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -112,7 +112,7 @@ $(function(){initNavTree('struct_distance_scratch.html','','struct_distance_scra
 </div><!--header-->
 <div class="contents">
 
-<p>Per-run scratch state for <a class="el" href="class_distance_engine.html#aff595b5f3217e421a007136f6ef487d6" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call.  
+<p>Per-run scratch state for <a class="el" href="class_distance_engine.html#a77f40545462c9b53f93ae8bb900a074d" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -134,9 +134,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2c942d20b404197f0064ea7d77048958" id="r_a2c942d20b404197f0064ea7d77048958"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a2c942d20b404197f0064ea7d77048958">maxEdgeWeightInNetwork</a> = 0</td></tr>
 <tr class="memitem:ac314d2b93e9ced661b3e763667591f1d" id="r_ac314d2b93e9ced661b3e763667591f1d"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#ac314d2b93e9ced661b3e763667591f1d">tempEdgeWeight</a> = 0</td></tr>
 <tr class="memitem:a658f5663b57a0191562afc00811c2129" id="r_a658f5663b57a0191562afc00811c2129"><td class="memItemLeft">qreal&#160;</td><td class="memItemRight"><a class="el" href="#a658f5663b57a0191562afc00811c2129">pairDistance</a> = 0</td></tr>
+<tr class="memitem:a41fdb390ae6eca5ce1cd78c7dbffa2d0" id="r_a41fdb390ae6eca5ce1cd78c7dbffa2d0"><td class="memItemLeft">QVector&lt; qreal &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a41fdb390ae6eca5ce1cd78c7dbffa2d0">potentials</a></td></tr>
+<tr class="memitem:a8784d67916505ea3f6ec1e71f7442fde" id="r_a8784d67916505ea3f6ec1e71f7442fde"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8784d67916505ea3f6ec1e71f7442fde">negativeCycleDetected</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Per-run scratch state for <a class="el" href="class_distance_engine.html#aff595b5f3217e421a007136f6ef487d6" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call. </p>
+<div class="textblock"><p>Per-run scratch state for <a class="el" href="class_distance_engine.html#a77f40545462c9b53f93ae8bb900a074d" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a>, scoped to one compute() call. </p>
 <p>Not per-source (see PerSourceScratch/ThreadLocalState in <a class="el" href="per__source__scratch_8h.html" title="Per-source scratch state for the Brandes SSSP / centrality computation.">per_source_scratch.h</a> / <a class="el" href="thread__local__state_8h.html" title="Per-thread state for the parallel SSSP source loop in DistanceEngine.">thread_local_state.h</a> for that) — this is the state threaded through compute()'s three phases (initRun / runAllSources / finalize) that used to be a long list of local variables before WS1's Phase C extraction. One instance lives on compute()'s stack for the whole call. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a1e8d2134861c3c5886aa488928ceb147" name="a1e8d2134861c3c5886aa488928ceb147"></a>
@@ -237,6 +239,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8784d67916505ea3f6ec1e71f7442fde" name="a8784d67916505ea3f6ec1e71f7442fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8784d67916505ea3f6ec1e71f7442fde">&#9670;&#160;</a></span>negativeCycleDetected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DistanceScratch::negativeCycleDetected = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a658f5663b57a0191562afc00811c2129" name="a658f5663b57a0191562afc00811c2129"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a658f5663b57a0191562afc00811c2129">&#9670;&#160;</a></span>pairDistance</h2>
 
@@ -259,6 +275,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">QString DistanceScratch::pMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41fdb390ae6eca5ce1cd78c7dbffa2d0" name="a41fdb390ae6eca5ce1cd78c7dbffa2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41fdb390ae6eca5ce1cd78c7dbffa2d0">&#9670;&#160;</a></span>potentials</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;qreal&gt; DistanceScratch::potentials</td>
         </tr>
       </table>
 </div><div class="memdoc">

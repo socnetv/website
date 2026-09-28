@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.8</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -597,6 +597,8 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a1d746e26dbb0b8dc9ecf121db8fc7ae5" id="r_a1d746e26dbb0b8dc9ecf121db8fc7ae5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1d746e26dbb0b8dc9ecf121db8fc7ae5">slotAnalyzeConnectivity</a> ()</td></tr>
 <tr class="memdesc:a1d746e26dbb0b8dc9ecf121db8fc7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles requests to compute the network's overall vertex connectivity: the minimum, over every pair of nodes, of their local vertex connectivity.  <br /></td></tr>
 <tr class="memitem:ad5c0bca5eee0faace92f2db301429758" id="r_ad5c0bca5eee0faace92f2db301429758"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad5c0bca5eee0faace92f2db301429758">slotAnalyzeCentralityDegree</a> ()</td></tr>
+<tr class="memitem:ab6fafeaa55d868ab2f97f22c51f3a113" id="r_ab6fafeaa55d868ab2f97f22c51f3a113"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6fafeaa55d868ab2f97f22c51f3a113">slotAnalyzeCentralitySignedDegree</a> ()</td></tr>
+<tr class="memitem:ade5bc06100f06f03daac61e1273b82be" id="r_ade5bc06100f06f03daac61e1273b82be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ade5bc06100f06f03daac61e1273b82be">slotAnalyzeCentralityPN</a> ()</td></tr>
 <tr class="memitem:ac5dde59411ce976e81dc221568768f5d" id="r_ac5dde59411ce976e81dc221568768f5d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5dde59411ce976e81dc221568768f5d">slotAnalyzeCentralityCloseness</a> ()</td></tr>
 <tr class="memitem:a2900618477fcd9f9c23671206edc5790" id="r_a2900618477fcd9f9c23671206edc5790"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2900618477fcd9f9c23671206edc5790">slotAnalyzeCentralityClosenessIR</a> ()</td></tr>
 <tr class="memdesc:a2900618477fcd9f9c23671206edc5790"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a2900618477fcd9f9c23671206edc5790" title="MainWindow::slotAnalyzeCentralityClosenessIR Writes Centrality Closeness (based on Influence Range) i...">MainWindow::slotAnalyzeCentralityClosenessIR</a> Writes Centrality Closeness (based on Influence Range) indices into a file, then displays it.  <br /></td></tr>
@@ -1099,6 +1101,8 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a77ba1f698201e619bc96268f3f6b2989" id="r_a77ba1f698201e619bc96268f3f6b2989"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#a77ba1f698201e619bc96268f3f6b2989">analyzeStrEquivalencePearsonAct</a></td></tr>
 <tr class="memitem:ab94f537d8cc8ff8a4e9963f5f331c92d" id="r_ab94f537d8cc8ff8a4e9963f5f331c92d"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#ab94f537d8cc8ff8a4e9963f5f331c92d">analyzeStrEquivalenceMatchesAct</a></td></tr>
 <tr class="memitem:aadadea1eb639e3e8ecfc041b9e87a244" id="r_aadadea1eb639e3e8ecfc041b9e87a244"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#aadadea1eb639e3e8ecfc041b9e87a244">cDegreeAct</a></td></tr>
+<tr class="memitem:a87a7ec8a75e0841559f7ae724d96da84" id="r_a87a7ec8a75e0841559f7ae724d96da84"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#a87a7ec8a75e0841559f7ae724d96da84">cSignedDegreeAct</a></td></tr>
+<tr class="memitem:a7fa1ec81a5d2d7d5b7e2eb4aef3de75a" id="r_a7fa1ec81a5d2d7d5b7e2eb4aef3de75a"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#a7fa1ec81a5d2d7d5b7e2eb4aef3de75a">cPNAct</a></td></tr>
 <tr class="memitem:acd4ba6f4c0b662fb55addf2f0c84927f" id="r_acd4ba6f4c0b662fb55addf2f0c84927f"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#acd4ba6f4c0b662fb55addf2f0c84927f">cInDegreeAct</a></td></tr>
 <tr class="memitem:a9d7c95ac7ba63ddac50d9a7059795a38" id="r_a9d7c95ac7ba63ddac50d9a7059795a38"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#a9d7c95ac7ba63ddac50d9a7059795a38">cClosenessAct</a></td></tr>
 <tr class="memitem:a82a694aace3506bd3b197353bb63ac41" id="r_a82a694aace3506bd3b197353bb63ac41"><td class="memItemLeft">QAction *&#160;</td><td class="memItemRight"><a class="el" href="#a82a694aace3506bd3b197353bb63ac41">cInfluenceRangeClosenessAct</a></td></tr>
@@ -1790,7 +1794,7 @@ Private Attributes</h2></td></tr>
 <li><b>No dispatch</b> (<span class="tt">new</span>, <span class="tt">render</span>, <span class="tt">bulk-node-size</span>, <span class="tt">bulk-edge-color</span>): the work is already a direct, blocking call on this (GUI) thread, no cross-thread queuing involved - genuinely done by the time the call returns, so advancing immediately afterward is correct as-is.</li>
 <li><b>Single-step dispatch</b> (<span class="tt">relation</span>, <span class="tt">erdos</span>, <span class="tt">erdos-m</span>, <span class="tt">save</span>, <span class="tt">add-node</span>, <span class="tt">add-edge</span>, <span class="tt">add-relation</span>, <span class="tt">click-node</span>, <span class="tt">move</span>): the work is handed over via <span class="tt">QMetaObject::invokeMethod(activeGraph, lambda, Qt::QueuedConnection)</span> - "queue this lambda to
   run on activeGraph's thread, whenever that thread is free." <span class="tt">invokeMethod()</span> only <em>queues</em> the job and returns immediately - it does not wait for the lambda to finish. <span class="tt">BENCH</span> logging AND the call advancing to the next command (via a nested <span class="tt">QMetaObject::invokeMethod(this, ..., Qt::QueuedConnection)</span> back to the GUI thread) must therefore both happen <em>inside</em> that same lambda, at the point the work is genuinely done - never outside/after the <span class="tt">invokeMethod()</span> call itself.</li>
-<li><b>Two-step dispatch</b> (<span class="tt">filter_ego</span>, <span class="tt">filter_isolates</span>, <span class="tt">symmetrize_strongties</span>, <span class="tt">symmetrize_cocitation</span>, <span class="tt">unilateral</span>, <span class="tt">distances</span>, <span class="tt">distances_bench</span>, <span class="tt">report-centrality-degree</span>, <span class="tt">report-centrality-closeness</span>, <span class="tt">report-centrality-closeness-ir</span>, <span class="tt">report-centrality-betweenness</span>, <span class="tt">report-centrality-stress</span>, <span class="tt">report-centrality-eccentricity</span>, <span class="tt">report-centrality-power</span>, <span class="tt">report-centrality-information</span>, <span class="tt">report-centrality-eigenvector</span>, <span class="tt">report-prestige-degree</span>, <span class="tt">report-prestige-proximity</span>, <span class="tt">report-prestige-pagerank</span>): used when the work can take many seconds and should show a progress dialog, via the <span class="tt"><a class="el" href="#ac3487af0b42663f6240d863d96a18eee" title="Runs a slow Graph operation on graphThread without blocking the GUI thread (fix #254).">runGraphOperationAsync()</a></span> helper. It takes two separate lambdas - one that performs the (possibly slow) computation, one that runs only after that computation has fully completed, to report on it and advance the script. Because both lambdas need to see the same timer/result values, and a plain local variable would not survive between two separate lambdas, those values are wrapped in <span class="tt">std::shared_ptr</span> instead - each lambda holds its own copy of the pointer, all pointing at the same shared value.</li>
+<li><b>Two-step dispatch</b> (<span class="tt">filter-ego</span>, <span class="tt">filter-isolates</span>, <span class="tt">symmetrize-strongties</span>, <span class="tt">symmetrize-cocitation</span>, <span class="tt">unilateral</span>, <span class="tt">distances</span>, <span class="tt">distances-bench</span>, <span class="tt">report-centrality-degree</span>, <span class="tt">report-centrality-degree-signed</span>, <span class="tt">report-centrality-pn</span>, <span class="tt">report-centrality-closeness</span>, <span class="tt">report-centrality-closeness-ir</span>, <span class="tt">report-centrality-betweenness</span>, <span class="tt">report-centrality-stress</span>, <span class="tt">report-centrality-eccentricity</span>, <span class="tt">report-centrality-power</span>, <span class="tt">report-centrality-information</span>, <span class="tt">report-centrality-eigenvector</span>, <span class="tt">report-prestige-degree</span>, <span class="tt">report-prestige-proximity</span>, <span class="tt">report-prestige-pagerank</span>): used when the work can take many seconds and should show a progress dialog, via the <span class="tt"><a class="el" href="#ac3487af0b42663f6240d863d96a18eee" title="Runs a slow Graph operation on graphThread without blocking the GUI thread (fix #254).">runGraphOperationAsync()</a></span> helper. It takes two separate lambdas - one that performs the (possibly slow) computation, one that runs only after that computation has fully completed, to report on it and advance the script. Because both lambdas need to see the same timer/result values, and a plain local variable would not survive between two separate lambdas, those values are wrapped in <span class="tt">std::shared_ptr</span> instead - each lambda holds its own copy of the pointer, all pointing at the same shared value.</li>
 </ul>
 <p>Every command logs one <span class="tt">"BENCH &lt;command&gt; ... elapsed_ms=&lt;N&gt;"</span> line via <span class="tt">qInfo()</span> (not <span class="tt">qDebug()</span>/<span class="tt">qCDebug()</span>) on completion, so this keeps printing even when debug output is quiet by default. </p>
 
@@ -1848,9 +1852,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Runs a slow <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> operation on graphThread without blocking the GUI thread (fix #254). </p>
-<p><span class="tt"><a class="el" href="#ac6c6f1da6f7cf98672832f7403ff69bd">activeGraph</a></span> already lives on graphThread (see <a class="el" href="#a6b6fdb555d0dffe73c7a0deb141783d4" title="Initializes the Graph.">MainWindow::initGraph()</a>) - this dispatches <span class="tt">operation</span> there via a queued invocation instead of introducing any new thread or using QtConcurrent::run(). That matters: <a class="el" href="class_distance_engine.html#aff595b5f3217e421a007136f6ef487d6" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a> already parallelises internally via QtConcurrent::blockingMap over the <em>global</em> thread pool, so wrapping the outer call in QtConcurrent::run() as well would submit a second task to that same pool and risk contending with blockingMap's own worker tasks. Routing through graphThread sidesteps that entirely - blockingMap's behaviour is completely unaffected; only the identity of the thread that calls and blocks on it changes (graphThread instead of the GUI thread).</p>
+<p><span class="tt"><a class="el" href="#ac6c6f1da6f7cf98672832f7403ff69bd">activeGraph</a></span> already lives on graphThread (see <a class="el" href="#a6b6fdb555d0dffe73c7a0deb141783d4" title="Initializes the Graph.">MainWindow::initGraph()</a>) - this dispatches <span class="tt">operation</span> there via a queued invocation instead of introducing any new thread or using QtConcurrent::run(). That matters: <a class="el" href="class_distance_engine.html#a77f40545462c9b53f93ae8bb900a074d" title="Runs the full geodesic distance (and optionally centrality) computation pipeline.">DistanceEngine::compute()</a> already parallelises internally via QtConcurrent::blockingMap over the <em>global</em> thread pool, so wrapping the outer call in QtConcurrent::run() as well would submit a second task to that same pool and risk contending with blockingMap's own worker tasks. Routing through graphThread sidesteps that entirely - blockingMap's behaviour is completely unaffected; only the identity of the thread that calls and blocks on it changes (graphThread instead of the GUI thread).</p>
 <p>Shows an indeterminate progress dialog (no setValue() calls - cheap regardless of network size, unlike the granular showProgressBar mechanism) for the duration. Because it's ApplicationModal, it also prevents the user from mutating the graph from the GUI thread while <span class="tt">operation</span> runs on graphThread - required, since <a class="el" href="class_distance_engine.html">DistanceEngine</a> and friends mutate <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a>'s member state directly and are not internally synchronized against concurrent access.</p>
-<p>The dialog's Cancel button is wired to the same <a class="el" href="class_graph.html#acd06df52ab128f68c74016e4b2458304" title="Slot called by MainWindow when the user clicks Cancel in the progress dialog.">Graph::slotCancelComputation()</a> the existing granular progress dialog uses. Note this carries over an existing limitation, not a new one: cancellation can't interrupt mid-blockingMap (see the comment in <a class="el" href="class_distance_engine.html#afe60d1a4aa3b5f255ee1905f84c70a20">DistanceEngine::runAllSources()</a>) - it can only take effect at the checkpoints initRun()/ finalize() already have.</p>
+<p>The dialog's Cancel button is wired to the same <a class="el" href="class_graph.html#acd06df52ab128f68c74016e4b2458304" title="Slot called by MainWindow when the user clicks Cancel in the progress dialog.">Graph::slotCancelComputation()</a> the existing granular progress dialog uses. Note this carries over an existing limitation, not a new one: cancellation can't interrupt mid-blockingMap (see the comment in <a class="el" href="class_distance_engine.html#afe60d1a4aa3b5f255ee1905f84c70a20" title="Runs SSSP (BFS or Dijkstra, per considerWeights) from every enabled vertex, in parallel across CPU co...">DistanceEngine::runAllSources()</a>) - it can only take effect at the checkpoints initRun()/ finalize() already have.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">operation</td><td>The <a class="el" href="class_graph.html" title="The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...">Graph</a> call to run, e.g. [this, args...](){ activeGraph-&gt;foo(args...); } — capture only plain values read from UI widgets <em>before</em> calling this method, never QAction/QWidget pointers to be dereferenced inside the lambda body, since that body executes on graphThread, not the GUI thread. </td></tr>
@@ -2359,6 +2363,34 @@ network loaded"). This alone closes the crash path even though the dialog itself
 
 </div>
 </div>
+<a id="ade5bc06100f06f03daac61e1273b82be" name="ade5bc06100f06f03daac61e1273b82be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5bc06100f06f03daac61e1273b82be">&#9670;&#160;</a></span>slotAnalyzeCentralityPN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::slotAnalyzeCentralityPN </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes PN Centrality (WS18 P3, Everett &amp; Borgatti 2014) into a file, then displays it.</p>
+<p>Report format (HTML or CSV) follows the Settings &gt; Reports &gt; Output format preference.</p>
+<p>Unlike signed degree/Katz/Bonacich, no <a class="el" href="#a6fe1346e969e47ab558bae0e32ab1d9c" title="If the network has weighted / valued edges, it asks the user if the app should consider weights or no...">askAboutEdgeWeights()</a> call: PN considers tie sign only, never weights, so that question doesn't apply here. The mode dialog needs no async pre-computation step either (unlike Katz's eigenvalue estimate) - directedness is already known synchronously. </p>
+
+</div>
+</div>
 <a id="a60d927bcfa57dccedcf439b6afc12427" name="a60d927bcfa57dccedcf439b6afc12427"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60d927bcfa57dccedcf439b6afc12427">&#9670;&#160;</a></span>slotAnalyzeCentralityPower</h2>
 
@@ -2383,6 +2415,33 @@ network loaded"). This alone closes the crash path even though the dialog itself
 </div><div class="memdoc">
 
 <p><a class="el" href="#a60d927bcfa57dccedcf439b6afc12427" title="MainWindow::slotAnalyzeCentralityPower Writes Gil-Schmidt Power Centralities into a file,...">MainWindow::slotAnalyzeCentralityPower</a> Writes Gil-Schmidt Power Centralities into a file, then displays it. </p>
+<p>Report format (HTML or CSV) follows the Settings &gt; Reports &gt; Output format preference. </p>
+
+</div>
+</div>
+<a id="ab6fafeaa55d868ab2f97f22c51f3a113" name="ab6fafeaa55d868ab2f97f22c51f3a113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fafeaa55d868ab2f97f22c51f3a113">&#9670;&#160;</a></span>slotAnalyzeCentralitySignedDegree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::slotAnalyzeCentralitySignedDegree </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes Signed Degree Centralities into a file, then displays it (WS18 P3).</p>
 <p>Report format (HTML or CSV) follows the Settings &gt; Reports &gt; Output format preference. </p>
 
 </div>
@@ -11450,6 +11509,28 @@ network loaded"). This alone closes the crash path even though the dialog itself
 
 </div>
 </div>
+<a id="a7fa1ec81a5d2d7d5b7e2eb4aef3de75a" name="a7fa1ec81a5d2d7d5b7e2eb4aef3de75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa1ec81a5d2d7d5b7e2eb4aef3de75a">&#9670;&#160;</a></span>cPNAct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction * MainWindow::cPNAct</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6c55b094f9b59cdf7d74b59e78348252" name="a6c55b094f9b59cdf7d74b59e78348252"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c55b094f9b59cdf7d74b59e78348252">&#9670;&#160;</a></span>cPowerAct</h2>
 
@@ -11483,6 +11564,28 @@ network loaded"). This alone closes the crash path even though the dialog itself
       <table class="memname">
         <tr>
           <td class="memname">QAction * MainWindow::cProximityPrestigeAct</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87a7ec8a75e0841559f7ae724d96da84" name="a87a7ec8a75e0841559f7ae724d96da84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a7ec8a75e0841559f7ae724d96da84">&#9670;&#160;</a></span>cSignedDegreeAct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QAction * MainWindow::cSignedDegreeAct</td>
         </tr>
       </table>
   </td>

@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.8</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -153,76 +153,66 @@ $(function(){initNavTree('per__source__scratch_8h_source.html','',''); });
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Size of the connected component reachable from s (used for SPC normalisation).</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a41f9898fa302c7db4c30f8e99b4d5ab0">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_per_source_scratch.html#a41f9898fa302c7db4c30f8e99b4d5ab0">componentSize</a> = 0;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Per-source graph-aggregate accumulators.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// Phase 2: SSSP functions write here instead of calling graph.addToDistanceSum() /</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// graph.incGeodesicsCount() / graph.setDiameterCached() directly, which would be</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// unsafe when multiple threads process different sources concurrently.</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// The owning thread accumulates these into ThreadLocalState totals after each source,</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// and the post-loop reduction merges them into the graph-level aggregates.</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a1d90841179036dc1d192939aa21ed8d2">   59</a></span>    qreal <a class="code hl_variable" href="struct_per_source_scratch.html#a1d90841179036dc1d192939aa21ed8d2">sourceDistanceSum</a>    = 0;  <span class="comment">// replaces graph.addToDistanceSum(dist_w) in BFS</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a1afa7cae3dfa6bd7b5729d80df148d1f">   60</a></span>    <span class="keywordtype">int</span>   <a class="code hl_variable" href="struct_per_source_scratch.html#a1afa7cae3dfa6bd7b5729d80df148d1f">sourceGeodesicsCount</a> = 0;  <span class="comment">// replaces graph.incGeodesicsCount() in BFS / Dijkstra</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#adf3c9b2650866d44fc2fc97606c996c6">   61</a></span>    <span class="keywordtype">int</span>   <a class="code hl_variable" href="struct_per_source_scratch.html#adf3c9b2650866d44fc2fc97606c996c6">sourceDiameter</a>       = 0;  <span class="comment">// replaces graph.setDiameterCached() in BFS / Dijkstra</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Allocate all containers once for totalVertices positions.</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Call this once before the source loop.</span></div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a4e23975a87da25c7f489374d94722fc0">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_per_source_scratch.html#a4e23975a87da25c7f489374d94722fc0">allocate</a>(<span class="keywordtype">int</span> totalVertices)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d">Ps</a>.resize(totalVertices);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a7c23374067a807b545beef24ad38e077">delta</a>.resize(totalVertices);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0">dist</a>.resize(totalVertices);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a037d75760b71d4a43844565036b36ef2">sigma</a>.resize(totalVertices);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// No per-source graph-aggregate accumulators live here: diameter, distance sum, and</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// geodesics (reachable-pair) count must all be computed from each vertex&#39;s FINAL</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// distance, not a running/duplicated accumulation sampled during or right after</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// relaxation (a vertex can be relaxed to a smaller distance after an earlier, larger</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// one) - computed directly from dist[] / the final APSP matrix in runAllSources() and</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// finalize() instead, after a source&#39;s SSSP run has fully settled.</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Allocate all containers once for totalVertices positions.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Call this once before the source loop.</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a4e23975a87da25c7f489374d94722fc0">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_per_source_scratch.html#a4e23975a87da25c7f489374d94722fc0">allocate</a>(<span class="keywordtype">int</span> totalVertices)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d">Ps</a>.resize(totalVertices);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a7c23374067a807b545beef24ad38e077">delta</a>.resize(totalVertices);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0">dist</a>.resize(totalVertices);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a037d75760b71d4a43844565036b36ef2">sigma</a>.resize(totalVertices);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// Reset per-source state before each new source vertex.</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// computeCentralities controls whether the Brandes-only structures are reset.</span></div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a9a83c66bce0ad40a7cac984903fd4623">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_per_source_scratch.html#a9a83c66bce0ad40a7cac984903fd4623">resetPerSource</a>(<span class="keywordtype">bool</span> computeCentralities)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0">dist</a>.fill((qreal)RAND_MAX);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a037d75760b71d4a43844565036b36ef2">sigma</a>.fill(0);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="comment">// Reset per-source graph-aggregate accumulators so they reflect only this source.</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a1d90841179036dc1d192939aa21ed8d2">sourceDistanceSum</a>    = 0;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a1afa7cae3dfa6bd7b5729d80df148d1f">sourceGeodesicsCount</a> = 0;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#adf3c9b2650866d44fc2fc97606c996c6">sourceDiameter</a>       = 0;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">if</span> (computeCentralities)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">while</span> (!<a class="code hl_variable" href="struct_per_source_scratch.html#aa5d62e62a7e621a7f45b0a4654fd2ffe">Stack</a>.empty())</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <a class="code hl_variable" href="struct_per_source_scratch.html#aa5d62e62a7e621a7f45b0a4654fd2ffe">Stack</a>.pop();</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ps : <a class="code hl_variable" href="struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d">Ps</a>)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                ps.clear();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_variable" href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">nthOrder</a>.clear();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">// delta is zeroed in the per-source back-propagation setup loop,</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// not here, to preserve the existing guard on computeCentralities.</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Reset per-source state before each new source vertex.</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// computeCentralities controls whether the Brandes-only structures are reset.</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#a9a83c66bce0ad40a7cac984903fd4623">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_per_source_scratch.html#a9a83c66bce0ad40a7cac984903fd4623">resetPerSource</a>(<span class="keywordtype">bool</span> computeCentralities)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0">dist</a>.fill((qreal)RAND_MAX);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a037d75760b71d4a43844565036b36ef2">sigma</a>.fill(0);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span> (computeCentralities)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">while</span> (!<a class="code hl_variable" href="struct_per_source_scratch.html#aa5d62e62a7e621a7f45b0a4654fd2ffe">Stack</a>.empty())</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <a class="code hl_variable" href="struct_per_source_scratch.html#aa5d62e62a7e621a7f45b0a4654fd2ffe">Stack</a>.pop();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ps : <a class="code hl_variable" href="struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d">Ps</a>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                ps.clear();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">nthOrder</a>.clear();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// delta is zeroed in the per-source back-propagation setup loop,</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// not here, to preserve the existing guard on computeCentralities.</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// Increment the nth-order neighbourhood count for distance d.</span></div>
+<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#ad3bdce0ccc19e5db9694c8894dc49439">   89</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_per_source_scratch.html#ad3bdce0ccc19e5db9694c8894dc49439">nthOrderIncrement</a>(qreal d)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">nthOrder</a>.insert(d, <a class="code hl_variable" href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">nthOrder</a>.value(d, 0) + 1);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
 </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">// Increment the nth-order neighbourhood count for distance d.</span></div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="struct_per_source_scratch.html#ad3bdce0ccc19e5db9694c8894dc49439">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_per_source_scratch.html#ad3bdce0ccc19e5db9694c8894dc49439">nthOrderIncrement</a>(qreal d)</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">nthOrder</a>.insert(d, <a class="code hl_variable" href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">nthOrder</a>.value(d, 0) + 1);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
-</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">// SOCNETV_PER_SOURCE_SCRATCH_H</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif </span><span class="comment">// SOCNETV_PER_SOURCE_SCRATCH_H</span></div>
 <div class="ttc" id="astruct_per_source_scratch_html"><div class="ttname"><a href="struct_per_source_scratch.html">PerSourceScratch</a></div><div class="ttdef"><b>Definition</b> per_source_scratch.h:25</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_a037d75760b71d4a43844565036b36ef2"><div class="ttname"><a href="struct_per_source_scratch.html#a037d75760b71d4a43844565036b36ef2">PerSourceScratch::sigma</a></div><div class="ttdeci">QVector&lt; int &gt; sigma</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:44</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_a082e94228d1e688e480064c0f0d98aa1"><div class="ttname"><a href="struct_per_source_scratch.html#a082e94228d1e688e480064c0f0d98aa1">PerSourceScratch::nthOrder</a></div><div class="ttdeci">QHash&lt; qreal, int &gt; nthOrder</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:48</div></div>
-<div class="ttc" id="astruct_per_source_scratch_html_a1afa7cae3dfa6bd7b5729d80df148d1f"><div class="ttname"><a href="struct_per_source_scratch.html#a1afa7cae3dfa6bd7b5729d80df148d1f">PerSourceScratch::sourceGeodesicsCount</a></div><div class="ttdeci">int sourceGeodesicsCount</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:60</div></div>
-<div class="ttc" id="astruct_per_source_scratch_html_a1d90841179036dc1d192939aa21ed8d2"><div class="ttname"><a href="struct_per_source_scratch.html#a1d90841179036dc1d192939aa21ed8d2">PerSourceScratch::sourceDistanceSum</a></div><div class="ttdeci">qreal sourceDistanceSum</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:59</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_a41f9898fa302c7db4c30f8e99b4d5ab0"><div class="ttname"><a href="struct_per_source_scratch.html#a41f9898fa302c7db4c30f8e99b4d5ab0">PerSourceScratch::componentSize</a></div><div class="ttdeci">int componentSize</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:51</div></div>
-<div class="ttc" id="astruct_per_source_scratch_html_a4e23975a87da25c7f489374d94722fc0"><div class="ttname"><a href="struct_per_source_scratch.html#a4e23975a87da25c7f489374d94722fc0">PerSourceScratch::allocate</a></div><div class="ttdeci">void allocate(int totalVertices)</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:65</div></div>
+<div class="ttc" id="astruct_per_source_scratch_html_a4e23975a87da25c7f489374d94722fc0"><div class="ttname"><a href="struct_per_source_scratch.html#a4e23975a87da25c7f489374d94722fc0">PerSourceScratch::allocate</a></div><div class="ttdeci">void allocate(int totalVertices)</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:62</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_a78c388b79687391f21b1214c5af3b9d0"><div class="ttname"><a href="struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0">PerSourceScratch::dist</a></div><div class="ttdeci">QVector&lt; qreal &gt; dist</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:40</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_a7c23374067a807b545beef24ad38e077"><div class="ttname"><a href="struct_per_source_scratch.html#a7c23374067a807b545beef24ad38e077">PerSourceScratch::delta</a></div><div class="ttdeci">QVector&lt; qreal &gt; delta</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:35</div></div>
-<div class="ttc" id="astruct_per_source_scratch_html_a9a83c66bce0ad40a7cac984903fd4623"><div class="ttname"><a href="struct_per_source_scratch.html#a9a83c66bce0ad40a7cac984903fd4623">PerSourceScratch::resetPerSource</a></div><div class="ttdeci">void resetPerSource(bool computeCentralities)</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:75</div></div>
+<div class="ttc" id="astruct_per_source_scratch_html_a9a83c66bce0ad40a7cac984903fd4623"><div class="ttname"><a href="struct_per_source_scratch.html#a9a83c66bce0ad40a7cac984903fd4623">PerSourceScratch::resetPerSource</a></div><div class="ttdeci">void resetPerSource(bool computeCentralities)</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:72</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_aa5d62e62a7e621a7f45b0a4654fd2ffe"><div class="ttname"><a href="struct_per_source_scratch.html#aa5d62e62a7e621a7f45b0a4654fd2ffe">PerSourceScratch::Stack</a></div><div class="ttdeci">std::stack&lt; int &gt; Stack</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:27</div></div>
-<div class="ttc" id="astruct_per_source_scratch_html_ad3bdce0ccc19e5db9694c8894dc49439"><div class="ttname"><a href="struct_per_source_scratch.html#ad3bdce0ccc19e5db9694c8894dc49439">PerSourceScratch::nthOrderIncrement</a></div><div class="ttdeci">void nthOrderIncrement(qreal d)</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:96</div></div>
-<div class="ttc" id="astruct_per_source_scratch_html_adf3c9b2650866d44fc2fc97606c996c6"><div class="ttname"><a href="struct_per_source_scratch.html#adf3c9b2650866d44fc2fc97606c996c6">PerSourceScratch::sourceDiameter</a></div><div class="ttdeci">int sourceDiameter</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:61</div></div>
+<div class="ttc" id="astruct_per_source_scratch_html_ad3bdce0ccc19e5db9694c8894dc49439"><div class="ttname"><a href="struct_per_source_scratch.html#ad3bdce0ccc19e5db9694c8894dc49439">PerSourceScratch::nthOrderIncrement</a></div><div class="ttdeci">void nthOrderIncrement(qreal d)</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:89</div></div>
 <div class="ttc" id="astruct_per_source_scratch_html_ae029850fb0d7506093f8dde1b2b5730d"><div class="ttname"><a href="struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d">PerSourceScratch::Ps</a></div><div class="ttdeci">QVector&lt; QList&lt; int &gt; &gt; Ps</div><div class="ttdef"><b>Definition</b> per_source_scratch.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

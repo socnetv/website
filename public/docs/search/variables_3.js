@@ -39,11 +39,12 @@ var searchData=
   ['discreteprps_36',['discretePRPs',['../class_graph.html#a498dcf30101395bd7a7f850e68aad584',1,'Graph']]],
   ['discretescs_37',['discreteSCs',['../class_graph.html#ac803953a9f33728226741b82345fb74b',1,'Graph']]],
   ['discretesdcs_38',['discreteSDCs',['../class_graph.html#a5d9b8a99efcc1dd3be1a957cc0b9a60d',1,'Graph']]],
-  ['dist_39',['dist',['../struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0',1,'PerSourceScratch']]],
-  ['distance_40',['distance',['../class_graph_distance.html#a0bb7d565c99748b69c0dd83cb49fdf4a',1,'GraphDistance']]],
-  ['distances_5fsum_5ffor_5fs_41',['distances_sum_for_s',['../struct_distance_scratch.html#a1e8d2134861c3c5886aa488928ceb147',1,'DistanceScratch']]],
-  ['dm_42',['DM',['../class_graph.html#add66af5466cbe4ed4763d7ed8494d1f3',1,'Graph']]],
-  ['drawedgesbezier_43',['drawEdgesBezier',['../class_main_window.html#ad2251ac99a6c5a3aa67ccaa94a26500a',1,'MainWindow']]],
-  ['dropisolates_44',['dropIsolates',['../structcli_1_1_cli_config.html#adb0343ab50fc06a58807dc4d99efc264',1,'cli::CliConfig']]],
-  ['dumpjsonpath_45',['dumpJsonPath',['../structcli_1_1_cli_config.html#a22de40c8039dc25035718129381b64f7',1,'cli::CliConfig']]]
+  ['dissimilaritymeasure_39',['dissimilarityMeasure',['../structcli_1_1_cli_config.html#a46ac9744346d479dc644d83208513604',1,'cli::CliConfig']]],
+  ['dist_40',['dist',['../struct_per_source_scratch.html#a78c388b79687391f21b1214c5af3b9d0',1,'PerSourceScratch']]],
+  ['distance_41',['distance',['../class_graph_distance.html#ab00bc33afcb700b3a74e3850fafcc447',1,'GraphDistance']]],
+  ['distances_5fsum_5ffor_5fs_42',['distances_sum_for_s',['../struct_distance_scratch.html#a1e8d2134861c3c5886aa488928ceb147',1,'DistanceScratch']]],
+  ['dm_43',['DM',['../class_graph.html#add66af5466cbe4ed4763d7ed8494d1f3',1,'Graph']]],
+  ['drawedgesbezier_44',['drawEdgesBezier',['../class_main_window.html#ad2251ac99a6c5a3aa67ccaa94a26500a',1,'MainWindow']]],
+  ['dropisolates_45',['dropIsolates',['../structcli_1_1_cli_config.html#adb0343ab50fc06a58807dc4d99efc264',1,'cli::CliConfig']]],
+  ['dumpjsonpath_46',['dumpJsonPath',['../structcli_1_1_cli_config.html#a22de40c8039dc25035718129381b64f7',1,'cli::CliConfig']]]
 ];

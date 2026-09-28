@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['indextype_0',['IndexType',['../global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839',1,'global.h']]]
+  ['graphconnectivitystatus_0',['GraphConnectivityStatus',['../class_graph.html#abe5ce38a2f5d33d9e05cfe5413d81700',1,'Graph']]]
 ];

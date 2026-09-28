@@ -105,21 +105,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_dialog_preview_file.html#ace2ca7cfe4707e2f95a8095d9458f2a9",
-"class_edge_table_model.html",
-"class_graph.html#a445ca91a75e97883a07ebcf25e4b650f",
-"class_graph.html#aa4683eab1a5ab4bf32f8eda176c77895",
-"class_graph.html#af102a5b47c93629d0a38f08019a374d3",
-"class_graph_vertex.html#ab84411ef85bf33859bc1f7306241a37b",
-"class_graphics_node.html#af15e8130439ef15af20abf620fbcf53b",
-"class_main_window.html#a291e5a9f81ff1ac6721cbd1d81ed4523",
-"class_main_window.html#a83641edb8a6c6f1ef1ebf80a5f4a349d",
-"class_main_window.html#ae17e047019d7a6718f2197c10a1018d0",
-"class_parser.html#aa960d48d04f0b3e8d702be58d8c4e7dd",
-"dir_02403f584f959d1d8f54bbda49334d3d.html",
-"graph_8h.html#adc764b55e2f1dbe6a045727a3932a006",
-"namespacecli.html#a006012127c80761ff957e38dd0f656eb",
-"struct_per_source_scratch.html#ae029850fb0d7506093f8dde1b2b5730d"
+"class_dialog_preview_file.html#a9f8f059be3e27fe762fe6ab4953afc50",
+"class_distance_engine.html#a8fedf8039020ff1ae1e3091791f0cadd",
+"class_graph.html#a40f3755321cd99faa2d6146960ae477a",
+"class_graph.html#a99ffd3d90520cc8dae15ff4533186c52",
+"class_graph.html#ae4c55d37f9276a65d962b5e17851a2d6",
+"class_graph_vertex.html#a721c89470f299e54af4e28a0fb773822",
+"class_graphics_node.html#a0f25d8ca5dc3a73f1f5a2ece6cfc4b23",
+"class_main_window.html#a0f2f60f63da2a718d89ccaa36b6b1f2c",
+"class_main_window.html#a6e6d767d1d89be07b06a914de674b5e1",
+"class_main_window.html#acbd8133a9c6a2af32ac5655bdaa68606",
+"class_parser.html#a12234f6cd36b61af4b50c94a179422c1",
+"dialogdissimilarities_8cpp.html",
+"global_8h.html#a30d290a3f66b6082975a39b218e03528",
+"mainwindow__help_8cpp.html",
+"struct_filter_condition.html#a7449e3a6b25e60c370bda3ac12352d2baaf3936de15119538b076c9fc45d99831"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

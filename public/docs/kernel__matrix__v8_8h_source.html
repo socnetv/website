@@ -45,7 +45,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="socnetv-logo-manual.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.7</span>
+   <div id="projectname">Code Documentation<span id="projectnumber">&#160;3.8</span>
    </div>
    <div id="projectbrief">Social Network Visualizer</div>
   </td>
@@ -116,26 +116,29 @@ $(function(){initNavTree('kernel__matrix__v8_8h_source.html','',''); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Matrix golden coverage kernel (schema v8) for socnetv-cli.</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Dumps raw contents of every Matrix-producing Graph operation (adjacency, inverse,</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// distances, similarity, reachability, walks, clique co-membership) for direct</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// regression coverage of Matrix::item()/setItem() indexing - see WS6.7.</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="cli__common_8h.html">tools/cli/cli_common.h</a>&quot;</span> <span class="comment">// for cli::CliConfig</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_graph.html">Graph</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_headless_load_result.html">HeadlessLoadResult</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// distances, shortest paths, similarity, dissimilarity, reachability, walks, clique</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// co-membership) for direct regression coverage of Matrix::item()/setItem() indexing -</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// see WS6.7. Also dumps AM&#39;s spectral-radius scalars (exact/bound/has_negative_entry, see</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Matrix::spectralRadiusExact()/spectralRadiusBound()/hasNegativeEntry()) - not a Matrix</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// dump itself, but computed on AM right after it&#39;s built, so it lives here too.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="cli__common_8h.html">tools/cli/cli_common.h</a>&quot;</span> <span class="comment">// for cli::CliConfig</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecli.html">cli</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespacecli.html#a5dcd5e7e78cab45e9a67be1a6edde799">runKernelMatrixV8</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structcli_1_1_cli_config.html">CliConfig</a> &amp;cfg,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                      <span class="keyword">const</span> HeadlessLoadResult &amp;load,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                      Graph &amp;g);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace cli</span></div>
-<div class="ttc" id="aclass_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...</div><div class="ttdef"><b>Definition</b> graph.h:103</div></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_graph.html">Graph</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_headless_load_result.html">HeadlessLoadResult</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecli.html">cli</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespacecli.html#a5dcd5e7e78cab45e9a67be1a6edde799">runKernelMatrixV8</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structcli_1_1_cli_config.html">CliConfig</a> &amp;cfg,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                      <span class="keyword">const</span> HeadlessLoadResult &amp;load,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                      Graph &amp;g);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">// namespace cli</span></div>
+<div class="ttc" id="aclass_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">The Graph class This is the main class for a Graph, used in conjuction with GraphVertex,...</div><div class="ttdef"><b>Definition</b> graph.h:105</div></div>
 <div class="ttc" id="acli__common_8h_html"><div class="ttname"><a href="cli__common_8h.html">cli_common.h</a></div></div>
 <div class="ttc" id="anamespacecli_html"><div class="ttname"><a href="namespacecli.html">cli</a></div><div class="ttdef"><b>Definition</b> cli_common.cpp:18</div></div>
-<div class="ttc" id="anamespacecli_html_a5dcd5e7e78cab45e9a67be1a6edde799"><div class="ttname"><a href="namespacecli.html#a5dcd5e7e78cab45e9a67be1a6edde799">cli::runKernelMatrixV8</a></div><div class="ttdeci">int runKernelMatrixV8(const CliConfig &amp;cfg, const HeadlessLoadResult &amp;load, Graph &amp;g)</div><div class="ttdef"><b>Definition</b> kernel_matrix_v8.cpp:322</div></div>
+<div class="ttc" id="anamespacecli_html_a5dcd5e7e78cab45e9a67be1a6edde799"><div class="ttname"><a href="namespacecli.html#a5dcd5e7e78cab45e9a67be1a6edde799">cli::runKernelMatrixV8</a></div><div class="ttdeci">int runKernelMatrixV8(const CliConfig &amp;cfg, const HeadlessLoadResult &amp;load, Graph &amp;g)</div><div class="ttdef"><b>Definition</b> kernel_matrix_v8.cpp:355</div></div>
 <div class="ttc" id="astruct_headless_load_result_html"><div class="ttname"><a href="struct_headless_load_result.html">HeadlessLoadResult</a></div><div class="ttdef"><b>Definition</b> headless_graph_loader.h:29</div></div>
 <div class="ttc" id="astructcli_1_1_cli_config_html"><div class="ttname"><a href="structcli_1_1_cli_config.html">cli::CliConfig</a></div><div class="ttdef"><b>Definition</b> cli_common.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

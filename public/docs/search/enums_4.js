@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modstatus_0',['ModStatus',['../class_graph.html#ad261ae1ff287588b9d0e10adc864afa6',1,'Graph']]]
+  ['indextype_0',['IndexType',['../global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839',1,'global.h']]]
 ];

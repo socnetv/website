@@ -51,7 +51,9 @@ var global_8h =
       [ "DP", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839ad7952717003d90fc1d54ccecbcbfa00a", null ],
       [ "PRP", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839af476d219e7476a700a37160a11c4e8bc", null ],
       [ "PP", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a6950076e5ba177055e1b6687118e4c2a", null ],
-      [ "CLC", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a77025bf0ba046a0d0327f9ef637112e1", null ]
+      [ "CLC", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839a77025bf0ba046a0d0327f9ef637112e1", null ],
+      [ "SIGNED_DEGREE", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839aee00c3c96c70260a04c868ce9bd83008", null ],
+      [ "PN", "global_8h.html#a2bfb0a0ff1c379a8b4e8f9d24fdd4839acbf656cbf8e4a8e8b7fb81a21d92bf69", null ]
     ] ],
     [ "NetworkRequestType", "global_8h.html#a17d029b82aae6495213d94a2bcd498f4", [
       [ "Generic", "global_8h.html#a17d029b82aae6495213d94a2bcd498f4a9683fc965be285edded4502f972f9d19", null ],
@@ -71,6 +73,11 @@ var global_8h =
       [ "Heart", "global_8h.html#a37e50858781617a826d3709db82aba70aeaef218f765028fa425ac884c64b5818", null ],
       [ "Dice", "global_8h.html#a37e50858781617a826d3709db82aba70a20f62020542b70600c24162d29c872e8", null ],
       [ "Custom", "global_8h.html#a37e50858781617a826d3709db82aba70a26b367bcdd210f7345b551b921c5551f", null ]
+    ] ],
+    [ "PNMode", "global_8h.html#a448bbbba28e2f45bdf6e6d912d3ca981", [
+      [ "All", "global_8h.html#a448bbbba28e2f45bdf6e6d912d3ca981ab1c94ca2fbc3e78fc30069c8d0f01680", null ],
+      [ "Out", "global_8h.html#a448bbbba28e2f45bdf6e6d912d3ca981a7c147cda9e49590f6abe83d118b7353b", null ],
+      [ "In", "global_8h.html#a448bbbba28e2f45bdf6e6d912d3ca981aefeb369cccbd560588a756610865664c", null ]
     ] ],
     [ "ReportFormat", "global_8h.html#a3d5da577e76f50d29898f666100d9e9d", [
       [ "Html", "global_8h.html#a3d5da577e76f50d29898f666100d9e9da178b44515b6878e2b2cd5d517d371b5f", null ],

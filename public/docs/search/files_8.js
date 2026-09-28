@@ -14,8 +14,10 @@ var searchData=
   ['kernel_5fprominence_5fv4_2eh_11',['kernel_prominence_v4.h',['../kernel__prominence__v4_8h.html',1,'']]],
   ['kernel_5freachability_5fv2_2ecpp_12',['kernel_reachability_v2.cpp',['../kernel__reachability__v2_8cpp.html',1,'']]],
   ['kernel_5freachability_5fv2_2eh_13',['kernel_reachability_v2.h',['../kernel__reachability__v2_8h.html',1,'']]],
-  ['kernel_5fvertex_5fconnectivity_5fv9_2ecpp_14',['kernel_vertex_connectivity_v9.cpp',['../kernel__vertex__connectivity__v9_8cpp.html',1,'']]],
-  ['kernel_5fvertex_5fconnectivity_5fv9_2eh_15',['kernel_vertex_connectivity_v9.h',['../kernel__vertex__connectivity__v9_8h.html',1,'']]],
-  ['kernel_5fwalks_5fv3_2ecpp_16',['kernel_walks_v3.cpp',['../kernel__walks__v3_8cpp.html',1,'']]],
-  ['kernel_5fwalks_5fv3_2eh_17',['kernel_walks_v3.h',['../kernel__walks__v3_8h.html',1,'']]]
+  ['kernel_5fsigned_5fv10_2ecpp_14',['kernel_signed_v10.cpp',['../kernel__signed__v10_8cpp.html',1,'']]],
+  ['kernel_5fsigned_5fv10_2eh_15',['kernel_signed_v10.h',['../kernel__signed__v10_8h.html',1,'']]],
+  ['kernel_5fvertex_5fconnectivity_5fv9_2ecpp_16',['kernel_vertex_connectivity_v9.cpp',['../kernel__vertex__connectivity__v9_8cpp.html',1,'']]],
+  ['kernel_5fvertex_5fconnectivity_5fv9_2eh_17',['kernel_vertex_connectivity_v9.h',['../kernel__vertex__connectivity__v9_8h.html',1,'']]],
+  ['kernel_5fwalks_5fv3_2ecpp_18',['kernel_walks_v3.cpp',['../kernel__walks__v3_8cpp.html',1,'']]],
+  ['kernel_5fwalks_5fv3_2eh_19',['kernel_walks_v3.h',['../kernel__walks__v3_8h.html',1,'']]]
 ];
