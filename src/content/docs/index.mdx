@@ -13,7 +13,7 @@ head:
   - tag: meta
     attrs: { 
       property: 'og:image',
-      content: 'https://socnetv.org/data/uploads/screenshots/36/Lattice_Net_N9801_E19404_Undir_PI_BC.webp'
+      content: 'https://socnetv.org/data/uploads/screenshots/38/socnetv-38-G1__Signed_Network_Two_Factions_KK.webp'
     }
   - tag: meta
     attrs: { 
@@ -27,7 +27,7 @@ head:
     }
 banner:
   content: |
-    <a href="/news/socnetv-v37-released">SocNetV v3.7 has been released!</a>
+    <a href="/news/socnetv-v38-released">SocNetV v3.8 has been released!</a>
 hero:
   tagline: SocNetV - Social Network Analysis and Visualization Software
   image:
@@ -52,13 +52,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 import { LinkButton } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-import myImage from '../../assets/images/socnetv-37-screenshot.webp'; 
+import myImage from '../../assets/images/socnetv-38-screenshot.webp'; 
 
 <BaseLayout title="Home" description="Welcome to SocNetV">
 
 ## Free and Open-Source Tool for Social Network Analysis 🌟 
 
-<Image loading src={myImage} alt="SocNetV v3.7 main window — Padgett's Florentine Families network with Kamada-Kawai layout and betweenness centrality node colour coding, with Control Panel and Statistics Panel visible." />
+<Image loading src={myImage} alt="SocNetV v3.8 — a signed network with two internally-friendly, mutually-hostile factions, laid out with the Kamada-Kawai algorithm." />
 
 SocNetV is a cross-platform, free and open-source application for social network analysis and visualization. Draw networks with a few clicks, load data from dozens of file formats, run analysis, and produce beautiful reports — all from an intuitive interface that works on Windows, macOS, and Linux.
 
@@ -77,7 +77,7 @@ SocNetV is a cross-platform, free and open-source application for social network
       Compute <a href="/manual/analysis/#cohesion-measures">cohesion metrics</a> (density, diameter, distances, clustering coefficient, reciprocity),
       <a href="/manual/analysis/#centralities-and-prestige"> centrality and prestige indices</a> (betweenness, closeness, eigenvector, PageRank, and more),
       <a href="/manual/analysis/#community-detection"> community detection</a> (triad and clique census), and
-      <a href="/manual/analysis/#hierarchical-cluster-analysis-hca"> structural equivalence</a> analysis.
+      <a href="/manual/analysis/#hierarchical-cluster-analysis-hca"> structural equivalence</a> analysis. Analyze <strong>signed networks</strong> with negative-weight-safe shortest paths and dedicated Signed Degree and PN Centrality measures.
     </p>
   </Card>
 
