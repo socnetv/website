@@ -137,6 +137,10 @@ For **weighted** networks SocNetV uses **Dijkstra's algorithm**, which finds the
 The edges along the reported path are also **selected on the canvas**, exactly as if you had Shift-clicked each one in turn. This lets you immediately move, inspect, or right-click the whole path without hunting for it visually — useful on large or dense networks where the path is hard to trace by eye. Only the path's edges are selected, not its nodes, so the highlight doesn't pull in unrelated edges attached to those same nodes.
 :::
 
+:::note
+**Negative edge weights**: Dijkstra's algorithm is mathematically undefined on a network with negative weights, so SocNetV refuses by default rather than silently returning a wrong distance. If your network has negative weights, you'll be offered to switch to a **negative-weight-safe** computation instead (Bellman-Ford/Johnson's algorithm) — same result on an all-positive network, but also correct on one with negative ties. This applies here, to [Average Distance](#average-distance) below, and to the [Distances Matrix](#distances-matrix). A **reachable negative cycle** is still refused either way, since shortest paths are undefined whenever one exists. See [Signed Degree Centrality](#signed-degree-centrality) and [PN Centrality](#pn-centrality) below for centrality measures purpose-built for signed networks.
+:::
+
 ---
 
 ### Average Distance
@@ -451,7 +455,7 @@ The table below compares the key characteristics of **centrality** and **prestig
 |-----------------------------|------------------------------------------------|------------------------------------------------|
 | **Focus**                    | Quantifies how well-connected a node is within the network | Quantifies the status or importance based on the node's inbound connections |
 | **Type of Networks**         | Typically used in undirected or directed networks | Primarily used in directed networks (but also weighted graphs) |
-| **Common Measures**          | Degree Centrality (DC), Closeness Centrality (CC), Influence Range Closeness Centrality (IRCC), Betweenness Centrality (BC), Stress Centrality (SC), Eccentricity Centrality (EC), Power Centrality (PC), Information Centrality (IC), Eigenvector Centrality (EVC), Katz Centrality (KC), Bonacich Power Centrality (BPC) | Degree Prestige (DP), PageRank Prestige (PRP), Proximity Prestige (PP) |
+| **Common Measures**          | Degree Centrality (DC), Closeness Centrality (CC), Influence Range Closeness Centrality (IRCC), Betweenness Centrality (BC), Stress Centrality (SC), Eccentricity Centrality (EC), Power Centrality (PC), Information Centrality (IC), Eigenvector Centrality (EVC), Katz Centrality (KC), Bonacich Power Centrality (BPC), Signed Degree Centrality, PN Centrality | Degree Prestige (DP), PageRank Prestige (PRP), Proximity Prestige (PP) |
 | **Application**              | Identifies nodes that are influential in terms of connectivity | Identifies nodes that are influential based on being highly valued or referenced by others |
 | **Mathematical Basis**       | Based on direct connections or shortest paths between nodes | Based on the flow of influence or status across the network |
 | **Example in Social Networks** | A node with many friends (DC), a person who is close to everyone (CC), or a broker (BC) | A highly referenced academic paper (PRP), a person who receives many nominations (DP) |
@@ -508,6 +512,8 @@ The right answer to the second question depends on what your weights represent, 
 | Katz Centrality (KC) | Walk-counting | No |
 | Bonacich Power Centrality (BPC) | Walk-counting | No |
 | Degree Centrality (DC) / Degree Prestige (DP) | Direct sum, no inversion choice | n/a |
+| Signed Degree Centrality | Direct sum, optional weights, no inversion choice | n/a |
+| PN Centrality | Sign-only, no weight option at all | n/a |
 | PageRank Prestige (PRP) | No weight option at all | n/a |
 
 :::tip
@@ -527,6 +533,10 @@ After running any centrality or prestige computation, you can use **Filter Nodes
 
 :::tip
 Combine Filter by Centrality with the [Ego-centered Radial Layout](/manual/visualization#ego-centered-radial-layout): filter to top-N nodes by betweenness centrality, select the highest-scoring node, and apply the layout to inspect its neighborhood in a decluttered view.
+:::
+
+:::note
+[Signed Degree Centrality](#signed-degree-centrality) and [PN Centrality](#pn-centrality) are not available here, or in **Visualize by Prominence Index** / **Find Node by Index Score** — both measures report multiple scores per node (or, for PN, no standardized variant) rather than the single scalar these three features assume.
 :::
 
 ---
@@ -890,6 +900,59 @@ $$
 Where the sum is over every node $ v $ in $ I $.
 
 **Weights**: like Closeness Centrality, PP is shortest-path-based — real edge weights are used as traversal costs (or their inverse, if you choose to invert weights). See [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above for guidance.
+
+---
+
+## Signed Network Measures
+
+**Signed networks** are graphs where edge sign — not just presence or magnitude — is meaningful: friend/enemy, trust/distrust, alliance/conflict. Every centrality and prestige measure above still runs on a signed network, but treats a negative weight as an ordinary (if unusual) number — none of them understand *sign* as semantically distinct from magnitude. The two measures below are purpose-built for that.
+
+### Signed Degree Centrality
+
+For each actor, **Signed Degree Centrality** splits ordinary out-degree by tie sign into four scores computed in one pass:
+
+- **pos** — the number of positive ties sent (or their summed strength, if you choose to consider weights).
+- **neg** — the same, for negative ties.
+- **ratio** — $ pos / (pos + neg) $, the fraction of an actor's ties that are positive (0 for an actor with no ties either way).
+- **net** — $ pos - neg $, a single signed balance score.
+
+**When to use**: whenever plain Degree Centrality's single number would hide an actor's real position — an actor with degree 10 made entirely of positive ties is in a very different structural position from one with degree 10 split 5 positive/5 negative, even though ordinary Degree Centrality reports both identically.
+
+:::note
+**Out-degree only.** Like ordinary Degree Centrality (out-degree) and Degree Prestige (in-degree) are two separate measures, Signed Degree Centrality currently covers out-degree only — a signed in-degree counterpart is not yet implemented.
+:::
+
+**Weights**: optional — the **Consider edge weights?** choice works as usual (see [Edge Weights](/manual/analysis#edge-weights-considering-and-inverting-them) above): unchecked treats every tie as ±1 regardless of its real weight; checked sums real tie strength into **pos**/**neg** instead of just counting ties. There is no invert-weights choice, since this is a direct sum, not shortest-path routing.
+
+---
+
+### PN Centrality
+
+**PN Centrality** (Everett & Borgatti, 2014) is the standard purpose-built centrality measure for signed networks. The core idea: a negative tie from someone who is themselves highly (positively) prominent hurts more than one from someone marginalized — a negative tie from someone universally disliked can even read as a positive signal. This propagates through the whole network the same way [Katz Centrality](#katz-centrality-kc) propagates ordinary ties, just with an extra term that reduces a node's score when its neighbors' own scores are being pulled down by *their* negative ties.
+
+**When to use**: whenever you need a single, principled ranking of actors in a signed network — the signed-network equivalent of reaching for Katz Centrality or Eigenvector Centrality on an ordinary network.
+
+Three modes, depending on your network's directedness:
+
+$$
+\begin{aligned}
+\text{All (undirected)}: \quad & PN = \text{rowSums}\left( (I - \beta A)^{-1} \right) \\
+\text{Out (directed)}: \quad & PN = \text{rowSums}\left( (I - \beta^2 A A^T)^{-1} (I + \beta A) \right) \\
+\text{In (directed)}: \quad & PN = \text{rowSums}\left( (I - \beta^2 A^T A)^{-1} (I + \beta A^T) \right)
+\end{aligned}
+$$
+
+where $ A = P - 2N $ is built from binary positive/negative tie masks (tie *magnitude* is discarded — see below), and $ \beta = 1/(2n-2) $ is fixed, not a user-tunable parameter like Katz's alpha.
+
+An **undirected** network is restricted to **All** mode; a **directed** network must pick **Out** (based on ties this actor sends) or **In** (based on ties this actor receives) — the dialog disables whichever choice doesn't apply to your loaded network.
+
+:::note
+**Strictly binary — no weight option.** Unlike every other measure in this manual, PN Centrality considers tie *sign* only (positive/negative); tie strength is discarded even on a weighted network. There is no Consider/Invert Weights choice, because the measure doesn't use magnitude at all.
+:::
+
+**Compare to**: structurally, **All** mode is the same closed-form "geometric series of walks" identity Katz Centrality uses — $ (I - x \cdot M)^{-1} \cdot \mathbf{1} $ — just with a fixed $ \beta $ instead of a tunable $ \alpha $, no $ -I $ term, and built from the signed matrix $ A $ instead of plain adjacency. The **Out**/**In** directed forms are a more involved closed form specific to this measure, not a simple Katz analogue.
+
+> Everett, M. and Borgatti, S. (2014). Networks containing negative ties. *Social Networks* 38, 111-120.
 
 ---
 
